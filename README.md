@@ -3,6 +3,8 @@ perf-tooling
 
 List of performance analysis and monitoring tools
 
+*If you think, that something is missing. PR's are more than welcome. :)*
+
 
 ## Online tools
 - [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) - Analyses websites and gives advices for improvements
