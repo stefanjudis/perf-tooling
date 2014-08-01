@@ -19,6 +19,12 @@ List of performance analysis and monitoring tools
 - [webperf-monitor](https://github.com/gauntface/webperf-monitor)
 - [browser-perf](https://github.com/axemclion/browser-perf)
 - [parker](https://github.com/katiefenn/parker)
+- [PSI](https://github.com/addyosmani/psi)
+
+## Node modules
+- [PSI](https://github.com/addyosmani/psi)
+- [Phantomas](https://github.com/macbre/phantomas)
+- [StyleStats](https://github.com/t32k/stylestats)
 
 ## Grunt
 - [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed)
@@ -31,6 +37,7 @@ List of performance analysis and monitoring tools
 
 ## gulp
 - [gulp-stylestats](https://github.com/1000ch/gulp-stylestats)
+- [gulp-psi-sample](https://github.com/addyosmani/psi-gulp-sample/blob/master/gulpfile.js)
 
 ## Bookmarklets
 - [stress css](https://github.com/andyedinborough/stress-css)
