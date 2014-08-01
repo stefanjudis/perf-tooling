@@ -1,7 +1,7 @@
 perf-tooling
 ============
 
-List of performance monitoring tools
+List of performance analysis and monitoring tools
 
 
 ## Online tools
