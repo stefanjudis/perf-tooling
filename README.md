@@ -5,11 +5,11 @@ List of performance analysis and monitoring tools
 
 
 ## Online tools
-- [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
-- [WEBPAGETEST](http://www.webpagetest.org/)
-- [SpeedCurve](http://speedcurve.com/)
-- [StyleStats](http://www.stylestats.org/)
-- [Perfmonkey](http://www.perfmonkey.com/#/home) - Keep track of your website's rendering performance
+- [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) - Analyses websites and gives advices for improvements
+- [WEBPAGETEST](http://www.webpagetest.org/) - Analyses websites and gives a lot of information and advices for improvements
+- [SpeedCurve](http://speedcurve.com/) - Gives continuous feedback on how your front-end code is affecting the performance of your website.
+- [StyleStats](http://www.stylestats.org/) - Collects CSS statistics
+- [Perfmonkey](http://www.perfmonkey.com/#/home) - Keeps track of your website's rendering performance
 
 ## CLI tools
 - [Phantomas](https://github.com/macbre/phantomas) - PhantomJS-based web performance metrics collector and monitoring tool
