@@ -13,6 +13,7 @@ List of performance analysis and monitoring tools
 - [StyleStats](http://www.stylestats.org/) - Collects CSS statistics
 - [Perfmonkey](http://www.perfmonkey.com/#/home) - Keeps track of your website's rendering performance
 - [Calibre](https://calibreapp.com/) - Continuous website quality and performance telemetry
+- [New Relic](http://newrelic.com/) - Performance measurement for frontend and backend applications.
 
 ## CLI tools
 - [Phantomas](https://github.com/macbre/phantomas) - PhantomJS-based web performance metrics collector and monitoring tool
