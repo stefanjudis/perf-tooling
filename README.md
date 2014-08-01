@@ -10,6 +10,7 @@ List of performance analysis and monitoring tools
 - [SpeedCurve](http://speedcurve.com/) - Gives continuous feedback on how your front-end code is affecting the performance of your website.
 - [StyleStats](http://www.stylestats.org/) - Collects CSS statistics
 - [Perfmonkey](http://www.perfmonkey.com/#/home) - Keeps track of your website's rendering performance
+- [Calibre](https://calibreapp.com/) - Continuous website quality and performance telemetry
 
 ## CLI tools
 - [Phantomas](https://github.com/macbre/phantomas) - PhantomJS-based web performance metrics collector and monitoring tool
