@@ -1,2 +1,3 @@
-name: Your New Jekyll Site
-pygments: true
+name: Perf Tooling Today
+
+exclude: ["Procfile", "gulpfile.js", "README.md", "package.json", "CNAME", "node_modules"]
