@@ -41,15 +41,36 @@ h2 {
 .posts {
   font-size : 1.5rem;
 
-  li {
-    padding : 1rem 0;
+  > li {
+    padding : 0.5rem 0;
+
+    @media (min-width: 600px) {
+      display : inline-block;
+
+      width : 50%;
+    }
+
+    @media (min-width: 1000px) {
+      width : 33.33%;
+    }
+
+    @media (min-width: 1400px) {
+      width : 25%;
+    }
   }
 }
 
 .resources {
   padding : 1rem 0;
-  a {
+
+  li {
     display : inline-block;
+
+    margin : 0 0.25rem;
+  }
+
+  a {
+    display : block;
 
     width : 3rem;
     height : 3rem;
@@ -62,26 +83,50 @@ h2 {
 
     &.service {
       background : #7FDBFF;
+
+      &:hover {
+        background : lighten( #7FDBFF, 7% );
+      }
     }
 
     &.cli {
       background : #001F3F;
+
+      &:hover {
+        background : lighten( #001F3F, 7% );
+      }
     }
 
     &.module {
       background : #3D9970;
+
+      &:hover {
+        background : lighten( #3D9970, 7% );
+      }
     }
 
     &.grunt {
       background : #FF851B;
+
+      &:hover {
+        background : lighten( #FF851B, 7% );
+      }
     }
 
     &.gulp {
       background : #FF4136;
+
+      &:hover {
+        background : lighten( #FF4136, 7% );
+      }
     }
 
     &.bookmarklet {
       background : #FFDC00;
+
+      &:hover {
+        background : lighten( #FFDC00, 7% );
+      }
     }
   }
 }

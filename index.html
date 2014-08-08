@@ -10,27 +10,27 @@ title: Your New Jekyll Site
       <li>{{ post.title }}
         <ul class="resources">
           {% if post.service %}
-            <a href="{{ post.service }}" class="service">Go to service</a>
+            <li><a href="{{ post.service }}" class="service">Go to service</a>
           {% endif; %}
 
           {% if post.cli %}
-            <a href="{{ post.cli }}" class="cli">Go to CLI</a>
+            <li><a href="{{ post.cli }}" class="cli">Go to CLI</a>
           {% endif; %}
 
           {% if post.module %}
-            <a href="{{ post.module }}" class="module">Go to module</a>
+            <li><a href="{{ post.module }}" class="module">Go to module</a>
           {% endif; %}
 
           {% if post.grunt %}
-            <a href="{{ post.grunt }}" class="grunt">Go to grunt plugin</a>
+            <li><a href="{{ post.grunt }}" class="grunt">Go to grunt plugin</a>
           {% endif; %}
 
           {% if post.gulp %}
-            <a href="{{ post.gulp }}" class="gulp">Go to gulp plugin</a>
+            <li><a href="{{ post.gulp }}" class="gulp">Go to gulp plugin</a>
           {% endif; %}
 
           {% if post.bookmarklet %}
-            <a href="{{ post.bookmarklet }}" class="bookmarklet">Go to bookmarklet</a>
+            <li><a href="{{ post.bookmarklet }}" class="bookmarklet">Go to bookmarklet</a>
           {% endif; %}
         </ul>
     {% endfor %}
