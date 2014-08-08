@@ -44,6 +44,12 @@ h2 {
   > li {
     padding : 0.5rem 0;
 
+    transition : background 0.25s ease-in;
+
+    &:hover {
+      background : lighten( @white, 5% );
+    }
+
     @media (min-width: 600px) {
       display : inline-block;
 
@@ -67,6 +73,7 @@ h2 {
     display : inline-block;
 
     margin : 0 0.25rem;
+
   }
 
   a {
