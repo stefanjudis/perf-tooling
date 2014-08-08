@@ -9,6 +9,7 @@ title: Your New Jekyll Site
     <ul class="posts">
       {% for posts in category %}
         {% for post in posts reversed sort_by:post.title case_sensitive:false %}
+          {% if post.title %}
           <li><h3>{{ post.title }}</h3>
             <div class="posts--content">{{ post.content }}</div>
             <ul class="resources">
@@ -36,6 +37,7 @@ title: Your New Jekyll Site
                 <li class="tooltip" title="Bookmarklet"><a href="{{ post.bookmarklet }}" class="bookmarklet">Bookmarklet</a>
               {% endif; %}
             </ul>
+          {% endif %}
         {% endfor %}
       {% endfor %}
     </ul>
