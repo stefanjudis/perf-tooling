@@ -1,6 +1,7 @@
 ---
 layout: post
 title: sitespeed.io
+categories : [Monitoring]
 cli: http://www.sitespeed.io/
 ---
 

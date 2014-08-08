@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SpeedCurve
+categories : [Monitoring]
 service: http://speedcurve.com/
 ---
 

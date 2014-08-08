@@ -55,7 +55,16 @@ h3 {
   }
 }
 
-.posts, .resources {
+footer {
+  margin  : 3rem 0 0 0;
+  padding : 2rem 0 2rem 0;
+
+  background : @blue;
+
+  color : @white;
+}
+
+.posts, .resources, .socials {
   list-style : none;
 
   &, li {
@@ -81,7 +90,7 @@ h3 {
       vertical-align : top;
 
       width : 50%;
-      min-height : 420px;
+      min-height : 375px;
     }
 
     @media (min-width: 1000px) {
@@ -190,6 +199,25 @@ h3 {
   }
 }
 
+.socials {
+  > li {
+    display : inline-block;
+
+    margin : 0 0.5rem;
+
+    width  : 32px;
+    height : 32px;
+
+    overflow : hidden;
+  }
+}
+
+.hashTag {
+  font-size : 2rem;
+  font-style : italic;
+
+  color : @blue-bright;
+}
 
 @media (min-width: 1000px) {
   .tooltip {

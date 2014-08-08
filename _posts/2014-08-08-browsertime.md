@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Browsertime
+categories : [Monitoring]
 cli: https://github.com/tobli/browsertime
 ---
 

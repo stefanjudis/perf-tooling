@@ -4,37 +4,40 @@ title: Your New Jekyll Site
 ---
 
 <div id="home">
-  <h2>#Monitoring</h2>
-  <ul class="posts">
-    {% for post in site.posts reversed sort_by:post.title case_sensitive:false %}
-      <li><h3>{{ post.title }}</h3>
-        <div class="posts--content">{{ post.content }}</div>
-        <ul class="resources">
-          {% if post.service %}
-            <li class="tooltip" title="Service"><a href="{{ post.service }}" class="tooltip service">Service</a>
-          {% endif; %}
+  {% for category in site.categories %}
+    <h2>#{{ category | first }}</h2>
+    <ul class="posts">
+      {% for posts in category %}
+        {% for post in posts reversed sort_by:post.title case_sensitive:false %}
+          <li><h3>{{ post.title }}</h3>
+            <div class="posts--content">{{ post.content }}</div>
+            <ul class="resources">
+              {% if post.service %}
+                <li class="tooltip" title="Service"><a href="{{ post.service }}" class="tooltip service">Service</a>
+              {% endif; %}
 
-          {% if post.cli %}
-            <li class="tooltip" title="ClI"><a href="{{ post.cli }}" class="tooltip cli">CLI</a>
-          {% endif; %}
+              {% if post.cli %}
+                <li class="tooltip" title="CLI"><a href="{{ post.cli }}" class="tooltip cli">CLI</a>
+              {% endif; %}
 
-          {% if post.module %}
-            <li class="tooltip" title="Module"><a href="{{ post.module }}" class="tooltip module">Module</a>
-          {% endif; %}
+              {% if post.module %}
+                <li class="tooltip" title="Module"><a href="{{ post.module }}" class="tooltip module">Module</a>
+              {% endif; %}
 
-          {% if post.grunt %}
-            <li class="tooltip" title="Grunt plugin"><a href="{{ post.grunt }}" class="grunt">Grunt plugin</a>
-          {% endif; %}
+              {% if post.grunt %}
+                <li class="tooltip" title="Grunt plugin"><a href="{{ post.grunt }}" class="grunt">Grunt plugin</a>
+              {% endif; %}
 
-          {% if post.gulp %}
-            <li class="tooltip" title="gulp plugin"><a href="{{ post.gulp }}" class="gulp">gulp plugin</a>
-          {% endif; %}
+              {% if post.gulp %}
+                <li class="tooltip" title="gulp plugin"><a href="{{ post.gulp }}" class="gulp">gulp plugin</a>
+              {% endif; %}
 
-          {% if post.bookmarklet %}
-            <li class="tooltip" title="Bookmarklet"><a href="{{ post.bookmarklet }}" class="bookmarklet">Bookmarklet</a>
-          {% endif; %}
-        </ul>
-    {% endfor %}
-  </ul>
-  <h2>#Optimizing</h2>
+              {% if post.bookmarklet %}
+                <li class="tooltip" title="Bookmarklet"><a href="{{ post.bookmarklet }}" class="bookmarklet">Bookmarklet</a>
+              {% endif; %}
+            </ul>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  {% endfor %}
 </div>

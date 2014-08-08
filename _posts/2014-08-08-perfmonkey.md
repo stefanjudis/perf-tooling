@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Perfmonkey
+categories : [Monitoring]
 service: http://www.perfmonkey.com/
 ---
 

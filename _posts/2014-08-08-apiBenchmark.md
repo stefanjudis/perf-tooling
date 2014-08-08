@@ -1,6 +1,7 @@
 ---
 layout: post
 title: API Benchmark
+categories : [Monitoring]
 grunt: https://github.com/matteofigus/grunt-api-benchmark
 ---
 
