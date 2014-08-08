@@ -7,30 +7,31 @@ title: Your New Jekyll Site
   <h2>#Monitoring</h2>
   <ul class="posts">
     {% for post in site.posts reversed sort_by:post.title case_sensitive:false %}
-      <li>{{ post.title }}
+      <li><h3>{{ post.title }}</h3>
+        <div class="posts--content">{{ post.content }}</div>
         <ul class="resources">
           {% if post.service %}
-            <li><a href="{{ post.service }}" class="service">Go to service</a>
+            <li><a href="{{ post.service }}" class="service">Service</a>
           {% endif; %}
 
           {% if post.cli %}
-            <li><a href="{{ post.cli }}" class="cli">Go to CLI</a>
+            <li><a href="{{ post.cli }}" class="cli">CLI</a>
           {% endif; %}
 
           {% if post.module %}
-            <li><a href="{{ post.module }}" class="module">Go to module</a>
+            <li><a href="{{ post.module }}" class="module">Module</a>
           {% endif; %}
 
           {% if post.grunt %}
-            <li><a href="{{ post.grunt }}" class="grunt">Go to grunt plugin</a>
+            <li><a href="{{ post.grunt }}" class="grunt">Grunt plugin</a>
           {% endif; %}
 
           {% if post.gulp %}
-            <li><a href="{{ post.gulp }}" class="gulp">Go to gulp plugin</a>
+            <li><a href="{{ post.gulp }}" class="gulp">gulp plugin</a>
           {% endif; %}
 
           {% if post.bookmarklet %}
-            <li><a href="{{ post.bookmarklet }}" class="bookmarklet">Go to bookmarklet</a>
+            <li><a href="{{ post.bookmarklet }}" class="bookmarklet">Bookmarklet</a>
           {% endif; %}
         </ul>
     {% endfor %}

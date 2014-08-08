@@ -5,6 +5,12 @@
 @blue-bright : #93D5DB;
 @white       : #DDF0F2;
 
+* {
+  &, &:before, &:after {
+    box-sizing : border-box;
+  }
+}
+
 body {
   color : @grey;
   background : @white;
@@ -29,6 +35,26 @@ h2 {
   font-style : italic;
 }
 
+h3 {
+  position : relative;
+
+  padding : 0 0 0.5rem 0;
+
+  &:before {
+    position : absolute;
+
+    content : '';
+
+    top   : 100%;
+    left  : 10%;
+    right : 10%;
+
+    height : 1px;
+
+    border-bottom : 1px solid @blue;
+  }
+}
+
 .posts, .resources {
   list-style : none;
 
@@ -39,9 +65,9 @@ h2 {
 }
 
 .posts {
-  font-size : 1.5rem;
-
   > li {
+    position : relative;
+
     padding : 0.5rem 0;
 
     transition : background 0.25s ease-in;
@@ -52,8 +78,10 @@ h2 {
 
     @media (min-width: 600px) {
       display : inline-block;
+      vertical-align : top;
 
       width : 50%;
+      min-height : 380px;
     }
 
     @media (min-width: 1000px) {
@@ -64,6 +92,11 @@ h2 {
       width : 25%;
     }
   }
+}
+
+.posts--content {
+  padding : 0 2rem;
+  font-style : italic;
 }
 
 .resources {
@@ -79,12 +112,14 @@ h2 {
   a {
     display : block;
 
-    width : 3rem;
-    height : 3rem;
+    width : 220px;
 
-    text-indent : -1000px;
+    padding : 0.5rem 1.5rem;
 
-    border-radius : 50%;
+    border-radius : 2rem;
+
+    color : #fff;
+    text-decoration : none;
 
     overflow : hidden;
 
@@ -135,5 +170,22 @@ h2 {
         background : lighten( #FFDC00, 7% );
       }
     }
+
+    @media (min-width: 1000px) {
+      width : 3rem;
+      height : 3rem;
+
+      border-radius : 50%;
+
+      text-indent : -1000px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    position : absolute;
+
+    bottom : 0;
+    left   : 0;
+    right  : 0;
   }
 }
