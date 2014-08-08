@@ -11,27 +11,27 @@ title: Your New Jekyll Site
         <div class="posts--content">{{ post.content }}</div>
         <ul class="resources">
           {% if post.service %}
-            <li><a href="{{ post.service }}" class="service">Service</a>
+            <li class="tooltip" title="Service"><a href="{{ post.service }}" class="tooltip service">Service</a>
           {% endif; %}
 
           {% if post.cli %}
-            <li><a href="{{ post.cli }}" class="cli">CLI</a>
+            <li class="tooltip" title="ClI"><a href="{{ post.cli }}" class="tooltip cli">CLI</a>
           {% endif; %}
 
           {% if post.module %}
-            <li><a href="{{ post.module }}" class="module">Module</a>
+            <li class="tooltip" title="Module"><a href="{{ post.module }}" class="tooltip module">Module</a>
           {% endif; %}
 
           {% if post.grunt %}
-            <li><a href="{{ post.grunt }}" class="grunt">Grunt plugin</a>
+            <li class="tooltip" title="Grunt plugin"><a href="{{ post.grunt }}" class="grunt">Grunt plugin</a>
           {% endif; %}
 
           {% if post.gulp %}
-            <li><a href="{{ post.gulp }}" class="gulp">gulp plugin</a>
+            <li class="tooltip" title="gulp plugin"><a href="{{ post.gulp }}" class="gulp">gulp plugin</a>
           {% endif; %}
 
           {% if post.bookmarklet %}
-            <li><a href="{{ post.bookmarklet }}" class="bookmarklet">Bookmarklet</a>
+            <li class="tooltip" title="Bookmarklet"><a href="{{ post.bookmarklet }}" class="bookmarklet">Bookmarklet</a>
           {% endif; %}
         </ul>
     {% endfor %}

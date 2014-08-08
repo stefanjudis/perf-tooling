@@ -68,7 +68,7 @@ h3 {
   > li {
     position : relative;
 
-    padding : 0.5rem 0;
+    padding : 0.5rem 0 4rem 0;
 
     transition : background 0.25s ease-in;
 
@@ -81,7 +81,7 @@ h3 {
       vertical-align : top;
 
       width : 50%;
-      min-height : 380px;
+      min-height : 420px;
     }
 
     @media (min-width: 1000px) {
@@ -181,7 +181,7 @@ h3 {
     }
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 600px) {
     position : absolute;
 
     bottom : 0;
@@ -189,3 +189,40 @@ h3 {
     right  : 0;
   }
 }
+
+
+@media (min-width: 1000px) {
+  .tooltip {
+    position: relative;
+    text-decoration: none;
+    &:after {
+      content: attr(title);
+      position: absolute;
+      bottom: 100%;
+      left: 60%;
+      background: @grey;
+      padding: 5px 15px;
+      color: @white;
+
+      border-radius        : 0.75rem 0.75rem 0.75rem 0;
+      white-space: nowrap;
+      opacity: 0;
+       /* At time of this creation, only Fx4 doing pseduo transitions */
+      -webkit-transition: all 0.4s ease;
+      -moz-transition   : all 0.4s ease;
+
+      z-index : 2;
+    }
+
+    &:hover:after {
+      bottom: 75%;
+    }
+    &:hover:before {
+      bottom: 70%;
+    }
+    &:hover:after, a:hover:before {
+      opacity: 1;
+    }
+  }
+}
+
