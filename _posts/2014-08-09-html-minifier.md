@@ -1,0 +1,10 @@
+---
+layout: post
+title: HTMLMinifier
+categories : [automatization]
+module: https://github.com/kangax/html-minifier
+grunt: https://github.com/gruntjs/grunt-contrib-htmlmin
+gulp: https://github.com/jonschlinkert/gulp-htmlmin
+---
+
+"HTMLMinifier is a highly configurable, well-tested, Javascript-based HTML minifier, with lint-like capabilities."
