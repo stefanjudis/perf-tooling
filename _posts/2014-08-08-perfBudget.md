@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PerfBudget
-categories : [Monitoring]
+categories : [monitoring]
 grunt: https://github.com/tkadlec/grunt-perfbudget
 ---
 

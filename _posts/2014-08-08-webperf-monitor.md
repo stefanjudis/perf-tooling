@@ -1,7 +1,7 @@
 ---
 layout: post
 title: webperf-monitor
-categories : [Monitoring]
+categories : [monitoring]
 cli: https://github.com/gauntface/webperf-monitor
 ---
 

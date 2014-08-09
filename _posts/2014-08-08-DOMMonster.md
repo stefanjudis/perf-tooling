@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DOM Monster
-categories : [Monitoring]
+categories : [monitoring]
 bookmarklet: http://mir.aculo.us/dom-monster/
 ---
 

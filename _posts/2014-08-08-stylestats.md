@@ -1,7 +1,7 @@
 ---
 layout: post
 title: StyleStats
-categories : [Monitoring]
+categories : [monitoring]
 service: http://www.stylestats.org/
 cli: https://github.com/t32k/stylestats
 module: https://github.com/t32k/stylestats

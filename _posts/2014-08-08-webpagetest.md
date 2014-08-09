@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WEBPAGETEST
-categories : [Monitoring]
+categories : [monitoring]
 service: http://www.webpagetest.org/
 grunt: https://github.com/sideroad/grunt-wpt
 ---

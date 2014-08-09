@@ -1,7 +1,7 @@
 ---
 layout: post
 title: browser-perf
-categories : [Monitoring]
+categories : [monitoring]
 cli: https://github.com/axemclion/browser-perf
 ---
 

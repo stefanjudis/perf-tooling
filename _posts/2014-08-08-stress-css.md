@@ -1,7 +1,7 @@
 ---
 layout: post
 title: stress css
-categories : [Monitoring]
+categories : [monitoring]
 bookmarklet: https://github.com/andyedinborough/stress-css
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PageSpeed Insights
-categories : [Monitoring]
+categories : [monitoring]
 service: https://developers.google.com/speed/pagespeed/insights/
 cli: https://github.com/addyosmani/psi
 module: https://github.com/addyosmani/psi
