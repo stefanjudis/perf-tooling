@@ -14,15 +14,15 @@ title: Your New Jekyll Site
             <div class="posts--content">{{ post.content }}</div>
             <ul class="resources">
               {% if post.service %}
-                <li class="tooltip" title="Service"><a href="{{ post.service }}" class="tooltip service">Service</a>
+                <li class="tooltip" title="Service"><a href="{{ post.service }}" class="service">Service</a>
               {% endif; %}
 
               {% if post.cli %}
-                <li class="tooltip" title="CLI"><a href="{{ post.cli }}" class="tooltip cli">CLI</a>
+                <li class="tooltip" title="CLI"><a href="{{ post.cli }}" class="cli">CLI</a>
               {% endif; %}
 
               {% if post.module %}
-                <li class="tooltip" title="Module"><a href="{{ post.module }}" class="tooltip module">Module</a>
+                <li class="tooltip" title="Module"><a href="{{ post.module }}" class="module">Module</a>
               {% endif; %}
 
               {% if post.grunt %}
