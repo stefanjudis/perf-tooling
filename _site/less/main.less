@@ -62,6 +62,23 @@ footer {
   background : @blue;
 
   color : @white;
+
+  a {
+    color : @blue-bright;
+    text-decoration : none;
+
+    &:hover {
+      color : lighten( @blue-bright, 10% );
+    }
+  }
+}
+
+.noun {
+  display : block;
+
+  padding : 0.5rem 0;
+
+  color : @blue-bright;
 }
 
 .posts, .resources, .socials {
