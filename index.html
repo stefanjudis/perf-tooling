@@ -22,7 +22,7 @@ title: Your New Jekyll Site
               {% endif; %}
 
               {% if post.module %}
-                <li class="tooltip" title="Module"><a href="{{ post.module }}" class="module">Module</a>
+                <li class="tooltip" title="Node module"><a href="{{ post.module }}" class="module">Node module</a>
               {% endif; %}
 
               {% if post.grunt %}
@@ -35,6 +35,10 @@ title: Your New Jekyll Site
 
               {% if post.bookmarklet %}
                 <li class="tooltip" title="Bookmarklet"><a href="{{ post.bookmarklet }}" class="bookmarklet">Bookmarklet</a>
+              {% endif; %}
+
+              {% if post.script %}
+                <li class="tooltip" title="Script"><a href="{{ post.script }}" class="script">Script</a>
               {% endif; %}
             </ul>
           {% endif %}
