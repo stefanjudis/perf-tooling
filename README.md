@@ -6,6 +6,6 @@ Perf Tooling is a shared resource to keep track of new and existant performance 
 
 ### Contribute
 
-If you want to contribute, add a new `.md` file at `_posts`. Please include meta information and a short discription about the particular tool.
+If you want to contribute, add a new `.md` file at `_posts`. Please include meta information and a short description about the particular tool.
 
 Thanks a lot!
