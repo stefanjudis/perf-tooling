@@ -20,12 +20,12 @@
 
                 {{ content }}
 
-            <footer>
+            <footer role="contentinfo">
               <div class="contact">
                 <p>Brought to you by the performance community</p>
                 <p><a href="https://twitter.com/search?q=%23perfmatters&src=typd" class="hashTag">#perfmatters</a></p>
                 <p>Icons by <a href="http://thenounproject.com/" class="noun">The Noun Project</a></p>
-                <p>Built up by Stefan Judis</p>
+                <p>Built by Stefan Judis...</p>
                 <ul class="socials">
                   <li><a href="http://github.com/stefanjudis/"><svg x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" width="32" height="32">
                     <linearGradient id="SVGID_1_1" gradientUnits="userSpaceOnUse" x1="23.9995" y1="0" x2="23.9995" y2="48.0005">
@@ -112,6 +112,7 @@
                   <polygon fill="#BCBCBC" points="178.346,122.718 196.031,100.812 194.375,99.094 "/>
                   </svg>stefanjudis@gmail.com</a>
                 </ul>
+                <div id="contributors"><!-- filled in with JS --></div>
               </div>
             </div>
           </footer>
@@ -125,6 +126,41 @@
         ga('create', 'UA-53831300-1', 'auto');
         ga('send', 'pageview');
 
+        // Display contributors via GH API
+        var request = new XMLHttpRequest(),
+            contributors = {},
+            htmlTarget = document.querySelectorAll('#contributors')[0],
+            html = '<p>...with a little help from his friends:</p>';
+
+        request.open('GET', 'https://api.github.com/repos/stefanjudis/perf-tooling/contributors', true);
+
+        request.onload = function () {
+          if (request.status == 200){
+            // We got the data!
+            contributors = JSON.parse(request.responseText);
+
+            // Open <ul>
+            html += '<ul>'
+
+            // For each contributor, build a little avatar link.
+            contributors.forEach(function (user) {
+              html += '<li><a href="' + user.url.replace('api.','').replace('users/','') + '"><img src="' + user.avatar_url + '" alt="' + user.login + '" class="contributor-avatar"></a></li>';
+            });
+
+            // Close the <ul>
+            html += '</ul>';
+
+            // Insert markup
+            htmlTarget.innerHTML = html;
+          } else if (request.status == 403) {
+            // 403 happens when you hit rate-limit.
+            // @see https://developer.github.com/v3/#rate-limiting
+            console.log('We found GH, but it returned an error. No contributors list this time :(');
+          }
+        };
+
+        request.onerror = function() {console.log('Could not load contributors JSON. Not sure why :(');};
+        request.send();
       </script>
     </body>
 </html>
