@@ -1,10 +1,11 @@
-var express = require( 'express' );
-var app     = express();
-var fs      = require( 'fs' );
-var _       = require( 'lodash' );
-var Promise = require( 'bluebird' );
-var request = Promise.promisify( ( require( 'request' ) ) );
-var config  = {
+var express     = require( 'express' );
+var compression = require( 'compression' );
+var app         = express();
+var fs          = require( 'fs' );
+var _           = require( 'lodash' );
+var Promise     = require( 'bluebird' );
+var request     = Promise.promisify( ( require( 'request' ) ) );
+var config      = {
   dirs      : {
     tools : './tools'
   },
@@ -15,8 +16,9 @@ var config  = {
     index : './templates/index.tpl'
   }
 }
-var port    = process.env.PORT || 3000;
-var tools   = getTools();
+
+var port         = process.env.PORT || 3000;
+var tools        = getTools();
 
 /**
  * Read files and get tools
@@ -75,6 +77,7 @@ var options = {
   }
 };
 
+app.use( compression() );
 app.use( express.static( 'css' ) );
 
 app.get( '/', function( req, res ) {
