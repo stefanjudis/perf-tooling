@@ -1,0 +1,8 @@
+{
+  "name" : "Uglify2",
+  "description" : "UglifyJS is a JavaScript parser, minifier, compressor or beautifier toolkit.",
+  "cli" : "https://github.com/mishoo/UglifyJS2",
+  "module" : "https://github.com/mishoo/UglifyJS2",
+  "grunt" : "https://github.com/gruntjs/grunt-contrib-uglify",
+  "gulp" : "https://github.com/terinjokes/gulp-uglify/"
+}

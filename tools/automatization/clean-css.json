@@ -1,0 +1,8 @@
+{
+  "name" : "clean-css",
+  "cli" : "https://github.com/GoalSmashers/clean-css",
+  "module" : "https://github.com/GoalSmashers/clean-css",
+  "grunt" : "https://github.com/gruntjs/grunt-contrib-cssmin",
+  "gulp" : "https://github.com/chilijung/gulp-cssmin/",
+  "description" : "Clean-css is a fast and efficient Node.js library for minifying CSS files. According to tests it is one of the best available."
+}

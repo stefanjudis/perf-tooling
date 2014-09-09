@@ -1,0 +1,7 @@
+{
+  "name" : "CSSShrink",
+  "module" : "http://cssshrink.com/",
+  "grunt" : "https://github.com/JohnCashmore/grunt-cssshrink",
+  "gulp" : "https://www.npmjs.org/package/gulp-cssshrink",
+  "description" : "CSS minifier - Because CSS is on the critical path to rendering pages. It must be small! Or else!"
+}
