@@ -15,6 +15,7 @@ var config  = {
     index : './templates/index.tpl'
   }
 }
+var port    = process.env.PORT || 3000;
 var tools   = getTools();
 
 /**
@@ -79,3 +80,5 @@ app.use( express.static( 'css' ) );
 app.get( '/', function( req, res ) {
   res.send( indexPage );
 } );
+
+app.listen( port );
