@@ -24,7 +24,6 @@
                   <% _.each( category, function( tool ) { %>
                     <li>
                       <h3><%= tool.name %></h3>
-                      <div class="posts--content"><%= tool.description %></div>
                       <ul class="resources">
                         <% if ( tool.service ) { %>
                           <li class="tooltip" title="Service"><a href="<%= tool.service %>" class="service">Service</a>
@@ -54,6 +53,7 @@
                           <li class="tooltip" title="Script"><a href="<%= tool.script %>" class="script">Script</a>
                         <% } %>
                       </ul>
+                      <div class="posts--content"><%= tool.description %></div>
                   <% } );%>
                 </ul>
               <% } );%>
