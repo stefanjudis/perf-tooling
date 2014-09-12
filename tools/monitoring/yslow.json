@@ -1,5 +1,6 @@
 {
   "name" : "YSlow",
   "cli" : "http://yslow.org/command-line-har/",
+  "grunt" : "https://github.com/andyshora/grunt-yslow",
   "description" : "YSlow for Command Line runs on Node.JS and requires a HAR file as input source in order to analyze page performance."
 }
