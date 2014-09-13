@@ -1,0 +1,6 @@
+{
+  "name" : "generate-sprite",
+  "grunt" : "https://github.com/Ensighten/grunt-spritesmith/",
+  "gulp" : "https://github.com/aslansky/gulp-sprite/",
+  "description" : "Convert a set of images into a spritesheet and corresponding CSS variables."
+}

@@ -1,0 +1,6 @@
+{
+  "name" : "webp",
+  "grunt" : "https://github.com/somerandomdude/grunt-webp/",
+  "gulp" : "https://github.com/sindresorhus/gulp-webp/",
+  "description" : "Convert your images to WebP format."
+}
