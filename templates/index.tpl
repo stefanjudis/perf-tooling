@@ -25,8 +25,12 @@
                     <li>
                       <h3><%= tool.name %></h3>
                       <ul class="resources">
-                        <% if ( tool.service ) { %>
-                          <li class="tooltip" title="Service"><a href="<%= tool.service %>" class="service">Service</a>
+                        <% if ( tool.bookmarklet ) { %>
+                          <li class="tooltip" title="Bookmarklet"><a href="<%= tool.bookmarklet %>" class="bookmarklet">Bookmarklet</a>
+                        <% } %>
+
+                        <% if ( tool.chrome ) { %>
+                          <li class="tooltip" title="Chrome extension"><a href="<%= tool.chrome %>" class="chrome">Chrome extension</a>
                         <% } %>
 
                         <% if ( tool.cli ) { %>
@@ -45,12 +49,12 @@
                           <li class="tooltip" title="gulp plugin"><a href="<%= tool.gulp %>" class="gulp">gulp plugin</a>
                         <% } %>
 
-                        <% if ( tool.bookmarklet ) { %>
-                          <li class="tooltip" title="Bookmarklet"><a href="<%= tool.bookmarklet %>" class="bookmarklet">Bookmarklet</a>
-                        <% } %>
-
                         <% if ( tool.script ) { %>
                           <li class="tooltip" title="Script"><a href="<%= tool.script %>" class="script">Script</a>
+                        <% } %>
+
+                        <% if ( tool.service ) { %>
+                          <li class="tooltip" title="Service"><a href="<%= tool.service %>" class="service">Service</a>
                         <% } %>
                       </ul>
                       <div class="posts--content"><%= tool.description %></div>
