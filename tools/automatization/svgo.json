@@ -1,6 +1,7 @@
 {
-  "name" : "svgmin",
+  "name" : "svgo",
+  "module" : "https://github.com/svg/svgo",
   "grunt" : "https://github.com/sindresorhus/grunt-svgmin/",
   "gulp" : "https://github.com/ben-eb/gulp-svgmin/",
-  "description" : "Minify SVG files"
+  "description" : "Minify SVG vector graphics files"
 }

@@ -1,5 +1,6 @@
 {
-  "name" : "inline-css",
+  "name" : "juice",
+  "module" : "https://github.com/Automattic/juice",
   "grunt" : "https://github.com/jgallen23/grunt-inline-css/",
   "gulp" : "https://github.com/jonkemp/gulp-inline-css/",
   "description" : "Inline your CSS properties into the style attribute in an html file. Useful for emails."
