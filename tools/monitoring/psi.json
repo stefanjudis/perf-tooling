@@ -1,6 +1,7 @@
 {
   "name" : "PageSpeed Insights",
   "service" : "https://developers.google.com/speed/pagespeed/insights/",
+  "chrome" : "https://chrome.google.com/webstore/detail/pagespeed-insights-by-goo/gplegfbjlmmehdoakndmohflojccocli",
   "cli" : "https://github.com/addyosmani/psi",
   "module" : "https://github.com/addyosmani/psi",
   "grunt" : "https://github.com/jrcryer/grunt-pagespeed",
