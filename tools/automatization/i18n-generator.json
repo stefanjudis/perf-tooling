@@ -1,0 +1,8 @@
+{
+  "name" : "i18n-generator",
+  "description" : "i18n generator for node, web browser and command line",
+  "cli" : "https://github.com/huei90/i18n-generator",
+  "module" : "https://github.com/huei90/i18n-generator",
+  "grunt" : "",
+  "gulp" : ""
+}
