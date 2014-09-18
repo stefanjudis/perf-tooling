@@ -1,10 +1,9 @@
 var express     = require( 'express' );
 var compression = require( 'compression' );
+var md5         = require( 'MD5' );
 var app         = express();
 var fs          = require( 'fs' );
 var _           = require( 'lodash' );
-var Promise     = require( 'bluebird' );
-var request     = Promise.promisify( ( require( 'request' ) ) );
 var config      = {
   dirs      : {
     tools : './tools'
@@ -62,11 +61,19 @@ var indexPage = _.template(
   fs.readFileSync( config.templates.index ),
   {
     site  : config.site,
-    tools : tools
+    tools : tools,
+    hash  : {
+      css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
+      js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
+    }
   }
 );
 
 
+/**
+ * Static files options
+ * @type {Object}
+ */
 var options = {
   dotfiles   : 'ignore',
   etag       : false,
@@ -78,7 +85,8 @@ var options = {
 };
 
 app.use( compression() );
-app.use( express.static( 'css' ) );
+
+app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
 
 app.get( '/', function( req, res ) {
   res.send( indexPage );

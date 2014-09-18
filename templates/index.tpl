@@ -7,22 +7,33 @@
         <meta name="viewport" content="width=device-width">
         <meta name="description" value="Perf Tooling Today lists a lot of tools that can be used to make the web faster, because performance matters!">
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="/main.css?<%= hash.css %>">
 
     </head>
     <body>
         <a href="https://github.com/stefanjudis/perf-tooling"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
         <div class="container">
           <div class="site">
-            <div class="header">
+            <header class="clearfix">
               <h1 class="title"><%= site.name %></h1>
-            </div>
+              <p>Filter by</p>
+              <ul id="filters" class="filters">
+                <li><input id="filter--bookmarklet" type="checkbox" data-type="bookmarklet"><label for="filter--bookmarklet"><div></div>bookmarklet</label>
+                <li><input id="filter--chrome" type="checkbox" data-type="chrome"><label for="filter--chrome"><div></div>Chrome extension</label>
+                <li><input id="filter--cli" type="checkbox" data-type="cli"><label for="filter--cli"><div></div>CLI</label>
+                <li><input id="filter--module" type="checkbox" data-type="module"><label for="filter--module"><div></div>module</label>
+                <li><input id="filter--grunt" type="checkbox" data-type="grunt"><label for="filter--grunt"><div></div>Grunt</label>
+                <li><input id="filter--gulp" type="checkbox" data-type="gulp"><label for="filter--gulp"><div></div>gulp</label>
+                <li><input id="filter--script" type="checkbox" data-type="script"><label for="filter--script"><div></div>script</label>
+                <li><input id="filter--service" type="checkbox" data-type="service"><label for="filter--service"><div></div>service</label>
+              </ul>
+            </header>
             <div id="home">
               <% _.each( tools, function( category, name ) { %>
                 <h2><%= name %></h2>
                 <ul class="posts">
                   <% _.each( category, function( tool ) { %>
-                    <li>
+                    <li id="<%= tool.name.replace( ' ', '-' ) %>">
                       <h3><%= tool.name %></h3>
                       <ul class="resources">
                         <% if ( tool.bookmarklet ) { %>
@@ -160,6 +171,23 @@
           </footer>
         </div> <!-- /container -->
       <script>
+        <%
+          var flattenTools = [];
+
+          for ( var type in tools ) {
+            if ( tools.hasOwnProperty( type ) ) {
+              for ( var tool in tools[ type ] ) {
+                if ( tools[ type ].hasOwnProperty( tool ) ) {
+                  flattenTools.push( tools[ type ][ tool ] );
+                }
+              }
+            }
+          }
+        %>
+        window.tools = <%= JSON.stringify( flattenTools ) %>;
+      </script>
+      <script src="/tooling.js?<%= hash.js %>" async>
+      <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -167,44 +195,6 @@
 
         ga('create', 'UA-53831300-1', 'auto');
         ga('send', 'pageview');
-
-        // Display contributors via GH API
-        var request = new XMLHttpRequest(),
-            contributors = {},
-            htmlTarget = document.querySelectorAll('#contributors')[0],
-            html = '<p>...with a little help from his friends:</p>';
-
-        request.open('GET', 'https://api.github.com/repos/stefanjudis/perf-tooling/contributors', true);
-
-        request.onload = function () {
-          if (request.status == 200){
-            // We got the data!
-            contributors = JSON.parse(request.responseText);
-
-            // Open <ul>
-            html += '<ul>';
-
-            // For each contributor, build a little avatar link.
-            contributors.forEach(function (user) {
-              if (user.login !== 'stefanjudis') {
-                html += '<li><a href="' + user.url.replace('api.','').replace('users/','') + '"><img src="' + user.avatar_url + '" alt="' + user.login + '" class="contributor-avatar"></a></li>';
-              }
-            });
-
-            // Close the <ul>
-            html += '</ul>';
-
-            // Insert markup
-            htmlTarget.innerHTML = html;
-          } else if (request.status == 403) {
-            // 403 happens when you hit rate-limit.
-            // @see https://developer.github.com/v3/#rate-limiting
-            console.log('We found GH, but it returned an error. No contributors list this time :(');
-          }
-        };
-
-        request.onerror = function() {console.log('Could not load contributors JSON. Not sure why :(');};
-        request.send();
       </script>
     </body>
 </html>

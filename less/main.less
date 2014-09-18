@@ -26,6 +26,22 @@ a {
   color : @blue;
 }
 
+header {
+  background : @blue;
+  color : @white;
+
+  padding : 0 2rem;
+}
+
+h1 {
+  font-weight : 200;
+
+  @media (min-width: 1000px) {
+    display : inline-block;
+    text-align : left;
+  }
+}
+
 h2 {
   color : @blue;
   font-style : italic;
@@ -55,6 +71,56 @@ h3 {
   }
 }
 
+input[type="checkbox"] {
+  + label {
+    > div {
+      position : relative;
+
+      width  : 2.5rem;
+      height : 1.5rem;
+
+      margin : 0 auto 0.5rem;
+      border-radius : 2rem;
+
+      background : @grey;
+
+      border : 0.125rem solid @white;
+
+      transition : background 0.25s;
+
+      &:before {
+        position : absolute;
+
+        content : '';
+
+        width : 1rem;
+        height : 1rem;
+
+        top : 0.125rem;
+        left : 0.125rem;
+
+        background : @white;
+
+        transition : left 0.25s;
+
+        border-radius : 2rem;
+      }
+    }
+  }
+
+  &:checked {
+    + label {
+      > div {
+        background : #3D9970;
+
+        &:before {
+          left : 1.125rem;
+        }
+      }
+    }
+  }
+}
+
 footer {
   margin  : 3rem 0 0 0;
   padding : 2rem 0 2rem 0;
@@ -81,12 +147,42 @@ footer {
   color : @blue-bright;
 }
 
-.posts, .resources, .socials {
+.filters, .posts, .resources, .socials {
   list-style : none;
 
   &, li {
     margin : 0;
     padding : 0;
+  }
+}
+
+
+.filters {
+  > li {
+    padding : 0.25rem 0;
+  }
+  input {
+    display : none;
+  }
+}
+
+.filters {
+  margin-bottom : 1rem;
+
+  > li {
+    position : relative;
+
+    display : inline-block;
+
+    width : 50%;
+
+    @media (min-width: 600px) {
+      width : 25%;
+    }
+
+    @media (min-width: 1000px) {
+      width : 12.5%;
+    }
   }
 }
 
@@ -105,20 +201,17 @@ footer {
     @media (min-width: 600px) {
       display : inline-block;
       vertical-align : top;
-
       width : 50%;
       min-height : 410px;
     }
 
     @media (min-width: 1000px) {
       width : 33.33%;
-
       min-height : 375px;
     }
 
     @media (min-width: 1400px) {
       width : 25%;
-
       min-height : 300px;
     }
   }
@@ -429,4 +522,30 @@ footer {
       height: 42px;
     }
   }
+}
+
+/**
+ * HELPERS
+ */
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
 }
