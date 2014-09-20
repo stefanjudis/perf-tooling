@@ -28,6 +28,7 @@
     "gulp-uglify": "^1.0.1",
     "gulp-util": "~3.0.0",
     "gulp-watch": "^0.6.9",
+    "html-minifier": "^0.6.8",
     "lodash": "^2.4.1"
   }
 }

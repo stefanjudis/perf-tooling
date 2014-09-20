@@ -4,6 +4,7 @@ var md5         = require( 'MD5' );
 var app         = express();
 var fs          = require( 'fs' );
 var _           = require( 'lodash' );
+var minify      = require( 'html-minifier' ).minify;
 var config      = {
   dirs      : {
     tools : './tools'
@@ -18,6 +19,7 @@ var config      = {
 
 var port         = process.env.PORT || 3000;
 var tools        = getTools();
+
 
 /**
  * Read files and get tools
@@ -57,15 +59,25 @@ function getTools() {
  * Rendered index page
  * @type {String}
  */
-var indexPage = _.template(
-  fs.readFileSync( config.templates.index ),
-  {
-    site  : config.site,
-    tools : tools,
-    hash  : {
-      css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
-      js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
+var indexPage = minify(
+  _.template(
+    fs.readFileSync( config.templates.index ),
+    {
+      site  : config.site,
+      tools : tools,
+      hash  : {
+        css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
+        js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
+      }
     }
+  ), {
+    keepClosingSlash      : true,
+    collapseWhitespace    : true,
+    minifyJS              : true,
+    removeAttributeQuotes : true,
+    removeComments        : true,
+    removeEmptyAttributes : true,
+    useShortDoctype       : true
   }
 );
 
