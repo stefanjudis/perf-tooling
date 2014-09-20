@@ -1,5 +1,5 @@
 {
-  "name" : " HTMLMinifier",
+  "name" : "HTMLMinifier",
   "module" : "https://github.com/kangax/html-minifier",
   "grunt" : "https://github.com/gruntjs/grunt-contrib-htmlmin",
   "gulp" : "https://github.com/jonschlinkert/gulp-htmlmin",

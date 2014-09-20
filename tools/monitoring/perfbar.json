@@ -1,5 +1,6 @@
 {
   "name" : "perfBar",
+  "chrome" : "https://github.com/paparts/perfMe",
   "script" : "https://github.com/lafikl/perfBar",
   "description" : "Simple way to collect and look at your website performance metrics quickly, that supports budgeting and adding custom metrics."
 }
