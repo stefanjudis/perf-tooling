@@ -13,11 +13,9 @@ var gulp        = require( 'gulp' ),
     prefix      = require( 'gulp-autoprefixer' ),
     clean       = require( 'gulp-clean' ),
     minifyCSS   = require( 'gulp-minify-css' ),
-    imagemin    = require( 'gulp-imagemin' ),
     size        = require( 'gulp-size' ),
     watch       = require( 'gulp-watch' ),
     uglify      = require( 'gulp-uglify' ),
-    connect     = require( 'gulp-connect' ),
 
     // all paths for watching and regeneration
     PATHS      = {
@@ -56,20 +54,6 @@ gulp.task( 'scripts', function() {
   return gulp.src( 'js/tooling.js' )
     .pipe( uglify() )
     .pipe( gulp.dest( 'public' ) );
-});
-
-
-/*******************************************************************************
- * IMAGE TASK
- *
- * this task is responsible for image optimization
- *  - it will optimize all images in the assets folder and move them to
- *    the public folder
- */
-gulp.task( 'images', function () {
-  return gulp.src( ASSETS_DIR + 'images/**/*' )
-    .pipe(imagemin())
-    .pipe(gulp.dest( PUBLIC_DIR + 'images' ));
 });
 
 
