@@ -51,7 +51,7 @@
         // For each contributor, build a little avatar link.
         contributors.forEach( function ( user ) {
           if ( user.login !== 'stefanjudis' ) {
-            html += '<li><a href="' + user.url.replace('api.','').replace('users/','') + '"><img src="' + user.avatar_url + '" alt="' + user.login + '" class="contributor-avatar"></a></li>';
+            html += '<li><a href="' + user.url.replace('api.','').replace('users/','') + '"><img src="' + user.avatar_url + '&s=42" alt="' + user.login + '" class="contributor-avatar"></a></li>';
           }
         } );
 
