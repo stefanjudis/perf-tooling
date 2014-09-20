@@ -1,5 +1,5 @@
 {
-  "name" : "DevPerf",
+  "name" : "grunt-devperf",
   "grunt" : "https://github.com/gmetais/grunt-devperf",
   "description" : "Helps front-end developers to reach a good quality and good performances, based on phantomas and grunt-phantomas. Day after day, while working on your project, keep an eye on performance metrics and get warnings for things you should optimize."
 }
