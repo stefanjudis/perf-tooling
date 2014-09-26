@@ -226,9 +226,57 @@ footer {
   padding : 0 0 1rem;
 
   li {
+    position : relative;
+
     display : inline-block;
 
+    text-align : left;
+
+    vertical-align : top;
+
     margin : 0 0.25rem;
+  }
+
+  span {
+    position    : absolute;
+    right       : 1rem;
+    top         : 0;
+    padding     : 0.5rem 0;
+    color       : white;
+    line-height : 1.125;
+
+    &:after {
+      content: '☆';
+      margin-left: 0.25rem;
+    }
+
+    @media (min-width: 1000px) {
+      display : block;
+      position : relative;
+
+      right : auto;
+      top   : auto;
+
+      padding : 1.5rem 0 0;
+      margin  : 0 0 0.5rem;
+
+      text-align : center;
+
+      color : @grey;
+
+      &:after {
+        position : absolute;
+
+        top : 0;
+        left : 0;
+        right : 0;
+
+        margin : 0;
+
+        text-align : center;
+        content : '☆';
+      }
+    }
   }
 
   a {
@@ -236,7 +284,8 @@ footer {
 
     width : 220px;
 
-    padding : 0.5rem 1.5rem;
+    padding : 0.5rem 1rem;
+    margin  : 0 0 0.5rem 0;
 
     border-radius : 2rem;
 
@@ -244,6 +293,8 @@ footer {
     text-decoration : none;
 
     overflow : hidden;
+
+
 
     &.service {
       background : #7FDBFF;
@@ -313,6 +364,8 @@ footer {
     @media (min-width: 1000px) {
       width : 3rem;
       height : 3rem;
+
+      padding : 0.5rem 1.5rem;
 
       border-radius : 50%;
 

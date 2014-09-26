@@ -4,5 +4,5 @@
   "cli" : "https://github.com/mishoo/UglifyJS2",
   "module" : "https://github.com/mishoo/UglifyJS2",
   "grunt" : "https://github.com/gruntjs/grunt-contrib-uglify",
-  "gulp" : "https://github.com/terinjokes/gulp-uglify/"
+  "gulp" : "https://github.com/terinjokes/gulp-uglify"
 }

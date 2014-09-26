@@ -2,7 +2,7 @@
   "name" : "cwebp",
   "cli" : "https://developers.google.com/speed/webp/docs/cwebp",
   "module" : "https://github.com/imagemin/cwebp-bin",
-  "grunt" : "https://github.com/somerandomdude/grunt-webp/",
-  "gulp" : "https://github.com/sindresorhus/gulp-webp/",
+  "grunt" : "https://github.com/somerandomdude/grunt-webp",
+  "gulp" : "https://github.com/sindresorhus/gulp-webp",
   "description" : "Convert your images to WebP format."
 }

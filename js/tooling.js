@@ -25,58 +25,6 @@
 
 
   /**
-   * Fetch contributor data from github
-   * and append contributors to the page
-   */
-  function displayContributors() {
-    var request = new XMLHttpRequest(),
-        contributors = {},
-        htmlTarget = document.querySelectorAll( '#contributors' )[ 0 ],
-        html = '<p>...with a little help from his friends:</p>';
-
-    request.open(
-      'GET',
-      'https://api.github.com/repos/stefanjudis/perf-tooling/contributors',
-      true
-    );
-
-    request.onload = function () {
-      if (request.status == 200){
-        // We got the data!
-        contributors = JSON.parse( request.responseText );
-
-        // Open <ul>
-        html += '<ul>';
-
-        // For each contributor, build a little avatar link.
-        contributors.forEach( function ( user ) {
-          if ( user.login !== 'stefanjudis' ) {
-            html += '<li><a href="' + user.url.replace('api.','').replace('users/','') + '"><img src="' + user.avatar_url + '&s=42" alt="' + user.login + '" class="contributor-avatar"></a></li>';
-          }
-        } );
-
-        // Close the <ul>
-        html += '</ul>';
-
-        // Insert markup
-        htmlTarget.innerHTML = html;
-      } else if ( request.status == 403 ) {
-        // 403 happens when you hit rate-limit.
-        // @see https://developer.github.com/v3/#rate-limiting
-        console.log(
-          'We found GH, but it returned an error. No contributors list this time :('
-        );
-      }
-    };
-
-    request.onerror = function() {
-      console.log( 'Could not load contributors JSON. Not sure why :(' );
-    };
-    request.send();
-  }
-
-
-  /**
    * Add event handlers to watch
    * out for filter changes
    */
@@ -133,6 +81,5 @@
     } );
   }
 
-  displayContributors();
   addFilterFunctionality();
 } )( document, tools );

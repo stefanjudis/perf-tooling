@@ -38,34 +38,50 @@
                       <ul class="resources">
                         <% if ( tool.bookmarklet ) { %>
                           <li class="tooltip" title="Bookmarklet"><a href="<%= tool.bookmarklet %>" class="bookmarklet">Bookmarklet</a>
+
+                          <span><%= ( tool.stars.bookmarklet ) ? tool.stars.bookmarklet : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.chrome ) { %>
                           <li class="tooltip" title="Chrome extension"><a href="<%= tool.chrome %>" class="chrome">Chrome extension</a>
+
+                          <span><%= ( tool.stars.chrome ) ? tool.stars.chrome : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.cli ) { %>
                           <li class="tooltip" title="CLI"><a href="<%= tool.cli %>" class="cli">CLI</a>
+
+                          <span><%= ( tool.stars.cli ) ? tool.stars.cli : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.module ) { %>
                           <li class="tooltip" title="Node module"><a href="<%= tool.module %>" class="module">Node module</a>
+
+                          <span><%= ( tool.stars.module ) ? tool.stars.module : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.grunt ) { %>
                           <li class="tooltip" title="Grunt plugin"><a href="<%= tool.grunt %>" class="grunt">Grunt plugin</a>
+
+                          <span><%= ( tool.stars.grunt ) ? tool.stars.grunt : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.gulp ) { %>
                           <li class="tooltip" title="gulp plugin"><a href="<%= tool.gulp %>" class="gulp">gulp plugin</a>
+
+                          <span><%= ( tool.stars.gulp ) ? tool.stars.gulp : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.script ) { %>
                           <li class="tooltip" title="Script"><a href="<%= tool.script %>" class="script">Script</a>
+
+                          <span><%= ( tool.stars.script ) ? tool.stars.script : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.service ) { %>
                           <li class="tooltip" title="Service"><a href="<%= tool.service %>" class="service">Service</a>
+
+                          <span><%= ( tool.stars.service ) ? tool.stars.service : 'N/A' %></span>
                         <% } %>
                       </ul>
                       <div class="posts--content"><%= tool.description %></div>
@@ -165,7 +181,18 @@
                   <polygon fill="#BCBCBC" points="178.346,122.718 196.031,100.812 194.375,99.094 "/>
                   </svg>stefanjudis@gmail.com</a>
                 </ul>
-                <div id="contributors"><!-- filled in with JS --></div>
+                <div id="contributors">
+                  <% if( contributors ) { %>
+                    <p>...with a little help from his friends:</p>
+                    <ul>
+                      <% _.each( contributors, function( contrib ) { %>
+                        <% if ( contrib.login !== 'stefanjudis' ) { %>
+                          <li><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>"><img src="<%= contrib.avatar_url + '&s=42' %>" alt="<%= contrib.login %>" class="contributor-avatar"></a></li>
+                        <% } %>
+                      <% } ) %>
+                    </ul>
+                  <% } %>
+                </div>
               </div>
             </div>
           </footer>

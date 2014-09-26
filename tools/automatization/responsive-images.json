@@ -1,5 +1,5 @@
 {
   "name" : "grunt-responsive-images",
-  "grunt" : "https://github.com/andismith/grunt-responsive-images/",
+  "grunt" : "https://github.com/andismith/grunt-responsive-images",
   "description" : "Produce images at different sizes for responsive websites."
 }
