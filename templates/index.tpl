@@ -11,22 +11,26 @@
 
     </head>
     <body>
-        <a href="https://github.com/stefanjudis/perf-tooling"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+        <input id="filter--toggle" type="checkbox" class="filter--toggle">
+        <label for="filter--toggle" class="filter--label">Show filters</label>
+        <div class="filterContainer">
+          <p class="filter--headline">Filter by:</p>
+          <ul id="filters" class="filters">
+            <li class="clearfix"><input id="filter--bookmarklet" type="checkbox" data-type="bookmarklet"><label for="filter--bookmarklet"><div></div>bookmarklet</label>
+            <li class="clearfix"><input id="filter--chrome" type="checkbox" data-type="chrome"><label for="filter--chrome"><div></div>Chrome extension</label>
+            <li class="clearfix"><input id="filter--cli" type="checkbox" data-type="cli"><label for="filter--cli"><div></div>CLI</label>
+            <li class="clearfix"><input id="filter--module" type="checkbox" data-type="module"><label for="filter--module"><div></div>module</label>
+            <li class="clearfix"><input id="filter--grunt" type="checkbox" data-type="grunt"><label for="filter--grunt"><div></div>Grunt</label>
+            <li class="clearfix"><input id="filter--gulp" type="checkbox" data-type="gulp"><label for="filter--gulp"><div></div>gulp</label>
+            <li class="clearfix"><input id="filter--script" type="checkbox" data-type="script"><label for="filter--script"><div></div>script</label>
+            <li class="clearfix"><input id="filter--service" type="checkbox" data-type="service"><label for="filter--service"><div></div>service</label>
+          </ul>
+        </div>
         <div class="container">
+          <a href="https://github.com/stefanjudis/perf-tooling"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
           <div class="site">
             <header class="clearfix">
               <h1 class="title"><%= site.name %></h1>
-              <p>Filter by</p>
-              <ul id="filters" class="filters">
-                <li><input id="filter--bookmarklet" type="checkbox" data-type="bookmarklet"><label for="filter--bookmarklet"><div></div>bookmarklet</label>
-                <li><input id="filter--chrome" type="checkbox" data-type="chrome"><label for="filter--chrome"><div></div>Chrome extension</label>
-                <li><input id="filter--cli" type="checkbox" data-type="cli"><label for="filter--cli"><div></div>CLI</label>
-                <li><input id="filter--module" type="checkbox" data-type="module"><label for="filter--module"><div></div>module</label>
-                <li><input id="filter--grunt" type="checkbox" data-type="grunt"><label for="filter--grunt"><div></div>Grunt</label>
-                <li><input id="filter--gulp" type="checkbox" data-type="gulp"><label for="filter--gulp"><div></div>gulp</label>
-                <li><input id="filter--script" type="checkbox" data-type="script"><label for="filter--script"><div></div>script</label>
-                <li><input id="filter--service" type="checkbox" data-type="service"><label for="filter--service"><div></div>service</label>
-              </ul>
             </header>
             <div id="home">
               <% _.each( tools, function( category, name ) { %>

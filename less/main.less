@@ -1,9 +1,15 @@
 @import "normalize.less";
 
 @grey        : #707173;
+@grey-dark   : #333;
 @blue        : #01A5B1;
 @blue-bright : #93D5DB;
 @white       : #DDF0F2;
+
+@filterWidth : 15rem;
+@filterToggleWidth  : 3rem;
+@filterToggleHeight : 3rem;
+
 
 * {
   &, &:before, &:after {
@@ -13,13 +19,40 @@
 
 body {
   color : @grey;
-  background : @white;
+  background : @grey;
 
   font-size   : 16px;
   font-family : Helvetica, Arial, sans-serif;
   font-weight : 200;
 
   text-align : center;
+
+  overflow : hidden;
+}
+
+.container {
+  position : absolute;
+
+  top : 0;
+  left : 0;
+  right : 0;
+  bottom : 0;
+
+  overflow : auto;
+
+  background : @white;
+
+  transform : scale( 1, 1 ) translate3d( 0, 0, 0 );
+
+  transition : transform 0.25s ease-in;
+
+  #filter--toggle:checked ~ & {
+    transform : translate3d( @filterWidth, 0, 0 );
+
+    @media (min-width: 1000px) {
+      transform : scale( 0.8, 0.8 ) translate3d( @filterWidth, 0, 0 );
+    }
+  }
 }
 
 a {
@@ -30,7 +63,7 @@ header {
   background : @blue;
   color : @white;
 
-  padding : 0 2rem;
+  padding : 0 ( @filterToggleWidth + 1 );
 }
 
 h1 {
@@ -73,7 +106,13 @@ h3 {
 
 input[type="checkbox"] {
   + label {
+    display    : block;
+    text-align : right;
+
+    line-height : 1.5rem;
+
     > div {
+      float : left;
       position : relative;
 
       width  : 2.5rem;
@@ -157,9 +196,98 @@ footer {
 }
 
 
+.filterContainer {
+  position  : absolute;
+
+  left : 0;
+  top  : 0;
+
+  height : 100%;
+  width : @filterWidth;
+
+  background : @blue;
+
+  text-align : left;
+  color : @white;
+
+  z-index : 1;
+
+  transform : translate3d( -100%, 0 ,0 );
+
+  transition : transform 0.25s ease-in;
+
+  box-shadow : inset -.25rem 0 .25rem -.125rem #333;
+
+  #filter--toggle:checked ~ & {
+    transform : translate3d( 0, 0 ,0 );
+  }
+}
+
+.filter--headline {
+  padding : 0.5rem 0;
+  margin  : 0.5rem 1.5rem;
+
+  text-transform : uppercase;
+
+  border-bottom : 1px solid @white;
+}
+
+.filter--label {
+  position : absolute;
+  display : block;
+
+  top : 1rem;
+  left : 1rem;
+
+  height : 0;
+  width  : @filterToggleHeight;
+
+  padding : @filterToggleHeight 0 0;
+  overflow : hidden;
+
+  background : @blue;
+
+  cursor : pointer;
+
+  z-index : 2;
+
+  transform : translate3d( 0, 0, 0 );
+  transition : transform 0.25s ease-in;
+
+  &:hover, &:focus {
+    background : lighten( @blue, 5 );
+  }
+
+  &:active {
+    background : lighten( @blue, -5 );
+  }
+
+  &:before {
+    position : absolute;
+
+    top : 0.25rem;
+    left : 0.25rem;
+
+    width : 2.5rem;
+    height : 2.5rem;
+
+    content : '';
+
+    background-image : url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMTQgMTQgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAxNCAxNCAxMDAgMTAwIj48ZyBmaWxsPSIjRERGMEYyIj48cGF0aCBkPSJNMzIgNzJjLTQuNDE4IDAtOCAzLjU4Mi04IDhzMy41ODIgOCA4IDggOC0zLjU4MiA4LTgtMy41ODItOC04LTh6bTAgMTJjLTIuMjA5IDAtNC0xLjc5MS00LTRzMS43OTEtNCA0LTQgNCAxLjc5MSA0IDQtMS43OTEgNC00IDR6TTk2IDU2Yy00LjQxOCAwLTggMy41ODItOCA4czMuNTgyIDggOCA4IDgtMy41ODIgOC04LTMuNTgyLTgtOC04em0wIDEyYy0yLjIwOSAwLTQtMS43OTEtNC00czEuNzkxLTQgNC00IDQgMS43OTEgNCA0LTEuNzkxIDQtNCA0ek02NCA0MGMtNC40MTggMC04IDMuNTgyLTggOHMzLjU4MiA4IDggOCA4LTMuNTgyIDgtOC0zLjU4Mi04LTgtOHptMCAxMmMtMi4yMDkgMC00LTEuNzkxLTQtNHMxLjc5MS00IDQtNCA0IDEuNzkxIDQgNC0xLjc5MSA0LTQgNHpNNjQgMzZjLjY4NCAwIDEuMzUuMDcgMiAuMTh2LTQuMThoLTR2NC4xOGMuNjUyLS4xMSAxLjMxNy0uMTggMi0uMTh6TTY0IDYwYy0uNjgzIDAtMS4zNDgtLjA3LTItLjE4djM2LjE4aDR2LTM2LjE4Yy0uNjUuMTEtMS4zMTYuMTgtMiAuMTh6TTk2IDUyYy42ODQgMCAxLjM1LjA3IDIgLjE4di0yMC4xOGgtNHYyMC4xOGMuNjUtLjExIDEuMzE2LS4xOCAyLS4xOHpNOTYgNzZjLS42ODQgMC0xLjM1LS4wNy0yLS4xOHYyMC4xOGg0di0yMC4xOGMtLjY1LjExLTEuMzE2LjE4LTIgLjE4ek0zMiA2OGMuNjgzIDAgMS4zNDguMDcgMiAuMTh2LTM2LjE4aC00djM2LjE4Yy42NTItLjExIDEuMzE3LS4xOCAyLS4xOHpNMzIgOTJjLS42ODMgMC0xLjM0OC0uMDctMi0uMTh2NC4xOGg0di00LjE4Yy0uNjUyLjExLTEuMzE3LjE4LTIgLjE4eiIvPjwvZz48L3N2Zz4NCg==");
+  }
+
+  #filter--toggle:checked ~ & {
+    transform : translate3d( @filterWidth, 0, 0 );
+  }
+}
+
+.filter--toggle {
+  display : none;
+}
+
 .filters {
   > li {
-    padding : 0.25rem 0;
+    padding : 0.25rem 1.5rem;
   }
   input {
     display : none;
@@ -171,18 +299,6 @@ footer {
 
   > li {
     position : relative;
-
-    display : inline-block;
-
-    width : 50%;
-
-    @media (min-width: 600px) {
-      width : 25%;
-    }
-
-    @media (min-width: 1000px) {
-      width : 12.5%;
-    }
   }
 }
 

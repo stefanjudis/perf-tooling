@@ -48,13 +48,13 @@ function fetchContributors() {
           'User-Agent' : 'perf-tooling.today'
         }
       },
-      function( error,response, body ) {
-        if ( !error && response.statusCode == 200 ) {
+      function( error, response, body ) {
+        if ( !error && response && response.statusCode == 200 ) {
           try {
             contributors = JSON.parse( body );
-
-            // renderIndex();
           } catch( e ) {
+            console.log( error );
+            console.log( response );
             console.log( e );
           }
         }
@@ -96,7 +96,7 @@ function fetchGithubStars() {
               }
             },
             function( error, response, body ) {
-              if ( response.statusCode === 404 ) {
+              if ( !error && response && response.statusCode === 404 ) {
                 console.log( 'NOT FOUND: ' + url );
               }
 
@@ -107,6 +107,8 @@ function fetchGithubStars() {
 
                 renderIndex();
               } catch( e ) {
+                console.log( error );
+                console.log( response );
                 console.log( e );
               }
             }
