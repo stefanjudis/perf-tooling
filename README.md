@@ -2,10 +2,14 @@
 
 Welcome to Perf Tooling.
 
-Perf Tooling is a shared resource to keep track of new and existant performance tools.
+Perf Tooling is a shared resource to keep track of new and existent performance tools.
 
-### Contribute
+## Contribution
 
-If you want to contribute, add a new `.md` file at `_posts`. Please include meta information and a short description about the particular tool.
+You want to add a tool? Great!
 
-Thanks a lot!
+Either create an issue and I'll add it to [perf-tooling.today](http://perf-tooling.today).
+
+Or propose a pull request and add a tool by adding a `JSON` file at `tools/automatization` or `tools/monitoring`.
+
+Thanks a lot. :)

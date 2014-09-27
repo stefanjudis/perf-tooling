@@ -26,13 +26,29 @@ a {
   color : @blue;
 }
 
-h1 {
+header {
+  background : @blue;
+  color : @white;
 
+  padding : 0 2rem;
+}
+
+h1 {
+  font-weight : 200;
+
+  @media (min-width: 1000px) {
+    display : inline-block;
+    text-align : left;
+  }
 }
 
 h2 {
   color : @blue;
   font-style : italic;
+
+  &:before {
+    content : '#';
+  }
 }
 
 h3 {
@@ -52,6 +68,56 @@ h3 {
     height : 1px;
 
     border-bottom : 1px solid @blue;
+  }
+}
+
+input[type="checkbox"] {
+  + label {
+    > div {
+      position : relative;
+
+      width  : 2.5rem;
+      height : 1.5rem;
+
+      margin : 0 auto 0.5rem;
+      border-radius : 2rem;
+
+      background : @grey;
+
+      border : 0.125rem solid @white;
+
+      transition : background 0.25s;
+
+      &:before {
+        position : absolute;
+
+        content : '';
+
+        width : 1rem;
+        height : 1rem;
+
+        top : 0.125rem;
+        left : 0.125rem;
+
+        background : @white;
+
+        transition : left 0.25s;
+
+        border-radius : 2rem;
+      }
+    }
+  }
+
+  &:checked {
+    + label {
+      > div {
+        background : #3D9970;
+
+        &:before {
+          left : 1.125rem;
+        }
+      }
+    }
   }
 }
 
@@ -81,12 +147,42 @@ footer {
   color : @blue-bright;
 }
 
-.posts, .resources, .socials {
+.filters, .posts, .resources, .socials {
   list-style : none;
 
   &, li {
     margin : 0;
     padding : 0;
+  }
+}
+
+
+.filters {
+  > li {
+    padding : 0.25rem 0;
+  }
+  input {
+    display : none;
+  }
+}
+
+.filters {
+  margin-bottom : 1rem;
+
+  > li {
+    position : relative;
+
+    display : inline-block;
+
+    width : 50%;
+
+    @media (min-width: 600px) {
+      width : 25%;
+    }
+
+    @media (min-width: 1000px) {
+      width : 12.5%;
+    }
   }
 }
 
@@ -105,20 +201,17 @@ footer {
     @media (min-width: 600px) {
       display : inline-block;
       vertical-align : top;
-
       width : 50%;
       min-height : 410px;
     }
 
     @media (min-width: 1000px) {
       width : 33.33%;
-
       min-height : 375px;
     }
 
     @media (min-width: 1400px) {
       width : 25%;
-
       min-height : 300px;
     }
   }
@@ -130,13 +223,60 @@ footer {
 }
 
 .resources {
-  padding : 1rem 0;
+  padding : 0 0 1rem;
 
   li {
+    position : relative;
+
     display : inline-block;
 
-    margin : 0 0.25rem;
+    text-align : left;
 
+    vertical-align : top;
+
+    margin : 0 0.25rem;
+  }
+
+  span {
+    position    : absolute;
+    right       : 1rem;
+    top         : 0;
+    padding     : 0.5rem 0;
+    color       : white;
+    line-height : 1.125;
+
+    &:after {
+      content: '☆';
+      margin-left: 0.25rem;
+    }
+
+    @media (min-width: 1000px) {
+      display : block;
+      position : relative;
+
+      right : auto;
+      top   : auto;
+
+      padding : 1.5rem 0 0;
+      margin  : 0 0 0.5rem;
+
+      text-align : center;
+
+      color : @grey;
+
+      &:after {
+        position : absolute;
+
+        top : 0;
+        left : 0;
+        right : 0;
+
+        margin : 0;
+
+        text-align : center;
+        content : '☆';
+      }
+    }
   }
 
   a {
@@ -144,7 +284,8 @@ footer {
 
     width : 220px;
 
-    padding : 0.5rem 1.5rem;
+    padding : 0.5rem 1rem;
+    margin  : 0 0 0.5rem 0;
 
     border-radius : 2rem;
 
@@ -152,6 +293,8 @@ footer {
     text-decoration : none;
 
     overflow : hidden;
+
+
 
     &.service {
       background : #7FDBFF;
@@ -166,6 +309,14 @@ footer {
 
       &:hover {
         background : lighten( #001F3F, 7% );
+      }
+    }
+
+    &.chrome {
+      background : #0074D9;
+
+      &:hover {
+        background : lighten( #0074D9, 7% );
       }
     }
 
@@ -214,6 +365,8 @@ footer {
       width : 3rem;
       height : 3rem;
 
+      padding : 0.5rem 1.5rem;
+
       border-radius : 50%;
 
       text-indent : -1000px;
@@ -245,6 +398,18 @@ footer {
           top  : 0.878rem;
           left : 0.7rem;
           background-image : url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAiIGhlaWdodD0iNzAiIHZpZXdCb3g9IjAgMCA5MCA3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+PHRpdGxlPlVudGl0bGVkIDU8L3RpdGxlPjxwYXRoIGQ9Ik0tLjI2MS4zMzF2NzAuMzM4aDkwdi03MC4zMzhoLTkwem0xOS4xODQgNTMuNDgxbC02LjM5NC02LjM5NiAxMi43ODgtMTIuNzg4LTEyLjc4OC0xMi43ODggNi4zOTQtNi4zOTUgMTkuMTgzIDE5LjE4My0xOS4xODMgMTkuMTg0em01NC42NDEtMS4xNjRoLTI5LjA2NHYtOC41NzRoMjkuMDY0djguNTc0eiIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCIgZmlsbD0iI0RERjBGMiIvPjwvc3ZnPg0K");
+        }
+      }
+
+      &.chrome {
+        &:before {
+          width  : 1.8rem;
+          height : 1.8rem;
+
+          top : 0.6rem;
+          left : 0.6rem;
+
+          background-image : url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMy4zMDMiIGhlaWdodD0iMjMuNyIgdmlld0JveD0iMCAwIDIzLjMwMyAyMy43Ij48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjIuMzU1IDcuNDc3aC03LjMyNmMxLjMxNSAxLjAwOSAyLjE4NCAyLjU4MyAyLjE4NCA0LjM3MiAwIDEuNDItLjY2NSAyLjYxNC0xLjQzNCAzLjY4My0xLjMxMyAxLjgyNy00LjQ0MiA3LjgyOS00LjQ0MiA3LjgyOWwuMzU0LjAxOGM2LjM2NyAwIDExLjUyOS01LjE2MiAxMS41MjktMTEuNTI5LS4wMDEtMS41NDktLjMxMS0zLjAyNC0uODY1LTQuMzczek0xMS42NjYgNi4zMjljMi41MjItLjAxOCAxMC4wODktLjA5NSAxMC4wODktLjA5NS0xLjk3My0zLjUyNi01LjczNi01LjkxNC0xMC4wNjUtNS45MTQtMy42MSAwLTYuODMgMS42NjEtOC45NDMgNC4yNThsMy41MjIgNi4yNTVjLjQ3Ni0yLjU1NSAyLjcwNS00LjQ4NSA1LjM5Ny00LjUwNHpNMTEuNjg5IDE3LjM3MmMtMi40MDkgMC00LjI0NS0xLjYyOC01LjE5MS0zLjcwMi0uOTUyLTIuMDg3LTQuNTQ2LTcuOTczLTQuNTQ2LTcuOTczLTEuMTI4IDEuNzgyLTEuNzkxIDMuODg3LTEuNzkxIDYuMTUyIDAgNS43ODMgNC4yNjIgMTAuNTU4IDkuODE0IDExLjM4OGwzLjU4My02LjIxM2MtLjU4Ni4yMTQtMS4yMS4zNDgtMS44NjkuMzQ4eiIvPjxjaXJjbGUgY3g9IjExLjY4OSIgY3k9IjExLjg1IiByPSIzLjcyOCIvPjwvZz48L3N2Zz4=");
         }
       }
 
@@ -308,14 +473,6 @@ footer {
         }
       }
     }
-  }
-
-  @media (min-width: 600px) {
-    position : absolute;
-
-    bottom : 0;
-    left   : 0;
-    right  : 0;
   }
 }
 
@@ -399,3 +556,49 @@ footer {
   }
 }
 
+#contributors {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    margin: 0 4px;
+    border-radius: 3px;
+    overflow: hidden;
+
+    img {
+      width: 42px;
+      height: 42px;
+    }
+  }
+}
+
+/**
+ * HELPERS
+ */
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}

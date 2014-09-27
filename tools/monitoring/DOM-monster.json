@@ -1,0 +1,5 @@
+{
+  "name" : "DOM Monster",
+  "bookmarklet" : "http://mir.aculo.us/dom-monster/",
+  "description" : "DOM Monster is our answer to JavaScript performance tools that just don't give you the full picture. DOM Monster is a cross-platform, cross-browser bookmarklet that will analyze the DOM & other features of the page you're on, and give you its bill of health."
+}

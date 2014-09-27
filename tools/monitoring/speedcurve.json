@@ -1,0 +1,5 @@
+{
+  "name" : "SpeedCurve",
+  "service" : "http://speedcurve.com/",
+  "description" : "Monitor front-end performance. Beat the competition. Get continuous feedback on how your front-end code is affecting the performance of your website."
+}

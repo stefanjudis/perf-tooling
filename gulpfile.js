@@ -13,10 +13,9 @@ var gulp        = require( 'gulp' ),
     prefix      = require( 'gulp-autoprefixer' ),
     clean       = require( 'gulp-clean' ),
     minifyCSS   = require( 'gulp-minify-css' ),
-    imagemin    = require( 'gulp-imagemin' ),
     size        = require( 'gulp-size' ),
     watch       = require( 'gulp-watch' ),
-    connect     = require( 'gulp-connect' ),
+    uglify      = require( 'gulp-uglify' ),
 
     // all paths for watching and regeneration
     PATHS      = {
@@ -30,39 +29,31 @@ var gulp        = require( 'gulp' ),
  * STYLE TASK
  *
  * this task is responsible for the style files
- * - it will delete old generated css files
  * - we will compile the less files to css
  * - we will minify the css files
- * - hash the files
- * - and save the new file name in the 'stylesHash' variable
+ * - we will run them through autoprefixer
+ * - and save it to public
  */
-gulp.task( 'styles', [ 'clean-styles' ], function () {
+gulp.task( 'styles', function () {
   return gulp.src( 'less/main.less' )
     .pipe( less() )
     .pipe( minifyCSS() )
     .pipe( prefix( 'last 1 version', '> 1%', 'ie 8', 'ie 7' ) )
-    .pipe( gulp.dest( 'css/' ) );
-});
-
-
-gulp.task( 'clean-styles' , function () {
-  // delete old generated stlye/css files
-  gulp.src( 'css/' )
-    .pipe( clean() );
+    .pipe( gulp.dest( 'public/' ) );
 });
 
 
 /*******************************************************************************
- * IMAGE TASK
+ * SCRIPT TASKS
  *
- * this task is responsible for image optimization
- *  - it will optimize all images in the assets folder and move them to
- *    the public folder
+ * this task is responsible for the JavaScript files
+ * - uglify the js
+ * - and save it to public
  */
-gulp.task( 'images', function () {
-  return gulp.src( ASSETS_DIR + 'images/**/*' )
-    .pipe(imagemin())
-    .pipe(gulp.dest( PUBLIC_DIR + 'images' ));
+gulp.task( 'scripts', function() {
+  return gulp.src( 'js/tooling.js' )
+    .pipe( uglify() )
+    .pipe( gulp.dest( 'public' ) );
 });
 
 
@@ -82,17 +73,6 @@ gulp.task( 'size' , function() {
 
 
 /*******************************************************************************
- * this task will start connect server including livereload
- */
-gulp.task( 'connect', function() {
-  connect.server( {
-    root       : 'public',
-    livereload : true
-  });
-});
-
-
-/*******************************************************************************
  * BUILD
  *
  * run all build related tasks with:
@@ -100,7 +80,7 @@ gulp.task( 'connect', function() {
  *  $ gulp build
  *
  */
-gulp.task( 'build', [ 'styles' ] );
+gulp.task( 'build', [ 'styles', 'scripts' ] );
 
 
 /*******************************************************************************
@@ -109,6 +89,7 @@ gulp.task( 'build', [ 'styles' ] );
  */
 gulp.task( 'watch', function() {
   gulp.watch( 'less/**/*.less', [ 'styles' ] );
+  gulp.watch( 'js/**/*.js', [ 'scripts' ] );
 });
 
 
@@ -121,7 +102,7 @@ gulp.task( 'watch', function() {
  * $ gulp dev
  *
  */
-gulp.task( 'dev', [ 'build', 'connect', 'watch' ] );
+gulp.task( 'dev', [ 'build', 'watch' ] );
 
 
 /**
