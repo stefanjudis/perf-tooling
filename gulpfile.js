@@ -16,6 +16,7 @@ var gulp        = require( 'gulp' ),
     size        = require( 'gulp-size' ),
     watch       = require( 'gulp-watch' ),
     uglify      = require( 'gulp-uglify' ),
+    tasks       = require( 'gulp-task-listing' ),
 
     // all paths for watching and regeneration
     PATHS      = {
@@ -23,6 +24,13 @@ var gulp        = require( 'gulp' ),
     },
 
     stylesHash = '';
+
+/*******************************************************************************
+ * HELP TASK
+ *
+ * This task will list out other available tasks when you run `gulp help`
+ */
+gulp.task('help', tasks);
 
 
 /*******************************************************************************
