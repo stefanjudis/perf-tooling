@@ -242,7 +242,7 @@
                     <ul>
                       <% _.each( contributors, function( contrib ) { %>
                         <% if ( contrib.login !== 'stefanjudis' ) { %>
-                          <li><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>"><img src="<%= contrib.avatar_url + '&s=42' %>" alt="<%= contrib.login %>" class="contributor-avatar"></a></li>
+                          <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=42' %>" data-login="<%= contrib.login %>"></a></li>
                         <% } %>
                       <% } ) %>
                     </ul>

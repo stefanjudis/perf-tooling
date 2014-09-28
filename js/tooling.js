@@ -81,5 +81,15 @@
     } );
   }
 
+  // load github avatars right after page load
+  addEvent( window, 'load', function() {
+    var contributors = document.querySelectorAll( '.contributor > a' );
+    var length       = contributors.length;
+
+    for( var i = 0; i < length; ++i ) {
+      contributors[ i ].innerHTML = '<img src="' + contributors[ i ].dataset.url + '" title="' + contributors[ i ].dataset.login + '" class="contributor-avatar">';
+    }
+  } );
+
   addFilterFunctionality();
 } )( document, tools );
