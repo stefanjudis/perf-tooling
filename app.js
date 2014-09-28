@@ -165,9 +165,11 @@ function renderIndex() {
     _.template(
       fs.readFileSync( config.templates.index ),
       {
+        css          : fs.readFileSync( './public/main.css', 'utf8' ),
         cdn          : config.cdn,
         contributors : contributors,
         site         : config.site,
+        svg          : fs.readFileSync( './public/icons.svg', 'utf8' ),
         tools        : _.reduce( tools, function( sum, tool ) {
           if ( sum[ tool.type ] === undefined ) {
             sum[ tool.type ] = [];

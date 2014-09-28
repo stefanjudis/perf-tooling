@@ -16,6 +16,7 @@ var gulp        = require( 'gulp' ),
     size        = require( 'gulp-size' ),
     watch       = require( 'gulp-watch' ),
     uglify      = require( 'gulp-uglify' ),
+    svgstore    = require( 'gulp-svgstore' ),
 
     // all paths for watching and regeneration
     PATHS      = {
@@ -58,6 +59,26 @@ gulp.task( 'scripts', function() {
 
 
 /*******************************************************************************
+ * SVG TASK
+ *
+ * this task is responsible for crunching all svg's together
+ * - crunch svg files
+ * - minify the files
+ */
+gulp.task( 'svg', function () {
+  return gulp.src( 'svg/*.svg')
+             .pipe( svgstore( {
+                fileName  : 'icons.svg',
+                prefix    : 'icon-',
+                inlineSvg : true
+              } ) )
+             .pipe( gulp.dest( 'public/' ) );
+});
+
+
+
+
+/*******************************************************************************
  * SIZE
  *
  * this task will show you file sizes after build process
@@ -80,7 +101,7 @@ gulp.task( 'size' , function() {
  *  $ gulp build
  *
  */
-gulp.task( 'build', [ 'styles', 'scripts' ] );
+gulp.task( 'build', [ 'styles', 'scripts', 'svg' ] );
 
 
 /*******************************************************************************

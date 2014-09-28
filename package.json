@@ -30,6 +30,7 @@
     "gulp-watch": "^0.6.9",
     "html-minifier": "^0.6.8",
     "lodash": "^2.4.1",
-    "request": "^2.44.0"
+    "request": "^2.44.0",
+    "gulp-svgstore": "~1.0.1"
   }
 }

@@ -6,12 +6,17 @@
         <title><%= site.name %></title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" value="Perf Tooling Today lists a lot of tools that can be used to make the web faster, because performance matters!">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="<%= cdn %>/main.css?<%= hash.css %>">
+        <style><%= css %></style>
     </head>
     <body>
+        <div class="svgIcons"><%= svg %></div>
         <input id="filter--toggle" type="checkbox" class="filter--toggle">
-        <label for="filter--toggle" class="filter--label">Show filters</label>
+        <label for="filter--toggle" class="filter--label">
+          <svg>
+            <use xlink:href="#icon-settings" />
+          </svg>
+          Show filters
+        </label>
         <div class="filterContainer">
           <p class="filter--headline">Filter by:</p>
           <ul id="filters" class="filters">
@@ -39,51 +44,99 @@
                       <h3><%= tool.name %></h3>
                       <ul class="resources">
                         <% if ( tool.bookmarklet ) { %>
-                          <li class="tooltip" title="Bookmarklet"><a href="<%= tool.bookmarklet %>" class="bookmarklet">Bookmarklet</a>
+                          <li class="tooltip" title="Bookmarklet">
+                            <a href="<%= tool.bookmarklet %>" class="bookmarklet">
+                              <svg>
+                                <use xlink:href="#icon-bookmarklet" />
+                              </svg>
+                              Bookmarklet
+                            </a>
 
-                          <span><%= ( tool.stars.bookmarklet ) ? tool.stars.bookmarklet : 'N/A' %></span>
+                            <span><%= ( tool.stars.bookmarklet ) ? tool.stars.bookmarklet : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.chrome ) { %>
-                          <li class="tooltip" title="Chrome extension"><a href="<%= tool.chrome %>" class="chrome">Chrome extension</a>
+                          <li class="tooltip" title="Chrome extension">
+                            <a href="<%= tool.chrome %>" class="chrome">
+                              <svg>
+                                <use xlink:href="#icon-chrome" />
+                              </svg>
+                              Chrome extension
+                            </a>
 
-                          <span><%= ( tool.stars.chrome ) ? tool.stars.chrome : 'N/A' %></span>
+                            <span><%= ( tool.stars.chrome ) ? tool.stars.chrome : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.cli ) { %>
-                          <li class="tooltip" title="CLI"><a href="<%= tool.cli %>" class="cli">CLI</a>
+                          <li class="tooltip" title="CLI">
+                            <a href="<%= tool.cli %>" class="cli">
+                              <svg>
+                                <use xlink:href="#icon-cli" />
+                              </svg>
+                              CLI
+                            </a>
 
-                          <span><%= ( tool.stars.cli ) ? tool.stars.cli : 'N/A' %></span>
+                            <span><%= ( tool.stars.cli ) ? tool.stars.cli : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.module ) { %>
-                          <li class="tooltip" title="Node module"><a href="<%= tool.module %>" class="module">Node module</a>
+                          <li class="tooltip" title="Node module">
+                            <a href="<%= tool.module %>" class="module">
+                              <svg>
+                                <use xlink:href="#icon-module" />
+                              </svg>
+                              Node module
+                            </a>
 
-                          <span><%= ( tool.stars.module ) ? tool.stars.module : 'N/A' %></span>
+                            <span><%= ( tool.stars.module ) ? tool.stars.module : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.grunt ) { %>
-                          <li class="tooltip" title="Grunt plugin"><a href="<%= tool.grunt %>" class="grunt">Grunt plugin</a>
+                          <li class="tooltip" title="Grunt plugin">
+                            <a href="<%= tool.grunt %>" class="grunt">
+                              <svg>
+                                <use xlink:href="#icon-grunt" />
+                              </svg>
+                              Grunt plugin
+                            </a>
 
-                          <span><%= ( tool.stars.grunt ) ? tool.stars.grunt : 'N/A' %></span>
+                            <span><%= ( tool.stars.grunt ) ? tool.stars.grunt : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.gulp ) { %>
-                          <li class="tooltip" title="gulp plugin"><a href="<%= tool.gulp %>" class="gulp">gulp plugin</a>
+                          <li class="tooltip" title="gulp plugin">
+                            <a href="<%= tool.gulp %>" class="gulp">
+                              <svg>
+                                <use xlink:href="#icon-gulp" />
+                              </svg>
+                              gulp plugin
+                            </a>
 
-                          <span><%= ( tool.stars.gulp ) ? tool.stars.gulp : 'N/A' %></span>
+                            <span><%= ( tool.stars.gulp ) ? tool.stars.gulp : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.script ) { %>
-                          <li class="tooltip" title="Script"><a href="<%= tool.script %>" class="script">Script</a>
+                          <li class="tooltip" title="Script">
+                            <a href="<%= tool.script %>" class="script">
+                              <svg>
+                                <use xlink:href="#icon-script" />
+                              </svg>
+                              Script
+                            </a>
 
-                          <span><%= ( tool.stars.script ) ? tool.stars.script : 'N/A' %></span>
+                            <span><%= ( tool.stars.script ) ? tool.stars.script : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.service ) { %>
-                          <li class="tooltip" title="Service"><a href="<%= tool.service %>" class="service">Service</a>
+                          <li class="tooltip" title="Service">
+                            <a href="<%= tool.service %>" class="service">
+                              <svg>
+                                <use xlink:href="#icon-service" />
+                              </svg>
+                              Service
+                            </a>
 
-                          <span><%= ( tool.stars.service ) ? tool.stars.service : 'N/A' %></span>
+                            <span><%= ( tool.stars.service ) ? tool.stars.service : 'N/A' %></span>
                         <% } %>
                       </ul>
                       <div class="posts--content"><%= tool.description %></div>
