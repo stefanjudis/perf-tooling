@@ -7,8 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" value="Perf Tooling Today lists a lot of tools that can be used to make the web faster, because performance matters!">
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/main.css?<%= hash.css %>">
-
+        <link rel="stylesheet" href="<%= cdn %>/main.css?<%= hash.css %>">
     </head>
     <body>
         <input id="filter--toggle" type="checkbox" class="filter--toggle">
@@ -217,7 +216,7 @@
         %>
         window.tools = <%= JSON.stringify( flattenTools ) %>;
       </script>
-      <script src="/tooling.js?<%= hash.js %>" async>
+      <script src="<%= cdn %>/tooling.js?<%= hash.js %>" async>
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

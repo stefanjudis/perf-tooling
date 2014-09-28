@@ -7,6 +7,7 @@ var _           = require( 'lodash' );
 var minify      = require( 'html-minifier' ).minify;
 var request     = require( 'request' );
 var config      = {
+  cdn       : process.env.CDN_URL || 'http://www.perf-tooling.today.global.prod.fastly.net',
   dirs      : {
     tools : './tools'
   },
@@ -164,6 +165,7 @@ function renderIndex() {
     _.template(
       fs.readFileSync( config.templates.index ),
       {
+        cdn          : config.cdn,
         contributors : contributors,
         site         : config.site,
         tools        : _.reduce( tools, function( sum, tool ) {
