@@ -7,7 +7,7 @@ var _           = require( 'lodash' );
 var minify      = require( 'html-minifier' ).minify;
 var request     = require( 'request' );
 var config      = {
-  cdn       : process.env.CDN_URL || 'http://www.perf-tooling.today.global.prod.fastly.net',
+  cdn       : process.env.CDN_URL || '',
   dirs      : {
     tools : './tools'
   },
