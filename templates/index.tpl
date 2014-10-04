@@ -248,6 +248,10 @@
                     </ul>
                   <% } %>
                 </div>
+                <div class="sponsor">
+                  Sponsored by
+                  <a href="https://www.fastly.com/"><img src="<%= cdn %>/fastly.svg" alt="Logo of CDN Fastly"></a>
+                </div>
               </div>
             </div>
           </footer>
