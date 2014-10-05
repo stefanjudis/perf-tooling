@@ -506,6 +506,38 @@ footer {
   }
 }
 
+.ribbon {
+  display  : none;
+
+  padding: 1rem 5rem;
+
+  position : absolute;
+  z-index  : 3;
+
+  color : @white;
+
+  right : 0;
+  top   : 0;
+
+  transform  : rotate(45deg) translate3d(5.75rem,-2rem,0);
+  background : @red;
+
+  text-decoration : none;
+  text-transform : uppercase;
+
+  &:hover , &:focus {
+    background : lighten( @red, 5% );
+  }
+
+  &:active {
+    background : lighten( @red, -5% );
+  }
+
+  @media (min-width: 1000px) {
+    display : block;
+  }
+}
+
 .socials {
   > li {
     display : inline-block;

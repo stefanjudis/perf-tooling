@@ -9,6 +9,7 @@
         <style><%= css %></style>
     </head>
     <body>
+        <a href="https://github.com/stefanjudis/perf-tooling" class="ribbon">Fork it on Github</a>
         <div class="svgIcons"><%= svg %></div>
         <input id="filter--toggle" type="checkbox" class="filter--toggle">
         <label for="filter--toggle" class="filter--label">
