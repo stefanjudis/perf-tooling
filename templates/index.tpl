@@ -34,6 +34,7 @@
         <div class="container">
           <div class="site">
             <header class="clearfix">
+              <img class="logo" src="<%= cdn %>/perf-tooling.svg">
               <h1 class="title"><%= site.name %></h1>
             </header>
             <div id="home">
