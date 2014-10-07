@@ -141,4 +141,4 @@ gulp.task( 'dev', [ 'build', 'watch' ] );
  *  $ gulp
  *
  */
-gulp.task( 'default', [ 'build' ] );
+gulp.task( 'default', [ 'help' ] );
