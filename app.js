@@ -7,6 +7,7 @@ var _           = require( 'lodash' );
 var minify      = require( 'html-minifier' ).minify;
 var request     = require( 'request' );
 var config      = {
+  cdn       : process.env.CDN_URL || '',
   dirs      : {
     tools : './tools'
   },
@@ -48,13 +49,13 @@ function fetchContributors() {
           'User-Agent' : 'perf-tooling.today'
         }
       },
-      function( error,response, body ) {
-        if ( !error && response.statusCode == 200 ) {
+      function( error, response, body ) {
+        if ( !error && response && response.statusCode == 200 ) {
           try {
             contributors = JSON.parse( body );
-
-            // renderIndex();
           } catch( e ) {
+            console.log( error );
+            console.log( response );
             console.log( e );
           }
         }
@@ -96,7 +97,7 @@ function fetchGithubStars() {
               }
             },
             function( error, response, body ) {
-              if ( response.statusCode === 404 ) {
+              if ( !error && response && response.statusCode === 404 ) {
                 console.log( 'NOT FOUND: ' + url );
               }
 
@@ -107,6 +108,8 @@ function fetchGithubStars() {
 
                 renderIndex();
               } catch( e ) {
+                console.log( error );
+                console.log( response );
                 console.log( e );
               }
             }
@@ -162,8 +165,11 @@ function renderIndex() {
     _.template(
       fs.readFileSync( config.templates.index ),
       {
+        css          : fs.readFileSync( './public/main.css', 'utf8' ),
+        cdn          : config.cdn,
         contributors : contributors,
         site         : config.site,
+        svg          : fs.readFileSync( './public/icons.svg', 'utf8' ),
         tools        : _.reduce( tools, function( sum, tool ) {
           if ( sum[ tool.type ] === undefined ) {
             sum[ tool.type ] = [];

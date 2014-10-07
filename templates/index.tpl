@@ -4,29 +4,38 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title><%= site.name %></title>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" value="Perf Tooling Today lists a lot of tools that can be used to make the web faster, because performance matters!">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/main.css?<%= hash.css %>">
-
+        <style><%= css %></style>
     </head>
     <body>
-        <a href="https://github.com/stefanjudis/perf-tooling"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+        <a href="https://github.com/stefanjudis/perf-tooling" class="ribbon">Fork it on Github</a>
+        <div class="svgIcons"><%= svg %></div>
+        <input id="filter--toggle" type="checkbox" class="filter--toggle">
+        <label for="filter--toggle" class="filter--label">
+          <svg>
+            <use xlink:href="#icon-settings" />
+          </svg>
+          Show filters
+        </label>
+        <div class="filterContainer">
+          <p class="filter--headline">Filter by:</p>
+          <ul id="filters" class="filters">
+            <li class="clearfix"><input id="filter--bookmarklet" type="checkbox" data-type="bookmarklet"><label for="filter--bookmarklet"><div></div>bookmarklet</label>
+            <li class="clearfix"><input id="filter--chrome" type="checkbox" data-type="chrome"><label for="filter--chrome"><div></div>Chrome extension</label>
+            <li class="clearfix"><input id="filter--cli" type="checkbox" data-type="cli"><label for="filter--cli"><div></div>CLI</label>
+            <li class="clearfix"><input id="filter--module" type="checkbox" data-type="module"><label for="filter--module"><div></div>module</label>
+            <li class="clearfix"><input id="filter--grunt" type="checkbox" data-type="grunt"><label for="filter--grunt"><div></div>Grunt</label>
+            <li class="clearfix"><input id="filter--gulp" type="checkbox" data-type="gulp"><label for="filter--gulp"><div></div>gulp</label>
+            <li class="clearfix"><input id="filter--script" type="checkbox" data-type="script"><label for="filter--script"><div></div>script</label>
+            <li class="clearfix"><input id="filter--service" type="checkbox" data-type="service"><label for="filter--service"><div></div>service</label>
+          </ul>
+        </div>
         <div class="container">
           <div class="site">
             <header class="clearfix">
+              <img class="logo" src="<%= cdn %>/perf-tooling.svg">
               <h1 class="title"><%= site.name %></h1>
-              <p>Filter by</p>
-              <ul id="filters" class="filters">
-                <li><input id="filter--bookmarklet" type="checkbox" data-type="bookmarklet"><label for="filter--bookmarklet"><div></div>bookmarklet</label>
-                <li><input id="filter--chrome" type="checkbox" data-type="chrome"><label for="filter--chrome"><div></div>Chrome extension</label>
-                <li><input id="filter--cli" type="checkbox" data-type="cli"><label for="filter--cli"><div></div>CLI</label>
-                <li><input id="filter--module" type="checkbox" data-type="module"><label for="filter--module"><div></div>module</label>
-                <li><input id="filter--grunt" type="checkbox" data-type="grunt"><label for="filter--grunt"><div></div>Grunt</label>
-                <li><input id="filter--gulp" type="checkbox" data-type="gulp"><label for="filter--gulp"><div></div>gulp</label>
-                <li><input id="filter--script" type="checkbox" data-type="script"><label for="filter--script"><div></div>script</label>
-                <li><input id="filter--service" type="checkbox" data-type="service"><label for="filter--service"><div></div>service</label>
-              </ul>
             </header>
             <div id="home">
               <% _.each( tools, function( category, name ) { %>
@@ -37,51 +46,99 @@
                       <h3><%= tool.name %></h3>
                       <ul class="resources">
                         <% if ( tool.bookmarklet ) { %>
-                          <li class="tooltip" title="Bookmarklet"><a href="<%= tool.bookmarklet %>" class="bookmarklet">Bookmarklet</a>
+                          <li class="tooltip" title="Bookmarklet">
+                            <a href="<%= tool.bookmarklet %>" class="bookmarklet">
+                              <svg>
+                                <use xlink:href="#icon-bookmarklet" />
+                              </svg>
+                              Bookmarklet
+                            </a>
 
-                          <span><%= ( tool.stars.bookmarklet ) ? tool.stars.bookmarklet : 'N/A' %></span>
+                            <span><%= ( tool.stars.bookmarklet ) ? tool.stars.bookmarklet : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.chrome ) { %>
-                          <li class="tooltip" title="Chrome extension"><a href="<%= tool.chrome %>" class="chrome">Chrome extension</a>
+                          <li class="tooltip" title="Chrome extension">
+                            <a href="<%= tool.chrome %>" class="chrome">
+                              <svg>
+                                <use xlink:href="#icon-chrome" />
+                              </svg>
+                              Chrome extension
+                            </a>
 
-                          <span><%= ( tool.stars.chrome ) ? tool.stars.chrome : 'N/A' %></span>
+                            <span><%= ( tool.stars.chrome ) ? tool.stars.chrome : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.cli ) { %>
-                          <li class="tooltip" title="CLI"><a href="<%= tool.cli %>" class="cli">CLI</a>
+                          <li class="tooltip" title="CLI">
+                            <a href="<%= tool.cli %>" class="cli">
+                              <svg>
+                                <use xlink:href="#icon-cli" />
+                              </svg>
+                              CLI
+                            </a>
 
-                          <span><%= ( tool.stars.cli ) ? tool.stars.cli : 'N/A' %></span>
+                            <span><%= ( tool.stars.cli ) ? tool.stars.cli : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.module ) { %>
-                          <li class="tooltip" title="Node module"><a href="<%= tool.module %>" class="module">Node module</a>
+                          <li class="tooltip" title="Node module">
+                            <a href="<%= tool.module %>" class="module">
+                              <svg>
+                                <use xlink:href="#icon-module" />
+                              </svg>
+                              Node module
+                            </a>
 
-                          <span><%= ( tool.stars.module ) ? tool.stars.module : 'N/A' %></span>
+                            <span><%= ( tool.stars.module ) ? tool.stars.module : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.grunt ) { %>
-                          <li class="tooltip" title="Grunt plugin"><a href="<%= tool.grunt %>" class="grunt">Grunt plugin</a>
+                          <li class="tooltip" title="Grunt plugin">
+                            <a href="<%= tool.grunt %>" class="grunt">
+                              <svg>
+                                <use xlink:href="#icon-grunt" />
+                              </svg>
+                              Grunt plugin
+                            </a>
 
-                          <span><%= ( tool.stars.grunt ) ? tool.stars.grunt : 'N/A' %></span>
+                            <span><%= ( tool.stars.grunt ) ? tool.stars.grunt : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.gulp ) { %>
-                          <li class="tooltip" title="gulp plugin"><a href="<%= tool.gulp %>" class="gulp">gulp plugin</a>
+                          <li class="tooltip" title="gulp plugin">
+                            <a href="<%= tool.gulp %>" class="gulp">
+                              <svg>
+                                <use xlink:href="#icon-gulp" />
+                              </svg>
+                              gulp plugin
+                            </a>
 
-                          <span><%= ( tool.stars.gulp ) ? tool.stars.gulp : 'N/A' %></span>
+                            <span><%= ( tool.stars.gulp ) ? tool.stars.gulp : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.script ) { %>
-                          <li class="tooltip" title="Script"><a href="<%= tool.script %>" class="script">Script</a>
+                          <li class="tooltip" title="Script">
+                            <a href="<%= tool.script %>" class="script">
+                              <svg>
+                                <use xlink:href="#icon-script" />
+                              </svg>
+                              Script
+                            </a>
 
-                          <span><%= ( tool.stars.script ) ? tool.stars.script : 'N/A' %></span>
+                            <span><%= ( tool.stars.script ) ? tool.stars.script : 'N/A' %></span>
                         <% } %>
 
                         <% if ( tool.service ) { %>
-                          <li class="tooltip" title="Service"><a href="<%= tool.service %>" class="service">Service</a>
+                          <li class="tooltip" title="Service">
+                            <a href="<%= tool.service %>" class="service">
+                              <svg>
+                                <use xlink:href="#icon-service" />
+                              </svg>
+                              Service
+                            </a>
 
-                          <span><%= ( tool.stars.service ) ? tool.stars.service : 'N/A' %></span>
+                            <span><%= ( tool.stars.service ) ? tool.stars.service : 'N/A' %></span>
                         <% } %>
                       </ul>
                       <div class="posts--content"><%= tool.description %></div>
@@ -187,11 +244,15 @@
                     <ul>
                       <% _.each( contributors, function( contrib ) { %>
                         <% if ( contrib.login !== 'stefanjudis' ) { %>
-                          <li><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>"><img src="<%= contrib.avatar_url + '&s=42' %>" alt="<%= contrib.login %>" class="contributor-avatar"></a></li>
+                          <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=42' %>" data-login="<%= contrib.login %>"></a></li>
                         <% } %>
                       <% } ) %>
                     </ul>
                   <% } %>
+                </div>
+                <div class="sponsor">
+                  Sponsored by
+                  <a href="https://www.fastly.com/"><img src="<%= cdn %>/fastly.svg" alt="Logo of CDN Fastly"></a>
                 </div>
               </div>
             </div>
@@ -213,7 +274,7 @@
         %>
         window.tools = <%= JSON.stringify( flattenTools ) %>;
       </script>
-      <script src="/tooling.js?<%= hash.js %>" async>
+      <script src="<%= cdn %>/tooling.js?<%= hash.js %>" async>
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
