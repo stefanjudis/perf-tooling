@@ -87,7 +87,7 @@
     var length       = contributors.length;
 
     for( var i = 0; i < length; ++i ) {
-      contributors[ i ].innerHTML = '<img src="' + contributors[ i ].dataset.url + '" title="' + contributors[ i ].dataset.login + '" class="contributor-avatar">';
+      contributors[ i ].innerHTML = '<img src="' + contributors[ i ].dataset.url + '" width="42" height="42" title="' + contributors[ i ].dataset.login + '" class="contributor-avatar">';
     }
   } );
 
