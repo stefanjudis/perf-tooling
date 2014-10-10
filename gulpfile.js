@@ -16,6 +16,7 @@ var gulp        = require( 'gulp' ),
     size        = require( 'gulp-size' ),
     watch       = require( 'gulp-watch' ),
     uglify      = require( 'gulp-uglify' ),
+    tasks       = require( 'gulp-task-listing' ),
     svgstore    = require( 'gulp-svgstore' ),
 
     // all paths for watching and regeneration
@@ -24,6 +25,13 @@ var gulp        = require( 'gulp' ),
     },
 
     stylesHash = '';
+
+/*******************************************************************************
+ * HELP TASK
+ *
+ * This task will list out other available tasks when you run `gulp help`
+ */
+gulp.task('help', tasks);
 
 
 /*******************************************************************************
@@ -133,4 +141,4 @@ gulp.task( 'dev', [ 'build', 'watch' ] );
  *  $ gulp
  *
  */
-gulp.task( 'default', [ 'build' ] );
+gulp.task( 'default', [ 'help' ] );
