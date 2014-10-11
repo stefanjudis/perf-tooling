@@ -1,0 +1,5 @@
+{
+  "name" : "Spof",
+  "module" : "https://www.npmjs.org/package/spof",
+  "description" : "See what will happen to your site when a third-party provider goes down!"
+}
