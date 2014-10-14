@@ -1,0 +1,7 @@
+{
+  "name" : "CSS Colorguard",
+  "module" : "https://github.com/SlexAxton/css-colorguard",
+  "grunt" : "https://github.com/elliottwilliams/grunt-colorguard",
+  "gulp" : "https://github.com/pgilad/gulp-colorguard",
+  "description" : "Every CSS project starts out with good intentions, but inevitably, one too many people eye-dropper colors into nooks and crannies that you never knew existed. CSS Colorguard helps you maintain the color set that you want, and warns you when colors you've added are too similar to ones that already exist. Naturally, it's all configurable to your tastes."
+}
