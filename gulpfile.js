@@ -74,7 +74,7 @@ gulp.task( 'scripts', function() {
  * - minify the files
  */
 gulp.task( 'svg', function () {
-  return gulp.src( 'svg/*.svg')
+  return gulp.src( 'svg/icons/*.svg')
              .pipe( svgstore( {
                 fileName  : 'icons.svg',
                 prefix    : 'icon-',
