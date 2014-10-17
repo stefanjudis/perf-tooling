@@ -1,0 +1,5 @@
+{
+  "name" : "loadCSS",
+  "script" : "https://github.com/filamentgroup/loadCSS",
+  "description" : "A function for loading CSS asynchronously"
+}
