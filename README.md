@@ -1,4 +1,4 @@
-![image](./public/perf-tooling.svg)
+![image](https://raw.githubusercontent.com/stefanjudis/perf-tooling/master/perf-tooling.jpg)
 
 ## Perf Tooling
 
