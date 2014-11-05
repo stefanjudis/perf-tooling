@@ -8,9 +8,8 @@ var minify      = require( 'html-minifier' ).minify;
 var request     = require( 'request' );
 var config      = {
   cdn       : process.env.CDN_URL || '',
-  dirs      : {
-    tools : './data/tools'
-  },
+  dataDir   : 'data',
+  listPages : [ 'articles', 'slides', 'tools', 'videos' ],
   github    : {
     id    : process.env.GITHUB_ID,
     token : process.env.GITHUB_TOKEN
@@ -19,12 +18,20 @@ var config      = {
     name : 'Performance tooling today'
   },
   templates : {
-    index : './templates/index.tpl'
+    index : './templates/index.tpl',
+    list  : './templates/list.tpl'
   }
 }
 
 var port         = process.env.PORT || 3000;
-var tools        = getTools();
+
+// TODO loop this
+var data         = {
+  articles : getList( 'articles' ),
+  slides   : getList( 'slides' ),
+  tools    : getList( 'tools' ),
+  videos   : getList( 'videos' )
+};
 
 /**
  * List of contributors
@@ -77,9 +84,9 @@ var i = 0;
  * Fetch github stars
  */
 function fetchGithubStars() {
-  _.each( tools, function( tool ) {
+  _.each( data.tools, function( tool ) {
     _.forIn( tool, function( value, key ) {
-      tool.stars = tools.stars || {};
+      tool.stars = data.tools.stars || {};
 
       if ( config.github.id && config.github.token ) {
         if (
@@ -131,21 +138,21 @@ function fetchGithubStars() {
  *
  * @return {Object} tools
  */
-function getTools() {
-  var tools = [];
-  var entries = fs.readdirSync( config.dirs.tools );
+function getList( type ) {
+  var list = [];
+  var entries = fs.readdirSync( config.dataDir + '/' + type );
 
   entries.forEach( function( entry ) {
     if ( entry[ 0 ] !== '.' ) {
       try {
         entry = JSON.parse(
           fs.readFileSync(
-            config.dirs.tools + '/' + entry,
+            config.dataDir + '/' + type + '/' + entry,
             'utf8'
           )
         );
 
-        tools.push( entry );
+        list.push( entry );
       } catch( e ) {
         console.log( 'SHITTTTT' );
         console.log( e );
@@ -153,28 +160,37 @@ function getTools() {
     }
   } );
 
-  return tools;
+  return list;
 }
 
 
 /**
  * Render index page
  */
-function renderTools() {
-  pages.tools = minify(
+function renderPage( type ) {
+  pages[ type ] = minify(
     _.template(
-      fs.readFileSync( config.templates.index ),
+      fs.readFileSync( config.templates.list ),
       {
         css          : fs.readFileSync( './public/main.css', 'utf8' ),
         cdn          : config.cdn,
         contributors : contributors,
+        partial      : function( path, options ) {
+          options = options || {};
+
+          return _.template(
+            fs.readFileSync( path ),
+            options
+          );
+        },
         site         : config.site,
         svg          : fs.readFileSync( './public/icons.svg', 'utf8' ),
-        tools        : tools,
+        list         : data[ type ],
         hash         : {
           css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
           js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
-        }
+        },
+        type         : type
       }
     ), {
       keepClosingSlash      : true,
@@ -218,18 +234,16 @@ setInterval( fetchGithubStars, 1000 * 60 * 60 * 12 );
 /**
  * Render index page
  */
-renderTools();
+config.listPages.forEach( function( page ) {
+  renderPage( page );
+
+  app.get( '/' + page, function( req, res ) {
+    res.send( pages[ page ] );
+  } );
+} );
 
 app.use( compression() );
 
 app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
-
-app.get( '/articles', function( req, res ) {
-  res.send( articlesPage );
-} );
-
-app.get( '/tools', function( req, res ) {
-  res.send( pages.tools );
-} );
 
 app.listen( port );

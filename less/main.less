@@ -71,7 +71,7 @@ h3 {
   text-align : left;
 
   @media (min-width: @max-width) {
-    margin : 2rem auto;
+    margin : 3rem auto 2rem;
     width : @max-width;
   }
 }
@@ -106,6 +106,14 @@ h3 {
 
 .nav--list--item {
   padding : 1rem;
+
+  &.is-active {
+    border-bottom : 0.125rem solid @blue;
+
+    > a {
+      color : @blue;
+    }
+  }
 
   > a {
     text-decoration : none;
