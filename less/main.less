@@ -1,16 +1,14 @@
 @import "normalize.less";
 
-@grey        : #707173;
+@grey        : #999;
 @grey-dark   : #333;
+@blue-dark   : #0195A1;
 @blue        : #01A5B1;
 @blue-bright : #93D5DB;
-@white       : #DDF0F2;
+@white       : #FFF;
 @red         : #FF4136;
 
-@filterWidth : 15rem;
-@filterToggleWidth  : 3rem;
-@filterToggleHeight : 3rem;
-
+@max-width : 40rem;
 
 * {
   &, &:before, &:after {
@@ -19,41 +17,17 @@
 }
 
 body {
-  color : @grey;
-  background : @grey;
+  color : @grey-dark;
 
   font-size   : 16px;
   font-family : Helvetica, Arial, sans-serif;
   font-weight : 200;
 
   text-align : center;
-
-  overflow : hidden;
 }
 
 .container {
-  position : absolute;
-
-  top : 0;
-  left : 0;
-  right : 0;
-  bottom : 0;
-
-  overflow : auto;
-
   background : @white;
-
-  transform : scale( 1, 1 ) translate3d( 0, 0, 0 );
-
-  transition : transform 0.25s ease-in;
-
-  #filter--toggle:checked ~ & {
-    transform : translate3d( @filterWidth, 0, 0 );
-
-    @media (min-width: 1000px) {
-      transform : scale( 0.8, 0.8 ) translate3d( @filterWidth, 0, 0 );
-    }
-  }
 }
 
 a {
@@ -61,16 +35,18 @@ a {
 }
 
 header {
-  background : @blue;
-  color : @white;
+  background : @white;
+  color : @grey-dark;
 
-  padding : 0 ( @filterToggleWidth + 1 );
+  border-bottom : 1px solid @grey;
+  margin-bottom : 1rem;
+  overflow : hidden;
 }
 
 h1 {
-  font-weight : 200;
+  font-weight : 400;
 
-  @media (min-width: 1000px) {
+  @media (min-width: @max-width) {
     display : inline-block;
     text-align : left;
   }
@@ -86,76 +62,69 @@ h2 {
 }
 
 h3 {
-  position : relative;
-
+  font-size : 1.25rem;
   padding : 0 0 0.5rem 0;
+}
 
-  &:before {
-    position : absolute;
+.fuzzy {
+  margin : 2rem 1rem;
+  text-align : left;
 
-    content : '';
-
-    top   : 100%;
-    left  : 10%;
-    right : 10%;
-
-    height : 1px;
-
-    border-bottom : 1px solid @blue;
+  @media (min-width: @max-width) {
+    margin : 2rem auto;
+    width : @max-width;
   }
 }
 
-input[type="checkbox"] {
-  + label {
-    display    : block;
-    text-align : right;
+.fuzzy--input {
+  height : 4rem;
+  width : 100%;
 
-    line-height : 1.5rem;
+  font-size : 1.25rem;
+  border : 1px solid @grey-dark;
 
-    > div {
-      float : left;
-      position : relative;
+  text-align : center;
+}
 
-      width  : 2.5rem;
-      height : 1.5rem;
 
-      margin : 0 auto 0.5rem;
-      border-radius : 2rem;
+.nav--list {
+  display : table;
 
-      background : @grey;
+  margin : 0 auto;
+  padding : 0;
 
-      border : 0.125rem solid @white;
+  list-style : none;
 
-      transition : background 0.25s;
+  font-size : 1.125rem;
+  font-weight : bold;
+  text-transform : uppercase;
 
-      &:before {
-        position : absolute;
+  @media (min-width: @max-width) {
+    width : @max-width;
+  }
+}
 
-        content : '';
+.nav--list--item {
+  padding : 1rem;
 
-        width : 1rem;
-        height : 1rem;
-
-        top : 0.125rem;
-        left : 0.125rem;
-
-        background : @white;
-
-        transition : left 0.25s;
-
-        border-radius : 2rem;
-      }
-    }
+  > a {
+    text-decoration : none;
+    color : @grey-dark;
   }
 
-  &:checked {
-    + label {
-      > div {
-        background : #3D9970;
+  @media (min-width: @max-width) {
+    display : table-cell;
+    width : 20%;
 
-        &:before {
-          left : 1.125rem;
-        }
+    > a {
+      display : block;
+
+      &:hover {
+        color : @blue;
+      }
+
+      &:active {
+        color : @blue-dark;
       }
     }
   }
@@ -184,7 +153,7 @@ footer {
 
   margin : 1rem auto 0;
   width : 100%;
-  max-width : 18rem;
+  max-width : 14rem;
 }
 
 .noun {
@@ -195,7 +164,7 @@ footer {
   color : @blue-bright;
 }
 
-.filters, .posts, .resources, .socials {
+.posts, .resources, .socials {
   list-style : none;
 
   &, li {
@@ -204,153 +173,34 @@ footer {
   }
 }
 
-
-.filterContainer {
-  position  : absolute;
-
-  left : 0;
-  top  : 0;
-
-  height : 100%;
-  width : @filterWidth;
-
-  background : @blue;
-
-  text-align : left;
-  color : @white;
-
-  overflow : auto;
-
-  z-index : 1;
-
-  transform : translate3d( -100%, 0 ,0 );
-
-  transition : transform 0.25s ease-in;
-
-  box-shadow : inset -.25rem 0 .25rem -.125rem #333;
-
-  #filter--toggle:checked ~ & {
-    transform : translate3d( 0, 0 ,0 );
-  }
-}
-
-.filter--headline {
-  padding : 0.5rem 0;
-  margin  : 0.5rem 1.5rem;
-
-  text-transform : uppercase;
-
-  border-bottom : 1px solid @white;
-}
-
-.filter--label {
-  position : absolute;
-  display : block;
-
-  top : 1rem;
-  left : 1rem;
-
-  height : 0;
-  width  : @filterToggleHeight;
-
-  padding : @filterToggleHeight 0 0;
-  overflow : hidden;
-
-  background : @blue;
-
-  cursor : pointer;
-
-  z-index : 2;
-
-  transform : translate3d( 0, 0, 0 );
-  transition : transform 0.25s ease-in;
-
-  &:hover, &:focus {
-    background : lighten( @blue, 5 );
-  }
-
-  &:active {
-    background : lighten( @blue, -5 );
-  }
-
-  > svg {
-    position : absolute;
-
-    top : 0.25rem;
-    left : 0.25rem;
-
-    width : 2.5rem;
-    height : 2.5rem;
-
-    pointer-events : none;
-  }
-
-  #filter--toggle:checked ~ & {
-    transform : translate3d( @filterWidth, 0, 0 );
-  }
-}
-
-.filter--toggle {
-  display : none;
-}
-
-.filters {
-  > li {
-    padding : 0.25rem 1.5rem;
-  }
-  input {
-    display : none;
-  }
-}
-
-.filters {
-  margin-bottom : 1rem;
-
-  > li {
-    position : relative;
-  }
-}
-
 .posts {
   > li {
+    max-width : @max-width;
+
     position : relative;
 
-    padding : 0.5rem 0 4rem 0;
+    margin : 0 auto 1rem;
+    padding : 0.5rem 0;
 
     transition : background 0.25s ease-in;
 
     overflow : hidden;
 
-    &:hover {
-      background : lighten( @white, 5% );
-    }
+    border-bottom : 1px solid @grey;
 
-    @media (min-width: 600px) {
-      display : inline-block;
-      vertical-align : top;
-      width : 50%;
-      min-height : 410px;
-    }
-
-    @media (min-width: 1000px) {
-      width : 33.33%;
-      min-height : 375px;
-    }
-
-    @media (min-width: 1400px) {
-      width : 25%;
-      min-height : 300px;
+    &:last-child {
+      border : none;
     }
   }
 }
 
 .posts--content {
-  padding : 0 2rem;
+  padding : 0 2rem 2rem;
   font-style : italic;
 }
 
 .resources {
-  padding : 0 0 1rem;
+  padding : 0 0 0.5rem;
 
   li {
     position : relative;
@@ -379,7 +229,7 @@ footer {
       margin-left: 0.25rem;
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: @max-width) {
       display : block;
       position : relative;
 
@@ -391,7 +241,7 @@ footer {
 
       text-align : center;
 
-      color : @grey;
+      color : @grey-dark;
 
       &:after {
         position : absolute;
@@ -491,7 +341,7 @@ footer {
       display : none;
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: @max-width) {
       width : 3rem;
       height : 3rem;
 
@@ -565,6 +415,32 @@ footer {
   display : none;
 }
 
+.tags {
+  list-style : none;
+
+  margin : 0;
+
+  text-align : center;
+
+
+  &, li {
+    padding : 0;
+  }
+
+  li {
+    display : inline-block;
+    margin : 0 0.125rem 1rem;
+    padding : 0.125rem 0.5rem;
+
+
+    border : 1px solid @grey-dark;
+
+    @media (min-width: @max-width) {
+      font-size : 0.8rem;
+    }
+  }
+}
+
 .hashTag {
   font-size : 2rem;
   font-style : italic;
@@ -572,7 +448,7 @@ footer {
   color : @blue-bright;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: @max-width) {
   .tooltip {
     position: relative;
     text-decoration: none;
@@ -594,7 +470,7 @@ footer {
 
       content: '';
 
-      border: 5px solid @grey;
+      border: 5px solid @grey-dark;
       border-right: 5px solid transparent;
       border-bottom: 5px solid transparent;
 
@@ -612,7 +488,7 @@ footer {
       position: absolute;
       bottom: 120%;
       left: 50%;
-      background: @grey;
+      background: @grey-dark;
       padding: 5px 15px;
       color: @white;
 

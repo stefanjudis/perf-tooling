@@ -1,5 +1,0 @@
-{
-  "name" : "grunt-image-resize",
-  "grunt" : "https://github.com/excellenteasy/grunt-image-resize",
-  "description" : "Resizing images made easy - thanks to imagemagick."
-}

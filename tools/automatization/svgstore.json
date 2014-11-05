@@ -1,6 +1,0 @@
-{
-  "name" : "svgstore",
-  "grunt" : "https://github.com/FWeinb/grunt-svgstore",
-  "gulp" : "https://github.com/w0rm/gulp-svgstore",
-  "description" : "Combine svg files into one with &lt;symbol&gt; elements."
-}

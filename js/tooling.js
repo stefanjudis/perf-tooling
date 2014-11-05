@@ -24,62 +24,62 @@
   }
 
 
-  /**
-   * Add event handlers to watch
-   * out for filter changes
-   */
-  function addFilterFunctionality() {
-    var filters = document.getElementById( 'filters' );
-    addEvent( filters, 'change', function( event ) {
-      var index;
+  // /**
+  //  * Add event handlers to watch
+  //  * out for filter changes
+  //  */
+  // function addFilterFunctionality() {
+  //   var filters = document.getElementById( 'filters' );
+  //   addEvent( filters, 'change', function( event ) {
+  //     var index;
 
-      if ( event.target.checked ) {
-        activeFilters.push( event.target.dataset.type );
-      } else {
-        index = activeFilters.indexOf( event.target.dataset.type );
-        activeFilters.splice( index, 1 );
-      }
+  //     if ( event.target.checked ) {
+  //       activeFilters.push( event.target.dataset.type );
+  //     } else {
+  //       index = activeFilters.indexOf( event.target.dataset.type );
+  //       activeFilters.splice( index, 1 );
+  //     }
 
-      _filterTools( activeFilters );
-    } );
-  }
+  //     _filterTools( activeFilters );
+  //   } );
+  // }
 
 
-  /**
-   * Adjust list of tools
-   * to only show the ones included in filters
-   *
-   * @param  {Array} activeFilters active filters
-   */
-  function _filterTools( activeFilters ) {
-    var posts  = document.querySelectorAll( '.posts > li' );
-    var length = activeFilters.length;
+  // /**
+  //  * Adjust list of tools
+  //  * to only show the ones included in filters
+  //  *
+  //  * @param  {Array} activeFilters active filters
+  //  */
+  // function _filterTools( activeFilters ) {
+  //   var posts  = document.querySelectorAll( '.posts > li' );
+  //   var length = activeFilters.length;
 
-    tools.forEach( function( tool ) {
-      var found = false;
+  //   tools.forEach( function( tool ) {
+  //     var found = false;
 
-      // cache element to avoid multiple
-      // dom queries
-      if ( tool.elem === undefined ) {
-        tool.elem  = document.getElementById( tool.name.replace( ' ', '-' ) );
-      }
+  //     // cache element to avoid multiple
+  //     // dom queries
+  //     if ( tool.elem === undefined ) {
+  //       tool.elem  = document.getElementById( tool.name.replace( ' ', '-' ) );
+  //     }
 
-      // iterate over active filters
-      // and check if it fits
-      for ( var i = 0; i < length; ++i ) {
-        if ( !! tool[ activeFilters[ i ] ] ) {
-          found = true;
-        }
-      }
+  //     // iterate over active filters
+  //     // and check if it fits
+  //     for ( var i = 0; i < length; ++i ) {
+  //       if ( !! tool[ activeFilters[ i ] ] ) {
+  //         found = true;
+  //       }
+  //     }
 
-      // show/hide
-      if ( found || activeFilters.length === 0 ) {
-        tool.elem.style.display = 'inline-block';
-      } else {
-        tool.elem.style.display = 'none';
-      }
-    } );
-  }
+  //     // show/hide
+  //     if ( found || activeFilters.length === 0 ) {
+  //       tool.elem.style.display = 'inline-block';
+  //     } else {
+  //       tool.elem.style.display = 'none';
+  //     }
+  //   } );
+  // }
 
   // load github avatars right after page load
   addEvent( window, 'load', function() {
@@ -91,5 +91,5 @@
     }
   } );
 
-  addFilterFunctionality();
+  // addFilterFunctionality();
 } )( document, tools );

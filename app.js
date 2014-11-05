@@ -9,7 +9,7 @@ var request     = require( 'request' );
 var config      = {
   cdn       : process.env.CDN_URL || '',
   dirs      : {
-    tools : './tools'
+    tools : './data/tools'
   },
   github    : {
     id    : process.env.GITHUB_ID,
@@ -34,11 +34,16 @@ var contributors;
 
 
 /**
- * index page
- * that will be refreshed
- * continuously
+ * pages object representing
+ * all routes
  */
-var indexPage;
+var pages = {
+  tools    : null,
+  articles : null,
+  slides   : null,
+  videos   : null
+};
+
 
 function fetchContributors() {
   if ( config.github.id && config.github.token ) {
@@ -106,7 +111,7 @@ function fetchGithubStars() {
 
                 tool.stars[ key ] = stars;
 
-                renderIndex();
+                renderTools();
               } catch( e ) {
                 console.log( error );
                 console.log( response );
@@ -128,29 +133,24 @@ function fetchGithubStars() {
  */
 function getTools() {
   var tools = [];
-  var types = fs.readdirSync( config.dirs.tools );
+  var entries = fs.readdirSync( config.dirs.tools );
 
-  types.forEach( function( type ) {
-    var entries = fs.readdirSync( config.dirs.tools + '/' + type );
-    tools[ type ] = {};
-
-    entries.forEach( function( entry ) {
+  entries.forEach( function( entry ) {
+    if ( entry[ 0 ] !== '.' ) {
       try {
         entry = JSON.parse(
           fs.readFileSync(
-            config.dirs.tools + '/' + type + '/' + entry,
+            config.dirs.tools + '/' + entry,
             'utf8'
           )
         );
-
-        entry.type = type;
 
         tools.push( entry );
       } catch( e ) {
         console.log( 'SHITTTTT' );
         console.log( e );
       }
-    } );
+    }
   } );
 
   return tools;
@@ -160,8 +160,8 @@ function getTools() {
 /**
  * Render index page
  */
-function renderIndex() {
-  indexPage = minify(
+function renderTools() {
+  pages.tools = minify(
     _.template(
       fs.readFileSync( config.templates.index ),
       {
@@ -170,15 +170,7 @@ function renderIndex() {
         contributors : contributors,
         site         : config.site,
         svg          : fs.readFileSync( './public/icons.svg', 'utf8' ),
-        tools        : _.reduce( tools, function( sum, tool ) {
-          if ( sum[ tool.type ] === undefined ) {
-            sum[ tool.type ] = [];
-          }
-
-          sum[ tool.type ].push( tool );
-
-          return sum;
-        }, {} ),
+        tools        : tools,
         hash         : {
           css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
           js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
@@ -226,14 +218,18 @@ setInterval( fetchGithubStars, 1000 * 60 * 60 * 12 );
 /**
  * Render index page
  */
-renderIndex();
+renderTools();
 
 app.use( compression() );
 
 app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
 
-app.get( '/', function( req, res ) {
-  res.send( indexPage );
+app.get( '/articles', function( req, res ) {
+  res.send( articlesPage );
+} );
+
+app.get( '/tools', function( req, res ) {
+  res.send( pages.tools );
 } );
 
 app.listen( port );

@@ -1,5 +1,0 @@
-{
-  "name" : "grunt-css-metrics",
-  "grunt" : "https://github.com/phamann/grunt-css-metrics",
-  "description" : "Grunt task to analyse css files and log simple metrics."
-}

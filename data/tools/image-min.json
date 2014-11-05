@@ -1,0 +1,9 @@
+{
+  "name" : "imagemin",
+  "cli" : "https://github.com/imagemin/imagemin",
+  "module" : "https://github.com/imagemin/imagemin",
+  "grunt" : "https://github.com/gruntjs/grunt-contrib-imagemin",
+  "gulp" : "https://github.com/sindresorhus/gulp-imagemin",
+  "description" : "Minify images seamlessly with Node.js.",
+  "tags" : [ "images", "compress" ]
+}
