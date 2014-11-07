@@ -1,0 +1,167 @@
+.resources {
+  .list-unstyled;
+  padding : 0 0 0.5rem;
+
+  li {
+    position : relative;
+
+    display : inline-block;
+
+    text-align : left;
+
+    vertical-align : top;
+
+    margin : 0 0.25rem;
+  }
+
+  span {
+    position    : absolute;
+    right       : 1rem;
+    top         : 0;
+    padding     : 0.5rem 0;
+    color       : white;
+    line-height : 1.125;
+
+    pointer-events : none;
+
+    &:after {
+      content: '☆';
+      margin-left: 0.25rem;
+    }
+
+    @media (min-width: @max-width) {
+      display : block;
+      position : relative;
+
+      right : auto;
+      top   : auto;
+
+      padding : 1.5rem 0 0;
+      margin  : 0 0 0.5rem;
+
+      text-align : center;
+
+      color : @color;
+
+      &:after {
+        position : absolute;
+
+        top : 0;
+        left : 0;
+        right : 0;
+
+        margin : 0;
+
+        text-align : center;
+        content : '☆';
+      }
+    }
+  }
+
+  a {
+    display : block;
+
+    width : 220px;
+
+    padding : 0.5rem 1rem;
+    margin  : 0 0 0.5rem 0;
+
+    border-radius : 2rem;
+
+    color : #fff;
+    text-decoration : none;
+
+    overflow : hidden;
+
+    &.service {
+      background : #7FDBFF;
+
+      &:hover {
+        background : lighten( #7FDBFF, 7% );
+      }
+    }
+
+    &.cli {
+      background : #001F3F;
+
+      &:hover {
+        background : lighten( #001F3F, 7% );
+      }
+    }
+
+    &.chrome {
+      background : #0074D9;
+
+      &:hover {
+        background : lighten( #0074D9, 7% );
+      }
+    }
+
+    &.module {
+      background : #3D9970;
+
+      &:hover {
+        background : lighten( #3D9970, 7% );
+      }
+    }
+
+    &.grunt {
+      background : #FF851B;
+
+      &:hover {
+        background : lighten( #FF851B, 7% );
+      }
+    }
+
+    &.gulp {
+      background : @red;
+
+      &:hover {
+        background : lighten( #FF4136, 7% );
+      }
+    }
+
+    &.bookmarklet {
+      background : #FFDC00;
+
+      &:hover {
+        background : lighten( #FFDC00, 7% );
+      }
+    }
+
+    &.script {
+      background : #85144B;
+
+      &:hover {
+        background : lighten( #85144B, 7% );
+      }
+    }
+
+    > svg {
+      display : none;
+    }
+
+    @media (min-width: @max-width) {
+      width : 3rem;
+      height : 3rem;
+
+      padding : 0.5rem 1.5rem;
+
+      border-radius : 50%;
+
+      text-indent : -1000px;
+
+      > svg {
+        display : block;
+        position : absolute;
+        height : 2rem;
+        width  : 2rem;
+
+        top : 0.5rem;
+        left : 0.5rem;
+
+        pointer-events : none;
+      }
+    }
+  }
+}

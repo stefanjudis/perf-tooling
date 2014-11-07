@@ -1,0 +1,34 @@
+.container {
+	.clearfix;
+  margin : 0 auto;
+  max-width : @grid-container;
+}
+
+.row {
+	.clearfix;
+	margin-left: -(@grid-gutter / 2);
+	margin-right: -(@grid-gutter / 2);
+}
+
+.col {
+	float: left;
+	height: auto;
+	min-height: 1px;
+	padding-left: (@grid-gutter / 2);
+	padding-right: (@grid-gutter / 2);
+}
+
+.col-4 {
+	.col;
+	width: 33.33%;
+}
+
+.col-6 {
+	.col;
+	width: 50%;
+}
+
+.col-8 {
+	.col;
+	width: 66.67%;
+}

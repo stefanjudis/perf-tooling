@@ -1,0 +1,24 @@
+.posts {
+  .list-unstyled;
+
+  > li {
+    position : relative;
+
+    margin : 0 auto 1rem;
+    padding : 0.5rem 0;
+
+    transition : background 0.25s ease-in;
+
+    overflow : hidden;
+
+    border-bottom : 1px solid @grey;
+
+    &:last-child {
+      border : none;
+    }
+  }
+}
+
+.posts--content {
+  padding : 0 2rem 2rem;
+}
