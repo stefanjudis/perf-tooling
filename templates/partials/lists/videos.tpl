@@ -12,7 +12,7 @@
         <ul>
           <li>Views : <%= video.stats.viewCount %>
           <li>Likes : <%= video.stats.likeCount %>
-          <li>Likes : <%= video.stats.dislikeCount %>
+          <li>Dislikes : <%= video.stats.dislikeCount %>
         </ul>
       <% } %>
 
