@@ -41,11 +41,7 @@
    * @param  {String} searchTearm searchTerm
    */
   function _filterListEntries( searchTerm ) {
-    var posts  = document.querySelectorAll( '.posts > li' );
-
     list.forEach( function( entry ) {
-      var found = false;
-
       // cache element to avoid multiple
       // dom queries
       if ( entry.elem === undefined ) {

@@ -21,7 +21,7 @@ var config      = {
     index : './templates/index.tpl',
     list  : './templates/list.tpl'
   }
-}
+};
 
 var port         = process.env.PORT || 3000;
 
@@ -63,7 +63,7 @@ function fetchContributors() {
         }
       },
       function( error, response, body ) {
-        if ( !error && response && response.statusCode == 200 ) {
+        if ( !error && response && response.statusCode === 200 ) {
           try {
             contributors = JSON.parse( body );
           } catch( e ) {
@@ -211,23 +211,10 @@ function renderPage( type ) {
 
 
 /**
- * Static files options
- * @type {Object}
- */
-var options = {
-  dotfiles   : 'ignore',
-  etag       : false,
-  maxAge     : '1y',
-  redirect   : false,
-  setHeaders : function ( res, path ) {
-    res.set( 'x-timestamp', Date.now() )
-  }
-};
-
-/**
  * Fetch contributors
  */
 fetchContributors();
+
 
 /**
  * Fetch Github stars
@@ -235,6 +222,7 @@ fetchContributors();
 fetchGithubStars();
 
 setInterval( fetchGithubStars, 1000 * 60 * 60 * 12 );
+
 
 /**
  * Render index page

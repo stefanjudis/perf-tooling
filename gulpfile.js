@@ -7,25 +7,23 @@
 'use strict';
 
 // Require the needed packages
-var csslint     = require( 'gulp-csslint' ),
-    gulp        = require( 'gulp' ),
-    gutil       = require( 'gulp-util'),
-    less        = require( 'gulp-less' ),
-    prefix      = require( 'gulp-autoprefixer' ),
-    clean       = require( 'gulp-clean' ),
-    minifyCSS   = require( 'gulp-minify-css' ),
-    size        = require( 'gulp-size' ),
-    watch       = require( 'gulp-watch' ),
-    uglify      = require( 'gulp-uglify' ),
-    tasks       = require( 'gulp-task-listing' ),
-    svgstore    = require( 'gulp-svgstore' ),
+var csslint       = require( 'gulp-csslint' ),
+    gulp          = require( 'gulp' ),
+    jshint        = require( 'gulp-jshint' ),
+    jshintStylish = require( 'jshint-stylish' ),
+    less          = require( 'gulp-less' ),
+    prefix        = require( 'gulp-autoprefixer' ),
+    minifyCSS     = require( 'gulp-minify-css' ),
+    uglify        = require( 'gulp-uglify' ),
+    tasks         = require( 'gulp-task-listing' ),
+    svgstore      = require( 'gulp-svgstore' );
 
-    // all paths for watching and regeneration
-    PATHS      = {
-      less     : './less/**/*.less'
-    },
-
-    stylesHash = '';
+var files = {
+  lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js' ],
+  scripts : [ 'js/**/*.js' ],
+  styles  : [ 'less/**/*.less' ],
+  svg     : [ 'svg/icons/*.svg' ]
+};
 
 /*******************************************************************************
  * HELP TASK
@@ -33,6 +31,18 @@ var csslint     = require( 'gulp-csslint' ),
  * This task will list out other available tasks when you run `gulp help`
  */
 gulp.task('help', tasks);
+
+
+/*******************************************************************************
+ * LINT TASK
+ *
+ * This task will lint all JS files for common errors
+ */
+gulp.task( 'lint', function() {
+  return gulp.src( files.lint )
+    .pipe( jshint() )
+    .pipe( jshint.reporter( jshintStylish ) );
+});
 
 
 /*******************************************************************************
@@ -45,7 +55,7 @@ gulp.task('help', tasks);
  * - and save it to public
  */
 gulp.task( 'styles', function () {
-  return gulp.src( 'less/main.less' )
+  return gulp.src( files.styles )
     .pipe( less() )
     .pipe( csslint( '.csslintrc' ) )
     .pipe( csslint.reporter() )
@@ -63,7 +73,7 @@ gulp.task( 'styles', function () {
  * - and save it to public
  */
 gulp.task( 'scripts', function() {
-  return gulp.src( 'js/tooling.js' )
+  return gulp.src( files.scripts )
     .pipe( uglify() )
     .pipe( gulp.dest( 'public' ) );
 });
@@ -77,30 +87,13 @@ gulp.task( 'scripts', function() {
  * - minify the files
  */
 gulp.task( 'svg', function () {
-  return gulp.src( 'svg/icons/*.svg')
+  return gulp.src( files.svg )
              .pipe( svgstore( {
                 fileName  : 'icons.svg',
                 prefix    : 'icon-',
                 inlineSvg : true
               } ) )
              .pipe( gulp.dest( 'public/' ) );
-});
-
-
-
-
-/*******************************************************************************
- * SIZE
- *
- * this task will show you file sizes after build process
- */
-gulp.task( 'size' , function() {
-  gutil.log( '********************************' );
-  gutil.log( '--> current file sizes not gzipped: ' );
-
-  return gulp.src( PUBLIC_DIR + '/**/*' )
-    .pipe( size( { showFiles : true } ) )
-    .pipe( gulp.dest( PUBLIC_DIR ) );
 });
 
 
@@ -120,8 +113,9 @@ gulp.task( 'build', [ 'styles', 'scripts', 'svg' ] );
  * for easy and instant development
  */
 gulp.task( 'watch', function() {
-  gulp.watch( 'less/**/*.less', [ 'styles' ] );
-  gulp.watch( 'js/**/*.js', [ 'scripts' ] );
+  gulp.watch( files.lint, [ 'lint' ] );
+  gulp.watch( files.styles, [ 'styles' ] );
+  gulp.watch( files.scripts, [ 'scripts' ] );
 });
 
 
