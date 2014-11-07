@@ -20,8 +20,18 @@ var config      = {
   templates : {
     index : './templates/index.tpl',
     list  : './templates/list.tpl'
+  },
+  youtube : {
+    token : process.env.YOUTUBE_TOKEN
   }
 };
+
+var Youtube = ( require( 'youtube-api' ) );
+
+Youtube.authenticate( {
+  type : 'key',
+  key  : config.youtube.token
+} );
 
 var port         = process.env.PORT || 3000;
 
@@ -136,6 +146,27 @@ function fetchGithubStars() {
 }
 
 
+function fetchVideoMeta() {
+  _.each( data.videos, function( video ) {
+    Youtube.videos.list( {
+      part : 'snippet,statistics',
+      id   : video.youtubeId
+    }, function( error, data ) {
+      if ( error ) {
+        console.log( error );
+
+        return;
+      }
+
+      video.meta = data.items[ 0 ].snippet;
+      video.stats = data.items[ 0 ].statistics;
+
+      renderPage( 'videos' );
+    } );
+  } );
+}
+
+
 /**
  * Read files and get tools
  *
@@ -223,6 +254,11 @@ fetchGithubStars();
 
 setInterval( fetchGithubStars, 1000 * 60 * 60 * 12 );
 
+
+/**
+ * fetch video meta data
+ */
+fetchVideoMeta();
 
 /**
  * Render index page
