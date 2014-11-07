@@ -7,7 +7,8 @@
 'use strict';
 
 // Require the needed packages
-var gulp        = require( 'gulp' ),
+var csslint     = require( 'gulp-csslint' ),
+    gulp        = require( 'gulp' ),
     gutil       = require( 'gulp-util'),
     less        = require( 'gulp-less' ),
     prefix      = require( 'gulp-autoprefixer' ),
@@ -46,6 +47,8 @@ gulp.task('help', tasks);
 gulp.task( 'styles', function () {
   return gulp.src( 'less/main.less' )
     .pipe( less() )
+    .pipe( csslint( '.csslintrc' ) )
+    .pipe( csslint.reporter() )
     .pipe( minifyCSS() )
     .pipe( prefix( 'last 1 version', '> 1%', 'ie 8', 'ie 7' ) )
     .pipe( gulp.dest( 'public/' ) );
