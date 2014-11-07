@@ -45,6 +45,7 @@ var contributors;
  * all routes
  */
 var pages = {
+  index    : null,
   tools    : null,
   articles : null,
   slides   : null,
@@ -66,10 +67,13 @@ function fetchContributors() {
           try {
             contributors = JSON.parse( body );
           } catch( e ) {
+            contributors = false;
             console.log( error );
             console.log( response );
             console.log( e );
           }
+
+          renderPage( 'index' );
         }
       }
     );
@@ -78,7 +82,6 @@ function fetchContributors() {
   }
 }
 
-var i = 0;
 
 /**
  * Fetch github stars
@@ -118,7 +121,7 @@ function fetchGithubStars() {
 
                 tool.stars[ key ] = stars;
 
-                renderTools();
+                renderPage( 'tools' );
               } catch( e ) {
                 console.log( error );
                 console.log( response );
@@ -168,9 +171,11 @@ function getList( type ) {
  * Render index page
  */
 function renderPage( type ) {
+  var template = ( type === 'index' ) ? 'index' : 'list';
+
   pages[ type ] = minify(
     _.template(
-      fs.readFileSync( config.templates.list ),
+      fs.readFileSync( config.templates[ template ] ),
       {
         css          : fs.readFileSync( './public/main.css', 'utf8' ),
         cdn          : config.cdn,
@@ -185,7 +190,7 @@ function renderPage( type ) {
         },
         site         : config.site,
         svg          : fs.readFileSync( './public/icons.svg', 'utf8' ),
-        list         : data[ type ],
+        list         : data[ type ] || null,
         hash         : {
           css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
           js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
@@ -240,6 +245,11 @@ config.listPages.forEach( function( page ) {
   app.get( '/' + page, function( req, res ) {
     res.send( pages[ page ] );
   } );
+} );
+
+renderPage( 'index' );
+app.get( '/', function( req, res ) {
+  res.send( pages.index );
 } );
 
 app.use( compression() );

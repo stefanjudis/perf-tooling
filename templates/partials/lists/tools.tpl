@@ -1,5 +1,5 @@
 <ul class="posts">
-  <% _.each( list, function( tool ) { %>
+  <% _.each( list , function( tool ) { %>
     <li id="<%= tool.name.replace( ' ', '-' ) %>">
       <h3><%= tool.name %></h3>
       <div class="posts--content"><%= tool.description %></div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <%=
     partial(
       'templates/partials/head.tpl',
@@ -11,7 +11,6 @@
     )
   %>
   <body>
-    <div class="container">
       <%=
         partial(
           'templates/partials/header.tpl',
@@ -22,33 +21,52 @@
           }
         )
       %>
-      <%=
-        partial(
-          'templates/partials/fuzzy.tpl',
-          {
-            list : list,
-            type : type
-          }
-        )
-      %>
-      <%=
-        partial(
-          'templates/partials/lists/' + type + '.tpl',
-          {
-            list : list
-          }
-        )
-      %>
+      <main class="container">
+        <%=
+          partial(
+            'templates/partials/fuzzy.tpl',
+            {
+              list : list,
+              type : type
+            }
+          )
+        %>
+        <%=
+          partial(
+            'templates/partials/lists/' + type + '.tpl',
+            {
+              list : list
+            }
+          )
+        %>
+      </main>
       <%=
         partial(
           'templates/partials/footer.tpl',
-          {
-            cdn          : cdn,
-            contributors : contributors
-          }
+          {}
         )
       %>
-    </div>
+    <script>
+      window.list = <%= JSON.stringify(
+        _.map( list, function( entry ) {
+          var fuzzy = '';
+          var keys  = _.keys( entry );
+
+          keys.forEach( function( key ) {
+            if ( key !== 'stars' ) {
+              fuzzy += key;
+              fuzzy += entry[ key ];
+            }
+          } );
+
+          return {
+            fuzzy : fuzzy,
+            name  : entry.name.replace( ' ', '-' )
+          }
+        } )
+      )
+      %>;
+    </script>
     <script src="<%= cdn %>/tooling.js?<%= hash.js %>" async></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

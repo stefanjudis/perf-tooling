@@ -27,7 +27,8 @@ body {
 }
 
 .container {
-  background : @white;
+  margin : 0 auto;
+  max-width : @max-width;
 }
 
 a {
@@ -53,12 +54,7 @@ h1 {
 }
 
 h2 {
-  color : @blue;
-  font-style : italic;
 
-  &:before {
-    content : '#';
-  }
 }
 
 h3 {
@@ -67,6 +63,8 @@ h3 {
 }
 
 .fuzzy {
+  position : relative;
+
   margin : 2rem 1rem;
   text-align : left;
 
@@ -86,6 +84,18 @@ h3 {
   text-align : center;
 }
 
+.fuzzy--icon {
+  position : absolute;
+
+  top   : 0.75rem;
+  right : 1rem;
+
+  width  : 2.5rem;
+  height : 2.5rem;
+
+  fill : @grey;
+}
+
 
 .nav--list {
   display : table;
@@ -95,7 +105,7 @@ h3 {
 
   list-style : none;
 
-  font-size : 1.125rem;
+  font-size : 1rem;
   font-weight : bold;
   text-transform : uppercase;
 
@@ -115,6 +125,7 @@ h3 {
     }
   }
 
+
   > a {
     text-decoration : none;
     color : @grey-dark;
@@ -122,7 +133,18 @@ h3 {
 
   @media (min-width: @max-width) {
     display : table-cell;
-    width : 20%;
+
+    padding : 0;
+
+    vertical-align: middle;
+
+    &:first-child {
+      padding-left : 0;
+    }
+
+    &:last-child {
+      padding-right : 0;
+    }
 
     > a {
       display : block;
@@ -140,28 +162,27 @@ h3 {
 
 footer {
   margin  : 3rem 0 0 0;
-  padding : 2rem 0 2rem 0;
+  padding : 1rem 0;
 
-  background : @blue;
+  border-top : 1px solid @grey;
 
-  color : @white;
+  text-align : center;
+}
 
-  a {
-    color : @blue-bright;
-    text-decoration : none;
+.footer--heart {
+  display : inline;
+  width : 2rem;
+  height : 2rem;
 
-    &:hover {
-      color : lighten( @blue-bright, 10% );
-    }
-  }
+  margin-bottom : -0.75rem;
+
+  fill : @blue;
 }
 
 .logo {
-  display : block;
+  max-width : 4rem;
 
-  margin : 1rem auto 0;
-  width : 100%;
-  max-width : 14rem;
+  margin : 0.75rem 0;
 }
 
 .noun {
@@ -183,8 +204,6 @@ footer {
 
 .posts {
   > li {
-    max-width : @max-width;
-
     position : relative;
 
     margin : 0 auto 1rem;
@@ -204,7 +223,6 @@ footer {
 
 .posts--content {
   padding : 0 2rem 2rem;
-  font-style : italic;
 }
 
 .resources {
@@ -374,38 +392,6 @@ footer {
   }
 }
 
-.ribbon {
-  display  : none;
-
-  padding: 1rem 5rem;
-
-  position : absolute;
-  z-index  : 3;
-
-  color : @white;
-
-  right : 0;
-  top   : 0;
-
-  transform  : rotate(45deg) translate3d(5.75rem,-2rem,0);
-  background : @red;
-
-  text-decoration : none;
-  text-transform : uppercase;
-
-  &:hover , &:focus {
-    background : lighten( @red, 5% );
-  }
-
-  &:active {
-    background : lighten( @red, -5% );
-  }
-
-  @media (min-width: 1000px) {
-    display : block;
-  }
-}
-
 .socials {
   > li {
     display : inline-block;
@@ -531,6 +517,8 @@ footer {
     overflow: hidden;
 
     img {
+      border-radius : 50%;
+
       width: 42px;
       height: 42px;
     }
@@ -565,6 +553,15 @@ footer {
  *    `:before` to contain the top-margins of child elements.
  */
 
+.left {
+  float : left;
+}
+
+.right {
+  float : right;
+}
+
+
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
@@ -573,4 +570,19 @@ footer {
 
 .clearfix:after {
     clear: both;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

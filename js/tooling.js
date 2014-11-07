@@ -1,6 +1,4 @@
-( function( document, tools ) {
-  var activeFilters = [];
-
+( function( document, list ) {
   /**
    * Attach event listener to given event
    *
@@ -24,62 +22,44 @@
   }
 
 
-  // /**
-  //  * Add event handlers to watch
-  //  * out for filter changes
-  //  */
-  // function addFilterFunctionality() {
-  //   var filters = document.getElementById( 'filters' );
-  //   addEvent( filters, 'change', function( event ) {
-  //     var index;
-
-  //     if ( event.target.checked ) {
-  //       activeFilters.push( event.target.dataset.type );
-  //     } else {
-  //       index = activeFilters.indexOf( event.target.dataset.type );
-  //       activeFilters.splice( index, 1 );
-  //     }
-
-  //     _filterTools( activeFilters );
-  //   } );
-  // }
+  /**
+   * Add event handlers to watch
+   * out for filter changes
+   */
+  function addFuzzySearch() {
+    var fuzzy = document.getElementById( 'fuzzzzzzzzzy' );
+    addEvent( fuzzy, 'keyup', function( event ) {
+      _filterListEntries( event.target.value.toLowerCase() );
+    } );
+  }
 
 
-  // /**
-  //  * Adjust list of tools
-  //  * to only show the ones included in filters
-  //  *
-  //  * @param  {Array} activeFilters active filters
-  //  */
-  // function _filterTools( activeFilters ) {
-  //   var posts  = document.querySelectorAll( '.posts > li' );
-  //   var length = activeFilters.length;
+  /**
+   * Adjust list of tools
+   * to only show the ones match the fuzzy term
+   *
+   * @param  {String} searchTearm searchTerm
+   */
+  function _filterListEntries( searchTerm ) {
+    var posts  = document.querySelectorAll( '.posts > li' );
 
-  //   tools.forEach( function( tool ) {
-  //     var found = false;
+    list.forEach( function( entry ) {
+      var found = false;
 
-  //     // cache element to avoid multiple
-  //     // dom queries
-  //     if ( tool.elem === undefined ) {
-  //       tool.elem  = document.getElementById( tool.name.replace( ' ', '-' ) );
-  //     }
+      // cache element to avoid multiple
+      // dom queries
+      if ( entry.elem === undefined ) {
+        entry.elem  = document.getElementById( entry.name );
+      }
 
-  //     // iterate over active filters
-  //     // and check if it fits
-  //     for ( var i = 0; i < length; ++i ) {
-  //       if ( !! tool[ activeFilters[ i ] ] ) {
-  //         found = true;
-  //       }
-  //     }
-
-  //     // show/hide
-  //     if ( found || activeFilters.length === 0 ) {
-  //       tool.elem.style.display = 'inline-block';
-  //     } else {
-  //       tool.elem.style.display = 'none';
-  //     }
-  //   } );
-  // }
+      // show/hide
+      if ( entry.fuzzy.indexOf( searchTerm ) !== -1 ) {
+        entry.elem.style.display = 'block';
+      } else {
+        entry.elem.style.display = 'none';
+      }
+    } );
+  }
 
   // load github avatars right after page load
   addEvent( window, 'load', function() {
@@ -91,5 +71,7 @@
     }
   } );
 
-  // addFilterFunctionality();
-} )( document, tools );
+  if ( typeof list !== 'undefined' ) {
+    addFuzzySearch();
+  }
+} )( document, window.list );
