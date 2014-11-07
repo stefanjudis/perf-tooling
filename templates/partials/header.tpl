@@ -1,4 +1,4 @@
-<header class="clearfix">
+<header class="header clearfix">
   <nav class="container">
     <ul class="nav--list">
       <li class="nav--list--item"><a href="/"><img class="logo" src="<%= cdn %>/perf-tooling.svg" alt="Link to home">
