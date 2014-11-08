@@ -21,8 +21,11 @@ var csslint       = require( 'gulp-csslint' ),
 var files = {
   lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js' ],
   scripts : [ 'js/**/*.js' ],
-  styles  : [ 'less/**/*.less' ],
-  svg     : [ 'svg/icons/*.svg' ]
+  styles  : [ 'less/main.less' ],
+  svg     : [ 'svg/icons/*.svg' ],
+  watch   : {
+    styles : [ 'less/**/*.less' ]
+  }
 };
 
 /*******************************************************************************
@@ -114,7 +117,7 @@ gulp.task( 'build', [ 'styles', 'scripts', 'svg' ] );
  */
 gulp.task( 'watch', function() {
   gulp.watch( files.lint, [ 'lint' ] );
-  gulp.watch( files.styles, [ 'styles' ] );
+  gulp.watch( files.watch.styles, [ 'styles' ] );
   gulp.watch( files.scripts, [ 'scripts' ] );
 });
 

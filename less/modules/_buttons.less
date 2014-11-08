@@ -1,15 +1,43 @@
 .btn {
-	display: inline-block;
-	font-weight: bold;
-	padding: .5rem 1rem;
+  display: inline-block;
+  font-weight: bold;
+  padding: .5rem 1rem;
 }
 
 .btn-primary {
-	background-color: @color-btn-primary-bg;
-	color: @color-btn-primary;
+  background-color: @color-btn-primary-bg;
+  color: @color-btn-primary;
 
-	&:hover {
-		background-color: @color-btn-primary-bg-hover;
-	}
+  &:hover {
+    background-color: @color-btn-primary-bg-hover;
+  }
+}
 
+.btn-scroll {
+  position :relative;
+
+  width  : 4rem;
+  height : 4rem;
+
+  margin : 4rem;
+
+  background : @grey;
+  border-radius : 50%;
+
+  > svg {
+    position : absolute;
+    width    : 60%;
+    height   : 60%;
+
+    top  : 20%;
+    left : 20%;
+  }
+
+  &:hover {
+    background : @color-bg-scroll-link-hover;
+  }
+
+  &:active {
+    backfound : @color-bg-scroll-link-active;
+  }
 }

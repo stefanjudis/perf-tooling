@@ -17,6 +17,18 @@
       border : none;
     }
   }
+
+  a {
+    color : @color;
+
+    &:hover {
+      color : @color-link;
+    }
+
+    a:active {
+      color : @color-link-hover;
+    }
+  }
 }
 
 .posts--content {

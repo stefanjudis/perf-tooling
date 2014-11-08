@@ -67,6 +67,17 @@
     }
   } );
 
+  // add scrollLink behavior
+  var scrollLinks = document.querySelectorAll( '.js-scroll' );
+
+  if ( scrollLinks.length ) {
+    for ( var i = 0; i < scrollLinks.length; ++i ) {
+      addEvent( scrollLinks[ i ], 'click', function() {
+        window.scrollTo( 0, 1000, 'smooth' );
+      } );
+    }
+  }
+
   if ( typeof list !== 'undefined' ) {
     addFuzzySearch();
   }

@@ -63,6 +63,9 @@ var pages = {
 };
 
 
+/**
+ * Fetch list of contributors
+ */
 function fetchContributors() {
   if ( config.github.id && config.github.token ) {
     request(
@@ -146,24 +149,31 @@ function fetchGithubStars() {
 }
 
 
+/**
+ * Fetch video meta data
+ */
 function fetchVideoMeta() {
-  _.each( data.videos, function( video ) {
-    Youtube.videos.list( {
-      part : 'snippet,statistics',
-      id   : video.youtubeId
-    }, function( error, data ) {
-      if ( error ) {
-        console.log( error );
+  if ( config.youtube.token ) {
+    _.each( data.videos, function( video ) {
+      Youtube.videos.list( {
+        part : 'snippet,statistics',
+        id   : video.youtubeId
+      }, function( error, data ) {
+        if ( error ) {
+          console.log( error );
 
-        return;
-      }
+          return;
+        }
 
-      video.meta = data.items[ 0 ].snippet;
-      video.stats = data.items[ 0 ].statistics;
+        video.meta = data.items[ 0 ].snippet;
+        video.stats = data.items[ 0 ].statistics;
 
-      renderPage( 'videos' );
+        renderPage( 'videos' );
+      } );
     } );
-  } );
+  } else {
+    console.log( 'No Youtube token set!!!' );
+  }
 }
 
 
@@ -252,13 +262,17 @@ fetchContributors();
  */
 fetchGithubStars();
 
-setInterval( fetchGithubStars, 1000 * 60 * 60 * 12 );
-
 
 /**
  * fetch video meta data
  */
 fetchVideoMeta();
+
+
+/**
+ * Repeat the fetching all 12 hours
+ */
+setInterval( fetchGithubStars, 1000 * 60 * 60 * 12 );
 
 /**
  * Render index page

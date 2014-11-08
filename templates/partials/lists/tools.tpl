@@ -1,4 +1,4 @@
-<ul class="posts">
+<ul class="posts text-center">
   <% _.each( list , function( tool ) { %>
     <li id="<%= tool.name.replace( ' ', '-' ) %>">
       <h3><%= tool.name %></h3>

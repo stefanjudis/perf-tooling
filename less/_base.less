@@ -23,12 +23,13 @@ body {
   background: @color-bg;
   color : @color;
   font: @font-weight ~"@{font-size}/@{line-height}" @font-family, @font-family-fallback;
+  scroll-behavior: smooth;
 }
 
 a {
   color : @color-link;
   text-decoration: none;
-  .transition(all .3s);
+  transition : all .3s;
 }
 
 h1,
@@ -67,4 +68,8 @@ h4 {
 
 p {
   margin: 0 0 .5rem;
+}
+
+img {
+  max-width : 100%;
 }

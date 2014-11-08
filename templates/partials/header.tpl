@@ -1,6 +1,6 @@
 <header class="header clearfix">
   <nav class="container">
-    <ul class="nav--list">
+    <ul class="nav--list text-center">
       <li class="nav--list--item"><a href="/"><img class="logo" src="<%= cdn %>/perf-tooling.svg" alt="Link to home">
       <li class="nav--list--item <%= ( active === 'index' ) ? 'is-active' : '' %>"><a href="/">Start</a>
       <li class="nav--list--item <%= ( active === 'tools' ) ? 'is-active' : '' %>"><a href="/tools">Tools</a>
