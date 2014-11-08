@@ -35,6 +35,17 @@
 
 
   /**
+   * Add event for mobile navigation
+   */
+  function initToggleNav() {
+    var mainNav = document.querySelector( '.nav-main' );
+
+    addEvent( document.querySelector( '.btn-nav' ), 'click', function() {
+      mainNav.classList.toggle( 'nav-open' );
+    } );
+  }
+
+  /**
    * Adjust list of tools
    * to only show the ones match the fuzzy term
    *
@@ -81,4 +92,6 @@
   if ( typeof list !== 'undefined' ) {
     addFuzzySearch();
   }
+
+  initToggleNav();
 } )( document, window.list );
