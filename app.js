@@ -274,6 +274,9 @@ fetchVideoMeta();
  */
 setInterval( fetchGithubStars, 1000 * 60 * 60 * 12 );
 
+app.use( compression() );
+
+
 /**
  * Render index page
  */
@@ -286,11 +289,10 @@ config.listPages.forEach( function( page ) {
 } );
 
 renderPage( 'index' );
+
 app.get( '/', function( req, res ) {
   res.send( pages.index );
 } );
-
-app.use( compression() );
 
 app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
 
