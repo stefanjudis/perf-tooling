@@ -11,4 +11,5 @@
      <p class="copyright">Stefan Judis & Marco Biedermann</p>
 
   </div>
+
 </footer>

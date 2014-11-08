@@ -10,7 +10,9 @@
       }
     )
   %>
+
   <body>
+
       <%=
         partial(
           'templates/partials/header.tpl',
@@ -21,7 +23,9 @@
           }
         )
       %>
+
       <main class="container">
+
         <%=
           partial(
             'templates/partials/fuzzy.tpl',
@@ -31,6 +35,7 @@
             }
           )
         %>
+
         <%=
           partial(
             'templates/partials/lists/' + type + '.tpl',
@@ -39,13 +44,16 @@
             }
           )
         %>
+
       </main>
+
       <%=
         partial(
           'templates/partials/footer.tpl',
           {}
         )
       %>
+
     <script>
       window.list = <%= JSON.stringify(
         _.map( list, function( entry ) {
@@ -77,6 +85,8 @@
       ga('create', 'UA-53831300-1', 'auto');
       ga('send', 'pageview');
     </script>
+
   </body>
+
 </html>
 

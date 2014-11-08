@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <%=
     partial(
       'templates/partials/head.tpl',
@@ -10,7 +11,9 @@
       }
     )
   %>
+
   <body>
+
       <%=
         partial(
           'templates/partials/header.tpl',
@@ -21,21 +24,24 @@
           }
         )
       %>
+
       <main class="container">
 
         <section class="section section-intro">
 
           <img src="<%= cdn %>/perf-tooling.svg" alt="perf-tooling logo" class="center-block">
+
           <div class="text-center">
 
             <h1>perf-tooling.today</h1>
             <h2 class="subline">Start performance tooling today</h2>
+
             <a class="btn btn-scroll js-scroll" href="#features">
-              <span class="visuallyhidden">Scroll to features</span>
-              <svg>
+              <span class="visuallyhidden">Scroll to features</span><svg>
                 <use xlink:href="#icon-arrow" />
               </svg>
             </a>
+
           </div>
 
         </section>
@@ -52,6 +58,7 @@
         </section>
 
         <section id="features" class="section">
+
           <div class="row">
 
             <div class="col-6">
@@ -115,34 +122,51 @@
         <section class="section buildBy text-center">
 
           <h3>Built by Stefan Judis<br>& Marco Biedermann</h3>
+
         </section>
 
           <% if( contributors ) { %>
+
             <section class="section text-center">
+
               <div id="contributors" class="contributors">
+
                 <p>...with a little help from our friends</p>
+
                 <ul>
+
                   <% _.each( contributors, function( contrib ) { %>
                     <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
                       <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>"></a></li>
                     <% } %>
                   <% } ) %>
+
                 </ul>
+
               </div>
+
             </section>
+
           <% } %>
+
         </section>
+
         <section class="section sponsor text-center">
+
           <h4 class="subline">Sponsored by</h4>
           <p><a href="https://www.fastly.com/"><img src="<%= cdn %>/fastly.svg" alt="Logo of CDN Fastly"></a></p>
+
         </section>
+
       </main>
+
       <%=
         partial(
           'templates/partials/footer.tpl',
           {}
         )
       %>
+
     <script src="<%= cdn %>/tooling.js?<%= hash.js %>" async></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -153,6 +177,8 @@
       ga('create', 'UA-53831300-1', 'auto');
       ga('send', 'pageview');
     </script>
+
   </body>
+
 </html>
 
