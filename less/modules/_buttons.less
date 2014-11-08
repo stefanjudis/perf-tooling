@@ -11,17 +11,28 @@
   &:hover {
     background-color: @color-btn-primary-bg-hover;
   }
+
+}
+
+.btn-nav {
+  display: none;
+  float: right;
+
+  @media screen and (max-width: @media-tiny) {
+    display: block;
+  }
+
 }
 
 .btn-scroll {
   position :relative;
 
-  width  : 4rem;
-  height : 4rem;
+  width  : 8rem;
+  height : 8rem;
 
   margin : 4rem;
 
-  background : @grey;
+  background : @color-bg-scroll-link;
   border-radius : 50%;
 
   > svg {

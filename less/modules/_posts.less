@@ -2,35 +2,45 @@
   .list-unstyled;
 
   > li {
-    position : relative;
-
-    margin : 0 auto 1rem;
-    padding : 0.5rem 0;
-
-    transition : background 0.25s ease-in;
-
-    overflow : hidden;
-
-    border-bottom : 1px solid @grey;
+    border-bottom: 1px solid @color-border;
+    overflow: hidden;
+    padding: 2rem 0;
+    position: relative;
+    transition: background 0.25s ease-in;
 
     &:last-child {
-      border : none;
+      border: none;
     }
+
   }
 
-  a {
-    color : @color;
-
-    &:hover {
-      color : @color-link;
-    }
-
-    a:active {
-      color : @color-link-hover;
-    }
-  }
 }
 
-.posts--content {
-  padding : 0 2rem 2rem;
+.post-content {
+  padding: 0 2rem 2rem;
+}
+
+.post-stats {
+  .list-unstyled;
+
+  > li {
+    display: inline-block;
+  }
+
+}
+
+.post-tool {
+  text-align: center;
+}
+
+.post-video {
+
+}
+
+.post-stats {
+  margin: 0 -.5rem 1rem;
+
+  > li {
+    margin: 0 .5rem;
+  }
 }

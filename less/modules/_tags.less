@@ -1,25 +1,13 @@
 .tags {
-  list-style : none;
-
-  margin : 0;
-
-  text-align : center;
-
-
-  &, li {
-    padding : 0;
-  }
+  .list-unstyled;
+  margin: 0 -.125rem 1rem;
 
   li {
-    display : inline-block;
-    margin : 0 0.125rem 1rem;
-    padding : 0.125rem 0.5rem;
-
-
-    border : 1px solid @color-border;
-
-    @media (min-width: @max-width) {
-      font-size : 0.8rem;
-    }
+    border: 1px solid @color-border;
+    display: inline-block;
+    font-size: .875rem;
+    margin: 0 .125rem;
+    padding: .125rem .5rem;
   }
+
 }

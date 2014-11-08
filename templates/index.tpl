@@ -23,9 +23,9 @@
       %>
       <main class="container">
 
-        <section class="section">
+        <section class="section section-intro">
 
-          <img src="<%= cdn %>/perf-tooling.svg" alt="Link to home" class="center-block">
+          <img src="<%= cdn %>/perf-tooling.svg" alt="perf-tooling logo" class="center-block">
           <div class="text-center">
 
             <h1>perf-tooling.today</h1>
@@ -124,7 +124,7 @@
                 <ul>
                   <% _.each( contributors, function( contrib ) { %>
                     <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
-                      <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=42' %>" data-login="<%= contrib.login %>"></a></li>
+                      <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>"></a></li>
                     <% } %>
                   <% } ) %>
                 </ul>

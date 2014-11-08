@@ -1,62 +1,71 @@
-.nav--list {
-  display : table;
+.nav {
 
-  margin : 0 auto;
-  padding : 0;
-
-  list-style : none;
-
-  font-size : 1rem;
-  font-weight : bold;
-  text-transform : uppercase;
-
-  @media (min-width: @max-width) {
-    width : @max-width;
+  ul {
+    .list-unstyled;
   }
+
+  li {
+    position: relative;
+  }
+
+  a {
+    color: @color;
+    display: block;
+  }
+
+  .is-active {
+    border-bottom: 3px solid @color-primary;
+
+    > a {
+      color: @color-primary;
+    }
+
+  }
+
 }
 
-.nav--list--item {
-  padding : 1rem;
+.nav-list {
 
-  &.is-active {
-    border-bottom : 0.125rem solid @blue;
-
-    > a {
-      color : @color-primary;
-    }
+  ul {
+    display: table;
+    text-align: center;
+    width: 100%;
   }
 
-
-  > a {
-    text-decoration : none;
-    color : @color;
+  li {
+    display: table-cell;
   }
 
-  @media (min-width: @max-width) {
-    display : table-cell;
+  @media screen and (max-width: @media-tiny) {
 
-    padding : 0;
-
-    vertical-align: middle;
-
-    &:first-child {
-      padding-left : 0;
+    li {
+      display: block;
     }
 
-    &:last-child {
-      padding-right : 0;
+    .is-active {
+      border: 0;
     }
 
-    > a {
-      display : block;
-
-      &:hover {
-        color : @color-link-hover;
-      }
-
-      &:active {
-        color : @color-link-active;
-      }
-    }
   }
+
+}
+
+.nav-main {
+  font-weight: bold;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+
+  a {
+    padding: 1.5rem 0;
+  }
+
+  @media screen and (max-width: @media-tiny) {
+
+    a {
+      padding: .5rem 0;
+    }
+
+  }
+
 }

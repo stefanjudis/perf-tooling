@@ -1,8 +1,8 @@
-<ul class="posts text-center">
+<ul class="posts">
   <% _.each( list , function( tool ) { %>
-    <li id="<%= tool.name.replace( ' ', '-' ) %>">
+    <li id="<%= tool.name.replace( ' ', '-' ) %>" class="post-tool">
       <h3><%= tool.name %></h3>
-      <div class="posts--content"><%= tool.description %></div>
+      <div class="post-content"><%= tool.description %></div>
       <ul class="resources">
         <% if ( tool.bookmarklet ) { %>
           <li class="tooltip" title="Bookmarklet">

@@ -1,0 +1,41 @@
+.media {
+  .clearfix;
+}
+
+.media-obj {
+
+  &.left,
+  &.right {
+    max-width: 50%;
+    width: auto;
+  }
+
+  &.left {
+    margin: 0 1rem 1rem 0;
+
+    @media screen and (max-width: @media-tiny) {
+      float: none;
+      margin-right: 0;
+    }
+
+  }
+
+  &.right {
+    margin: 0 0 1rem 1rem;
+
+    @media screen and (max-width: @media-tiny) {
+      float: none;
+      margin-right: 0;
+    }
+
+  }
+
+  &.above {
+    margin-bottom: 1rem;
+  }
+
+}
+
+.media-body {
+  overflow: hidden;
+}
