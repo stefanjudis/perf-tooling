@@ -11,6 +11,11 @@
   a {
     color: @color;
     display: block;
+
+    &:hover {
+      color: @color-primary;
+    }
+
   }
 
   .is-active {
@@ -61,9 +66,14 @@
   }
 
   @media screen and (max-width: @media-tiny) {
+    overflow: visible;
+
+    ul {
+      margin: 0 -.25rem 1rem -.25rem;
+    }
 
     a {
-      padding: .5rem 0;
+      padding: .25rem 0;
     }
 
   }
