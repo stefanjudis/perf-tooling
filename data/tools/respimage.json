@@ -1,0 +1,6 @@
+{
+  "name" : "respimage",
+  "script" : "https://github.com/aFarkas/respimage",
+  "description" : "respimage is a fast, lightweight and robust responsive images polyfill, that saves the users bandwidth by utilizing smart resource selection algorithm. It implements the srcset/sizes attributes as also the picture element. Unlike other responsive images polyfills respimage plays nicely with your graceful degradation / progressive enhancement strategy.",
+  "tags" : [ "images", "picture element" ]
+}
