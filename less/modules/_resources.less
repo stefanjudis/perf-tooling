@@ -1,167 +1,158 @@
 .resources {
   .list-unstyled;
-  padding : 0 0 0.5rem;
+  margin: 0 -.25rem;
+  padding: 0 0 .5rem;
 
   li {
-    position : relative;
-
-    display : inline-block;
-
-    text-align : left;
-
-    vertical-align : top;
-
-    margin : 0 0.25rem;
+    display: inline-block;
+    margin: 0 .25rem;
+    position: relative;
+    text-align: left;
+    // vertical-align: top;
   }
 
   span {
-    position    : absolute;
-    right       : 1rem;
-    top         : 0;
-    padding     : 0.5rem 0;
-    color       : white;
-    line-height : 1.125;
-
-    pointer-events : none;
+    color: @color-bg;
+    padding: .5rem 0;
+    pointer-events: none;
+    position: absolute;
+    right: 1rem;
+    top: 0;
 
     &:after {
       content: '☆';
-      margin-left: 0.25rem;
+      margin-left: .25rem;
     }
 
     @media (min-width: @max-width) {
-      display : block;
-      position : relative;
-
-      right : auto;
-      top   : auto;
-
-      padding : 1.5rem 0 0;
-      margin  : 0 0 0.5rem;
-
-      text-align : center;
-
-      color : @color;
+      color: @color;
+      display: block;
+      margin : 0 0 .5rem;
+      padding: 1.5rem 0 0;
+      position: relative;
+      right: auto;
+      text-align: center;
+      top: auto;
 
       &:after {
-        position : absolute;
-
-        top : 0;
-        left : 0;
-        right : 0;
-
-        margin : 0;
-
-        text-align : center;
-        content : '☆';
+        content: '☆';
+        left: 0;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
       }
+
     }
+
   }
 
   a {
-    display : block;
-
-    width : 220px;
-
-    padding : 0.5rem 1rem;
-    margin  : 0 0 0.5rem 0;
-
-    border-radius : 2rem;
-
-    color : #fff;
-    text-decoration : none;
-
-    overflow : hidden;
+    border-radius: 2rem;
+    color: #fff;
+    display: block;
+    margin: 0 0 .5rem 0;
+    overflow: hidden;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    width: 220px;
 
     &.service {
-      background : #7FDBFF;
+      background: @color-service;
 
       &:hover {
-        background : lighten( #7FDBFF, 7% );
+        background: @color-service-hover;
       }
+
     }
 
     &.cli {
-      background : #001F3F;
+      background: @color-cli;
 
       &:hover {
-        background : lighten( #001F3F, 7% );
+        background: @color-cli-hover;
       }
+
     }
 
     &.chrome {
-      background : #0074D9;
+      background: @color-chrome;
 
       &:hover {
-        background : lighten( #0074D9, 7% );
+        background: @color-chrome-hover;
       }
+
     }
 
     &.module {
-      background : #3D9970;
+      background: @color-module;
 
       &:hover {
-        background : lighten( #3D9970, 7% );
+        background: @color-module-hover;
       }
+
     }
 
     &.grunt {
-      background : #FF851B;
+      background: @color-grunt;
 
       &:hover {
-        background : lighten( #FF851B, 7% );
+        background: @color-grunt-hover;
       }
+
     }
 
     &.gulp {
-      background : @color-secondary;
+      background: @color-gulp;
 
       &:hover {
-        background : lighten( #FF4136, 7% );
+        background: @color-gulp-hover;
       }
+
     }
 
     &.bookmarklet {
-      background : #FFDC00;
+      background: @color-bookmarklet;
 
       &:hover {
-        background : lighten( #FFDC00, 7% );
+        background: @color-bookmarklet-hover;
       }
+
     }
 
     &.script {
-      background : #85144B;
+      background: @color-script;
 
       &:hover {
-        background : lighten( #85144B, 7% );
+        background: @color-script-hover;
       }
+
     }
 
     > svg {
-      display : none;
+      display: none;
     }
 
     @media (min-width: @max-width) {
-      width : 3rem;
-      height : 3rem;
-
-      padding : 0.5rem 1.5rem;
-
-      border-radius : 50%;
-
-      text-indent : -1000px;
+      border-radius: 50%;
+      height: 3rem;
+      padding: .5rem 1.5rem;
+      text-indent: -1000px;
+      width: 3rem;
 
       > svg {
-        display : block;
-        position : absolute;
-        height : 2rem;
-        width  : 2rem;
-
-        top : 0.5rem;
-        left : 0.5rem;
-
-        pointer-events : none;
+        display: block;
+        height: 2rem;
+        left: .5rem;
+        pointer-events: none;
+        position: absolute;
+        top: .5rem;
+        width : 2rem;
       }
+
     }
+
   }
+
 }
