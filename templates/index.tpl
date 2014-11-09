@@ -63,17 +63,25 @@
 
             <div class="col-6">
 
-              <h3>Tools</h3>
+              <article class="article">
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consectetur non, ipsum ex recusandae. Aperiam possimus sapiente distinctio id, minus animi magnam! Exercitationem, inventore fugiat consequatur perspiciatis quibusdam, et perferendis.</p>
+                <h3>Tools</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consectetur non, ipsum ex recusandae. Aperiam possimus sapiente distinctio id, minus animi magnam! Exercitationem, inventore fugiat consequatur perspiciatis quibusdam, et perferendis.</p>
+
+              </article>
 
             </div>
 
             <div class="col-6">
 
-              <h3>Articles</h3>
+              <article class="article">
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique illum, dolore tempora ab, eaque consectetur officia esse voluptate adipisci, quas at labore facere. Possimus architecto, ducimus in laborum iusto quaerat.</p>
+                <h3>Articles</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique illum, dolore tempora ab, eaque consectetur officia esse voluptate adipisci, quas at labore facere. Possimus architecto, ducimus in laborum iusto quaerat.</p>
+
+              </article>
 
             </div>
 
@@ -83,17 +91,25 @@
 
             <div class="col-6">
 
-              <h3>Videos</h3>
+              <article class="article">
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consectetur non, ipsum ex recusandae. Aperiam possimus sapiente distinctio id, minus animi magnam! Exercitationem, inventore fugiat consequatur perspiciatis quibusdam, et perferendis.</p>
+                <h3>Videos</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consectetur non, ipsum ex recusandae. Aperiam possimus sapiente distinctio id, minus animi magnam! Exercitationem, inventore fugiat consequatur perspiciatis quibusdam, et perferendis.</p>
+
+              </article>
 
             </div>
 
             <div class="col-6">
 
-              <h3>Slides</h3>
+              <article class="article">
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique illum, dolore tempora ab, eaque consectetur officia esse voluptate adipisci, quas at labore facere. Possimus architecto, ducimus in laborum iusto quaerat.</p>
+                <h3>Slides</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique illum, dolore tempora ab, eaque consectetur officia esse voluptate adipisci, quas at labore facere. Possimus architecto, ducimus in laborum iusto quaerat.</p>
+
+              </article>
 
             </div>
 
@@ -109,13 +125,17 @@
 
         <section class="section">
 
-          <h2>Contribution</h2>
+          <article>
 
-          <p>You want to add a tool? Great!<br>
-          Either create an issue and we'll add it to <a href="http://perf-tooling.today">perf-tooling.today</a>.</p>
-          <p>Or propose a pull request and add a tool by adding a JSON file to the data folder. The JSON files in these to folders will be automatically rendered using a template based in the templates folder. For more detailed information check the contributing.md.</p>
-          <p><em>By proposing a pull request you will be added to the footer contributors list automatically</em></p>
-          <p>We would like this project to become a shared resource maintained be the community, so if you have any ideas on how to improve it or make it better, please let us know and file an issue.</p>
+            <h2>Contribution</h2>
+
+            <p>You want to add a tool? Great!<br>
+            Either create an issue and we'll add it to <a href="http://perf-tooling.today">perf-tooling.today</a>.</p>
+            <p>Or propose a pull request and add a tool by adding a JSON file to the data folder. The JSON files in these to folders will be automatically rendered using a template based in the templates folder. For more detailed information check the contributing.md.</p>
+            <p><em>By proposing a pull request you will be added to the footer contributors list automatically</em></p>
+            <p>We would like this project to become a shared resource maintained be the community, so if you have any ideas on how to improve it or make it better, please let us know and file an issue.</p>
+
+          </article>
 
         </section>
 
