@@ -272,7 +272,10 @@ fetchVideoMeta();
 /**
  * Repeat the fetching all 12 hours
  */
-setInterval( fetchGithubStars, 1000 * 60 * 60 * 12 );
+setInterval( function() {
+  fetchGithubStars();
+  fetchVideoMeta();
+}, 1000 * 60 * 60 * 12 );
 
 app.use( compression() );
 
