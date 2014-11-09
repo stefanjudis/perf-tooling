@@ -1,0 +1,6 @@
+{
+  "name" : "lazysizes",
+  "script" : "https://github.com/aFarkas/lazysizes",
+  "description" : "High performance lazy loader for images (responsive and normal), iframes and scripts, that detects any visibility changes triggered through user interaction, CSS or JavaScript without configuration.",
+  "tags" : [ "lazy loading", "images", "picture element" ]
+}
