@@ -17,7 +17,7 @@
 
       <div class="media-body">
 
-        <h3><a href="https://www.youtube.com/watch?v=<%= video.youtubeId %>"><%= ( video.meta ) ? video.meta.title : video.name %></a></h3>
+        <h3 class="post-title"><a href="https://www.youtube.com/watch?v=<%= video.youtubeId %>"><%= ( video.meta ) ? video.meta.title : video.name %></a></h3>
 
 
         <% if ( video.stats ) { %>
