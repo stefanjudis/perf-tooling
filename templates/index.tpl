@@ -123,6 +123,58 @@
 
           <h3>Built by Stefan Judis<br>& Marco Biedermann</h3>
 
+          <ul class="buildBy-socialList">
+
+            <li>
+              <a href="https://twitter.com/stefanjudis">
+                <span class="visuallyhidden">Stefan on Twitter</span>
+                <svg>
+                  <use xlink:href="#icon-twitter" />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/stefanjudis">
+                <span class="visuallyhidden">Stefan on Github</span>
+                <svg>
+                  <use xlink:href="#icon-github" />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:stefanjudis@gmail.com">
+                <span class="visuallyhidden">Stefan's email address</span>
+                <svg>
+                  <use xlink:href="#icon-email" />
+                </svg>
+              </a>
+            </li>
+
+          </ul>
+          <ul class="buildBy-socialList">
+
+            <li>
+              <a href="https://github.com/marcobiedermann">
+                <span class="visuallyhidden">Marc on Github</span>
+                <svg>
+                  <use xlink:href="#icon-github" />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://twitter.com/m412c0b">
+                <span class="visuallyhidden">Marco on Twitter</span>
+                <svg>
+                  <use xlink:href="#icon-email" />
+                </svg>
+              </a>
+            </li>
+
+          </ul>
+
         </section>
 
           <% if( contributors ) { %>
@@ -133,7 +185,7 @@
 
                 <p>...with a little help from our friends</p>
 
-                <ul>
+                <ul class="list-unstyled">
 
                   <% _.each( contributors, function( contrib ) { %>
                     <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>

@@ -23,9 +23,28 @@
 
           <ul class="post-stats">
 
-            <li>Views: <%= video.stats.viewCount %>
-            <li>Likes: <%= video.stats.likeCount %>
-            <li>Dislikes: <%= video.stats.dislikeCount %>
+            <li>
+              <span class="visuallyhidden">Views:</span>
+               <svg>
+                <use xlink:href="#icon-view" />
+              </svg><%= video.stats.viewCount %>
+            </li>
+
+            <li>
+              <span class="visuallyhidden">Likes:</span>
+              <svg>
+                <use xlink:href="#icon-like" />
+              </svg>
+              <%= video.stats.likeCount %>
+            </li>
+
+            <li>
+              <span class="visuallyhidden">Dislikes:</span>
+              <svg>
+                <use xlink:href="#icon-dislike" />
+              </svg>
+              <%= video.stats.dislikeCount %>
+            </li>
 
           </ul>
 
