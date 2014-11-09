@@ -1,62 +1,38 @@
 .resources {
   .list-unstyled;
-  margin: 0 -.25rem;
-  padding: 0 0 .5rem;
+  margin: 0 -.25rem .5rem;
 
   li {
     display: inline-block;
-    margin: 0 .25rem;
+    padding: 0 .25rem;
     position: relative;
     text-align: left;
-    // vertical-align: top;
   }
 
   span {
-    color: @color-bg;
-    padding: .5rem 0;
-    pointer-events: none;
-    position: absolute;
-    right: 1rem;
-    top: 0;
+    display: block;
+    padding-top: 1.5rem;
+    position: relative;
+    text-align: center;
 
     &:after {
       content: '☆';
-      margin-left: .25rem;
-    }
-
-    @media (min-width: @max-width) {
-      color: @color;
-      display: block;
-      margin : 0 0 .5rem;
-      padding: 1.5rem 0 0;
-      position: relative;
-      right: auto;
-      text-align: center;
-      top: auto;
-
-      &:after {
-        content: '☆';
-        left: 0;
-        margin: 0;
-        position: absolute;
-        right: 0;
-        text-align: center;
-        top: 0;
-      }
-
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
 
   }
 
   a {
-    border-radius: 2rem;
-    color: #fff;
+    color: @color-bg;
+    border-radius: 50%;
     display: block;
-    margin: 0 0 .5rem 0;
-    overflow: hidden;
-    padding: .5rem 1rem;
-    text-decoration: none;
-    width: 220px;
+    height: 3rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    width: 3rem;
 
     &.service {
       background: @color-service;
@@ -130,27 +106,43 @@
 
     }
 
-    > svg {
-      display: none;
+  }
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  @media screen and (max-width: @media-small) {
+
+    li {
+      min-width: 11rem;
+      width: (100% / 2);
     }
 
-    @media (min-width: @max-width) {
-      border-radius: 50%;
-      height: 3rem;
-      padding: .5rem 1.5rem;
-      text-indent: -1000px;
-      width: 3rem;
+    a {
+      border-radius: 2rem;
+      height: auto;
+      padding: .5rem 1rem;
+      width: auto;
+    }
 
-      > svg {
-        display: block;
-        height: 2rem;
-        left: .5rem;
-        pointer-events: none;
-        position: absolute;
-        top: .5rem;
-        width : 2rem;
+    span {
+      color: @color-bg;
+      padding: 0;
+      position: absolute;
+      right: 1rem;
+      top: .5rem;
+
+      &:after {
+        margin-left: .25rem;
+        position: static;
       }
 
+    }
+
+    svg {
+      display: none;
     }
 
   }
