@@ -62,7 +62,11 @@ a {
   text-decoration: none;
   transition: background-color .3s, color .3s;
 
-  :hover {
+  &:active {
+    color: @color-link-active;
+  }
+
+  &:hover {
     color: @color-link-hover;
   }
 
