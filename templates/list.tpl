@@ -62,7 +62,10 @@
 
           keys.forEach( function( key ) {
             if ( key !== 'stars' ) {
-              fuzzy += key;
+              if ( key !== 'description' ) {
+                fuzzy += key;
+              }
+
               fuzzy += entry[ key ];
             }
           } );
