@@ -117,7 +117,7 @@
 
           <div class="text-center">
 
-            <a href="/tools" class="btn btn-primary">Explore Tools</a>
+            <a href="/tools" class="btn btn-large btn-primary">Explore Tools</a>
 
           </div>
 
