@@ -168,7 +168,7 @@
               <a href="https://twitter.com/m412c0b">
                 <span class="visuallyhidden">Marco on Twitter</span>
                 <svg>
-                  <use xlink:href="#icon-email" />
+                  <use xlink:href="#icon-twitter" />
                 </svg>
               </a>
             </li>
