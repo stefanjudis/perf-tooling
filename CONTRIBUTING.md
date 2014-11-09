@@ -1,13 +1,17 @@
 # Coding Style Guideline
 
+## All
+* indent using two spaces
+* Add Newline to file
+
 ## Template
-* indent using two (2) spaces
 * one Line between every tag except multiple inline tags
 
-## Less
-* indent using two (2) spaces
+## CSS
+* write everything in Less, not CSS. Otherwise your changes will be overritten
 * sort properties alphabetically
 * do not use browser prefixes, we run the code through autoprefixer
-
-## Javascript
-* indent using two (2) spaces
+* use lowercase for color-codes
+* only `classes`, no `IDs`
+* max three level deep selectors
+* do not use `!important`
