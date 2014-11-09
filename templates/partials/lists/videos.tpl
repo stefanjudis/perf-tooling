@@ -1,4 +1,5 @@
 <ul class="posts">
+  <% list = _.sortBy( list, function( video ) { return ( video.meta ) ? new Date( video.meta.publishedAt ) : new Date(); } ).reverse();%>
 
   <% _.each( list , function( video ) { %>
 
