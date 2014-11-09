@@ -157,7 +157,7 @@
 
             <li>
               <a href="https://github.com/marcobiedermann">
-                <span class="visuallyhidden">Marc on Github</span>
+                <span class="visuallyhidden">Marco on Github</span>
                 <svg>
                   <use xlink:href="#icon-github" />
                 </svg>
