@@ -16,7 +16,7 @@
 
             <a href="<%= tool.bookmarklet %>" class="bookmarklet">
               <svg>
-                <use xlink:href="#icon-bookmarklet" />
+                <use xlink:href="#icon-bookmark" />
               </svg>
               Bookmarklet
             </a>
@@ -40,13 +40,58 @@
 
         <% } %>
 
+        <% if ( tool.firefox ) { %>
+
+          <li class="tooltip" title="Firefox extension">
+
+            <a href="<%= tool.firefox %>" class="firefox">
+              <svg>
+                <use xlink:href="#icon-firefox" />
+              </svg>
+              Firefox extension
+            </a>
+
+            <span><%= ( tool.stars.firefox ) ? tool.stars.firefox : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.internetExplorer ) { %>
+
+          <li class="tooltip" title="Internet Explorer extension">
+
+            <a href="<%= tool.internetExplorer %>" class="internet-explorer">
+              <svg>
+                <use xlink:href="#icon-internet-explorer" />
+              </svg>
+              Internet Explorer extension
+            </a>
+
+            <span><%= ( tool.stars.internetExplorer ) ? tool.stars.internetExplorer : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.safari ) { %>
+
+          <li class="tooltip" title="Safari extension">
+
+            <a href="<%= tool.safari %>" class="safari">
+              <svg>
+                <use xlink:href="#icon-safari" />
+              </svg>
+              Safari extension
+            </a>
+
+            <span><%= ( tool.stars.safari ) ? tool.stars.safari : 'N/A' %></span>
+
+        <% } %>
+
         <% if ( tool.cli ) { %>
 
           <li class="tooltip" title="CLI">
 
             <a href="<%= tool.cli %>" class="cli">
               <svg>
-                <use xlink:href="#icon-cli" />
+                <use xlink:href="#icon-terminal" />
               </svg>
               CLI
             </a>
@@ -106,7 +151,7 @@
 
             <a href="<%= tool.script %>" class="script">
               <svg>
-                <use xlink:href="#icon-script" />
+                <use xlink:href="#icon-javascript" />
               </svg>
               Script
             </a>
@@ -121,7 +166,7 @@
 
             <a href="<%= tool.service %>" class="service">
               <svg>
-                <use xlink:href="#icon-service" />
+                <use xlink:href="#icon-globe" />
               </svg>
               Service
             </a>
