@@ -2,7 +2,7 @@
 
   <% _.each( list , function( article ) { %>
 
-    <li id="<%= article.name.replace( ' ', '-' ) %>" class="post-article">
+    <li id="<%= article.name.replace( /\s/g, '-' ) %>" class="post-article">
 
       <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" ><%= article.name %></a></h3>
       <h4><%= article.date %> by <%= article.author %></h4>
