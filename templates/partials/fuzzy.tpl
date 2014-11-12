@@ -5,7 +5,7 @@
 	  <svg class="fuzzy--icon">
 	    <use xlink:href="#icon-magnifier" />
 	  </svg>
-	  <input id="fuzzzzzzzzzy" class="fuzzy--input" placeholder="Search all <%= list.length %> <%= type %>">
+	  <input type="text" id="fuzzzzzzzzzy" class="fuzzy--input" placeholder="Search all <%= list.length %> <%= type %>">
 
   </label>
 
