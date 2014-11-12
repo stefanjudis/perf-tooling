@@ -12,9 +12,15 @@
 .fuzzy--input {
   border: 1px solid @color-border;
   font-size: 1.25rem;
-  height: 4rem;
+  padding: 1rem 4rem 1rem 1rem;
   text-align: center;
   width: 100%;
+
+  @media screen and (max-width: @media-tiny) {
+    font-size: 1rem;
+    padding: .5rem 4rem .5rem 1rem;
+  }
+
 }
 
 .fuzzy--icon {
@@ -24,4 +30,9 @@
   right: 1rem;
   top: 0.75rem;
   width: 2.5rem;
+
+  @media screen and (max-width: @media-tiny) {
+    top: 0;
+  }
+
 }
