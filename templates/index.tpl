@@ -228,7 +228,7 @@
           <section class="section sponsor text-center">
 
             <h4 class="subline">Sponsored by</h4>
-            <p><a href="https://www.fastly.com/"><img src="<%= cdn %>/fastly.svg" alt="Logo of CDN Fastly"></a></p>
+            <p><a href="https://www.fastly.com/"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly"></a></p>
 
           </section>
 
