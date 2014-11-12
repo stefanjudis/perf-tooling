@@ -8,6 +8,11 @@
   &.right {
     max-width: 50%;
     width: auto;
+
+    @media screen and (max-width: @media-tiny) {
+      max-width: inherit;
+    }
+
   }
 
   &.left {
