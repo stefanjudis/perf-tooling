@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="190px" height="163px" viewBox="-10 -10 200 173" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <title>Untitled 5</title>
-    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M7.99740716,0 C3.58056115,0 0,3.57524125 0,7.99986275 L0,155.000137 C0,159.418339 3.58403976,163 7.99740716,163 L182.002593,163 C186.419439,163 190,159.424759 190,155.000137 L190,7.99986275 C190,3.58166055 186.41596,0 182.002593,0 L7.99740716,0 Z M22.0059557,12 C17.5843885,12 14,15.5756579 14,19.9978228 L14,143.002177 C14,147.419253 17.5724026,151 22.0059557,151 L167.994044,151 C172.415612,151 176,147.424342 176,143.002177 L176,19.9978228 C176,15.5807473 172.427597,12 167.994044,12 L22.0059557,12 Z" id="Rectangle-1" fill="#DDF0F2" sketch:type="MSShapeGroup"></path>
-        <path d="M75,51.8961039 L21,80.8249845 L21,87.925603 L75,120 L75,103.418182 L42.0572086,83.7589981 L75,66.8246753 L75,51.8961039 Z" id="Path-1" fill="#DDF0F2" sketch:type="MSShapeGroup"></path>
-        <path d="M169,51 L115,79.8847481 L115,86.9745342 L169,119 L169,102.443478 L136.057209,82.8142857 L169,65.9057971 L169,51 Z" id="Path-1" fill="#DDF0F2" sketch:type="MSShapeGroup" transform="translate(142.000000, 85.000000) scale(-1, 1) translate(-142.000000, -85.000000) "></path>
-        <path d="M78.0853914,120.074219 L98.4451309,50.9257812 L112.298828,50.9257812 L92.4384766,120.074219 L78.0853914,120.074219 Z" id="Path-3" fill="#DDF0F2" sketch:type="MSShapeGroup"></path>
-    </g>
-</svg>
+<svg width="190" height="163" viewBox="-10 -10 200 173" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>Untitled 5</title><g sketch:type="MSPage" fill="#DDF0F2"><path d="M7.997 0c-4.417 0-7.997 3.575-7.997 8v147c0 4.418 3.584 8 7.997 8h174.005c4.417 0 7.997-3.575 7.997-8v-147c0-4.418-3.584-8-7.997-8h-174.005zm14.009 12c-4.422 0-8.006 3.576-8.006 7.998v123.004c0 4.417 3.572 7.998 8.006 7.998h145.988c4.422 0 8.006-3.576 8.006-7.998v-123.004c0-4.417-3.572-7.998-8.006-7.998h-145.988z" sketch:type="MSShapeGroup"/><path d="M75 51.896l-54 28.929v7.101l54 32.074v-16.582l-32.943-19.659 32.943-16.934v-14.929zM115 51l54 28.885v7.09l-54 32.025v-16.557l32.943-19.629-32.943-16.908v-14.906z" sketch:type="MSShapeGroup"/><path d="M78.085 120.074l20.36-69.148h13.854l-19.86 69.148h-14.353z" sketch:type="MSShapeGroup"/></g></svg>

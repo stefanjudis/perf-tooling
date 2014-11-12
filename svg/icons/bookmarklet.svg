@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<!-- License Agreement at http://iconmonstr.com/license/ -->
-
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-<path id="bookmark-9-icon" d="M153.725,50v412L256,371.557L358.275,462V50H153.725z M297.356,285.243L256,263.125l-41.354,22.118
-	l8.255-46.166l-33.815-32.497l46.458-6.415L256,157.963l20.458,42.202l46.458,6.415l-33.814,32.497L297.356,285.243z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M153.725 50v412l102.275-90.443 102.275 90.443v-412h-204.55zm143.631 235.243l-41.356-22.118-41.354 22.118 8.255-46.166-33.815-32.497 46.458-6.415 20.456-42.202 20.458 42.202 46.458 6.415-33.814 32.497 8.254 46.166z"/></svg>

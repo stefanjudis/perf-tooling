@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<!-- License Agreement at http://iconmonstr.com/license/ -->
-
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-<path id="windows-os-icon" d="M50.783,244.251V107.57l165.857-23.264v159.944H50.783z M240.139,244.251h221.078V50L240.139,81.011
-	V244.251z M216.641,267.748H50.783V404.43l165.857,23.264V267.748z M240.139,267.748V430.99L461.217,462V267.748H240.139z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M50.783 244.251v-136.681l165.857-23.264v159.944h-165.857zm189.356 0h221.078v-194.251l-221.078 31.011v163.24zm-23.498 23.497h-165.858v136.682l165.857 23.264v-159.946zm23.498 0v163.242l221.078 31.01v-194.252h-221.078z"/></svg>
