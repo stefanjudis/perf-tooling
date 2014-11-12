@@ -1,0 +1,21 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "sub": true,
+  "undef": true,
+  "boss": true,
+  "eqnull": true,
+  "node": true,
+  "quotmark": "single",
+  "latedef": false,
+  "unused": true,
+  "trailing": true,
+  "maxparams": 5,
+  "maxdepth": 3,
+  "predef": [ "-Promise" ],
+  "browser": true
+}

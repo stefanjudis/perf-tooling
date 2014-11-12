@@ -1,0 +1,43 @@
+.fuzzy {
+  margin: 2rem 1rem;
+  position: relative;
+  text-align: left;
+
+  @media (min-width: @max-width) {
+    margin: 3rem auto 2rem;
+  }
+
+}
+
+.fuzzy--input {
+  -webkit-appearance: none;
+  border: 1px solid @color-border;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1.25rem;
+  padding: 1rem 4rem;
+  text-align: center;
+  width: 100%;
+
+  @media screen and (max-width: @media-tiny) {
+    font-size: 1rem;
+    padding: .5rem 3rem;
+  }
+
+}
+
+.fuzzy--icon {
+  fill: @color-border;
+  height: 2.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.75rem;
+  width: 2.5rem;
+
+  @media screen and (max-width: @media-tiny) {
+    height: 2rem;
+    top: .25rem;
+    width: 2rem;
+  }
+
+}

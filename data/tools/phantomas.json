@@ -1,0 +1,8 @@
+{
+  "name" : "phantomas",
+  "description" : "PhantomJS-based modular web performance metrics collector.",
+  "cli" : "https://github.com/macbre/phantomas",
+  "module" : "https://github.com/macbre/phantomas",
+  "grunt" : "https://github.com/stefanjudis/grunt-phantomas",
+  "tags" : [ "css", "html", "javascript", "metrics" ]
+}

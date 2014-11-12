@@ -8,9 +8,8 @@ var minify      = require( 'html-minifier' ).minify;
 var request     = require( 'request' );
 var config      = {
   cdn       : process.env.CDN_URL || '',
-  dirs      : {
-    tools : './tools'
-  },
+  dataDir   : 'data',
+  listPages : [ 'articles', 'slides', 'tools', 'videos' ],
   github    : {
     id    : process.env.GITHUB_ID,
     token : process.env.GITHUB_TOKEN
@@ -19,12 +18,30 @@ var config      = {
     name : 'Performance tooling today'
   },
   templates : {
-    index : './templates/index.tpl'
+    index : './templates/index.tpl',
+    list  : './templates/list.tpl'
+  },
+  youtube : {
+    token : process.env.YOUTUBE_TOKEN
   }
-}
+};
+
+var Youtube = ( require( 'youtube-api' ) );
+
+Youtube.authenticate( {
+  type : 'key',
+  key  : config.youtube.token
+} );
 
 var port         = process.env.PORT || 3000;
-var tools        = getTools();
+
+// TODO loop this
+var data         = {
+  articles : getList( 'articles' ),
+  slides   : getList( 'slides' ),
+  tools    : getList( 'tools' ),
+  videos   : getList( 'videos' )
+};
 
 /**
  * List of contributors
@@ -34,12 +51,21 @@ var contributors;
 
 
 /**
- * index page
- * that will be refreshed
- * continuously
+ * pages object representing
+ * all routes
  */
-var indexPage;
+var pages = {
+  index    : null,
+  tools    : null,
+  articles : null,
+  slides   : null,
+  videos   : null
+};
 
+
+/**
+ * Fetch list of contributors
+ */
 function fetchContributors() {
   if ( config.github.id && config.github.token ) {
     request(
@@ -50,14 +76,17 @@ function fetchContributors() {
         }
       },
       function( error, response, body ) {
-        if ( !error && response && response.statusCode == 200 ) {
+        if ( !error && response && response.statusCode === 200 ) {
           try {
             contributors = JSON.parse( body );
           } catch( e ) {
+            contributors = false;
             console.log( error );
             console.log( response );
             console.log( e );
           }
+
+          renderPage( 'index' );
         }
       }
     );
@@ -66,15 +95,14 @@ function fetchContributors() {
   }
 }
 
-var i = 0;
 
 /**
  * Fetch github stars
  */
 function fetchGithubStars() {
-  _.each( tools, function( tool ) {
+  _.each( data.tools, function( tool ) {
     _.forIn( tool, function( value, key ) {
-      tool.stars = tools.stars || {};
+      tool.stars = data.tools.stars || {};
 
       if ( config.github.id && config.github.token ) {
         if (
@@ -106,7 +134,7 @@ function fetchGithubStars() {
 
                 tool.stars[ key ] = stars;
 
-                renderIndex();
+                renderPage( 'tools' );
               } catch( e ) {
                 console.log( error );
                 console.log( response );
@@ -122,67 +150,93 @@ function fetchGithubStars() {
 
 
 /**
+ * Fetch video meta data
+ */
+function fetchVideoMeta() {
+  if ( config.youtube.token ) {
+    _.each( data.videos, function( video ) {
+      Youtube.videos.list( {
+        part : 'snippet,statistics',
+        id   : video.youtubeId
+      }, function( error, data ) {
+        if ( error ) {
+          console.log( error );
+
+          return;
+        }
+
+        video.meta = data.items[ 0 ].snippet;
+        video.stats = data.items[ 0 ].statistics;
+
+        renderPage( 'videos' );
+      } );
+    } );
+  } else {
+    console.log( 'No Youtube token set!!!' );
+  }
+}
+
+
+/**
  * Read files and get tools
  *
  * @return {Object} tools
  */
-function getTools() {
-  var tools = [];
-  var types = fs.readdirSync( config.dirs.tools );
+function getList( type ) {
+  var list = [];
+  var entries = fs.readdirSync( config.dataDir + '/' + type );
 
-  types.forEach( function( type ) {
-    var entries = fs.readdirSync( config.dirs.tools + '/' + type );
-    tools[ type ] = {};
-
-    entries.forEach( function( entry ) {
+  entries.forEach( function( entry ) {
+    if ( entry[ 0 ] !== '.' ) {
       try {
         entry = JSON.parse(
           fs.readFileSync(
-            config.dirs.tools + '/' + type + '/' + entry,
+            config.dataDir + '/' + type + '/' + entry,
             'utf8'
           )
         );
 
-        entry.type = type;
-
-        tools.push( entry );
+        list.push( entry );
       } catch( e ) {
         console.log( 'SHITTTTT' );
         console.log( e );
       }
-    } );
+    }
   } );
 
-  return tools;
+  return list;
 }
 
 
 /**
  * Render index page
  */
-function renderIndex() {
-  indexPage = minify(
+function renderPage( type ) {
+  var template = ( type === 'index' ) ? 'index' : 'list';
+
+  pages[ type ] = minify(
     _.template(
-      fs.readFileSync( config.templates.index ),
+      fs.readFileSync( config.templates[ template ] ),
       {
         css          : fs.readFileSync( './public/main.css', 'utf8' ),
         cdn          : config.cdn,
         contributors : contributors,
+        partial      : function( path, options ) {
+          options = options || {};
+
+          return _.template(
+            fs.readFileSync( path ),
+            options
+          );
+        },
         site         : config.site,
         svg          : fs.readFileSync( './public/icons.svg', 'utf8' ),
-        tools        : _.reduce( tools, function( sum, tool ) {
-          if ( sum[ tool.type ] === undefined ) {
-            sum[ tool.type ] = [];
-          }
-
-          sum[ tool.type ].push( tool );
-
-          return sum;
-        }, {} ),
+        list         : data[ type ] || null,
         hash         : {
           css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
           js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
-        }
+        },
+        type         : type
       }
     ), {
       keepClosingSlash      : true,
@@ -198,42 +252,51 @@ function renderIndex() {
 
 
 /**
- * Static files options
- * @type {Object}
- */
-var options = {
-  dotfiles   : 'ignore',
-  etag       : false,
-  maxAge     : '1y',
-  redirect   : false,
-  setHeaders : function ( res, path ) {
-    res.set( 'x-timestamp', Date.now() )
-  }
-};
-
-/**
  * Fetch contributors
  */
 fetchContributors();
+
 
 /**
  * Fetch Github stars
  */
 fetchGithubStars();
 
-setInterval( fetchGithubStars, 1000 * 60 * 60 * 12 );
+
+/**
+ * fetch video meta data
+ */
+fetchVideoMeta();
+
+
+/**
+ * Repeat the fetching all 12 hours
+ */
+setInterval( function() {
+  fetchGithubStars();
+  fetchVideoMeta();
+}, 1000 * 60 * 60 * 12 );
+
+app.use( compression() );
+
 
 /**
  * Render index page
  */
-renderIndex();
+config.listPages.forEach( function( page ) {
+  renderPage( page );
 
-app.use( compression() );
+  app.get( '/' + page, function( req, res ) {
+    res.send( pages[ page ] );
+  } );
+} );
 
-app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
+renderPage( 'index' );
 
 app.get( '/', function( req, res ) {
-  res.send( indexPage );
+  res.send( pages.index );
 } );
+
+app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
 
 app.listen( port );

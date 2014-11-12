@@ -1,6 +1,0 @@
-{
-  "name" : "Parker",
-  "cli" : "https://github.com/katiefenn/parker",
-  "grunt" : "https://github.com/leny/grunt-parker",
-  "description" : "Parker is a stylesheet analysis tool. It runs metrics on your stylesheets and will report on their complexity."
-}

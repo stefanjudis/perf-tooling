@@ -1,0 +1,8 @@
+{
+  "name" : "Browsertime",
+  "cli" : "https://github.com/tobli/browsertime",
+  "description" : "Fetch timings (Navigation Timing API and User Timing) and other data from your browser!",
+  "tags" : [ "timings" ]
+}
+
+

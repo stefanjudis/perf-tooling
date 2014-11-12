@@ -1,0 +1,6 @@
+{
+  "name" : "CSSStats",
+  "service" : "http://cssstats.com/",
+  "description" : "cssstats.com is a css visualizer.",
+  "tags" : [ "css", "metrics" ]
+}

@@ -1,6 +1,0 @@
-{
-  "name" : "critical",
-  "module" : "https://github.com/addyosmani/critical",
-  "grunt" : "https://github.com/bezoerb/grunt-critical",
-  "description" : "Critical extracts & inlines critical-path (above-the-fold) CSS from HTML."
-}

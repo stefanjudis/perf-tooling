@@ -1,0 +1,150 @@
+.resources {
+  .list-unstyled;
+  margin: 0 -.25rem .5rem;
+
+  li {
+    display: inline-block;
+    padding: 0 .25rem;
+    position: relative;
+    text-align: left;
+  }
+
+  span {
+    display: block;
+    padding-top: 1.5rem;
+    position: relative;
+    text-align: center;
+
+    &:after {
+      content: '☆';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+  }
+
+  a {
+    color: @color-bg;
+    border-radius: 50%;
+    display: block;
+    height: 3rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    width: 3rem;
+  }
+
+  svg {
+    fill: #fff;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .service {
+    background: @color-service;
+
+    &:hover {
+      background: @color-service-hover;
+    }
+
+  }
+
+  .cli {
+    background: @color-cli;
+
+    &:hover {
+      background: @color-cli-hover;
+    }
+
+  }
+
+  .chrome {
+    background: @color-chrome;
+
+    &:hover {
+      background: @color-chrome-hover;
+    }
+
+  }
+
+  .module {
+    background: @color-module;
+
+    &:hover {
+      background: @color-module-hover;
+    }
+
+  }
+
+  .grunt {
+    background: @color-grunt;
+
+    &:hover {
+      background: @color-grunt-hover;
+    }
+
+  }
+
+  .gulp {
+    background: @color-gulp;
+
+    &:hover {
+      background: @color-gulp-hover;
+    }
+
+  }
+
+  .bookmarklet {
+    background: @color-bookmarklet;
+
+    &:hover {
+      background: @color-bookmarklet-hover;
+    }
+
+  }
+
+  .script {
+    background: @color-script;
+
+    &:hover {
+      background: @color-script-hover;
+    }
+
+  }
+
+  @media screen and (max-width: @media-small) {
+
+    li {
+      min-width: 12rem;
+      width: (100% / 2);
+    }
+
+    a {
+      border-radius: 2rem;
+      height: auto;
+      padding: .5rem 1rem;
+      width: auto;
+    }
+
+    span {
+      color: @color-bg;
+      padding: 0;
+      position: absolute;
+      right: 1rem;
+      top: .5rem;
+
+      &:after {
+        margin-left: .25rem;
+        position: static;
+      }
+
+    }
+
+    svg {
+      display: none;
+    }
+
+  }
+
+}

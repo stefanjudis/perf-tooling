@@ -1,0 +1,8 @@
+{
+  "name" : "TMI (too many images)",
+  "cli" : "https://github.com/addyosmani/tmi",
+  "module" : "https://github.com/addyosmani/tmi",
+  "description" : "Discover your image weight on the web. Find out the image weight in your pages, compare to the HTTPArchive average and discover what images you can optimize further.",
+  "tags" : [ "images", "metrics", "budget" ]
+}
+
