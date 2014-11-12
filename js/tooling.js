@@ -33,6 +33,80 @@
 
 
   /**
+   * Shiming requestAnimationFrame
+   * @return {Function} requestAnimationFrame
+   */
+  var requestAnimFrame = ( function() {
+    return  window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            function( callback ) { window.setTimeout( callback, 1000 / 60 ); };
+  } )();
+
+
+  /**
+   * Animated scroll function
+   * shamelessly taken from
+   *
+   * https://gist.github.com/james2doyle/5694700
+   */
+  Math.easeInOutQuad = function ( t, b, c, d ) {
+    t /= d / 2;
+    if ( t < 1 ) {
+      return c / 2 * t * t + b;
+    }
+    t--;
+    return -c/2 * ( t * ( t-2 ) - 1 ) + b;
+  };
+
+  Math.easeInCubic = function( t, b, c, d ) {
+    var tc = ( t/=d ) * t * t;
+    return b + c * ( tc );
+  };
+
+  Math.inOutQuintic = function( t, b, c, d ) {
+    var ts = ( t/=d ) * t,
+    tc = ts * t;
+    return b + c * ( 6 * tc * ts + -15 * ts * ts + 10 * tc );
+  };
+
+  /**
+   * Scroll to
+   * @param  {[type]}   to       [description]
+   * @param  {Function} callback [description]
+   * @param  {[type]}   duration [description]
+   * @return {[type]}            [description]
+   */
+  function scrollTo( to, duration ) {
+    // figure out if this is moz || IE because they use documentElement
+    var doc         = ( navigator.userAgent.indexOf( 'Firefox' ) !== -1 || navigator.userAgent.indexOf( 'MSIE' ) !== -1 ) ?
+                      document.documentElement :
+                      document.body,
+        start       = doc.scrollTop,
+        change      = to - start,
+        currentTime = 0,
+        increment   = 20;
+
+    duration    = ( typeof( duration ) === 'undefined' ) ? 500: duration;
+
+    var animateScroll = function(){
+      // increment the time
+      currentTime += increment;
+      // find the value with the quadratic in-out easing function
+      var val = Math.easeInOutQuad( currentTime, start, change, duration );
+      // move the document.body
+      doc.scrollTop = val;
+      // do the animation unless its over
+      if( currentTime < duration ) {
+        requestAnimFrame( animateScroll );
+      }
+    };
+
+    animateScroll();
+  }
+
+
+  /**
    * Add event handlers to watch
    * out for filter changes
    */
@@ -98,11 +172,14 @@
   var scrollLinks = document.querySelectorAll( '.js-scroll' );
 
   if ( scrollLinks.length ) {
-    for ( var i = 0; i < scrollLinks.length; ++i ) {
-      addEvent( scrollLinks[ i ], 'click', function() {
-        window.scrollTo( 0, 1000, 'smooth' );
+    Array.prototype.forEach.call( scrollLinks, function( link ) {
+      addEvent( link, 'click', function() {
+        scrollTo(
+          document.getElementById( link.href.split( '#' )[ 1 ] ).offsetTop,
+          600
+        );
       } );
-    }
+    } );
   }
 
   if ( typeof list !== 'undefined' ) {

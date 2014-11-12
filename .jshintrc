@@ -14,7 +14,7 @@
   "latedef": false,
   "unused": true,
   "trailing": true,
-  "maxparams": 3,
+  "maxparams": 5,
   "maxdepth": 3,
   "predef": [ "-Promise" ],
   "browser": true
