@@ -45,7 +45,7 @@
           )
         %>
 
-        <div id="noResultMsg">No results found</div>
+        <div id="noResultMsg" class="is-hidden">No results found</div>
 
       </main>
 

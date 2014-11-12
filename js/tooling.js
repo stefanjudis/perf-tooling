@@ -81,7 +81,7 @@
       }
     } );
 
-    elements.noResultsMsg.style.display = ( count === 0 ) ? 'block' : 'none';
+    elements.noResultsMsg.classList.toggle( 'is-hidden', count !== 0 );
   }
 
   // load github avatars right after page load
