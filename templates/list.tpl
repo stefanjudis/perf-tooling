@@ -24,28 +24,32 @@
         )
       %>
 
-      <main class="container">
+      <main class="main">
 
-        <%=
-          partial(
-            'templates/partials/fuzzy.tpl',
-            {
-              list : list,
-              type : type
-            }
-          )
-        %>
+        <div class="container">
 
-        <%=
-          partial(
-            'templates/partials/lists/' + type + '.tpl',
-            {
-              list : list
-            }
-          )
-        %>
+          <%=
+            partial(
+              'templates/partials/fuzzy.tpl',
+              {
+                list : list,
+                type : type
+              }
+            )
+          %>
 
-        <div id="noResultMsg" class="is-hidden">No results found</div>
+          <%=
+            partial(
+              'templates/partials/lists/' + type + '.tpl',
+              {
+                list : list
+              }
+            )
+          %>
+
+          <div id="noResultMsg" class="is-hidden">No results found</div>
+
+        </div>
 
       </main>
 
