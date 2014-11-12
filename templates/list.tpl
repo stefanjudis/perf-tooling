@@ -45,6 +45,8 @@
           )
         %>
 
+        <div id="noResultMsg">No results found</div>
+
       </main>
 
       <%=

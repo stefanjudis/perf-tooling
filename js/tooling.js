@@ -1,5 +1,15 @@
 ( function( document, list ) {
   /**
+   * Cached essential elements
+   * to avoid DOM queries
+   *
+   * @type {Object}
+   */
+  var elements = {
+    noResultsMsg : document.getElementById( 'noResultMsg' )
+  };
+
+  /**
    * Attach event listener to given event
    *
    * THX to John Resig
@@ -52,6 +62,8 @@
    * @param  {String} searchTearm searchTerm
    */
   function _filterListEntries( searchTerm ) {
+    var count = 0;
+
     list.forEach( function( entry ) {
       // cache element to avoid multiple
       // dom queries
@@ -61,11 +73,15 @@
 
       // show/hide
       if ( entry.fuzzy.indexOf( searchTerm ) !== -1 ) {
+        ++count;
+
         entry.elem.style.display = 'block';
       } else {
         entry.elem.style.display = 'none';
       }
     } );
+
+    elements.noResultsMsg.style.display = ( count === 0 ) ? 'block' : 'none';
   }
 
   // load github avatars right after page load
