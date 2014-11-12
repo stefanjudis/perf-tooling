@@ -78,7 +78,7 @@
 
           return {
             fuzzy : fuzzy,
-            name  : entry.name.replace( ' ', '-' )
+            name  : entry.name.replace( /\s/g, '-' )
           }
         } )
       )

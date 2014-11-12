@@ -136,17 +136,28 @@
    * @param  {String} searchTearm searchTerm
    */
   function _filterListEntries( searchTerm ) {
-    var count = 0;
+    var count       = 0;
+    var searchTerms = searchTerm.split( ' ' );
+    var length = searchTerms.length;
 
     list.forEach( function( entry ) {
+      var i      = 0;
+      var match  = true;
+
       // cache element to avoid multiple
       // dom queries
       if ( entry.elem === undefined ) {
         entry.elem  = document.getElementById( entry.name );
       }
 
+      for( ; i < length; ++i ) {
+        if ( entry.fuzzy.indexOf( searchTerms[ i ] ) === -1 ) {
+          match = false;
+        }
+      }
+
       // show/hide
-      if ( entry.fuzzy.indexOf( searchTerm ) !== -1 ) {
+      if ( match ) {
         ++count;
 
         entry.elem.style.display = 'block';
