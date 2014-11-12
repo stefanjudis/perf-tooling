@@ -16,7 +16,7 @@
 
             <a href="<%= tool.bookmarklet %>" class="bookmarklet">
               <svg>
-                <use xlink:href="#icon-bookmark" />
+                <use xlink:href="#icon-bookmarklet" />
               </svg>
               Bookmarklet
             </a>
