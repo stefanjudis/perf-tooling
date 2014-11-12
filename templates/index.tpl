@@ -69,7 +69,7 @@
 
                   <h3>Tools</h3>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consectetur non, ipsum ex recusandae. Aperiam possimus sapiente distinctio id, minus animi magnam! Exercitationem, inventore fugiat consequatur perspiciatis quibusdam, et perferendis.</p>
+                  <p>A rich collection of tools available to optimize and/or monitor your website's performance including bookmarklets, browser extensions, command line tools, node modules and grunt/gulp tasks.</p>
 
                 </article>
 
@@ -81,7 +81,7 @@
 
                   <h3>Articles</h3>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique illum, dolore tempora ab, eaque consectetur officia esse voluptate adipisci, quas at labore facere. Possimus architecto, ducimus in laborum iusto quaerat.</p>
+                  <p>An exclusive list of articles that inform about best practices to build fast websites and to make your visitors happy.</p>
 
                 </article>
 
@@ -97,7 +97,7 @@
 
                   <h3>Videos</h3>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consectetur non, ipsum ex recusandae. Aperiam possimus sapiente distinctio id, minus animi magnam! Exercitationem, inventore fugiat consequatur perspiciatis quibusdam, et perferendis.</p>
+                  <p>An exclusive collection of recent videos including performance specific tipps and tricks to build better and faster websites.</p>
 
                 </article>
 
@@ -109,7 +109,7 @@
 
                   <h3>Slides</h3>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique illum, dolore tempora ab, eaque consectetur officia esse voluptate adipisci, quas at labore facere. Possimus architecto, ducimus in laborum iusto quaerat.</p>
+                  <p>An exclusive collection of slides of great talks covering performance related topics.</p>
 
                 </article>
 
