@@ -25,210 +25,214 @@
         )
       %>
 
-      <main class="container">
+      <main class="main">
 
-        <section class="section section-intro">
+        <div class="container">
 
-          <img src="<%= cdn %>/perf-tooling.svg" alt="perf-tooling logo" class="center-block">
+          <section class="section section-intro">
 
-          <div class="text-center">
+            <img src="<%= cdn %>/perf-tooling.svg" alt="perf-tooling logo" class="center-block">
 
-            <h1>perf-tooling.today</h1>
-            <h2 class="subline">Start performance tooling today</h2>
+            <div class="text-center">
 
-            <a class="btn btn-scroll js-scroll" href="#features">
-              <span class="visuallyhidden">Scroll to features</span><svg>
-                <use xlink:href="#icon-arrow" />
-              </svg>
-            </a>
+              <h1>perf-tooling.today</h1>
+              <h2 class="subline">Start performance tooling today</h2>
 
-          </div>
-
-        </section>
-
-        <section class="section">
-
-          <div class="text-center">
-
-            <h2>Automize. Monitore. Improve</h2>
-            <h3 class="subline">Perf tooling is a collection of powerful resources<br>which will help you to improve your workflow and<br>to delive better and faster websites.</h3>
-
-          </div>
-
-        </section>
-
-        <section id="features" class="section">
-
-          <div class="row">
-
-            <div class="col-6">
-
-              <article class="article">
-
-                <h3>Tools</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consectetur non, ipsum ex recusandae. Aperiam possimus sapiente distinctio id, minus animi magnam! Exercitationem, inventore fugiat consequatur perspiciatis quibusdam, et perferendis.</p>
-
-              </article>
+              <a class="btn btn-scroll js-scroll" href="#features">
+                <span class="visuallyhidden">Scroll to features</span><svg>
+                  <use xlink:href="#icon-arrow" />
+                </svg>
+              </a>
 
             </div>
 
-            <div class="col-6">
+          </section>
 
-              <article class="article">
+          <section class="section">
 
-                <h3>Articles</h3>
+            <div class="text-center">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique illum, dolore tempora ab, eaque consectetur officia esse voluptate adipisci, quas at labore facere. Possimus architecto, ducimus in laborum iusto quaerat.</p>
-
-              </article>
-
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="col-6">
-
-              <article class="article">
-
-                <h3>Videos</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consectetur non, ipsum ex recusandae. Aperiam possimus sapiente distinctio id, minus animi magnam! Exercitationem, inventore fugiat consequatur perspiciatis quibusdam, et perferendis.</p>
-
-              </article>
+              <h2>Automize. Monitore. Improve</h2>
+              <h3 class="subline">Perf tooling is a collection of powerful resources<br>which will help you to improve your workflow and<br>to delive better and faster websites.</h3>
 
             </div>
 
-            <div class="col-6">
+          </section>
 
-              <article class="article">
+          <section id="features" class="section">
 
-                <h3>Slides</h3>
+            <div class="row">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique illum, dolore tempora ab, eaque consectetur officia esse voluptate adipisci, quas at labore facere. Possimus architecto, ducimus in laborum iusto quaerat.</p>
+              <div class="col-6">
 
-              </article>
+                <article class="article">
 
-            </div>
+                  <h3>Tools</h3>
 
-          </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consectetur non, ipsum ex recusandae. Aperiam possimus sapiente distinctio id, minus animi magnam! Exercitationem, inventore fugiat consequatur perspiciatis quibusdam, et perferendis.</p>
 
-          <div class="text-center">
-
-            <a href="/tools" class="btn btn-large btn-primary">Explore Tools</a>
-
-          </div>
-
-        </section>
-
-        <section class="section">
-
-          <article>
-
-            <h2>Contribution</h2>
-
-            <p>You want to add a tool? Great!<br>
-            Either create an issue and we'll add it to <a href="http://perf-tooling.today">perf-tooling.today</a>.</p>
-            <p>Or propose a pull request and add a tool by adding a JSON file to the data folder. The JSON files in these to folders will be automatically rendered using a template based in the templates folder. For more detailed information check the contributing.md.</p>
-            <p><em>By proposing a pull request you will be added to the footer contributors list automatically</em></p>
-            <p>We would like this project to become a shared resource maintained be the community, so if you have any ideas on how to improve it or make it better, please let us know and file an issue.</p>
-
-          </article>
-
-        </section>
-
-        <section class="section buildBy text-center">
-
-          <h3>Built by Stefan Judis<br>& Marco Biedermann</h3>
-
-          <ul class="buildBy-socialList">
-
-            <li>
-              <a href="https://twitter.com/stefanjudis">
-                <span class="visuallyhidden">Stefan on Twitter</span>
-                <svg>
-                  <use xlink:href="#icon-twitter" />
-                </svg>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://github.com/stefanjudis">
-                <span class="visuallyhidden">Stefan on Github</span>
-                <svg>
-                  <use xlink:href="#icon-github" />
-                </svg>
-              </a>
-            </li>
-
-            <li>
-              <a href="mailto:stefanjudis@gmail.com">
-                <span class="visuallyhidden">Stefan's email address</span>
-                <svg>
-                  <use xlink:href="#icon-email" />
-                </svg>
-              </a>
-            </li>
-
-          </ul>
-          <ul class="buildBy-socialList">
-
-            <li>
-              <a href="https://github.com/marcobiedermann">
-                <span class="visuallyhidden">Marco on Github</span>
-                <svg>
-                  <use xlink:href="#icon-github" />
-                </svg>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://twitter.com/m412c0b">
-                <span class="visuallyhidden">Marco on Twitter</span>
-                <svg>
-                  <use xlink:href="#icon-twitter" />
-                </svg>
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-          <% if( contributors ) { %>
-
-            <section class="section text-center">
-
-              <div id="contributors" class="contributors">
-
-                <p>...with a little help from our friends</p>
-
-                <ul class="list-unstyled">
-
-                  <% _.each( contributors, function( contrib ) { %>
-                    <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
-                      <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>"></a></li>
-                    <% } %>
-                  <% } ) %>
-
-                </ul>
+                </article>
 
               </div>
 
-            </section>
+              <div class="col-6">
 
-          <% } %>
+                <article class="article">
 
-        </section>
+                  <h3>Articles</h3>
 
-        <section class="section sponsor text-center">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique illum, dolore tempora ab, eaque consectetur officia esse voluptate adipisci, quas at labore facere. Possimus architecto, ducimus in laborum iusto quaerat.</p>
 
-          <h4 class="subline">Sponsored by</h4>
-          <p><a href="https://www.fastly.com/"><img src="<%= cdn %>/fastly.svg" alt="Logo of CDN Fastly"></a></p>
+                </article>
 
-        </section>
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-6">
+
+                <article class="article">
+
+                  <h3>Videos</h3>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consectetur non, ipsum ex recusandae. Aperiam possimus sapiente distinctio id, minus animi magnam! Exercitationem, inventore fugiat consequatur perspiciatis quibusdam, et perferendis.</p>
+
+                </article>
+
+              </div>
+
+              <div class="col-6">
+
+                <article class="article">
+
+                  <h3>Slides</h3>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique illum, dolore tempora ab, eaque consectetur officia esse voluptate adipisci, quas at labore facere. Possimus architecto, ducimus in laborum iusto quaerat.</p>
+
+                </article>
+
+              </div>
+
+            </div>
+
+            <div class="text-center">
+
+              <a href="/tools" class="btn btn-large btn-primary">Explore Tools</a>
+
+            </div>
+
+          </section>
+
+          <section class="section">
+
+            <article>
+
+              <h2>Contribution</h2>
+
+              <p>You want to add a tool? Great!<br>
+              Either create an issue and we'll add it to <a href="http://perf-tooling.today">perf-tooling.today</a>.</p>
+              <p>Or propose a pull request and add a tool by adding a JSON file to the data folder. The JSON files in these to folders will be automatically rendered using a template based in the templates folder. For more detailed information check the contributing.md.</p>
+              <p><em>By proposing a pull request you will be added to the footer contributors list automatically</em></p>
+              <p>We would like this project to become a shared resource maintained be the community, so if you have any ideas on how to improve it or make it better, please let us know and file an issue.</p>
+
+            </article>
+
+          </section>
+
+          <section class="section buildBy text-center">
+
+            <h3>Built by Stefan Judis<br>& Marco Biedermann</h3>
+
+            <ul class="buildBy-socialList">
+
+              <li>
+                <a href="https://twitter.com/stefanjudis">
+                  <span class="visuallyhidden">Stefan on Twitter</span>
+                  <svg>
+                    <use xlink:href="#icon-twitter" />
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://github.com/stefanjudis">
+                  <span class="visuallyhidden">Stefan on Github</span>
+                  <svg>
+                    <use xlink:href="#icon-github" />
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a href="mailto:stefanjudis@gmail.com">
+                  <span class="visuallyhidden">Stefan's email address</span>
+                  <svg>
+                    <use xlink:href="#icon-email" />
+                  </svg>
+                </a>
+              </li>
+
+            </ul>
+            <ul class="buildBy-socialList">
+
+              <li>
+                <a href="https://github.com/marcobiedermann">
+                  <span class="visuallyhidden">Marco on Github</span>
+                  <svg>
+                    <use xlink:href="#icon-github" />
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://twitter.com/m412c0b">
+                  <span class="visuallyhidden">Marco on Twitter</span>
+                  <svg>
+                    <use xlink:href="#icon-twitter" />
+                  </svg>
+                </a>
+              </li>
+
+            </ul>
+
+          </section>
+
+            <% if( contributors ) { %>
+
+              <section class="section text-center">
+
+                <div id="contributors" class="contributors">
+
+                  <p>...with a little help from our friends</p>
+
+                  <ul class="list-unstyled">
+
+                    <% _.each( contributors, function( contrib ) { %>
+                      <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
+                        <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>"></a></li>
+                      <% } %>
+                    <% } ) %>
+
+                  </ul>
+
+                </div>
+
+              </section>
+
+            <% } %>
+
+          </section>
+
+          <section class="section sponsor text-center">
+
+            <h4 class="subline">Sponsored by</h4>
+            <p><a href="https://www.fastly.com/"><img src="<%= cdn %>/fastly.svg" alt="Logo of CDN Fastly"></a></p>
+
+          </section>
+
+        </div>
 
       </main>
 
