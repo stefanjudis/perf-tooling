@@ -33,7 +33,7 @@
               <svg>
                 <use xlink:href="#icon-chrome" />
               </svg>
-              Chrome extension
+              Chrome
             </a>
 
             <span><%= ( tool.stars.chrome ) ? tool.stars.chrome : 'N/A' %></span>
@@ -48,7 +48,7 @@
               <svg>
                 <use xlink:href="#icon-firefox" />
               </svg>
-              Firefox extension
+              Firefox
             </a>
 
             <span><%= ( tool.stars.firefox ) ? tool.stars.firefox : 'N/A' %></span>
@@ -63,7 +63,7 @@
               <svg>
                 <use xlink:href="#icon-internet-explorer" />
               </svg>
-              Internet Explorer extension
+              Internet Explorer
             </a>
 
             <span><%= ( tool.stars.internetExplorer ) ? tool.stars.internetExplorer : 'N/A' %></span>
@@ -78,7 +78,7 @@
               <svg>
                 <use xlink:href="#icon-safari" />
               </svg>
-              Safari extension
+              Safari
             </a>
 
             <span><%= ( tool.stars.safari ) ? tool.stars.safari : 'N/A' %></span>
