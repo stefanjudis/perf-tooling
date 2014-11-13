@@ -1,0 +1,8 @@
+{
+  "name" : "A comparison of CSS minifiers for node.js",
+  "author": "goalsmashers",
+  "stats": {
+  },
+  "url": "http://goalsmashers.github.io/css-minification-benchmark/",
+  "tags": ["css", "minifier", "optimizer", "comparison"]
+}
