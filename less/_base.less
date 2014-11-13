@@ -133,6 +133,10 @@ h1 {
     text-align: left;
   }
 
+  @media screen and (max-width: @media-tiny) {
+    font-size: @h1-font-size-small;
+  }
+
 }
 
 h2 {
@@ -158,6 +162,7 @@ img {
 input,
 select,
 textarea {
+  background-image: none;
   border: 0;
   color: inherit;
   font: @font-weight ~"@{font-size}/@{line-height}" @font-family, @font-family-fallback;
