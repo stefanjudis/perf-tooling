@@ -31,7 +31,7 @@
 
           <section class="section section-intro">
 
-            <img src="<%= cdn %>/perf-tooling.svg" alt="perf-tooling logo" class="center-block">
+            <img src="<%= cdn %>/perf-tooling.svg" alt="perf-tooling logo" width="546" height="370" class="center-block">
 
             <div class="text-center">
 
@@ -53,7 +53,7 @@
             <div class="text-center">
 
               <h2>Automize. Monitore. Improve</h2>
-              <h3 class="subline">Perf tooling is a collection of powerful resources<br>which will help you to improve your workflow and<br>to delive better and faster websites.</h3>
+              <h3 class="subline">Perf tooling is a collection of powerful resources which will help you to improve your workflow and to delive better and faster websites.</h3>
 
             </div>
 
