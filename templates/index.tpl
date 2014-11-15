@@ -127,17 +127,23 @@
 
           <section class="section">
 
-            <article>
+            <article class="article">
 
               <h2>Contribution</h2>
 
               <p>You want to add a tool? Great!<br>
-              Either create an issue and we'll add it to <a href="http://perf-tooling.today">perf-tooling.today</a>.</p>
-              <p>Or propose a pull request and add a tool by adding a JSON file to the data folder. The JSON files in these to folders will be automatically rendered using a template based in the templates folder. For more detailed information check the contributing.md.</p>
-              <p><em>By proposing a pull request you will be added to the footer contributors list automatically</em></p>
-              <p>We would like this project to become a shared resource maintained be the community, so if you have any ideas on how to improve it or make it better, please let us know and file an issue.</p>
+              Either <a href="https://github.com/stefanjudis/perf-tooling/issues">create an issue</a> and we'll add it to perf-tooling.today.</p>
+              <p>Or propose a pull request and add a tool by adding a new JSON file to the <a href="https://github.com/stefanjudis/perf-tooling/tree/master/data">data folder</a>. The JSON files in these folders will be automatically rendered using a template based in the <a href="https://github.com/stefanjudis/perf-tooling/tree/master/templates">templates folder</a>. For more detailed information check the <a href="https://github.com/stefanjudis/perf-tooling/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+              <p><em>By proposing a pull request you will be added to the footer contributors list automatically.</em></p>
+              <p>We would like this project to become a shared resource maintained be the community, so if you have any ideas on how to improve it or make it better, please let us know and <a href="https://github.com/stefanjudis/perf-tooling/issues">file an issue on Github.</a></p>
 
             </article>
+
+            <div class="text-center">
+
+              <a href="https://github.com/stefanjudis/perf-tooling/issues" class="btn btn-large btn-primary">File an issue</a>
+
+            </div>
 
           </section>
 
@@ -148,7 +154,7 @@
             <ul class="buildBy-socialList">
 
               <li>
-                <a href="https://twitter.com/stefanjudis">
+                <a href="https://twitter.com/stefanjudis" target="_blank">
                   <span class="visuallyhidden">Stefan on Twitter</span>
                   <svg>
                     <use xlink:href="#icon-twitter" />
@@ -157,7 +163,7 @@
               </li>
 
               <li>
-                <a href="https://github.com/stefanjudis">
+                <a href="https://github.com/stefanjudis" target="_blank">
                   <span class="visuallyhidden">Stefan on Github</span>
                   <svg>
                     <use xlink:href="#icon-github" />
@@ -166,7 +172,7 @@
               </li>
 
               <li>
-                <a href="mailto:stefanjudis@gmail.com">
+                <a href="mailto:stefanjudis@gmail.com" target="_blank">
                   <span class="visuallyhidden">Stefan's email address</span>
                   <svg>
                     <use xlink:href="#icon-email" />
@@ -178,7 +184,7 @@
             <ul class="buildBy-socialList">
 
               <li>
-                <a href="https://github.com/marcobiedermann">
+                <a href="https://github.com/marcobiedermann" target="_blank">
                   <span class="visuallyhidden">Marco on Github</span>
                   <svg>
                     <use xlink:href="#icon-github" />
@@ -187,7 +193,7 @@
               </li>
 
               <li>
-                <a href="https://twitter.com/m412c0b">
+                <a href="https://twitter.com/m412c0b" target="_blank">
                   <span class="visuallyhidden">Marco on Twitter</span>
                   <svg>
                     <use xlink:href="#icon-twitter" />
@@ -211,7 +217,7 @@
 
                     <% _.each( contributors, function( contrib ) { %>
                       <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
-                        <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>"></a></li>
+                        <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" target="_blank"></a></li>
                       <% } %>
                     <% } ) %>
 
@@ -228,7 +234,7 @@
           <section class="section sponsor text-center">
 
             <h4 class="subline">Sponsored by</h4>
-            <p><a href="https://www.fastly.com/"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly"></a></p>
+            <p><a href="https://www.fastly.com/" target="_blank"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly"></a></p>
 
           </section>
 
