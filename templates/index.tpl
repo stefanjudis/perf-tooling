@@ -148,7 +148,7 @@
             <ul class="buildBy-socialList">
 
               <li>
-                <a href="https://twitter.com/stefanjudis">
+                <a href="https://twitter.com/stefanjudis" target="_blank">
                   <span class="visuallyhidden">Stefan on Twitter</span>
                   <svg>
                     <use xlink:href="#icon-twitter" />
@@ -157,7 +157,7 @@
               </li>
 
               <li>
-                <a href="https://github.com/stefanjudis">
+                <a href="https://github.com/stefanjudis" target="_blank">
                   <span class="visuallyhidden">Stefan on Github</span>
                   <svg>
                     <use xlink:href="#icon-github" />
@@ -166,7 +166,7 @@
               </li>
 
               <li>
-                <a href="mailto:stefanjudis@gmail.com">
+                <a href="mailto:stefanjudis@gmail.com" target="_blank">
                   <span class="visuallyhidden">Stefan's email address</span>
                   <svg>
                     <use xlink:href="#icon-email" />
@@ -178,7 +178,7 @@
             <ul class="buildBy-socialList">
 
               <li>
-                <a href="https://github.com/marcobiedermann">
+                <a href="https://github.com/marcobiedermann" target="_blank">
                   <span class="visuallyhidden">Marco on Github</span>
                   <svg>
                     <use xlink:href="#icon-github" />
@@ -187,7 +187,7 @@
               </li>
 
               <li>
-                <a href="https://twitter.com/m412c0b">
+                <a href="https://twitter.com/m412c0b" target="_blank">
                   <span class="visuallyhidden">Marco on Twitter</span>
                   <svg>
                     <use xlink:href="#icon-twitter" />
@@ -211,7 +211,7 @@
 
                     <% _.each( contributors, function( contrib ) { %>
                       <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
-                        <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>"></a></li>
+                        <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" target="_blank"></a></li>
                       <% } %>
                     <% } ) %>
 
@@ -228,7 +228,7 @@
           <section class="section sponsor text-center">
 
             <h4 class="subline">Sponsored by</h4>
-            <p><a href="https://www.fastly.com/"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly"></a></p>
+            <p><a href="https://www.fastly.com/" target="_blank"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly"></a></p>
 
           </section>
 
