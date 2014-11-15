@@ -127,7 +127,7 @@
 
           <section class="section">
 
-            <article>
+            <article class="article">
 
               <h2>Contribution</h2>
 
@@ -138,6 +138,12 @@
               <p>We would like this project to become a shared resource maintained be the community, so if you have any ideas on how to improve it or make it better, please let us know and <a href="https://github.com/stefanjudis/perf-tooling/issues">file an issue on Github.</a></p>
 
             </article>
+
+            <div class="text-center">
+
+              <a href="https://github.com/stefanjudis/perf-tooling/issues" class="btn btn-large btn-primary">File an issue</a>
+
+            </div>
 
           </section>
 
