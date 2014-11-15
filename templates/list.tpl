@@ -24,7 +24,7 @@
         )
       %>
 
-      <main class="main">
+      <main class="main" role="main">
 
         <div class="container">
 

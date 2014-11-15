@@ -12,7 +12,7 @@
 
         <% if ( tool.bookmarklet ) { %>
 
-          <li class="tooltip" title="Bookmarklet">
+          <li class="tooltip" title="Bookmarklet" role="tooltip">
 
             <a href="<%= tool.bookmarklet %>" class="bookmarklet" target="_blank">
               <svg>
@@ -27,7 +27,7 @@
 
         <% if ( tool.chrome ) { %>
 
-          <li class="tooltip" title="Chrome extension">
+          <li class="tooltip" title="Chrome extension" role="tooltip">
 
             <a href="<%= tool.chrome %>" class="chrome" target="_blank">
               <svg>
@@ -42,7 +42,7 @@
 
         <% if ( tool.firefox ) { %>
 
-          <li class="tooltip" title="Firefox extension">
+          <li class="tooltip" title="Firefox extension role="tooltip"">
 
             <a href="<%= tool.firefox %>" class="firefox" target="_blank">
               <svg>
@@ -57,7 +57,7 @@
 
         <% if ( tool.internetExplorer ) { %>
 
-          <li class="tooltip" title="Internet Explorer extension">
+          <li class="tooltip" title="Internet Explorer role="tooltip" extension">
 
             <a href="<%= tool.internetExplorer %>" class="internet-explorer" target="_blank">
               <svg>
@@ -72,7 +72,7 @@
 
         <% if ( tool.safari ) { %>
 
-          <li class="tooltip" title="Safari extension">
+          <li class="tooltip" title="Safari extension" role="tooltip">
 
             <a href="<%= tool.safari %>" class="safari" target="_blank">
               <svg>
@@ -87,7 +87,7 @@
 
         <% if ( tool.mac ) { %>
 
-          <li class="tooltip" title="Mac Application">
+          <li class="tooltip" title="Mac Application" role="tooltip">
 
             <a href="<%= tool.mac %>" class="mac" target="_blank">
               <svg>
@@ -102,7 +102,7 @@
 
         <% if ( tool.windows ) { %>
 
-          <li class="tooltip" title="Windows Application">
+          <li class="tooltip" title="Windows role="tooltip" Application">
 
             <a href="<%= tool.windows %>" class="windows" target="_blank">
               <svg>
@@ -117,7 +117,7 @@
 
         <% if ( tool.linux ) { %>
 
-          <li class="tooltip" title="Linux Application">
+          <li class="tooltip" title="Linux Application role="tooltip"">
 
             <a href="<%= tool.linux %>" class="linux" target="_blank">
               <svg>
@@ -132,7 +132,7 @@
 
         <% if ( tool.cli ) { %>
 
-          <li class="tooltip" title="CLI">
+          <li class="tooltip" title="CLI" role="tooltip">
 
             <a href="<%= tool.cli %>" class="cli" target="_blank">
               <svg>
@@ -147,7 +147,7 @@
 
         <% if ( tool.module ) { %>
 
-          <li class="tooltip" title="Node module">
+          <li class="tooltip" title="Node module" role="tooltip">
 
             <a href="<%= tool.module %>" class="module" target="_blank">
               <svg>
@@ -162,7 +162,7 @@
 
         <% if ( tool.grunt ) { %>
 
-          <li class="tooltip" title="Grunt plugin">
+          <li class="tooltip" title="Grunt plugin" role="tooltip">
 
             <a href="<%= tool.grunt %>" class="grunt" target="_blank">
               <svg>
@@ -177,7 +177,7 @@
 
         <% if ( tool.gulp ) { %>
 
-          <li class="tooltip" title="gulp plugin">
+          <li class="tooltip" title="gulp plugin" role="tooltip">
 
             <a href="<%= tool.gulp %>" class="gulp" target="_blank">
               <svg>
@@ -192,7 +192,7 @@
 
         <% if ( tool.script ) { %>
 
-          <li class="tooltip" title="Script">
+          <li class="tooltip" title="Script" role="tooltip">
 
             <a href="<%= tool.script %>" class="script" target="_blank">
               <svg>
@@ -207,7 +207,7 @@
 
         <% if ( tool.service ) { %>
 
-          <li class="tooltip" title="Service">
+          <li class="tooltip" title="Service" role="tooltip">
 
             <a href="<%= tool.service %>" class="service" target="_blank">
               <svg>

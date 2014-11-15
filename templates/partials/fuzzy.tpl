@@ -1,4 +1,4 @@
-<div class="fuzzy">
+<div class="fuzzy" role="search">
 
   <label class="fuzzy--label" for="fuzzzzzzzzzy">
     <svg class="fuzzy--icon">
