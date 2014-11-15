@@ -199,7 +199,7 @@ function getList( type ) {
 
         entry.fuzzy = fuzzify(
           entry,
-          [ 'service', 'chrome', 'cli', 'module', 'grunt', 'gulp', 'bookmarklet' ]
+          [ 'bookmarklet', 'chrome', 'firefox', 'internetExplorer', 'safari', 'mac', 'windows', 'linux', 'cli', 'module', 'grunt', 'gulp', 'script', 'service' ]
         ).toLowerCase();
 
         list.push( entry );
