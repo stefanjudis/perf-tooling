@@ -3,7 +3,7 @@
   <div class="container">
 
     <div class="logo">
-      <a href="/" title="Link to home"><img src="<%= cdn %>/perf-tooling.svg" alt="perf-tooling logo">
+      <a href="/" title="Link to home"><img src="<%= cdn %>/perf-tooling.svg" width="64" height="43" alt="perf-tooling logo">
     </div>
 
     <nav class="nav nav-list nav-main">

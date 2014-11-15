@@ -1,10 +1,11 @@
 .resources {
   .list-unstyled;
-  margin: 0 -.25rem .5rem;
+  margin: -.25rem auto .25rem;
+  max-width: 75%;
 
   li {
     display: inline-block;
-    padding: 0 .25rem;
+    padding: .25rem;
     position: relative;
     text-align: left;
   }
@@ -68,6 +69,60 @@
 
   }
 
+  .firefox {
+    background: @color-firefox;
+
+    &:hover {
+      background: @color-firefox-hover;
+    }
+
+  }
+
+  .safari {
+    background: @color-safari;
+
+    &:hover {
+      background: @color-safari-hover;
+    }
+
+  }
+
+  .internet-explorer {
+    background: @color-internet-explorer;
+
+    &:hover {
+      background: @color-internet-explorer-hover;
+    }
+
+  }
+
+  .mac {
+    background: @color-mac;
+
+    &:hover {
+      background: @color-mac-hover;
+    }
+
+  }
+
+  .windows {
+    background: @color-windows;
+
+    &:hover {
+      background: @color-windows-hover;
+    }
+
+  }
+
+  .linux {
+    background: @color-linux;
+
+    &:hover {
+      background: @color-linux-hover;
+    }
+
+  }
+
   .module {
     background: @color-module;
 
@@ -114,6 +169,7 @@
   }
 
   @media screen and (max-width: @media-small) {
+    max-width: inherit;
 
     li {
       min-width: 12rem;
@@ -132,7 +188,7 @@
       padding: 0;
       position: absolute;
       right: 1rem;
-      top: .5rem;
+      top: .75rem;
 
       &:after {
         margin-left: .25rem;
