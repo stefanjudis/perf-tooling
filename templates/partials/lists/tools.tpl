@@ -85,6 +85,51 @@
 
         <% } %>
 
+        <% if ( tool.mac ) { %>
+
+          <li class="tooltip" title="Mac Application">
+
+            <a href="<%= tool.mac %>" class="mac">
+              <svg>
+                <use xlink:href="#icon-apple" />
+              </svg>
+              Mac
+            </a>
+
+            <span><%= ( tool.mac.safari ) ? tool.mac.safari : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.windows ) { %>
+
+          <li class="tooltip" title="Windows Application">
+
+            <a href="<%= tool.windows %>" class="windows">
+              <svg>
+                <use xlink:href="#icon-windows" />
+              </svg>
+              Windows
+            </a>
+
+            <span><%= ( tool.stars.windows ) ? tool.stars.windows : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.linux ) { %>
+
+          <li class="tooltip" title="Linux Application">
+
+            <a href="<%= tool.linux %>" class="linux">
+              <svg>
+                <use xlink:href="#icon-linux" />
+              </svg>
+              Linux
+            </a>
+
+            <span><%= ( tool.stars.linux ) ? tool.stars.linux : 'N/A' %></span>
+
+        <% } %>
+
         <% if ( tool.cli ) { %>
 
           <li class="tooltip" title="CLI">
