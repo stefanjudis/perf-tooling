@@ -3,6 +3,7 @@ var compression = require( 'compression' );
 var md5         = require( 'MD5' );
 var app         = express();
 var fs          = require( 'fs' );
+var fuzzify     = require( './lib/fuzzify' );
 var _           = require( 'lodash' );
 var minify      = require( 'html-minifier' ).minify;
 var request     = require( 'request' );
@@ -195,6 +196,11 @@ function getList( type ) {
             'utf8'
           )
         );
+
+        entry.fuzzy = fuzzify(
+          entry,
+          [ 'service', 'chrome', 'cli', 'module', 'grunt', 'gulp', 'bookmarklet' ]
+        ).toLowerCase();
 
         list.push( entry );
       } catch( e ) {

@@ -63,26 +63,12 @@
     <script>
       window.list = <%= JSON.stringify(
         _.map( list, function( entry ) {
-          var fuzzy = '';
-          var keys  = _.keys( entry );
-
-          keys.forEach( function( key ) {
-            if ( key !== 'stars' ) {
-              if ( key !== 'description' ) {
-                fuzzy += key;
-              }
-
-              fuzzy += entry[ key ];
-            }
-          } );
-
           return {
-            fuzzy : fuzzy,
+            fuzzy : entry.fuzzy,
             name  : entry.name.replace( /\s/g, '-' )
           }
         } )
-      )
-      %>;
+      ) %>;
     </script>
     <script src="<%= cdn %>/tooling.js?<%= hash.js %>" async></script>
     <script>
