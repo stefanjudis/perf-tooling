@@ -38,7 +38,7 @@
               <h1>perf-tooling.today</h1>
               <h2 class="subline">Start performance tooling today</h2>
 
-              <a class="btn btn-scroll js-scroll" href="#features">
+              <a class="btn btn-scroll js-scroll" href="#features" title="Scroll to features">
                 <span class="visuallyhidden">Scroll to features</span><svg>
                   <use xlink:href="#icon-arrow" />
                 </svg>
@@ -119,7 +119,7 @@
 
             <div class="text-center">
 
-              <a href="/tools" class="btn btn-large btn-primary">Explore Tools</a>
+              <a href="/tools" title="Link to tools" class="btn btn-large btn-primary">Explore Tools</a>
 
             </div>
 
@@ -132,16 +132,16 @@
               <h2>Contribution</h2>
 
               <p>You want to add a tool? Great!<br>
-              Either <a href="https://github.com/stefanjudis/perf-tooling/issues">create an issue</a> and we'll add it to perf-tooling.today.</p>
-              <p>Or propose a pull request and add a tool by adding a new JSON file to the <a href="https://github.com/stefanjudis/perf-tooling/tree/master/data">data folder</a>. The JSON files in these folders will be automatically rendered using a template based in the <a href="https://github.com/stefanjudis/perf-tooling/tree/master/templates">templates folder</a>. For more detailed information check the <a href="https://github.com/stefanjudis/perf-tooling/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+              Either <a href="https://github.com/stefanjudis/perf-tooling/issues" title="Link to repo issues" target="_blank">create an issue</a> and we'll add it to perf-tooling.today.</p>
+              <p>Or propose a pull request and add a tool by adding a new JSON file to the <a href="https://github.com/stefanjudis/perf-tooling/tree/master/data" title="Link to data folder" target="_blank">data folder</a>. The JSON files in these folders will be automatically rendered using a template based in the <a href="https://github.com/stefanjudis/perf-tooling/tree/master/templates" title="Link to templates folder" target="_blank">templates folder</a>. For more detailed information check the <a href="https://github.com/stefanjudis/perf-tooling/blob/master/CONTRIBUTING.md" title="Link to contributing readme" target="_blank">CONTRIBUTING.md</a>.</p>
               <p><em>By proposing a pull request you will be added to the footer contributors list automatically.</em></p>
-              <p>We would like this project to become a shared resource maintained be the community, so if you have any ideas on how to improve it or make it better, please let us know and <a href="https://github.com/stefanjudis/perf-tooling/issues">file an issue on Github.</a></p>
+              <p>We would like this project to become a shared resource maintained be the community, so if you have any ideas on how to improve it or make it better, please let us know and <a href="https://github.com/stefanjudis/perf-tooling/issues" title="Link to repo issues" target="_blank">file an issue on Github.</a></p>
 
             </article>
 
             <div class="text-center">
 
-              <a href="https://github.com/stefanjudis/perf-tooling/issues" class="btn btn-large btn-primary">File an issue</a>
+              <a href="https://github.com/stefanjudis/perf-tooling/issues" class="btn btn-large btn-primary" title="Link to repo issues" target="_blank">File an issue</a>
 
             </div>
 
@@ -154,7 +154,7 @@
             <ul class="buildBy-socialList">
 
               <li>
-                <a href="https://twitter.com/stefanjudis" target="_blank">
+                <a href="https://twitter.com/stefanjudis" title="Link to Stefan on Twitter" target="_blank">
                   <span class="visuallyhidden">Stefan on Twitter</span>
                   <svg>
                     <use xlink:href="#icon-twitter" />
@@ -163,7 +163,7 @@
               </li>
 
               <li>
-                <a href="https://github.com/stefanjudis" target="_blank">
+                <a href="https://github.com/stefanjudis" title="Link to Stefan on GitHub" target="_blank">
                   <span class="visuallyhidden">Stefan on Github</span>
                   <svg>
                     <use xlink:href="#icon-github" />
@@ -172,7 +172,7 @@
               </li>
 
               <li>
-                <a href="mailto:stefanjudis@gmail.com" target="_blank">
+                <a href="mailto:stefanjudis@gmail.com" title="Send Stafan an email" target="_blank">
                   <span class="visuallyhidden">Stefan's email address</span>
                   <svg>
                     <use xlink:href="#icon-email" />
@@ -184,7 +184,7 @@
             <ul class="buildBy-socialList">
 
               <li>
-                <a href="https://github.com/marcobiedermann" target="_blank">
+                <a href="https://github.com/marcobiedermann" title="Link to Marco on GitHub" target="_blank">
                   <span class="visuallyhidden">Marco on Github</span>
                   <svg>
                     <use xlink:href="#icon-github" />
@@ -193,7 +193,7 @@
               </li>
 
               <li>
-                <a href="https://twitter.com/m412c0b" target="_blank">
+                <a href="https://twitter.com/m412c0b" title="Link to Marco on Twitter" target="_blank">
                   <span class="visuallyhidden">Marco on Twitter</span>
                   <svg>
                     <use xlink:href="#icon-twitter" />
@@ -234,7 +234,7 @@
           <section class="section sponsor text-center">
 
             <h4 class="subline">Sponsored by</h4>
-            <p><a href="https://www.fastly.com/" target="_blank"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly" width="160" height="72"></a></p>
+            <p><a href="https://www.fastly.com/" title="Link to Fastly CDN" target="_blank"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly" width="160" height="72"></a></p>
 
           </section>
 
