@@ -19,7 +19,7 @@ var csslint       = require( 'gulp-csslint' ),
     svgstore      = require( 'gulp-svgstore' );
 
 var files = {
-  lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js' ],
+  lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js', 'lib/**/*.js' ],
   scripts : [ 'js/**/*.js' ],
   styles  : [ 'less/main.less' ],
   svg     : [ 'svg/icons/*.svg' ],
