@@ -3,7 +3,7 @@
 
   <% _.each( list , function( video ) { %>
 
-    <li id="<%= video.name.replace( /\s/g, '-' ) %>" class="post-video media">
+    <li id="<%= video.name.toLowerCase().replace( /\s/g, '-' ) %>" class="post-video media">
 
       <% if ( video.meta ) { %>
 

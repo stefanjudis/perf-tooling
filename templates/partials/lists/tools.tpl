@@ -2,7 +2,7 @@
 
   <% _.each( list , function( tool ) { %>
 
-    <li id="<%= tool.name.replace( /\s/g, '-' ) %>" class="post-tool">
+    <li id="<%= tool.name.toLowerCase().replace( /\s/g, '-' ) %>" class="post-tool">
 
       <h3><%= tool.name %></h3>
 

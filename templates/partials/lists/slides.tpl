@@ -2,7 +2,7 @@
 
   <% _.each( list , function( slide ) { %>
 
-    <li id="<%= slide.name.replace( /\s/g, '-' ) %>" class="post-slide">
+    <li id="<%= slide.name.toLowerCase().replace( /\s/g, '-' ) %>" class="post-slide">
 
       <h3 class="post-title"><a href="<%= slide.url %>" alt="Link to <%= slide.name %>" target="_blank"><%= slide.name %></a></h3>
       <h4><%= slide.date %> by <%= slide.author %></h4>
