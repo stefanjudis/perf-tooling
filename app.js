@@ -268,10 +268,10 @@ function renderPage( type, query ) {
     _.template(
       pageContent.templates[ template ],
       {
-        css          : pageContent.css,
-        cdn          : config.cdn,
-        contributors : contributors,
-        partial      : function( path, options ) {
+        css           : pageContent.css,
+        cdn           : config.cdn,
+        contributors  : contributors,
+        partial       : function( path, options ) {
           options = options || {};
 
           return _.template(
@@ -279,15 +279,21 @@ function renderPage( type, query ) {
             options
           );
         },
-        site         : config.site,
-        svg          : pageContent.svg,
-        list         : list,
-        hash         : {
+        resourceCount : {
+          tools    : data.tools.length,
+          articles : data.articles.length,
+          videos   : data.videos.length,
+          slides   : data.slides.length
+        },
+        site          : config.site,
+        svg           : pageContent.svg,
+        list          : list,
+        hash          : {
           css : pageContent.hashes.css,
           js  : pageContent.hashes.js
         },
-        query        : query,
-        type         : type
+        query         : query,
+        type          : type
       }
     ), {
       keepClosingSlash      : true,

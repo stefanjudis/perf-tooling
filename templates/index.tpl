@@ -67,7 +67,7 @@
 
                 <article class="article">
 
-                  <h3>Tools</h3>
+                  <h3><%= resourceCount.tools %> Tools</h3>
 
                   <p>A rich collection of tools available to optimize and/or monitor your website's performance including bookmarklets, browser extensions, command line tools, node modules and grunt/gulp tasks.</p>
 
@@ -78,8 +78,8 @@
               <div class="col-6">
 
                 <article class="article">
-
-                  <h3>Articles</h3>
+                <%= console.log( JSON.stringify( resourceCount ) ) %>
+                  <h3><%= resourceCount.articles %> Articles</h3>
 
                   <p>An exclusive list of articles that inform about best practices to build fast websites and to make your visitors happy.</p>
 
@@ -95,7 +95,7 @@
 
                 <article class="article">
 
-                  <h3>Videos</h3>
+                  <h3><%= resourceCount.videos %> Videos</h3>
 
                   <p>An exclusive collection of recent videos including performance specific tipps and tricks to build better and faster websites.</p>
 
@@ -107,7 +107,7 @@
 
                 <article class="article">
 
-                  <h3>Slides</h3>
+                  <h3><%= resourceCount.slides %> Slides</h3>
 
                   <p>An exclusive collection of slides of great talks covering performance related topics.</p>
 
