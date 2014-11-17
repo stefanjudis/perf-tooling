@@ -1,6 +1,6 @@
 {
   "name" : "Yellow Lab Tools",
   "service" : "http://yellowlab.tools",
-  "description" : "Online performance and quality analyzing tool. Provides an in-depth Javascript profiling and some advice on many other front-end potential problems. Based on Phantomas and Analyze-CSS.",
+  "description" : "Front-end performance and quality analyzing tool. Provides in-depth Javascript profiling and some advice on many other potential problems. Based on Phantomas and Analyze-CSS.",
   "tags" : [ "advise", "metrics", "javascript", "css" ]
 }
