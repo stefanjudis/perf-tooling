@@ -1,0 +1,6 @@
+{
+  "name" : "zBugs",
+  "service" : "http://www.zbugs.com/",
+  "description" : "Minify and Gzip compress CSS & Javascript in a single click",
+  "tags" : [ "compress", "gzip" ]
+}
