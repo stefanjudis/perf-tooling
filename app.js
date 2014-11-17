@@ -104,7 +104,7 @@ function fetchContributors() {
             console.log( e );
           }
 
-          renderPage( 'index' );
+          pages.index = renderPage( 'index' );
         }
       }
     );
@@ -127,9 +127,10 @@ function fetchGithubStars() {
           key !== 'description' &&
           key !== 'name' &&
           key !== 'type' &&
+          key !== 'tags' &&
+          key !== 'fuzzy' &&
           /github/.test( value )
         ) {
-
           var url = 'https://api.github.com/repos/' +
                       value.replace( 'https://github.com/', '' ).split( '#' )[ 0 ] +
                       '?client_id=' + config.github.id +
@@ -149,10 +150,9 @@ function fetchGithubStars() {
 
               try {
                 var stars = JSON.parse( body ).stargazers_count;
-
                 tool.stars[ key ] = stars;
 
-                renderPage( 'tools' );
+                pages.tools = renderPage( 'tools' );
               } catch( e ) {
                 console.log( error );
                 console.log( response );
@@ -186,7 +186,7 @@ function fetchVideoMeta() {
         video.meta = data.items[ 0 ].snippet;
         video.stats = data.items[ 0 ].statistics;
 
-        renderPage( 'videos' );
+        pages.videos = renderPage( 'videos' );
       } );
     } );
   } else {

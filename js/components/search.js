@@ -22,8 +22,6 @@
   function addFuzzySearch( options ) {
     options = options || {};
 
-    console.log( options );
-
     if ( options.data ) {
       if ( options.elements.input ) {
         elements.input = document.querySelector( options.elements.input );
