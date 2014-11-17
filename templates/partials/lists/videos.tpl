@@ -9,7 +9,7 @@
 
         <figure class="media-obj left">
 
-          <a href="https://www.youtube.com/watch?v=<%= video.youtubeId %>" target="_blank"><img src="<%= video.meta.thumbnails.medium.url %>" width="<%= video.meta.thumbnails.medium.width %>" height="<%= video.meta.thumbnails.medium.height %>"></a>
+          <a href="https://www.youtube.com/watch?v=<%= video.youtubeId %>" title="Link to video" target="_blank"><img src="<%= video.meta.thumbnails.medium.url %>" width="<%= video.meta.thumbnails.medium.width %>" height="<%= video.meta.thumbnails.medium.height %>"></a>
 
         </figure>
 
@@ -17,7 +17,7 @@
 
       <div class="media-body">
 
-        <h3 class="post-title"><a href="https://www.youtube.com/watch?v=<%= video.youtubeId %>" target="_blank"><%= ( video.meta ) ? video.meta.title : video.name %></a></h3>
+        <h3 class="post-title"><a href="https://www.youtube.com/watch?v=<%= video.youtubeId %>" title="Link to video" target="_blank"><%= ( video.meta ) ? video.meta.title : video.name %></a></h3>
 
 
         <% if ( video.stats ) { %>
