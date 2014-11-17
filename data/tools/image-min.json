@@ -4,6 +4,9 @@
   "module" : "https://github.com/imagemin/imagemin",
   "grunt" : "https://github.com/gruntjs/grunt-contrib-imagemin",
   "gulp" : "https://github.com/sindresorhus/gulp-imagemin",
+  "mac": "https://github.com/imagemin/imagemin-app",
+  "windows": "https://github.com/imagemin/imagemin-app",
+  "linux": "https://github.com/imagemin/imagemin-app",
   "description" : "Minify images seamlessly with Node.js.",
   "tags" : [ "images", "compress" ]
 }
