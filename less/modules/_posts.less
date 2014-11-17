@@ -2,14 +2,13 @@
   .list-unstyled;
 
   > li {
-    border-bottom: 1px solid @color-border;
     overflow: hidden;
     padding: 2rem 0;
     position: relative;
     transition: background 0.25s ease-in;
 
-    &:last-child {
-      border: none;
+    + li {
+      border-top: 1px solid @color-border;
     }
 
   }
