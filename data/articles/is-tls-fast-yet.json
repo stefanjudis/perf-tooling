@@ -1,0 +1,9 @@
+{
+  "name" : "Is TLS fast yet?",
+  "author": "Ilya Grigorik",
+  "stats": {
+    "length": 1478
+  },
+  "url": "https://github.com/igrigorik/istlsfastyet.com",
+  "tags": ["network", "server", "cdn"]
+}
