@@ -78,7 +78,7 @@
               <div class="col-6">
 
                 <article class="article">
-                <%= console.log( JSON.stringify( resourceCount ) ) %>
+
                   <h3><%= resourceCount.articles %> Articles</h3>
 
                   <p>An exclusive list of articles that inform about best practices to build fast websites and to make your visitors happy.</p>
