@@ -65,6 +65,23 @@ var pages = {
 
 
 /**
+ * Reduce I/O and read files only on start
+ */
+var pageContent = {
+  css       : fs.readFileSync( './public/main.css', 'utf8' ),
+  hashes    : {
+    css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
+    js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
+  },
+  svg       : fs.readFileSync( './public/icons.svg', 'utf8' ),
+  templates : {
+    index : fs.readFileSync( config.templates.index ),
+    list  : fs.readFileSync( config.templates.list )
+  }
+};
+
+
+/**
  * Fetch list of contributors
  */
 function fetchContributors() {
@@ -201,6 +218,7 @@ function getList( type ) {
           entry,
           [ 'bookmarklet', 'chrome', 'firefox', 'internetExplorer', 'safari', 'mac', 'windows', 'linux', 'cli', 'module', 'grunt', 'gulp', 'script', 'service' ]
         ).toLowerCase();
+        entry.hidden = false;
 
         list.push( entry );
       } catch( e ) {
@@ -215,16 +233,42 @@ function getList( type ) {
 
 
 /**
- * Render index page
+ * Render page
+ *
+ * @param  {String} type  page type
+ * @param  {String} query optional search query
+ *
+ * @return {String}       rendered page
  */
-function renderPage( type ) {
+function renderPage( type, query ) {
   var template = ( type === 'index' ) ? 'index' : 'list';
+  var list     = data[ type ] || null;
 
-  pages[ type ] = minify(
+  if ( query ) {
+    var queryValues  = query.split( ' ' );
+    var length       = queryValues.length;
+
+    list   = list.map( function( entry ) {
+      var i      = 0;
+      var match  = true;
+
+      for( ; i < length; ++i ) {
+        if ( entry.fuzzy.indexOf( queryValues[ i ].toLowerCase() ) === -1 ) {
+          match = false;
+        }
+      }
+
+      entry.hidden = !match;
+
+      return entry;
+    } );
+  }
+
+  return minify(
     _.template(
-      fs.readFileSync( config.templates[ template ] ),
+      pageContent.templates[ template ],
       {
-        css          : fs.readFileSync( './public/main.css', 'utf8' ),
+        css          : pageContent.css,
         cdn          : config.cdn,
         contributors : contributors,
         partial      : function( path, options ) {
@@ -236,12 +280,13 @@ function renderPage( type ) {
           );
         },
         site         : config.site,
-        svg          : fs.readFileSync( './public/icons.svg', 'utf8' ),
-        list         : data[ type ] || null,
+        svg          : pageContent.svg,
+        list         : list,
         hash         : {
-          css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
-          js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
+          css : pageContent.hashes.css,
+          js  : pageContent.hashes.js
         },
+        query        : query,
         type         : type
       }
     ), {
@@ -290,14 +335,18 @@ app.use( compression() );
  * Render index page
  */
 config.listPages.forEach( function( page ) {
-  renderPage( page );
+  pages[ page ] = renderPage( page );
 
   app.get( '/' + page, function( req, res ) {
-    res.send( pages[ page ] );
+    if ( req.query && req.query.q && req.query.q.length ) {
+      res.send( renderPage( page, req.query.q ) );
+    } else {
+      res.send( pages[ page ] );
+    }
   } );
 } );
 
-renderPage( 'index' );
+pages.index = renderPage( 'index' );
 
 app.get( '/', function( req, res ) {
   res.send( pages.index );

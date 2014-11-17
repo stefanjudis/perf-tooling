@@ -3,7 +3,7 @@
 
   <% _.each( list , function( video ) { %>
 
-    <li id="<%= video.name.replace( /\s/g, '-' ) %>" class="post-video media">
+    <li id="<%= video.name.replace( /\s/g, '-' ) %>" class="post-video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% if ( video.meta ) { %>
 
@@ -53,13 +53,14 @@
 
         <% if ( video.tags && video.tags.length ) { %>
 
-          <ul class="tags">
-
-            <% _.each( video.tags, function( tag ) { %>
-              <li><%= tag %>
-            <% } );%>
-
-          </ul>
+          <%=
+            partial(
+              'templates/partials/tags.tpl',
+              {
+                tags : video.tags
+              }
+            )
+          %>
 
         <% }%>
 
