@@ -29,6 +29,10 @@
         elements.input.addEventListener( 'keyup', function( event ) {
           _filterListEntries( options.data, event.target.value.toLowerCase() );
         } );
+
+        elements.input.addEventListener( 'search', function( event ) {
+          _filterListEntries( options.data, event.target.value.toLowerCase() );
+        } );
       }
 
       if ( options.elements.list ) {
