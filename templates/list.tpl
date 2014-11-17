@@ -32,8 +32,9 @@
             partial(
               'templates/partials/fuzzy.tpl',
               {
-                list : list,
-                type : type
+                list  : list,
+                query : query,
+                type  : type
               }
             )
           %>
@@ -42,12 +43,12 @@
             partial(
               'templates/partials/lists/' + type + '.tpl',
               {
-                list : list
+                list    : list,
+                partial : partial
               }
             )
           %>
-
-          <div id="noResultMsg" class="is-hidden">No results found</div>
+          <div id="noResultMsg" class="<%= ( _.filter( list, function( entry ) { return !entry.hidden; } ).length ) ? 'is-hidden' : '' %>">No results found</div>
 
         </div>
 

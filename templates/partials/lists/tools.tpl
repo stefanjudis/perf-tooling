@@ -2,7 +2,7 @@
 
   <% _.each( list , function( tool ) { %>
 
-    <li id="<%= tool.name.replace( /\s/g, '-' ) %>" class="post-tool">
+    <li id="<%= tool.name.replace( /\s/g, '-' ) %>" class="post-tool <%= ( tool.hidden === true ) ? 'is-hidden' : '' %>">
 
       <h3><%= tool.name %></h3>
 
@@ -224,13 +224,14 @@
 
       <% if ( tool.tags && tool.tags.length ) { %>
 
-        <ul class="tags">
-
-          <% _.each( tool.tags, function( tag ) { %>
-            <li><%= tag %>
-          <% } );%>
-
-        </ul>
+        <%=
+          partial(
+            'templates/partials/tags.tpl',
+            {
+              tags : tool.tags
+            }
+          )
+        %>
 
       <% }%>
 
