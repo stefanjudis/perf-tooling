@@ -7,8 +7,12 @@
     position: relative;
     transition: background 0.25s ease-in;
 
-    + li {
-      border-top: 1px solid @color-border;
+    &:not(.is-hidden) {
+
+      ~ li {
+        border-top: 1px solid @color-border;
+      }
+
     }
 
   }
