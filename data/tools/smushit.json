@@ -1,8 +1,8 @@
 {
   "name" : "Smush.it",
-  "service" : "http://www.smushit.com/ysmush.it/",
   "grunt" : "https://github.com/heldr/grunt-smushit",
   "gulp" : "https://github.com/heldr/gulp-smushit",
+  "service" : "http://www.smushit.com/ysmush.it/",
   "description" : "Smush.it uses optimization techniques specific to image format to remove unnecessary bytes from image files. It is a \"lossless\" tool, which means it optimizes the images without changing their look or visual quality. After Smush.it runs on a web page it reports how many bytes would be saved by optimizing the page's images and provides a downloadable zip file with the minimized image files.",
   "tags" : [ "images", "compress" ]
 }
