@@ -1,9 +1,9 @@
 {
   "name" : "penthouse",
-  "description" : "Penthouse is a tool generating critical path css for your web pages and web apps in order to speed up page rendering. Supply the tool with your site's full CSS, and the page you want to create the critical CSS for, and it will return all the CSS needed to render the above the fold content of the page. ",
   "cli" : "https://github.com/pocketjoso/penthouse",
-  "module" : "https://github.com/pocketjoso/penthouse",
   "grunt" : "https://github.com/fatso83/grunt-penthouse",
+  "module" : "https://github.com/pocketjoso/penthouse",
   "service" : "http://jonassebastianohlsson.com/criticalpathcssgenerator/",
+  "description" : "Penthouse is a tool generating critical path css for your web pages and web apps in order to speed up page rendering. Supply the tool with your site's full CSS, and the page you want to create the critical CSS for, and it will return all the CSS needed to render the above the fold content of the page. ",
   "tags" : [ "css", "above the fold" ]
 }

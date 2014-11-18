@@ -1,8 +1,8 @@
 {
   "name" : "CSSShrink",
-  "module" : "https://github.com/stoyan/cssshrink",
   "grunt" : "https://github.com/JohnCashmore/grunt-cssshrink",
   "gulp" : "https://github.com/torrottum/gulp-cssshrink",
+  "module" : "https://github.com/stoyan/cssshrink",
   "service": "http://cssshrink.com/",
   "description" : "CSS minifier - Because CSS is on the critical path to rendering pages. It must be small! Or else!",
   "tags" : [ "css", "minify" ]
