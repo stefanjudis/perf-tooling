@@ -22,17 +22,37 @@ var config      = {
     index : './templates/index.tpl',
     list  : './templates/list.tpl'
   },
+  vimeo   : {
+    clientId     : process.env.VIMEO_CLIENT_ID,
+    clientSecret : process.env.VIMEO_CLIENT_SECRET,
+    accessToken  : process.env.VIMEO_ACCESS_TOKEN
+  },
   youtube : {
     token : process.env.YOUTUBE_TOKEN
   }
 };
 
+/**
+ * Youtube API stuff
+ */
 var Youtube = ( require( 'youtube-api' ) );
 
 Youtube.authenticate( {
   type : 'key',
   key  : config.youtube.token
 } );
+
+
+/**
+ * Vimeo api stuff
+ */
+var Vimeo = require( 'vimeo-api' ).Vimeo;
+var vimeo = new Vimeo(
+  config.vimeo.clientId,
+  config.vimeo.clientSecret,
+  config.vimeo.accessToken
+);
+
 
 var port         = process.env.PORT || 3000;
 
@@ -171,27 +191,79 @@ function fetchGithubStars() {
  * Fetch video meta data
  */
 function fetchVideoMeta() {
-  if ( config.youtube.token ) {
-    _.each( data.videos, function( video ) {
-      Youtube.videos.list( {
-        part : 'snippet,statistics',
-        id   : video.youtubeId
-      }, function( error, data ) {
-        if ( error ) {
-          console.log( error );
+  _.each( data.videos, function( video ) {
+    if ( config.youtube.token ) {
+      if ( video.youtubeId ) {
+        Youtube.videos.list( {
+          part : 'snippet,statistics',
+          id   : video.youtubeId
+        }, function( error, data ) {
+          if ( error ) {
+            console.log( 'ERROR IN YOUTUBE API CALL' );
+            console.log( error );
 
-          return;
-        }
+            return;
+          }
 
-        video.meta = data.items[ 0 ].snippet;
-        video.stats = data.items[ 0 ].statistics;
+          video.publishedAt = new Date( data.items[ 0 ].snippet.publishedAt );
+          video.thumbnail   =  {
+            url    : data.items[ 0 ].snippet.thumbnails.medium.url,
+            width  : data.items[ 0 ].snippet.thumbnails.medium.width,
+            height : data.items[ 0 ].snippet.thumbnails.medium.height
+          };
+          video.stats       = {
+            viewCount    : data.items[ 0 ].statistics.viewCount,
+            likeCount    : data.items[ 0 ].statistics.likeCount,
+            dislikeCount : data.items[ 0 ].statistics.dislikeCount
+          };
+          video.title       = data.items[ 0 ].snippet.title;
+          video.url         = 'https://www.youtube.com/watch?v=' + video.youtubeId;
 
-        pages.videos = renderPage( 'videos' );
-      } );
-    } );
-  } else {
-    console.log( 'No Youtube token set!!!' );
-  }
+          pages.videos = renderPage( 'videos' );
+        } );
+      }
+    } else {
+      console.log( 'No Youtube token set!!!' );
+    }
+
+    if (
+      config.vimeo.clientId &&
+      config.vimeo.clientSecret &&
+      config.vimeo.accessToken
+    ) {
+      if ( video.vimeoId ) {
+        vimeo.request( {
+          path : '/videos/' + video.vimeoId
+        }, function( error, body, statusCode, headers ) {
+          if ( error ) {
+            console.log( 'ERROR IN VIMEO API CALL' );
+            console.log( error );
+            console.log( statusCode );
+
+            return;
+          }
+
+          video.duration    = body.duration / 60;
+          video.publishedAt = new Date( body.created_time );
+          video.thumbnail   = {
+            url    : body.pictures.sizes[ 2 ].link,
+            width  : body.pictures.sizes[ 2 ].width,
+            height : body.pictures.sizes[ 2 ].height
+          };
+          video.stats       = {
+            viewCount : body.stats.plays,
+            likeCount : body.metadata.connections.likes.total
+          };
+          video.title       = body.name;
+          video.url         = body.link;
+
+          pages.videos = renderPage( 'videos' );
+        } );
+      }
+    } else {
+      console.log( 'Vimeo credentials not set' );
+    }
+  } );
 }
 
 
@@ -248,7 +320,7 @@ function renderPage( type, query ) {
     var queryValues  = query.split( ' ' );
     var length       = queryValues.length;
 
-    list   = list.map( function( entry ) {
+    list   = _.cloneDeep( list ).map( function( entry ) {
       var i      = 0;
       var match  = true;
 
