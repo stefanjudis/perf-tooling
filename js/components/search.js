@@ -27,7 +27,12 @@
         elements.input = document.querySelector( options.elements.input );
 
         elements.input.addEventListener( 'keyup', function( event ) {
-          _filterListEntries( options.data, event.target.value.toLowerCase() );
+          if (
+            event.which !== 40 &&
+            event.which !== 38
+          ) {
+            _filterListEntries( options.data, event.target.value.toLowerCase() );
+          }
         } );
 
         elements.input.addEventListener( 'search', function( event ) {
