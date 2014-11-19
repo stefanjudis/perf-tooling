@@ -2,7 +2,7 @@
 
   <% _.each( list , function( article ) { %>
 
-    <li id="<%= article.name.toLowerCase().replace( /\s/g, '-' ) %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= article.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' ) %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 
       <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
       <h4><%= article.date %> by <%= article.author %></h4>

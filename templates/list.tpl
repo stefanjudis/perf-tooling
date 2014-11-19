@@ -66,7 +66,7 @@
         _.map( list, function( entry ) {
           return {
             fuzzy : entry.fuzzy,
-            name  : entry.name.replace( /\s/g, '-' )
+            name  : entry.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' )
           }
         } )
       ) %>;
