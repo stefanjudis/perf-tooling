@@ -96,7 +96,7 @@
               Mac
             </a>
 
-            <span><%= ( tool.mac.safari ) ? tool.mac.safari : 'N/A' %></span>
+            <span><%= ( tool.stars.mac ) ? tool.stars.mac : 'N/A' %></span>
 
         <% } %>
 
