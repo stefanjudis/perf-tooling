@@ -2,9 +2,9 @@
 
   <% _.each( list , function( article ) { %>
 
-    <li id="<%= article.name.toLowerCase().replace( /\s/g, '-' ) %>" class="post-article">
+    <li id="<%= article.name.toLowerCase().replace( /\s/g, '-' ) %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 
-      <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" target="_blank"><%= article.name %></a></h3>
+      <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
       <h4><%= article.date %> by <%= article.author %></h4>
 
       <% if ( article.stats ) { %>
@@ -19,13 +19,14 @@
 
       <% if ( article.tags && article.tags.length ) { %>
 
-        <ul class="tags">
-
-          <% _.each( article.tags, function( tag ) { %>
-            <li><%= tag %>
-          <% } );%>
-
-        </ul>
+        <%=
+          partial(
+            'templates/partials/tags.tpl',
+            {
+              tags : article.tags
+            }
+          )
+        %>
 
       <% }%>
 

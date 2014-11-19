@@ -1,6 +1,6 @@
 {
   "name" : "Stats",
-  "bookmarklet" : "https://github.com/mrdoob/stats.js/",
+  "bookmarklet" : "https://github.com/mrdoob/stats.js",
   "description" : "This script provides a simple info box that will help you monitor your code performance.",
   "tags" : [ "javascript", "monitoring", "fps" ]
 }

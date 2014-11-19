@@ -7,7 +7,8 @@
 'use strict';
 
 // Require the needed packages
-var csslint       = require( 'gulp-csslint' ),
+var concat        = require( 'gulp-concat' ),
+    csslint       = require( 'gulp-csslint' ),
     gulp          = require( 'gulp' ),
     jshint        = require( 'gulp-jshint' ),
     jshintStylish = require( 'jshint-stylish' ),
@@ -20,7 +21,13 @@ var csslint       = require( 'gulp-csslint' ),
 
 var files = {
   lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js', 'lib/**/*.js' ],
-  scripts : [ 'js/**/*.js' ],
+  scripts : [
+    'js/shims/**/*.js',
+    'js/helper/**/*.js',
+    'js/featureDetects/**/*.js',
+    'js/components/**/*.js',
+    'js/tooling.js'
+  ],
   styles  : [ 'less/main.less' ],
   svg     : [ 'svg/icons/*.svg' ],
   watch   : {
@@ -62,8 +69,8 @@ gulp.task( 'styles', function () {
     .pipe( less() )
     .pipe( csslint( '.csslintrc' ) )
     .pipe( csslint.reporter() )
-    .pipe( minifyCSS() )
     .pipe( prefix( 'last 1 version', '> 1%', 'ie 8', 'ie 7' ) )
+    .pipe( minifyCSS() )
     .pipe( gulp.dest( 'public/' ) );
 });
 
@@ -77,6 +84,7 @@ gulp.task( 'styles', function () {
  */
 gulp.task( 'scripts', function() {
   return gulp.src( files.scripts )
+    .pipe( concat( 'tooling.js' ) )
     .pipe( uglify() )
     .pipe( gulp.dest( 'public' ) );
 });

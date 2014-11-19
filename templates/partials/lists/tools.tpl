@@ -2,7 +2,7 @@
 
   <% _.each( list , function( tool ) { %>
 
-    <li id="<%= tool.name.toLowerCase().replace( /\s/g, '-' ) %>" class="post-tool">
+    <li id="<%= tool.name.toLowerCase().replace( /\s/g, '-' ) %>" class="post-tool <%= ( tool.hidden === true ) ? 'is-hidden' : '' %>">
 
       <h3><%= tool.name %></h3>
 
@@ -14,7 +14,7 @@
 
           <li class="tooltip" title="Bookmarklet">
 
-            <a href="<%= tool.bookmarklet %>" class="bookmarklet" target="_blank">
+            <a href="<%= tool.bookmarklet %>" title="Link to bookmarklet" class="bookmarklet" target="_blank">
               <svg>
                 <use xlink:href="#icon-bookmarklet" />
               </svg>
@@ -29,7 +29,7 @@
 
           <li class="tooltip" title="Chrome extension">
 
-            <a href="<%= tool.chrome %>" class="chrome" target="_blank">
+            <a href="<%= tool.chrome %>" title="Link to Chrome extension" class="chrome" target="_blank">
               <svg>
                 <use xlink:href="#icon-chrome" />
               </svg>
@@ -44,7 +44,7 @@
 
           <li class="tooltip" title="Firefox extension">
 
-            <a href="<%= tool.firefox %>" class="firefox" target="_blank">
+            <a href="<%= tool.firefox %>" title="Link to Firefox extension" class="firefox" target="_blank">
               <svg>
                 <use xlink:href="#icon-firefox" />
               </svg>
@@ -59,7 +59,7 @@
 
           <li class="tooltip" title="Internet Explorer extension">
 
-            <a href="<%= tool.internetExplorer %>" class="internet-explorer" target="_blank">
+            <a href="<%= tool.internetExplorer %>" title="Link to Internet Explorer Extension" class="internet-explorer" target="_blank">
               <svg>
                 <use xlink:href="#icon-internet-explorer" />
               </svg>
@@ -74,7 +74,7 @@
 
           <li class="tooltip" title="Safari extension">
 
-            <a href="<%= tool.safari %>" class="safari" target="_blank">
+            <a href="<%= tool.safari %>" title="Link to Safari extension" class="safari" target="_blank">
               <svg>
                 <use xlink:href="#icon-safari" />
               </svg>
@@ -89,7 +89,7 @@
 
           <li class="tooltip" title="Mac Application">
 
-            <a href="<%= tool.mac %>" class="mac" target="_blank">
+            <a href="<%= tool.mac %>" title="Link to Mac application" class="mac" target="_blank">
               <svg>
                 <use xlink:href="#icon-apple" />
               </svg>
@@ -104,7 +104,7 @@
 
           <li class="tooltip" title="Windows Application">
 
-            <a href="<%= tool.windows %>" class="windows" target="_blank">
+            <a href="<%= tool.windows %>" title="Link to Windows application" class="windows" target="_blank">
               <svg>
                 <use xlink:href="#icon-windows" />
               </svg>
@@ -119,7 +119,7 @@
 
           <li class="tooltip" title="Linux Application">
 
-            <a href="<%= tool.linux %>" class="linux" target="_blank">
+            <a href="<%= tool.linux %>" title="Link to Linux application" class="linux" target="_blank">
               <svg>
                 <use xlink:href="#icon-linux" />
               </svg>
@@ -134,7 +134,7 @@
 
           <li class="tooltip" title="CLI">
 
-            <a href="<%= tool.cli %>" class="cli" target="_blank">
+            <a href="<%= tool.cli %>" title="Link to CLI" class="cli" target="_blank">
               <svg>
                 <use xlink:href="#icon-terminal" />
               </svg>
@@ -149,7 +149,7 @@
 
           <li class="tooltip" title="Node module">
 
-            <a href="<%= tool.module %>" class="module" target="_blank">
+            <a href="<%= tool.module %>" title="Link to Node module" class="module" target="_blank">
               <svg>
                 <use xlink:href="#icon-module" />
               </svg>
@@ -164,7 +164,7 @@
 
           <li class="tooltip" title="Grunt plugin">
 
-            <a href="<%= tool.grunt %>" class="grunt" target="_blank">
+            <a href="<%= tool.grunt %>" title="Link to Grunt plugin" class="grunt" target="_blank">
               <svg>
                 <use xlink:href="#icon-grunt" />
               </svg>
@@ -179,7 +179,7 @@
 
           <li class="tooltip" title="gulp plugin">
 
-            <a href="<%= tool.gulp %>" class="gulp" target="_blank">
+            <a href="<%= tool.gulp %>" title="Link to Gulp plugin" class="gulp" target="_blank">
               <svg>
                 <use xlink:href="#icon-gulp" />
               </svg>
@@ -194,7 +194,7 @@
 
           <li class="tooltip" title="Script">
 
-            <a href="<%= tool.script %>" class="script" target="_blank">
+            <a href="<%= tool.script %>" title="Link to Scrip" class="script" target="_blank">
               <svg>
                 <use xlink:href="#icon-javascript" />
               </svg>
@@ -209,7 +209,7 @@
 
           <li class="tooltip" title="Service">
 
-            <a href="<%= tool.service %>" class="service" target="_blank">
+            <a href="<%= tool.service %>" title="Link to Service" class="service" target="_blank">
               <svg>
                 <use xlink:href="#icon-globe" />
               </svg>
@@ -224,13 +224,14 @@
 
       <% if ( tool.tags && tool.tags.length ) { %>
 
-        <ul class="tags">
-
-          <% _.each( tool.tags, function( tag ) { %>
-            <li><%= tag %>
-          <% } );%>
-
-        </ul>
+        <%=
+          partial(
+            'templates/partials/tags.tpl',
+            {
+              tags : tool.tags
+            }
+          )
+        %>
 
       <% }%>
 

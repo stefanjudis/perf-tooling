@@ -1,8 +1,8 @@
 {
   "name" : "CSSCSS",
-  "module" : "https://github.com/zmoazeni/csscss",
   "grunt" : "https://github.com/peterkeating/grunt-csscss",
   "gulp" : "https://github.com/morishitter/gulp-csscss",
+  "module" : "https://github.com/zmoazeni/csscss",
   "description" : "csscss will parse any CSS files you give it and let you know which rulesets have duplicated declarations.",
   "tags" : [ "css", "duplication" ]
 }
