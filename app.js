@@ -248,7 +248,7 @@ function renderPage( type, query ) {
     var queryValues  = query.split( ' ' );
     var length       = queryValues.length;
 
-    list   = list.map( function( entry ) {
+    list   = _.cloneDeep( list ).map( function( entry ) {
       var i      = 0;
       var match  = true;
 
