@@ -107,7 +107,7 @@
 
                 <article class="article">
 
-                  <h3><%= resourceCount.slides %> Slides</h3>
+                  <h3><%= resourceCount.slides %> Slidedecks</h3>
 
                   <p>An exclusive collection of slides of great talks covering performance related topics.</p>
 
