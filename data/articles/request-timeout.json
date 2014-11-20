@@ -1,0 +1,9 @@
+{
+  "name" : "Request Timeout",
+  "author": "Steve Souders",
+  "stats": {
+    "length": 361
+  },
+  "url": "http://www.stevesouders.com/blog/2014/11/14/request-timeout/",
+  "tags": [ "single point of failure" ]
+}
