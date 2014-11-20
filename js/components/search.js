@@ -86,7 +86,9 @@
    * @param  {String} searchTearm searchTerm
    */
   function _filterListEntries( list, searchTerm ) {
-    history.pushState( null, null, '?q=' + searchTerm );
+    window.setTimeout( function() {
+      history.replaceState( null, null, '?q=' + searchTerm );
+    }, 100 );
 
     var count       = 0;
     var searchTerms = searchTerm.split( ' ' );
