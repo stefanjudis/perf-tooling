@@ -4,6 +4,7 @@
     partial(
       'templates/partials/head.tpl',
       {
+        cdn  : cdn,
         css  : css,
         site : site,
         svg  : svg
