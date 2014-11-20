@@ -235,8 +235,12 @@
 
           <section class="section text-center">
 
-            <p><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fperf-tooling.today&text=@perf_tooling%20A%20resource%20collection%20to%20improve%20your%20workflow%20and%20to%20deliver%20better%20and%20faster%20websites%20%23perfmatters" target="_blank" class="btn btn-primary btn-large">Spread on Twitter</a></p>
-            <p><a href="https://twitter.com/perf_tooling" title="perf-tooling on Twitter" target="_blank">@perf_tooling</a></p>
+            <article class="article">
+
+              <p><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fperf-tooling.today&text=@perf_tooling%20A%20resource%20collection%20to%20improve%20your%20workflow%20and%20to%20deliver%20better%20and%20faster%20websites%20%23perfmatters" target="_blank" class="btn btn-primary btn-large">Spread on Twitter</a></p>
+              <p class="social-twitter"><a href="https://twitter.com/perf_tooling" title="perf-tooling on Twitter" target="_blank">Follow <strong>@perf_tooling</strong> on Twitter</a></p>
+
+            </article>
 
           </section>
 
