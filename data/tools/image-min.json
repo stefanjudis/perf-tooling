@@ -8,5 +8,5 @@
   "module" : "https://github.com/imagemin/imagemin",
   "windows": "https://github.com/imagemin/imagemin-app",
   "description" : "Minify images seamlessly with Node.js.",
-  "tags" : [ "images", "compress" ]
+  "tags" : [ "images", "compression" ]
 }

@@ -5,5 +5,5 @@
   "gulp" : "https://github.com/terinjokes/gulp-uglify",
   "module" : "https://github.com/mishoo/UglifyJS2",
   "description" : "UglifyJS is a JavaScript parser, minifier, compressor or beautifier toolkit.",
-  "tags" : [ "javascript", "minify" ]
+  "tags" : [ "javascript", "minification" ]
 }
