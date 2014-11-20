@@ -1,0 +1,9 @@
+{
+  "name" : "Zopfli",
+  "cli" : "https://github.com/pierreinglebert/node-zopfli",
+  "grunt" : "https://github.com/mathiasbynens/grunt-zopfli",
+  "gulp" : "https://github.com/romeovs/gulp-zopfli",
+  "module" : "https://github.com/Automattic/juice",
+  "description" : "Bindings for Zopfli compressing lib. Compress gzip files 5% better than gzip. It is considerably slower than gzip (~100x) so you may want to use it only for static content and cached resources.",
+  "tags" : [ "images", "compression" ]
+}
