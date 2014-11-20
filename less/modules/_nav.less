@@ -19,7 +19,7 @@
   }
 
   .is-active {
-    border-bottom: 3px solid @color-primary;
+
 
     > span {
       color: @color-primary;
@@ -39,37 +39,48 @@
 }
 
 .nav-list {
+  font-weight: bold;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
 
   ul {
-    display: table;
     float: left;
     text-align: center;
     width: 100%;
   }
 
-  li {
-    display: table-cell;
-  }
+  @media (min-width: (@media-tiny + 1)) {
 
-  @media screen and (max-width: @media-tiny) {
+    ul {
+       display: table;
+    }
 
     li {
-      display: block;
+      display: table-cell;
     }
 
     .is-active {
-      border: 0;
+      border-bottom: 3px solid @color-primary;
     }
 
   }
+
+  // @media screen and (max-width: @media-tiny) {
+
+  //   .is-active {
+  //     border: 0;
+  //   }
+
+  // }
 
 }
 
 .nav-main {
-  font-weight: bold;
-  overflow: hidden;
-  text-align: center;
-  text-transform: uppercase;
+  // font-weight: bold;
+  // overflow: hidden;
+  // text-align: center;
+  // text-transform: uppercase;
 
   a,
   span {
