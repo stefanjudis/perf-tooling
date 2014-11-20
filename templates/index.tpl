@@ -54,7 +54,7 @@
             <div class="text-center">
 
               <h2>Automize. Monitore. Improve</h2>
-              <h3 class="subline">Perf tooling is a collection of powerful resources which will help you to improve your workflow and to delive better and faster websites.</h3>
+              <h3 class="subline">Perf tooling is a collection of powerful resources which will help you to improve your workflow and to deliver better and faster websites.</h3>
 
             </div>
 
@@ -142,7 +142,8 @@
 
             <div class="text-center">
 
-              <a href="https://github.com/stefanjudis/perf-tooling/issues" class="btn btn-large btn-primary" title="Link to repo issues" target="_blank">File an issue</a>
+              <a href="https://github.com/stefanjudis/perf-tooling/issues" class="btn btn-primary" title="Link to repo issues" target="_blank">Submit a resource</a>
+              <a href="https://github.com/stefanjudis/perf-tooling/blob/master/CONTRIBUTING.md" class="btn btn-primary" title="Link to contribute readme" target="_blank">Contribute to project</a>
 
             </div>
 
@@ -229,6 +230,12 @@
               </section>
 
             <% } %>
+
+          </section>
+
+          <section class="section text-center">
+
+            <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fperf-tooling.today&text=A%20collection%20of%20powerful%20resources%20to%20improve%20your%20workflow%20and%20to%20deliver%20better%20and%20faster%20websites%20%23perfmatters" target="_blank" class="btn btn-primary btn-large">Spread on Twitter</a>
 
           </section>
 
