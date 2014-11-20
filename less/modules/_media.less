@@ -2,43 +2,36 @@
   .clearfix;
 }
 
-.media-obj {
+.media-obj-left,
+.media-obj-right {
+  margin-bottom: 1rem;
 
-  &.left,
-  &.right {
+  @media (min-width: (@media-small + 1)) {
     max-width: 38%;
-    width: auto;
-
-    @media screen and (max-width: @media-tiny) {
-      max-width: inherit;
-    }
-
   }
 
-  &.left {
+}
+
+.media-obj-left {
+
+  @media (min-width: (@media-small + 1)) {
     margin: 0 1rem 1rem 0;
-
-    @media screen and (max-width: @media-tiny) {
-      float: none;
-      margin-right: 0;
-    }
-
+    float: left;
   }
 
-  &.right {
+}
+
+.media-obj-right {
+
+  @media (min-width: (@media-small + 1)) {
     margin: 0 0 1rem 1rem;
-
-    @media screen and (max-width: @media-tiny) {
-      float: none;
-      margin-right: 0;
-    }
-
+    float: right;
   }
 
-  &.above {
-    margin-bottom: 1rem;
-  }
+}
 
+.media-obj-above {
+  margin-bottom: 1rem;
 }
 
 .media-body {

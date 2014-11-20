@@ -1,59 +1,52 @@
-@media (min-width: @max-width) {
+@media (min-width: (@media-small + 1)) {
+
   .tooltip {
     position: relative;
     text-decoration: none;
 
     &:before, &:after {
-      /* At time of this creation, only Fx4 doing pseduo transitions */
-      -webkit-transition: all 0.4s ease;
-      -moz-transition   : all 0.4s ease;
-      transition        : all 0.4s ease;
-
-      opacity : 0;
-
-      pointer-events : none;
+      opacity: 0;
+      pointer-events: none;
+      transition: all .4s ease;
     }
 
     &:before {
-      position: absolute;
-      bottom: 120%;
-
-      content: '';
-
-      border: 5px solid @color;
-      border-right: 5px solid transparent;
-      border-bottom: 5px solid transparent;
-
-      margin-bottom: -10px;
-
-      left: 50%;
-
-      z-index: 2;
-
       background: none;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid @color;
+      border-right: 5px solid transparent;
+      border-top: 5px solid @color;
+      bottom: 120%;
+      content: '';
+      left: 50%;
+      margin-bottom: -10px;
+      position: absolute;
+      z-index: 2;
     }
 
     &:after {
-      content: attr(title);
-      position: absolute;
-      bottom: 120%;
-      left: 50%;
       background: @color;
-      padding: 5px 15px;
+      border-radius: 0.75rem 0.75rem 0.75rem 0;
+      bottom: 120%;
       color: @color-bg;
-
-      border-radius        : 0.75rem 0.75rem 0.75rem 0;
+      content: attr(title);
+      left: 50%;
+      padding: 5px 15px;
+      position: absolute;
       white-space: nowrap;
-
       z-index : 2;
     }
 
-    &:hover:before, &:hover:after {
+    &:hover:before,
+    &:hover:after {
       bottom: 110%;
     }
 
-    &:hover:after, &:hover:before {
+    &:hover:after,
+    &:hover:before {
       opacity: 1;
     }
+
   }
+
 }
