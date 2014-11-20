@@ -35,7 +35,18 @@
               {
                 list  : list,
                 query : query,
-                type  : type
+                type  : type,
+                tags  : _.reduce( list, function( tags, entry ) {
+                  if ( entry.tags && entry.tags.length ) {
+                    for ( var i = 0; i < entry.tags.length; ++i ) {
+                      if ( _.indexOf( tags, entry.tags[ i ] ) === -1 ) {
+                        tags.push( entry.tags[ i ] );
+                      }
+                    }
+                  }
+
+                  return tags;
+                }, [] ).sort()
               }
             )
           %>
