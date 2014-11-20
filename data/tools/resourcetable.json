@@ -1,6 +1,0 @@
-{
-  "name" : "resourceTable",
-  "bookmarklet" : "https://github.com/nurun/performance-bookmarklet",
-  "description" : "Bookmarklet to analyze resources from the Resource Timing API by type, domain, load times etc",
-  "tags" : [ "metrics", "timings" ]
-}

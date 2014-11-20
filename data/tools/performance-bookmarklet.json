@@ -1,0 +1,6 @@
+{
+  "name" : "performance-bookmarklet",
+  "bookmarklet" : "https://github.com/nurun/performance-bookmarklet",
+  "description" : "Bookmarklet to analyze the current page through on the Resource Timing API , Navigation Timing API and User-Timing - requests by type, domain, load times, marks and more. Sort of a light live WebPageTest.",
+  "tags" : [ "metrics", "timings" ]
+}
