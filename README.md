@@ -2,7 +2,7 @@
 
 ## Perf Tooling
 
-[![Dependency Status](https://david-dm.org/stefanjudis/perf-tooling.svg)](https://david-dm.org/stefanjudis/perf-tooling) [![devDependency Status](https://david-dm.org/stefanjudis/perf-tooling/dev-status.svg)](https://david-dm.org/stefanjudis/perf-tooling#info=devDependencies)
+[![Dependency Status](https://david-dm.org/stefanjudis/perf-tooling.svg)](https://david-dm.org/stefanjudis/perf-tooling)
 
 Welcome to Perf Tooling.
 
