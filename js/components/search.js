@@ -14,6 +14,8 @@
     noResultsMsg : document.getElementById( 'noResultMsg' )
   };
 
+  var timeout;
+
 
   /**
    * Add event handlers to watch
@@ -27,6 +29,8 @@
         elements.input = document.querySelector( options.elements.input );
 
         elements.input.addEventListener( 'keyup', function( event ) {
+          clearTimeout( timeout );
+
           if (
             event.which !== 40 &&
             event.which !== 38
@@ -86,9 +90,9 @@
    * @param  {String} searchTearm searchTerm
    */
   function _filterListEntries( list, searchTerm ) {
-    window.setTimeout( function() {
+    timeout = window.setTimeout( function() {
       history.replaceState( null, null, '?q=' + searchTerm );
-    }, 100 );
+    }, 2000 );
 
     var count       = 0;
     var searchTerms = searchTerm.split( ' ' );
