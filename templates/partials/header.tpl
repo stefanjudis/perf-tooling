@@ -6,7 +6,7 @@
       <a href="/" title="Link to home"><img src="<%= cdn %>/perf-tooling.svg" width="64" height="43" alt="perf-tooling logo">
     </div>
 
-    <nav class="nav nav-list nav-main">
+    <nav class="nav-main">
 
       <button class="btn-nav">
         <span class="visuallyhidden">Menu</span>

@@ -2,6 +2,8 @@
 
 ## Perf Tooling
 
+[![Dependency Status](https://david-dm.org/stefanjudis/perf-tooling.svg)](https://david-dm.org/stefanjudis/perf-tooling)
+
 Welcome to Perf Tooling.
 
 Perf Tooling is a shared resource to keep track of new and existent performance tools.
@@ -31,5 +33,5 @@ After that you can start the server with:
 node app.js
 ```
 
-It will be available at `localhost:3000`. 
+It will be available at `localhost:3000`.
 Be aware of the fact, that the fetching of Github stars may not work, because Github is limiting the number of requests that are allowed without any authorization.

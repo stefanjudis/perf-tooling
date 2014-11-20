@@ -1,206 +1,208 @@
 .resources {
   .list-unstyled;
   margin: -.25rem auto .25rem;
-  max-width: 75%;
 
   li {
     display: inline-block;
+    min-width: 12rem;
     padding: .25rem;
     position: relative;
     text-align: left;
+    width: (100% / 2);
+  }
+
+  a {
+    border-radius: 2rem;
+    color: @color-bg;
+    display: block;
+    margin-bottom: .5rem;
+    padding: .5rem 1rem;
   }
 
   span {
+    color: @color-bg;
     display: block;
-    padding-top: 1.5rem;
-    position: relative;
+    position: absolute;
+    right: 1rem;
     text-align: center;
+    top: .75rem;
 
     &:after {
       content: '☆';
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
+      margin-left: .25rem;
     }
 
   }
 
-  a {
-    color: @color-bg;
-    border-radius: 50%;
-    display: block;
-    height: 3rem;
-    margin-bottom: .5rem;
-    padding: .5rem;
-    width: 3rem;
-  }
-
   svg {
+    display: none;
     fill: #fff;
     height: 2rem;
     width: 2rem;
   }
 
-  .service {
-    background: @color-service;
-
-    &:hover {
-      background: @color-service-hover;
-    }
-
-  }
-
-  .cli {
-    background: @color-cli;
-
-    &:hover {
-      background: @color-cli-hover;
-    }
-
-  }
-
-  .chrome {
-    background: @color-chrome;
-
-    &:hover {
-      background: @color-chrome-hover;
-    }
-
-  }
-
-  .firefox {
-    background: @color-firefox;
-
-    &:hover {
-      background: @color-firefox-hover;
-    }
-
-  }
-
-  .safari {
-    background: @color-safari;
-
-    &:hover {
-      background: @color-safari-hover;
-    }
-
-  }
-
-  .internet-explorer {
-    background: @color-internet-explorer;
-
-    &:hover {
-      background: @color-internet-explorer-hover;
-    }
-
-  }
-
-  .mac {
-    background: @color-mac;
-
-    &:hover {
-      background: @color-mac-hover;
-    }
-
-  }
-
-  .windows {
-    background: @color-windows;
-
-    &:hover {
-      background: @color-windows-hover;
-    }
-
-  }
-
-  .linux {
-    background: @color-linux;
-
-    &:hover {
-      background: @color-linux-hover;
-    }
-
-  }
-
-  .module {
-    background: @color-module;
-
-    &:hover {
-      background: @color-module-hover;
-    }
-
-  }
-
-  .grunt {
-    background: @color-grunt;
-
-    &:hover {
-      background: @color-grunt-hover;
-    }
-
-  }
-
-  .gulp {
-    background: @color-gulp;
-
-    &:hover {
-      background: @color-gulp-hover;
-    }
-
-  }
-
-  .bookmarklet {
-    background: @color-bookmarklet;
-
-    &:hover {
-      background: @color-bookmarklet-hover;
-    }
-
-  }
-
-  .script {
-    background: @color-script;
-
-    &:hover {
-      background: @color-script-hover;
-    }
-
-  }
-
-  @media screen and (max-width: @media-small) {
-    max-width: inherit;
+  @media (min-width: (@media-small + 1)) {
+    max-width: 75%;
 
     li {
-      min-width: 12rem;
-      width: (100% / 2);
-    }
-
-    a {
-      border-radius: 2rem;
-      height: auto;
-      padding: .5rem 1rem;
+      min-width: initial;
       width: auto;
     }
 
+    a {
+      border-radius: 50%;
+      height: 3rem;
+      padding: .5rem;
+      width: 3rem;
+    }
+
     span {
-      color: @color-bg;
-      padding: 0;
-      position: absolute;
-      right: 1rem;
-      top: .75rem;
+      color: @color;
+      left: 0;
+      padding-top: 1.5rem;
+      position: relative;
+      top: 0;
 
       &:after {
-        margin-left: .25rem;
-        position: static;
+        left: 0;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
       }
 
     }
 
     svg {
-      display: none;
+      display: inline-block;
     }
 
+  }
+
+}
+
+.resource-service {
+  background: @color-service;
+
+  &:hover {
+    background: @color-service-hover;
+  }
+
+}
+
+.resource-cli {
+  background: @color-cli;
+
+  &:hover {
+    background: @color-cli-hover;
+  }
+
+}
+
+.resource-chrome {
+  background: @color-chrome;
+
+  &:hover {
+    background: @color-chrome-hover;
+  }
+
+}
+
+.resource-firefox {
+  background: @color-firefox;
+
+  &:hover {
+    background: @color-firefox-hover;
+  }
+
+}
+
+.resource-safari {
+  background: @color-safari;
+
+  &:hover {
+    background: @color-safari-hover;
+  }
+
+}
+
+.resource-internet-explorer {
+  background: @color-internet-explorer;
+
+  &:hover {
+    background: @color-internet-explorer-hover;
+  }
+
+}
+
+.resource-mac {
+  background: @color-mac;
+
+  &:hover {
+    background: @color-mac-hover;
+  }
+
+}
+
+.resource-windows {
+  background: @color-windows;
+
+  &:hover {
+    background: @color-windows-hover;
+  }
+
+}
+
+.resource-linux {
+  background: @color-linux;
+
+  &:hover {
+    background: @color-linux-hover;
+  }
+
+}
+
+.resource-module {
+  background: @color-module;
+
+  &:hover {
+    background: @color-module-hover;
+  }
+
+}
+
+.resource-grunt {
+  background: @color-grunt;
+
+  &:hover {
+    background: @color-grunt-hover;
+  }
+
+}
+
+.resource-gulp {
+  background: @color-gulp;
+
+  &:hover {
+    background: @color-gulp-hover;
+  }
+
+}
+
+.resource-bookmarklet {
+  background: @color-bookmarklet;
+
+  &:hover {
+    background: @color-bookmarklet-hover;
+  }
+
+}
+
+.resource-script {
+  background: @color-script;
+
+  &:hover {
+    background: @color-script-hover;
   }
 
 }

@@ -23,21 +23,24 @@
 
 }
 
-.crafted {
-  float: left;
-}
-
+.crafted,
 .copyright {
-  float: right;
+  text-align: center;
 }
 
-
-@media screen and (max-width: @media-small) {
+@media (min-width: (@media-small + 1)) {
 
   .crafted,
   .copyright {
-    float: none;
-    text-align: center;
+    text-align: left;
+  }
+
+  .crafted {
+    float: left;
+  }
+
+  .copyright {
+    float: right;
   }
 
 }
