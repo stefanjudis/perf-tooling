@@ -5,5 +5,5 @@
   "module" : "https://github.com/stoyan/cssshrink",
   "service": "http://cssshrink.com/",
   "description" : "CSS minifier - Because CSS is on the critical path to rendering pages. It must be small! Or else!",
-  "tags" : [ "css", "minify" ]
+  "tags" : [ "css", "minification" ]
 }

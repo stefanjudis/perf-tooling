@@ -5,5 +5,5 @@
   "gulp" : "https://github.com/chilijung/gulp-cssmin",
   "module" : "https://github.com/jakubpawlowicz/clean-css",
   "description" : "Clean-css is a fast and efficient Node.js library for minifying CSS files. According to tests it is one of the best available.",
-  "tags" : [ "css", "minify" ]
+  "tags" : [ "css", "minification" ]
 }

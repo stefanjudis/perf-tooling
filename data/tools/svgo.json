@@ -4,5 +4,5 @@
   "grunt" : "https://github.com/sindresorhus/grunt-svgmin",
   "gulp" : "https://github.com/ben-eb/gulp-svgmin",
   "description" : "SVGO is a Nodejs-based tool for optimizing SVG vector graphics files.",
-  "tags" : [ "svg", "minify" ]
+  "tags" : [ "svg", "minification" ]
 }

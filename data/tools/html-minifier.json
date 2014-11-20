@@ -4,5 +4,5 @@
   "gulp" : "https://github.com/jonschlinkert/gulp-htmlmin",
   "module" : "https://github.com/kangax/html-minifier",
   "description" : "HTMLMinifier is a highly configurable, well-tested, Javascript-based HTML minifier, with lint-like capabilities.",
-  "tags" : [ "html", "minify" ]
+  "tags" : [ "html", "minification" ]
 }

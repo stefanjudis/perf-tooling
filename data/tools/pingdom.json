@@ -2,5 +2,5 @@
   "name" : "Pingdom",
   "service" : "https://www.pingdom.com/",
   "description" : "Everything you need to monitor your website. With Pingdom’s website monitoring you’ll be the first to know when your website is down, and you’ll stay on top of your website’s performance. Monitoring your websites and servers is a smart decision.",
-  "tags" : [ "monitor", "pagespeed", "speedindex" ]
+  "tags" : [ "monitoring", "pagespeed", "speedindex" ]
 }
