@@ -1,0 +1,10 @@
+{
+  "name": "CSS and the critical path",
+  "author": "Patrick Hamann",
+  "date": "28. September 2013",
+  "stats": {
+    "length": 61
+  },
+  "tags": ["css", "critical", "render-path"],
+  "url" : "https://speakerdeck.com/patrickhamann/css-and-the-critical-path"
+}
