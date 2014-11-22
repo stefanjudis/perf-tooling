@@ -3,8 +3,8 @@
   "author": "Ben Frain",
   "date": "2014-03-26",
   "stats": {
-    "length": 1264
+    "length": 1250
   },
-  "url": "http://bdadam.com/blog/loading-webfonts-with-high-performance.html",
-  "tags": [ "webfonts", "localStorage", "loading" ]
+  "url": "http://benfrain.com/css-performance-test-flexbox-v-css-table-fight",
+  "tags": [ "flexbox", "table", "css" ]
 }
