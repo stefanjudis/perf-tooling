@@ -1,6 +1,6 @@
 {
   "name" : "Pngmini - ImageAlpha",
-  "mac" : "http://pngmini.com/",
+  "mac" : "https://github.com/pornel/ImageAlpha",
   "description" : "ImageAlpha greatly reduces file sizes of 24-bit PNG files (including alpha transparency) by applying lossy compression and conversion to a more efficient PNG8+alpha format. Such images are compatible with iOS, all browsers, and even degrade well in IE6.",
   "tags" : [ "images", "compression" ]
 }
