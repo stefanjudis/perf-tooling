@@ -1,0 +1,10 @@
+{
+  "name": "HTTP/2 all the things",
+  "author": "Ilya Grigorik",
+  "date": "15. November 2014",
+  "stats": {
+    "length": 47
+  },
+  "tags": ["http2", "network"],
+  "url" : "https://docs.google.com/presentation/d/1l9c9ROjLTD8clOL0yFufAOMbxNC0D-19zCiXMgqtY-M/present?slide=id.p19"
+}
