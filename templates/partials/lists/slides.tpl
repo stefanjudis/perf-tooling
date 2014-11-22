@@ -1,6 +1,10 @@
 <ui class="posts">
-
-  <% _.each( list , function( slide ) { %>
+  <%
+    var orderedList = _.sortBy( list, function( article ) {
+      return article.date || -1;
+    } ).reverse();
+  %>
+  <% _.each( orderedList , function( slide ) { %>
 
     <li id="<%= slide.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' ) %>" class="post-slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">
 
