@@ -1,0 +1,8 @@
+{
+  "name" : "JPEGmini",
+  "cli" : "https://github.com/sydneystockholm/jpegmini",
+  "mac" : "http://www.jpegmini.com/app",
+  "windows" : "http://www.jpegmini.com/app/windows",
+  "description" : "With JPEGmini you can reduce the file size of your photos by up to 5x, while keeping their original quality and JPEG format",
+  "tags" : [ "images", "compression", "lossless", "app" ]
+}
