@@ -234,7 +234,7 @@ function fetchVideoMeta() {
       if ( video.vimeoId ) {
         vimeo.request( {
           path : '/videos/' + video.vimeoId
-        }, function( error, body, statusCode, headers ) {
+        }, function( error, body, statusCode ) {
           if ( error ) {
             console.log( 'ERROR IN VIMEO API CALL' );
             console.log( error );
