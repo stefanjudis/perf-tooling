@@ -16,6 +16,8 @@
 
   var timeout;
 
+  var currentSearchValue = '';
+
 
   /**
    * Add event handlers to watch
@@ -28,20 +30,20 @@
       if ( options.elements.input ) {
         elements.input = document.querySelector( options.elements.input );
 
-        elements.input.addEventListener( 'keyup', function( event ) {
-          clearTimeout( timeout );
+        // there is no event for autocomplete :(
+        // -> so we have to go the super hacky way
+        // to make it work. :(
+        setInterval( function() {
+          if ( elements.input.value !== currentSearchValue ) {
+            var value = elements.input.value.toLowerCase();
 
-          if (
-            event.which !== 40 &&
-            event.which !== 38
-          ) {
-            _filterListEntries( options.data, event.target.value.toLowerCase() );
+            currentSearchValue = value;
+
+            clearTimeout( timeout );
+
+            _filterListEntries( options.data, currentSearchValue );
           }
-        } );
-
-        elements.input.addEventListener( 'search', function( event ) {
-          _filterListEntries( options.data, event.target.value.toLowerCase() );
-        } );
+        }, 200 );
       }
 
       if ( options.elements.list ) {
@@ -79,7 +81,6 @@
         } );
       }
     }
-
   }
 
 
