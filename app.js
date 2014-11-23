@@ -15,6 +15,22 @@ var config      = {
     id    : process.env.GITHUB_ID,
     token : process.env.GITHUB_TOKEN
   },
+  platforms : [
+    'bookmarklet',
+    'chrome',
+    'firefox',
+    'internetExplorer',
+    'safari',
+    'mac',
+    'windows',
+    'linux',
+    'cli',
+    'module',
+    'grunt',
+    'gulp',
+    'script',
+    'service'
+  ],
   site      : {
     name : 'Performance tooling today'
   },
@@ -288,7 +304,7 @@ function getList( type ) {
 
         entry.fuzzy = fuzzify(
           entry,
-          [ 'bookmarklet', 'chrome', 'firefox', 'internetExplorer', 'safari', 'mac', 'windows', 'linux', 'cli', 'module', 'grunt', 'gulp', 'script', 'service' ]
+          config.platforms
         ).toLowerCase();
         entry.hidden = false;
 
@@ -351,6 +367,7 @@ function renderPage( type, query ) {
             options
           );
         },
+        platforms     : config.platforms,
         resourceCount : {
           tools    : data.tools.length,
           articles : data.articles.length,
