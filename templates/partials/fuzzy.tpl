@@ -2,11 +2,25 @@
 
   <datalist id="listElements">
 
+  <% if ( platforms.length ) { %>
+
+    <% _.each( platforms, function( platform ) { %>
+
+      <option value="<%= platform %>"><%= platform %></option>
+
+    <% } ); %>
+
+  <% } %>
+
+  <% if ( tags.length ) { %>
+
     <% _.each( tags, function( tag ) { %>
 
       <option value="<%= tag %>"><%= tag %></option>
 
     <% } ); %>
+
+  <% } %>
 
   </datalist>
 
