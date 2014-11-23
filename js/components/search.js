@@ -30,10 +30,6 @@
       if ( options.elements.input ) {
         elements.input = document.querySelector( options.elements.input );
 
-        elements.input.addEventListener( 'keyup', function( event ) {
-          clearTimeout( timeout );
-        } );
-
         // there is no event for autocomplete :(
         // -> so we have to go the super hacky way
         // to make it work. :(
