@@ -1,0 +1,6 @@
+{
+  "name" : "tiny jpg",
+  "service" : "https://tinyjpg.com/",
+  "description" : "Smart JPEG compression - Compress JPEG files with a perfect balance in quality and file size.",
+  "tags" : [ "images", "compression" ]
+}
