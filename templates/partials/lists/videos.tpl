@@ -3,7 +3,7 @@
 
   <% _.each( list , function( video ) { %>
 
-    <li id="<%= video.name.toLowerCase().replace( /[\s\.:'"#\(\)|]/g, '-' ) %>" class="post-video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% if ( video.thumbnail ) { %>
 
