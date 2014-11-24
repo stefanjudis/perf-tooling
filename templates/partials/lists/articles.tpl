@@ -6,27 +6,23 @@
   %>
   <% _.each( orderedList , function( article ) { %>
 
-    <li id="<%= article.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' ) %>" class="post-article media <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= article.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' ) %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% var twitterHandle = ( article.social && article.social.twitter ) ? article.social.twitter.replace( '@', '' ) : false; %>
 
       <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
-      <div class="media-obj-left">
-
-        <img src="<%= people[ twitterHandle ].image %>" title="Image of <%= article.author %>" class="post-author-img">
-
-      </div>
+        <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= article.author %>" target="_blank"><img src="<%= people[ twitterHandle ].image %>" title="Image of <%= article.author %>" class="post-author-img"></a>
 
       <% } %>
 
-      <div class="media-body">
+      <div class="post-content">
 
         <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
-          <h4><%= article.date %> by <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= article.author %>"><%= article.author %></a> (<%= people[ twitterHandle ].followerCount %> followers)</h4>
+          <h4><%= article.date %> by <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= article.author %>" target="_blank"><%= article.author %></a> (<%= people[ twitterHandle ].followerCount %> followers)</h4>
 
         <% } else { %>
 

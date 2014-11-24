@@ -5,6 +5,8 @@
 
     <li id="<%= video.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' ) %>" class="post-video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
 
+      <% var twitterHandle = ( video.social && video.social.twitter ) ? video.social.twitter.replace( '@', '' ) : false; %>
+
       <% if ( video.thumbnail ) { %>
 
         <figure class="media-obj-left">
@@ -19,6 +21,15 @@
 
         <h3 class="post-title"><a href="<%= video.url %>" title="Link to video" target="_blank"><%= video.title || video.name %></a></h3>
 
+        <% if ( twitterHandle && people[ twitterHandle ] ) { %>
+
+          <h4><%= video.date %> by <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= video.author %>" target="_blank"><%= video.author %></a> (<%= people[ twitterHandle ].followerCount %> followers)</h4>
+
+         <% } else { %>
+
+          <h4>by <%= video.author %></h4>
+
+        <% } %>
 
         <% if ( video.stats ) { %>
 
