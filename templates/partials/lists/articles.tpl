@@ -9,7 +9,17 @@
     <li id="<%= article.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' ) %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 
       <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
-      <h4><%= article.date %> by <%= article.author %></h4>
+
+      <% var twitterHandle = ( article.social && article.social.twitter ) ? article.social.twitter.replace( '@', '' ) : false; %>
+
+      <% if ( twitterHandle && people[ twitterHandle ] ) { %>
+
+        <img src="<%= people[ twitterHandle ].image %>" title="Image of <%= article.author %>" class="post-author-img">
+
+        <h4><%= article.date %> by <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= article.author %>"><%= article.author %></a> ( <%= people[ twitterHandle ].followerCount %> followers )</h4>
+      <% } else { %>
+        <h4><%= article.date %> by <%= article.author %></h4>
+      <% } %>
 
       <% if ( article.stats ) { %>
 

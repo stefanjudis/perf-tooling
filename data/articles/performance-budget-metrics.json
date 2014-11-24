@@ -1,6 +1,9 @@
 {
   "name" : "Performance Budget Metrics",
   "author": "Tim Kadlec",
+  "social": {
+    "twitter":"@tkadlec"
+  },
   "date" : "2014-11-18",
   "stats": {
     "length": 1291
