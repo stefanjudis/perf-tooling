@@ -4,16 +4,19 @@
 
   <% if ( type === 'tools' && platforms.length ) { %>
 
-    <% autoCompletionList = _.sortBy(
-      autoCompletionList.concat( platforms ),
-      function( a, b ) {
-        return a.toLowerCase();
-      }
-    ); %>
+    <%
+      autoCompletionList = _.sortBy(
+        autoCompletionList.concat( platforms ),
+        function( a, b ) {
+          return a.toLowerCase();
+        }
+      );
+    %>
 
   <% } %>
 
   <datalist id="listElements">
+
     <% _.each( autoCompletionList, function( autoCompletion ) { %>
 
       <option value="<%= autoCompletion %>"><%= autoCompletion %></option>
