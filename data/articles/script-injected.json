@@ -2,6 +2,9 @@
   "name" : "Script-injected 'async scripts' considered harmful",
   "author": "Ilya Grigorik",
   "date": "2014-05-20",
+  "social" : {
+    "twitter": "@igrigorik"
+  },
   "stats": {
     "length": 1346
   },

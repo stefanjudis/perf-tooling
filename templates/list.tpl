@@ -57,7 +57,8 @@
               'templates/partials/lists/' + type + '.tpl',
               {
                 list    : list,
-                partial : partial
+                partial : partial,
+                people  : people
               }
             )
           %>

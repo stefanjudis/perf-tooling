@@ -1,5 +1,9 @@
 {
   "name" : "Performance Tooling by Paul Irish (#perfmatters at SFHTML5)",
+  "author": "Paul Irish",
+  "social": {
+    "twitter": "@paul_irish"
+  },
   "youtubeId" : "HAqjyCH_LOE",
   "tags" : [ "devtools", "webpagetest" ]
 }

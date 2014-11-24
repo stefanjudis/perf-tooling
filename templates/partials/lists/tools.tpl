@@ -6,7 +6,7 @@
 
       <h3><%= tool.name %></h3>
 
-      <div class="post-content"><%= tool.description %></div>
+      <article class="article"><%= tool.description %></article>
 
       <ul class="resources">
 

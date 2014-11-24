@@ -8,31 +8,52 @@
 
     <li id="<%= article.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' ) %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 
-      <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
-      <h4><%= article.date %> by <%= article.author %></h4>
+      <% var twitterHandle = ( article.social && article.social.twitter ) ? article.social.twitter.replace( '@', '' ) : false; %>
 
-      <% if ( article.stats ) { %>
+      <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
-          <ul class="post-stats">
+        <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= article.author %>" target="_blank"><img src="<%= people[ twitterHandle ].image %>" title="Image of <%= article.author %>" class="post-author-img"></a>
 
-            <li>Length: <%= article.stats.length %> Words</li>
+      <% } %>
 
-          </ul>
+      <div class="post-content">
+
+        <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
+
+        <% if ( twitterHandle && people[ twitterHandle ] ) { %>
+
+          <h4><%= article.date %> by <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= article.author %>" target="_blank"><%= article.author %></a> (<%= people[ twitterHandle ].followerCount %> followers)</h4>
+
+        <% } else { %>
+
+          <h4><%= article.date %> by <%= article.author %></h4>
 
         <% } %>
 
-      <% if ( article.tags && article.tags.length ) { %>
+        <% if ( article.stats ) { %>
 
-        <%=
-          partial(
-            'templates/partials/tags.tpl',
-            {
-              tags : article.tags
-            }
-          )
-        %>
+            <ul class="post-stats">
 
-      <% }%>
+              <li>Length: <%= article.stats.length %> Words</li>
+
+            </ul>
+
+          <% } %>
+
+        <% if ( article.tags && article.tags.length ) { %>
+
+          <%=
+            partial(
+              'templates/partials/tags.tpl',
+              {
+                tags : article.tags
+              }
+            )
+          %>
+
+        <% }%>
+
+      </div>
 
     </li>
 

@@ -1,5 +1,9 @@
 {
   "name" : "Andy Hume — Building For Performance and Resilience (SmashingConf New York 2014)",
+  "author": "Andy Hume",
+  "social": {
+    "twitter" : "@andyhume"
+  },
   "vimeoId" : "102347448",
   "tags" : [ "tools", "best practices" ]
 }

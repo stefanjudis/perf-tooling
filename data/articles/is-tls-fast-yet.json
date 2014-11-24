@@ -1,6 +1,9 @@
 {
   "name" : "Is TLS fast yet?",
   "author": "Ilya Grigorik",
+  "social": {
+    "twitter": "@igrigorik"
+  },
   "stats": {
     "length": 1478
   },

@@ -2,6 +2,9 @@
   "name" : "Improving Smashing Magazine’s Performance: A Case Study",
   "author": "Vitaly Friedman",
   "date": "2014-09-08",
+  "social": {
+    "twitter": "@smashingmag"
+  },
   "stats": {
     "length": 8451
   },

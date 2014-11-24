@@ -1,5 +1,9 @@
 {
   "name" : "Google I/O 2014 - Mobile Web performance auditing",
+  "author": "Paul Lewis",
+  "social": {
+    "twitter": "@aerotwist"
+  },
   "youtubeId" : "WrA85a4ZIaM",
   "tags" : [ "mobile", "page speed", "60fps" ]
 }

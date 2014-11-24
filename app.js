@@ -38,6 +38,12 @@ var config      = {
     index : './templates/index.tpl',
     list  : './templates/list.tpl'
   },
+  twitter : {
+    consumer_key        : process.env.CONSUMER_KEY,
+    consumer_secret     : process.env.CONSUMER_SECRET,
+    access_token        : process.env.ACCESS_TOKEN,
+    access_token_secret : process.env.ACCESS_TOKEN_SECRET
+  },
   vimeo   : {
     clientId     : process.env.VIMEO_CLIENT_ID,
     clientSecret : process.env.VIMEO_CLIENT_SECRET,
@@ -70,15 +76,29 @@ var vimeo = new Vimeo(
 );
 
 
+/**
+ * Twitter api stuff
+ */
+var Twit = require( 'twit' );
+var twit = new Twit( {
+  consumer_key        : config.twitter.consumer_key,
+  consumer_secret     : config.twitter.consumer_secret,
+  access_token        : config.twitter.access_token,
+  access_token_secret : config.twitter.access_token_secret
+} );
+
+
 var port         = process.env.PORT || 3000;
 
-// TODO loop this
+
 var data         = {
-  articles : getList( 'articles' ),
-  slides   : getList( 'slides' ),
-  tools    : getList( 'tools' ),
-  videos   : getList( 'videos' )
+  people   : {}
 };
+
+data.articles = getList( 'articles' );
+data.slides   = getList( 'slides' );
+data.tools    = getList( 'tools' );
+data.videos   = getList( 'videos' );
 
 /**
  * List of contributors
@@ -200,6 +220,65 @@ function fetchGithubStars() {
       }
     } );
   } );
+}
+
+
+/**
+ * Fetch twitter data
+ */
+function fetchTwitterUserMeta() {
+  if (
+    config.twitter.consumer_key &&
+    config.twitter.consumer_secret &&
+    config.twitter.access_token &&
+    config.twitter.access_token_secret
+  ) {
+    /**
+     * Fetch twitter meta for people
+     */
+    function fetchTwitterUserData( userName, type ) {
+      userName = userName.replace( '@', '' );
+
+      if ( typeof data.people[ userName ] === 'undefined' ) {
+        twit.get(
+          '/users/show/:id',
+          { id : userName.replace( '@') },
+          function( err, twitterData, res ) {
+            if ( err ) {
+              console.log( err );
+
+              return
+            }
+
+            data.people[ userName ] = {
+              description   : twitterData.description,
+              followerCount : twitterData.followers_count,
+              image         : twitterData.profile_image_url
+            }
+
+            pages[ type ] = renderPage( type );
+        } );
+      }
+    }
+
+    _.each( data.videos, function( entry ) {
+      if ( entry.social && entry.social.twitter ) {
+        fetchTwitterUserData( entry.social.twitter, 'videos' );
+      }
+    } );
+    _.each( data.articles, function( entry ) {
+      if ( entry.social && entry.social.twitter ) {
+        fetchTwitterUserData( entry.social.twitter, 'articles' );
+      }
+    } );
+    _.each( data.slides, function( entry ) {
+      if ( entry.social && entry.social.twitter ) {
+        fetchTwitterUserData( entry.social.twitter, 'slides' );
+      }
+    } );
+  } else {
+    console.log( 'Twitter tokens missing' );
+  }
 }
 
 
@@ -367,6 +446,7 @@ function renderPage( type, query ) {
             options
           );
         },
+        people        : data.people,
         platforms     : config.platforms,
         resourceCount : {
           tools    : data.tools.length,
@@ -416,11 +496,17 @@ fetchVideoMeta();
 
 
 /**
+ * fetch twitter user meta data
+ */
+fetchTwitterUserMeta();
+
+/**
  * Repeat the fetching all 12 hours
  */
 setInterval( function() {
   fetchGithubStars();
   fetchVideoMeta();
+  fetchTwitterUserMeta();
 }, 1000 * 60 * 60 * 12 );
 
 app.use( compression() );
