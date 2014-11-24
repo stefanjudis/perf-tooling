@@ -1,0 +1,10 @@
+{
+  "name" : "Better @font-face with Font Load Events",
+  "author": "Zach Leatherman",
+  "date": "2014-09-26",
+  "stats": {
+    "length": 1385
+  },
+  "url": "https://dev.opera.com/articles/better-font-face/",
+  "tags": [ "webfonts", "loading" ]
+}
