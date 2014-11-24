@@ -211,11 +211,11 @@
 
               <section class="section text-center">
 
-                <div id="contributors" class="contributors">
+                <div id="contributors" class="text-center">
 
                   <p>...with a little help from our friends</p>
 
-                  <ul class="list-unstyled">
+                  <ul class="contributors">
 
                     <% _.each( contributors, function( contrib ) { %>
                       <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
