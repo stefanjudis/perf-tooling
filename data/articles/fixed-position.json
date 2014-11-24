@@ -2,6 +2,9 @@
   "name" : "Improving the CSS performance of fixed position elements",
   "author": "Ben Frain",
   "date": "2014-02-28",
+  "social": {
+    "twitter": "@benfrain"
+  },
   "stats": {
     "length": 1252
   },

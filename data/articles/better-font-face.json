@@ -2,6 +2,9 @@
   "name" : "Better @font-face with Font Load Events",
   "author": "Zach Leatherman",
   "date": "2014-09-26",
+  "social": {
+    "twitter": "@zachleat"
+  },
   "stats": {
     "length": 1385
   },

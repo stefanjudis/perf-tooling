@@ -229,25 +229,34 @@ function fetchGithubStars() {
 function fetchTwitterUserMeta( userName, type  ) {
   userName = userName.replace( '@', '' );
 
-  if ( typeof data.people[ userName ] === 'undefined' ) {
-    twit.get(
-      '/users/show/:id',
-      { id : userName.replace( '@') },
-      function( err, twitterData, res ) {
-        if ( err ) {
-          console.log( err );
+  if (
+    config.twitter.consumer_key &&
+    config.twitter.consumer_secret &&
+    config.twitter.access_token &&
+    config.twitter.access_token_secret
+  ) {
+    if ( typeof data.people[ userName ] === 'undefined' ) {
+      twit.get(
+        '/users/show/:id',
+        { id : userName.replace( '@') },
+        function( err, twitterData, res ) {
+          if ( err ) {
+            console.log( err );
 
-          return
-        }
+            return
+          }
 
-        data.people[ userName ] = {
-          description   : twitterData.description,
-          followerCount : twitterData.followers_count,
-          image         : twitterData.profile_image_url
-        }
+          data.people[ userName ] = {
+            description   : twitterData.description,
+            followerCount : twitterData.followers_count,
+            image         : twitterData.profile_image_url
+          }
 
-        pages[ type ] = renderPage( type );
-    } );
+          pages[ type ] = renderPage( type );
+      } );
+    }
+  } else {
+    console.log( 'Twitter tokens missing' );
   }
 }
 

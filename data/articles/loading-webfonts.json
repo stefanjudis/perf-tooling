@@ -2,6 +2,9 @@
   "name" : "Loading webfonts with high performance on responsive websites",
   "author": "Adam Beres-Deak",
   "date": "2014-08-08",
+  "social": {
+    "twitter" : "@bdadamm"
+  },
   "stats": {
     "length": 1220
   },
