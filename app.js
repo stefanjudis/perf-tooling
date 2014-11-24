@@ -226,35 +226,56 @@ function fetchGithubStars() {
 /**
  * Fetch twitter data
  */
-function fetchTwitterUserMeta( userName, type  ) {
-  userName = userName.replace( '@', '' );
-
+function fetchTwitterUserMeta() {
   if (
     config.twitter.consumer_key &&
     config.twitter.consumer_secret &&
     config.twitter.access_token &&
     config.twitter.access_token_secret
   ) {
-    if ( typeof data.people[ userName ] === 'undefined' ) {
-      twit.get(
-        '/users/show/:id',
-        { id : userName.replace( '@') },
-        function( err, twitterData, res ) {
-          if ( err ) {
-            console.log( err );
+    /**
+     * Fetch twitter meta for people
+     */
+    function fetchTwitterUserData( userName, type ) {
+      userName = userName.replace( '@', '' );
 
-            return
-          }
+      if ( typeof data.people[ userName ] === 'undefined' ) {
+        twit.get(
+          '/users/show/:id',
+          { id : userName.replace( '@') },
+          function( err, twitterData, res ) {
+            if ( err ) {
+              console.log( err );
 
-          data.people[ userName ] = {
-            description   : twitterData.description,
-            followerCount : twitterData.followers_count,
-            image         : twitterData.profile_image_url
-          }
+              return
+            }
 
-          pages[ type ] = renderPage( type );
-      } );
+            data.people[ userName ] = {
+              description   : twitterData.description,
+              followerCount : twitterData.followers_count,
+              image         : twitterData.profile_image_url
+            }
+
+            pages[ type ] = renderPage( type );
+        } );
+      }
     }
+
+    _.each( data.videos, function( entry ) {
+      if ( entry.social && entry.social.twitter ) {
+        fetchTwitterUserData( entry.social.twitter, 'videos' );
+      }
+    } );
+    _.each( data.articles, function( entry ) {
+      if ( entry.social && entry.social.twitter ) {
+        fetchTwitterUserData( entry.social.twitter, 'articles' );
+      }
+    } );
+    _.each( data.slides, function( entry ) {
+      if ( entry.social && entry.social.twitter ) {
+        fetchTwitterUserData( entry.social.twitter, 'slides' );
+      }
+    } );
   } else {
     console.log( 'Twitter tokens missing' );
   }
@@ -367,10 +388,6 @@ function getList( type ) {
         entry.hidden = false;
 
         list.push( entry );
-
-        if ( entry.social && entry.social.twitter ) {
-          fetchTwitterUserMeta( entry.social.twitter, type );
-        }
       } catch( e ) {
         console.log( 'SHITTTTT' );
         console.log( e );
@@ -479,11 +496,17 @@ fetchVideoMeta();
 
 
 /**
+ * fetch twitter user meta data
+ */
+fetchTwitterUserMeta();
+
+/**
  * Repeat the fetching all 12 hours
  */
 setInterval( function() {
   fetchGithubStars();
   fetchVideoMeta();
+  fetchTwitterUserMeta();
 }, 1000 * 60 * 60 * 12 );
 
 app.use( compression() );
