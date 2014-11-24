@@ -1,5 +1,8 @@
 {
   "name" : "CSSconf EU 2014 | Patrick Hamann: CSS and the Critical Path",
+  "social": {
+    "twitter": "@patrickhamann"
+  },
   "youtubeId" : "_0Fk85to6hA",
   "tags" : [ "css", "critical", "render-path" ]
 }

@@ -1,5 +1,8 @@
 {
   "name" : "Advanced performance tooling in Chrome DevTools - Paul Irish @ Velocity 2014",
+  "social": {
+    "twitter": "@paul_irish"
+  },
   "youtubeId" : "0xx_dkv9DEY",
   "tags" : [ "timeline", "render", "paint" ]
 }

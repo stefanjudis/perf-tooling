@@ -1,5 +1,8 @@
 {
   "name" : "CSSconf EU 2014 | Addy Osmani: CSS Performance Tooling",
+  "social": {
+    "twitter": "@addyosmani"
+  },
   "youtubeId" : "FEs2jgZBaQA",
   "tags" : [ "css", "monitoring" ]
 }

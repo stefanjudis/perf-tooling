@@ -1,5 +1,8 @@
 {
   "name" : "Velocity 2014 - WebPagetest Power Users",
+  "social": {
+    "twitter": "@patmeenan"
+  },
   "youtubeId" : "6UeRMMI_IzI",
   "tags" : [ "monitoring", "webpagetest" ]
 }
