@@ -6,43 +6,58 @@
   %>
   <% _.each( orderedList , function( article ) { %>
 
-    <li id="<%= article.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' ) %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
-
-      <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
+    <li id="<%= article.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' ) %>" class="post-article media <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% var twitterHandle = ( article.social && article.social.twitter ) ? article.social.twitter.replace( '@', '' ) : false; %>
 
       <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
+      <div class="media-obj-left">
+
         <img src="<%= people[ twitterHandle ].image %>" title="Image of <%= article.author %>" class="post-author-img">
 
-        <h4><%= article.date %> by <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= article.author %>"><%= article.author %></a> ( <%= people[ twitterHandle ].followerCount %> followers )</h4>
-      <% } else { %>
-        <h4><%= article.date %> by <%= article.author %></h4>
+      </div>
+
       <% } %>
 
-      <% if ( article.stats ) { %>
+      <div class="media-body">
 
-          <ul class="post-stats">
+        <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
 
-            <li>Length: <%= article.stats.length %> Words</li>
+        <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
-          </ul>
+          <h4><%= article.date %> by <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= article.author %>"><%= article.author %></a> (<%= people[ twitterHandle ].followerCount %> followers)</h4>
+
+        <% } else { %>
+
+          <h4><%= article.date %> by <%= article.author %></h4>
 
         <% } %>
 
-      <% if ( article.tags && article.tags.length ) { %>
+        <% if ( article.stats ) { %>
 
-        <%=
-          partial(
-            'templates/partials/tags.tpl',
-            {
-              tags : article.tags
-            }
-          )
-        %>
+            <ul class="post-stats">
 
-      <% }%>
+              <li>Length: <%= article.stats.length %> Words</li>
+
+            </ul>
+
+          <% } %>
+
+        <% if ( article.tags && article.tags.length ) { %>
+
+          <%=
+            partial(
+              'templates/partials/tags.tpl',
+              {
+                tags : article.tags
+              }
+            )
+          %>
+
+        <% }%>
+
+      </div>
 
     </li>
 
