@@ -2,6 +2,9 @@
   "name": "CSS Performance Tooling",
   "author": "Addy Osmani",
   "date": "2014-09-13",
+  "social": {
+    "twitter" : "@addyosmani"
+  },
   "stats": {
     "length": 130
   },

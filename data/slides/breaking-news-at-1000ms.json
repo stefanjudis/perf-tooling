@@ -2,6 +2,9 @@
   "name": "Breaking news at 1000ms - Velocity EU 2014",
   "author": "Patrick Hamann",
   "date": "2014-11-18",
+  "social": {
+    "twitter": "@patrickhamann"
+  },
   "stats": {
     "length": 88
   },

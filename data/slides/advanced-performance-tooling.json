@@ -2,6 +2,9 @@
   "name": "Chrome Performance Tooling",
   "author": "Paul Irish",
   "date": "2014-06-24",
+  "social": {
+    "twitter": "@paul_irish"
+  },
   "stats": {
     "length": 18
   },
