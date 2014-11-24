@@ -1,0 +1,6 @@
+{
+  "name" : "lazyload",
+  "script" : "https://github.com/vvo/lazyload",
+  "description" : "Lazyload images, iframes, widgets with a standalone JavaScript lazyloader - ~1kb.",
+  "tags" : [ "lazy loading", "images", "iframes" ]
+}
