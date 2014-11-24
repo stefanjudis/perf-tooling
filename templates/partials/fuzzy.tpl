@@ -1,26 +1,24 @@
 <% if ( tags.length ) { %>
 
+  <% var autoCompletionList = tags; %>
+
+  <% if ( type === 'tools' && platforms.length ) { %>
+
+    <% autoCompletionList = _.sortBy(
+      autoCompletionList.concat( platforms ),
+      function( a, b ) {
+        return a.toLowerCase();
+      }
+    ); %>
+
+  <% } %>
+
   <datalist id="listElements">
+    <% _.each( autoCompletionList, function( autoCompletion ) { %>
 
-  <% if ( platforms.length ) { %>
-
-    <% _.each( platforms, function( platform ) { %>
-
-      <option value="<%= platform %>"><%= platform %></option>
+      <option value="<%= autoCompletion %>"><%= autoCompletion %></option>
 
     <% } ); %>
-
-  <% } %>
-
-  <% if ( tags.length ) { %>
-
-    <% _.each( tags, function( tag ) { %>
-
-      <option value="<%= tag %>"><%= tag %></option>
-
-    <% } ); %>
-
-  <% } %>
 
   </datalist>
 
