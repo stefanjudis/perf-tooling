@@ -5,6 +5,7 @@
 
   <title><%= site.name %></title>
 
+  <meta name="theme-color" content="#01a5b1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" value="Perf Tooling Today lists a lot of tools that can be used to make the web faster, because performance matters!">
   <meta name="apple-mobile-web-app-title" content="perf-tooling">
