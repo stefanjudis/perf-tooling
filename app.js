@@ -389,6 +389,7 @@ function getList( type ) {
 
         list.push( entry );
       } catch( e ) {
+        console.log( entry );
         console.log( 'SHITTTTT' );
         console.log( e );
       }
