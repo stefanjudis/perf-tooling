@@ -79,13 +79,20 @@ var vimeo = new Vimeo(
 /**
  * Twitter api stuff
  */
-var Twit = require( 'twit' );
-var twit = new Twit( {
-  consumer_key        : config.twitter.consumer_key,
-  consumer_secret     : config.twitter.consumer_secret,
-  access_token        : config.twitter.access_token,
-  access_token_secret : config.twitter.access_token_secret
-} );
+if (
+   config.twitter.consumer_key &&
+   config.twitter.consumer_secret &&
+   config.twitter.access_token &&
+   config.twitter.access_token_secret
+) {
+  var Twit = require( 'twit' );
+  var twit = new Twit( {
+    consumer_key        : config.twitter.consumer_key,
+    consumer_secret     : config.twitter.consumer_secret,
+    access_token        : config.twitter.access_token,
+    access_token_secret : config.twitter.access_token_secret
+  } );
+}
 
 
 var port         = process.env.PORT || 3000;
@@ -227,12 +234,7 @@ function fetchGithubStars() {
  * Fetch twitter data
  */
 function fetchTwitterUserMeta() {
-  if (
-    config.twitter.consumer_key &&
-    config.twitter.consumer_secret &&
-    config.twitter.access_token &&
-    config.twitter.access_token_secret
-  ) {
+  if ( twit ) {
     /**
      * Fetch twitter meta for people
      */
