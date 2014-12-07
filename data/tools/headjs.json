@@ -1,0 +1,6 @@
+{
+"name" : "HeadJS",
+"description" : "The only script in your HEAD. for Responsive Design, Feature Detections, and Resource Loading.",
+"script" : "https://github.com/headjs/headjs",
+"tags" : [ "loading", "script" ]
+}
