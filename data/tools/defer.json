@@ -1,0 +1,6 @@
+{
+"name" : "defer.js",
+"description" : "defer.js is a tiny boot-strapper that allows you to make all loading of JavaScript on your page asynchronous. Yes, everything.",
+"script" : "https://github.com/wessman/defer.js",
+"tags" : [ "loading", "javascript" ]
+}
