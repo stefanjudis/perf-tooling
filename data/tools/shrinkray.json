@@ -1,0 +1,6 @@
+{
+"name" : "Shrinkray",
+"description" : "Shrinkray is the easiest way to optimize your images. Once you sign in with your Github account, you can optimize all of the images in your repos with a single click. Even large sites with hundreds of images can be optimized in minutes.",
+"service" : "https://shrinkray.io/",
+"tags" : [ "compression", "images" ]
+}
