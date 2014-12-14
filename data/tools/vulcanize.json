@@ -5,5 +5,5 @@
   "gulp" : "https://github.com/sindresorhus/gulp-vulcanize",
   "module" : "https://github.com/Polymer/vulcanize",
   "description" : "Concatenate a set of Web Components into one file.",
-  "tags" : [ "combine", "web components" ]
+  "tags" : [ "concatenation", "web components" ]
 }
