@@ -6,7 +6,7 @@
   %>
   <% _.each( orderedList , function( slide ) { %>
 
-    <li id="<%= slide.name.toLowerCase().replace( /[\s\.:"#\(\)|]/g, '-' ) %>" class="post-slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% var twitterHandle = ( slide.social && slide.social.twitter ) ? slide.social.twitter.replace( '@', '' ) : false; %>
 
