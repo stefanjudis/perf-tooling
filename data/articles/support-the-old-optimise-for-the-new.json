@@ -1,0 +1,13 @@
+{
+  "name" : "Support the old, optimise for the new",
+  "author": "Andrew Betts",
+  "date": "2014-12-11",
+  "social": {
+    "twitter": "@triblondon"
+  },
+  "stats": {
+    "length": 911
+  },
+  "url": "http://calendar.perfplanet.com/2014/support-the-old-optimise-for-the-new/",
+  "tags": [ "polyfill" ]
+}
