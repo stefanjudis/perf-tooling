@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" role="banner">
 
   <div class="container">
 
@@ -6,7 +6,7 @@
       <a href="/" title="Link to home"><img src="<%= cdn %>/perf-tooling.svg" width="64" height="43" alt="perf-tooling logo">
     </div>
 
-    <nav class="nav-main">
+    <nav class="nav-main" role="navigation">
 
       <button class="btn-nav">
         <span class="visuallyhidden">Menu</span>
