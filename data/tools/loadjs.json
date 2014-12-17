@@ -1,6 +1,6 @@
 {
   "name" : "loadJS",
-  "script" : "https://github.com/filamentgroup/loadJS",
+  "javascript" : "https://github.com/filamentgroup/loadJS",
   "description" : "A simple function for asynchronously loading JavaScript files.",
   "tags" : [ "loading", "progressive enhancement" ]
 }
