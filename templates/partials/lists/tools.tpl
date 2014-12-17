@@ -190,36 +190,6 @@
 
         <% } %>
 
-        <% if ( tool.css ) { %>
-
-          <li class="tooltip" title="CSS">
-
-            <a href="<%= tool.css %>" title="Link to CSS" class="resource-css" target="_blank">
-              <svg>
-                <use xlink:href="#icon-css" />
-              </svg>
-              CSS
-            </a>
-
-            <span><%= ( tool.stars.css ) ? tool.stars.css : 'N/A' %></span>
-
-        <% } %>
-
-        <% if ( tool.html ) { %>
-
-          <li class="tooltip" title="HTML">
-
-            <a href="<%= tool.html %>" title="Link to HTML" class="resource-html" target="_blank">
-              <svg>
-                <use xlink:href="#icon-html" />
-              </svg>
-              HTML
-            </a>
-
-            <span><%= ( tool.stars.html ) ? tool.stars.html : 'N/A' %></span>
-
-        <% } %>
-
         <% if ( tool.javascript ) { %>
 
           <li class="tooltip" title="Javascript">

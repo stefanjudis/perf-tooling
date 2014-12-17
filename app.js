@@ -28,8 +28,6 @@ var config      = {
     'module',
     'grunt',
     'gulp',
-    'css',
-    'html',
     'javascript',
     'php',
     'service'
