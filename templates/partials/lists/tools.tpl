@@ -190,18 +190,63 @@
 
         <% } %>
 
-        <% if ( tool.script ) { %>
+        <% if ( tool.css ) { %>
 
-          <li class="tooltip" title="Script">
+          <li class="tooltip" title="CSS">
 
-            <a href="<%= tool.script %>" title="Link to Scrip" class="resource-script" target="_blank">
+            <a href="<%= tool.css %>" title="Link to CSS" class="resource-css" target="_blank">
+              <svg>
+                <use xlink:href="#icon-css" />
+              </svg>
+              CSS
+            </a>
+
+            <span><%= ( tool.stars.css ) ? tool.stars.css : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.html ) { %>
+
+          <li class="tooltip" title="HTML">
+
+            <a href="<%= tool.html %>" title="Link to HTML" class="resource-html" target="_blank">
+              <svg>
+                <use xlink:href="#icon-html" />
+              </svg>
+              HTML
+            </a>
+
+            <span><%= ( tool.stars.html ) ? tool.stars.html : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.javascript ) { %>
+
+          <li class="tooltip" title="Javascript">
+
+            <a href="<%= tool.javascript %>" title="Link to Script" class="resource-javascript" target="_blank">
               <svg>
                 <use xlink:href="#icon-javascript" />
               </svg>
-              Script
+              Javascript
             </a>
 
-            <span><%= ( tool.stars.script ) ? tool.stars.script : 'N/A' %></span>
+            <span><%= ( tool.stars.javascript ) ? tool.stars.javascript : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.php ) { %>
+
+          <li class="tooltip" title="PHP">
+
+            <a href="<%= tool.php %>" title="Link to PHP" class="resource-php" target="_blank">
+              <svg>
+                <use xlink:href="#icon-php" />
+              </svg>
+              PHP
+            </a>
+
+            <span><%= ( tool.stars.php ) ? tool.stars.php : 'N/A' %></span>
 
         <% } %>
 

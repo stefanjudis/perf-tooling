@@ -28,7 +28,10 @@ var config      = {
     'module',
     'grunt',
     'gulp',
-    'script',
+    'css',
+    'html',
+    'javascript',
+    'php',
     'service'
   ],
   site      : {
