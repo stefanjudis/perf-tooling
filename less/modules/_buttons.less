@@ -24,7 +24,6 @@
   background-color: transparent;
   border: 1px solid @color-border;
   border-radius: 3px;
-  display: none;
   float: right;
   height: 32px;
   margin: 1.25rem 0 1rem;
@@ -40,8 +39,8 @@
     width: 1rem;
   }
 
-  @media screen and (max-width: @media-tiny) {
-    display: block;
+  @media (min-width: (@media-tiny + 1)) {
+    display: none;
   }
 
 }
