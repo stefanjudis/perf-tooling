@@ -1,4 +1,4 @@
-<ui class="posts">
+<ul class="posts">
   <%
     var orderedList = _.sortBy( list, function( article ) {
       return article.date || -1;
@@ -59,4 +59,4 @@
 
    <% } );%>
 
-</ui>
+</ul>
