@@ -2,6 +2,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
 
   <title><%= site.name %></title>
 
@@ -9,6 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" value="Perf Tooling Today lists a lot of tools that can be used to make the web faster, because performance matters!">
   <meta name="apple-mobile-web-app-title" content="perf-tooling">
+
+  <link rel="dns-prefetch" href="http://www.google-analytics.com/">
+  <link rel="dns-prefetch" href="http://www.https://avatars.githubusercontent.com/">
 
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="<%= cdn %>/favicon-16x16.png">
