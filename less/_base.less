@@ -127,16 +127,11 @@ header {
 
 
 h1 {
-  font-size: @h1-font-size;
+  font-size: @h1-font-size-small;
   font-weight: bold;
 
-  @media (min-width: @max-width) {
-    display: inline-block;
-    text-align: left;
-  }
-
-  @media screen and (max-width: @media-tiny) {
-    font-size: @h1-font-size-small;
+  @media (min-width: @media-small) {
+    font-size: @h1-font-size;
   }
 
 }
