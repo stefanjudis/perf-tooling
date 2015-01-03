@@ -7,7 +7,7 @@
 
   <meta name="theme-color" content="#01a5b1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" value="Perf Tooling Today lists a lot of tools that can be used to make the web faster, because performance matters!">
+  <meta name="description" content="Perf Tooling Today lists a lot of tools, articles, videos and slides to make the web faster. We cover resources to automize and monitore your workflow.">
   <meta name="apple-mobile-web-app-title" content="perf-tooling">
 
   <link rel="shortcut icon" href="favicon.ico">
