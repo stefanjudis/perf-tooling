@@ -12,7 +12,7 @@
   <meta name="apple-mobile-web-app-title" content="perf-tooling">
 
   <link rel="dns-prefetch" href="http://www.google-analytics.com/">
-  <link rel="dns-prefetch" href="http://www.https://avatars.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">
 
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="<%= cdn %>/favicon-16x16.png">
