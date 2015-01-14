@@ -20,8 +20,7 @@
           {
             active           : type,
             cdn              : cdn,
-            site             : site,
-            timeToLastCommit : timeToLastCommit
+            site             : site
           }
         )
       %>

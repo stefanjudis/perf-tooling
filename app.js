@@ -10,17 +10,15 @@ var request     = require( 'request' );
 var config      = require( './config/config' );
 
 
-var timeToLastCommit = false;
+// var timeToLastCommit = false;
 
-require( './lib/git-last-commit' )( function( error, data ) {
-  if ( !error ) {
-    timeToLastCommit = data;
+// require( './lib/git-last-commit' )( function( error, data ) {
+//   if ( !error ) {
+//     timeToLastCommit = data;
 
-    renderAllPages();
-  }
-} );
-
-// console.log( lastCommit );
+//     renderAllPages();
+//   }
+// } );
 
 
 /**
@@ -438,7 +436,6 @@ function renderPage( type, query ) {
         },
         site             : config.site,
         svg              : pageContent.svg,
-        timeToLastCommit : timeToLastCommit,
         list             : list,
         hash             : {
           css : pageContent.hashes.css,
