@@ -1,7 +1,8 @@
 <header class="header" role="banner">
-
   <div class="container">
-
+    <% if ( timeToLastCommit ) { %>
+      Last update <%= timeToLastCommit %>
+    <% } %>
     <div class="logo">
       <a href="/" title="Link to home"><img src="<%= cdn %>/perf-tooling.svg" width="64" height="43" alt="perf-tooling logo">
     </div>

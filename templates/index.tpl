@@ -19,9 +19,10 @@
         partial(
           'templates/partials/header.tpl',
           {
-            active : type,
-            cdn    : cdn,
-            site   : site
+            active           : type,
+            cdn              : cdn,
+            site             : site,
+            timeToLastCommit : timeToLastCommit
           }
         )
       %>
