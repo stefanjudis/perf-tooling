@@ -149,25 +149,6 @@
 
           </section>
 
-          <section>
-
-            <h3>Newsletter</h3>
-
-            <div id="mc_embed_signup">
-
-            <form action="//today.us9.list-manage.com/subscribe/post?u=8c4e72deda8b5599ce3bea3ff&amp;id=51ba0e71cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll">
-                <label for="mce-EMAIL">Subscribe to our mailing list to get informed about the newest content added to <a href="http://perf-tooling.today">perf-tooling.today</a>.</label>
-                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                <div style="position: absolute; left: -5000px;"><input type="text" name="b_8c4e72deda8b5599ce3bea3ff_51ba0e71cf" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" class="btn btn-primary" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-              </div>
-            </form>
-
-            </div>
-
-          </section>
-
           <section class="section buildBy text-center">
 
             <h3>Built by Stefan Judis<br>& Marco Biedermann</h3>
@@ -260,6 +241,43 @@
               <p class="social-twitter"><a href="https://twitter.com/perf_tooling" title="perf-tooling on Twitter" target="_blank">Follow <strong>@perf_tooling</strong> on Twitter</a></p>
 
             </article>
+
+          </section>
+
+          <section class="text-center">
+
+            <h2>Newsletter</h2>
+
+            <div id="mc_embed_signup">
+
+              <form action="//today.us9.list-manage.com/subscribe/post?u=8c4e72deda8b5599ce3bea3ff&amp;id=51ba0e71cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form validate" target="_blank" novalidate>
+
+                <div id="mc_embed_signup_scroll" class="form-field">
+
+                  <label for="mce-EMAIL">Subscribe to our mailing list to get informed about out newest content.</label>
+                  <div class="col-6 center-block">
+
+                    <input type="email" value="" name="EMAIL" class="email input-text" id="mce-EMAIL" placeholder="Enter your email" required>
+
+                  </div>
+
+                  <div style="position: absolute; left: -5000px;">
+
+                    <input type="text" name="b_8c4e72deda8b5599ce3bea3ff_51ba0e71cf" tabindex="-1" value="">
+
+                  </div>
+
+                </div>
+
+                <div class="form-field">
+
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button input-submit">
+
+                </div>
+
+              </form>
+
+            </div>
 
           </section>
 
