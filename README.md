@@ -16,7 +16,7 @@ You want to add a tool? Great!
 
 Either create an issue and we'll add it to [perf-tooling.today](http://perf-tooling.today).
 
-Or propose a pull request and add a tool by adding a `JSON` file at `tools/automatization` or `tools/monitoring`. The JSON files in these two folders will be automatically rendered using a template based in `templates/index.tpl`
+Or propose a pull request and add a tool by adding a `JSON` file at `data/articles`, `data/slides`, `data/tools` or `data/videos`. The JSON files in these folders will be automatically rendered using a template based in `templates/index.tpl`
 
 *- By proposing a pull request you will be added to the footer contributors list automatically -*
 
