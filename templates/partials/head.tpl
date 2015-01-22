@@ -11,6 +11,24 @@
   <meta name="description" content="Perf Tooling Today lists a lot of tools, articles, videos and slides to make the web faster. We cover resources to automize and monitore your workflow.">
   <meta name="apple-mobile-web-app-title" content="perf-tooling">
 
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name" : "Perf-tooling Today",
+      "url": "http://perf-tooling.today/",
+      "founder": {
+        "@type": "Person",
+        "name": "Stefan Judis",
+        "email": "stefanjudis@gmail.com"
+      },
+      "logo": "<%= cdn %>/apple-touch-icon-152x152-precomposed.png",
+      "sameAs" : [
+        "http://www.twitter.com/perf_tooling"
+      ]
+    }
+  </script>
+
   <link rel="dns-prefetch" href="http://www.google-analytics.com/">
   <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">
 
