@@ -3,6 +3,9 @@
   "cli" : "https://github.com/svg/svgo",
   "grunt" : "https://github.com/sindresorhus/grunt-svgmin",
   "gulp" : "https://github.com/ben-eb/gulp-svgmin",
+  "mac" : "https://github.com/svg/svgo-gui",
+  "service" : "https://github.com/jakearchibald/svgomg",
+  "windows": "https://github.com/svg/svgo-gui",
   "illustrator": "https://github.com/davidderaedt/SVG-NOW",
   "description" : "SVGO is a Nodejs-based tool for optimizing SVG vector graphics files.",
   "tags" : [ "svg", "minification" ]
