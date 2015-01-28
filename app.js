@@ -73,6 +73,7 @@ data.articles = getList( 'articles' );
 data.slides   = getList( 'slides' );
 data.tools    = getList( 'tools' );
 data.videos   = getList( 'videos' );
+data.books    = getList( 'books' );
 
 /**
  * List of contributors
@@ -432,7 +433,8 @@ function renderPage( type, query ) {
           tools    : data.tools.length,
           articles : data.articles.length,
           videos   : data.videos.length,
-          slides   : data.slides.length
+          slides   : data.slides.length,
+          books    : data.books.length
         },
         site             : config.site,
         svg              : pageContent.svg,

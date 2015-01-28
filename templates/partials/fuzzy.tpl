@@ -1,5 +1,4 @@
 <% if ( tags.length ) { %>
-
   <% var autoCompletionList = tags; %>
 
   <% if ( type === 'tools' && platforms.length ) { %>
@@ -14,6 +13,7 @@
     %>
 
   <% } %>
+
 
   <datalist id="listElements">
 

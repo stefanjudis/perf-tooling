@@ -1,10 +1,10 @@
 <ul class="posts">
   <%
-    var orderedList = _.sortBy( list, function( article ) {
+    list = _.sortBy( list, function( article ) {
       return article.date || -1;
     } ).reverse();
   %>
-  <% _.each( orderedList , function( article ) { %>
+  <% _.each( list , function( article ) { %>
 
     <li id="<%= article.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 

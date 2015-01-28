@@ -14,6 +14,8 @@
 
   <body>
 
+      <div class="svgIcons"><%= svg %></div>
+
       <%=
         partial(
           'templates/partials/header.tpl',
@@ -28,6 +30,7 @@
       <main class="main" role="main">
 
         <div class="container">
+
 
           <%=
             partial(
@@ -58,7 +61,8 @@
               {
                 list    : list,
                 partial : partial,
-                people  : people
+                people  : people,
+                cdn     : cdn
               }
             )
           %>
