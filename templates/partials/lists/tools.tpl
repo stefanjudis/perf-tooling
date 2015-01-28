@@ -190,6 +190,21 @@
 
         <% } %>
 
+        <% if ( tool.illustrator ) { %>
+
+          <li class="tooltip" title="Illustrator Script">
+
+            <a href="<%= tool.illustrator %>" title="Link to Illustrator Script" class="resource-illustrator" target="_blank">
+              <svg>
+                <use xlink:href="#icon-illustrator" />
+              </svg>
+              Service
+            </a>
+
+            <span><%= ( tool.stars.illustrator ) ? tool.stars.illustrator : 'N/A' %></span>
+
+        <% } %>
+
         <% if ( tool.javascript ) { %>
 
           <li class="tooltip" title="Javascript">

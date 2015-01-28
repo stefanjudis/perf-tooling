@@ -6,6 +6,7 @@
   "mac" : "https://github.com/svg/svgo-gui",
   "service" : "https://github.com/jakearchibald/svgomg",
   "windows": "https://github.com/svg/svgo-gui",
+  "illustrator": "https://github.com/davidderaedt/SVG-NOW",
   "description" : "SVGO is a Nodejs-based tool for optimizing SVG vector graphics files.",
   "tags" : [ "svg", "minification" ]
 }
