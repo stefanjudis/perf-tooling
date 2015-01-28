@@ -254,7 +254,7 @@
 
                 <div id="mc_embed_signup_scroll" class="form-field">
 
-                  <label for="mce-EMAIL">Subscribe to our mailing list to get informed about out newest content.</label>
+                  <label for="mce-EMAIL">Subscribe to our mailing list to get informed about our newest content.</label>
                   <div class="col-6 center-block">
 
                     <input type="email" value="" name="EMAIL" class="email input-text" id="mce-EMAIL" placeholder="Enter your email" required>
@@ -271,7 +271,7 @@
 
                 <div class="form-field">
 
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button input-submit">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-large btn-primary">
 
                 </div>
 
