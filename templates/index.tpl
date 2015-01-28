@@ -19,9 +19,9 @@
         partial(
           'templates/partials/header.tpl',
           {
-            active : type,
-            cdn    : cdn,
-            site   : site
+            active           : type,
+            cdn              : cdn,
+            site             : site
           }
         )
       %>
@@ -219,7 +219,7 @@
 
                     <% _.each( contributors, function( contrib ) { %>
                       <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
-                        <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" target="_blank"></a></li>
+                        <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" title="<%= contrib.login %> on GitHub" target="_blank"></a></li>
                       <% } %>
                     <% } ) %>
 

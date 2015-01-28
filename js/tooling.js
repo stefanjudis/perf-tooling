@@ -16,7 +16,7 @@
     var length       = contributors.length;
 
     for( var i = 0; i < length; ++i ) {
-      contributors[ i ].innerHTML = '<img src="' + contributors[ i ].dataset.url + '" width="40" height="40" title="' + contributors[ i ].dataset.login + '" class="contributor-avatar">';
+      contributors[ i ].innerHTML = '<img src="' + contributors[ i ].dataset.url + '" width="40" height="40" alt="' + contributors[ i ].dataset.login + ' on GitHub" class="contributor-avatar">';
     }
   } );
 

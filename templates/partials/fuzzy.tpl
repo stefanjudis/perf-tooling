@@ -27,7 +27,7 @@
 
 <% } %>
 
-<div class="fuzzy">
+<div class="fuzzy" role="search">
 
   <form method="get">
 

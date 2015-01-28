@@ -1,0 +1,6 @@
+{
+  "name" : "Adept",
+  "cli" : "https://github.com/technopagan/adept-jpg-compressor",
+  "description" : "A Bash script to automate adaptive JPEG compression using common CLI tools",
+  "tags" : [ "images", "compression" ]
+}

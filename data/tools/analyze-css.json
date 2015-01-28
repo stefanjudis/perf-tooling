@@ -2,7 +2,7 @@
 "name" : "analyze-css",
 "description" : "CSS selectors complexity and performance analyzer",
 "cli" : "https://github.com/macbre/analyze-css",
-"grunt": "https://github.com/DeuxHuitHuit/grunt-contrib-analyze-css",
+"grunt": "https://github.com/DeuxHuitHuit/grunt-analyze-css",
 "module" : "https://github.com/macbre/analyze-css",
 "tags" : [ "css", "metrics" ]
 }

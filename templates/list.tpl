@@ -18,14 +18,14 @@
         partial(
           'templates/partials/header.tpl',
           {
-            active : type,
-            cdn    : cdn,
-            site   : site
+            active           : type,
+            cdn              : cdn,
+            site             : site
           }
         )
       %>
 
-      <main class="main">
+      <main class="main" role="main">
 
         <div class="container">
 

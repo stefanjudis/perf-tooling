@@ -7,52 +7,19 @@ var fuzzify     = require( './lib/fuzzify' );
 var _           = require( 'lodash' );
 var minify      = require( 'html-minifier' ).minify;
 var request     = require( 'request' );
-var config      = {
-  cdn       : process.env.CDN_URL || '',
-  dataDir   : 'data',
-  listPages : [ 'articles', 'slides', 'tools', 'videos' ],
-  github    : {
-    id    : process.env.GITHUB_ID,
-    token : process.env.GITHUB_TOKEN
-  },
-  platforms : [
-    'bookmarklet',
-    'chrome',
-    'firefox',
-    'internetExplorer',
-    'safari',
-    'mac',
-    'windows',
-    'linux',
-    'cli',
-    'module',
-    'grunt',
-    'gulp',
-    'script',
-    'service'
-  ],
-  site      : {
-    name : 'Performance tooling today'
-  },
-  templates : {
-    index : './templates/index.tpl',
-    list  : './templates/list.tpl'
-  },
-  twitter : {
-    consumer_key        : process.env.TWITTER_CONSUMER_KEY,
-    consumer_secret     : process.env.TWITTER_CONSUMER_SECRET,
-    access_token        : process.env.TWITTER_ACCESS_TOKEN,
-    access_token_secret : process.env.TWITTER_ACCESS_TOKEN_SECRET
-  },
-  vimeo   : {
-    clientId     : process.env.VIMEO_CLIENT_ID,
-    clientSecret : process.env.VIMEO_CLIENT_SECRET,
-    accessToken  : process.env.VIMEO_ACCESS_TOKEN
-  },
-  youtube : {
-    token : process.env.YOUTUBE_TOKEN
-  }
-};
+var config      = require( './config/config' );
+
+
+// var timeToLastCommit = false;
+
+// require( './lib/git-last-commit' )( function( error, data ) {
+//   if ( !error ) {
+//     timeToLastCommit = data;
+
+//     renderAllPages();
+//   }
+// } );
+
 
 /**
  * Youtube API stuff
@@ -434,38 +401,48 @@ function renderPage( type, query ) {
     } );
   }
 
+  /**
+   * Partial function to enable partials
+   * in lodash templates
+   *
+   * @param  {String} path    file path
+   * @param  {Object} options options for lodash templates
+   * @return {String}         rendered partial
+   */
+  function partial( path, options ) {
+    options = options || {};
+
+    return _.template(
+      fs.readFileSync( path ),
+      options
+    );
+  }
+
   return minify(
     _.template(
       pageContent.templates[ template ],
       {
-        css           : pageContent.css,
-        cdn           : config.cdn,
-        contributors  : contributors,
-        partial       : function( path, options ) {
-          options = options || {};
-
-          return _.template(
-            fs.readFileSync( path ),
-            options
-          );
-        },
-        people        : data.people,
-        platforms     : config.platforms,
-        resourceCount : {
+        css              : pageContent.css,
+        cdn              : config.cdn,
+        contributors     : contributors,
+        partial          : partial,
+        people           : data.people,
+        platforms        : config.platforms,
+        resourceCount    : {
           tools    : data.tools.length,
           articles : data.articles.length,
           videos   : data.videos.length,
           slides   : data.slides.length
         },
-        site          : config.site,
-        svg           : pageContent.svg,
-        list          : list,
-        hash          : {
+        site             : config.site,
+        svg              : pageContent.svg,
+        list             : list,
+        hash             : {
           css : pageContent.hashes.css,
           js  : pageContent.hashes.js
         },
-        query         : query,
-        type          : type
+        query            : query,
+        type             : type
       }
     ), {
       keepClosingSlash      : true,
@@ -477,6 +454,19 @@ function renderPage( type, query ) {
       useShortDoctype       : true
     }
   );
+}
+
+
+/**
+ * Render all page layout with current data
+ * @return {[type]} [description]
+ */
+function renderAllPages() {
+  pages.index    = renderPage( 'index' );
+  pages.articles = renderPage( 'articles' );
+  pages.slides   = renderPage( 'slides' );
+  pages.tools    = renderPage( 'tools' );
+  pages.videos   = renderPage( 'videos' );
 }
 
 

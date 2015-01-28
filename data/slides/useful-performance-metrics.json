@@ -1,0 +1,13 @@
+{
+  "name": "Useful performance metrics",
+  "author": "Ben Schwarz",
+  "date": "2014-12-09",
+  "social": {
+    "twitter": "@benschwarz"
+  },
+  "stats": {
+    "length": 53
+  },
+  "tags": ["budget", "performance", "tooling", "timing", "api"],
+  "url" : "https://speakerdeck.com/benschwarz/useful-performance-metrics"
+}

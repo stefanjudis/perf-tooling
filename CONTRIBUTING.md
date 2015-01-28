@@ -15,3 +15,4 @@
 * only `classes`, no `IDs`
 * max three level deep selectors
 * do not use `!important`
+* remove leading zeros from numbers
