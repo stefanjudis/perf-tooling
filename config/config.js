@@ -21,7 +21,9 @@ module.exports = {
     'gulp',
     'javascript',
     'php',
-    'service'
+    'service',
+    'wordpress',
+    'illustrator'
   ],
   site      : {
     name : 'Performance tooling today'

@@ -235,6 +235,21 @@
 
         <% } %>
 
+        <% if ( tool.wordpress ) { %>
+
+          <li class="tooltip" title="Wordpress">
+
+            <a href="<%= tool.wordpress %>" title="Link to Wordpress Plugin" class="resource-wordpress" target="_blank">
+              <svg>
+                <use xlink:href="#icon-wordpress" />
+              </svg>
+              Wordpress
+            </a>
+
+            <span><%= ( tool.stars.wordpress ) ? tool.stars.wordpress : 'N/A' %></span>
+
+        <% } %>
+
         <% if ( tool.service ) { %>
 
           <li class="tooltip" title="Service">
