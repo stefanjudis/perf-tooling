@@ -1,6 +1,0 @@
-{
-  "name" : "RICG Responsive Images",
-  "wordpress" : "https://github.com/ResponsiveImagesCG/wp-tevko-responsive-images",
-  "description" : "Basically, responsive images allow the browser to choose the best image from a list. This plugin works by including all available image sizes for each image upload. Whenever WordPress outputs the image through the media uploader, or whenever a featured image is generated, those sizes will be included in the image tag via the srcset attribute.",
-  "tags" : [ "images", "responsive" ]
-}

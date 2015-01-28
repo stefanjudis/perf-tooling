@@ -168,6 +168,47 @@ textarea {
   transition: all .3s;
 }
 
+input {
+
+  &[type="submit"] {
+    -webkit-appearance: button;
+    background: @color-btn-bg;
+    color: @color-btn;
+    cursor: pointer;
+
+    &:hover {
+      background: @color-btn-bg-hover;
+    }
+
+  }
+
+  &[type="search"] {
+    -webkit-appearance: textfield;
+  }
+
+}
+
+label {
+  display: block;
+  padding: 0 0 .5rem;
+}
+
+::-webkit-input-placeholder {
+  color: @color-placeholder;
+}
+
+::-moz-placeholder {
+  color: @color-placeholder;
+}
+
+:-moz-placeholder {
+  color: @color-placeholder;
+}
+
+:-ms-input-placeholder {
+  color: @color-placeholder;
+}
+
 p {
   margin: 0 0 .5rem;
 }
