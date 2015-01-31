@@ -1,0 +1,13 @@
+{
+  "name": "High performance web components",
+  "author": "Steve Souders",
+  "date": "2014-04-30",
+  "social": {
+    "twitter" : "@Souders"
+  },
+  "stats": {
+    "length": 45
+  },
+  "tags": ["spof", "web components"],
+  "url" : "http://www.slideshare.net/souders/high-performance-web-components"
+}
