@@ -1,0 +1,6 @@
+{
+  "name" : "WP-Optimize",
+  "wordpress" : "https://github.com/ruhanirabin/WP-Optimize",
+  "description" : "Simple but effective plugin allows you to extensively clean up your WordPress database and optimize it without doing manual queries.",
+  "tags" : [ "clean-up", "database" ]
+}
