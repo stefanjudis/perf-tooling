@@ -6,7 +6,8 @@
   "linux": "https://github.com/imagemin/imagemin-app",
   "mac": "https://github.com/imagemin/imagemin-app",
   "module" : "https://github.com/imagemin/imagemin",
-  "windows": "https://github.com/imagemin/imagemin-app",
+  "windows" : "https://github.com/imagemin/imagemin-app",
+  "wordpress" : "https://github.com/wp-plugins/ewww-image-optimizer",
   "description" : "Minify images seamlessly with Node.js.",
   "tags" : [ "images", "compression" ]
 }
