@@ -1,5 +1,7 @@
 {
   "name" : "Kraken.io",
+  "module" : "https://github.com/kraken-io/kraken-node",
+  "php" : "https://github.com/kraken-io/kraken-php",
   "service" : "https://kraken.io/web-interface",
   "description" : "Kraken is a robust, ultra-fast image optimizer and compressor with best-in-class algorithms. It'll save you bandwidth and storage space and will dramatically improve your website’s load times.",
   "tags" : [ "images", "compression" ]
