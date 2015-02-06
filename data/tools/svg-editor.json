@@ -1,0 +1,6 @@
+{
+  "name" : "SVG Editor",
+  "service" : "http://petercollingridge.appspot.com/svg-editor",
+  "description" : "A Javascript program to reduce the file size of SVGs in real time. Still in progress, but more flexible than the Python version.",
+  "tags" : [ "minification", "svg" ]
+}
