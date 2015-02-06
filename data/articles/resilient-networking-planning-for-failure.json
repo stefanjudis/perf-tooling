@@ -1,0 +1,13 @@
+{
+  "name" : "Resilient Networking: Planning for Failure",
+  "author": "Ilya Grigorik ",
+  "date": "2015-01-26",
+  "social": {
+    "twitter": "@igrigorik"
+  },
+  "stats": {
+    "length": 615
+  },
+  "url": "https://www.igvita.com/2015/01/26/resilient-networking/",
+  "tags": [ "network" ]
+}
