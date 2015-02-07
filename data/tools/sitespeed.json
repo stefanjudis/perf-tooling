@@ -2,6 +2,7 @@
   "name" : "sitespeed.io",
   "cli" : "https://github.com/sitespeedio/sitespeed.io",
   "grunt" : "https://github.com/sitespeedio/grunt-sitespeedio",
-  "description" : "Sitespeed.io is an open source tool that helps you analyze your website speed and performance based on performance best practices and metrics. It collects data from multiple pages on your website, analyze the pages using the rules and output the result as HTML or JUnit XML.",
+  "module" : "https://github.com/sitespeedio/sitespeed.io",
+  "description" : "Sitespeed.io is an open source tool that helps you analyze your website speed and performance based on performance best practices and metrics. It collects data from multiple pages on your website, analyze the pages using the rules and output the result as HTML, TAP or JUnit XML.",
   "tags" : [ "metrics" ]
 }
