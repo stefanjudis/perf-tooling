@@ -1,0 +1,16 @@
+{
+  "name" : "Getting Started with Web-Performance",
+  "date" : "2014-07",
+  "author" : "Daniel Austin",
+  "stats": {
+    "length": 500
+  },
+  "url" : "http://shop.oreilly.com/product/0636920032427.do",
+  "description" : "Speed is money—and increasing web performance can have a significant bottom line impact. This practical guide introduces a new model for thinking about end-to-end performance that everyone, from developers to engineers and analyst, can readily understand. Whether you want to write faster applications, or ensure site is fast all the time, you’ll discover how to achieve performance in a new way. Learn how to identify, prioritize, and analyze problems, and then—most importantly—how to optimize performance.",
+  "img" : {
+    "src" : "getting-started-with-web-performance.jpg",
+    "width" : 200,
+    "height" : 262
+  },
+  "tags" : [ "network", "performance" ]
+}
