@@ -1,0 +1,19 @@
+{
+  "name" : "Designing for Performance",
+  "date" : "2014-12",
+  "author" : "Lara Callender Hogan",
+  "social" : {
+    "twitter" : "@lara_hogan"
+  },
+  "stats": {
+    "length": 184
+  },
+  "url" : "http://shop.oreilly.com/product/0636920033578.do",
+  "description" : "As a web designer, you encounter tough choices when it comes to weighing aesthetics and performance. Good content, layout, images, and interactivity are essential for engaging your audience, and each of these elements have an enormous impact on page load time and the end-user experience. In this practical book, Lara Hogan helps you approach projects with page speed in mind, showing you how to test and benchmark which design choices are most critical.",
+  "img" : {
+    "src" : "designing-for-performance.jpg",
+    "width" : 200,
+    "height" : 300
+  },
+  "tags" : [ "loading", "images", "mobile-first" ]
+}
