@@ -1,0 +1,18 @@
+{
+  "name" : "Web Performance Pocket Guide",
+  "author" : "Andy Davies",
+  "social" : {
+    "twitter" : "@AndyDavies"
+  },
+  "stats": {
+    "length": 62
+  },
+  "url" : "http://www.fivesimplesteps.com/products/web-performance",
+  "description" : "Web pages are getting larger and slower to load, and we seem to be relying on browser and network improvements to rescue us. Visitors have expectations that pages should be faster. By stretching their patience, there's a danger they will spend less time on our sites, visit fewer pages and buy less.",
+  "img" : {
+    "src" : "web-performance-pocket-guide.jpg",
+    "width" : 200,
+    "height" : 298
+  },
+  "tags" : [ "images", "performance" ]
+}
