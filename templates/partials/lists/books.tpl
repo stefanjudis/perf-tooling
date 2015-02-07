@@ -9,13 +9,13 @@
 
       <figure class="media-obj-left">
 
-        <a href="<%= book.url %>" title="Link to video" target="_blank"><img src="<%= cdn %><%= book.img %>"></a>
+        <a href="<%= book.url %>" title="Link to video" target="_blank"><img src="<%= cdn %>/books/<%= book.img.src %>" width="<%= book.img.width %>" height="<%= book.img.height %>" alt="<%= book.name %> "></a>
 
       </figure>
 
       <div class="media-body">
 
-        <h3 class="post-title"><a href="<%= book.url %>" title="Link to video" target="_blank"><%= book.title || book.name %></a></h3>
+        <h3 class="post-title"><a href="<%= book.url %>" title="Link to video" target="_blank"><%= book.name %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
@@ -26,6 +26,8 @@
           <h4>by <%= book.author %></h4>
 
         <% } %>
+
+        <p><%= book.description %></p>
 
         <% if ( book.tags && book.tags.length ) { %>
 
