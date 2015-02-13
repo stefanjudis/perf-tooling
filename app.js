@@ -270,21 +270,23 @@ function fetchVideoMeta() {
             return;
           }
 
-          video.publishedAt = new Date( data.items[ 0 ].snippet.publishedAt );
-          video.thumbnail   =  {
-            url    : data.items[ 0 ].snippet.thumbnails.medium.url,
-            width  : data.items[ 0 ].snippet.thumbnails.medium.width,
-            height : data.items[ 0 ].snippet.thumbnails.medium.height
-          };
-          video.stats       = {
-            viewCount    : data.items[ 0 ].statistics.viewCount,
-            likeCount    : data.items[ 0 ].statistics.likeCount,
-            dislikeCount : data.items[ 0 ].statistics.dislikeCount
-          };
-          video.title       = data.items[ 0 ].snippet.title;
-          video.url         = 'https://www.youtube.com/watch?v=' + video.youtubeId;
+          if ( data.items.length ) {
+            video.publishedAt = new Date( data.items[ 0 ].snippet.publishedAt );
+            video.thumbnail   =  {
+              url    : data.items[ 0 ].snippet.thumbnails.medium.url,
+              width  : data.items[ 0 ].snippet.thumbnails.medium.width,
+              height : data.items[ 0 ].snippet.thumbnails.medium.height
+            };
+            video.stats       = {
+              viewCount    : data.items[ 0 ].statistics.viewCount,
+              likeCount    : data.items[ 0 ].statistics.likeCount,
+              dislikeCount : data.items[ 0 ].statistics.dislikeCount
+            };
+            video.title       = data.items[ 0 ].snippet.title;
+            video.url         = 'https://www.youtube.com/watch?v=' + video.youtubeId;
 
-          pages.videos = renderPage( 'videos' );
+            pages.videos = renderPage( 'videos' );
+          }
         } );
       }
     } else {
