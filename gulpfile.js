@@ -22,7 +22,7 @@ var concat        = require( 'gulp-concat' ),
     svgstore      = require( 'gulp-svgstore' );
 
 var files = {
-  img     : [ 'img/*' ],
+  img     : [ 'img/**/*' ],
   lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js', 'lib/**/*.js' ],
   scripts : [
     'js/shims/**/*.js',
