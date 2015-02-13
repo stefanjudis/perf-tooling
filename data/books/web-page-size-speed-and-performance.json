@@ -1,0 +1,19 @@
+{
+  "name" : "Web Page Size, Speed, and Performance",
+  "date" : "2014-06",
+  "author" : "Terrence Dorsey",
+  "social" : {
+    "twitter" : "@tpdorsey"
+  },
+  "stats": {
+    "length": 184
+  },
+  "url" : "http://www.oreilly.com/webops-perf/free/webpage-size-speed-perf.csp",
+  "description" : "Bigger screen real estate, high-density displays, ads, and automatically playing video add to the bloat, but tools and techniques that enable web developers to build complex sites quickly and easily are also part of the problem. Dorsey shows you how to measure site speed, assess page components, and optimize code to help reduce abandonment rates and make your site successful.",
+  "img" : {
+    "src" : "web-page-size-speed-and-performance.jpg",
+    "width" : 200,
+    "height" : 300
+  },
+  "tags" : [ "compression", "images", "scripts" ]
+}

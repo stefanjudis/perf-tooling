@@ -1,0 +1,19 @@
+{
+  "name" : "High Performance Browser Networking",
+  "date" : "2013-09",
+  "author" : "Ilya Grigorik",
+  "social" : {
+    "twitter" : "@igrigorik"
+  },
+  "stats": {
+    "length": 408
+  },
+  "url" : "http://shop.oreilly.com/product/0636920028048.do",
+  "description" : "How prepared are you to build fast and efficient web applications? This eloquent book provides what every web developer should know about the network, from fundamental limitations that affect performance to major innovations for building even more powerful browser applications—including HTTP 2.0 and XHR improvements, Server-Sent Events (SSE), WebSocket, and WebRTC.",
+  "img" : {
+    "src" : "high-performance-browser-networking.jpg",
+    "width" : 200,
+    "height" : 262
+  },
+  "tags" : [ "http", "network", "websocket" ]
+}

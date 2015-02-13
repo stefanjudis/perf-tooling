@@ -12,6 +12,8 @@ var concat        = require( 'gulp-concat' ),
     gulp          = require( 'gulp' ),
     jshint        = require( 'gulp-jshint' ),
     jshintStylish = require( 'jshint-stylish' ),
+    imagemin      = require( 'gulp-imagemin' ),
+    pngquant      = require( 'imagemin-pngquant' ),
     less          = require( 'gulp-less' ),
     prefix        = require( 'gulp-autoprefixer' ),
     minifyCSS     = require( 'gulp-minify-css' ),
@@ -20,6 +22,7 @@ var concat        = require( 'gulp-concat' ),
     svgstore      = require( 'gulp-svgstore' );
 
 var files = {
+  img     : [ 'img/**/*' ],
   lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js', 'lib/**/*.js' ],
   scripts : [
     'js/shims/**/*.js',
@@ -109,6 +112,21 @@ gulp.task( 'svg', function () {
 
 
 /*******************************************************************************
+ * IMAGE TASK
+ *
+ * this task is responsible for compressing images properly
+ */
+gulp.task( 'images', function () {
+  return gulp.src( files.img )
+              .pipe( imagemin( {
+                  progressive: true,
+                  use: [ pngquant() ]
+              } ) )
+              .pipe( gulp.dest( 'public/' ) );
+});
+
+
+/*******************************************************************************
  * BUILD
  *
  * run all build related tasks with:
@@ -116,7 +134,7 @@ gulp.task( 'svg', function () {
  *  $ gulp build
  *
  */
-gulp.task( 'build', [ 'styles', 'scripts', 'svg' ] );
+gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images' ] );
 
 
 /*******************************************************************************

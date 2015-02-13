@@ -46,7 +46,4 @@
   <link rel="apple-touch-icon" sizes="152x152" href="<%= cdn %>/apple-touch-icon-152x152-precomposed.png">
 
   <style><%= css %></style>
-
-  <div class="svgIcons"><%= svg %></div>
-
 </head>

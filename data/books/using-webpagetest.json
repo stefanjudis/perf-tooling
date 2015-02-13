@@ -1,0 +1,16 @@
+{
+  "name" : "Using WebPagetest",
+  "date" : "2014-06",
+  "author" : "Rick Viscomi, Andy Davies, Marcel Duran",
+  "stats": {
+    "length": 200
+  },
+  "url" : "http://shop.oreilly.com/product/0636920033592.do",
+  "description" : "Learn basic and advanced uses of WebPagetest, the performance measurement tool for optimizing websites. This practical guide shows users new to this tool how run tests and interpret results, and helps experienced users gain a better and more thorough understanding of hidden features in WebPagetest that make testing easier.",
+  "img" : {
+    "src" : "using-webpagetest.jpg",
+    "width" : 200,
+    "height" : 262
+  },
+  "tags" : [ "monitoring", "webpagetest" ]
+}
