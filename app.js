@@ -286,6 +286,8 @@ function fetchVideoMeta() {
             video.url         = 'https://www.youtube.com/watch?v=' + video.youtubeId;
 
             pages.videos = renderPage( 'videos' );
+          } else {
+            console.log( 'No video matching the YoutubeId' );
           }
         } );
       }
