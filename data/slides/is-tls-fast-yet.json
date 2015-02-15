@@ -8,6 +8,6 @@
   "stats": {
     "length": 44
   },
-  "tags": ["network", "authentication", "data integrity", "encryption"],
+  "tags" : [ "network", "server", "TLS" ],
   "url" : "https://docs.google.com/presentation/d/1BH9DI1XlmukCzU2i8OvxLIfgQf_aGlZgZyvWDSyYyzs/present"
 }
