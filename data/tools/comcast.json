@@ -1,0 +1,6 @@
+{
+  "name" : "Comcast",
+  "cli" : "https://github.com/tylertreat/Comcast",
+  "description" : "Testing distributed systems under hard failures like network partitions and instance termination is critical, but it's also important we test them under less catastrophic conditions because this is what they most often experience. Comcast is a tool designed to simulate common network problems like latency, bandwidth restrictions, and dropped/reordered/corrupted packets.",
+  "tags" : [ "bandwidth", "latency", "network" ]
+}
