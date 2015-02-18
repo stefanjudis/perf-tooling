@@ -1,0 +1,8 @@
+{
+  "name" : "Benchmark.js",
+  "module" : "https://github.com/bestiejs/benchmark.js",
+  "grunt" : "https://github.com/shama/grunt-benchmark",
+  "gulp" : "https://github.com/VicNumber21/gulp-benchmark",
+  "description" : "A robust benchmarking library that supports high-resolution timers & returns statistically significant results. As seen on jsPerf.",
+  "tags" : [ "benchmark", "javascript" ]
+}
