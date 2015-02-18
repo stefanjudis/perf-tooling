@@ -1,0 +1,8 @@
+{
+  "name" : "svg-sprite",
+  "node" : "https://github.com/jkphl/svg-sprite",
+  "grunt" : "https://github.com/jkphl/grunt-svg-sprite",
+  "gulp" : "https://github.com/jkphl/gulp-svg-sprite",
+  "description" : "SVG sprites & stacks galore — Node.js module that reads in a bunch of SVG files, optimizes them and creates SVG sprites in various flavours along with suitable stylesheet resources (e.g. CSS, Sass, LESS, Stylus, etc.)",
+  "tags" : [ "minification", "sprite", "svg" ]
+}
