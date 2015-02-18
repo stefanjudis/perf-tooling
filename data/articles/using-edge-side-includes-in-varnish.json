@@ -1,0 +1,13 @@
+{
+  "name" : "Controlling The Cache: Using Edge Side Includes In Varnish",
+  "author": "Rachel Andrew",
+  "date": "2015-02-16",
+  "social": {
+    "twitter": "@rachelandrew"
+  },
+  "stats": {
+    "length": 1720
+  },
+  "url": "http://www.smashingmagazine.com/2015/02/16/using-edge-side-includes-in-varnish/",
+  "tags": [ "caching", "includes" ]
+}
