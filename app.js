@@ -10,17 +10,6 @@ var request     = require( 'request' );
 var config      = require( './config/config' );
 
 
-// var timeToLastCommit = false;
-
-// require( './lib/git-last-commit' )( function( error, data ) {
-//   if ( !error ) {
-//     timeToLastCommit = data;
-
-//     renderAllPages();
-//   }
-// } );
-
-
 /**
  * Youtube API stuff
  */
