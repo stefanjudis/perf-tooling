@@ -160,6 +160,21 @@
 
         <% } %>
 
+        <% if ( tool.angular ) { %>
+
+          <li class="tooltip" title="AngularJS Script">
+
+            <a href="<%= tool.angular %>" title="Link to AngularJS Script" class="resource-angular" target="_blank">
+              <svg>
+                <use xlink:href="#icon-angular" />
+              </svg>
+              AngularJS Script
+            </a>
+
+            <span><%= ( tool.stars.angular ) ? tool.stars.angular : 'N/A' %></span>
+
+        <% } %>
+
         <% if ( tool.grunt ) { %>
 
           <li class="tooltip" title="Grunt plugin">
