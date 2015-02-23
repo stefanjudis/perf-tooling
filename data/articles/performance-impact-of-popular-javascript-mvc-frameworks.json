@@ -1,0 +1,23 @@
+{
+  "name" : "Research: Performance Impact of Popular JavaScript MVC Frameworks",
+  "authors" : [
+    {
+      "name" : "John Bender",
+      "twitter" : "@johnbender"
+    },
+    {
+      "name" : "Todd Parker",
+      "twitter" : "@toddmparker"
+    },
+    {
+      "name" : "Scott Jehl",
+      "twitter" : "@scottjehl"
+    }
+  ],
+  "date": "2014-12-12",
+  "stats": {
+    "length": 1294
+  },
+  "url": "http://www.filamentgroup.com/lab/mv-initial-load-times.html",
+  "tags": [ "single page application", "render" ]
+}
