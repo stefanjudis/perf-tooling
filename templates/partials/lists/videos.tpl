@@ -27,7 +27,16 @@
 
          <% } else { %>
 
-          <h4>by <%= video.author %></h4>
+          <%=
+            partial(
+              'templates/partials/authors/names.tpl',
+              {
+                entry   : video,
+                authors : video.authors,
+                people  : people
+              }
+            )
+          %>
 
         <% } %>
 
