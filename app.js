@@ -199,14 +199,16 @@ function fetchTwitterUserMeta() {
       userName = userName.replace( '@', '' );
 
       if ( typeof data.people[ userName ] === 'undefined' ) {
+        // block this entry until the response comes back
+        // -> save same requests
+        data.people[ userName ] = true;
+
         twit.get(
           '/users/show/:id',
-          { id : userName.replace( '@') },
+          { id : userName },
           function( err, twitterData, res ) {
             if ( err ) {
-              console.log( err );
-
-              return
+              return console.log( err );
             }
 
             data.people[ userName ] = {
@@ -215,26 +217,34 @@ function fetchTwitterUserMeta() {
               image         : twitterData.profile_image_url
             }
 
-            pages[ type ] = renderPage( type );
+            pages.articles = renderPage( 'articles' );
+            pages.books    = renderPage( 'books' );
+            pages.slides   = renderPage( 'slides' );
+            pages.videos   = renderPage( 'videos' );
         } );
       }
     }
 
-    _.each( data.videos, function( entry ) {
-      if ( entry.social && entry.social.twitter ) {
-        fetchTwitterUserData( entry.social.twitter, 'videos' );
-      }
-    } );
-    _.each( data.articles, function( entry ) {
-      if ( entry.social && entry.social.twitter ) {
-        fetchTwitterUserData( entry.social.twitter, 'articles' );
-      }
-    } );
-    _.each( data.slides, function( entry ) {
-      if ( entry.social && entry.social.twitter ) {
-        fetchTwitterUserData( entry.social.twitter, 'slides' );
-      }
-    } );
+    /**
+     * Evaluate set authors for each entry
+     * @param  {String} type entry type
+     */
+    function evalAuthors( type ) {
+      _.each( data[ type ], function( entry ) {
+        if ( entry.authors.length ) {
+          _.each( entry.authors, function( author ) {
+            if ( author.twitter ) {
+              fetchTwitterUserData( author.twitter, type );
+            }
+          } );
+        }
+      } );
+    }
+
+    evalAuthors( 'videos' );
+    evalAuthors( 'articles' );
+    evalAuthors( 'slides' );
+    evalAuthors( 'books' );
   } else {
     console.log( 'Twitter tokens missing' );
   }
@@ -245,6 +255,9 @@ function fetchTwitterUserMeta() {
  * Fetch video meta data
  */
 function fetchVideoMeta() {
+  var youtubeNotificationShown = false;
+  var vimeoNotificationShown   = false;
+
   _.each( data.videos, function( video ) {
     if ( config.youtube.token ) {
       if ( video.youtubeId ) {
@@ -281,7 +294,11 @@ function fetchVideoMeta() {
         } );
       }
     } else {
-      console.log( 'No Youtube token set!!!' );
+      if ( !youtubeNotificationShown ) {
+        console.log( 'No Youtube token set!!!' );
+
+        youtubeNotificationShown = true;
+      }
     }
 
     if (
@@ -319,7 +336,11 @@ function fetchVideoMeta() {
         } );
       }
     } else {
-      console.log( 'Vimeo credentials not set' );
+      if ( !vimeoNotificationShown ) {
+        console.log( 'Vimeo credentials not set!!!' );
+
+        vimeoNotificationShown = true;
+      }
     }
   } );
 }
@@ -328,11 +349,14 @@ function fetchVideoMeta() {
 /**
  * Read files and get tools
  *
+ * @param {String} type type
+ *
  * @return {Object} tools
  */
 function getList( type ) {
-  var list = [];
-  var entries = fs.readdirSync( config.dataDir + '/' + type );
+  var list                 = [];
+  var entries              = fs.readdirSync( config.dataDir + '/' + type );
+  var oldAuthorFormatCount = 0;
 
   entries.forEach( function( entry ) {
     if ( entry[ 0 ] !== '.' ) {
@@ -350,6 +374,20 @@ function getList( type ) {
         ).replace( /http(s)?:\/\//, '' ).toLowerCase();
         entry.hidden = false;
 
+        if (
+          typeof entry.author === 'string' &&
+          typeof entry.authors === 'undefined'
+        ) {
+          entry.authors = [
+            {
+              name    : entry.author,
+              twitter : entry.social && entry.social.twitter
+            }
+          ];
+
+          oldAuthorFormatCount++;
+        }
+
         list.push( entry );
       } catch( e ) {
         console.log( entry );
@@ -358,6 +396,13 @@ function getList( type ) {
       }
     }
   } );
+
+  if ( oldAuthorFormatCount ) {
+    console.warn(
+      '\'' + type.toUpperCase() + '\' includes ' + oldAuthorFormatCount + ' authors in old format'
+    );
+    console.warn( '-> Start cleaning up folks!!!' );
+  }
 
   return list;
 }
@@ -459,6 +504,7 @@ function renderPage( type, query ) {
 function renderAllPages() {
   pages.index    = renderPage( 'index' );
   pages.articles = renderPage( 'articles' );
+  pages.books    = renderPage( 'books' );
   pages.slides   = renderPage( 'slides' );
   pages.tools    = renderPage( 'tools' );
   pages.videos   = renderPage( 'videos' );

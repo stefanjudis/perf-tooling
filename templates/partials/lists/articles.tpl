@@ -8,37 +8,40 @@
 
     <li id="<%= article.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 
-      <% var twitterHandle = ( article.social && article.social.twitter ) ? article.social.twitter.replace( '@', '' ) : false; %>
-
-      <% if ( twitterHandle && people[ twitterHandle ] ) { %>
-
-        <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= article.author %>" target="_blank"><img src="<%= people[ twitterHandle ].image %>" title="Image of <%= article.author %>" class="post-author-img"></a>
-
-      <% } %>
+      <%=
+        partial(
+          'templates/partials/authors/images.tpl',
+          {
+            authors : article.authors,
+            people  : people
+          }
+        )
+      %>
 
       <div class="post-content">
 
         <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
 
-        <% if ( twitterHandle && people[ twitterHandle ] ) { %>
-
-          <h4><%= article.date %> by <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= article.author %>" target="_blank"><%= article.author %></a> (<%= people[ twitterHandle ].followerCount %> followers)</h4>
-
-        <% } else { %>
-
-          <h4><%= article.date %> by <%= article.author %></h4>
-
-        <% } %>
+        <%=
+          partial(
+            'templates/partials/authors/names.tpl',
+            {
+              entry   : article,
+              authors : article.authors,
+              people  : people
+            }
+          )
+        %>
 
         <% if ( article.stats ) { %>
 
-            <ul class="post-stats">
+          <ul class="post-stats">
 
-              <li>Length: <%= article.stats.length %> Words</li>
+            <li>Length: <%= article.stats.length %> Words</li>
 
-            </ul>
+          </ul>
 
-          <% } %>
+        <% } %>
 
         <% if ( article.tags && article.tags.length ) { %>
 

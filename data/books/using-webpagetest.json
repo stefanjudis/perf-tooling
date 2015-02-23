@@ -1,7 +1,20 @@
 {
   "name" : "Using WebPagetest",
   "date" : "2014-06",
-  "author" : "Rick Viscomi, Andy Davies, Marcel Duran",
+  "authors" : [
+    {
+      "name" : "Rick Viscomi",
+      "twitter" : "@rick_viscomi"
+    },
+    {
+      "name" : "Andy Davies",
+      "twitter" : "@AndyDavies"
+    },
+    {
+      "name" : "Marcel Duran",
+      "twitter" : "@marcelduran"
+    }
+  ],
   "stats": {
     "length": 200
   },
