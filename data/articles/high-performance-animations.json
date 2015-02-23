@@ -1,0 +1,19 @@
+{
+  "name" : "High Performance Animations",
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    },
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
+  "date": "2013-11-07",
+  "stats": {
+    "length": 1386
+  },
+  "url": "http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/",
+  "tags": [ "animation", "60fps" ]
+}
