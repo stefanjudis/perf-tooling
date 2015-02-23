@@ -1,0 +1,15 @@
+{
+  "name" : "What Makes Mobile Websites Tick, How Do We Make Them Faster",
+  "authors": [
+    {
+      "name" : "Doug Sillars",
+      "twitter" : "@dougsillars"
+    },
+    {
+      "name" : "Andy Davies",
+      "twitter" : "@andydavies"
+    }
+  ],
+  "youtubeId" : "1Erp7dtKvpw",
+  "tags" : [ "metrics", "webpagetest" ]
+}
