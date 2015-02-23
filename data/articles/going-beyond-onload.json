@@ -1,0 +1,19 @@
+{
+  "name" : "Going beyond onload",
+  "authors" : [
+    {
+      "name" : "Philip Tellis",
+      "twitter" : "@bluesmoon"
+    },
+    {
+      "name" : "Nic Jansma",
+      "twitter" : "@nicj"
+    }
+  ],
+  "date": "2014-12-20",
+  "stats": {
+    "length": 1105
+  },
+  "url": "http://calendar.perfplanet.com/2014/going-beyond-onload/",
+  "tags": [ "rum", "metrics" ]
+}
