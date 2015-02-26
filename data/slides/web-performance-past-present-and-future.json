@@ -1,0 +1,13 @@
+{
+  "name": "Web Performance: Past, Present, and Future",
+  "author": "Matt Shull",
+  "date": "2015-02-10",
+  "social": {
+    "twitter": "@TheMattShull"
+  },
+  "stats": {
+    "length": 47
+  },
+  "url" : "https://speakerdeck.com/mattshull/web-performance-past-present-and-future",
+  "tags": [ "budget", "loading", "performance"]
+}
