@@ -54,7 +54,7 @@
 
             <div class="text-center">
 
-              <h2>Automize. Monitore. Improve</h2>
+              <h2>Automate. Monitor. Improve.</h2>
               <h3 class="subline">Perf tooling is a collection of powerful resources which will help you to improve your workflow and to deliver better and faster websites.</h3>
 
             </div>
@@ -99,7 +99,7 @@
 
                   <h3><%= resourceCount.videos %> Videos</h3>
 
-                  <p>An exclusive collection of recent videos including performance specific tipps and tricks to build better and faster websites.</p>
+                  <p>An exclusive collection of recent videos including performance specific tips and tricks to build better and faster websites.</p>
 
                 </article>
 
