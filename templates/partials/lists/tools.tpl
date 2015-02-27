@@ -12,7 +12,7 @@
 
         <% if ( tool.bookmarklet ) { %>
 
-          <li class="tooltip" title="Bookmarklet">
+          <li class="tooltip" title="<% if ( tool.bookmarklet.isPaid ) { %>Paid <% } %>Bookmarklet">
 
             <a href="<%= tool.bookmarklet.url %>" title="Link to bookmarklet" class="resource-bookmarklet" target="_blank">
               <svg>
@@ -27,7 +27,7 @@
 
         <% if ( tool.chrome ) { %>
 
-          <li class="tooltip" title="Chrome extension">
+          <li class="tooltip" title="<% if ( tool.chrome.isPaid ) { %>Paid <% } %>Chrome extension">
 
             <a href="<%= tool.chrome.url %>" title="Link to Chrome extension" class="resource-chrome" target="_blank">
               <svg>
@@ -42,7 +42,7 @@
 
         <% if ( tool.firefox ) { %>
 
-          <li class="tooltip" title="Firefox extension">
+          <li class="tooltip" title="<% if ( tool.firefox.isPaid ) { %>Paid <% } %>Firefox extension">
 
             <a href="<%= tool.firefox.url %>" title="Link to Firefox extension" class="resource-firefox" target="_blank">
               <svg>
@@ -57,7 +57,7 @@
 
         <% if ( tool.internetExplorer ) { %>
 
-          <li class="tooltip" title="Internet Explorer extension">
+          <li class="tooltip" title="<% if ( tool.internetExplorer.isPaid ) { %>Paid <% } %>Internet Explorer extension">
 
             <a href="<%= tool.internetExplorer.url %>" title="Link to Internet Explorer Extension" class="resource-internet-explorer" target="_blank">
               <svg>
@@ -72,7 +72,7 @@
 
         <% if ( tool.safari ) { %>
 
-          <li class="tooltip" title="Safari extension">
+          <li class="tooltip" title="<% if ( tool.safari.isPaid ) { %>Paid <% } %>Safari extension">
 
             <a href="<%= tool.safari.url %>" title="Link to Safari extension" class="resource-safari" target="_blank">
               <svg>
@@ -87,7 +87,7 @@
 
         <% if ( tool.mac ) { %>
 
-          <li class="tooltip" title="Mac Application">
+          <li class="tooltip" title="<% if ( tool.mac.isPaid ) { %>Paid <% } %>Mac Application">
 
             <a href="<%= tool.mac.url %>" title="Link to Mac application" class="resource-mac" target="_blank">
               <svg>
@@ -102,7 +102,7 @@
 
         <% if ( tool.windows ) { %>
 
-          <li class="tooltip" title="Windows Application">
+          <li class="tooltip" title="<% if ( tool.windows.isPaid ) { %>Paid <% } %>Windows Application">
 
             <a href="<%= tool.windows.url %>" title="Link to Windows application" class="resource-windows" target="_blank">
               <svg>
@@ -117,7 +117,7 @@
 
         <% if ( tool.linux ) { %>
 
-          <li class="tooltip" title="Linux Application">
+          <li class="tooltip" title="<% if ( tool.linux.isPaid ) { %>Paid <% } %>Linux Application">
 
             <a href="<%= tool.linux.url %>" title="Link to Linux application" class="resource-linux" target="_blank">
               <svg>
@@ -132,7 +132,7 @@
 
         <% if ( tool.cli ) { %>
 
-          <li class="tooltip" title="CLI">
+          <li class="tooltip" title="<% if ( tool.cli.isPaid ) { %>Paid <% } %>CLI">
 
             <a href="<%= tool.cli.url %>" title="Link to CLI" class="resource-cli" target="_blank">
               <svg>
@@ -147,7 +147,7 @@
 
         <% if ( tool.module ) { %>
 
-          <li class="tooltip" title="Node module">
+          <li class="tooltip" title="<% if ( tool.module.isPaid ) { %>Paid <% } %>Node module">
 
             <a href="<%= tool.module.url %>" title="Link to Node module" class="resource-module" target="_blank">
               <svg>
@@ -162,7 +162,7 @@
 
         <% if ( tool.angular ) { %>
 
-          <li class="tooltip" title="AngularJS Script">
+          <li class="tooltip" title="<% if ( tool.angular.isPaid ) { %>Paid <% } %>AngularJS Script">
 
             <a href="<%= tool.angular.url %>" title="Link to AngularJS Script" class="resource-angular" target="_blank">
               <svg>
@@ -177,7 +177,7 @@
 
         <% if ( tool.grunt ) { %>
 
-          <li class="tooltip" title="Grunt plugin">
+          <li class="tooltip" title="<% if ( tool.grunt.isPaid ) { %>Paid <% } %>Grunt plugin">
 
             <a href="<%= tool.grunt.url %>" title="Link to Grunt plugin" class="resource-grunt" target="_blank">
               <svg>
@@ -192,7 +192,7 @@
 
         <% if ( tool.gulp ) { %>
 
-          <li class="tooltip" title="gulp plugin">
+          <li class="tooltip" title="<% if ( tool.gulp.isPaid ) { %>Paid <% } %>gulp plugin">
 
             <a href="<%= tool.gulp.url %>" title="Link to Gulp plugin" class="resource-gulp" target="_blank">
               <svg>
@@ -207,7 +207,7 @@
 
         <% if ( tool.illustrator ) { %>
 
-          <li class="tooltip" title="Illustrator Script">
+          <li class="tooltip" title="<% if ( tool.illustrator.isPaid ) { %>Paid <% } %>Illustrator Script">
 
             <a href="<%= tool.illustrator.url %>" title="Link to Illustrator Script" class="resource-illustrator" target="_blank">
               <svg>
@@ -222,7 +222,7 @@
 
         <% if ( tool.javascript ) { %>
 
-          <li class="tooltip" title="Javascript">
+          <li class="tooltip" title="<% if ( tool.javascript.isPaid ) { %>Paid <% } %>Javascript">
 
             <a href="<%= tool.javascript.url %>" title="Link to Script" class="resource-javascript" target="_blank">
               <svg>
@@ -237,7 +237,7 @@
 
         <% if ( tool.php ) { %>
 
-          <li class="tooltip" title="PHP">
+          <li class="tooltip" title="<% if ( tool.php.isPaid ) { %>Paid <% } %>PHP Script">
 
             <a href="<%= tool.php.url %>" title="Link to PHP" class="resource-php" target="_blank">
               <svg>
@@ -252,7 +252,7 @@
 
         <% if ( tool.wordpress ) { %>
 
-          <li class="tooltip" title="Wordpress">
+          <li class="tooltip" title="<% if ( tool.wordpress.isPaid ) { %>Paid <% } %>Wordpress Plugin">
 
             <a href="<%= tool.wordpress.url %>" title="Link to Wordpress Plugin" class="resource-wordpress" target="_blank">
               <svg>
@@ -267,7 +267,7 @@
 
         <% if ( tool.service ) { %>
 
-          <li class="tooltip" title="Service">
+          <li class="tooltip" title="<% if ( tool.service.isPaid ) { %>Paid <% } %>Service">
 
             <a href="<%= tool.service.url %>" title="Link to Service" class="resource-service" target="_blank">
               <svg>
