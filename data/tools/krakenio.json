@@ -7,7 +7,8 @@
     "url" : "https://github.com/kraken-io/kraken-php"
   },
   "service" : {
-    "url" : "https://kraken.io/web-interface"
+    "url" : "https://kraken.io/web-interface",
+    "isPaid": true
   },
   "wordpress" : {
     "url" : "https://github.com/kraken-io/kraken-wp-plugin"

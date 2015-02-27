@@ -1,7 +1,8 @@
 {
   "name" : "SpeedCurve",
   "service" : {
-    "url" : "http://speedcurve.com/"
+    "url" : "http://speedcurve.com/",
+    "isPaid": true
   },
   "description" : "Monitor front-end performance. Beat the competition. Get continuous feedback on how your front-end code is affecting the performance of your website.",
   "tags" : [ "metrics", "timings" ]
