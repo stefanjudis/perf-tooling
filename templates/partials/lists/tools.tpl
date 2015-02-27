@@ -14,7 +14,7 @@
 
           <li class="tooltip" title="Bookmarklet">
 
-            <a href="<%= tool.bookmarklet %>" title="Link to bookmarklet" class="resource-bookmarklet" target="_blank">
+            <a href="<%= tool.bookmarklet.url %>" title="Link to bookmarklet" class="resource-bookmarklet" target="_blank">
               <svg>
                 <use xlink:href="#icon-bookmarklet" />
               </svg>
@@ -29,7 +29,7 @@
 
           <li class="tooltip" title="Chrome extension">
 
-            <a href="<%= tool.chrome %>" title="Link to Chrome extension" class="resource-chrome" target="_blank">
+            <a href="<%= tool.chrome.url %>" title="Link to Chrome extension" class="resource-chrome" target="_blank">
               <svg>
                 <use xlink:href="#icon-chrome" />
               </svg>
@@ -44,7 +44,7 @@
 
           <li class="tooltip" title="Firefox extension">
 
-            <a href="<%= tool.firefox %>" title="Link to Firefox extension" class="resource-firefox" target="_blank">
+            <a href="<%= tool.firefox.url %>" title="Link to Firefox extension" class="resource-firefox" target="_blank">
               <svg>
                 <use xlink:href="#icon-firefox" />
               </svg>
@@ -59,7 +59,7 @@
 
           <li class="tooltip" title="Internet Explorer extension">
 
-            <a href="<%= tool.internetExplorer %>" title="Link to Internet Explorer Extension" class="resource-internet-explorer" target="_blank">
+            <a href="<%= tool.internetExplorer.url %>" title="Link to Internet Explorer Extension" class="resource-internet-explorer" target="_blank">
               <svg>
                 <use xlink:href="#icon-internet-explorer" />
               </svg>
@@ -74,7 +74,7 @@
 
           <li class="tooltip" title="Safari extension">
 
-            <a href="<%= tool.safari %>" title="Link to Safari extension" class="resource-safari" target="_blank">
+            <a href="<%= tool.safari.url %>" title="Link to Safari extension" class="resource-safari" target="_blank">
               <svg>
                 <use xlink:href="#icon-safari" />
               </svg>
@@ -89,7 +89,7 @@
 
           <li class="tooltip" title="Mac Application">
 
-            <a href="<%= tool.mac %>" title="Link to Mac application" class="resource-mac" target="_blank">
+            <a href="<%= tool.mac.url %>" title="Link to Mac application" class="resource-mac" target="_blank">
               <svg>
                 <use xlink:href="#icon-apple" />
               </svg>
@@ -104,7 +104,7 @@
 
           <li class="tooltip" title="Windows Application">
 
-            <a href="<%= tool.windows %>" title="Link to Windows application" class="resource-windows" target="_blank">
+            <a href="<%= tool.windows.url %>" title="Link to Windows application" class="resource-windows" target="_blank">
               <svg>
                 <use xlink:href="#icon-windows" />
               </svg>
@@ -119,7 +119,7 @@
 
           <li class="tooltip" title="Linux Application">
 
-            <a href="<%= tool.linux %>" title="Link to Linux application" class="resource-linux" target="_blank">
+            <a href="<%= tool.linux.url %>" title="Link to Linux application" class="resource-linux" target="_blank">
               <svg>
                 <use xlink:href="#icon-linux" />
               </svg>
@@ -134,7 +134,7 @@
 
           <li class="tooltip" title="CLI">
 
-            <a href="<%= tool.cli %>" title="Link to CLI" class="resource-cli" target="_blank">
+            <a href="<%= tool.cli.url %>" title="Link to CLI" class="resource-cli" target="_blank">
               <svg>
                 <use xlink:href="#icon-terminal" />
               </svg>
@@ -149,7 +149,7 @@
 
           <li class="tooltip" title="Node module">
 
-            <a href="<%= tool.module %>" title="Link to Node module" class="resource-module" target="_blank">
+            <a href="<%= tool.module.url %>" title="Link to Node module" class="resource-module" target="_blank">
               <svg>
                 <use xlink:href="#icon-module" />
               </svg>
@@ -164,7 +164,7 @@
 
           <li class="tooltip" title="AngularJS Script">
 
-            <a href="<%= tool.angular %>" title="Link to AngularJS Script" class="resource-angular" target="_blank">
+            <a href="<%= tool.angular.url %>" title="Link to AngularJS Script" class="resource-angular" target="_blank">
               <svg>
                 <use xlink:href="#icon-angular" />
               </svg>
@@ -179,7 +179,7 @@
 
           <li class="tooltip" title="Grunt plugin">
 
-            <a href="<%= tool.grunt %>" title="Link to Grunt plugin" class="resource-grunt" target="_blank">
+            <a href="<%= tool.grunt.url %>" title="Link to Grunt plugin" class="resource-grunt" target="_blank">
               <svg>
                 <use xlink:href="#icon-grunt" />
               </svg>
@@ -194,7 +194,7 @@
 
           <li class="tooltip" title="gulp plugin">
 
-            <a href="<%= tool.gulp %>" title="Link to Gulp plugin" class="resource-gulp" target="_blank">
+            <a href="<%= tool.gulp.url %>" title="Link to Gulp plugin" class="resource-gulp" target="_blank">
               <svg>
                 <use xlink:href="#icon-gulp" />
               </svg>
@@ -209,7 +209,7 @@
 
           <li class="tooltip" title="Illustrator Script">
 
-            <a href="<%= tool.illustrator %>" title="Link to Illustrator Script" class="resource-illustrator" target="_blank">
+            <a href="<%= tool.illustrator.url %>" title="Link to Illustrator Script" class="resource-illustrator" target="_blank">
               <svg>
                 <use xlink:href="#icon-illustrator" />
               </svg>
@@ -224,7 +224,7 @@
 
           <li class="tooltip" title="Javascript">
 
-            <a href="<%= tool.javascript %>" title="Link to Script" class="resource-javascript" target="_blank">
+            <a href="<%= tool.javascript.url %>" title="Link to Script" class="resource-javascript" target="_blank">
               <svg>
                 <use xlink:href="#icon-javascript" />
               </svg>
@@ -239,7 +239,7 @@
 
           <li class="tooltip" title="PHP">
 
-            <a href="<%= tool.php %>" title="Link to PHP" class="resource-php" target="_blank">
+            <a href="<%= tool.php.url %>" title="Link to PHP" class="resource-php" target="_blank">
               <svg>
                 <use xlink:href="#icon-php" />
               </svg>
@@ -254,7 +254,7 @@
 
           <li class="tooltip" title="Wordpress">
 
-            <a href="<%= tool.wordpress %>" title="Link to Wordpress Plugin" class="resource-wordpress" target="_blank">
+            <a href="<%= tool.wordpress.url %>" title="Link to Wordpress Plugin" class="resource-wordpress" target="_blank">
               <svg>
                 <use xlink:href="#icon-wordpress" />
               </svg>
@@ -269,7 +269,7 @@
 
           <li class="tooltip" title="Service">
 
-            <a href="<%= tool.service %>" title="Link to Service" class="resource-service" target="_blank">
+            <a href="<%= tool.service.url %>" title="Link to Service" class="resource-service" target="_blank">
               <svg>
                 <use xlink:href="#icon-globe" />
               </svg>
