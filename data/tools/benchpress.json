@@ -1,6 +1,8 @@
 {
   "name" : "Benchpress",
-  "angular" : "https://github.com/angular/benchpress",
+  "angular" : {
+    "url" : "https://github.com/angular/benchpress"
+  },
   "description" : "Benchpress allows creation and sampling of macro benchmarks to compare performance of real world web applications. The project is built and maintained by the Angular team, and is used to test performance of AngularJS and AngularDart, but is not limited to testing with these frameworks.",
   "tags" : [ "benchmark" ]
 }

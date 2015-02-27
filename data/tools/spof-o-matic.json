@@ -1,6 +1,8 @@
 {
   "name" : "SPOF-O-Matic",
-  "chrome" : "https://chrome.google.com/webstore/detail/spof-o-matic/plikhggfbplemddobondkeogomgoodeg",
+  "chrome" : {
+    "url" : "https://chrome.google.com/webstore/detail/spof-o-matic/plikhggfbplemddobondkeogomgoodeg"
+  },
   "description" : "Detects likely third-party single points of failure as you browse and allows you to Simulate 3rd party resources being unavailable.",
   "tags" : [ "single point of failure" ]
 }

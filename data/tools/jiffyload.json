@@ -1,6 +1,8 @@
 {
   "name" : "JiffyLoad",
-  "service" : "http://jiffyload.com",
+  "service" : {
+    "url" : "http://jiffyload.com"
+  },
   "description" : "JiffyLoad performs website speed analysis in real browsers, integrating Google Page Speed and YSlow. Service captures video and screenshots of loaded pages and provides tips to improve overall performance.",
   "tags" : [ "metrics" ]
 }

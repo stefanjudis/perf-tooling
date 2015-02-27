@@ -1,8 +1,14 @@
 {
   "name" : "UnCSS",
-  "grunt" : "https://github.com/addyosmani/grunt-uncss",
-  "gulp" : "https://github.com/ben-eb/gulp-uncss",
-  "module" : "https://github.com/giakki/uncss",
+  "grunt" : {
+    "url" : "https://github.com/addyosmani/grunt-uncss"
+  },
+  "gulp" : {
+    "url" : "https://github.com/ben-eb/gulp-uncss"
+  },
+  "module" : {
+    "url" : "https://github.com/giakki/uncss"
+  },
   "description" : "UnCSS is a tool that removes unused CSS from your stylesheets. It works across multiple files and supports Javascript-injected CSS.",
   "tags" : [ "css" ]
 }

@@ -1,6 +1,8 @@
 {
   "name" : "Spof",
-  "module" : "https://github.com/lafikl/spof",
+  "module" : {
+    "url" : "https://github.com/lafikl/spof"
+  },
   "description" : "See what will happen to your site when a third-party provider goes down!",
   "tags" : [ "single point of failure" ]
 }

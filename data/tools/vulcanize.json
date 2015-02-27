@@ -1,9 +1,17 @@
 {
   "name" : "Vulcanize",
-  "cli" : "https://github.com/Polymer/vulcanize",
-  "grunt" : "https://github.com/Polymer/grunt-vulcanize",
-  "gulp" : "https://github.com/sindresorhus/gulp-vulcanize",
-  "module" : "https://github.com/Polymer/vulcanize",
+  "cli" : {
+    "url" : "https://github.com/Polymer/vulcanize"
+  },
+  "grunt" : {
+    "url" : "https://github.com/Polymer/grunt-vulcanize"
+  },
+  "gulp" : {
+    "url" : "https://github.com/sindresorhus/gulp-vulcanize"
+  },
+  "module" : {
+    "url" : "https://github.com/Polymer/vulcanize"
+  },
   "description" : "Concatenate a set of Web Components into one file.",
   "tags" : [ "concatenation", "web components" ]
 }

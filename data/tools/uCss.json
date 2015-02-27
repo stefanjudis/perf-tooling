@@ -1,7 +1,11 @@
 {
   "name" : "uCSS",
-  "cli" : "https://github.com/operasoftware/ucss",
-  "grunt" : "https://github.com/ullmark/grunt-ucss",
+  "cli" : {
+    "url" : "https://github.com/operasoftware/ucss"
+  },
+  "grunt" : {
+    "url" : "https://github.com/ullmark/grunt-ucss"
+  },
   "description" : "uCSS is made for crawling (large) websites to find unused CSS selectors.",
   "tags" : [ "css" ]
 }

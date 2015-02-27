@@ -1,8 +1,14 @@
 {
   "name" : "HTMLMinifier",
-  "grunt" : "https://github.com/gruntjs/grunt-contrib-htmlmin",
-  "gulp" : "https://github.com/jonschlinkert/gulp-htmlmin",
-  "module" : "https://github.com/kangax/html-minifier",
+  "grunt" : {
+    "url" : "https://github.com/gruntjs/grunt-contrib-htmlmin"
+  },
+  "gulp" : {
+    "url" : "https://github.com/jonschlinkert/gulp-htmlmin"
+  },
+  "module" : {
+    "url" : "https://github.com/kangax/html-minifier"
+  },
   "description" : "HTMLMinifier is a highly configurable, well-tested, Javascript-based HTML minifier, with lint-like capabilities.",
   "tags" : [ "html", "minification" ]
 }

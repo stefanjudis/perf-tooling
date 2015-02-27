@@ -1,6 +1,8 @@
 {
   "name" : "ZeroSprites",
-  "service" : "https://github.com/clyfish/zerosprites",
+  "service" : {
+    "url" : "https://github.com/clyfish/zerosprites"
+  },
   "description" : "ZeroSprites is a CSS sprites generator aimed at area minimization using algorithms used in the field of VLSI floorplanning.",
   "tags" : [ "images", "sprite", "css" ]
 }

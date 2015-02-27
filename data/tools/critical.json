@@ -1,7 +1,11 @@
 {
   "name" : "critical",
-  "grunt" : "https://github.com/bezoerb/grunt-critical",
-  "module" : "https://github.com/addyosmani/critical",
+  "grunt" : {
+    "url" : "https://github.com/bezoerb/grunt-critical"
+  },
+  "module" : {
+    "url" : "https://github.com/addyosmani/critical"
+  },
   "description" : "Critical extracts & inlines critical-path (above-the-fold) CSS from HTML.",
   "tags" : [ "css", "above the fold" ]
 }

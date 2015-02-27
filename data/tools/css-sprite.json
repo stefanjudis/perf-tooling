@@ -1,9 +1,17 @@
 {
   "name" : "css-sprite",
-  "cli" : "https://github.com/aslansky/css-sprite",
-  "grunt" : "https://github.com/aslansky/css-sprite#usage-with-grunt",
-  "gulp" : "https://github.com/aslansky/css-sprite#usage-with-gulp",
-  "module" : "https://github.com/aslansky/css-sprite",
+  "cli" : {
+    "url": "https://github.com/aslansky/css-sprite"
+  },
+  "grunt" : {
+    "url" : "https://github.com/aslansky/css-sprite#usage-with-grunt"
+  },
+  "gulp" : {
+    "url" : "https://github.com/aslansky/css-sprite#usage-with-gulp"
+  },
+  "module" : {
+    "url" : "https://github.com/aslansky/css-sprite"
+  },
   "description" : "A css sprite generator that generates sprites and proper css files out of a directory of images.",
   "tags" : [ "css", "sprite" ]
 }

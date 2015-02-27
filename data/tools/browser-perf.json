@@ -1,6 +1,8 @@
  {
   "name" : "browser-perf",
-  "cli" : "https://github.com/axemclion/browser-perf",
+  "cli" : {
+    "url" : "https://github.com/axemclion/browser-perf"
+  },
   "description" : "Is a NodeJS based tool or measuring browser performance metrics (like layout, paint, dom load or frame times). It collects the metrics from sources like about:tracing, Chrome Devtools timeline, IE UI Responsiveness tab, Xperf, etc.",
   "tags" : [ "timings" ]
 }

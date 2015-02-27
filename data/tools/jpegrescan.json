@@ -1,6 +1,8 @@
 {
   "name" : "JPEGrescan",
-  "cli" : "https://github.com/kud/jpegrescan",
+  "cli" : {
+    "url" : "https://github.com/kud/jpegrescan"
+  },
   "description" : "JPEGrescan is a perl script that uses jpeg tools to optimize jpeg compression by micro-managing some of the compression math based on research into some of the most common parameters.",
   "tags" : [ "images", "compression", "lossless" ]
 }
