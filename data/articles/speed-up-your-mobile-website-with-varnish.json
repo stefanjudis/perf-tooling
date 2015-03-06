@@ -9,5 +9,5 @@
     "length": 2149
   },
   "url": "http://www.smashingmagazine.com/2013/12/04/speed-up-your-mobile-website-with-varnish/",
-  "tags": [ "apache", "database", "request", "server" ]
+  "tags": [ "varnish", "cache", "request", "server" ]
 }
