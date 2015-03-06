@@ -1,0 +1,13 @@
+{
+  "name" : "Font Loading Revisited with Font Events",
+  "author": "Scott Jehl",
+  "date": "2015-02-16",
+  "social": {
+    "twitter": "@scottjehl"
+  },
+  "stats": {
+    "length": 1771
+  },
+  "url": "http://www.filamentgroup.com/lab/font-events.html",
+  "tags": ["fonts", "loading" ]
+}
