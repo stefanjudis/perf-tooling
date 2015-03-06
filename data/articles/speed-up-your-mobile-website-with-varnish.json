@@ -1,0 +1,13 @@
+{
+  "name" : "Speed Up Your Mobile Website With Varnish",
+  "author": "Rachel Andrew",
+  "date": "2013-12-04",
+  "social": {
+    "twitter": "@rachelandrew"
+  },
+  "stats": {
+    "length": 2149
+  },
+  "url": "http://www.smashingmagazine.com/2013/12/04/speed-up-your-mobile-website-with-varnish/",
+  "tags": [ "varnish", "cache", "request", "server" ]
+}
