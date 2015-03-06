@@ -1,0 +1,15 @@
+{
+  "name" : "Improving Angular web app performance example",
+  "authors" : [
+    {
+      "name" : "Gleb Bahmutov",
+      "twitter" : "@bahmutov"
+    }
+  ],
+  "date": "2014-10-22",
+  "stats": {
+    "length": 5260
+  },
+  "url": "http://bahmutov.calepin.co/improving-angular-web-app-performance-example.html",
+  "tags": [ "angular", "devtools" ]
+}
