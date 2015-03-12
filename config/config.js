@@ -7,6 +7,7 @@ module.exports = {
     token : process.env.GITHUB_TOKEN
   },
   platforms : [
+    'angular',
     'bookmarklet',
     'chrome',
     'firefox',
