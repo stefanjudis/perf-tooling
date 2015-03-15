@@ -90,8 +90,9 @@ var pages = {
 var pageContent = {
   css       : fs.readFileSync( './public/main.css', 'utf8' ),
   hashes    : {
-    css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
-    js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
+    css     : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
+    js      : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) ),
+    enhance : md5( fs.readFileSync( './public/enhance.js', 'utf8' ) )
   },
   svg       : fs.readFileSync( './public/icons.svg', 'utf8' ),
   templates : {
@@ -479,7 +480,8 @@ function renderPage( type, query ) {
         list             : list,
         hash             : {
           css : pageContent.hashes.css,
-          js  : pageContent.hashes.js
+          js  : pageContent.hashes.js,
+          enhance : pageContent.hashes.enhance
         },
         query            : query,
         type             : type

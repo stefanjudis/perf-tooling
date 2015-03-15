@@ -29,7 +29,8 @@ var files = {
     'js/helper/**/*.js',
     'js/featureDetects/**/*.js',
     'js/components/**/*.js',
-    'js/tooling.js'
+    'js/tooling.js',
+    'js/enhance.js'
   ],
   styles  : [ 'less/main.less' ],
   svg     : [ 'svg/icons/*.svg' ],
@@ -88,6 +89,7 @@ gulp.task( 'styles', function () {
 gulp.task( 'scripts', function() {
   return gulp.src( files.scripts )
     .pipe( concat( 'tooling.js' ) )
+    .pipe( concat( 'enhance.js' ) )
     .pipe( uglify() )
     .pipe( gulp.dest( 'public' ) );
 });

@@ -29,6 +29,14 @@
     }
   </script>
 
+  <meta name="maincss"  content="<%= cdn %>/main.css">
+  <!--#if expr="$HTTP_COOKIE=/maincss\=true/" -->
+  <link rel="stylesheet" href="<%= cdn %>/main.css">
+  <!--#endif -->
+  <script src="<%= cdn %>/enhance.js" async></script>
+
+  <noscript><link rel="stylesheet" href="<%= cdn %>/main.css"></noscript>
+
   <link rel="dns-prefetch" href="http://www.google-analytics.com/">
   <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">
 
@@ -45,5 +53,5 @@
   <link rel="apple-touch-icon" sizes="76x76" href="<%= cdn %>/apple-touch-icon-76x76-precomposed.png">
   <link rel="apple-touch-icon" sizes="152x152" href="<%= cdn %>/apple-touch-icon-152x152-precomposed.png">
 
-  <style><%= css %></style>
+
 </head>
