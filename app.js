@@ -89,10 +89,10 @@ var pages = {
  */
 var pageContent = {
   css       : fs.readFileSync( './public/main.css', 'utf8' ),
+  enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
   hashes    : {
     css     : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
-    js      : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) ),
-    enhance : md5( fs.readFileSync( './public/enhance.js', 'utf8' ) )
+    js      : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
   },
   svg       : fs.readFileSync( './public/icons.svg', 'utf8' ),
   templates : {
@@ -463,6 +463,7 @@ function renderPage( type, query ) {
       pageContent.templates[ template ],
       {
         css              : pageContent.css,
+        enhance          : pageContent.enhance,
         cdn              : config.cdn,
         contributors     : contributors,
         partial          : partial,
@@ -479,9 +480,8 @@ function renderPage( type, query ) {
         svg              : pageContent.svg,
         list             : list,
         hash             : {
-          css : pageContent.hashes.css,
-          js  : pageContent.hashes.js,
-          enhance : pageContent.hashes.enhance
+          css     : pageContent.hashes.css,
+          js      : pageContent.hashes.js
         },
         query            : query,
         type             : type
@@ -555,11 +555,12 @@ config.listPages.forEach( function( page ) {
   pages[ page ] = renderPage( page );
 
   app.get( '/' + page, function( req, res ) {
-    if ( req.query && req.query.q && req.query.q.length ) {
+    //if ( req.query && req.query.q && req.query.q.length ) {
       res.send( renderPage( page, req.query.q ) );
-    } else {
-      res.send( pages[ page ] );
-    }
+
+    //} else {
+    //  res.send( pages[ page ] );
+    //}
   } );
 } );
 

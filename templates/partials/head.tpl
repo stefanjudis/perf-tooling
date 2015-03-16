@@ -29,11 +29,13 @@
     }
   </script>
 
-  <meta name="maincss"  content="<%= cdn %>/main.css">
-  <!--#if expr="$HTTP_COOKIE=/maincss\=true/" -->
+  <meta name="maincss"  content="<%= cdn %>/main_<%= hash.css %>.css">
+  <!--#if expr="$HTTP_COOKIE=/maincss\!== true/" -->
+  <style><%= css %></style>
+  <!--#else -->
   <link rel="stylesheet" href="<%= cdn %>/main.css">
   <!--#endif -->
-  <script src="<%= cdn %>/enhance.js" async></script>
+  <script><%= enhance %></script>
 
   <noscript><link rel="stylesheet" href="<%= cdn %>/main.css"></noscript>
 

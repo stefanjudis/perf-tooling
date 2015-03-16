@@ -19,19 +19,24 @@ var concat        = require( 'gulp-concat' ),
     minifyCSS     = require( 'gulp-minify-css' ),
     uglify        = require( 'gulp-uglify' ),
     tasks         = require( 'gulp-task-listing' ),
-    svgstore      = require( 'gulp-svgstore' );
+    svgstore      = require( 'gulp-svgstore' ),
+    mergeStream   = require( 'merge-stream' );
 
 var files = {
   img     : [ 'img/**/*' ],
   lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js', 'lib/**/*.js' ],
-  scripts : [
-    'js/shims/**/*.js',
-    'js/helper/**/*.js',
-    'js/featureDetects/**/*.js',
-    'js/components/**/*.js',
-    'js/tooling.js',
-    'js/enhance.js'
-  ],
+  scripts : {
+    tooling: [
+      'js/shims/**/*.js',
+      'js/helper/**/*.js',
+      'js/featureDetects/**/*.js',
+      'js/components/**/*.js',
+      'js/tooling.js'
+    ],
+    enhance: [
+      'js/enhance.js'
+    ]
+  },
   styles  : [ 'less/main.less' ],
   svg     : [ 'svg/icons/*.svg' ],
   watch   : {
@@ -87,11 +92,16 @@ gulp.task( 'styles', function () {
  * - and save it to public
  */
 gulp.task( 'scripts', function() {
-  return gulp.src( files.scripts )
-    .pipe( concat( 'tooling.js' ) )
-    .pipe( concat( 'enhance.js' ) )
-    .pipe( uglify() )
-    .pipe( gulp.dest( 'public' ) );
+  var keys   = Object.keys( files.scripts );
+
+  var streams = keys.map( function( element ) {
+    return gulp.src( files.scripts[element] )
+      .pipe( concat( element + '.js' ) )
+      .pipe( uglify() )
+      .pipe( gulp.dest( 'public' ) );
+  } );
+
+  return mergeStream.apply( null, streams );
 });
 
 

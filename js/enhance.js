@@ -10,10 +10,9 @@
 
   // Define some variables to be used throughout this file
   var doc = window.document,
-    docElem = doc.documentElement,
-    head = doc.head || doc.getElementsByTagName( "head" )[ 0 ],
-  // this references a meta tag's name whose content attribute should define the path to the full CSS file for the site
-    fullCSSKey = "maincss";
+      head = doc.head || doc.getElementsByTagName( "head" )[ 0 ],
+      // this references a meta tag's name whose content attribute should define the path to the full CSS file for the site
+      fullCSSKey = "maincss";
 
   // loadCSS: load a CSS file asynchronously. Included from https://github.com/filamentgroup/loadCSS/
   function loadCSS( href, before, media ){
