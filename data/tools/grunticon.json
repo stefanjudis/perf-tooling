@@ -1,0 +1,6 @@
+{
+  "name" : "grunticon",
+  "grunt" : "https://github.com/filamentgroup/grunticon",
+  "description" : "grunticon takes a folder of SVG/PNG files (typically, icons that you've drawn in an application like Adobe Illustrator), and outputs them to CSS in 3 formats: svg data urls, png data urls, and a third fallback CSS file with references to regular png images, which are also automatically generated and placed in a folder.",
+  "tags" : [ "images", "svg", "css" ]
+}
