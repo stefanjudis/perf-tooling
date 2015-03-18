@@ -51,7 +51,7 @@ if (
 }
 
 
-var port         = process.env.PORT || 3000;
+var port         = process.env.PORT || config.port;
 
 
 var data         = {
