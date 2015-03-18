@@ -7,19 +7,24 @@
 'use strict';
 
 // Require the needed packages
-var concat        = require( 'gulp-concat' ),
-    csslint       = require( 'gulp-csslint' ),
-    gulp          = require( 'gulp' ),
-    jshint        = require( 'gulp-jshint' ),
-    jshintStylish = require( 'jshint-stylish' ),
-    imagemin      = require( 'gulp-imagemin' ),
-    pngquant      = require( 'imagemin-pngquant' ),
-    less          = require( 'gulp-less' ),
-    prefix        = require( 'gulp-autoprefixer' ),
-    minifyCSS     = require( 'gulp-minify-css' ),
-    uglify        = require( 'gulp-uglify' ),
-    tasks         = require( 'gulp-task-listing' ),
-    svgstore      = require( 'gulp-svgstore' );
+var concat        = require( 'gulp-concat' );
+var csslint       = require( 'gulp-csslint' );
+var gulp          = require( 'gulp' );
+var jshint        = require( 'gulp-jshint' );
+var jshintStylish = require( 'jshint-stylish' );
+var imagemin      = require( 'gulp-imagemin' );
+var pngquant      = require( 'imagemin-pngquant' );
+var less          = require( 'gulp-less' );
+var prefix        = require( 'gulp-autoprefixer' );
+var minifyCSS     = require( 'gulp-minify-css' );
+var uglify        = require( 'gulp-uglify' );
+var tasks         = require( 'gulp-task-listing' );
+var svgstore      = require( 'gulp-svgstore' );
+var nodemon       = require( 'nodemon' );
+var browserSync   = require( 'browser-sync' );
+var reload        = browserSync.reload;
+
+var config = require( './config/config' );
 
 var files = {
   img     : [ 'img/**/*' ],
@@ -55,7 +60,7 @@ gulp.task( 'lint', function() {
   return gulp.src( files.lint )
     .pipe( jshint() )
     .pipe( jshint.reporter( jshintStylish ) );
-});
+} );
 
 
 /*******************************************************************************
@@ -75,7 +80,7 @@ gulp.task( 'styles', function () {
     .pipe( prefix( 'last 1 version', '> 1%', 'ie 8', 'ie 7' ) )
     .pipe( minifyCSS() )
     .pipe( gulp.dest( 'public/' ) );
-});
+} );
 
 
 /*******************************************************************************
@@ -89,8 +94,9 @@ gulp.task( 'scripts', function() {
   return gulp.src( files.scripts )
     .pipe( concat( 'tooling.js' ) )
     .pipe( uglify() )
-    .pipe( gulp.dest( 'public' ) );
-});
+    .pipe( gulp.dest( 'public' ) )
+    .pipe( reload( { stream : true } ) );
+} );
 
 
 /*******************************************************************************
@@ -108,7 +114,7 @@ gulp.task( 'svg', function () {
                 inlineSvg : true
               } ) )
              .pipe( gulp.dest( 'public/' ) );
-});
+} );
 
 
 /*******************************************************************************
@@ -123,7 +129,44 @@ gulp.task( 'images', function () {
                   use: [ pngquant() ]
               } ) )
               .pipe( gulp.dest( 'public/' ) );
-});
+} );
+
+
+/*******************************************************************************
+ * BROWSERSYNC TASK
+ *
+ * this task is responsible for setting up the proxy in browsersync
+ */
+gulp.task( 'browser-sync', [ 'nodemon' ], function() {
+  browserSync( {
+    proxy       : 'http://localhost:' + config.port,
+    port        : 4000,
+    reloadDelay : 1000
+  } );
+} );
+
+
+/*******************************************************************************
+ * NODEMON TASK
+ *
+ * this task is responsible for setting nodemon and the express application
+ */
+gulp.task( 'nodemon', function (cb) {
+  var called = false;
+
+  nodemon( {
+    script : 'app.js',
+    ext    : 'tpl css js',
+    watch  : [ 'templates/', 'public', 'app.js' ]
+  } ).on( 'start', function () {
+    if ( !called ) {
+      called = true;
+      cb();
+    }
+  } ).on( 'restart', function() {
+    browserSync.reload();
+  } );
+} );
 
 
 /*******************************************************************************
@@ -141,11 +184,11 @@ gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images' ] );
  * this task will kick off the watcher for JS, CSS, HTML files
  * for easy and instant development
  */
-gulp.task( 'watch', function() {
+gulp.task( 'watch', [ 'browser-sync' ], function() {
   gulp.watch( files.lint, [ 'lint' ] );
   gulp.watch( files.watch.styles, [ 'styles' ] );
   gulp.watch( files.scripts, [ 'scripts' ] );
-});
+} );
 
 
 /*******************************************************************************
