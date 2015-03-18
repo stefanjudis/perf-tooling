@@ -1,10 +1,12 @@
 {
   "name" : "Inlining critical CSS for first-time visits",
-  "author": "Jeremy Keith",
+  "authors": [
+    {
+      "name" : "Jeremy Keith",
+      "twitter": "@adactio"
+    }
+  ],
   "date": "2015-03-10",
-  "social": {
-    "twitter": "@adactio"
-  },
   "stats": {
     "length": 1121
   },
