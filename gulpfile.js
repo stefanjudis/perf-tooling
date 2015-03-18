@@ -94,8 +94,7 @@ gulp.task( 'scripts', function() {
   return gulp.src( files.scripts )
     .pipe( concat( 'tooling.js' ) )
     .pipe( uglify() )
-    .pipe( gulp.dest( 'public' ) )
-    .pipe( reload( { stream : true } ) );
+    .pipe( gulp.dest( 'public' ) );
 } );
 
 
