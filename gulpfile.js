@@ -150,7 +150,7 @@ gulp.task( 'browser-sync', [ 'nodemon' ], function() {
  *
  * this task is responsible for setting nodemon and the express application
  */
-gulp.task( 'nodemon', function (cb) {
+gulp.task( 'nodemon', [ 'build' ], function (cb) {
   var called = false;
 
   nodemon( {
@@ -160,7 +160,7 @@ gulp.task( 'nodemon', function (cb) {
   } ).on( 'start', function () {
     if ( !called ) {
       called = true;
-      cb();
+      setTimeout( cb, 1000 );
     }
   } ).on( 'restart', function() {
     browserSync.reload();
@@ -183,7 +183,7 @@ gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images' ] );
  * this task will kick off the watcher for JS, CSS, HTML files
  * for easy and instant development
  */
-gulp.task( 'watch', [ 'browser-sync' ], function() {
+gulp.task( 'dev', [ 'browser-sync' ], function() {
   gulp.watch( files.lint, [ 'lint' ] );
   gulp.watch( files.watch.styles, [ 'styles' ] );
   gulp.watch( files.scripts, [ 'scripts' ] );
@@ -199,7 +199,7 @@ gulp.task( 'watch', [ 'browser-sync' ], function() {
  * $ gulp dev
  *
  */
-gulp.task( 'dev', [ 'build', 'watch' ] );
+// gulp.task( 'dev', [ 'build' ] );
 
 
 /**
