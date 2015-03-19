@@ -1,13 +1,15 @@
 {
   "name" : "Using WEBP/JPEG 2000/JPEG-XR/APNG Now With Picturefill and Modernizr",
-  "author": "Zoltan Hawryluk",
-  "date": "2015-01-14",
-  "social": {
-    "twitter": "@zoltandulac"
+  "authors" : [
+    {
+      "name" : "Zoltan Hawryluk",
+      "twitter" : "@zoltandulac"
+    }
+  ],
+  "date" : "2015-01-14",
+  "stats" : {
+    "length" : 4376
   },
-  "stats": {
-    "length": 4376
-  },
-  "url": "http://www.useragentman.com/blog/2015/01/14/using-webp-jpeg2000-jpegxr-apng-now-with-picturefill-and-modernizr/",
-  "tags": [ "compression", "images", "loading" ]
+  "url" : "http://www.useragentman.com/blog/2015/01/14/using-webp-jpeg2000-jpegxr-apng-now-with-picturefill-and-modernizr/",
+  "tags" : [ "compression", "images", "loading" ]
 }

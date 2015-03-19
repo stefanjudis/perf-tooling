@@ -1,13 +1,15 @@
 {
   "name" : "Performance measurements using Chrome DevTools code snippets",
-  "author": "Gleb Bahmutov",
-  "date": "2014-12-15",
-  "social": {
-    "twitter": "@bahmutov"
+  "authors" : [
+    {
+      "name" : "Gleb Bahmutov",
+      "twitter" : "@bahmutov"
+    }
+  ],
+  "date" : "2014-12-15",
+  "stats" : {
+    "length" : 1210
   },
-  "stats": {
-    "length": 1210
-  },
-  "url": "http://calendar.perfplanet.com/2014/performance-measurements-using-chrome-devtools-code-snippets/",
-  "tags": [ "devtools", "monitoring" ]
+  "url" : "http://calendar.perfplanet.com/2014/performance-measurements-using-chrome-devtools-code-snippets/",
+  "tags" : [ "devtools", "monitoring" ]
 }

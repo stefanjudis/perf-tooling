@@ -1,13 +1,15 @@
 {
   "name" : "Flash of Faux Text-Still More on Font Loading",
-  "author": "Zach Leatherman",
-  "date": "2015-01-22",
-  "social": {
-    "twitter": "@zachleat"
+  "authors" : [
+    {
+      "name" : "Zach Leatherman",
+      "twitter" : "@zachleat"
+    }
+  ],
+  "date" : "2015-01-22",
+  "stats" : {
+    "length" : 1102
   },
-  "stats": {
-    "length": 1102
-  },
-  "url": "http://www.zachleat.com/web/foft/",
-  "tags": [ "webfonts" ]
+  "url" : "http://www.zachleat.com/web/foft/",
+  "tags" : [ "webfonts" ]
 }
