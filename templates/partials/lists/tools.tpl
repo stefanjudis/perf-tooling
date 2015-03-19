@@ -252,9 +252,9 @@
 
         <% if ( tool.wordpress ) { %>
 
-          <li class="tooltip" title="Wordpress">
+          <li class="tooltip" title="WordPress">
 
-            <a href="<%= tool.wordpress %>" title="Link to Wordpress Plugin" class="resource-wordpress" target="_blank">
+            <a href="<%= tool.wordpress %>" title="Link to WordPress Plugin" class="resource-wordpress" target="_blank">
               <svg>
                 <use xlink:href="#icon-wordpress" />
               </svg>
