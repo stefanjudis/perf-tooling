@@ -1,0 +1,15 @@
+{
+  "name" : "Inlining critical CSS for first-time visits",
+  "authors": [
+    {
+      "name" : "Jeremy Keith",
+      "twitter": "@adactio"
+    }
+  ],
+  "date": "2015-03-10",
+  "stats": {
+    "length": 1121
+  },
+  "url": "https://adactio.com/journal/8504",
+  "tags": [ "above the fold", "css", "critical" ]
+}
