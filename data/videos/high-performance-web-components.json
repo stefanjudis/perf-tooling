@@ -1,9 +1,11 @@
 {
   "name" : "High Performance Web Components",
-  "author": "Steve Sourders",
-  "social": {
-    "twitter": "@Souders"
-  },
+  "authors" : [
+    {
+      "name" : "Steve Sourders",
+      "twitter" : "@Souders"
+    }
+  ],
   "youtubeId" : "m3EPIeKaDCU",
   "tags" : [ "spof", "web components" ]
 }

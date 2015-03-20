@@ -1,9 +1,11 @@
 {
   "name" : "Tim Kadlec – The Space Between – beyond tellerrand Berlin 2014",
-  "author": "Tim Kadlec",
-  "social": {
-    "twitter": "@tkadlec"
-  },
+  "authors" : [
+    {
+      "name" : "Tim Kadlec",
+      "twitter" : "@tkadlec"
+    }
+  ],
   "vimeoId" : "113403673",
   "tags" : [ "perception", "UX" ]
 }

@@ -1,9 +1,11 @@
 {
   "name" : "Velocity Conference 2014: Advanced Image Compression Techniques - Part 2",
-  "author": "Tobias Baldauf",
-  "social": {
-    "twitter": "@tbaldauf"
-  },
+  "authors": [
+    {
+      "name" : "Tobias Baldauf",
+      "twitter" : "@tbaldauf"
+    }
+  ],
   "youtubeId" : "jImNy8aNey8",
   "tags" : [ "compression", "images" ]
 }
