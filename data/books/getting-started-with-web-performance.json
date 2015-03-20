@@ -1,7 +1,11 @@
 {
   "name" : "Getting Started with Web-Performance",
   "date" : "2014-07",
-  "author" : "Daniel Austin",
+  "authors" : [
+    {
+      "name" : "Daniel Austin"
+    }
+  ],
   "stats": {
     "length": 500
   },

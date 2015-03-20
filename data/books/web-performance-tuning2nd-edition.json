@@ -1,9 +1,13 @@
 {
   "name" : "Web Performance Tuning, 2nd Edition",
   "date" : "2002-03",
-  "author" : "Patrick Killelea",
-  "stats": {
-    "length": 480
+  "authors" : [
+    {
+      "name" : "Patrick Killelea"
+    }
+  ],
+  "stats" : {
+    "length" : 480
   },
   "url" : "http://shop.oreilly.com/product/9780596001728.do",
   "description" : "As long as there's been a Web, people have been trying to make it faster. The maturation of the Web has meant more users, more data, more features, and consequently longer waits on the Web. Improved performance has become a critical factor in determining the usability of the Web in general and of individual sites in particular.Web Performance Tuning, 2nd Edition is about getting the best possible performance from the Web. This book isn't just about tuning web server software; it's also about streamlining web content, getting optimal performance from a browser, tuning both client and server hardware, and maximizing the capacity of the network itself.",

@@ -1,12 +1,14 @@
 {
   "name" : "High Performance Responsive Design",
   "date" : "2014-11",
-  "author" : "Tom Barker",
-  "social" : {
-    "twitter" : "@tomjbarker"
-  },
-  "stats": {
-    "length": 176
+  "authors" : [
+    {
+      "name" : "Tom Barker",
+      "twitter" : "@tomjbarker"
+    }
+  ],
+  "stats" : {
+    "length" : 176
   },
   "url" : "http://shop.oreilly.com/product/0636920033103.do",
   "description" : "Yes, you can use responsive web design to create high performance, compelling websites. With this practical book, author Tom Barker demonstrates that responsive design is not just a frontend-only approach, but also a philosophy for taking advantage of the entire web stack. Responsive design patterns and anti-patterns, derived from heavily used real-world sites, are guiding principles throughout the book.",
