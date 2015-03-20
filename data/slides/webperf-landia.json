@@ -1,13 +1,15 @@
 {
-  "name": "News from webperf-landia",
-  "author": "Ilya Grigorik",
-  "date": "2014-09-21",
-  "social": {
-    "twitter": "@igrigorik"
+  "name" : "News from webperf-landia",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "date" : "2014-09-21",
+  "stats" : {
+    "length" : 38
   },
-  "stats": {
-    "length": 38
-  },
-  "tags": ["api", "network", "timing"],
+  "tags" : [ "api", "network", "timing" ],
   "url" : "https://docs.google.com/presentation/d/18iUgAReTybP5yXBHRUN-8cSd66FnI9CbibrBRIDxTPw/present"
 }

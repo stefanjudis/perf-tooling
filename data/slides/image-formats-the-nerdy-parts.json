@@ -1,12 +1,14 @@
 {
-  "name": "Image Formats: the nerdy parts",
-  "author": "Lara Hogan",
-  "date": "2015-03-13",
-  "social": {
-    "twitter": "@lara_hogan"
-  },
-  "stats": {
-    "length": 35
+  "name" : "Image Formats: the nerdy parts",
+  "authors" : [
+    {
+      "name" : "Lara Hogan",
+      "twitter" : "@lara_hogan"
+    }
+  ],
+  "date" : "2015-03-13",
+  "stats" : {
+    "length" : 35
   },
   "tags" : [ "compression", "images" ],
   "url" : "https://speakerdeck.com/lara/image-formats-the-nerdy-parts"
