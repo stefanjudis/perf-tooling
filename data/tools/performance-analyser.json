@@ -1,0 +1,7 @@
+{
+  "name" : "Performance-Analyser",
+  "chrome" : "https://chrome.google.com/webstore/detail/performance-analyser/djgfmlohefpomchfabngccpbaflcahjf",
+  "firefox" : "https://addons.mozilla.org/en-US/developers/addon/performance-analyser",
+  "description" : "Chrome Extension and Firefox Add-on to analyze the current page through the Resource, Navigation and User Timing API - requests by type, domain, load times, marks and more. Sort of a light live WebPageTest.",
+  "tags" : [ "metrics", "timings", "loading" ]
+}
