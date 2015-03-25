@@ -1,0 +1,29 @@
+{
+  "name" : "High Performance MySQL, 3rd Edition",
+  "date" : "2012-03",
+  "authors" : [
+    {
+      "name" : "Baron Schwartz",
+      "twitter" : "@xaprb"
+    },
+    {
+      "name" : "Peter Zaitsev",
+      "twitter" : "@peterzaitsev"
+    },
+    {
+      "name" : "Vadim Tkachenko",
+      "twitter" : "@vadimtk"
+    }
+  ],
+  "stats" : {
+    "length" : 828
+  },
+  "url" : "http://shop.oreilly.com/product/0636920022343.do",
+  "description" : "How can you bring out MySQL’s full power? With High Performance MySQL, you’ll learn advanced techniques for everything from designing schemas, indexes, and queries to tuning your MySQL server, operating system, and hardware to their fullest potential. This guide also teaches you safe and practical ways to scale applications through replication, load balancing, high availability, and failover.",
+  "img" : {
+    "src" : "high-performance-mysql-3rd-edition.jpg",
+    "width" : 200,
+    "height" : 300
+  },
+  "tags" : [ "benchmark", "databases", "mysql" ]
+}
