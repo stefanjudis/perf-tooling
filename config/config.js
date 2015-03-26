@@ -1,4 +1,5 @@
 module.exports = {
+  port      : 3000,
   cdn       : process.env.CDN_URL || '',
   dataDir   : 'data',
   listPages : [ 'articles', 'slides', 'tools', 'videos', 'books' ],

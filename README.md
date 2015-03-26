@@ -27,11 +27,19 @@ We would like this project to become a shared resource maintained by the communi
 
 Perf Tooling is an [express](http://expressjs.com/) application. If you want to see it in action simply clone the repository and run `npm install`.
 
-After that you can start the server with:
+After that you can start the server and kick of the development environment with:
 
 ```
-node app.js
+npm start
 ```
+This will start the express application at `localhost:3000`.
 
-It will be available at `localhost:3000`.
+In case you want to develop new things at `localhost:4000` will be a proxy injecting [browsersync.io](http://browsersync.io) which means that the page will automagically refresh whenever you change something. Using `npm start` all watchers will be set up listening for the following:
+
+- `js/**/*.js` -> generating new built JS + restart express server + browser reload
+- `less/**/*.less` -> generating new built CSS + restart express server + browser reload
+- `templates/**/*.tpl` -> restart express server + browser reload
+- `app.js` -> restart express server + browser reload
+
 Be aware of the fact, that the fetching of Github stars may not work, because Github is limiting the number of requests that are allowed without any authorization.
+
