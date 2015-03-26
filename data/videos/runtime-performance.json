@@ -1,9 +1,11 @@
 {
   "name" : "The Applied Science of Runtime Performance - Chrome Dev Summit 2014 (Paul Lewis)",
-  "author": "Paul Lewis",
-  "social": {
-    "twitter": "@aerotwist"
-  },
+  "authors" : [
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
   "youtubeId" : "RCFQu0hK6bU",
   "tags" : [ "60fps", "animation" ]
 }

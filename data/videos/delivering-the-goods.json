@@ -1,9 +1,11 @@
 {
   "name" : "Paul Irish, \"Delivering the goods\" - Fluent 2014 Keynote",
-  "author": "Paul Irish",
-  "social": {
-    "twitter": "@paul_irish"
-  },
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    }
+  ],
   "youtubeId" : "R8W_6xWphtw",
   "tags" : [ "monitoring", "network", "webpagetest" ]
 }

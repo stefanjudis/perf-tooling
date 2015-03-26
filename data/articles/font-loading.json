@@ -1,13 +1,15 @@
 {
   "name" : "How we use web fonts responsibly, or, avoiding a @font-face-palm",
-  "author": "Zach Leatherman",
-  "date": "2015-01-08",
-  "social": {
-    "twitter": "@zachleat"
+  "authors" : [
+    {
+      "name" : "Zach Leatherman",
+      "twitter" : "@zachleat"
+    }
+  ],
+  "date" : "2015-01-08",
+  "stats" : {
+    "length" : 2133
   },
-  "stats": {
-    "length": 2133
-  },
-  "url": "http://www.filamentgroup.com/lab/font-loading.html",
-  "tags": [ "loading", "webfonts" ]
+  "url" : "http://www.filamentgroup.com/lab/font-loading.html",
+  "tags" : [ "loading", "webfonts" ]
 }

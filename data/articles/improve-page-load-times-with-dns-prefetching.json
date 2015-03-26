@@ -1,13 +1,15 @@
 {
   "name" : "Improve Page Load Times with DNS Prefetching",
-  "author": "Dean Hume",
-  "date": "2012-10-17",
-  "social": {
-    "twitter": "@deanohume"
+  "authors" : [
+    {
+      "name" : "Dean Hume",
+      "twitter" : "@deanohume"
+    }
+  ],
+  "date" : "2012-10-17",
+  "stats" : {
+    "length" : 507
   },
-  "stats": {
-    "length": 507
-  },
-  "url": "http://deanhume.com/Home/BlogPost/improve-page-load-times-with-dns-prefetching/80",
-  "tags": [ "dns", "loading" ]
+  "url" : "http://deanhume.com/Home/BlogPost/improve-page-load-times-with-dns-prefetching/80",
+  "tags" : [ "dns", "loading" ]
 }

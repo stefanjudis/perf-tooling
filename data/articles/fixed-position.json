@@ -1,13 +1,15 @@
 {
   "name" : "Improving the CSS performance of fixed position elements",
-  "author": "Ben Frain",
-  "date": "2014-02-28",
-  "social": {
-    "twitter": "@benfrain"
+  "authors" : [
+    {
+      "name" : "Ben Frain",
+      "twitter" : "@benfrain"
+    }
+  ],
+  "date" : "2014-02-28",
+  "stats" : {
+    "length" : 1252
   },
-  "stats": {
-    "length": 1252
-  },
-  "url": "http://benfrain.com/improving-css-performance-fixed-position-elements",
-  "tags": ["css", "60fps"]
+  "url" : "http://benfrain.com/improving-css-performance-fixed-position-elements",
+  "tags" : ["css", "60fps"]
 }

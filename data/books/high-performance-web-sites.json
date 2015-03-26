@@ -1,12 +1,14 @@
 {
   "name" : "High Performance Web Sites",
   "date" : "2007-09",
-  "author" : "Steve Souders",
-  "social" : {
-    "twitter" : "@souders"
-  },
-  "stats": {
-    "length": 170
+  "authors" : [
+    {
+      "name" : "Steve Souders",
+      "twitter" : "@souders"
+    }
+  ],
+  "stats" : {
+    "length" : 170
   },
   "url" : "http://shop.oreilly.com/product/9780596529307.do",
   "description" : "Want your web site to display more quickly? This book presents 14 specific rules that will cut 25% to 50% off response time when users request a page. Author Steve Souders, in his job as Chief Performance Yahoo!, collected these best practices while optimizing some of the most-visited pages on the Web. Even sites that had already been highly optimized, such as Yahoo! Search and the Yahoo! Front Page, were able to benefit from these surprisingly simple performance guidelines.",

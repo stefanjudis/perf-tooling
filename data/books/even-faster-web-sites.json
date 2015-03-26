@@ -1,10 +1,12 @@
 {
   "name" : "Even Faster Web Sites",
   "date" : "2009-06",
-  "author" : "Steve Souders",
-  "social" : {
-    "twitter" : "@souders"
-  },
+  "authors" : [
+    {
+      "name" : "Steve Souders",
+      "twitter" : "@souders"
+    }
+  ],
   "stats": {
     "length": 256
   },

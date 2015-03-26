@@ -1,9 +1,11 @@
 {
   "name" : "A developer's guide to rendering performance",
-  "author": "Paul Lewis",
-  "social": {
-    "twitter" : "@aerotwist"
-  },
+  "authors" : [
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
   "vimeoId" : "77591536",
   "tags" : [ "60fps", "rendering" ]
 }

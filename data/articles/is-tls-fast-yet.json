@@ -1,12 +1,14 @@
 {
   "name" : "Is TLS fast yet?",
-  "author": "Ilya Grigorik",
-  "social": {
-    "twitter": "@igrigorik"
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "stats" : {
+    "length" : 1478
   },
-  "stats": {
-    "length": 1478
-  },
-  "url": "https://istlsfastyet.com/",
+  "url" : "https://istlsfastyet.com/",
   "tags" : [ "network", "server", "TLS" ]
 }

@@ -1,13 +1,15 @@
 {
   "name" : "Fast-Forward Performance – The Future Looks Bright",
-  "author": "Barbara Bermes",
-  "date": "2014-12-24",
-  "social": {
-    "twitter": "@bbinto"
+  "authors" : [
+    {
+      "name" : "Barbara Bermes",
+      "twitter" : "@bbinto"
+    }
+  ],
+  "date" : "2014-12-24",
+  "stats" : {
+    "length" : 2728
   },
-  "stats": {
-    "length": 2728
-  },
-  "url": "http://calendar.perfplanet.com/2014/fast-forward-performance-the-future-looks-bright/",
-  "tags": ["RUM", "resource timing", "beacon" ]
+  "url" : "http://calendar.perfplanet.com/2014/fast-forward-performance-the-future-looks-bright/",
+  "tags" : ["RUM", "resource timing", "beacon" ]
 }

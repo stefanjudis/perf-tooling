@@ -1,10 +1,12 @@
 {
   "name" : "Designing for Performance",
   "date" : "2014-12",
-  "author" : "Lara Callender Hogan",
-  "social" : {
-    "twitter" : "@lara_hogan"
-  },
+  "authors" : [
+    {
+      "name" : "Lara Callender Hogan",
+      "twitter" : "@lara_hogan"
+    }
+  ],
   "stats": {
     "length": 184
   },

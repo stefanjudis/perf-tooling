@@ -1,13 +1,15 @@
 {
   "name" : "How we make RWD sites load fast as heck",
-  "author": "Scott Jehl",
-  "date": "2014-07-30",
-  "social": {
-    "twitter": "@scottjehl"
+  "authors" : [
+    {
+      "name" : "Scott Jehl",
+      "twitter" : "@scottjehl"
+    }
+  ],
+  "date" : "2014-07-30",
+  "stats" : {
+    "length" : 3181
   },
-  "stats": {
-    "length": 3181
-  },
-  "url": "http://www.filamentgroup.com/lab/performance-rwd.html",
-  "tags": [ "rwd", "critical path" ]
+  "url" : "http://www.filamentgroup.com/lab/performance-rwd.html",
+  "tags" : [ "rwd", "critical path" ]
 }

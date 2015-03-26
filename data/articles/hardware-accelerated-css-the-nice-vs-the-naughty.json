@@ -1,13 +1,15 @@
 {
   "name" : "Hardware Accelerated CSS: The Nice vs The Naughty",
-  "author": "Ariya Hidayat",
-  "date": "2014-12-31",
-  "social": {
-    "twitter": "@ariyahidayat"
+  "authors" : [
+    {
+      "name" : "Ariya Hidayat",
+      "twitter" : "@ariyahidayat"
+    }
+  ],
+  "date" : "2014-12-31",
+  "stats" : {
+    "length" : 1302
   },
-  "stats": {
-    "length": 1302
-  },
-  "url": "http://calendar.perfplanet.com/2014/hardware-accelerated-css-the-nice-vs-the-naughty/",
-  "tags": [ "60fps", "animations", "css", "devtools" ]
+  "url" : "http://calendar.perfplanet.com/2014/hardware-accelerated-css-the-nice-vs-the-naughty/",
+  "tags" : [ "60fps", "animations", "css", "devtools" ]
 }

@@ -1,13 +1,15 @@
 {
   "name" : "The hidden cost of Web Components",
-  "author": "Kyle Conarro",
-  "date": "2014-12-09",
-  "social": {
-    "twitter": "@conarro"
+  "author" : [
+    {
+      "name" : "Kyle Conarro",
+      "twitter" : "@conarro"
+    }
+  ],
+  "date" : "2014-12-09",
+  "stats" : {
+    "length" : 506
   },
-  "stats": {
-    "length": 506
-  },
-  "url": "http://rigor.com/blog/2014/12/hidden-costs-web-components",
-  "tags": [ "http", "monitoring" ]
+  "url" : "http://rigor.com/blog/2014/12/hidden-costs-web-components",
+  "tags" : [ "http", "monitoring" ]
 }

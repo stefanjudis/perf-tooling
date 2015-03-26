@@ -1,9 +1,11 @@
 {
   "name" : "Nik Molnar - Full Stack Web Performance",
-  "author": "Nik Molnar",
-  "social": {
-    "twitter": "@nikmd23"
-  },
+  "authors" : [
+    {
+      "name" : "Nik Molnar",
+      "twitter" : "@nikmd23"
+    }
+  ],
   "vimeoId" : "97415381",
   "tags" : [ "monitoring", "devtools" ]
 }

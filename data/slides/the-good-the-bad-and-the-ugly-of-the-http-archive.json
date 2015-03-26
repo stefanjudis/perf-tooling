@@ -1,13 +1,15 @@
 {
-  "name": "The Good, The Bad, and The Ugly of the HTTP Archive",
-  "author": "Dean Hume",
-  "date": "2014-09-17",
-  "social": {
-    "twitter": "@deanohume"
+  "name" : "The Good, The Bad, and The Ugly of the HTTP Archive",
+  "authors" : [
+    {
+      "name" : "Dean Hume",
+      "twitter" : "@deanohume"
+    }
+  ],
+  "date" : "2014-09-17",
+  "stats" : {
+    "length" : 151
   },
-  "stats": {
-    "length": 151
-  },
-  "tags": ["critical", "loading"],
+  "tags" : [ "critical", "loading" ],
   "url" : "https://speakerdeck.com/deanohume/the-good-the-bad-and-the-ugly-of-the-http-archive"
 }

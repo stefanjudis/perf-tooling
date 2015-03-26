@@ -1,13 +1,15 @@
 {
   "name" : "This Lossless PNG Optimization You’re Probably Not Using Shrunk One File an Extra 39%",
-  "author": "Mark Isham",
-  "date": "2014-11-13",
-  "social": {
-    "twitter": "@mark_isham"
+  "authors" : [
+    {
+      "name" : "Mark Isham",
+      "twitter" : "@mark_isham"
+    }
+  ],
+  "date" : "2014-11-13",
+  "stats" : {
+    "length" : 1299
   },
-  "stats": {
-    "length": 1299
-  },
-  "url": "http://zoompf.com/blog/2014/11/png-optimization",
-  "tags": [ "compression", "images" ]
+  "url" : "http://zoompf.com/blog/2014/11/png-optimization",
+  "tags" : [ "compression", "images" ]
 }
