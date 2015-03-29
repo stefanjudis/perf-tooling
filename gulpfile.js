@@ -79,6 +79,22 @@ gulp.task( 'styles', function () {
 
 
 /*******************************************************************************
+ * CSSLINT TASK
+ *
+ * this task is responsible for the style files
+ * - we will compile the less files to css
+ * - we will lint the generated css
+ */
+gulp.task( 'csslint', function () {
+  return gulp.src( files.styles )
+    .pipe( less() )
+    .pipe( csslint( '.csslintrc' ) )
+    .pipe( csslint.reporter() )
+    .pipe( csslint.failReporter() );
+});
+
+
+/*******************************************************************************
  * SCRIPT TASKS
  *
  * this task is responsible for the JavaScript files
@@ -127,17 +143,6 @@ gulp.task( 'images', function () {
 
 
 /*******************************************************************************
- * BUILD
- *
- * run all build related tasks with:
- *
- *  $ gulp build
- *
- */
-gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images' ] );
-
-
-/*******************************************************************************
  * this task will kick off the watcher for JS, CSS, HTML files
  * for easy and instant development
  */
@@ -146,6 +151,27 @@ gulp.task( 'watch', function() {
   gulp.watch( files.watch.styles, [ 'styles' ] );
   gulp.watch( files.scripts, [ 'scripts' ] );
 });
+
+
+/*******************************************************************************
+ * TEST
+ *
+ * task to run in CI environments
+ *
+ * $ gulp test
+ */
+gulp.task( 'test', [ 'csslint' ] );
+
+
+/*******************************************************************************
+ * BUILD
+ *
+ * run all build related tasks with:
+ *
+ *  $ gulp build
+ *
+ */
+gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images' ] );
 
 
 /*******************************************************************************

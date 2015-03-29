@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/stefanjudis/perf-tooling/issues"
   },
+  "scripts" : {
+    "test" : "gulp test"
+  },
   "homepage": "http://perf-tooling.today",
   "dependencies": {
     "MD5": "^1.2.1",
