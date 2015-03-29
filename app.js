@@ -231,7 +231,7 @@ function fetchTwitterUserMeta() {
      */
     function evalAuthors( type ) {
       _.each( data[ type ], function( entry ) {
-        if ( entry.authors.length ) {
+        if ( entry.authors && entry.authors.length ) {
           _.each( entry.authors, function( author ) {
             if ( author.twitter ) {
               fetchTwitterUserData( author.twitter, type );
