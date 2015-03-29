@@ -1,12 +1,10 @@
 {
   "name" : "PageSpeed Insights",
-  "apache" : "https://code.google.com/p/modpagespeed/",
   "chrome" : "https://chrome.google.com/webstore/detail/pagespeed-insights-by-goo/gplegfbjlmmehdoakndmohflojccocli",
   "cli" : "https://github.com/addyosmani/psi",
   "grunt" : "https://github.com/jrcryer/grunt-pagespeed",
   "gulp" : "https://github.com/addyosmani/psi-gulp-sample",
   "module" : "https://github.com/addyosmani/psi",
-  "nginx" : "https://github.com/pagespeed/ngx_pagespeed",
   "service" : "https://developers.google.com/speed/pagespeed/insights/",
   "description" : "PageSpeed Insights products will help you identify performance best practices that can be applied to your site, and PageSpeed optimization tools can help you automate the process.",
   "tags" : [ "metrics", "budget" ]
