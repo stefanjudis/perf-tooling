@@ -1,0 +1,15 @@
+{
+  "name" : "Advanced Performance Audits With DevTools",
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    }
+  ],
+  "date" : "2015-03-27",
+  "stats" : {
+    "length" : 200
+  },
+  "url" : "http://www.paulirish.com/2015/advanced-performance-audits-with-devtools/",
+  "tags" : [ "loading", "metrics", "monitoring" ]
+}
