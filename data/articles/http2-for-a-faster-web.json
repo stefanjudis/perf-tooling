@@ -1,0 +1,15 @@
+{
+  "name" : "HTTP/2 for a Faster Web",
+  "authors" : [
+    {
+      "name" : "Benjamin Patch",
+      "twitter" : "@BenjaminPatch"
+    }
+  ],
+  "date" : "2015-03-18",
+  "stats" : {
+    "length" : 1505
+  },
+  "url" : "https://cascadingmedia.com/insites/2015/03/http-2.html",
+  "tags" : [ "http", "network" ]
+}

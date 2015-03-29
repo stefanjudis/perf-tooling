@@ -7,22 +7,24 @@
 'use strict';
 
 // Require the needed packages
-var concat        = require( 'gulp-concat' ),
-    csslint       = require( 'gulp-csslint' ),
-    gulp          = require( 'gulp' ),
-    jshint        = require( 'gulp-jshint' ),
-    jshintStylish = require( 'jshint-stylish' ),
-    imagemin      = require( 'gulp-imagemin' ),
-    pngquant      = require( 'imagemin-pngquant' ),
-    less          = require( 'gulp-less' ),
-    prefix        = require( 'gulp-autoprefixer' ),
-    minifyCSS     = require( 'gulp-minify-css' ),
-    uglify        = require( 'gulp-uglify' ),
-    tasks         = require( 'gulp-task-listing' ),
-    svgstore      = require( 'gulp-svgstore' ),
-    mergeStream   = require( 'merge-stream' );
+var concat        = require( 'gulp-concat' );
+var csslint       = require( 'gulp-csslint' );
+var gulp          = require( 'gulp' );
+var jshint        = require( 'gulp-jshint' );
+var jshintStylish = require( 'jshint-stylish' );
+var jsonlint      = require( 'gulp-jsonlint' );
+var imagemin      = require( 'gulp-imagemin' );
+var pngquant      = require( 'imagemin-pngquant' );
+var less          = require( 'gulp-less' );
+var prefix        = require( 'gulp-autoprefixer' );
+var minifyCSS     = require( 'gulp-minify-css' );
+var uglify        = require( 'gulp-uglify' );
+var tasks         = require( 'gulp-task-listing' );
+var svgstore      = require( 'gulp-svgstore' );
+var mergeStream   = require( 'merge-stream' );
 
 var files = {
+  data    : [ 'data/**/*.json' ],
   img     : [ 'img/**/*' ],
   lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js', 'lib/**/*.js' ],
   scripts : {
@@ -85,6 +87,22 @@ gulp.task( 'styles', function () {
 
 
 /*******************************************************************************
+ * CSSLINT TASK
+ *
+ * this task is responsible for the style files
+ * - we will compile the less files to css
+ * - we will lint the generated css
+ */
+gulp.task( 'csslint', function () {
+  return gulp.src( files.styles )
+    .pipe( less() )
+    .pipe( csslint( '.csslintrc' ) )
+    .pipe( csslint.reporter() )
+    .pipe( csslint.failReporter() );
+});
+
+
+/*******************************************************************************
  * SCRIPT TASKS
  *
  * this task is responsible for the JavaScript files
@@ -139,14 +157,16 @@ gulp.task( 'images', function () {
 
 
 /*******************************************************************************
- * BUILD
+ * JSONLINT TASK
  *
- * run all build related tasks with:
- *
- *  $ gulp build
- *
+ * this task is responsible for compressing images properly
  */
-gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images' ] );
+gulp.task( 'jsonlint', function () {
+  return gulp.src( files.data )
+              .pipe( jsonlint() )
+              .pipe( jsonlint.reporter() );
+              // .pipe( jsonlint.failReporter() );
+} );
 
 
 /*******************************************************************************
@@ -158,6 +178,27 @@ gulp.task( 'watch', function() {
   gulp.watch( files.watch.styles, [ 'styles' ] );
   gulp.watch( files.scripts, [ 'scripts' ] );
 });
+
+
+/*******************************************************************************
+ * TEST
+ *
+ * task to run in CI environments
+ *
+ * $ gulp test
+ */
+gulp.task( 'test', [ 'csslint', 'jsonlint' ] );
+
+
+/*******************************************************************************
+ * BUILD
+ *
+ * run all build related tasks with:
+ *
+ *  $ gulp build
+ *
+ */
+gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images' ] );
 
 
 /*******************************************************************************
