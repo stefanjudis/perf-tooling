@@ -22,6 +22,8 @@ module.exports = {
     'gulp',
     'javascript',
     'php',
+    'apache',
+    'nginx',
     'service',
     'wordpress',
     'illustrator'

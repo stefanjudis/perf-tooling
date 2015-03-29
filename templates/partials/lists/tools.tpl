@@ -250,6 +250,36 @@
 
         <% } %>
 
+        <% if ( tool.apache ) { %>
+
+          <li class="tooltip" title="Apache module">
+
+            <a href="<%= tool.apache %>" title="Link to Apache module" class="resource-apache" target="_blank">
+              <svg>
+                <use xlink:href="#icon-apache" />
+              </svg>
+              Apache
+            </a>
+
+            <span><%= ( tool.stars.apache ) ? tool.stars.apache : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.nginx ) { %>
+
+          <li class="tooltip" title="Nginx module">
+
+            <a href="<%= tool.nginx %>" title="Link to Nginx module" class="resource-nginx" target="_blank">
+              <svg>
+                <use xlink:href="#icon-nginx" />
+              </svg>
+              Nginx
+            </a>
+
+            <span><%= ( tool.stars.nginx ) ? tool.stars.nginx : 'N/A' %></span>
+
+        <% } %>
+
         <% if ( tool.wordpress ) { %>
 
           <li class="tooltip" title="WordPress">
