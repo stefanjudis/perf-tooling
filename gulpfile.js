@@ -152,8 +152,8 @@ gulp.task( 'images', function () {
 gulp.task( 'jsonlint', function () {
   return gulp.src( files.data )
               .pipe( jsonlint() )
-              .pipe( jsonlint.reporter() )
-              .pipe( jsonlint.failReporter() );
+              .pipe( jsonlint.reporter() );
+              // .pipe( jsonlint.failReporter() );
 } );
 
 
