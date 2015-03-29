@@ -1,0 +1,15 @@
+{
+  "name" : "State of the Union: Mobile Web Performance",
+  "authors": [
+    {
+      "name" : "Tammy Everts",
+      "twitter" : "@tameverts"
+    }
+  ],
+  "date" : "2015-03-10",
+  "stats" : {
+    "length" : 46
+  },
+  "tags" : [ "above the fold", "loading" ],
+  "url" : "http://www.slideshare.net/tammyeverts/state-of-the-union-mobile-web-performance"
+}
