@@ -15,8 +15,11 @@
   %>
 
   <body>
-
+      <!--#if expr="$HTTP_COOKIE=/svgicons\!== true/" -->
       <div class="svgIcons"><%= svg %></div>
+      <!--#else -->
+
+      <!--#endif -->
 
       <%=
         partial(

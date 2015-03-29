@@ -29,7 +29,8 @@
     }
   </script>
 
-  <meta name="maincss"  content="<%= cdn %>/main_<%= hash.css %>.css">
+  <meta name="svgicons"  content="<%= cdn %>/icons.svg">
+  <meta name="maincss"  content="<%= cdn %>/main.css">
   <!--#if expr="$HTTP_COOKIE=/maincss\!== true/" -->
   <style><%= css %></style>
   <!--#else -->

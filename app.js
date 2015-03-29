@@ -534,12 +534,7 @@ config.listPages.forEach( function( page ) {
   pages[ page ] = renderPage( page );
 
   app.get( '/' + page, function( req, res ) {
-    //if ( req.query && req.query.q && req.query.q.length ) {
-      res.send( renderPage( page, req.query.q ) );
-
-    //} else {
-    //  res.send( pages[ page ] );
-    //}
+    res.send( renderPage( page, req.query.q ) );
   } );
 } );
 
