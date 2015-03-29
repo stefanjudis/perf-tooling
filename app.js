@@ -356,7 +356,6 @@ function fetchVideoMeta() {
 function getList( type ) {
   var list                 = [];
   var entries              = fs.readdirSync( config.dataDir + '/' + type );
-  var oldAuthorFormatCount = 0;
 
   entries.forEach( function( entry ) {
     if ( entry[ 0 ] !== '.' ) {
