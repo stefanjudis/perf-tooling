@@ -7,21 +7,23 @@
 'use strict';
 
 // Require the needed packages
-var concat        = require( 'gulp-concat' ),
-    csslint       = require( 'gulp-csslint' ),
-    gulp          = require( 'gulp' ),
-    jshint        = require( 'gulp-jshint' ),
-    jshintStylish = require( 'jshint-stylish' ),
-    imagemin      = require( 'gulp-imagemin' ),
-    pngquant      = require( 'imagemin-pngquant' ),
-    less          = require( 'gulp-less' ),
-    prefix        = require( 'gulp-autoprefixer' ),
-    minifyCSS     = require( 'gulp-minify-css' ),
-    uglify        = require( 'gulp-uglify' ),
-    tasks         = require( 'gulp-task-listing' ),
-    svgstore      = require( 'gulp-svgstore' );
+var concat        = require( 'gulp-concat' );
+var csslint       = require( 'gulp-csslint' );
+var gulp          = require( 'gulp' );
+var jshint        = require( 'gulp-jshint' );
+var jshintStylish = require( 'jshint-stylish' );
+var jsonlint      = require( 'gulp-jsonlint' );
+var imagemin      = require( 'gulp-imagemin' );
+var pngquant      = require( 'imagemin-pngquant' );
+var less          = require( 'gulp-less' );
+var prefix        = require( 'gulp-autoprefixer' );
+var minifyCSS     = require( 'gulp-minify-css' );
+var uglify        = require( 'gulp-uglify' );
+var tasks         = require( 'gulp-task-listing' );
+var svgstore      = require( 'gulp-svgstore' );
 
 var files = {
+  data    : [ 'data/**/*.json' ],
   img     : [ 'img/**/*' ],
   lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js', 'lib/**/*.js' ],
   scripts : [
@@ -143,6 +145,19 @@ gulp.task( 'images', function () {
 
 
 /*******************************************************************************
+ * JSONLINT TASK
+ *
+ * this task is responsible for compressing images properly
+ */
+gulp.task( 'jsonlint', function () {
+  return gulp.src( files.data )
+              .pipe( jsonlint() )
+              .pipe( jsonlint.reporter() )
+              .pipe( jsonlint.failReporter() );
+} );
+
+
+/*******************************************************************************
  * this task will kick off the watcher for JS, CSS, HTML files
  * for easy and instant development
  */
@@ -160,7 +175,7 @@ gulp.task( 'watch', function() {
  *
  * $ gulp test
  */
-gulp.task( 'test', [ 'csslint' ] );
+gulp.task( 'test', [ 'csslint', 'jsonlint' ] );
 
 
 /*******************************************************************************
