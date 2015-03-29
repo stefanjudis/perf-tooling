@@ -1,13 +1,15 @@
 {
   "name" : "Planning for Performance",
-  "author": "Scott Jehl",
-  "date": "2014-11-25",
-  "social": {
-    "twitter": "@scottjehl"
+  "authors" : [
+    {
+      "name" : "Scott Jehl",
+      "twitter" : "@scottjehl"
+    }
+  ],
+  "date" : "2014-11-25",
+  "stats" : {
+    "length" : 1515
   },
-  "stats": {
-    "length": 1515
-  },
-  "url": "http://alistapart.com/article/planning-for-performance",
-  "tags": [ "network", "critical path" ]
+  "url" : "http://alistapart.com/article/planning-for-performance",
+  "tags" : [ "network", "critical path" ]
 }

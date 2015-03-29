@@ -1,0 +1,6 @@
+{
+  "name" : "Request Map Generator",
+  "service" : "http://requestmap.webperf.tools/",
+  "description" : "Greates a detailed graph of the domains called by your site. E.g. third-party requests.",
+  "tags" : [ "timings", "loading" ]
+}

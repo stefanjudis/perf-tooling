@@ -1,13 +1,15 @@
 {
   "name" : "FLIP Your Animations",
-  "author": "Paul Lewis",
-  "date": "2015-02-11",
-  "social": {
-    "twitter": "@aerotwist"
+  "authors" : [
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
+  "date" : "2015-02-11",
+  "stats" : {
+    "length" : 1426
   },
-  "stats": {
-    "length": 1426
-  },
-  "url": "http://aerotwist.com/blog/flip-your-animations/",
-  "tags": [ "60fps", "transitions" ]
+  "url" : "http://aerotwist.com/blog/flip-your-animations/",
+  "tags" : [ "60fps", "transitions" ]
 }

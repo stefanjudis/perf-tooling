@@ -1,13 +1,15 @@
 {
-  "name": "Making a Silky Smooth Web",
-  "author": "Paul Lewis",
-  "date": "2014-06-24",
-  "social": {
-    "twitter": "@aerotwist"
+  "name" : "Making a Silky Smooth Web",
+  "authors" : [
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
+  "date" : "2014-06-24",
+  "stats" : {
+    "length" : 126
   },
-  "stats": {
-    "length": 126
-  },
-  "tags": [ "animations", "jank-free", "rendering" ],
+  "tags" : [ "animations", "jank-free", "rendering" ],
   "url" : "https://speakerdeck.com/paullewis/making-a-silky-smooth-web"
 }

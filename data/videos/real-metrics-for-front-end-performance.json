@@ -1,9 +1,11 @@
 {
   "name" : "Real metrics for front-end performance",
-  "author": "Ben Schwarz",
-  "social": {
-    "twitter": "@benschwarz"
-  },
+  "authors" : [
+    {
+      "name" : "Ben Schwarz",
+      "twitter" : "@benschwarz"
+    }
+  ],
   "youtubeId" : "-D81Qj1YmPM",
   "tags" : [ "metrics", "monitoring" ]
 }

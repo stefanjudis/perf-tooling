@@ -1,13 +1,15 @@
 {
-  "name": "Staying in the fast lane - tools to keep your site speedy and light",
-  "author": "Stefan Judis",
-  "date": "2015-02-09",
-  "social": {
-    "twitter" : "@stefanjudis"
+  "name" : "Staying in the fast lane - tools to keep your site speedy and light",
+  "authors" : [
+    {
+      "name" : "Stefan Judis",
+      "twitter" : "@stefanjudis"
+    }
+  ],
+  "date" : "2015-02-09",
+  "stats" : {
+    "length" : 59
   },
-  "stats": {
-    "length": 59
-  },
-  "tags": ["budget", "tooling", "metrics"],
+  "tags" : [ "budget", "tooling", "metrics" ],
   "url" : "http://www.slideshare.net/stefanjudis/staying-in-the-fast-lane-tools-to-keep-your-site-speedy-and-light"
 }

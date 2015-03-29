@@ -375,20 +375,6 @@ function getList( type ) {
         ).replace( /http(s)?:\/\//, '' ).toLowerCase();
         entry.hidden = false;
 
-        if (
-          typeof entry.author === 'string' &&
-          typeof entry.authors === 'undefined'
-        ) {
-          entry.authors = [
-            {
-              name    : entry.author,
-              twitter : entry.social && entry.social.twitter
-            }
-          ];
-
-          oldAuthorFormatCount++;
-        }
-
         list.push( entry );
       } catch( e ) {
         console.log( entry );
@@ -397,13 +383,6 @@ function getList( type ) {
       }
     }
   } );
-
-  if ( oldAuthorFormatCount ) {
-    console.warn(
-      '\'' + type.toUpperCase() + '\' includes ' + oldAuthorFormatCount + ' authors in old format'
-    );
-    console.warn( '-> Start cleaning up folks!!!' );
-  }
 
   return list;
 }

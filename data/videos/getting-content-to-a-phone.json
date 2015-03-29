@@ -1,9 +1,11 @@
 {
   "name" : "Getting Content to a Phone in less than 1000ms",
-  "author": "Ian Carrico",
-  "social": {
-    "twitter": "@iamcarrico"
-  },
+  "authors" : [
+    {
+      "name" : "Ian Carrico",
+      "twitter" : "@iamcarrico"
+    }
+  ],
   "youtubeId" : "lXvshs_yPCM",
   "tags" : [ "loading", "page speed", "render-path" ]
 }
