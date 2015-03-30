@@ -12,8 +12,7 @@
   var doc = window.document,
       head = doc.head || doc.getElementsByTagName( "head" )[ 0 ],
       // this references a meta tag's name whose content attribute should define the path to the full CSS file for the site
-      fullCSSKey  = "maincss",
-      svgIconsKey = "svgicons";
+      fullCSSKey  = "maincss";
 
   // loadCSS: load a CSS file asynchronously. Included from https://github.com/filamentgroup/loadCSS/
   function loadCSS( href, before, media ){
@@ -56,10 +55,6 @@
 
   // expose it
   enhance.loadCSS = loadCSS;
-
-  function loadSVGIcons( src ) {
-    // Inject SVG into svgIcons div
-  }
 
   // getMeta function: get a meta tag by name
   // NOTE: meta tag must be in the HTML source before this script is included in order to guarantee it'll be found
@@ -123,13 +118,6 @@
     loadCSS( fullCSS.content );
     // set cookie to mark this file fetched
     cookie( fullCSSKey, "true", 7 );
-  }
-
-  var svgIcons = getMeta( svgIconsKey );
-  if( svgIcons && !cookie( svgIconsKey ) ){
-    loadSVGIcons( svgIcons.content );
-    // set cookie to mark this file fetched
-    cookie( svgIconsKey, "true", 7 );
   }
 
   /* Enhancements for qualified browsers - "Cutting the Mustard"

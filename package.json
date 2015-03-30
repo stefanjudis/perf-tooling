@@ -18,7 +18,8 @@
     "url": "https://github.com/stefanjudis/perf-tooling/issues"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "gulp": "gulp"
   },
   "homepage": "http://perf-tooling.today",
   "dependencies": {
