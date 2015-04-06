@@ -10,6 +10,7 @@
 var concat        = require( 'gulp-concat' );
 var csslint       = require( 'gulp-csslint' );
 var gulp          = require( 'gulp' );
+var gutil         = require( 'gulp-util' );
 var jshint        = require( 'gulp-jshint' );
 var jshintStylish = require( 'jshint-stylish' );
 var jsonlint      = require( 'gulp-jsonlint' );
@@ -152,8 +153,15 @@ gulp.task( 'images', function () {
 gulp.task( 'jsonlint', function () {
   return gulp.src( files.data )
               .pipe( jsonlint() )
-              .pipe( jsonlint.reporter() );
-              // .pipe( jsonlint.failReporter() );
+              .pipe( jsonlint.reporter( function( file, cb ) {
+                gutil.log( 'Error on file ' + file.path );
+                gutil.log( file.jsonlint.message );
+
+                throw new gutil.PluginError(
+                  'gulp-jsonlint',
+                  'JSONLint failed for ' + file.relative
+                );
+              } ) );
 } );
 
 
