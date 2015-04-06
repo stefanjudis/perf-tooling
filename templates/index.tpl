@@ -55,7 +55,7 @@
             <div class="text-center">
 
               <h2>Automate. Monitor. Improve.</h2>
-              <h3 class="subline">Perf tooling is a collection of powerful resources which will help you to improve your workflow and to deliver better and faster websites.</h3>
+              <h3 class="subline">Perf-tooling is a collection of powerful resources which will help you to improve your workflow and to deliver better and faster websites.</h3>
 
             </div>
 
@@ -73,6 +73,8 @@
 
                   <p>A rich collection of tools available to optimize and/or monitor your website's performance including bookmarklets, browser extensions, command line tools, node modules and grunt/gulp tasks.</p>
 
+                  <a href="/tools" title="Link to tools" class="btn btn-large btn-primary">Explore Tools</a>
+
                 </article>
 
               </div>
@@ -83,7 +85,9 @@
 
                   <h3><%= resourceCount.articles %> Articles</h3>
 
-                  <p>An exclusive list of articles that inform about best practices to build fast websites and to make your visitors happy.</p>
+                  <p>An exclusive list of articles about best practices to build fast websites which will make your visitors happy.</p>
+
+                  <a href="/articles" title="Link to articles" class="btn btn-large btn-primary">Explore Articles</a>
 
                 </article>
 
@@ -99,7 +103,9 @@
 
                   <h3><%= resourceCount.videos %> Videos</h3>
 
-                  <p>An exclusive collection of recent videos including performance specific tips and tricks to build better and faster websites.</p>
+                  <p>A collection of recent videos including performance-specific tips and tricks to build better and faster websites.</p>
+
+                  <a href="/videos" title="Link to videos" class="btn btn-large btn-primary">Explore Videos</a>
 
                 </article>
 
@@ -111,7 +117,9 @@
 
                   <h3><%= resourceCount.slides %> Slidedecks</h3>
 
-                  <p>An exclusive collection of slides of great talks covering performance related topics.</p>
+                  <p>A library of slides from great talks covering performance-related topics.</p>
+
+                  <a href="/slides" title="Link to slides" class="btn btn-large btn-primary">Explore Slidedecks</a>
 
                 </article>
 
@@ -119,9 +127,21 @@
 
             </div>
 
-            <div class="text-center">
+            <div class="row">
 
-              <a href="/tools" title="Link to tools" class="btn btn-large btn-primary">Explore Tools</a>
+              <div class="col-6">
+
+                <article class="article">
+
+                  <h3><%= resourceCount.books %> Books</h3>
+
+                  <p>Our books section features recommended books from some of the most influential authors in the field.</p>
+
+                  <a href="/books" title="Link to tools" class="btn btn-large btn-primary">Explore Books</a>
+
+                </article>
+
+              </div>
 
             </div>
 
@@ -314,4 +334,3 @@
   </body>
 
 </html>
-
