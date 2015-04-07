@@ -21,7 +21,7 @@
               Bookmarklet
             </a>
 
-            <span><%= ( tool.stars.bookmarklet ) ? tool.stars.bookmarklet : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.bookmarklet ) ? tool.stars.bookmarklet : 'N/A' %></span>
 
         <% } %>
 
@@ -36,7 +36,7 @@
               Chrome
             </a>
 
-            <span><%= ( tool.stars.chrome ) ? tool.stars.chrome : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.chrome ) ? tool.stars.chrome : 'N/A' %></span>
 
         <% } %>
 
@@ -51,7 +51,7 @@
               Firefox
             </a>
 
-            <span><%= ( tool.stars.firefox ) ? tool.stars.firefox : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.firefox ) ? tool.stars.firefox : 'N/A' %></span>
 
         <% } %>
 
@@ -66,7 +66,7 @@
               Internet Explorer
             </a>
 
-            <span><%= ( tool.stars.internetExplorer ) ? tool.stars.internetExplorer : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.internetExplorer ) ? tool.stars.internetExplorer : 'N/A' %></span>
 
         <% } %>
 
@@ -81,7 +81,7 @@
               Safari
             </a>
 
-            <span><%= ( tool.stars.safari ) ? tool.stars.safari : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.safari ) ? tool.stars.safari : 'N/A' %></span>
 
         <% } %>
 
@@ -96,7 +96,7 @@
               Mac
             </a>
 
-            <span><%= ( tool.stars.mac ) ? tool.stars.mac : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.mac ) ? tool.stars.mac : 'N/A' %></span>
 
         <% } %>
 
@@ -111,7 +111,7 @@
               Windows
             </a>
 
-            <span><%= ( tool.stars.windows ) ? tool.stars.windows : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.windows ) ? tool.stars.windows : 'N/A' %></span>
 
         <% } %>
 
@@ -126,7 +126,7 @@
               Linux
             </a>
 
-            <span><%= ( tool.stars.linux ) ? tool.stars.linux : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.linux ) ? tool.stars.linux : 'N/A' %></span>
 
         <% } %>
 
@@ -141,7 +141,7 @@
               CLI
             </a>
 
-            <span><%= ( tool.stars.cli ) ? tool.stars.cli : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.cli ) ? tool.stars.cli : 'N/A' %></span>
 
         <% } %>
 
@@ -156,7 +156,7 @@
               Node module
             </a>
 
-            <span><%= ( tool.stars.module ) ? tool.stars.module : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.module ) ? tool.stars.module : 'N/A' %></span>
 
         <% } %>
 
@@ -171,7 +171,7 @@
               AngularJS Script
             </a>
 
-            <span><%= ( tool.stars.angular ) ? tool.stars.angular : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.angular ) ? tool.stars.angular : 'N/A' %></span>
 
         <% } %>
 
@@ -186,7 +186,7 @@
               Grunt plugin
             </a>
 
-            <span><%= ( tool.stars.grunt ) ? tool.stars.grunt : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.grunt ) ? tool.stars.grunt : 'N/A' %></span>
 
         <% } %>
 
@@ -201,7 +201,7 @@
               gulp plugin
             </a>
 
-            <span><%= ( tool.stars.gulp ) ? tool.stars.gulp : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.gulp ) ? tool.stars.gulp : 'N/A' %></span>
 
         <% } %>
 
@@ -216,7 +216,7 @@
               Service
             </a>
 
-            <span><%= ( tool.stars.illustrator ) ? tool.stars.illustrator : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.illustrator ) ? tool.stars.illustrator : 'N/A' %></span>
 
         <% } %>
 
@@ -231,7 +231,7 @@
               Javascript
             </a>
 
-            <span><%= ( tool.stars.javascript ) ? tool.stars.javascript : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.javascript ) ? tool.stars.javascript : 'N/A' %></span>
 
         <% } %>
 
@@ -246,7 +246,7 @@
               PHP
             </a>
 
-            <span><%= ( tool.stars.php ) ? tool.stars.php : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.php ) ? tool.stars.php : 'N/A' %></span>
 
         <% } %>
 
@@ -261,7 +261,7 @@
               Apache
             </a>
 
-            <span><%= ( tool.stars.apache ) ? tool.stars.apache : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.apache ) ? tool.stars.apache : 'N/A' %></span>
 
         <% } %>
 
@@ -276,7 +276,7 @@
               Nginx
             </a>
 
-            <span><%= ( tool.stars.nginx ) ? tool.stars.nginx : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.nginx ) ? tool.stars.nginx : 'N/A' %></span>
 
         <% } %>
 
@@ -291,7 +291,7 @@
               Wordpress
             </a>
 
-            <span><%= ( tool.stars.wordpress ) ? tool.stars.wordpress : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.wordpress ) ? tool.stars.wordpress : 'N/A' %></span>
 
         <% } %>
 
@@ -306,7 +306,7 @@
               Service
             </a>
 
-            <span><%= ( tool.stars.service ) ? tool.stars.service : 'N/A' %></span>
+            <span><%= ( tool.stars && tool.stars.service ) ? tool.stars.service : 'N/A' %></span>
 
         <% } %>
 
