@@ -1,13 +1,15 @@
 {
   "name" : "Better webfont loading with using localStorage and providing WOFF2 support",
-  "author": "Adam Beres-Deak ",
-  "date": "2014-12-18",
-  "social": {
-    "twitter": "@bdadamm"
+  "authors" : [
+    {
+      "name" : "Adam Beres-Deak",
+      "twitter" : "@bdadamm"
+    }
+  ],
+  "date" : "2014-12-18",
+  "stats" : {
+    "length" : 1200
   },
-  "stats": {
-    "length": 1200
-  },
-  "url": "http://bdadam.com/blog/better-webfont-loading-with-localstorage-and-woff2.html",
-  "tags": [ "loading", "localStorage", "webfonts" ]
+  "url" : "http://bdadam.com/blog/better-webfont-loading-with-localstorage-and-woff2.html",
+  "tags" : [ "loading", "localStorage", "webfonts" ]
 }

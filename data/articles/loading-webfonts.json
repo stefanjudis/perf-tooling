@@ -1,13 +1,15 @@
 {
   "name" : "Loading webfonts with high performance on responsive websites",
-  "author": "Adam Beres-Deak",
-  "date": "2014-08-08",
-  "social": {
-    "twitter" : "@bdadamm"
+  "authors" : [
+    {
+      "name" : "Adam Beres-Deak",
+      "twitter" : "@bdadamm"
+    }
+  ],
+  "date" : "2014-08-08",
+  "stats" : {
+    "length" : 1220
   },
-  "stats": {
-    "length": 1220
-  },
-  "url": "http://bdadam.com/blog/loading-webfonts-with-high-performance.html",
-  "tags": [ "webfonts", "localStorage", "loading" ]
+  "url" : "http://bdadam.com/blog/loading-webfonts-with-high-performance.html",
+  "tags" : [ "webfonts", "localStorage", "loading" ]
 }

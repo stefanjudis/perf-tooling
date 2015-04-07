@@ -14,10 +14,10 @@
       "twitter" : "@scottjehl"
     }
   ],
-  "date": "2014-12-12",
-  "stats": {
-    "length": 1294
+  "date" : "2014-12-12",
+  "stats" : {
+    "length" : 1294
   },
-  "url": "http://www.filamentgroup.com/lab/mv-initial-load-times.html",
-  "tags": [ "single page application", "render" ]
+  "url" : "http://www.filamentgroup.com/lab/mv-initial-load-times.html",
+  "tags" : [ "single page application", "render" ]
 }

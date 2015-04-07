@@ -1,13 +1,15 @@
 {
   "name" : "Async Fragments: Rediscovering Progressive HTML Rendering with Marko",
-  "author": "Patrick Steele-Idem",
-  "date": "2014-12-08",
-  "social": {
-    "twitter": "@psteeleidem"
+  "authors" : [
+    {
+      "name" : "Patrick Steele-Idem",
+      "twitter" : "@psteeleidem"
+    }
+  ],
+  "date" : "2014-12-08",
+  "stats" : {
+    "length" : 2673
   },
-  "stats": {
-    "length": 2673
-  },
-  "url": "http://www.ebaytechblog.com/2014/12/08/async-fragments-rediscovering-progressive-html-rendering-with-marko/",
-  "tags": [ "async", "loading", "rendering" ]
+  "url" : "http://www.ebaytechblog.com/2014/12/08/async-fragments-rediscovering-progressive-html-rendering-with-marko/",
+  "tags" : [ "async", "loading", "rendering" ]
 }

@@ -1,13 +1,15 @@
 {
   "name" : "Critical Path Performance Optimization at Pony Foo",
-  "author": "Nicolas Bevacqua",
-  "date": "2014-10-21",
-  "social": {
-    "twitter": "@nzgb"
+  "authors" : [
+    {
+      "name" : "Nicolas Bevacqua",
+      "twitter" : "@nzgb"
+    }
+  ],
+  "date" : "2014-10-21",
+  "stats" : {
+    "length" : 4122
   },
-  "stats": {
-    "length": 4122
-  },
-  "url": "http://ponyfoo.com/articles/critical-path-performance-optimization",
-  "tags": [ "best practices", "devTools" ]
+  "url" : "http://ponyfoo.com/articles/critical-path-performance-optimization",
+  "tags" : [ "best practices", "devTools" ]
 }

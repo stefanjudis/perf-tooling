@@ -1,0 +1,15 @@
+{
+  "name" : "Squeezing the Most Into the New W3C Beacon API",
+  "authors" : [
+    {
+      "name" : "Nik Molnar",
+      "twitter" : "@nikmd23"
+    }
+  ],
+  "date" : "2014-12-17",
+  "stats" : {
+    "length" : 1301
+  },
+  "url" : "http://nikcodes.com/2014/12/16/squeezing-the-most-into-the-new-w3c-beacon-api/",
+  "tags" : [ "beacon", "resourceTiming" ]
+}

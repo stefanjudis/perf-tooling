@@ -1,13 +1,15 @@
 {
   "name" : "Request Timeout",
-  "author": "Steve Souders",
+  "authors" : [
+    {
+      "name" : "Steve Souders",
+      "twitter" : "@Souders"
+    }
+  ],
   "date" : "2014-11-14",
-  "social": {
-    "twitter": "@Souders"
+  "stats" : {
+    "length" : 361
   },
-  "stats": {
-    "length": 361
-  },
-  "url": "http://www.stevesouders.com/blog/2014/11/14/request-timeout/",
-  "tags": [ "spof" ]
+  "url" : "http://www.stevesouders.com/blog/2014/11/14/request-timeout/",
+  "tags" : [ "spof" ]
 }

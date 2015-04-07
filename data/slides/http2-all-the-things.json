@@ -1,13 +1,15 @@
 {
-  "name": "HTTP/2 all the things",
-  "author": "Ilya Grigorik",
-  "date": "2014-11-15",
-  "social": {
-    "twitter": "@igrigorik"
+  "name" : "HTTP/2 all the things",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "date" : "2014-11-15",
+  "stats" : {
+    "length" : 47
   },
-  "stats": {
-    "length": 47
-  },
-  "tags": ["http2", "network"],
+  "tags" : [ "http2", "network" ],
   "url" : "https://docs.google.com/presentation/d/1l9c9ROjLTD8clOL0yFufAOMbxNC0D-19zCiXMgqtY-M/present?slide=id.p19"
 }

@@ -1,13 +1,15 @@
 {
   "name" : "A Beginner's Guide to HTTP Cache Headers",
-  "author": "Kyle Young",
-  "date": "2013-04-30",
-  "social": {
-    "twitter": "@ksgyoung"
+  "authors" : [
+    {
+      "name" : "Kyle Young",
+      "twitter" : "@ksgyoung"
+    }
+  ],
+  "date" : "2013-04-30",
+  "stats" : {
+    "length" : 3743
   },
-  "stats": {
-    "length": 3743
-  },
-  "url": "http://www.mobify.com/blog/beginners-guide-to-http-cache-headers/",
-  "tags": [ "loading", "http", "network" ]
+  "url" : "http://www.mobify.com/blog/beginners-guide-to-http-cache-headers/",
+  "tags" : [ "loading", "http", "network" ]
 }

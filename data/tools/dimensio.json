@@ -1,0 +1,6 @@
+{
+  "name" : "dimens.io",
+  "service" : "https://dimens.io/",
+  "description" : "Fast, on-demand resizing, optimizing and conversion of high-resolution images. Balances quality with file size. Works with existing storage and CMS solutions.",
+  "tags" : [ "images", "compression" ]
+}

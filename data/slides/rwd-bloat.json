@@ -1,13 +1,15 @@
 {
-  "name": "RWD BLOAT",
-  "author": "Dave Rupert",
-  "date": "2014-11-11",
-  "social": {
-    "twitter": "@davatron5000"
+  "name" : "RWD BLOAT",
+  "authors" : [
+    {
+      "name" : "Dave Rupert",
+      "twitter" : "@davatron5000"
+    }
+  ],
+  "date" : "2014-11-11",
+  "stats" : {
+    "length" : 93
   },
-  "stats": {
-    "length": 93
-  },
-  "tags": ["rwd", "performance", "myths"],
+  "tags" : [ "rwd", "performance", "myths" ],
   "url" : "https://speakerdeck.com/davatron5000/rwd-bloat"
 }

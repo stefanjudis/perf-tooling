@@ -1,10 +1,15 @@
 {
   "name" : "Need for Speed – How to Improve your Website Performance",
-  "author": "Vaclovas Vicius",
-  "date": "2014-04-01",
-  "stats": {
-    "length": 1507
+  "authors" : [
+    {
+      "name" : "Vaclovas Vicius",
+      "twitter" : "@vaclovasvicius"
+    }
+  ],
+  "date" : "2014-04-01",
+  "stats" : {
+    "length" : 1507
   },
-  "url": "https://www.devbridge.com/articles/need-for-speed-how-to-improve-your-website-performance/",
-  "tags": [ "best practices" ]
+  "url" : "https://www.devbridge.com/articles/need-for-speed-how-to-improve-your-website-performance/",
+  "tags" : [ "best practices" ]
 }

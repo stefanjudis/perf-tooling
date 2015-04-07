@@ -1,13 +1,15 @@
 {
   "name" : "Tips For Optimising SVG Delivery For The Web",
-  "author": "Sara Soueidan",
-  "date": "2014-12-19",
-  "social" : {
-    "twitter": "@SaraSoueidan"
+  "authors" : [
+    {
+      "name" : "Sara Soueidan",
+      "twitter" : "@SaraSoueidan"
+    }
+  ],
+  "date" : "2014-12-19",
+  "stats" : {
+    "length" : 3440
   },
-  "stats": {
-    "length": 3440
-  },
-  "url": "http://calendar.perfplanet.com/2014/tips-for-optimising-svg-delivery-for-the-web/",
-  "tags": ["svg"]
+  "url" : "http://calendar.perfplanet.com/2014/tips-for-optimising-svg-delivery-for-the-web/",
+  "tags" : ["svg"]
 }

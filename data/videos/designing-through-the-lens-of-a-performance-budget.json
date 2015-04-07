@@ -1,9 +1,11 @@
 {
   "name" : "Yesenia Perez-Cruz — Design Decisions Through The Lens Of A Performance Budget (Smashing Conference Freiburg 2014)",
-  "author": "Yesenia Perez-Cruz",
-  "social": {
-    "twitter": "@yeseniaa"
-  },
+  "authors" : [
+    {
+      "name" : "Yesenia Perez-Cruz",
+      "twitter" : "@yeseniaa"
+    }
+  ],
   "vimeoId" : "108328247",
   "tags" : [ "design", "budget", "process" ]
 }

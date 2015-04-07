@@ -1,6 +1,10 @@
 {
   "name" : "Debugging CSS & Render Performance",
-  "author": "Chelsea Derrick",
+  "authors" : [
+    {
+      "name" : "Chelsea Derrick"
+    }
+  ],
   "youtubeId" : "gqc88qWuiI4",
   "tags" : [ "css", "debuggin", "devtools" ]
 }
