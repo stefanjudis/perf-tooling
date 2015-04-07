@@ -23,10 +23,16 @@ module.exports = {
     'javascript',
     'php',
     'python',
+    'apache',
+    'nginx',
     'service',
     'wordpress',
     'illustrator'
   ],
+  timings : {
+    requestDelay : 250,
+    refresh      : 1000 * 60 * 60 * 12
+  },
   site      : {
     name : 'Performance tooling today'
   },

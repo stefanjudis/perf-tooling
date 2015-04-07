@@ -1,0 +1,15 @@
+{
+  "name" : "The good, the bad and the ugly with responsive web design",
+  "authors" : [
+    {
+      "name" : "Marco Barbosa",
+      "twitter" : "@marcobarbosa"
+    }
+  ],
+  "date" : "2015-02-17",
+  "stats" : {
+    "length" : 93
+  },
+  "tags" : [ "images", "loading", "responsive web design" ],
+  "url" : "https://speakerdeck.com/14islands/the-good-the-bad-and-the-ugly-with-responsive-web-design"
+}
