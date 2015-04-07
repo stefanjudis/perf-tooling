@@ -1,0 +1,15 @@
+{
+  "name" : "Browser representatives on CSS performance",
+  "authors" : [
+    {
+      "name" : "Ben Frain",
+      "twitter" : "@benfrain"
+    }
+  ],
+  "date" : "2015-03-31",
+  "stats" : {
+    "length" : 1609
+  },
+  "url" : "http://benfrain.com/browser-representatives-on-css-performance/",
+  "tags" : [ "css", "js", "performance" ]
+}
