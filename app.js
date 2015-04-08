@@ -8,67 +8,29 @@ var _           = require( 'lodash' );
 var minify      = require( 'html-minifier' ).minify;
 var request     = require( 'request' );
 var config      = require( './config/config' );
+var async       = require( 'async' );
 
 
 /**
- * Youtube API stuff
+ * Helpers to deal with API stuff
+ * @type {Object}
  */
-var Youtube = ( require( 'youtube-api' ) );
-
-Youtube.authenticate( {
-  type : 'key',
-  key  : config.youtube.token
-} );
-
-
-/**
- * Vimeo api stuff
- */
-var Vimeo = require( 'vimeo-api' ).Vimeo;
-var vimeo = new Vimeo(
-  config.vimeo.clientId,
-  config.vimeo.clientSecret,
-  config.vimeo.accessToken
-);
-
-
-/**
- * Twitter api stuff
- */
-if (
-   config.twitter.consumer_key &&
-   config.twitter.consumer_secret &&
-   config.twitter.access_token &&
-   config.twitter.access_token_secret
-) {
-  var Twit = require( 'twit' );
-  var twit = new Twit( {
-    consumer_key        : config.twitter.consumer_key,
-    consumer_secret     : config.twitter.consumer_secret,
-    access_token        : config.twitter.access_token,
-    access_token_secret : config.twitter.access_token_secret
-  } );
+var helpers = {
+  github  : ( require( './lib/helper/github' ) ).init(),
+  twitter : ( require( './lib/helper/twitter' ) ).init(),
+  vimeo   : ( require( './lib/helper/vimeo' ) ).init(),
+  youtube : ( require( './lib/helper/youtube' ) ).init()
 }
 
-
 var port         = process.env.PORT || 3000;
-
-
 var data         = {
-  people   : {}
+  people   : {},
+  articles : getList( 'articles' ),
+  slides   : getList( 'slides' ),
+  tools    : getList( 'tools' ),
+  videos   : getList( 'videos' ),
+  books    : getList( 'books' )
 };
-
-data.articles = getList( 'articles' );
-data.slides   = getList( 'slides' );
-data.tools    = getList( 'tools' );
-data.videos   = getList( 'videos' );
-data.books    = getList( 'books' );
-
-/**
- * List of contributors
- * will be fetched async
- */
-var contributors;
 
 
 /**
@@ -106,32 +68,15 @@ var pageContent = {
  * Fetch list of contributors
  */
 function fetchContributors() {
-  if ( config.github.id && config.github.token ) {
-    request(
-      {
-        url     : 'https://api.github.com/repos/stefanjudis/perf-tooling/contributors?client_id=' + config.github.id + '&client_secret=' + config.github.token,
-        headers : {
-          'User-Agent' : 'perf-tooling.today'
-        }
-      },
-      function( error, response, body ) {
-        if ( !error && response && response.statusCode === 200 ) {
-          try {
-            contributors = JSON.parse( body );
-          } catch( e ) {
-            contributors = false;
-            console.log( error );
-            console.log( response );
-            console.log( e );
-          }
+  helpers.github.getContributors( function( error, contributors ) {
+    if ( error ) {
+      return console.warn( error );
+    }
 
-          pages.index = renderPage( 'index' );
-        }
-      }
-    );
-  } else {
-    console.log( 'No Github id and token set!!!' );
-  }
+    data.contributors = contributors;
+
+    pages.index = renderPage( 'index' );
+  } );
 }
 
 
@@ -139,51 +84,51 @@ function fetchContributors() {
  * Fetch github stars
  */
 function fetchGithubStars() {
+  var queue = [];
+
   _.each( data.tools, function( tool ) {
     _.forIn( tool, function( value, key ) {
       tool.stars = data.tools.stars || {};
 
-      if ( config.github.id && config.github.token ) {
-        if (
-          key !== 'description' &&
-          key !== 'name' &&
-          key !== 'type' &&
-          key !== 'tags' &&
-          key !== 'fuzzy' &&
-          /github/.test( value )
-        ) {
-          var url = 'https://api.github.com/repos/' +
-                      value.replace( 'https://github.com/', '' ).split( '#' )[ 0 ] +
-                      '?client_id=' + config.github.id +
-                      '&client_secret=' + config.github.token;
+      if (
+        key !== 'description' &&
+        key !== 'name' &&
+        key !== 'type' &&
+        key !== 'tags' &&
+        key !== 'fuzzy' &&
+        /github/.test( value )
+      ) {
+        queue.push( function( done ) {
+          var project = value.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
 
-          request(
-            {
-              url     : url,
-              headers : {
-                'User-Agent' : 'perf-tooling.today'
-              }
-            },
-            function( error, response, body ) {
-              if ( !error && response && response.statusCode === 404 ) {
-                console.log( 'NOT FOUND: ' + url );
+          helpers.github.getStars(
+            project,
+            function( error, stars ) {
+              if ( error ) {
+                console.warn( 'ERROR -> fetchGithubStars' );
+                console.warn( 'ERROR -> ' + project );
+                console.warn( error );
+                return done( null );
               }
 
-              try {
-                var stars = JSON.parse( body ).stargazers_count;
-                tool.stars[ key ] = stars;
+              tool.stars[ key ] = stars;
 
-                pages.tools = renderPage( 'tools' );
-              } catch( e ) {
-                console.log( error );
-                console.log( response );
-                console.log( e );
-              }
+              pages.tools = renderPage( 'tools' );
+
+              // give it a bit of time
+              // to rest and not reach the API limits
+              setTimeout( function() {
+                done( null );
+              }, config.timings.requestDelay );
             }
           );
-        }
+        } );
       }
     } );
+  } );
+
+  async.waterfall( queue, function() {
+    console.log( 'DONE -> fetchGithubStars()' );
   } );
 }
 
@@ -192,63 +137,61 @@ function fetchGithubStars() {
  * Fetch twitter data
  */
 function fetchTwitterUserMeta() {
-  if ( twit ) {
-    /**
-     * Fetch twitter meta for people
-     */
-    function fetchTwitterUserData( userName, type ) {
-      userName = userName.replace( '@', '' );
+  var queue = [];
 
-      if ( typeof data.people[ userName ] === 'undefined' ) {
-        // block this entry until the response comes back
-        // -> save same requests
-        data.people[ userName ] = true;
+  /**
+   * Evaluate set authors for each entry
+   * @param  {String} type entry type
+   */
+  function evalAuthors( type ) {
+    _.each( data[ type ], function( entry ) {
+      if ( entry.authors && entry.authors.length ) {
+        _.each( entry.authors, function( author ) {
+          if ( author.twitter ) {
+            var userName = author.twitter.replace( '@', '' );
 
-        twit.get(
-          '/users/show/:id',
-          { id : userName },
-          function( err, twitterData, res ) {
-            if ( err ) {
-              return console.log( err );
-            }
+            queue.push( function( done ) {
+              helpers.twitter.fetchTwitterUserData(
+                userName,
+                function( error, user ) {
+                  if ( error ) {
+                    console.warn( 'ERROR -> fetchTwitterUserData' );
+                    console.warn( 'ERROR -> ' + userName );
+                    console.warn( 'ERROR -> ' +  error );
+                    return done( null );
+                  }
 
-            data.people[ userName ] = {
-              description   : twitterData.description,
-              followerCount : twitterData.followers_count,
-              image         : twitterData.profile_image_url
-            }
+                  data.people[ userName ] = user;
 
-            pages.articles = renderPage( 'articles' );
-            pages.books    = renderPage( 'books' );
-            pages.slides   = renderPage( 'slides' );
-            pages.videos   = renderPage( 'videos' );
+                  // render it again
+                  // because we had a data update
+                  pages.articles = renderPage( 'articles' );
+                  pages.books    = renderPage( 'books' );
+                  pages.slides   = renderPage( 'slides' );
+                  pages.videos   = renderPage( 'videos' );
+
+                  // give it a bit of time
+                  // to rest and not reach the API limits
+                  setTimeout( function() {
+                    done( null );
+                  }, config.timings.requestDelay );
+                }
+              );
+            } );
+          }
         } );
       }
-    }
-
-    /**
-     * Evaluate set authors for each entry
-     * @param  {String} type entry type
-     */
-    function evalAuthors( type ) {
-      _.each( data[ type ], function( entry ) {
-        if ( entry.authors && entry.authors.length ) {
-          _.each( entry.authors, function( author ) {
-            if ( author.twitter ) {
-              fetchTwitterUserData( author.twitter, type );
-            }
-          } );
-        }
-      } );
-    }
-
-    evalAuthors( 'videos' );
-    evalAuthors( 'articles' );
-    evalAuthors( 'slides' );
-    evalAuthors( 'books' );
-  } else {
-    console.log( 'Twitter tokens missing' );
+    } );
   }
+
+  evalAuthors( 'videos' );
+  evalAuthors( 'articles' );
+  evalAuthors( 'slides' );
+  evalAuthors( 'books' );
+
+  async.waterfall( queue, function() {
+    console.log( 'DONE -> fetchTwitterUserMeta()' );
+  } );
 }
 
 
@@ -256,93 +199,58 @@ function fetchTwitterUserMeta() {
  * Fetch video meta data
  */
 function fetchVideoMeta() {
-  var youtubeNotificationShown = false;
-  var vimeoNotificationShown   = false;
+  var queue = [];
 
   _.each( data.videos, function( video ) {
-    if ( config.youtube.token ) {
-      if ( video.youtubeId ) {
-        Youtube.videos.list( {
-          part : 'snippet,statistics',
-          id   : video.youtubeId
-        }, function( error, data ) {
+    if ( video.youtubeId ) {
+      queue.push( function( done ) {
+        helpers.youtube.fetchVideoMeta( video.youtubeId, function( error, meta ) {
           if ( error ) {
-            console.log( 'ERROR IN YOUTUBE API CALL' );
-            console.log( error );
-
-            return;
+            console.warn( 'ERROR -> youtube.fetchVideoMeta' );
+            console.warn( 'ERROR -> ' + video.youtubeId );
+            console.warn( 'ERROR -> ' + error );
+            return done( null );
           }
 
-          if ( data.items.length ) {
-            video.publishedAt = new Date( data.items[ 0 ].snippet.publishedAt );
-            video.thumbnail   =  {
-              url    : data.items[ 0 ].snippet.thumbnails.medium.url,
-              width  : data.items[ 0 ].snippet.thumbnails.medium.width,
-              height : data.items[ 0 ].snippet.thumbnails.medium.height
-            };
-            video.stats       = {
-              viewCount    : data.items[ 0 ].statistics.viewCount,
-              likeCount    : data.items[ 0 ].statistics.likeCount,
-              dislikeCount : data.items[ 0 ].statistics.dislikeCount
-            };
-            video.title       = data.items[ 0 ].snippet.title;
-            video.url         = 'https://www.youtube.com/watch?v=' + video.youtubeId;
-
-            pages.videos = renderPage( 'videos' );
-          } else {
-            console.log( 'No video matching the YoutubeId' );
-          }
-        } );
-      }
-    } else {
-      if ( !youtubeNotificationShown ) {
-        console.log( 'No Youtube token set!!!' );
-
-        youtubeNotificationShown = true;
-      }
-    }
-
-    if (
-      config.vimeo.clientId &&
-      config.vimeo.clientSecret &&
-      config.vimeo.accessToken
-    ) {
-      if ( video.vimeoId ) {
-        vimeo.request( {
-          path : '/videos/' + video.vimeoId
-        }, function( error, body, statusCode ) {
-          if ( error ) {
-            console.log( 'ERROR IN VIMEO API CALL' );
-            console.log( error );
-            console.log( statusCode );
-
-            return;
-          }
-
-          video.duration    = body.duration / 60;
-          video.publishedAt = new Date( body.created_time );
-          video.thumbnail   = {
-            url    : body.pictures.sizes[ 2 ].link,
-            width  : body.pictures.sizes[ 2 ].width,
-            height : body.pictures.sizes[ 2 ].height
-          };
-          video.stats       = {
-            viewCount : body.stats.plays,
-            likeCount : body.metadata.connections.likes.total
-          };
-          video.title       = body.name;
-          video.url         = body.link;
+          _.extend( video, meta );
 
           pages.videos = renderPage( 'videos' );
-        } );
-      }
-    } else {
-      if ( !vimeoNotificationShown ) {
-        console.log( 'Vimeo credentials not set!!!' );
 
-        vimeoNotificationShown = true;
-      }
+          // give it a bit of time
+          // to rest and not reach the API limits
+          setTimeout( function() {
+            done( null );
+          }, config.timings.requestDelay );
+        } )
+      } );
     }
+
+    if ( video.vimeoId ) {
+      queue.push( function( done ) {
+        helpers.vimeo.fetchVideoMeta( video.vimeoId, function( error, meta ) {
+          if ( error ) {
+            console.warn( 'ERROR -> vimeo.fetchVideoMeta' );
+            console.warn( 'ERROR -> ' + video.vimeoId );
+            console.warn( 'ERROR -> ' + error );
+            return done( null );
+          }
+
+          _.extend( video, meta );
+
+          pages.videos = renderPage( 'videos' );
+
+          // give it a bit of time
+          // to rest and not reach the API limits
+          setTimeout( function() {
+            done( null );
+          }, config.timings.requestDelay );
+        } )
+      } );
+    }
+  } );
+
+  async.waterfall( queue, function() {
+    console.log( 'DONE -> fetchVideoMeta()' );
   } );
 }
 
@@ -443,7 +351,7 @@ function renderPage( type, query ) {
         css              : pageContent.css,
         enhance          : pageContent.enhance,
         cdn              : config.cdn,
-        contributors     : contributors,
+        contributors     : data.contributors,
         partial          : partial,
         people           : data.people,
         platforms        : config.platforms,
@@ -478,20 +386,6 @@ function renderPage( type, query ) {
 
 
 /**
- * Render all page layout with current data
- * @return {[type]} [description]
- */
-function renderAllPages() {
-  pages.index    = renderPage( 'index' );
-  pages.articles = renderPage( 'articles' );
-  pages.books    = renderPage( 'books' );
-  pages.slides   = renderPage( 'slides' );
-  pages.tools    = renderPage( 'tools' );
-  pages.videos   = renderPage( 'videos' );
-}
-
-
-/**
  * Fetch contributors
  */
 fetchContributors();
@@ -521,7 +415,7 @@ setInterval( function() {
   fetchGithubStars();
   fetchVideoMeta();
   fetchTwitterUserMeta();
-}, 1000 * 60 * 60 * 12 );
+}, config.timings.refresh );
 
 app.use( compression() );
 
