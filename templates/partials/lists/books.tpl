@@ -3,7 +3,7 @@
 
   <% _.each( list , function( book ) { %>
 
-    <li id="<%= book.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-book media <%= ( book.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= book.id %>" class="post-book media <%= ( book.hidden === true ) ? 'is-hidden' : '' %>">
 
       <figure class="media-obj-left">
 

@@ -3,7 +3,7 @@
 
   <% _.each( list , function( video ) { %>
 
-    <li id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= video.id %>" class="post-video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% var twitterHandle = ( video.social && video.social.twitter ) ? video.social.twitter.replace( '@', '' ) : false; %>
 
@@ -19,7 +19,7 @@
 
       <div class="media-body">
 
-        <h3 class="post-title"><a href="<%= video.url %>" title="Link to video" target="_blank"><%= video.title || video.name %></a></h3>
+        <h3 class="post-title"><a href="#" title="Link to video" data-modal data-modal-content-id="<%= video.id %>"><%= video.title || video.name %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 

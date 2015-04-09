@@ -42,6 +42,13 @@
       },
       data : list
     } );
+
+    window.perfTooling.components.modal.init( {
+      elements : {
+        list  : '.posts'
+      },
+      data : list
+    } );
   }
 
   initToggleNav();

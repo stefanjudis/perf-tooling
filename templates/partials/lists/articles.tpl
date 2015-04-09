@@ -6,7 +6,7 @@
   %>
   <% _.each( list , function( article ) { %>
 
-    <li id="<%= article.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= article.id %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 
       <%=
         partial(

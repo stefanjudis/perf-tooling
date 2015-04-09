@@ -318,11 +318,22 @@ function getList( type ) {
           )
         );
 
-        entry.fuzzy = fuzzify(
+        entry.fuzzy  = fuzzify(
           entry,
           config.platforms
         ).replace( /http(s)?:\/\//, '' ).toLowerCase();
+        entry.id     = entry.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' );
         entry.hidden = false;
+
+        if ( type === 'videos' ) {
+          if ( entry.youtubeId ) {
+            entry.html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + entry.youtubeId + '" frameborder="0" allowfullscreen></iframe>';
+          }
+
+          if ( entry.vimeoId ) {
+            entry.html = '<iframe src="//player.vimeo.com/video/' + entry.vimeoId + '" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+          }
+        }
 
         list.push( entry );
       } catch( e ) {

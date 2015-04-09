@@ -16,6 +16,10 @@
 
       <div class="svgIcons"><%= svg %></div>
 
+      <div id="modal">
+        <div id="modalContent"></div>
+      </div>
+
       <%=
         partial(
           'templates/partials/header.tpl',
@@ -89,7 +93,8 @@
         _.map( list, function( entry ) {
           return {
             fuzzy : entry.fuzzy,
-            name  : entry.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' )
+            id    : entry.id,
+            html  : entry.html
           }
         } )
       ) %>;

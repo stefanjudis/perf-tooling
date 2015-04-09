@@ -5,8 +5,7 @@
     } ).reverse();
   %>
   <% _.each( list , function( slide ) { %>
-
-    <li id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= slide.id %>" class="post-slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% var twitterHandle = ( slide.social && slide.social.twitter ) ? slide.social.twitter.replace( '@', '' ) : false; %>
 
@@ -22,7 +21,7 @@
 
       <div class="media-body">
 
-        <h3 class="post-title"><a href="<%= slide.url %>" alt="Link to <%= slide.name %>" title="Link to slide" target="_blank"><%= slide.name %></a></h3>
+        <h3 class="post-title"><a href="<%= slide.url %>" alt="Link to <%= slide.name %>" title="Link to slide" data-modal data-modal-content-id="<%= slide.id %>" target="_blank"><%= slide.name %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
