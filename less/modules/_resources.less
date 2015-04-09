@@ -81,191 +81,23 @@
 
 }
 
-.resource-service {
-  background: @color-service;
+.resource {
 
-  &:hover {
-    background: @color-service-hover;
-  }
+  .-(@i: length(@resources)) when (@i > 0) {
 
-}
+    @resource-name: e(extract(@resources, @i));
+    @resource: ~'color-@{resource-name}';
+    @resource-hover: ~'color-@{resource-name}-hover';
 
-.resource-cli {
-  background: @color-cli;
+    &-@{resource-name} {
+      background: @@resource;
 
-  &:hover {
-    background: @color-cli-hover;
-  }
+      &:hover {
+        background: @@resource-hover;
+      }
 
-}
+    } .-((@i - 1));
 
-.resource-chrome {
-  background: @color-chrome;
-
-  &:hover {
-    background: @color-chrome-hover;
-  }
-
-}
-
-.resource-firefox {
-  background: @color-firefox;
-
-  &:hover {
-    background: @color-firefox-hover;
-  }
-
-}
-
-.resource-safari {
-  background: @color-safari;
-
-  &:hover {
-    background: @color-safari-hover;
-  }
-
-}
-
-.resource-internet-explorer {
-  background: @color-internet-explorer;
-
-  &:hover {
-    background: @color-internet-explorer-hover;
-  }
-
-}
-
-.resource-mac {
-  background: @color-mac;
-
-  &:hover {
-    background: @color-mac-hover;
-  }
-
-}
-
-.resource-windows {
-  background: @color-windows;
-
-  &:hover {
-    background: @color-windows-hover;
-  }
-
-}
-
-.resource-linux {
-  background: @color-linux;
-
-  &:hover {
-    background: @color-linux-hover;
-  }
-
-}
-
-.resource-module {
-  background: @color-module;
-
-  &:hover {
-    background: @color-module-hover;
-  }
-
-}
-
-.resource-angular {
-  background: @color-angular;
-
-  &:hover {
-    background: @color-angular-hover;
-  }
-
-}
-
-.resource-grunt {
-  background: @color-grunt;
-
-  &:hover {
-    background: @color-grunt-hover;
-  }
-
-}
-
-.resource-gulp {
-  background: @color-gulp;
-
-  &:hover {
-    background: @color-gulp-hover;
-  }
-
-}
-
-.resource-illustrator {
-  background: @color-illustrator;
-
-  &:hover {
-    background: @color-illustrator-hover;
-  }
-
-}
-
-.resource-bookmarklet {
-  background: @color-bookmarklet;
-
-  &:hover {
-    background: @color-bookmarklet-hover;
-  }
-
-}
-
-.resource-javascript {
-  background: @color-javascript;
-
-  &:hover {
-    background: @color-javascript-hover;
-  }
-
-}
-
-.resource-php {
-  background: @color-php;
-
-  &:hover {
-    background: @color-php-hover;
-  }
-
-}
-
-.resource-python {
-  background: @color-python;
-
-  &:hover {
-    background: @color-python-hover;
-  }
-
-}
-
-.resource-apache {
-  background: @color-apache;
-
-  &:hover {
-    background: @color-apache-hover;
-  }
-
-}
-
-.resource-nginx {
-  background: @color-nginx;
-
-  &:hover {
-    background: @color-nginx-hover;
-  }
-
-}
-
-.resource-wordpress {
-  background: @color-wordpress;
-
-  &:hover {
-    background: @color-wordpress-hover;
-  }
+  } .-;
 
 }
