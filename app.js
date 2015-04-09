@@ -16,10 +16,12 @@ var async       = require( 'async' );
  * @type {Object}
  */
 var helpers = {
-  github  : ( require( './lib/helper/github' ) ).init(),
-  twitter : ( require( './lib/helper/twitter' ) ).init(),
-  vimeo   : ( require( './lib/helper/vimeo' ) ).init(),
-  youtube : ( require( './lib/helper/youtube' ) ).init()
+  github      : ( require( './lib/helper/github' ) ).init(),
+  slideshare  : ( require( './lib/helper/slideshare' ) ).init(),
+  speakerdeck : ( require( './lib/helper/speakerdeck' ) ).init(),
+  twitter     : ( require( './lib/helper/twitter' ) ).init(),
+  vimeo       : ( require( './lib/helper/vimeo' ) ).init(),
+  youtube     : ( require( './lib/helper/youtube' ) ).init()
 }
 
 var port         = process.env.PORT || 3000;
@@ -255,6 +257,48 @@ function fetchVideoMeta() {
 
 
 /**
+ * Fetch slide meta data
+ */
+function fetchSlideMeta() {
+  var queue = [];
+
+  _.each( data.slides, function( slide ) {
+    var match = slide.url.match( /(slideshare|speakerdeck)/g );
+    if ( match ) {
+      queue.push( function( done ) {
+        if ( helpers[ match[ 0 ] ] ) {
+          helpers[ match[ 0 ] ].getMeta( slide.url, function( error, meta ) {
+            if ( error ) {
+              console.warn( 'ERROR -> vimeo.fetchSlideMeta' );
+              console.warn( 'ERROR -> ' + slide.url );
+              console.warn( 'ERROR -> ' + error );
+              return done( null );
+            }
+
+            _.extend( slide, meta );
+
+            pages.slides = renderPage( 'slides' );
+
+            // give it a bit of time
+            // to rest and not reach the API limits
+            setTimeout( function() {
+              done( null );
+            }, config.timings.requestDelay );
+          } )
+        } else {
+          done( null );
+        }
+      } );
+    }
+  } );
+
+  async.waterfall( queue, function() {
+    console.log( 'DONE -> fetchSlideMeta()' );
+  } );
+}
+
+
+/**
  * Read files and get tools
  *
  * @param {String} type type
@@ -399,6 +443,12 @@ fetchGithubStars();
  * fetch video meta data
  */
 fetchVideoMeta();
+
+
+/**
+ * fetch slide meta data
+ */
+fetchSlideMeta();
 
 
 /**
