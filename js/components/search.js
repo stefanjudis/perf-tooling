@@ -1,8 +1,3 @@
-/**
- * Copied from modernizr
- *
- * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
- */
 ( function( window ) {
   /**
    * Cached essential elements

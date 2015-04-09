@@ -6,7 +6,6 @@ var fs          = require( 'fs' );
 var fuzzify     = require( './lib/fuzzify' );
 var _           = require( 'lodash' );
 var minify      = require( 'html-minifier' ).minify;
-var request     = require( 'request' );
 var config      = require( './config/config' );
 var async       = require( 'async' );
 
@@ -22,7 +21,7 @@ var helpers = {
   twitter     : ( require( './lib/helper/twitter' ) ).init(),
   vimeo       : ( require( './lib/helper/vimeo' ) ).init(),
   youtube     : ( require( './lib/helper/youtube' ) ).init()
-}
+};
 
 var port         = process.env.PORT || 3000;
 var data         = {
@@ -222,7 +221,7 @@ function fetchVideoMeta() {
           setTimeout( function() {
             done( null );
           }, config.timings.requestDelay );
-        } )
+        } );
       } );
     }
 
@@ -245,7 +244,7 @@ function fetchVideoMeta() {
           setTimeout( function() {
             done( null );
           }, config.timings.requestDelay );
-        } )
+        } );
       } );
     }
   } );
@@ -284,7 +283,7 @@ function fetchSlideMeta() {
             setTimeout( function() {
               done( null );
             }, config.timings.requestDelay );
-          } )
+          } );
         } else {
           done( null );
         }

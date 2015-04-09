@@ -158,7 +158,7 @@ gulp.task( 'images', function () {
 gulp.task( 'jsonlint', function () {
   return gulp.src( files.data )
               .pipe( jsonlint() )
-              .pipe( jsonlint.reporter( function( file, cb ) {
+              .pipe( jsonlint.reporter( function( file ) {
                 gutil.log( 'Error on file ' + file.path );
                 gutil.log( file.jsonlint.message );
 
