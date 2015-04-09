@@ -22,6 +22,8 @@ var minifyCSS     = require( 'gulp-minify-css' );
 var uglify        = require( 'gulp-uglify' );
 var tasks         = require( 'gulp-task-listing' );
 var svgstore      = require( 'gulp-svgstore' );
+var cmq           = require( 'gulp-combine-media-queries' );
+
 
 var files = {
   data    : [ 'data/**/*.json' ],
@@ -76,6 +78,9 @@ gulp.task( 'styles', function () {
     .pipe( csslint( '.csslintrc' ) )
     .pipe( csslint.reporter() )
     .pipe( prefix( 'last 1 version', '> 1%', 'ie 8', 'ie 7' ) )
+    .pipe( cmq( {
+      log: true
+    } ) )
     .pipe( minifyCSS() )
     .pipe( gulp.dest( 'public/' ) );
 });
