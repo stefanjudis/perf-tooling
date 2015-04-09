@@ -297,14 +297,19 @@ function getList( type ) {
 /**
  * Render page
  *
- * @param  {String} type  page type
- * @param  {String} query optional search query
+ * @param  {String} type    page type
+ * @param  {Object} options optional options
  *
  * @return {String}       rendered page
  */
-function renderPage( type, query ) {
+function renderPage( type, options ) {
+  options = options || {};
+
   var template = ( type === 'index' ) ? 'index' : 'list';
   var list     = data[ type ] || null;
+
+  var query    = options.query;
+  var debug    = options.debug;
 
   if ( query ) {
     var queryValues  = query.split( ' ' );
@@ -350,6 +355,7 @@ function renderPage( type, query ) {
         css              : pageContent.css,
         cdn              : config.cdn,
         contributors     : data.contributors,
+        debug            : !! debug,
         partial          : partial,
         people           : data.people,
         platforms        : config.platforms,
@@ -425,8 +431,22 @@ config.listPages.forEach( function( page ) {
   pages[ page ] = renderPage( page );
 
   app.get( '/' + page, function( req, res ) {
-    if ( req.query && req.query.q && req.query.q.length ) {
-      res.send( renderPage( page, req.query.q ) );
+    if (
+      req.query &&
+      (
+        ( req.query.q && req.query.q.length ) ||
+        req.query.debug
+      )
+    ) {
+      res.send(
+        renderPage(
+          page,
+          {
+            query : req.query.q,
+            debug : req.query.debug
+          }
+        )
+      );
     } else {
       res.send( pages[ page ] );
     }
