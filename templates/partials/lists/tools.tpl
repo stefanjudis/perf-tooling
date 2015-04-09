@@ -280,6 +280,21 @@
 
         <% } %>
 
+        <% if ( tool.python ) { %>
+
+          <li class="tooltip" title="Python Script">
+
+            <a href="<%= tool.python %>" title="Link to Python Script" class="resource-python" target="_blank">
+              <svg>
+                <use xlink:href="#icon-python" />
+              </svg>
+              Python
+            </a>
+
+            <span><%= ( tool.stars.python ) ? tool.stars.python : 'N/A' %></span>
+
+        <% } %>
+
         <% if ( tool.wordpress ) { %>
 
           <li class="tooltip" title="WordPress">
