@@ -5,12 +5,12 @@
     partial(
       'templates/partials/head.tpl',
       {
-        cdn     : cdn,
-        css     : css,
-        site    : site,
-        enhance : enhance,
-        mainCSSCookie : mainCSSCookie,
-        hash    : hash
+        cdn       : cdn,
+        css       : css,
+        site      : site,
+        enhance   : enhance,
+        cssCookie : cssCookie,
+        hash      : hash
       }
     )
   %>

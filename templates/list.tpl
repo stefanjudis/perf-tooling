@@ -4,13 +4,13 @@
     partial(
       'templates/partials/head.tpl',
       {
-        cdn     : cdn,
-        css     : css,
-        mainCSSCookie : mainCSSCookie,
-        site    : site,
-        svg     : svg,
-        enhance : enhance,
-        hash    : hash
+        cdn       : cdn,
+        css       : css,
+        cssCookie : cssCookie,
+        site      : site,
+        svg       : svg,
+        enhance   : enhance,
+        hash      : hash
       }
     )
   %>

@@ -53,7 +53,6 @@ var pages = {
  */
 var pageContent = {
   css       : fs.readFileSync( './public/main.css', 'utf8' ),
-  mainCSSCookie : false,
   enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
   hashes    : {
     css     : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
@@ -354,8 +353,9 @@ function renderPage( type, options ) {
   var template = ( type === 'index' ) ? 'index' : 'list';
   var list     = data[ type ] || null;
 
-  var query    = options.query;
-  var debug    = options.debug;
+  var query     = options.query;
+  var debug     = options.debug;
+  var cssCookie = options.cssCookie;
 
   if ( query ) {
     var queryValues  = query.split( ' ' );
@@ -399,7 +399,7 @@ function renderPage( type, options ) {
       pageContent.templates[ template ],
       {
         css              : pageContent.css,
-        mainCSSCookie    : pageContent.mainCSSCookie,
+        cssCookie        : !! cssCookie,
         enhance          : pageContent.enhance,
         cdn              : config.cdn,
         contributors     : data.contributors,
@@ -502,7 +502,18 @@ config.listPages.forEach( function( page ) {
         )
       );
     } else {
-      res.send( pages[ page ] );
+      if ( req.cookies.maincss ) {
+        res.send(
+          renderPage(
+            page,
+            {
+              cssCookie : req.cookies.maincss
+            }
+          )
+        );
+      } else {
+        res.send( pages[ page ] );
+      }
     }
   } );
 } );
@@ -510,11 +521,18 @@ config.listPages.forEach( function( page ) {
 pages.index = renderPage( 'index' );
 
 app.get( '/', function( req, res ) {
-  console.log( req.cookies.maincss );
-  if ( typeof req.cookies.maincss !== 'undefined' ) {
-    pageContent.mainCSSCookie = req.cookies.maincss;
+  if ( req.cookies.maincss ) {
+    res.send(
+      renderPage(
+        'index',
+        {
+          cssCookie : req.cookies.maincss
+        }
+      )
+    );
+  } else {
+    res.send( pages.index );
   }
-  res.send( pages.index );
 } );
 
 app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );

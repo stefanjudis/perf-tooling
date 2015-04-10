@@ -30,7 +30,7 @@
   </script>
 
   <meta name="maincss"  content="<%= cdn %>/main.css?<%= hash.css %>">
-  <% if ( !mainCSSCookie ) { %>
+  <% if ( !cssCookie ) { %>
   <style><%= css %></style>
   <% } else { %>
   <link rel="stylesheet" href="<%= cdn %>/main.css?<%= hash.css %>">
