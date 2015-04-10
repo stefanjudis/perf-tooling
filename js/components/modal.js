@@ -28,6 +28,13 @@
             }
           }
         } );
+
+        elements.modal.addEventListener( 'click', function( event ) {
+          if ( event.target.dataset.modalClose !== undefined ) {
+            elements.modal.classList.remove( 'is-active' );
+            elements.modal.classList.remove( 'is-loaded' );
+          }
+        } );
       }
     }
   }
@@ -38,11 +45,17 @@
       return item.id === contentId;
     } );
 
-    console.log( filteredList );
     if ( filteredList.length && filteredList[ 0 ].html ) {
       event.preventDefault();
 
+      elements.modal.classList.add( 'is-active' );
       elements.modalContent.innerHTML = filteredList[ 0 ].html;
+
+      var iframe = elements.modalContent.querySelector( 'iframe' );
+
+      iframe.addEventListener( 'load', function() {
+        elements.modal.classList.add( 'is-loaded' );
+      } );
     }
   }
 

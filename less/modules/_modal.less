@@ -1,0 +1,67 @@
+.modal {
+  position : fixed;
+
+  top : 0;
+  right : 0;
+  left : 0;
+
+  bottom : 100%;
+
+  transition : bottom .25s ease-in-out .25s;
+
+  background : @color-modal-bg;
+
+  z-index : 1;
+
+  overflow : hidden;
+
+  &.is-active {
+    bottom : 0;
+
+    transition : bottom .25s ease-in-out;
+  }
+}
+
+.modal-container {
+  margin : 0 auto;
+  padding : 1em;
+  max-width : @grid-container;
+}
+
+.modal-content {
+  transform : translate( 0, -200% );
+  transition : transform .25s ease-in-out;
+
+  position : relative;
+  padding-bottom : 56.25%; /* 16:9 */
+  padding-top    : 25px;
+  height : 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .is-loaded & {
+    transform : translate( 0, 0 );
+
+    transition : transform .25s ease-in-out .25s;
+  }
+}
+
+.modal-close {
+
+}
+
+.modal-loading {
+  transform : translate( 0, -200% );
+
+  .is-active & {
+    transform : translate( 0, 0 );
+
+    transition : transform .25s ease-in-out .25s;
+  }
+}

@@ -1,5 +1,7 @@
+@white : #fff;
+
 @color    : #282828;
-@color-bg : #fff;
+@color-bg : @white;
 
 @color-primary        : #01a5b1;
 @color-primary-hover  : #0195a1;
@@ -11,7 +13,7 @@
 @color-link-hover  : lighten( @color-primary, 2.5% );
 @color-link-active : darken( @color-primary, 15% );
 
-@color-btn          : #fff;
+@color-btn          : @white;
 @color-btn-bg       : @color-primary;
 @color-btn-bg-hover : @color-primary-hover;
 
@@ -24,7 +26,7 @@
 
 @color-placeholder : #b7b7b7;
 
-@color-btn-primary          : #fff;
+@color-btn-primary          : @white;
 @color-btn-primary-bg       : @color-primary;
 @color-btn-primary-hover    : @color-btn-primary;
 @color-btn-primary-bg-hover : @color-primary-hover;
@@ -96,3 +98,5 @@
 @color-tag-bg        : @color-bg;
 @color-tag-bg-hover  : @color-primary;
 @color-tag-bg-active : darken(@color-tag-bg-hover, 10);
+
+@color-modal-bg : rgba(255, 255, 255, .75);

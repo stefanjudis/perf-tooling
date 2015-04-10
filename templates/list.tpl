@@ -16,8 +16,12 @@
 
       <div class="svgIcons"><%= svg %></div>
 
-      <div id="modal">
-        <div id="modalContent"></div>
+      <div id="modal" class="modal" data-modal-close>
+        <div class="modal-container">
+          <button type="button" class="modal-close" data-modal-close>Close it bro</button>
+          <div class="modal-loading">Loading the content</div>
+          <div id="modalContent" class="modal-content"></div>
+        </div>
       </div>
 
       <%=
