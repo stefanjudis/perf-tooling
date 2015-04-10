@@ -1,0 +1,11 @@
+{
+  "name" : "Multiplexing with SPDY and HTTP/2",
+  "authors" : [
+    {
+      "name" : "Guy Bedford",
+      "twitter" : "@guybedford"
+    }
+  ],
+  "youtubeId" : "J_BxVEOVRNw",
+  "tags" : [ "network", "http" ]
+}
