@@ -36,6 +36,7 @@ var files = {
     'js/components/**/*.js',
     'js/tooling.js'
   ],
+  sitemap : [ './sitemap.xml' ],
   styles  : [ 'less/main.less' ],
   svg     : [ 'svg/icons/*.svg' ],
   watch   : {
@@ -151,6 +152,17 @@ gulp.task( 'images', function () {
 
 
 /*******************************************************************************
+ * SITEMAP TASK
+ *
+ * copy sitemap.xml over to public
+ */
+gulp.task( 'sitemap', function () {
+  return gulp.src( files.sitemap )
+              .pipe( gulp.dest( 'public/' ) );
+} );
+
+
+/*******************************************************************************
  * JSONLINT TASK
  *
  * this task is responsible for compressing images properly
@@ -199,7 +211,7 @@ gulp.task( 'test', [ 'csslint', 'jsonlint' ] );
  *  $ gulp build
  *
  */
-gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images' ] );
+gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images', 'sitemap' ] );
 
 
 /*******************************************************************************
