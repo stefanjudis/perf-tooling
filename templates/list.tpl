@@ -58,6 +58,11 @@
             )
           %>
 
+          <% if ( debug ) { %>
+            <pre><code><%= JSON.stringify( list, null, 2 ) %></code></pre>
+            <pre><code><%= JSON.stringify( people, null, 2 ) %></code></pre>
+          <% } %>
+
           <%=
             partial(
               'templates/partials/lists/' + type + '.tpl',

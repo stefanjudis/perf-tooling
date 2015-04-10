@@ -23,6 +23,7 @@ var uglify        = require( 'gulp-uglify' );
 var tasks         = require( 'gulp-task-listing' );
 var svgstore      = require( 'gulp-svgstore' );
 var mergeStream   = require( 'merge-stream' );
+var cmq           = require( 'gulp-combine-media-queries' );
 
 var files = {
   data    : [ 'data/**/*.json' ],
@@ -40,6 +41,7 @@ var files = {
       'js/enhance.js'
     ]
   },
+  sitemap : [ './sitemap.xml' ],
   styles  : [ 'less/main.less' ],
   svg     : [ 'svg/icons/*.svg' ],
   watch   : {
@@ -82,6 +84,9 @@ gulp.task( 'styles', function () {
     .pipe( csslint( '.csslintrc' ) )
     .pipe( csslint.reporter() )
     .pipe( prefix( 'last 1 version', '> 1%', 'ie 8', 'ie 7' ) )
+    .pipe( cmq( {
+      log: true
+    } ) )
     .pipe( minifyCSS() )
     .pipe( gulp.dest( 'public/' ) );
 });
@@ -158,6 +163,17 @@ gulp.task( 'images', function () {
 
 
 /*******************************************************************************
+ * SITEMAP TASK
+ *
+ * copy sitemap.xml over to public
+ */
+gulp.task( 'sitemap', function () {
+  return gulp.src( files.sitemap )
+              .pipe( gulp.dest( 'public/' ) );
+} );
+
+
+/*******************************************************************************
  * JSONLINT TASK
  *
  * this task is responsible for compressing images properly
@@ -206,7 +222,7 @@ gulp.task( 'test', [ 'csslint', 'jsonlint' ] );
  *  $ gulp build
  *
  */
-gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images' ] );
+gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images', 'sitemap' ] );
 
 
 /*******************************************************************************

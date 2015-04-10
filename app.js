@@ -16,11 +16,13 @@ var cookieParser = require('cookie-parser');
  * @type {Object}
  */
 var helpers = {
-  github  : ( require( './lib/helper/github' ) ).init(),
-  twitter : ( require( './lib/helper/twitter' ) ).init(),
-  vimeo   : ( require( './lib/helper/vimeo' ) ).init(),
-  youtube : ( require( './lib/helper/youtube' ) ).init()
-}
+  github      : ( require( './lib/helper/github' ) ).init(),
+  slideshare  : ( require( './lib/helper/slideshare' ) ).init(),
+  speakerdeck : ( require( './lib/helper/speakerdeck' ) ).init(),
+  twitter     : ( require( './lib/helper/twitter' ) ).init(),
+  vimeo       : ( require( './lib/helper/vimeo' ) ).init(),
+  youtube     : ( require( './lib/helper/youtube' ) ).init()
+};
 
 var port         = process.env.PORT || 3000;
 var data         = {
@@ -257,6 +259,48 @@ function fetchVideoMeta() {
 
 
 /**
+ * Fetch slide meta data
+ */
+function fetchSlideMeta() {
+  var queue = [];
+
+  _.each( data.slides, function( slide ) {
+    var match = slide.url.match( /(slideshare|speakerdeck)/g );
+    if ( match ) {
+      queue.push( function( done ) {
+        if ( helpers[ match[ 0 ] ] ) {
+          helpers[ match[ 0 ] ].getMeta( slide.url, function( error, meta ) {
+            if ( error ) {
+              console.warn( 'ERROR -> vimeo.fetchSlideMeta' );
+              console.warn( 'ERROR -> ' + slide.url );
+              console.warn( 'ERROR -> ' + error );
+              return done( null );
+            }
+
+            _.extend( slide, meta );
+
+            pages.slides = renderPage( 'slides' );
+
+            // give it a bit of time
+            // to rest and not reach the API limits
+            setTimeout( function() {
+              done( null );
+            }, config.timings.requestDelay );
+          } )
+        } else {
+          done( null );
+        }
+      } );
+    }
+  } );
+
+  async.waterfall( queue, function() {
+    console.log( 'DONE -> fetchSlideMeta()' );
+  } );
+}
+
+
+/**
  * Read files and get tools
  *
  * @param {String} type type
@@ -299,14 +343,19 @@ function getList( type ) {
 /**
  * Render page
  *
- * @param  {String} type  page type
- * @param  {String} query optional search query
+ * @param  {String} type    page type
+ * @param  {Object} options optional options
  *
  * @return {String}       rendered page
  */
-function renderPage( type, query ) {
+function renderPage( type, options ) {
+  options = options || {};
+
   var template = ( type === 'index' ) ? 'index' : 'list';
   var list     = data[ type ] || null;
+
+  var query    = options.query;
+  var debug    = options.debug;
 
   if ( query ) {
     var queryValues  = query.split( ' ' );
@@ -354,6 +403,7 @@ function renderPage( type, query ) {
         enhance          : pageContent.enhance,
         cdn              : config.cdn,
         contributors     : data.contributors,
+        debug            : !! debug,
         partial          : partial,
         people           : data.people,
         platforms        : config.platforms,
@@ -406,6 +456,12 @@ fetchVideoMeta();
 
 
 /**
+ * fetch slide meta data
+ */
+fetchSlideMeta();
+
+
+/**
  * fetch twitter user meta data
  */
 fetchTwitterUserMeta();
@@ -429,7 +485,25 @@ config.listPages.forEach( function( page ) {
   pages[ page ] = renderPage( page );
 
   app.get( '/' + page, function( req, res ) {
-    res.send( renderPage( page, req.query.q ) );
+    if (
+      req.query &&
+      (
+        ( req.query.q && req.query.q.length ) ||
+        req.query.debug
+      )
+    ) {
+      res.send(
+        renderPage(
+          page,
+          {
+            query : req.query.q,
+            debug : req.query.debug
+          }
+        )
+      );
+    } else {
+      res.send( pages[ page ] );
+    }
   } );
 } );
 
