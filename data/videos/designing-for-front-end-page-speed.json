@@ -1,9 +1,11 @@
 {
   "name" : "Designing for Front-End Page Speed",
-  "author": "Lara Swanson",
-  "social": {
-    "twitter": "@laraswanson"
-  },
+  "authors" : [
+    {
+      "name" : "Lara Swanson",
+      "twitter" : "@laraswanson"
+    }
+  ],
   "youtubeId" : "RtpVZ5OzJlc",
   "tags" : [ "page speed", "front-end" ]
 }

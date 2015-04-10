@@ -1,12 +1,14 @@
 {
-  "name": "Is TLS fast yet?",
-  "author": "Ilya Grigorik",
-  "date": "2014-09-13",
-  "social": {
-    "twitter": "@igrigorik"
-  },
-  "stats": {
-    "length": 44
+  "name" : "Is TLS fast yet?",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "date" : "2014-09-13",
+  "stats" : {
+    "length" : 44
   },
   "tags" : [ "network", "server", "TLS" ],
   "url" : "https://docs.google.com/presentation/d/1BH9DI1XlmukCzU2i8OvxLIfgQf_aGlZgZyvWDSyYyzs/present"

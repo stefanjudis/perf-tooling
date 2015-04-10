@@ -8,30 +8,40 @@
 
     <li id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">
 
-      <%=
-        partial(
-          'templates/partials/authors/images.tpl',
-          {
-            authors : slide.authors,
-            people  : people
-          }
-        )
-      %>
+      <% var twitterHandle = ( slide.social && slide.social.twitter ) ? slide.social.twitter.replace( '@', '' ) : false; %>
 
-      <div class="post-content">
+      <% if ( slide.thumbnail ) { %>
+
+        <figure class="media-obj-left">
+
+          <a href="<%= slide.url %>" title="Link to slide" target="_blank"><img src="<%= slide.thumbnail.url %>" width="<%= slide.thumbnail.width %>" height="<%= slide.thumbnail.height %>"></a>
+
+        </figure>
+
+      <% } %>
+
+      <div class="media-body">
 
         <h3 class="post-title"><a href="<%= slide.url %>" alt="Link to <%= slide.name %>" title="Link to slide" target="_blank"><%= slide.name %></a></h3>
 
-        <%=
-          partial(
-            'templates/partials/authors/names.tpl',
-            {
-              entry   : slide,
-              authors : slide.authors,
-              people  : people
-            }
-          )
-        %>
+        <% if ( twitterHandle && people[ twitterHandle ] ) { %>
+
+          <h4><%= slide.date %> by <a href="https://twitter.com/<%= twitterHandle %>" title="Twitter profile of <%= slide.author %>" target="_blank"><%= slide.author %></a> (<%= people[ twitterHandle ].followerCount %> followers)</h4>
+
+         <% } else { %>
+
+          <%=
+            partial(
+              'templates/partials/authors/names.tpl',
+              {
+                entry   : slide,
+                authors : slide.authors,
+                people  : people
+              }
+            )
+          %>
+
+        <% } %>
 
         <% if ( slide.stats ) { %>
 

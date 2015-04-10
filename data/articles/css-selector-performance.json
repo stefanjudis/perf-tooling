@@ -1,13 +1,15 @@
 {
   "name" : "CSS performance revisted: selectors, bloat and expensive styles",
-  "author": "Ben Frain",
-  "date": "2014-02-25",
-  "social": {
-    "twitter": "@benfrain"
+  "authors" : [
+    {
+      "name" : "Ben Frain",
+      "twitter" : "@benfrain"
+    }
+  ],
+  "date" : "2014-02-25",
+  "stats" : {
+    "length" : 2981
   },
-  "stats": {
-    "length": 2981
-  },
-  "url": "http://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/",
-  "tags": ["css", "60fps"]
+  "url" : "http://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/",
+  "tags" : ["css", "60fps"]
 }

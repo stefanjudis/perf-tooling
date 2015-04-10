@@ -1,12 +1,14 @@
 {
   "name" : "High Performance JavaScript",
-  "date" : "201-03",
-  "author" : "Nicholas C. Zakas",
-  "social" : {
-    "twitter" : "@slicknet"
-  },
+  "date" : "2010-03",
+  "authors" : [
+    {
+      "name" : "Nicholas C. Zakas",
+      "twitter" : "@slicknet"
+    }
+  ],
   "stats": {
-    "length": 242
+    "length" : 242
   },
   "url" : "http://shop.oreilly.com/product/9780596802806.do",
   "description" : "If you're like most developers, you rely heavily on JavaScript to build interactive and quick-responding web applications. The problem is that all of those lines of JavaScript code can slow down your apps. This book reveals techniques and strategies to help you eliminate performance bottlenecks during development. You'll learn how to improve execution time, downloading, interaction with the DOM, page life cycle, and more.",

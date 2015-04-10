@@ -1,13 +1,15 @@
 {
   "name" : "The Pain of Duplicate Scripts",
-  "author": "Steve Souders",
-  "date": "2014-12-08",
-  "social": {
-    "twitter": "@Souders"
+  "authors" : [
+    {
+      "name" : "Steve Souders",
+      "twitter" : "@Souders"
+    }
+  ],
+  "date" : "2014-12-08",
+  "stats" : {
+    "length" : 1315
   },
-  "stats": {
-    "length": 1315
-  },
-  "url": "http://calendar.perfplanet.com/2014/the-pain-of-duplicate-scripts/",
-  "tags": [ "loading", "3rd parties" ]
+  "url" : "http://calendar.perfplanet.com/2014/the-pain-of-duplicate-scripts/",
+  "tags" : [ "loading", "3rd parties" ]
 }

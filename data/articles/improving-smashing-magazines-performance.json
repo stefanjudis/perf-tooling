@@ -1,13 +1,15 @@
 {
   "name" : "Improving Smashing Magazine’s Performance: A Case Study",
-  "author": "Vitaly Friedman",
-  "date": "2014-09-08",
-  "social": {
-    "twitter": "@smashingmag"
+  "authors" : [
+    {
+      "name" : "Vitaly Friedman",
+      "twitter" : "@smashingmag"
+    }
+  ],
+  "date" : "2014-09-08",
+  "stats" : {
+    "length" : 8451
   },
-  "stats": {
-    "length": 8451
-  },
-  "url": "http://www.smashingmagazine.com/2014/09/08/improving-smashing-magazine-performance-case-study/",
-  "tags": [ "webfonts", "javascript", "css" ]
+  "url" : "http://www.smashingmagazine.com/2014/09/08/improving-smashing-magazine-performance-case-study/",
+  "tags" : [ "webfonts", "javascript", "css" ]
 }

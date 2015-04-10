@@ -1,13 +1,15 @@
 {
   "name" : "Script-injected 'async scripts' considered harmful",
-  "author": "Ilya Grigorik",
+  "authors": [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
   "date": "2014-05-20",
-  "social" : {
-    "twitter": "@igrigorik"
+  "stats" : {
+    "length" : 1346
   },
-  "stats": {
-    "length": 1346
-  },
-  "url": "https://www.igvita.com/2014/05/20/script-injected-async-scripts-considered-harmful/",
-  "tags": ["webfonts", "ajax", "script"]
+  "url" : "https://www.igvita.com/2014/05/20/script-injected-async-scripts-considered-harmful/",
+  "tags" : ["webfonts", "ajax", "script"]
 }

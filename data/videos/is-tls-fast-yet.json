@@ -1,9 +1,11 @@
 {
   "name" : "Is TLS fast yet?",
-  "author": "Ilya Grigorik",
-  "social": {
-    "twitter": "@igrigorik"
-  },
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
   "youtubeId" : "fQX2mJ11vCs",
   "tags" : [ "network", "server", "TLS" ]
 }

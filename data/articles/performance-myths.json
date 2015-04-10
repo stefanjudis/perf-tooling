@@ -1,13 +1,15 @@
 {
   "name" : "7 Mobile Web Performance Myths Debunked",
-  "author": "Tammy Everts",
-  "date": "2014-04-15",
-  "social": {
-    "twitter": "@tameverts"
+  "authors" : [
+    {
+      "name" : "Tammy Everts",
+      "twitter" : "@tameverts"
+    }
+  ],
+  "date" : "2014-04-15",
+  "stats" : {
+    "length" : 1419
   },
-  "stats": {
-    "length": 1419
-  },
-  "url": "http://blog.radware.com/applicationdelivery/applicationaccelerationoptimization/2014/04/7-mobile-performance-myths/",
-  "tags": ["myths"]
+  "url" : "http://blog.radware.com/applicationdelivery/applicationaccelerationoptimization/2014/04/7-mobile-performance-myths/",
+  "tags" : [ "myths" ]
 }

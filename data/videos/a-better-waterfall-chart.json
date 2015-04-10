@@ -1,9 +1,11 @@
 {
   "name" : "Velocity New York 2014: A Better Waterfall Chart",
-  "author": "Mark Zeman",
-  "social": {
-    "twitter": "@MarkZeman"
-  },
+  "authors" : [
+    {
+      "name" : "Mark Zeman",
+      "twitter" : "@MarkZeman"
+    }
+  ],
   "youtubeId" : "Olwm3l4rfns",
   "tags" : [ "monitoring", "visualization", "speedcurve" ]
 }
