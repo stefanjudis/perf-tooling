@@ -27,10 +27,23 @@ We would like this project to become a shared resource maintained by the communi
 
 Perf Tooling is an [express](http://expressjs.com/) application. If you want to see it in action simply clone the repository and run `npm install`.
 
-After that you can start the server with:
+After that you can use a couple of npm convenience scripts:
 
 ```
-node app.js
+# run test suite
+$ npm test
+
+# use gulp without global dependency ( e.g. styles )
+$ npm run gulp -- styles
+
+# start development build ( including watch )
+$ npm run dev
+
+# start dev server with nodemon and restart on file changes
+$ npm run server
+
+# old school and simple way to start the app
+$ node app.js
 ```
 
 It will be available at `localhost:3000`.
