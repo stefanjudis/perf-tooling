@@ -537,4 +537,5 @@ app.get( '/', function( req, res ) {
 
 app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
 
+console.log( 'STARTING AT PORT ' + port );
 app.listen( port );
