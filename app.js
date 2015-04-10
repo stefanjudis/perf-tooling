@@ -9,7 +9,7 @@ var minify      = require( 'html-minifier' ).minify;
 var request     = require( 'request' );
 var config      = require( './config/config' );
 var async       = require( 'async' );
-
+var cookieParser = require('cookie-parser');
 
 /**
  * Helpers to deal with API stuff
@@ -51,6 +51,7 @@ var pages = {
  */
 var pageContent = {
   css       : fs.readFileSync( './public/main.css', 'utf8' ),
+  mainCSSCookie : false,
   enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
   hashes    : {
     css     : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
@@ -349,6 +350,7 @@ function renderPage( type, query ) {
       pageContent.templates[ template ],
       {
         css              : pageContent.css,
+        mainCSSCookie    : pageContent.mainCSSCookie,
         enhance          : pageContent.enhance,
         cdn              : config.cdn,
         contributors     : data.contributors,
@@ -418,7 +420,7 @@ setInterval( function() {
 }, config.timings.refresh );
 
 app.use( compression() );
-
+app.use( cookieParser() );
 
 /**
  * Render index page
@@ -434,6 +436,10 @@ config.listPages.forEach( function( page ) {
 pages.index = renderPage( 'index' );
 
 app.get( '/', function( req, res ) {
+  console.log( req.cookies.maincss );
+  if ( typeof req.cookies.maincss !== 'undefined' ) {
+    pageContent.mainCSSCookie = req.cookies.maincss;
+  }
   res.send( pages.index );
 } );
 

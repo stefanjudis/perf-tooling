@@ -6,6 +6,7 @@
       {
         cdn     : cdn,
         css     : css,
+        mainCSSCookie : mainCSSCookie,
         site    : site,
         svg     : svg,
         enhance : enhance,

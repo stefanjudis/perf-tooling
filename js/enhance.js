@@ -34,14 +34,14 @@
     ref.parentNode.insertBefore( ss, ref );
     // This function sets the link's media back to `all` so that the stylesheet applies once it loads
     // It is designed to poll until document.styleSheets includes the new sheet.
-    function toggleMedia(){
+    function toggleMedia() {
       var defined;
-      for( var i = 0; i < sheets.length; i++ ){
-        if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+      for ( var i = 0; i < sheets.length; i++ ) {
+        if ( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ) {
           defined = true;
         }
       }
-      if( defined ){
+      if ( defined ) {
         ss.media = media || "all";
       }
       else {
@@ -58,11 +58,11 @@
 
   // getMeta function: get a meta tag by name
   // NOTE: meta tag must be in the HTML source before this script is included in order to guarantee it'll be found
-  function getMeta( metaname ){
+  function getMeta( metaname ) {
     var metas = window.document.getElementsByTagName( "meta" );
     var meta;
-    for( var i = 0; i < metas.length; i ++ ){
-      if( metas[ i ].name && metas[ i ].name === metaname ){
+    for ( var i = 0; i < metas.length; i ++ ) {
+      if ( metas[ i ].name && metas[ i ].name === metaname ) {
         meta = metas[ i ];
         break;
       }
@@ -74,20 +74,20 @@
   enhance.getMeta = getMeta;
 
   // cookie function from https://github.com/filamentgroup/cookie/
-  function cookie( name, value, days ){
+  function cookie( name, value, days ) {
     var expires;
     // if value is undefined, get the cookie value
-    if( value === undefined ){
+    if ( value === undefined ) {
       var cookiestring = "; " + window.document.cookie;
       var cookies = cookiestring.split( "; " + name + "=" );
-      if ( cookies.length == 2 ){
+      if ( cookies.length == 2 ) {
         return cookies.pop().split( ";" ).shift();
       }
       return null;
     }
     else {
       // if value is a false boolean, we'll treat that as a delete
-      if( value === false ){
+      if ( value === false ) {
         days = -1;
       }
       if ( days ) {
@@ -114,10 +114,12 @@
    Once the cookie is set, the full CSS is assumed to be in cache, and the server-side templates should reference the full CSS directly from the head of the page with a link element, in place of inline critical styles.
    */
   var fullCSS = getMeta( fullCSSKey );
+  console.log( fullCSSKey );
+  console.log( fullCSS );
   if( fullCSS && !cookie( fullCSSKey ) ){
-    loadCSS( fullCSS.content );
+    //loadCSS( fullCSS.content );
     // set cookie to mark this file fetched
-    cookie( fullCSSKey, "true", 7 );
+    cookie( fullCSSKey, 'true', 7 );
   }
 
   /* Enhancements for qualified browsers - "Cutting the Mustard"

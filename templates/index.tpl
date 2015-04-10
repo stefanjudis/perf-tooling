@@ -9,17 +9,14 @@
         css     : css,
         site    : site,
         enhance : enhance,
+        mainCSSCookie : mainCSSCookie,
         hash    : hash
       }
     )
   %>
 
   <body>
-      <!--#if expr="$HTTP_COOKIE=/svgicons\!== true/" -->
       <div class="svgIcons"><%= svg %></div>
-      <!--#else -->
-
-      <!--#endif -->
 
       <%=
         partial(

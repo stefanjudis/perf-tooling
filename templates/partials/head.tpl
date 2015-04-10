@@ -29,16 +29,13 @@
     }
   </script>
 
-  <meta name="svgicons"  content="<%= cdn %>/icons.svg">
-  <meta name="maincss"  content="<%= cdn %>/main.css">
-  <!--#if expr="$HTTP_COOKIE=/maincss\!== true/" -->
+  <meta name="maincss"  content="<%= cdn %>/main.css?<%= hash.css %>">
+  <% if ( !mainCSSCookie ) { %>
   <style><%= css %></style>
-  <!--#else -->
-  <link rel="stylesheet" href="<%= cdn %>/main.css">
-  <!--#endif -->
+  <% } else { %>
+  <link rel="stylesheet" href="<%= cdn %>/main.css?<%= hash.css %>">
+  <% } %>
   <script><%= enhance %></script>
-
-  <noscript><link rel="stylesheet" href="<%= cdn %>/main.css"></noscript>
 
   <link rel="dns-prefetch" href="http://www.google-analytics.com/">
   <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">
