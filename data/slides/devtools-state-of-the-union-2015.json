@@ -1,0 +1,15 @@
+{
+  "name" : "DevTools: State Of The Union 2015",
+  "authors" : [
+    {
+      "name" : "Addy Osmani",
+      "twitter" : "@addyosmani"
+    }
+  ],
+  "date" : "2015-03-17",
+  "stats" : {
+    "length" : 121
+  },
+  "tags" : [ "devtools" ],
+  "url" : "https://speakerdeck.com/addyosmani/devtools-state-of-the-union-2015"
+}
