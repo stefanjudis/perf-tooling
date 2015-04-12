@@ -190,6 +190,7 @@ gulp.task( 'watch', function() {
   gulp.watch( files.lint, [ 'lint' ] );
   gulp.watch( files.watch.styles, [ 'styles' ] );
   gulp.watch( files.scripts, [ 'scripts' ] );
+  gulp.watch( files.svg, [ 'svg' ] );
 });
 
 
