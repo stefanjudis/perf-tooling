@@ -25,8 +25,7 @@ var svgstore      = require( 'gulp-svgstore' );
 var mergeStream   = require( 'merge-stream' );
 var cmq           = require( 'gulp-combine-media-queries' );
 var rev           = require( 'gulp-rev' );
-var connect       = require( 'gulp-connect' );
-var template      = require( 'gulp-template' );
+var jsoneditor    = require( 'gulp-json-editor' );
 
 var files = {
   data    : [ 'data/**/*.json' ],
@@ -47,16 +46,11 @@ var files = {
   sitemap : [ './sitemap.xml' ],
   styles  : [ 'less/main.less' ],
   svg     : [ 'svg/icons/*.svg' ],
+  rev     : [ './rev.json' ],
   watch   : {
     styles : [ 'less/**/*.less' ]
   }
 };
-
-var PATHS = {
-  template : 'templates/**/*.html'
-};
-
-var stylesHash = '';
 
 /*******************************************************************************
  * HELP TASK
@@ -87,7 +81,7 @@ gulp.task( 'lint', function() {
  * - we will run them through autoprefixer
  * - and save it to public
  * - hash the files
- * - and save the new file name in the 'stylesHash' variable
+ * - and save the hash in the rev json file
  */
 gulp.task( 'styles', function () {
   return gulp.src( files.styles )
@@ -101,11 +95,15 @@ gulp.task( 'styles', function () {
     .pipe( minifyCSS() )
     .pipe( rev() )
     .pipe( gulp.dest( 'public/' ) )
-    .pipe( gutil.buffer( function ( err, files ) {
-      stylesHash = files.map( function ( file ) {
-        return file.path.replace( file.base, '' );
-      }).join( '' );
-    }));
+    .pipe( gutil.buffer( function ( err, dataFiles ) {
+      gulp.src( files.rev )
+        .pipe( jsoneditor( {
+          'styles': dataFiles.map( function ( dataFile ) {
+            return dataFile.path.replace( dataFile.base, '' ).slice( 0, -4 ).split( '-' )[ 1 ];
+          } ).join( '' )
+        } ) )
+        .pipe( gulp.dest( 'public/' ) );
+    } ) );
 });
 
 /*******************************************************************************
@@ -121,23 +119,6 @@ gulp.task( 'csslint', function () {
     .pipe( csslint( '.csslintrc' ) )
     .pipe( csslint.reporter() )
     .pipe( csslint.failReporter() );
-});
-
-/*******************************************************************************
- * STYLES PLACEHOLDERS
- *
- * this task is responsible for the HTML template
- *  - it will populate the placeholders for the optimized script & style file names
- */
-gulp.task( 'stylesPlaceholder', function() {
-
-  gulp.src( PATHS.template )
-    .pipe( template( {
-        styles  : stylesHash
-      }
-    ) )
-    .pipe( gulp.dest( 'public/' ) )
-    .pipe( connect.reload() );
 });
 
 /*******************************************************************************
@@ -254,7 +235,7 @@ gulp.task( 'test', [ 'csslint', 'jsonlint' ] );
  *  $ gulp build
  *
  */
-gulp.task( 'build', [ 'styles', 'stylesPlaceholder', 'scripts', 'svg', 'images', 'sitemap' ] );
+gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images', 'sitemap' ] );
 
 
 /*******************************************************************************

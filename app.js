@@ -9,7 +9,8 @@ var minify      = require( 'html-minifier' ).minify;
 var request     = require( 'request' );
 var config      = require( './config/config' );
 var async       = require( 'async' );
-var cookieParser = require('cookie-parser');
+var cookieParser = require( 'cookie-parser' );
+var revisions   = require( './public/rev');
 
 /**
  * Helpers to deal with API stuff
@@ -55,7 +56,7 @@ var pageContent = {
   css       : fs.readFileSync( './public/main.css', 'utf8' ),
   enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
   hashes    : {
-    css     : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
+    css     : revisions.styles,
     js      : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
   },
   svg       : fs.readFileSync( './public/icons.svg', 'utf8' ),

@@ -121,12 +121,12 @@
    * Load non-critical CSS async on first visit.
    * For more info:  https://github.com/filamentgroup/enhance
    */
-  var fullCSS = getMeta( fullCSSKey );
-  if ( fullCSS && !cookie( fullCSSKey ) ){
-    // loadCSS( fullCSS.content );
+  var cssRevision = getMeta( fullCSSKey );
+  if ( cssRevision && !cookie( fullCSSKey ) ) {
+    // loadCSS( cssRevision.content );
 
     // set cookie to mark this file fetched
-    cookie( fullCSSKey, 'true', 7 );
+    cookie( fullCSSKey, cssRevision.content, 7 );
   }
 
   /**
