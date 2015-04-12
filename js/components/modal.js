@@ -31,8 +31,10 @@
 
         elements.modal.addEventListener( 'click', function( event ) {
           if ( event.target.dataset.modalClose !== undefined ) {
+            elements.body.classList.remove( 'is-locked' );
             elements.modal.classList.remove( 'is-active' );
             elements.modal.classList.remove( 'is-loaded' );
+            elements.modalContent.innerHTML = '';
           }
         } );
       }
@@ -54,6 +56,7 @@
       var iframe = elements.modalContent.querySelector( 'iframe' );
 
       iframe.addEventListener( 'load', function() {
+        elements.body.classList.add( 'is-locked' );
         elements.modal.classList.add( 'is-loaded' );
       } );
     }
