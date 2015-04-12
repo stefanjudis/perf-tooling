@@ -36,12 +36,12 @@ var files = {
     'js/components/**/*.js',
     'js/tooling.js'
   ],
-  sitemap : [ './sitemap.xml' ],
   styles  : [ 'less/main.less' ],
   svg     : [ 'svg/icons/*.svg' ],
   watch   : {
     styles : [ 'less/**/*.less' ]
-  }
+  },
+  xml : [ './*.xml' ]
 };
 
 /*******************************************************************************
@@ -152,12 +152,12 @@ gulp.task( 'images', function () {
 
 
 /*******************************************************************************
- * SITEMAP TASK
+ * XML TASK
  *
- * copy sitemap.xml over to public
+ * copy xml files over to public
  */
-gulp.task( 'sitemap', function () {
-  return gulp.src( files.sitemap )
+gulp.task( 'xml', function () {
+  return gulp.src( files.xml )
               .pipe( gulp.dest( 'public/' ) );
 } );
 
@@ -212,7 +212,7 @@ gulp.task( 'test', [ 'csslint', 'jsonlint' ] );
  *  $ gulp build
  *
  */
-gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images', 'sitemap' ] );
+gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images', 'xml' ] );
 
 
 /*******************************************************************************
