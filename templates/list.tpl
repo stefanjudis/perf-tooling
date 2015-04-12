@@ -17,10 +17,16 @@
       <div class="svgIcons"><%= svg %></div>
 
       <div id="modal" class="modal" data-modal-close>
+        <div class="modal-loading"><span class="visuallyhidden">Loading the content</span></div>
         <div class="modal-container">
-          <button type="button" class="modal-close" data-modal-close>Close it bro</button>
-          <div class="modal-loading">Loading the content</div>
-          <div id="modalContent" class="modal-content"></div>
+          <div class="modal-inner">
+            <button class="modal-close" data-modal-close>
+              <svg>
+                <use xlink:href="#icon-close" />
+              </svg>
+            </button>
+            <div id="modalContent" class="modal-content"></div>
+          </div>
         </div>
       </div>
 

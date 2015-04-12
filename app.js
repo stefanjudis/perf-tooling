@@ -327,11 +327,11 @@ function getList( type ) {
 
         if ( type === 'videos' ) {
           if ( entry.youtubeId ) {
-            entry.html = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + entry.youtubeId + '" frameborder="0" allowfullscreen></iframe>';
+            entry.html = '<div class="embed embed-16-9"><iframe width="720" height="405" src="https://www.youtube.com/embed/' + entry.youtubeId + '" frameborder="0" allowfullscreen></iframe></div>';
           }
 
           if ( entry.vimeoId ) {
-            entry.html = '<iframe src="//player.vimeo.com/video/' + entry.vimeoId + '" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+            entry.html = '<div class="embed embed-16-9"><iframe src="//player.vimeo.com/video/' + entry.vimeoId + '" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
           }
         }
 
