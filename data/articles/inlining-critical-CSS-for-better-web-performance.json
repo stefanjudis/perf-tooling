@@ -1,0 +1,15 @@
+{
+  "name" : "Inlining critical CSS for better web performance",
+  "authors" : [
+    {
+      "name" : "Chris Ferdinandi",
+      "twitter" : "@ChrisFerdinandi"
+    }
+  ],
+  "date" : "2015-03-23",
+  "stats" : {
+    "length" : 1749
+  },
+  "url" : "http://gomakethings.com/inlining-critical-css-for-better-web-performance/",
+  "tags" : [ "above the fold", "css", "wordpress" ]
+}
