@@ -7,13 +7,13 @@
   position: fixed;
   right: 0;
   top: 0;
-  transition: opacity .3s;
+  transform: translate3d(0, 0, 0);
+  transition: opacity .5s, visibility .5s;
   visibility: hidden;
   z-index: 1;
 
   &.is-active {
     opacity: 1;
-    transition: opacity .3s;
     visibility: visible;
 
     .modal-container {
@@ -23,7 +23,6 @@
     .modal-inner {
       opacity: 1;
       transform: scale(1);
-      transition: opacity .5s, transform 1s;
     }
 
   }
@@ -39,6 +38,7 @@
 }
 
 .modal-container {
+  backface-visibility: hidden;
   left: 50%;
   max-width: @grid-container;
   position: fixed;
@@ -52,7 +52,7 @@
   padding-top: 2rem;
   opacity: 0;
   transform: scale(.7);
-  transition: opacity .5s, transform 1s;
+  transition: opacity .5s, transform .5s;
 }
 
 .modal-close {
