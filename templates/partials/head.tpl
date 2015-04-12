@@ -29,8 +29,8 @@
     }
   </script>
 
-  <meta name="maincss"  content="<%= hash.css %>">
-  <% if ( cssCookie && cssCookie !== hash.css ) { %>
+  <meta name="maincss"  content="<%= cdn %>/main-<%= hash.css %>.css">
+  <% if ( !cssCookie || cssCookie !== hash.css ) { %>
   <style><%= css %></style>
   <% } else { %>
   <link rel="stylesheet" href="<%= cdn %>/main-<%= hash.css %>.css">

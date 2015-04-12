@@ -400,7 +400,7 @@ function renderPage( type, options ) {
       pageContent.templates[ template ],
       {
         css              : pageContent.css,
-        cssCookie        : !! cssCookie,
+        cssCookie        : cssCookie,
         enhance          : pageContent.enhance,
         cdn              : config.cdn,
         contributors     : data.contributors,
