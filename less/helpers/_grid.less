@@ -1,29 +1,24 @@
 .container {
   .clearfix;
-  margin : 0 auto;
-  max-width : @grid-container;
+  margin: 0 auto;
+  max-width: @grid-container;
   width: 90%;
 }
 
 .row {
   .clearfix;
-  margin-left: -(@grid-gutter / 2);
-  margin-right: -(@grid-gutter / 2);
+  margin: 0 @grid-gutter / -2;
 }
 
-.col {
-  float: left;
-  height: auto;
+.col() {
+  margin: 0 @grid-gutter / 2;
   min-height: 1px;
-  padding-left: (@grid-gutter / 2);
-  padding-right: (@grid-gutter / 2);
 }
 
 .col-4,
 .col-6,
 .col-8 {
   .col;
-  width: 100%;
 }
 
 @media (min-width: @media-small) {
@@ -31,15 +26,18 @@
   .col {
 
     &-4 {
-      width: 33.33%;
+      float: left;
+      width: 100% / @grid-columns * 4 - @grid-gutter;
     }
 
     &-6 {
-      width: 50%;
+      float: left;
+      width: 100% / @grid-columns * 6 - @grid-gutter;
     }
 
     &-8 {
-      width: 66.67%;
+      float: left;
+      width: 100% / @grid-columns * 8 - @grid-gutter;
     }
 
   }
