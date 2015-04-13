@@ -81,7 +81,10 @@
       <%=
         partial(
           'templates/partials/footer.tpl',
-          {}
+          {
+            cdn              : cdn,
+            hash             : hash
+          }
         )
       %>
 
