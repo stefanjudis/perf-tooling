@@ -54,8 +54,8 @@ var pages = {
 var pageContent = {
   css       : fs.readFileSync( './public/main.css', 'utf8' ),
   hashes    : {
-    css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
-    js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) ),
+    css  : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
+    js   : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) ),
     svg  : md5( fs.readFileSync( './public/icons.svg', 'utf8' ) )
   },
   templates : {
