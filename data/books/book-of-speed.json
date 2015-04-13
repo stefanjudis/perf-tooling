@@ -1,0 +1,21 @@
+{
+  "name" : "Book of Speed",
+  "date" : "2011-06",
+  "authors" : [
+    {
+      "name" : "Stoyan Stefanov",
+      "twitter" : "@stoyanstefanov"
+    }
+  ],
+  "stats": {
+    "length": 9
+  },
+  "url" : "http://www.bookofspeed.com",
+  "description" : "The business, psychology and technology of high-performance web apps.",
+  "img" : {
+    "src" : "book-of-speed.jpg",
+    "width" : 200,
+    "height" : 264
+  },
+  "tags" : [ "network", "images", "performance"]
+}
