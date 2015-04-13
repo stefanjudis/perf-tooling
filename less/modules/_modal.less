@@ -62,9 +62,22 @@
 
   svg {
     height: 1.5rem;
+    transition: fill .25s;
     width: 1.5rem;
   }
 
+  &:hover {
+    svg {
+      fill: @color-secondary;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: darken(@color-secondary, 30%);
+      transition: none;
+    }
+  }
 }
 
 .modal-loading {

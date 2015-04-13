@@ -5,6 +5,8 @@
     } ).reverse();
   %>
   <% _.each( list , function( slide ) { %>
+    <% var title = _.escape( slide.name ); %>
+
     <li id="<%= slide.id %>" class="post-slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% var twitterHandle = ( slide.social && slide.social.twitter ) ? slide.social.twitter.replace( '@', '' ) : false; %>
@@ -13,7 +15,7 @@
 
         <figure class="media-obj-left">
 
-          <a href="<%= slide.url %>" title="Link to slide" target="_blank"><img src="<%= slide.thumbnail.url %>" width="<%= slide.thumbnail.width %>" height="<%= slide.thumbnail.height %>"></a>
+          <a href="<%= slide.url %>" title="Preview of <%= title %>" target="_blank" data-modal data-modal-content-id="<%= slide.id %>"><img src="<%= slide.thumbnail.url %>" width="<%= slide.thumbnail.width %>" height="<%= slide.thumbnail.height %>"></a>
 
         </figure>
 
@@ -21,7 +23,7 @@
 
       <div class="media-body">
 
-        <h3 class="post-title"><a href="<%= slide.url %>" alt="Link to <%= slide.name %>" title="Link to slide" data-modal data-modal-content-id="<%= slide.id %>" target="_blank"><%= slide.name %></a></h3>
+        <h3 class="post-title"><a href="<%= slide.url %>" title="Preview of <%= title %>" data-modal data-modal-content-id="<%= slide.id %>" target="_blank"><%= slide.name %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 

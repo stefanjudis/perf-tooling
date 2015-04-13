@@ -16,19 +16,13 @@
 
       <div class="svgIcons"><%= svg %></div>
 
-      <div id="modal" class="modal" data-modal-close>
-        <div class="modal-loading"><span class="visuallyhidden">Loading the content</span></div>
-        <div class="modal-container">
-          <div class="modal-inner">
-            <button class="modal-close" data-modal-close>
-              <svg>
-                <use xlink:href="#icon-close" />
-              </svg>
-            </button>
-            <div id="modalContent" class="modal-content"></div>
-          </div>
-        </div>
-      </div>
+      <%=
+        ( type === 'videos' || type === 'slides') ?
+          partial(
+            'templates/partials/modals/' + type + '.tpl',
+            {}
+          ) : ''
+      %>
 
       <%=
         partial(

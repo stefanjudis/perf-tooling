@@ -31,9 +31,9 @@
 
   <form method="get">
 
-    <label class="fuzzy--label" for="fuzzzzzzzzzy">
+    <label class="fuzzy--label" for="fuzzzzzzzzzy" aria-label="Search in <%= type %>">
 
-      <svg class="fuzzy--icon">
+      <svg class="fuzzy--icon" aria-hidden="true">
         <use xlink:href="#icon-magnifier" />
       </svg>
 

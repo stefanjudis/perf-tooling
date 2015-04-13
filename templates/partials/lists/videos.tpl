@@ -2,6 +2,7 @@
   <% list = _.sortBy( list, function( video ) { return video.publishedAt; } ).reverse();%>
 
   <% _.each( list , function( video ) { %>
+    <% var title = _.escape( video.title || video.name ); %>
 
     <li id="<%= video.id %>" class="post-video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
 
@@ -11,7 +12,7 @@
 
         <figure class="media-obj-left">
 
-          <a href="<%= video.url %>" title="Link to video" target="_blank"><img src="<%= video.thumbnail.url %>" width="<%= video.thumbnail.width %>" height="<%= video.thumbnail.height %>"></a>
+          <a href="<%= video.url %>" title="Preview of <%= title %>" target="_blank" data-modal data-modal-content-id="<%= video.id %>"><img src="<%= video.thumbnail.url %>" width="<%= video.thumbnail.width %>" height="<%= video.thumbnail.height %>"></a>
 
         </figure>
 
@@ -19,7 +20,7 @@
 
       <div class="media-body">
 
-        <h3 class="post-title"><a href="#" title="Link to video" data-modal data-modal-content-id="<%= video.id %>"><%= video.title || video.name %></a></h3>
+        <h3 class="post-title"><a href="#" title="Preview of <%= title %>" data-modal data-modal-content-id="<%= video.id %>"><%= title %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
