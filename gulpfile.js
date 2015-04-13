@@ -97,13 +97,13 @@ gulp.task( 'styles', function () {
     .pipe( rev() )
     .pipe( gulp.dest( 'public/' ) )
     .pipe( gutil.buffer( function ( err, dataFiles ) {
-      gulp.src( files.rev )
+      return gulp.src( files.rev )
         .pipe( jsoneditor( {
           'styles': dataFiles.map( function ( dataFile ) {
             return dataFile.path.replace( dataFile.base, '' ).slice( 0, -4 ).split( '-' )[ 1 ];
           } ).join( '' )
         } ) )
-        .pipe( gulp.dest( 'public/' ) );
+        .pipe( gulp.dest( './' ) );
     } ) );
 });
 

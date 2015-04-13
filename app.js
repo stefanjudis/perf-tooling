@@ -10,7 +10,7 @@ var request      = require( 'request' );
 var config       = require( './config/config' );
 var async        = require( 'async' );
 var cookieParser = require( 'cookie-parser' );
-var revisions    = require( './public/rev');
+var revisions    = require( './rev.json' );
 
 /**
  * Helpers to deal with API stuff
