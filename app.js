@@ -1,16 +1,16 @@
-var express     = require( 'express' );
-var compression = require( 'compression' );
-var md5         = require( 'MD5' );
-var app         = express();
-var fs          = require( 'fs' );
-var fuzzify     = require( './lib/fuzzify' );
-var _           = require( 'lodash' );
-var minify      = require( 'html-minifier' ).minify;
-var request     = require( 'request' );
-var config      = require( './config/config' );
-var async       = require( 'async' );
+var express      = require( 'express' );
+var compression  = require( 'compression' );
+var md5          = require( 'MD5' );
+var app          = express();
+var fs           = require( 'fs' );
+var fuzzify      = require( './lib/fuzzify' );
+var _            = require( 'lodash' );
+var minify       = require( 'html-minifier' ).minify;
+var request      = require( 'request' );
+var config       = require( './config/config' );
+var async        = require( 'async' );
 var cookieParser = require( 'cookie-parser' );
-var revisions   = require( './public/rev');
+var revisions    = require( './public/rev');
 
 /**
  * Helpers to deal with API stuff

@@ -37,6 +37,8 @@
   <% } %>
   <script><%= enhance %></script>
 
+  <noscript><link rel="stylesheet" href="<%= cdn %>/main-<%= hash.css %>.css"></noscript>
+
   <link rel="dns-prefetch" href="http://www.google-analytics.com/">
   <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">
 
