@@ -19,6 +19,7 @@
           {
             active           : type,
             cdn              : cdn,
+            hash             : hash,
             site             : site
           }
         )
@@ -33,6 +34,8 @@
             partial(
               'templates/partials/fuzzy.tpl',
               {
+                cdn     : cdn,
+                hash     : hash,
                 list      : list,
                 platforms : platforms,
                 query     : query,
@@ -61,10 +64,11 @@
             partial(
               'templates/partials/lists/' + type + '.tpl',
               {
+                cdn     : cdn,
+                hash     : hash,
                 list    : list,
                 partial : partial,
-                people  : people,
-                cdn     : cdn
+                people  : people
               }
             )
           %>
