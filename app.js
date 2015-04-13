@@ -413,8 +413,8 @@ function renderPage( type, options ) {
         site             : config.site,
         list             : list,
         hash             : {
-          css : pageContent.hashes.css,
-          js  : pageContent.hashes.js,
+          css  : pageContent.hashes.css,
+          js   : pageContent.hashes.js,
           svg  : pageContent.hashes.svg
         },
         query            : query,
