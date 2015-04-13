@@ -4,7 +4,8 @@
     position: relative;
     text-decoration: none;
 
-    &:before, &:after {
+    &:before,
+    &:after {
       opacity: 0;
       pointer-events: none;
       transition: all .4s ease;
@@ -26,7 +27,7 @@
 
     &:after {
       background: @color;
-      border-radius: 0.75rem 0.75rem 0.75rem 0;
+      border-radius: .75rem .75rem .75rem 0;
       bottom: 120%;
       color: @color-bg;
       content: attr(title);
