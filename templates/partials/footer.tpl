@@ -4,7 +4,7 @@
 
     <p class="crafted">Handcrafted with <span class="visuallyhidden">love</span>
     <svg class="footer--heart">
-      <use xlink:href="#icon-heart" />
+      <use xlink:href="icons.svg#icon-heart" />
     </svg>
      in Germany</span></p>
 

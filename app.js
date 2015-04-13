@@ -57,7 +57,6 @@ var pageContent = {
     css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
     js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
   },
-  svg       : fs.readFileSync( './public/icons.svg', 'utf8' ),
   templates : {
     index : fs.readFileSync( config.templates.index ),
     list  : fs.readFileSync( config.templates.list )
@@ -411,7 +410,6 @@ function renderPage( type, options ) {
           books    : data.books.length
         },
         site             : config.site,
-        svg              : pageContent.svg,
         list             : list,
         hash             : {
           css : pageContent.hashes.css,

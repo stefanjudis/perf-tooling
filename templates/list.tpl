@@ -6,15 +6,12 @@
       {
         cdn  : cdn,
         css  : css,
-        site : site,
-        svg  : svg
+        site : site
       }
     )
   %>
 
   <body>
-
-      <div class="svgIcons"><%= svg %></div>
 
       <%=
         partial(
