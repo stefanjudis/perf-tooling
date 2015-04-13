@@ -57,7 +57,7 @@ var pageContent = {
   enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
   hashes    : {
     css     : revisions.styles,
-    js      : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
+    js      : revisions.scripts
   },
   svg       : fs.readFileSync( './public/icons.svg', 'utf8' ),
   templates : {

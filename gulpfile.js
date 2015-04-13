@@ -26,6 +26,7 @@ var mergeStream   = require( 'merge-stream' );
 var cmq           = require( 'gulp-combine-media-queries' );
 var rev           = require( 'gulp-rev' );
 var jsoneditor    = require( 'gulp-json-editor' );
+var gulpif        = require( 'gulp-if' );
 
 var files = {
   data    : [ 'data/**/*.json' ],
@@ -100,7 +101,7 @@ gulp.task( 'styles', function () {
       return gulp.src( files.rev )
         .pipe( jsoneditor( {
           'styles': dataFiles.map( function ( dataFile ) {
-            return dataFile.path.replace( dataFile.base, '' ).slice( 0, -4 ).split( '-' )[ 1 ];
+            return dataFile.revHash;
           } ).join( '' )
         } ) )
         .pipe( gulp.dest( './' ) );
@@ -133,10 +134,22 @@ gulp.task( 'scripts', function() {
   var keys   = Object.keys( files.scripts );
 
   var streams = keys.map( function( element ) {
+    var condition = element === 'tooling';
+
     return gulp.src( files.scripts[element] )
       .pipe( concat( element + '.js' ) )
       .pipe( uglify() )
-      .pipe( gulp.dest( 'public' ) );
+      .pipe( gulpif(condition, rev() ) )
+      .pipe( gulp.dest( 'public/' ) )
+      .pipe( gulpif( condition, gutil.buffer( function ( err, dataFiles ) {
+        return gulp.src( files.rev )
+          .pipe( jsoneditor( {
+            scripts : dataFiles.map( function ( dataFile ) {
+              return dataFile.revHash;
+            } ).join( '' )
+          } ) )
+          .pipe( gulp.dest( './' ) );
+      } ) ) );
   } );
 
   return mergeStream.apply( null, streams );
