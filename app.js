@@ -55,7 +55,8 @@ var pageContent = {
   css       : fs.readFileSync( './public/main.css', 'utf8' ),
   hashes    : {
     css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
-    js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
+    js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) ),
+    svg  : md5( fs.readFileSync( './public/icons.svg', 'utf8' ) )
   },
   templates : {
     index : fs.readFileSync( config.templates.index ),
@@ -413,7 +414,8 @@ function renderPage( type, options ) {
         list             : list,
         hash             : {
           css : pageContent.hashes.css,
-          js  : pageContent.hashes.js
+          js  : pageContent.hashes.js,
+          svg  : pageContent.hashes.svg
         },
         query            : query,
         type             : type
