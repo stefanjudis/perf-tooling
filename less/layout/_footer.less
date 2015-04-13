@@ -6,19 +6,19 @@
     padding: 1rem 0;
   }
 
-}
+  &--heart {
+    display: inline-block;
+    fill: @color-primary;
+    height: 2rem;
+    margin-bottom: -0.75rem;
+    transition: fill .3s, transform .3s;
+    width: 2rem;
 
-.footer--heart {
-  display: inline-block;
-  fill: @color-primary;
-  height: 2rem;
-  margin-bottom: -0.75rem;
-  transition: fill .3s, transform .3s;
-  width: 2rem;
+    &:hover {
+      fill: @color-secondary;
+      transform: scale(1.1);
+    }
 
-  &:hover {
-    fill: @color-secondary;
-    transform: scale(1.1);
   }
 
 }

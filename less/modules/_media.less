@@ -1,40 +1,45 @@
 .media {
   .clearfix;
   position: relative;
-}
 
-.media-obj-left,
-.media-obj-right {
-  margin-bottom: 1rem;
+  &-obj {
 
-  @media (min-width: @media-small) {
-    max-width: 38%;
+    &-left,
+    &-right {
+      margin-bottom: 1rem;
+
+      @media (min-width: @media-small) {
+        max-width: 38%;
+      }
+
+    }
+
+    &-left {
+
+      @media (min-width: @media-small) {
+        margin: 0 1rem 0;
+        float: left;
+      }
+
+    }
+
+    &-right {
+
+      @media (min-width: @media-small) {
+        margin: 0 0 0 1rem;
+        float: right;
+      }
+
+    }
+
+    &-above {
+      margin-bottom: 1rem;
+    }
+
   }
 
-}
-
-.media-obj-left {
-
-  @media (min-width: @media-small) {
-    margin: 0 1rem 0;
-    float: left;
+  &-body {
+    overflow: hidden;
   }
 
-}
-
-.media-obj-right {
-
-  @media (min-width: @media-small) {
-    margin: 0 0 0 1rem;
-    float: right;
-  }
-
-}
-
-.media-obj-above {
-  margin-bottom: 1rem;
-}
-
-.media-body {
-  overflow: hidden;
 }

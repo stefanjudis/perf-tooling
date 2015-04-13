@@ -7,41 +7,41 @@
     margin: 3rem auto 2rem;
   }
 
-}
+  &--input {
+    -webkit-appearance: none;
+    border: 1px solid @color-border;
+    border-radius: 0;
+    box-shadow: none;
+    padding: .5rem 3rem;
+    text-align: center;
+    width: 100%;
 
-.fuzzy--input {
-  -webkit-appearance: none;
-  border: 1px solid @color-border;
-  border-radius: 0;
-  box-shadow: none;
-  padding: .5rem 3rem;
-  text-align: center;
-  width: 100%;
+    &::-webkit-calendar-picker-indicator {
+      background-color: transparent;
+      color: @color-primary;
+    }
 
-  &::-webkit-calendar-picker-indicator {
-    background-color: transparent;
-    color: @color-primary;
+    @media (min-width: @media-small) {
+      font-size: 1.25em;
+      padding: 1rem 4rem;
+    }
+
   }
 
-  @media (min-width: @media-small) {
-    font-size: 1.25em;
-    padding: 1rem 4rem;
-  }
+  &--icon {
+    fill: @color-border;
+    height: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: .25rem;
+    width: 2rem;
 
-}
+    @media (min-width: @media-small) {
+      height: 2.5rem;
+      top: 0.75rem;
+      width: 2.5rem;
+    }
 
-.fuzzy--icon {
-  fill: @color-border;
-  height: 2rem;
-  position: absolute;
-  right: 1rem;
-  top: .25rem;
-  width: 2rem;
-
-  @media (min-width: @media-small) {
-    height: 2.5rem;
-    top: 0.75rem;
-    width: 2.5rem;
   }
 
 }
