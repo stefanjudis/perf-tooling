@@ -302,10 +302,10 @@
 
           </section>
 
-          <section class="section sponsor text-center">
+          <section class="section text-center">
 
             <h4 class="subline">Sponsored by</h4>
-            <p><a href="https://www.fastly.com/" title="Link to Fastly CDN" target="_blank"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly" width="160" height="72"></a></p>
+            <p><a href="https://www.fastly.com/" title="Link to Fastly CDN" target="_blank"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly" width="160" height="72" class="center-block"></a></p>
 
           </section>
 
