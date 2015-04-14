@@ -3,6 +3,10 @@
   margin: -.25rem auto .25rem;
   padding: 0;
 
+  @media (min-width: @media-small) {
+    max-width: 75%;
+  }
+
   li {
     display: inline-block;
     min-width: 12rem;
@@ -10,6 +14,12 @@
     position: relative;
     text-align: left;
     width: 100% / 2;
+
+    @media (min-width: @media-small) {
+      min-width: initial;
+      width: auto;
+    }
+
   }
 
   a {
@@ -18,6 +28,14 @@
     display: block;
     margin-bottom: .5rem;
     padding: .5rem 1rem;
+
+    @media (min-width: @media-small) {
+      border-radius: 50%;
+      height: 3rem;
+      padding: .5rem;
+      width: 3rem;
+    }
+
   }
 
   span {
@@ -28,43 +46,19 @@
     text-align: center;
     top: .75rem;
 
-    &:after {
-      content: '☆';
-      margin-left: .25rem;
-    }
-
-  }
-
-  svg {
-    display: none;
-    fill: #fff;
-    height: 2rem;
-    width: 2rem;
-  }
-
-  @media (min-width: @media-small) {
-    max-width: 75%;
-
-    li {
-      min-width: initial;
-      width: auto;
-    }
-
-    a {
-      border-radius: 50%;
-      height: 3rem;
-      padding: .5rem;
-      width: 3rem;
-    }
-
-    span {
+    @media (min-width: @media-small) {
       color: @color;
       left: 0;
       padding-top: 1.5rem;
       position: relative;
       top: 0;
+    }
 
-      &:after {
+    &:after {
+      content: '☆';
+      margin-left: .25rem;
+
+      @media (min-width: @media-small) {
         left: 0;
         margin: 0;
         position: absolute;
@@ -74,8 +68,16 @@
 
     }
 
-    svg {
+  }
+
+  svg {
+    display: none;
+
+    @media (min-width: @media-small) {
       display: inline-block;
+      fill: #fff;
+      height: 2rem;
+      width: 2rem;
     }
 
   }

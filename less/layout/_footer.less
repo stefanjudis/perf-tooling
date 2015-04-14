@@ -26,21 +26,24 @@
 .crafted,
 .copyright {
   text-align: center;
-}
 
-@media (min-width: @media-small) {
-
-  .crafted,
-  .copyright {
+  @media (min-width: @media-small) {
     margin: 0;
-    text-align: left;
   }
 
-  .crafted {
+}
+
+.crafted {
+
+  @media (min-width: @media-small) {
     float: left;
   }
 
-  .copyright {
+}
+
+.copyright {
+
+  @media (min-width: @media-small) {
     float: right;
     padding-top: .2em;
   }

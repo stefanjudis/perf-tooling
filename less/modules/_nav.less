@@ -3,6 +3,10 @@
   text-align: center;
   text-transform: uppercase;
 
+  @media (min-width: @media-tiny) {
+    overflow: hidden;
+  }
+
   &.nav-open {
 
     ul {
@@ -19,15 +23,31 @@
     padding: 0;
     text-align: center;
     width: 100%;
+
+    @media (min-width: @media-tiny) {
+      display: table;
+      margin: 0;
+    }
+
   }
 
   li {
     position: relative;
+
+    @media (min-width: @media-tiny) {
+      display: table-cell;
+    }
+
   }
 
   a,
   span {
     padding: .25rem 0;
+
+    @media (min-width: @media-tiny) {
+      padding: 1.5rem 0;
+    }
+
   }
 
   a {
@@ -42,32 +62,13 @@
 
   .is-active {
 
+    @media (min-width: @media-tiny) {
+      border-bottom: 3px solid @color-primary;
+    }
+
     > span {
       color: @color-primary;
       display: block;
-    }
-
-  }
-
-  @media (min-width: @media-tiny) {
-    overflow: hidden;
-
-    ul {
-      display: table;
-      margin: 0;
-    }
-
-    li {
-      display: table-cell;
-    }
-
-    a,
-    span {
-      padding: 1.5rem 0;
-    }
-
-    .is-active {
-      border-bottom: 3px solid @color-primary;
     }
 
   }
