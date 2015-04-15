@@ -1,0 +1,9 @@
+{
+  "name" : "cssnano",
+  "cli" : "https://github.com/ben-eb/cssnano",
+  "grunt" : "https://github.com/sindresorhus/grunt-cssnano",
+  "gulp" : "https://github.com/ben-eb/gulp-cssnano",
+  "module" : "https://github.com/ben-eb/cssnano",
+  "description" : "A modular minifier, built on top of the PostCSS ecosystem.",
+  "tags" : [ "css", "minification" ]
+}
