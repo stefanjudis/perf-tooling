@@ -175,6 +175,21 @@
 
         <% } %>
 
+        <% if ( tool.broccoli ) { %>
+
+          <li class="tooltip" title="Broccoli plugin">
+
+            <a href="<%= tool.broccoli %>" title="Link to Broccoli plugin" class="resource-broccoli" target="_blank">
+              <svg>
+                <use xlink:href="#icon-broccoli" />
+              </svg>
+              Broccoli plugin
+            </a>
+
+            <span><%= ( tool.stars && tool.stars.broccoli ) ? tool.stars.broccoli : 'N/A' %></span>
+
+        <% } %>
+
         <% if ( tool.grunt ) { %>
 
           <li class="tooltip" title="Grunt plugin">
