@@ -9,6 +9,7 @@ module.exports = {
   platforms : [
     'angular',
     'bookmarklet',
+    'broccoli',
     'chrome',
     'firefox',
     'internetExplorer',
