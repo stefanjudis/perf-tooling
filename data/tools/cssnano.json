@@ -1,5 +1,6 @@
 {
   "name" : "cssnano",
+  "broccoli" : "https://github.com/sindresorhus/broccoli-cssnano",
   "cli" : "https://github.com/ben-eb/cssnano",
   "grunt" : "https://github.com/sindresorhus/grunt-cssnano",
   "gulp" : "https://github.com/ben-eb/gulp-cssnano",
