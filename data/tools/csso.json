@@ -1,5 +1,6 @@
 {
   "name" : "csso",
+  "broccoli" : "https://github.com/sindresorhus/broccoli-csso",
   "grunt" : "https://github.com/t32k/grunt-csso",
   "gulp" : "https://github.com/ben-eb/gulp-csso",
   "module" : "https://github.com/css/csso",
