@@ -250,6 +250,21 @@
 
         <% } %>
 
+        <% if ( tool.ruby ) { %>
+
+          <li class="tooltip" title="Ruby">
+
+            <a href="<%= tool.ruby %>" title="Link to Ruby" class="resource-ruby" target="_blank">
+              <svg>
+                <use xlink:href="#icon-ruby" />
+              </svg>
+              Ruby
+            </a>
+
+            <span><%= ( tool.stars && tool.stars.ruby ) ? tool.stars.ruby : 'N/A' %></span>
+
+        <% } %>
+
         <% if ( tool.apache ) { %>
 
           <li class="tooltip" title="Apache module">
