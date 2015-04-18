@@ -1,0 +1,7 @@
+{
+  "name" : "webpagetest-mapper",
+  "cli" : "https://github.com/nature/webpagetest-mapper",
+  "module" : "https://github.com/nature/webpagetest-mapper",
+  "description" : "Maps JSON result data from marcelduran/webpagetest-api into human-readable document formats.",
+  "tags" : [ "benchmark", "metrics" ]
+}
