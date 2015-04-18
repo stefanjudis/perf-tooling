@@ -1,0 +1,6 @@
+{
+  "name" : "Augmented Traffic Control",
+  "python" : "https://github.com/facebook/augmented-traffic-control",
+  "description" : "Augmented Traffic Control (ATC) is a tool to simulate network conditions. It allows controlling the connection that a device has to the internet. Developers can use ATC to test their application across varying network conditions, easily emulating high speed, mobile, and even severely impaired networks.",
+  "tags" : [ "bandwidth", "latency", "network" ]
+}

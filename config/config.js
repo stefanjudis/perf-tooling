@@ -9,6 +9,7 @@ module.exports = {
   platforms : [
     'angular',
     'bookmarklet',
+    'broccoli',
     'chrome',
     'firefox',
     'internetExplorer',
@@ -22,6 +23,8 @@ module.exports = {
     'gulp',
     'javascript',
     'php',
+    'python',
+    'ruby',
     'apache',
     'nginx',
     'service',

@@ -40,7 +40,8 @@ var files = {
   svg     : [ 'svg/icons/*.svg' ],
   watch   : {
     styles : [ 'less/**/*.less' ]
-  }
+  },
+  xml : [ './*.xml' ]
 };
 
 /*******************************************************************************
@@ -151,6 +152,17 @@ gulp.task( 'images', function () {
 
 
 /*******************************************************************************
+ * XML TASK
+ *
+ * copy xml files over to public
+ */
+gulp.task( 'xml', function () {
+  return gulp.src( files.xml )
+              .pipe( gulp.dest( 'public/' ) );
+} );
+
+
+/*******************************************************************************
  * JSONLINT TASK
  *
  * this task is responsible for compressing images properly
@@ -178,6 +190,7 @@ gulp.task( 'watch', function() {
   gulp.watch( files.lint, [ 'lint' ] );
   gulp.watch( files.watch.styles, [ 'styles' ] );
   gulp.watch( files.scripts, [ 'scripts' ] );
+  gulp.watch( files.svg, [ 'svg' ] );
 });
 
 
@@ -199,7 +212,7 @@ gulp.task( 'test', [ 'csslint', 'jsonlint' ] );
  *  $ gulp build
  *
  */
-gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images' ] );
+gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images', 'xml' ] );
 
 
 /*******************************************************************************

@@ -6,15 +6,12 @@
       {
         cdn  : cdn,
         css  : css,
-        site : site,
-        svg  : svg
+        site : site
       }
     )
   %>
 
   <body>
-
-      <div class="svgIcons"><%= svg %></div>
 
       <%=
         ( type === 'videos' || type === 'slides') ?
@@ -30,6 +27,7 @@
           {
             active           : type,
             cdn              : cdn,
+            hash             : hash,
             site             : site
           }
         )
@@ -44,6 +42,8 @@
             partial(
               'templates/partials/fuzzy.tpl',
               {
+                cdn       : cdn,
+                hash      : hash,
                 list      : list,
                 platforms : platforms,
                 query     : query,
@@ -72,10 +72,11 @@
             partial(
               'templates/partials/lists/' + type + '.tpl',
               {
+                cdn     : cdn,
+                hash    : hash,
                 list    : list,
                 partial : partial,
-                people  : people,
-                cdn     : cdn
+                people  : people
               }
             )
           %>
@@ -88,7 +89,10 @@
       <%=
         partial(
           'templates/partials/footer.tpl',
-          {}
+          {
+            cdn              : cdn,
+            hash             : hash
+          }
         )
       %>
 

@@ -22,7 +22,7 @@
         "name": "Stefan Judis",
         "email": "stefanjudis@gmail.com"
       },
-      "logo": "<%= cdn %>/apple-touch-icon-152x152-precomposed.png",
+      "logo": "<%= cdn %>/apple-touch-icon-precomposed.png",
       "sameAs" : [
         "http://www.twitter.com/perf_tooling"
       ]
@@ -32,18 +32,9 @@
   <link rel="dns-prefetch" href="http://www.google-analytics.com/">
   <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">
 
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="<%= cdn %>/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="<%= cdn %>/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="<%= cdn %>/favicon-96x96.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="<%= cdn %>/apple-touch-icon-57x57-precomposed.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="<%= cdn %>/apple-touch-icon-114x114-precomposed.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="<%= cdn %>/apple-touch-icon-72x72-precomposed.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="<%= cdn %>/apple-touch-icon-144x144-precomposed.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="<%= cdn %>/apple-touch-icon-60x60-precomposed.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="<%= cdn %>/apple-touch-icon-120x120-precomposed.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="<%= cdn %>/apple-touch-icon-76x76-precomposed.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="<%= cdn %>/apple-touch-icon-152x152-precomposed.png">
+  <link rel="icon" href="<%= cdn %>/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="<%= cdn %>/apple-touch-icon-precomposed.png">
 
   <style><%= css %></style>
+
 </head>
