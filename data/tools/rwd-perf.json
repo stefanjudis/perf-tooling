@@ -1,8 +1,8 @@
 {
   "name" : "RWDPerf",
-  "linux" : "https://github.com/lafikl/RWDPerf",
-  "mac" : "https://github.com/lafikl/RWDPerf",
-  "windows" : "https://github.com/lafikl/RWDPerf",
+  "linux" : "https://github.com/WPOTools/RWDPerf",
+  "mac" : "https://github.com/WPOTools/RWDPerf",
+  "windows" : "https://github.com/WPOTools/RWDPerf",
   "description" : "Performance testing for Responsive web design websites.",
   "tags" : [ "rwd", "metrics" ]
 }
