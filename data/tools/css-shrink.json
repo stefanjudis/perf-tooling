@@ -1,5 +1,6 @@
 {
   "name" : "CSSShrink",
+  "broccoli" : "https://github.com/filippovdaniil/broccoli-cssshrink",
   "grunt" : "https://github.com/JohnCashmore/grunt-cssshrink",
   "gulp" : "https://github.com/torrottum/gulp-cssshrink",
   "module" : "https://github.com/stoyan/cssshrink",

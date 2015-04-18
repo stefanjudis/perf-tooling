@@ -1,5 +1,6 @@
 {
   "name" : "SVGO",
+  "broccoli" : "https://www.npmjs.com/package/broccoli-svgo",
   "cli" : "https://github.com/svg/svgo",
   "grunt" : "https://github.com/sindresorhus/grunt-svgmin",
   "gulp" : "https://github.com/ben-eb/gulp-svgmin",
