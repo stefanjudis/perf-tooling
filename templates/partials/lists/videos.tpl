@@ -20,7 +20,7 @@
 
       <div class="media-body">
 
-        <h3 class="post-title"><a href="#" title="Preview of <%= title %>" data-modal data-modal-content-id="<%= video.id %>"><%= title %></a></h3>
+        <h3 class="post-title"><a href="<%= video.url %>" title="Preview of <%= title %>" data-modal data-modal-content-id="<%= video.id %>"><%= title %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
@@ -40,6 +40,8 @@
           %>
 
         <% } %>
+
+        <p><a href="<%= video.url %>" target="_blank">Open in new tab</a></p>
 
         <% if ( video.stats ) { %>
 

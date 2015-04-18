@@ -44,6 +44,8 @@
 
         <% } %>
 
+        <p><a href="<%= slide.url %>" target="_blank">Open in new tab</a></p>
+
         <% if ( slide.stats ) { %>
 
           <ul class="post-stats">

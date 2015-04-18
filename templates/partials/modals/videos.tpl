@@ -4,7 +4,7 @@
     <div class="modal-inner">
       <button id="modalClose" class="modal-close" type="button" aria-label="Close modal" data-modal-close>
         <svg>
-          <use xlink:href="#icon-close" />
+          <use xlink:href="<%= cdn %>/icons.svg?<%= hash.svg %>#icon-close" />
         </svg>
       </button>
       <div class="modal-content">

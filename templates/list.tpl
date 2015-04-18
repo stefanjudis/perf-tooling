@@ -17,7 +17,10 @@
         ( type === 'videos' || type === 'slides') ?
           partial(
             'templates/partials/modals/' + type + '.tpl',
-            {}
+            {
+              cdn  : cdn,
+              hash : hash
+            }
           ) : ''
       %>
 
