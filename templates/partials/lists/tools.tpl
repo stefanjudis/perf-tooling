@@ -181,7 +181,7 @@
 
             <a href="<%= tool.broccoli %>" title="Link to Broccoli plugin" class="resource-broccoli" target="_blank">
               <svg>
-                <use xlink:href="#icon-broccoli" />
+                <use xlink:href="<%= cdn %>/icons.svg?<%= hash.svg %>#icon-broccoli" />
               </svg>
               Broccoli plugin
             </a>
@@ -262,6 +262,21 @@
             </a>
 
             <span><%= ( tool.stars && tool.stars.php ) ? tool.stars.php : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.ruby ) { %>
+
+          <li class="tooltip" title="Ruby">
+
+            <a href="<%= tool.ruby %>" title="Link to Ruby" class="resource-ruby" target="_blank">
+              <svg>
+                <use xlink:href="<%= cdn %>/icons.svg?<%= hash.svg %>#icon-ruby" />
+              </svg>
+              Ruby
+            </a>
+
+            <span><%= ( tool.stars && tool.stars.ruby ) ? tool.stars.ruby : 'N/A' %></span>
 
         <% } %>
 

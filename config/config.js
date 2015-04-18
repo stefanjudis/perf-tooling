@@ -24,6 +24,7 @@ module.exports = {
     'javascript',
     'php',
     'python',
+    'ruby',
     'apache',
     'nginx',
     'service',
