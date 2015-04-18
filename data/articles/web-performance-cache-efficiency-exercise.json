@@ -1,0 +1,14 @@
+{
+  "name" : "Web performance: Cache efficiency exercise",
+  "authors" : [
+    {
+      "name" : "Ryan Algrecht"
+    }
+  ],
+  "date" : "2015-04-13",
+  "stats" : {
+    "length": 1549
+  },
+  "url" : "https://code.facebook.com/posts/964122680272229/web-performance-cache-efficiency-exercise/",
+  "tags" : ["cache"]
+}
