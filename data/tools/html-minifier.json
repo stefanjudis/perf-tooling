@@ -1,5 +1,6 @@
 {
   "name" : "HTMLMinifier",
+  "broccoli" : "https://github.com/sindresorhus/broccoli-htmlmin",
   "grunt" : "https://github.com/gruntjs/grunt-contrib-htmlmin",
   "gulp" : "https://github.com/jonschlinkert/gulp-htmlmin",
   "module" : "https://github.com/kangax/html-minifier",

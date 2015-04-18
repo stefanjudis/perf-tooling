@@ -1,5 +1,6 @@
 {
   "name" : "clean-css",
+  "broccoli" : "https://www.npmjs.com/package/broccoli-clean-css",
   "cli" : "https://github.com/jakubpawlowicz/clean-css",
   "grunt" : "https://github.com/gruntjs/grunt-contrib-cssmin",
   "gulp" : "https://github.com/chilijung/gulp-cssmin",
