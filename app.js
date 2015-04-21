@@ -57,9 +57,9 @@ var pageContent = {
   enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
   hashes    : {
     css     : revisions.styles,
-    js      : revisions.scripts
+    js      : revisions.scripts,
+    svg     : md5( fs.readFileSync( './public/icons.svg', 'utf8' ) )
   },
-  svg       : fs.readFileSync( './public/icons.svg', 'utf8' ),
   templates : {
     index : fs.readFileSync( config.templates.index ),
     list  : fs.readFileSync( config.templates.list )
@@ -416,11 +416,11 @@ function renderPage( type, options ) {
           books    : data.books.length
         },
         site             : config.site,
-        svg              : pageContent.svg,
         list             : list,
         hash             : {
-          css     : pageContent.hashes.css,
-          js      : pageContent.hashes.js
+          css  : pageContent.hashes.css,
+          js   : pageContent.hashes.js,
+          svg  : pageContent.hashes.svg
         },
         query            : query,
         type             : type

@@ -9,7 +9,7 @@
       <button class="btn-nav">
         <span class="visuallyhidden">Menu</span>
         <svg>
-          <use xlink:href="#icon-menu" />
+          <use xlink:href="<%= cdn %>/icons.svg?<%= hash.svg %>#icon-menu" />
         </svg>
       </button>
 

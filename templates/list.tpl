@@ -8,7 +8,6 @@
         css       : css,
         cssCookie : cssCookie,
         site      : site,
-        svg       : svg,
         enhance   : enhance,
         hash      : hash
       }
@@ -17,14 +16,13 @@
 
   <body>
 
-      <div class="svgIcons"><%= svg %></div>
-
       <%=
         partial(
           'templates/partials/header.tpl',
           {
             active           : type,
             cdn              : cdn,
+            hash             : hash,
             site             : site
           }
         )
@@ -39,6 +37,8 @@
             partial(
               'templates/partials/fuzzy.tpl',
               {
+                cdn       : cdn,
+                hash      : hash,
                 list      : list,
                 platforms : platforms,
                 query     : query,
@@ -67,10 +67,11 @@
             partial(
               'templates/partials/lists/' + type + '.tpl',
               {
+                cdn     : cdn,
+                hash    : hash,
                 list    : list,
                 partial : partial,
-                people  : people,
-                cdn     : cdn
+                people  : people
               }
             )
           %>
@@ -83,7 +84,10 @@
       <%=
         partial(
           'templates/partials/footer.tpl',
-          {}
+          {
+            cdn              : cdn,
+            hash             : hash
+          }
         )
       %>
 

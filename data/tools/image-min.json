@@ -1,5 +1,6 @@
 {
   "name" : "imagemin",
+  "broccoli" : "https://github.com/xulai/broccoli-imagemin",
   "cli" : "https://github.com/imagemin/imagemin",
   "grunt" : "https://github.com/gruntjs/grunt-contrib-imagemin",
   "gulp" : "https://github.com/sindresorhus/gulp-imagemin",

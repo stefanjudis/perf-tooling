@@ -1,0 +1,6 @@
+{
+  "name" : "rack-mini-profiler",
+  "ruby" : "https://github.com/MiniProfiler/rack-mini-profiler",
+  "description" : "Middleware that displays speed badge for every html page. Designed to work both in production and in development.",
+  "tags" : [ "database", "monitoring" ]
+}

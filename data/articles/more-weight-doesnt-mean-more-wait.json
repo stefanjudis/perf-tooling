@@ -1,0 +1,15 @@
+{
+  "name" : "More Weight Doesn't Mean More Wait",
+  "authors" : [
+    {
+      "name" : "Scott Jehl",
+      "twitter" : "@scottjehl"
+    }
+  ],
+  "date" : "2015-04-17",
+  "stats" : {
+    "length": 2422
+  },
+  "url" : "http://www.filamentgroup.com/lab/weight-wait.html",
+  "tags" : ["audit"]
+}
