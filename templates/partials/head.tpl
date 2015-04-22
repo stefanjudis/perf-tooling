@@ -29,12 +29,21 @@
     }
   </script>
 
+  <style><%= css %></style>
+
+  <script>
+    <%= loadCss %>
+    loadCSS( '<%= cdn %>/main.css' )
+  </script>
+
+  <noscript>
+    <link rel="stylesheet" href="<%= cdn %>/main.css">
+  </noscript>
+
   <link rel="dns-prefetch" href="http://www.google-analytics.com/">
   <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">
 
   <link rel="icon" href="<%= cdn %>/apple-touch-icon-precomposed.png">
   <link rel="apple-touch-icon" href="<%= cdn %>/apple-touch-icon-precomposed.png">
-
-  <style><%= css %></style>
 
 </head>

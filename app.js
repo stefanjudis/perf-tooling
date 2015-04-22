@@ -52,7 +52,8 @@ var pages = {
  * Reduce I/O and read files only on start
  */
 var pageContent = {
-  css       : fs.readFileSync( './public/main.css', 'utf8' ),
+  css       : fs.readFileSync( 'css/index.css', 'utf8' ),
+  loadCss   : fs.readFileSync( 'js/helper/load-css.js', 'utf8' ),
   hashes    : {
     css  : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
     js   : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) ),
@@ -400,6 +401,7 @@ function renderPage( type, options ) {
         cdn              : config.cdn,
         contributors     : data.contributors,
         debug            : !! debug,
+        loadCss          : pageContent.loadCss,
         partial          : partial,
         people           : data.people,
         platforms        : config.platforms,
