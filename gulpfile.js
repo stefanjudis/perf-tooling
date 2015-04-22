@@ -23,6 +23,8 @@ var uglify        = require( 'gulp-uglify' );
 var tasks         = require( 'gulp-task-listing' );
 var svgstore      = require( 'gulp-svgstore' );
 var cmq           = require( 'gulp-combine-media-queries' );
+var penthouse     = require( 'penthouse' );
+var fs            = require( 'fs' );
 
 
 var files = {
@@ -86,6 +88,23 @@ gulp.task( 'styles', function () {
     .pipe( gulp.dest( 'public/' ) );
 });
 
+/*******************************************************************************
+ * PENTHOUSE TASK
+ *
+ * this task is responsible for getting the critical CSS
+ * - saves the critical form index page
+ */
+gulp.task( 'penthouse', function() {
+
+  penthouse({
+    url: 'http://localhost:3000',
+    css: 'public/main.css',
+    width: 320,
+    height: 600
+  }, function(err, criticalCss) {
+    fs.writeFile('css/index.css', criticalCss);
+  });
+});
 
 /*******************************************************************************
  * CSSLINT TASK
@@ -212,7 +231,7 @@ gulp.task( 'test', [ 'csslint', 'jsonlint' ] );
  *  $ gulp build
  *
  */
-gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images', 'xml' ] );
+gulp.task( 'build', [ 'styles', 'penthouse', 'scripts', 'svg', 'images', 'xml' ] );
 
 
 /*******************************************************************************
