@@ -2,6 +2,8 @@
 
 ## Perf Tooling
 
+[![Join the chat at https://gitter.im/stefanjudis/perf-tooling](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/stefanjudis/perf-tooling?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Dependency Status](https://david-dm.org/stefanjudis/perf-tooling.svg)](https://david-dm.org/stefanjudis/perf-tooling)
 
 Welcome to Perf Tooling.
