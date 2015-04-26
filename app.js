@@ -53,7 +53,7 @@ var pages = {
  * Reduce I/O and read files only on start
  */
 var pageContent = {
-  css       : fs.readFileSync( './public/main.css', 'utf8' ),
+  css       : fs.readFileSync( './public/main-' + revisions.styles + '.css', 'utf8' ),
   enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
   hashes    : {
     css     : revisions.styles,
