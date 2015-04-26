@@ -58,7 +58,7 @@ var pageContent = {
   hashes    : {
     css     : revisions.styles,
     js      : revisions.scripts,
-    svg     : md5( fs.readFileSync( './public/icons.svg', 'utf8' ) )
+    svg     : revisions.svg
   },
   templates : {
     index : fs.readFileSync( config.templates.index ),

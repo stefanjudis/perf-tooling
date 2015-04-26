@@ -165,12 +165,22 @@ gulp.task( 'scripts', function() {
  */
 gulp.task( 'svg', function () {
   return gulp.src( files.svg )
-             .pipe( svgstore( {
-                fileName  : 'icons.svg',
-                prefix    : 'icon-',
-                inlineSvg : true
-              } ) )
-             .pipe( gulp.dest( 'public/' ) );
+    .pipe( svgstore( {
+      fileName  : 'icons.svg',
+      prefix    : 'icon-',
+      inlineSvg : true
+    } ) )
+    .pipe( rev() )
+    .pipe( gulp.dest( 'public/' ) )
+    .pipe( gutil.buffer( function ( err, dataFiles ) {
+      return gulp.src( files.rev )
+      .pipe( jsoneditor( {
+        'svg': dataFiles.map( function ( dataFile ) {
+          return dataFile.revHash;
+        } ).join( '' )
+      } ) )
+      .pipe( gulp.dest( './' ) );
+    } ) );
 });
 
 
