@@ -2,5 +2,5 @@
   "name" : "ruxit",
   "service" : "https://ruxit.com/",
   "description" : "Performance monitoring solution-as-a-service for Ops, Devs and Architects. Unites the features of many tools into one unified service. The agent lets you monitor the hosts and services of your backend. By injecting a JavaScript file into your website you can measure the browser performance from your end user's perspective. Find all the functionality of many tools in a single, unified service.",
-  "tags" : [ "metrics", "monitor", "java", ".net", "node.js", "analysis", "javascript", "single point of failure", "performance", "network",  "database", "advise", "bandwidth", "latency", "analyze", "monitoring"]
+  "tags" : [ "metrics", "performance", "network", "database", "timings"]
 }
