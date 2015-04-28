@@ -1,0 +1,6 @@
+{
+  "name" : "ruxit",
+  "service" : "https://ruxit.com/",
+  "description" : "The performance monitoring solution-as-a-service for Ops, Devs and Architects. Unites the features of many tools into one unified service. Our monitoring agent lets you monitor the hosts and services of your backend. By injecting our JavaScript file into your website you can measure the browser performance from your end user's perspective. We built this for you, so please try and let us know if you like it.",
+  "tags" : [ "metrics", "monitor", "java", ".net", "node.js" ]
+}
