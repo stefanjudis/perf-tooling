@@ -13,7 +13,10 @@
   "url" : "http://shop.oreilly.com/product/9780596802806.do",
   "description" : "If you're like most developers, you rely heavily on JavaScript to build interactive and quick-responding web applications. The problem is that all of those lines of JavaScript code can slow down your apps. This book reveals techniques and strategies to help you eliminate performance bottlenecks during development. You'll learn how to improve execution time, downloading, interaction with the DOM, page life cycle, and more.",
   "img" : {
-    "src" : "high-performance-javascript.jpg",
+    "src" : {
+      "filename" : "high-performance-javascript",
+      "types" : [ "jpg", "webp" ]
+    },
     "width" : 200,
     "height" : 262
   },

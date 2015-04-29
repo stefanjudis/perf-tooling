@@ -27,6 +27,7 @@ var cmq           = require( 'gulp-combine-media-queries' );
 var rev           = require( 'gulp-rev' );
 var jsoneditor    = require( 'gulp-json-editor' );
 var gulpif        = require( 'gulp-if' );
+var webp          = require( 'gulp-webp' );
 
 var files = {
   data    : [ 'data/**/*.json' ],
@@ -195,6 +196,8 @@ gulp.task( 'images', function () {
                   progressive: true,
                   use: [ pngquant() ]
               } ) )
+              .pipe( gulp.dest( 'public/' ) )
+              .pipe( webp() )
               .pipe( gulp.dest( 'public/' ) );
 });
 
