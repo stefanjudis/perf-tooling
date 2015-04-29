@@ -1,0 +1,6 @@
+{
+  "name" : "WebPageTest Bulk Tester",
+  "javascript" : "https://github.com/andydavies/WPT-Bulk-Tester",
+  "description" : "Use Google Docs to test multiple URLs using WebPageTest. Each test uses one of a defined set of parameters (a scenario) so tests can either share the same parameters, or use different sets depending on need.",
+  "tags" : [ "metrics", "monitoring" ]
+}
