@@ -1,0 +1,19 @@
+{
+  "name" : "Need for Speed 2: Improving Front-End Performance",
+  "authors" : [
+    {
+      "name" : "Jonathan Suh",
+      "twitter" : "@jonsuh"
+    },
+    {
+      "name" : "Nic Jansma",
+      "twitter" : "@nicj"
+    }
+  ],
+  "date" : "2015-04-22",
+  "stats" : {
+    "length" : 2551
+  },
+  "url" : "https://jonsuh.com/blog/need-for-speed-2/",
+  "tags" : [ "fonts", "best practices" ]
+}
