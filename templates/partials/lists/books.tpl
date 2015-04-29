@@ -7,7 +7,12 @@
 
       <figure class="media-obj-left">
 
-        <a href="<%= book.url %>" title="Link to video" target="_blank"><img src="<%= cdn %>/books/<%= book.img.src %>" width="<%= book.img.width %>" height="<%= book.img.height %>" alt="<%= book.name %> "></a>
+        <a href="<%= book.url %>" title="Link to video" target="_blank">
+          <picture>
+            <source type="image/webp" srcset="<%= cdn %>/books/<%= book.img.src.filename %>.<%= book.img.src.types[1] %>">
+            <img src="<%= cdn %>/books/<%= book.img.src.filename %>.<%= book.img.src.types[0] %>" width="<%= book.img.width %>" height="<%= book.img.height %>" alt="<%= book.name %> ">
+          </picture>
+        </a>
 
       </figure>
 
