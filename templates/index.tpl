@@ -44,7 +44,7 @@
 
               <a class="btn btn-scroll js-scroll" href="#features" title="Scroll to features">
                 <span class="visuallyhidden">Scroll to features</span><svg>
-                  <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-arrow" />
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-arrow" />
                 </svg>
               </a>
 
@@ -182,7 +182,7 @@
                 <a href="https://twitter.com/stefanjudis" title="Link to Stefan on Twitter" target="_blank">
                   <span class="visuallyhidden">Stefan on Twitter</span>
                   <svg>
-                    <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-twitter" />
+                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
                   </svg>
                 </a>
               </li>
@@ -191,7 +191,7 @@
                 <a href="https://github.com/stefanjudis" title="Link to Stefan on GitHub" target="_blank">
                   <span class="visuallyhidden">Stefan on Github</span>
                   <svg>
-                    <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-github" />
+                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
                   </svg>
                 </a>
               </li>
@@ -200,7 +200,7 @@
                 <a href="mailto:stefanjudis@gmail.com" title="Send Stafan an email" target="_blank">
                   <span class="visuallyhidden">Stefan's email address</span>
                   <svg>
-                    <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-email" />
+                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
                   </svg>
                 </a>
               </li>
@@ -212,7 +212,7 @@
                 <a href="https://github.com/marcobiedermann" title="Link to Marco on GitHub" target="_blank">
                   <span class="visuallyhidden">Marco on Github</span>
                   <svg>
-                    <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-github" />
+                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
                   </svg>
                 </a>
               </li>
@@ -221,7 +221,7 @@
                 <a href="https://twitter.com/m412c0b" title="Link to Marco on Twitter" target="_blank">
                   <span class="visuallyhidden">Marco on Twitter</span>
                   <svg>
-                    <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-twitter" />
+                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
                   </svg>
                 </a>
               </li>

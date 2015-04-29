@@ -16,7 +16,7 @@
 
             <a href="<%= tool.bookmarklet %>" title="Link to bookmarklet" class="resource-bookmarklet" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-bookmarklet" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-bookmarklet" />
               </svg>
               Bookmarklet
             </a>
@@ -31,7 +31,7 @@
 
             <a href="<%= tool.chrome %>" title="Link to Chrome extension" class="resource-chrome" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-chrome" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-chrome" />
               </svg>
               Chrome
             </a>
@@ -46,7 +46,7 @@
 
             <a href="<%= tool.firefox %>" title="Link to Firefox extension" class="resource-firefox" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-firefox" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-firefox" />
               </svg>
               Firefox
             </a>
@@ -61,7 +61,7 @@
 
             <a href="<%= tool.internetExplorer %>" title="Link to Internet Explorer Extension" class="resource-internet-explorer" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-internet-explorer" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-internet-explorer" />
               </svg>
               Internet Explorer
             </a>
@@ -76,7 +76,7 @@
 
             <a href="<%= tool.safari %>" title="Link to Safari extension" class="resource-safari" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-safari" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-safari" />
               </svg>
               Safari
             </a>
@@ -91,7 +91,7 @@
 
             <a href="<%= tool.mac %>" title="Link to Mac application" class="resource-mac" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-apple" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-apple" />
               </svg>
               Mac
             </a>
@@ -106,7 +106,7 @@
 
             <a href="<%= tool.windows %>" title="Link to Windows application" class="resource-windows" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-windows" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-windows" />
               </svg>
               Windows
             </a>
@@ -121,7 +121,7 @@
 
             <a href="<%= tool.linux %>" title="Link to Linux application" class="resource-linux" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-linux" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-linux" />
               </svg>
               Linux
             </a>
@@ -136,7 +136,7 @@
 
             <a href="<%= tool.cli %>" title="Link to CLI" class="resource-cli" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-terminal" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-terminal" />
               </svg>
               CLI
             </a>
@@ -151,7 +151,7 @@
 
             <a href="<%= tool.module %>" title="Link to Node module" class="resource-module" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-module" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-module" />
               </svg>
               Node module
             </a>
@@ -166,7 +166,7 @@
 
             <a href="<%= tool.angular %>" title="Link to AngularJS Script" class="resource-angular" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-angular" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-angular" />
               </svg>
               AngularJS Script
             </a>
@@ -181,7 +181,7 @@
 
             <a href="<%= tool.broccoli %>" title="Link to Broccoli plugin" class="resource-broccoli" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-broccoli" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-broccoli" />
               </svg>
               Broccoli plugin
             </a>
@@ -196,7 +196,7 @@
 
             <a href="<%= tool.grunt %>" title="Link to Grunt plugin" class="resource-grunt" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-grunt" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-grunt" />
               </svg>
               Grunt plugin
             </a>
@@ -211,7 +211,7 @@
 
             <a href="<%= tool.gulp %>" title="Link to Gulp plugin" class="resource-gulp" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-gulp" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-gulp" />
               </svg>
               gulp plugin
             </a>
@@ -226,7 +226,7 @@
 
             <a href="<%= tool.illustrator %>" title="Link to Illustrator Script" class="resource-illustrator" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-illustrator" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-illustrator" />
               </svg>
               Service
             </a>
@@ -241,7 +241,7 @@
 
             <a href="<%= tool.javascript %>" title="Link to Script" class="resource-javascript" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-javascript" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-javascript" />
               </svg>
               Javascript
             </a>
@@ -256,7 +256,7 @@
 
             <a href="<%= tool.php %>" title="Link to PHP" class="resource-php" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-php" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-php" />
               </svg>
               PHP
             </a>
@@ -271,7 +271,7 @@
 
             <a href="<%= tool.ruby %>" title="Link to Ruby" class="resource-ruby" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-ruby" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-ruby" />
               </svg>
               Ruby
             </a>
@@ -286,7 +286,7 @@
 
             <a href="<%= tool.apache %>" title="Link to Apache module" class="resource-apache" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-apache" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-apache" />
               </svg>
               Apache
             </a>
@@ -301,7 +301,7 @@
 
             <a href="<%= tool.nginx %>" title="Link to Nginx module" class="resource-nginx" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-nginx" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-nginx" />
               </svg>
               Nginx
             </a>
@@ -316,7 +316,7 @@
 
             <a href="<%= tool.python %>" title="Link to Python Script" class="resource-python" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-python" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-python" />
               </svg>
               Python
             </a>
@@ -331,7 +331,7 @@
 
             <a href="<%= tool.wordpress %>" title="Link to WordPress Plugin" class="resource-wordpress" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-wordpress" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-wordpress" />
               </svg>
               Wordpress
             </a>
@@ -346,7 +346,7 @@
 
             <a href="<%= tool.service %>" title="Link to Service" class="resource-service" target="_blank">
               <svg>
-                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-globe" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-globe" />
               </svg>
               Service
             </a>
