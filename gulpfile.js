@@ -196,6 +196,7 @@ gulp.task( 'images', function () {
                   progressive: true,
                   use: [ pngquant() ]
               } ) )
+              .pipe( gulp.dest( 'public/' ) )
               .pipe( webp() )
               .pipe( gulp.dest( 'public/' ) );
 });
