@@ -29,7 +29,7 @@
     }
   </script>
 
-  <style><%= css %></style>
+  <style><%= criticalCss %></style>
 
   <script>
     <%= loadCss %>
@@ -39,6 +39,15 @@
   <noscript>
     <link rel="stylesheet" href="<%= cdn %>/main.css">
   </noscript>
+  <meta name="maincss"  content="/main-<%= hash.css %>.css">
+  <% if ( !cssCookie || cssCookie !== hash.css ) { %>
+  <style><%= css %></style>
+  <% } else { %>
+  <link rel="stylesheet" href="<%= cdn %>/main-<%= hash.css %>.css">
+  <% } %>
+  <script><%= enhance %></script>
+
+  <noscript><link rel="stylesheet" href="<%= cdn %>/main-<%= hash.css %>.css"></noscript>
 
   <link rel="dns-prefetch" href="http://www.google-analytics.com/">
   <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">

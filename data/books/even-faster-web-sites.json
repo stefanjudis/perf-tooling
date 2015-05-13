@@ -13,7 +13,10 @@
   "url" : "http://shop.oreilly.com/product/9780596522315.do",
   "description" : "Performance is critical to the success of any web site, and yet today's web applications push browsers to their limits with increasing amounts of rich content and heavy use of Ajax. In this book, Steve Souders, web performance evangelist at Google and former Chief Performance Yahoo!, provides valuable techniques to help you optimize your site's performance.",
   "img" : {
-    "src" : "even-faster-web-sites.jpg",
+    "src" : {
+      "filename" : "even-faster-web-sites",
+      "types" : [ "jpg", "webp" ]
+    },
     "width" : 200,
     "height" : 262
   },

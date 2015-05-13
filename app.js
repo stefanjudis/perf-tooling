@@ -1,15 +1,14 @@
-var express     = require( 'express' );
-var compression = require( 'compression' );
-var md5         = require( 'MD5' );
-var app         = express();
-var fs          = require( 'fs' );
-var fuzzify     = require( './lib/fuzzify' );
-var _           = require( 'lodash' );
-var minify      = require( 'html-minifier' ).minify;
-var request     = require( 'request' );
-var config      = require( './config/config' );
-var async       = require( 'async' );
-
+var express      = require( 'express' );
+var compression  = require( 'compression' );
+var app          = express();
+var fs           = require( 'fs' );
+var fuzzify      = require( './lib/fuzzify' );
+var _            = require( 'lodash' );
+var minify       = require( 'html-minifier' ).minify;
+var config       = require( './config/config' );
+var async        = require( 'async' );
+var cookieParser = require( 'cookie-parser' );
+var revisions    = require( './rev.json' );
 
 /**
  * Helpers to deal with API stuff
@@ -22,7 +21,7 @@ var helpers = {
   twitter     : ( require( './lib/helper/twitter' ) ).init(),
   vimeo       : ( require( './lib/helper/vimeo' ) ).init(),
   youtube     : ( require( './lib/helper/youtube' ) ).init()
-}
+};
 
 var port         = process.env.PORT || 3000;
 var data         = {
@@ -52,12 +51,14 @@ var pages = {
  * Reduce I/O and read files only on start
  */
 var pageContent = {
-  css       : fs.readFileSync( 'css/index.css', 'utf8' ),
-  loadCss   : fs.readFileSync( 'js/helper/load-css.js', 'utf8' ),
-  hashes    : {
-    css  : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
-    js   : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) ),
-    svg  : md5( fs.readFileSync( './public/icons.svg', 'utf8' ) )
+  criticalCss : fs.readFileSync( 'css/index.css', 'utf8' ),
+  css         : fs.readFileSync( './public/main-' + revisions.styles + '.css', 'utf8' ),
+  enhance     : fs.readFileSync( './public/enhance.js', 'utf8' ),
+  loadCss     : fs.readFileSync( 'js/helper/load-css.js', 'utf8' ),
+  hashes      : {
+    css       : revisions.styles,
+    js        : revisions.scripts,
+    svg       : revisions.svg
   },
   templates : {
     index : fs.readFileSync( config.templates.index ),
@@ -353,8 +354,9 @@ function renderPage( type, options ) {
   var template = ( type === 'index' ) ? 'index' : 'list';
   var list     = data[ type ] || null;
 
-  var query    = options.query;
-  var debug    = options.debug;
+  var query     = options.query;
+  var debug     = options.debug;
+  var cssCookie = options.cssCookie;
 
   if ( query ) {
     var queryValues  = query.split( ' ' );
@@ -397,7 +399,10 @@ function renderPage( type, options ) {
     _.template(
       pageContent.templates[ template ],
       {
+        criticalCss      : pageContent.criticalCss,
         css              : pageContent.css,
+        cssCookie        : cssCookie,
+        enhance          : pageContent.enhance,
         cdn              : config.cdn,
         contributors     : data.contributors,
         debug            : !! debug,
@@ -474,7 +479,7 @@ setInterval( function() {
 }, config.timings.refresh );
 
 app.use( compression() );
-
+app.use( cookieParser() );
 
 /**
  * Render index page
@@ -500,7 +505,18 @@ config.listPages.forEach( function( page ) {
         )
       );
     } else {
-      res.send( pages[ page ] );
+      if ( req.cookies.maincss ) {
+        res.send(
+          renderPage(
+            page,
+            {
+              cssCookie : req.cookies.maincss
+            }
+          )
+        );
+      } else {
+        res.send( pages[ page ] );
+      }
     }
   } );
 } );
@@ -508,9 +524,21 @@ config.listPages.forEach( function( page ) {
 pages.index = renderPage( 'index' );
 
 app.get( '/', function( req, res ) {
-  res.send( pages.index );
+  if ( req.cookies.maincss ) {
+    res.send(
+      renderPage(
+        'index',
+        {
+          cssCookie : req.cookies.maincss
+        }
+      )
+    );
+  } else {
+    res.send( pages.index );
+  }
 } );
 
 app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
 
+console.log( 'STARTING AT PORT ' + port );
 app.listen( port );

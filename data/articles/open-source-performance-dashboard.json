@@ -1,0 +1,15 @@
+{
+  "name" : "Open Source Web Performance Dashboard",
+  "authors" : [
+    {
+      "name" : "Peter Hedenskog",
+      "twitter" : "@soulislove"
+    }
+  ],
+  "date" : "2015-04-30",
+  "stats" : {
+    "length" : 977
+  },
+  "url" : "http://www.peterhedenskog.com/blog/2015/04/open-source-performance-dashboard/",
+  "tags" : [ "open source", "dashboard", "monitoring" ]
+}
