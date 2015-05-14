@@ -1,5 +1,6 @@
 {
   "name" : "Uglify2",
+  "broccoli" : "https://github.com/joliss/broccoli-uglify-js",
   "cli" : "https://github.com/mishoo/UglifyJS2",
   "grunt" : "https://github.com/gruntjs/grunt-contrib-uglify",
   "gulp" : "https://github.com/terinjokes/gulp-uglify",

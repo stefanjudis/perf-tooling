@@ -22,22 +22,33 @@ var minifyCSS     = require( 'gulp-minify-css' );
 var uglify        = require( 'gulp-uglify' );
 var tasks         = require( 'gulp-task-listing' );
 var svgstore      = require( 'gulp-svgstore' );
+var mergeStream   = require( 'merge-stream' );
 var cmq           = require( 'gulp-combine-media-queries' );
-
+var rev           = require( 'gulp-rev' );
+var jsoneditor    = require( 'gulp-json-editor' );
+var gulpif        = require( 'gulp-if' );
+var webp          = require( 'gulp-webp' );
 
 var files = {
   data    : [ 'data/**/*.json' ],
   img     : [ 'img/**/*' ],
   lint    : [ 'app.js', 'gulpfile.js', 'js/**/*.js', 'lib/**/*.js' ],
-  scripts : [
-    'js/shims/**/*.js',
-    'js/helper/**/*.js',
-    'js/featureDetects/**/*.js',
-    'js/components/**/*.js',
-    'js/tooling.js'
-  ],
+  scripts : {
+    tooling: [
+      'js/shims/**/*.js',
+      'js/helper/**/*.js',
+      'js/featureDetects/**/*.js',
+      'js/components/**/*.js',
+      'js/tooling.js'
+    ],
+    enhance: [
+      'js/enhance.js'
+    ]
+  },
+  sitemap : [ './sitemap.xml' ],
   styles  : [ 'less/main.less' ],
   svg     : [ 'svg/icons/*.svg' ],
+  rev     : [ './rev.json' ],
   watch   : {
     styles : [ 'less/**/*.less' ]
   },
@@ -72,6 +83,8 @@ gulp.task( 'lint', function() {
  * - we will minify the css files
  * - we will run them through autoprefixer
  * - and save it to public
+ * - hash the files
+ * - and save the hash in the rev json file
  */
 gulp.task( 'styles', function () {
   return gulp.src( files.styles )
@@ -83,9 +96,18 @@ gulp.task( 'styles', function () {
       log: true
     } ) )
     .pipe( minifyCSS() )
-    .pipe( gulp.dest( 'public/' ) );
+    .pipe( rev() )
+    .pipe( gulp.dest( 'public/' ) )
+    .pipe( gutil.buffer( function ( err, dataFiles ) {
+      return gulp.src( files.rev )
+        .pipe( jsoneditor( {
+          'styles': dataFiles.map( function ( dataFile ) {
+            return dataFile.revHash;
+          } ).join( '' )
+        } ) )
+        .pipe( gulp.dest( './' ) );
+    } ) );
 });
-
 
 /*******************************************************************************
  * CSSLINT TASK
@@ -102,7 +124,6 @@ gulp.task( 'csslint', function () {
     .pipe( csslint.failReporter() );
 });
 
-
 /*******************************************************************************
  * SCRIPT TASKS
  *
@@ -111,10 +132,28 @@ gulp.task( 'csslint', function () {
  * - and save it to public
  */
 gulp.task( 'scripts', function() {
-  return gulp.src( files.scripts )
-    .pipe( concat( 'tooling.js' ) )
-    .pipe( uglify() )
-    .pipe( gulp.dest( 'public' ) );
+  var keys   = Object.keys( files.scripts );
+
+  var streams = keys.map( function( element ) {
+    var condition = element === 'tooling';
+
+    return gulp.src( files.scripts[element] )
+      .pipe( concat( element + '.js' ) )
+      .pipe( uglify() )
+      .pipe( gulpif(condition, rev() ) )
+      .pipe( gulp.dest( 'public/' ) )
+      .pipe( gulpif( condition, gutil.buffer( function ( err, dataFiles ) {
+        return gulp.src( files.rev )
+          .pipe( jsoneditor( {
+            scripts : dataFiles.map( function ( dataFile ) {
+              return dataFile.revHash;
+            } ).join( '' )
+          } ) )
+          .pipe( gulp.dest( './' ) );
+      } ) ) );
+  } );
+
+  return mergeStream.apply( null, streams );
 });
 
 
@@ -127,12 +166,22 @@ gulp.task( 'scripts', function() {
  */
 gulp.task( 'svg', function () {
   return gulp.src( files.svg )
-             .pipe( svgstore( {
-                fileName  : 'icons.svg',
-                prefix    : 'icon-',
-                inlineSvg : true
-              } ) )
-             .pipe( gulp.dest( 'public/' ) );
+    .pipe( svgstore( {
+      fileName  : 'icons.svg',
+      prefix    : 'icon-',
+      inlineSvg : true
+    } ) )
+    .pipe( rev() )
+    .pipe( gulp.dest( 'public/' ) )
+    .pipe( gutil.buffer( function ( err, dataFiles ) {
+      return gulp.src( files.rev )
+      .pipe( jsoneditor( {
+        'svg': dataFiles.map( function ( dataFile ) {
+          return dataFile.revHash;
+        } ).join( '' )
+      } ) )
+      .pipe( gulp.dest( './' ) );
+    } ) );
 });
 
 
@@ -147,6 +196,8 @@ gulp.task( 'images', function () {
                   progressive: true,
                   use: [ pngquant() ]
               } ) )
+              .pipe( gulp.dest( 'public/' ) )
+              .pipe( webp() )
               .pipe( gulp.dest( 'public/' ) );
 });
 
@@ -189,7 +240,7 @@ gulp.task( 'jsonlint', function () {
 gulp.task( 'watch', function() {
   gulp.watch( files.lint, [ 'lint' ] );
   gulp.watch( files.watch.styles, [ 'styles' ] );
-  gulp.watch( files.scripts, [ 'scripts' ] );
+  gulp.watch( files.scripts.tooling, [ 'scripts' ] );
   gulp.watch( files.svg, [ 'svg' ] );
 });
 

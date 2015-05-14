@@ -1,0 +1,15 @@
+{
+  "name" : "Fixing the 'Blank Text' Problem",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "date" : "2015-04-10",
+  "stats" : {
+    "length" : 662
+  },
+  "url" : "https://www.igvita.com/2015/04/10/fixing-the-blank-text-problem/",
+  "tags" : [ "fonts", "loading" ]
+}

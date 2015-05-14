@@ -13,7 +13,10 @@
   "url" : "http://www.abookapart.com/products/responsible-responsive-design",
   "description" : "Responsive design has immeasurably improved multi-device, multi-browser visual layout—but it’s only the first step in building responsively. Learn how to turn a critical eye on your designs as you develop for new contexts (what does mobile really mean?) and screen features, speedy and lagging networks, and truly global audiences. Serve the right content across platforms, and tune for performance. Scott Jehl tackles those topics and more, ensuring that the sites and apps you build today last far into the future.",
   "img" : {
-    "src" : "responsible-responsive-design.jpg",
+    "src" : {
+      "filename" : "responsible-responsive-design",
+      "types" : [ "jpg", "webp" ]
+    },
     "width" : 200,
     "height" : 308
   },

@@ -13,7 +13,10 @@
   "url" : "http://www.amazon.com/Responsive-Fast-Implementing-High-Performance-Design/dp/1491911611",
   "description" : "Is Responsive Web Design (RWD) slowing your site down? It doesn’t have to. With this concise book, you’ll learn practical techniques for improving performance with RWD, including a default set of guidelines you can use as an easy starting point. Web performance researcher and evangelist Guy Podjarny walks you through several existing solutions for dealing with RWD performance problems, and offers advice for choosing optimizations that will be most useful for your needs.",
   "img" : {
-    "src" : "responsive-fast.jpg",
+    "src" : {
+      "filename" : "responsive-fast",
+      "types" : [ "jpg", "webp" ]
+    },
     "width" : 200,
     "height" : 300
   },
