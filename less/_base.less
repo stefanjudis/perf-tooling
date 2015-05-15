@@ -15,8 +15,8 @@
 
 -moz-::selection,
 ::selection {
-  background: @color;
-  color: @color-bg;
+  background: @base__color;
+  color: @base__bgcolor;
   text-shadow: none;
 }
 
@@ -31,10 +31,10 @@ html {
 }
 
 body {
-  background: @color-bg;
-  color: @color;
+  background: @base__bgcolor;
+  color: @base__color;
   display: table;
-  font: @font-weight ~"@{font-size}/@{line-height}" @font-family, @font-family-fallback;
+  font: @base__font-weight ~"@{base__font-size}/@{base__line-height}" @base__font-family, @base__font-family-fallback;
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
@@ -61,35 +61,35 @@ summary {
 a {
   background-color: transparent;
   border: 0;
-  color: @color-link;
-  outline-color: @color-primary;
+  color: @link__color;
+  outline-color: @primary__color;
   text-decoration: none;
   transition: background-color .3s, color .3s;
 
   &:active {
-    color: @color-link-active;
+    color: @link__color--active;
   }
 
   &:hover {
-    color: @color-link-hover;
+    color: @link__color--hover;
   }
 
 }
 
 button {
-  background: @color-btn-bg;
+  background: @btn__bgcolor;
   border: 0;
-  color: @color-btn;
+  color: @btn__color;
   cursor: pointer;
   margin: 0;
-  outline-color: @color-primary;
+  outline-color: @primary__color;
   overflow: visible;
   padding: 0;
   text-transform: none;
   transition: background-color .3s, color .3s;
 
   &:hover {
-    background: @color-btn-bg-hover;
+    background: @btn__bgcolor--hover;
   }
 
 }
@@ -100,14 +100,14 @@ button::-moz-focus-inner {
 }
 
 code {
-  font-family: @font-family-code, @font-family-code-fallback;
+  font-family: @code__font-family, @code__font-family-fallback;
   font-size: .875rem;
   white-space: pre;
   word-wrap: normal;
 }
 
 pre {
-  background-color: @color-code-bg;
+  background-color: @code__bgcolor;
   display: block;
   margin: 0 0 1.5rem;
   overflow: auto;
@@ -141,27 +141,26 @@ header {
   margin: 0;
 }
 
-
 h1 {
-  font-size: @h1-font-size-small;
+  font-size: @h1__font-size-small;
   font-weight: bold;
 
-  @media (min-width: @media-small) {
-    font-size: @h1-font-size;
+  @media (min-width: @media--small) {
+    font-size: @h1__font-size;
   }
 
 }
 
 h2 {
-  font-size: @h2-font-size;
+  font-size: @h2__font-size;
 }
 
 h3 {
-  font-size: @h3-font-size;
+  font-size: @h3__font-size;
 }
 
 h4 {
-  font-size: @h4-font-size;
+  font-size: @h4__font-size;
 }
 
 img {
@@ -177,9 +176,9 @@ textarea {
   background-image: none;
   border: 0;
   color: inherit;
-  font: @font-weight ~"@{font-size}/@{line-height}" @font-family, @font-family-fallback;
+  font: @base__font-weight ~"@{base__font-size}/@{base__line-height}" @base__font-family, @base__font-family-fallback;
   margin: 0;
-  outline-color: @color-primary;
+  outline-color: @primary__color;
   padding: 0;
   transition: all .3s;
 }
@@ -188,12 +187,12 @@ input {
 
   &[type="submit"] {
     -webkit-appearance: button;
-    background: @color-btn-bg;
-    color: @color-btn;
+    background: @btn__bgcolor;
+    color: @btn__color;
     cursor: pointer;
 
     &:hover {
-      background: @color-btn-bg-hover;
+      background: @btn__bgcolor--hover;
     }
 
   }
@@ -210,7 +209,7 @@ label {
 }
 
 ::placeholder {
-  color: @color-placeholder;
+  color: @placeholder__color;
 }
 
 p {

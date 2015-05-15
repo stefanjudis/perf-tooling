@@ -29,11 +29,11 @@
         )
       %>
 
-      <main class="main">
+      <main class="site__main">
 
-        <div class="container">
+        <div class="grid__container">
 
-          <section class="section section-intro">
+          <section class="site__section site__section--intro">
 
             <img src="<%= cdn %>/perf-tooling.svg" alt="perf-tooling logo" width="546" height="370" class="center-block">
 
@@ -42,7 +42,7 @@
               <h1>perf-tooling.today</h1>
               <h2 class="subline">Start performance tooling today</h2>
 
-              <a class="btn btn-scroll js-scroll" href="#features" title="Scroll to features">
+              <a class="btn btn--scroll js-scroll" href="#features" title="Scroll to features">
                 <span class="visuallyhidden">Scroll to features</span><svg>
                   <use xlink:href="/icons-<%= hash.svg %>.svg#icon-arrow" />
                 </svg>
@@ -52,7 +52,7 @@
 
           </section>
 
-          <section class="section">
+          <section class="site__section">
 
             <div class="text-center">
 
@@ -63,11 +63,11 @@
 
           </section>
 
-          <section id="features" class="section">
+          <section id="features" class="site__section">
 
-            <div class="row">
+            <div class="grid__row">
 
-              <div class="col-6">
+              <div class="grid__col grid__col--6">
 
                 <article class="article">
 
@@ -75,13 +75,13 @@
 
                   <p>A rich collection of tools available to optimize and/or monitor your website's performance including bookmarklets, browser extensions, command line tools, node modules and grunt/gulp tasks.</p>
 
-                  <a href="/tools" title="Link to tools" class="btn btn-large btn-primary">Explore Tools</a>
+                  <a href="/tools" title="Link to tools" class="btn btn--large btn--primary">Explore Tools</a>
 
                 </article>
 
               </div>
 
-              <div class="col-6">
+              <div class="grid__col grid__col--6">
 
                 <article class="article">
 
@@ -89,7 +89,7 @@
 
                   <p>An exclusive list of articles about best practices to build fast websites which will make your visitors happy.</p>
 
-                  <a href="/articles" title="Link to articles" class="btn btn-large btn-primary">Explore Articles</a>
+                  <a href="/articles" title="Link to articles" class="btn btn--large btn--primary">Explore Articles</a>
 
                 </article>
 
@@ -97,9 +97,9 @@
 
             </div>
 
-            <div class="row">
+            <div class="grid__row">
 
-              <div class="col-6">
+              <div class="grid__col grid__col--6">
 
                 <article class="article">
 
@@ -107,13 +107,13 @@
 
                   <p>A collection of recent videos including performance-specific tips and tricks to build better and faster websites.</p>
 
-                  <a href="/videos" title="Link to videos" class="btn btn-large btn-primary">Explore Videos</a>
+                  <a href="/videos" title="Link to videos" class="btn btn--large btn--primary">Explore Videos</a>
 
                 </article>
 
               </div>
 
-              <div class="col-6">
+              <div class="grid__col grid__col--6">
 
                 <article class="article">
 
@@ -121,7 +121,7 @@
 
                   <p>A library of slides from great talks covering performance-related topics.</p>
 
-                  <a href="/slides" title="Link to slides" class="btn btn-large btn-primary">Explore Slidedecks</a>
+                  <a href="/slides" title="Link to slides" class="btn btn--large btn--primary">Explore Slidedecks</a>
 
                 </article>
 
@@ -129,9 +129,9 @@
 
             </div>
 
-            <div class="row">
+            <div class="grid__row">
 
-              <div class="col-6">
+              <div class="grid__col grid__col--6">
 
                 <article class="article">
 
@@ -139,7 +139,7 @@
 
                   <p>Our books section features recommended books from some of the most influential authors in the field.</p>
 
-                  <a href="/books" title="Link to tools" class="btn btn-large btn-primary">Explore Books</a>
+                  <a href="/books" title="Link to tools" class="btn btn--large btn--primary">Explore Books</a>
 
                 </article>
 
@@ -149,7 +149,7 @@
 
           </section>
 
-          <section class="section">
+          <section class="site__section">
 
             <article class="article">
 
@@ -165,14 +165,14 @@
 
             <div class="text-center">
 
-              <a href="https://github.com/stefanjudis/perf-tooling/issues" class="btn btn-primary" title="Link to repo issues" target="_blank">Submit a resource</a>
-              <a href="https://github.com/stefanjudis/perf-tooling/blob/master/CONTRIBUTING.md" class="btn btn-primary" title="Link to contribute readme" target="_blank">Contribute to project</a>
+              <a href="https://github.com/stefanjudis/perf-tooling/issues" class="btn btn--primary" title="Link to repo issues" target="_blank">Submit a resource</a>
+              <a href="https://github.com/stefanjudis/perf-tooling/blob/master/CONTRIBUTING.md" class="btn btn--primary" title="Link to contribute readme" target="_blank">Contribute to project</a>
 
             </div>
 
           </section>
 
-          <section class="section buildBy text-center">
+          <section class="site__section buildBy text-center">
 
             <h3>Built by Stefan Judis<br>& Marco Biedermann</h3>
 
@@ -256,11 +256,11 @@
 
           </section>
 
-          <section class="section text-center">
+          <section class="site__section text-center">
 
             <article class="article">
 
-              <p><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fperf-tooling.today&text=@perf_tooling%20A%20resource%20collection%20to%20improve%20your%20workflow%20and%20to%20deliver%20better%20and%20faster%20websites%20%23perfmatters" target="_blank" class="btn btn-primary btn-large">Spread on Twitter</a></p>
+              <p><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fperf-tooling.today&text=@perf_tooling%20A%20resource%20collection%20to%20improve%20your%20workflow%20and%20to%20deliver%20better%20and%20faster%20websites%20%23perfmatters" target="_blank" class="btn btn--primary btn--large">Spread on Twitter</a></p>
               <p class="social-twitter"><a href="https://twitter.com/perf_tooling" title="perf-tooling on Twitter" target="_blank">Follow <strong>@perf_tooling</strong> on Twitter</a></p>
 
             </article>
@@ -278,7 +278,7 @@
                 <div id="mc_embed_signup_scroll" class="form-field">
 
                   <label for="mce-EMAIL">Subscribe to our mailing list to get informed about our newest content.</label>
-                  <div class="col-6 center-block">
+                  <div class="grid__col--6 center-block">
 
                     <input type="email" value="" name="EMAIL" class="email input-text" id="mce-EMAIL" placeholder="Enter your email" required>
 
@@ -292,9 +292,9 @@
 
                 </div>
 
-                <div class="form-field">
+                <div class="form__field">
 
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-large btn-primary">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn--large btn--primary">
 
                 </div>
 
@@ -304,7 +304,7 @@
 
           </section>
 
-          <section class="section text-center">
+          <section class="site__section text-center">
 
             <h4 class="subline">Sponsored by</h4>
             <p><a href="https://www.fastly.com/" title="Link to Fastly CDN" target="_blank"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly" width="160" height="72" class="center-block"></a></p>

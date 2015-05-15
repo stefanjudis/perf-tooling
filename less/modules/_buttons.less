@@ -4,24 +4,24 @@
   margin: .25rem;
   padding: .5rem 1rem;
 
-  &-large {
+  &--large {
     padding: .75rem 1.5rem;
   }
 
-  &-primary {
-    background-color: @color-btn-primary-bg;
-    color: @color-btn-primary;
+  &--primary {
+    background-color: @btn--primary__bgcolor;
+    color: @btn--primary__color;
 
     &:hover {
-      background-color: @color-btn-primary-bg-hover;
-      color: @color-btn-primary-hover;
+      background-color: @btn--primary__bgcolor--hover;
+      color: @btn--primary__color--hover;
     }
 
   }
 
-  &-nav {
+  &--nav {
     background-color: transparent;
-    border: 1px solid @color-border;
+    border: 1px solid @border__color;
     border-radius: 3px;
     float: right;
     height: 32px;
@@ -29,23 +29,23 @@
     width: 48px;
 
     &:hover {
-      background-color: @color-border;
+      background-color: @border__color;
     }
 
     svg {
-      fill: @color;
+      fill: @base__color;
       height: 1rem;
       width: 1rem;
     }
 
-    @media (min-width: @media-tiny) {
+    @media (min-width: @media--tiny) {
       display: none;
     }
 
   }
 
-  &-scroll {
-    background: @color-bg-scroll-link;
+  &--scroll {
+    background: @scroll-link__bgcolor;
     border-radius: 50%;
     height: 8rem;
     margin: 4rem;
@@ -61,11 +61,11 @@
     }
 
     &:hover {
-      background: @color-bg-scroll-link-hover;
+      background: @scroll-link__bgcolor--hover;
     }
 
     &:active {
-      background: @color-bg-scroll-link-active;
+      background: @scroll-link__bgcolor--active;
     }
 
   }

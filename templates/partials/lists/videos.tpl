@@ -3,13 +3,13 @@
 
   <% _.each( list , function( video ) { %>
 
-    <li id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post--video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% var twitterHandle = ( video.social && video.social.twitter ) ? video.social.twitter.replace( '@', '' ) : false; %>
 
       <% if ( video.thumbnail ) { %>
 
-        <figure class="media-obj-left">
+        <figure class="media__obj--left">
 
           <a href="<%= video.url %>" title="Link to video" target="_blank"><img src="<%= video.thumbnail.url %>" width="<%= video.thumbnail.width %>" height="<%= video.thumbnail.height %>"></a>
 
@@ -17,9 +17,9 @@
 
       <% } %>
 
-      <div class="media-body">
+      <div class="media__body">
 
-        <h3 class="post-title"><a href="<%= video.url %>" title="Link to video" target="_blank"><%= video.title || video.name %></a></h3>
+        <h3 class="post__title"><a href="<%= video.url %>" title="Link to video" target="_blank"><%= video.title || video.name %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
@@ -42,7 +42,7 @@
 
         <% if ( video.stats ) { %>
 
-          <ul class="post-stats">
+          <ul class="post__stats">
             <% if ( video.stats.viewCount ) { %>
 
               <li>

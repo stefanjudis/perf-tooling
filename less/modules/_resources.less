@@ -3,7 +3,7 @@
   margin: -.25rem auto .25rem;
   padding: 0;
 
-  @media (min-width: @media-small) {
+  @media (min-width: @media--small) {
     max-width: 75%;
   }
 
@@ -15,7 +15,7 @@
     text-align: left;
     width: 100% / 2;
 
-    @media (min-width: @media-small) {
+    @media (min-width: @media--small) {
       min-width: initial;
       width: auto;
     }
@@ -24,12 +24,12 @@
 
   a {
     border-radius: 2rem;
-    color: @color-bg;
+    color: @base__bgcolor;
     display: block;
     margin-bottom: .5rem;
     padding: .5rem 1rem;
 
-    @media (min-width: @media-small) {
+    @media (min-width: @media--small) {
       border-radius: 50%;
       height: 3rem;
       padding: .5rem;
@@ -39,15 +39,15 @@
   }
 
   span {
-    color: @color-bg;
+    color: @base__bgcolor;
     display: block;
     position: absolute;
     right: 1rem;
     text-align: center;
     top: .75rem;
 
-    @media (min-width: @media-small) {
-      color: @color;
+    @media (min-width: @media--small) {
+      color: @base__color;
       left: 0;
       padding-top: 1.5rem;
       position: relative;
@@ -58,7 +58,7 @@
       content: '☆';
       margin-left: .25rem;
 
-      @media (min-width: @media-small) {
+      @media (min-width: @media--small) {
         left: 0;
         margin: 0;
         position: absolute;
@@ -73,7 +73,7 @@
   svg {
     display: none;
 
-    @media (min-width: @media-small) {
+    @media (min-width: @media--small) {
       display: inline-block;
       fill: #fff;
       height: 2rem;
@@ -89,10 +89,10 @@
   .-(@i: length(@resources)) when (@i > 0) {
 
     @resource-name: e(extract(@resources, @i));
-    @resource: ~'color-@{resource-name}';
-    @resource-hover: ~'color-@{resource-name}-hover';
+    @resource: ~'resource--@{resource-name}__bgcolor';
+    @resource-hover: ~'resource--@{resource-name}__bgcolor--hover';
 
-    &-@{resource-name} {
+    &--@{resource-name} {
       background: @@resource;
 
       &:hover {

@@ -1,4 +1,4 @@
-@media (min-width: @media-small) {
+@media (min-width: @media--small) {
 
   .tooltip {
     position: relative;
@@ -14,9 +14,9 @@
     &:before {
       background: none;
       border-bottom: 5px solid transparent;
-      border-left: 5px solid @color;
+      border-left: 5px solid @base__color;
       border-right: 5px solid transparent;
-      border-top: 5px solid @color;
+      border-top: 5px solid @base__color;
       bottom: 120%;
       content: '';
       left: 50%;
@@ -26,10 +26,10 @@
     }
 
     &:after {
-      background: @color;
+      background: @base__color;
       border-radius: .75rem .75rem .75rem 0;
       bottom: 120%;
-      color: @color-bg;
+      color: @base__bgcolor;
       content: attr(title);
       left: 50%;
       padding: 5px 15px;

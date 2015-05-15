@@ -1,5 +1,5 @@
 <%=
-  '<div class="post-author-imgs">' + _.map( authors, function( author ) {
+  '<div class="post__author-imgs">' + _.map( authors, function( author ) {
 
     var twitterHandle = ( author.twitter ) ? author.twitter.replace( '@', '' ) : false;
 

@@ -2,43 +2,43 @@
   .clearfix;
   position: relative;
 
-  &-obj {
+  &__obj {
 
-    &-left,
-    &-right {
+    &--left,
+    &--right {
       margin-bottom: 1rem;
 
-      @media (min-width: @media-small) {
+      @media (min-width: @media--small) {
         max-width: 38%;
       }
 
     }
 
-    &-left {
+    &--left {
 
-      @media (min-width: @media-small) {
+      @media (min-width: @media--small) {
         margin: 0 1rem 0;
         float: left;
       }
 
     }
 
-    &-right {
+    &--right {
 
-      @media (min-width: @media-small) {
+      @media (min-width: @media--small) {
         margin: 0 0 0 1rem;
         float: right;
       }
 
     }
 
-    &-above {
+    &--above {
       margin-bottom: 1rem;
     }
 
   }
 
-  &-body {
+  &__body {
     overflow: hidden;
   }
 

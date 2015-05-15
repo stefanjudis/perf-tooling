@@ -1,21 +1,21 @@
-.footer {
+.site__footer {
   display: table-row;
   height: 1px;
 
-  .container {
+  .grid__container {
     padding: 1rem 0;
   }
 
   &--heart {
     display: inline-block;
-    fill: @color-primary;
+    fill: @primary__color;
     height: 2rem;
     margin-bottom: -.75rem;
     transition: fill .3s, transform .3s;
     width: 2rem;
 
     &:hover {
-      fill: @color-secondary;
+      fill: @secondary__color;
       transform: scale(1.1);
     }
 
@@ -27,7 +27,7 @@
 .copyright {
   text-align: center;
 
-  @media (min-width: @media-small) {
+  @media (min-width: @media--small) {
     margin: 0;
   }
 
@@ -35,7 +35,7 @@
 
 .crafted {
 
-  @media (min-width: @media-small) {
+  @media (min-width: @media--small) {
     float: left;
   }
 
@@ -43,7 +43,7 @@
 
 .copyright {
 
-  @media (min-width: @media-small) {
+  @media (min-width: @media--small) {
     float: right;
     padding-top: .2em;
   }
