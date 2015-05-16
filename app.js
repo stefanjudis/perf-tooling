@@ -323,7 +323,7 @@ function getList( type ) {
 
         entry.fuzzy = fuzzify(
           entry,
-          config.platforms
+          config.platforms.name
         ).replace( /http(s)?:\/\//, '' ).toLowerCase();
         entry.hidden = false;
 
