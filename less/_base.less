@@ -62,7 +62,7 @@ a {
   background-color: transparent;
   border: 0;
   color: @link__color;
-  outline-color: @primary__color;
+  outline: 0;
   text-decoration: none;
   transition: background-color .3s, color .3s;
 
@@ -70,6 +70,7 @@ a {
     color: @link__color--active;
   }
 
+  &:focus,
   &:hover {
     color: @link__color--hover;
   }
@@ -88,6 +89,7 @@ button {
   text-transform: none;
   transition: background-color .3s, color .3s;
 
+  &:focus,
   &:hover {
     background: @btn__bgcolor--hover;
   }
@@ -191,6 +193,7 @@ input {
     color: @btn__color;
     cursor: pointer;
 
+    &:focus,
     &:hover {
       background: @btn__bgcolor--hover;
     }
