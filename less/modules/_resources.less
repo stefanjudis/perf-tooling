@@ -75,23 +75,26 @@
 
 }
 
-.resource {
+.resource(@iterator:1) when(@iterator <= length(@resources)) {
+  @name: extract(extract(@resources, @iterator), 1);
+  @color: extract(extract(@resources, @iterator), 2);
 
-  .-(@i: length(@resources)) when (@i > 0) {
+  .resource--@{name} {
 
-    @resource-name: e(extract(@resources, @i));
-    @resource: ~'resource--@{resource-name}__bgcolor';
-    @resource-hover: ~'resource--@{resource-name}__bgcolor--hover';
+    a {
+      background: @color;
 
-    &--@{resource-name} {
-      background: @@resource;
-
+      &:focus,
       &:hover {
-        background: @@resource-hover;
+        background: lighten(@color, 10%);
       }
 
-    } .-((@i - 1));
+    }
 
-  } .-;
+  }
+
+  .resource((@iterator + 1));
 
 }
+
+.resource();
