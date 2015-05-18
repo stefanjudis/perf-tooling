@@ -1,3 +1,30 @@
-.svgIcons {
-  display: none;
+.icon {
+  display: inline-block;
+  fill: #fff;
+  height: 1em * @base__line-height;
+  transition: fill .3s, transform .3s;
+  vertical-align: middle;
+  width: 1em * @base__line-height;
+
+  &--black {
+    fill: @base__color;
+  }
+
+  &--grey {
+    fill: @border__color;
+  }
+
+  &--red {
+    fill: @secondary__color
+  }
+
 }
+
+.icon(@n, @i: 2) when (@i =< @n) {
+  .icon--@{i}x {
+    font-size: 1rem * @i;
+  }
+  .icon(@n, (@i + 1));
+}
+
+.icon(4);
