@@ -3,7 +3,7 @@
 
   <% _.each( list , function( video ) { %>
 
-    <li id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post--video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% var twitterHandle = ( video.social && video.social.twitter ) ? video.social.twitter.replace( '@', '' ) : false; %>
 
@@ -11,7 +11,7 @@
 
         <figure class="media__obj--left">
 
-          <a href="<%= video.url %>" title="Link to video" target="_blank"><img src="<%= video.thumbnail.url %>" width="<%= video.thumbnail.width %>" height="<%= video.thumbnail.height %>"></a>
+          <a href="<%= video.url %>" title="Link to video" target="_blank"><img src="<%= video.thumbnail.url %>" width="295" height="166"></a>
 
         </figure>
 
@@ -19,7 +19,7 @@
 
       <div class="media__body">
 
-        <h3 class="post__title"><a href="<%= video.url %>" title="Link to video" target="_blank"><%= video.title || video.name %></a></h3>
+        <h3><a href="<%= video.url %>" class="link--text" title="Link to video" target="_blank"><%= video.title || video.name %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
@@ -47,7 +47,7 @@
 
               <li>
                 <span class="visuallyhidden">Views:</span>
-                 <svg>
+                 <svg class="icon icon--grey">
                   <use xlink:href="/icons-<%= hash.svg %>.svg#icon-view" />
                 </svg><%= video.stats.viewCount %>
               </li>
@@ -58,7 +58,7 @@
 
               <li>
                 <span class="visuallyhidden">Likes:</span>
-                <svg>
+                <svg class="icon icon--grey">
                   <use xlink:href="/icons-<%= hash.svg %>.svg#icon-like" />
                 </svg>
                 <%= video.stats.likeCount %>
@@ -69,7 +69,7 @@
             <% if ( video.stats.dislikeCount ) { %>
               <li>
                 <span class="visuallyhidden">Dislikes:</span>
-                <svg>
+                <svg class="icon icon--grey">
                   <use xlink:href="/icons-<%= hash.svg %>.svg#icon-dislike" />
                 </svg>
                 <%= video.stats.dislikeCount %>

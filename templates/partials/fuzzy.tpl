@@ -33,7 +33,7 @@
 
     <label class="form--search__label" for="fuzzzzzzzzzy">
 
-      <svg class="form--search__icon">
+      <svg class="form--search__icon icon icon--grey">
         <use xlink:href="/icons-<%= hash.svg %>.svg#icon-magnifier" />
       </svg>
 

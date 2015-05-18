@@ -3,7 +3,7 @@
 
   <% _.each( list , function( book ) { %>
 
-    <li id="<%= book.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post--book media <%= ( book.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= book.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--book media <%= ( book.hidden === true ) ? 'is-hidden' : '' %>">
 
       <figure class="media__obj--left">
 
@@ -18,7 +18,7 @@
 
       <div class="media__body">
 
-        <h3 class="post__title"><a href="<%= book.url %>" title="Link to video" target="_blank"><%= book.name %></a></h3>
+        <h3><a href="<%= book.url %>" class="link--text" title="Link to video" target="_blank"><%= book.name %></a></h3>
 
         <%=
           partial(

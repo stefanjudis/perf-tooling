@@ -3,7 +3,7 @@
   <div class="grid__container">
 
     <p class="crafted">Handcrafted with <span class="visuallyhidden">love</span>
-    <svg class="site__footer--heart">
+    <svg class="icon icon--red animate--scale--hover">
       <use xlink:href="/icons-<%= hash.svg %>.svg#icon-heart" />
     </svg>
      in Germany</span></p>

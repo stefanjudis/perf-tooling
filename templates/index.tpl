@@ -43,7 +43,8 @@
               <h2 class="subline">Start performance tooling today</h2>
 
               <a class="btn btn--scroll js-scroll" href="#features" title="Scroll to features">
-                <span class="visuallyhidden">Scroll to features</span><svg>
+                <span class="visuallyhidden">Scroll to features</span>
+                <svg class="icon icon--3x icon--black">
                   <use xlink:href="/icons-<%= hash.svg %>.svg#icon-arrow" />
                 </svg>
               </a>
@@ -172,16 +173,16 @@
 
           </section>
 
-          <section class="site__section buildBy text-center">
+          <section class="site__section text-center">
 
             <h3>Built by Stefan Judis<br>& Marco Biedermann</h3>
 
-            <ul class="buildBy-socialList">
+            <ul class="list--inline list--unstyled">
 
               <li>
                 <a href="https://twitter.com/stefanjudis" title="Link to Stefan on Twitter" target="_blank">
                   <span class="visuallyhidden">Stefan on Twitter</span>
-                  <svg>
+                  <svg class="icon icon--2x icon--black animate--scale--hover">
                     <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
                   </svg>
                 </a>
@@ -190,7 +191,7 @@
               <li>
                 <a href="https://github.com/stefanjudis" title="Link to Stefan on GitHub" target="_blank">
                   <span class="visuallyhidden">Stefan on Github</span>
-                  <svg>
+                  <svg class="icon icon--2x icon--black animate--scale--hover">
                     <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
                   </svg>
                 </a>
@@ -199,19 +200,19 @@
               <li>
                 <a href="mailto:stefanjudis@gmail.com" title="Send Stafan an email" target="_blank">
                   <span class="visuallyhidden">Stefan's email address</span>
-                  <svg>
+                  <svg class="icon icon--2x icon--black animate--scale--hover">
                     <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
                   </svg>
                 </a>
               </li>
 
             </ul>
-            <ul class="buildBy-socialList">
+            <ul class="list--inline list--unstyled">
 
               <li>
                 <a href="https://github.com/marcobiedermann" title="Link to Marco on GitHub" target="_blank">
                   <span class="visuallyhidden">Marco on Github</span>
-                  <svg>
+                  <svg class="icon icon--2x icon--black animate--scale--hover">
                     <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
                   </svg>
                 </a>
@@ -220,7 +221,7 @@
               <li>
                 <a href="https://twitter.com/m412c0b" title="Link to Marco on Twitter" target="_blank">
                   <span class="visuallyhidden">Marco on Twitter</span>
-                  <svg>
+                  <svg class="icon icon--2x icon--black animate--scale--hover">
                     <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
                   </svg>
                 </a>
@@ -238,11 +239,11 @@
 
                   <p>...with a little help from our friends</p>
 
-                  <ul class="contributors">
+                  <ul class="contributors list--inline list--unstyled">
 
                     <% _.each( contributors, function( contrib ) { %>
                       <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
-                        <li class="contributor"><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" title="<%= contrib.login %> on GitHub" target="_blank"></a></li>
+                        <li><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" title="<%= contrib.login %> on GitHub" target="_blank"></a></li>
                       <% } %>
                     <% } ) %>
 
@@ -261,7 +262,7 @@
             <article class="article">
 
               <p><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fperf-tooling.today&text=@perf_tooling%20A%20resource%20collection%20to%20improve%20your%20workflow%20and%20to%20deliver%20better%20and%20faster%20websites%20%23perfmatters" target="_blank" class="btn btn--primary btn--large">Spread on Twitter</a></p>
-              <p class="social-twitter"><a href="https://twitter.com/perf_tooling" title="perf-tooling on Twitter" target="_blank">Follow <strong>@perf_tooling</strong> on Twitter</a></p>
+              <p><a href="https://twitter.com/perf_tooling" class="link--text" title="perf-tooling on Twitter" target="_blank">Follow <strong>@perf_tooling</strong> on Twitter</a></p>
 
             </article>
 
