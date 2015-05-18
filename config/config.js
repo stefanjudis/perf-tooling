@@ -29,7 +29,8 @@ module.exports = {
     'nginx',
     'service',
     'wordpress',
-    'illustrator'
+    'illustrator',
+    'googleAppsScript'
   ],
   timings : {
     requestDelay : 250,
