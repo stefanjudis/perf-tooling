@@ -2,43 +2,24 @@
   list-style: none;
   margin: -2rem 0;
   padding: 0;
-
-  > li {
-    overflow: hidden;
-    padding: 2rem 0;
-    position: relative;
-
-    &:not(.is-hidden) {
-
-      ~ li {
-        border-top: 1px solid @border__color;
-      }
-
-    }
-
-  }
-
 }
 
 .post {
+  padding: 2rem 0;
+
+  &:not(.is-hidden) {
+
+    ~ li {
+      border-top: 1px solid @border__color;
+    }
+
+  }
 
   &--tool {
     text-align: center;
   }
 
-  &--slide {
-
-    figure {
-      max-width: 170px;
-    }
-
-  }
-
-  &__content {
-    padding-left: 4rem;
-  }
-
-  &__stats {
+   &__stats {
     color: @border__color;
     list-style: none;
     margin: 1rem -.5rem;
@@ -46,44 +27,16 @@
 
     > li {
       display: inline-block;
-      padding: 0 .5rem;
-    }
-
-    svg {
-      display: inline-block;
-      fill: @border__color;
-      height: 2rem;
-      vertical-align: middle;
-      width: 2rem
+      margin: 0 .5rem;
     }
 
   }
 
-  &__title {
+  &__author {
 
-    a {
-      color: @base__color;
-
-      &:focus,
-      &:hover {
-        color: @link__color--hover;
-      }
-
-    }
-
-  }
-
-  &__author-imgs {
-    border-radius: 50%;
-    left: 0;
-    position: absolute;
-    top: 2rem;
-
-    img {
-      margin-bottom: .5em;
+    &__img {
+      margin-bottom: .5rem;
       border-radius: 50%;
-      clear: left;
-      float: left;
     }
 
   }

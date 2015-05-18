@@ -1,15 +1,13 @@
 .media {
   .clearfix;
-  position: relative;
 
   &__obj {
 
-    &--left,
-    &--right {
+    &--left {
       margin-bottom: 1rem;
 
       @media (min-width: @media--small) {
-        max-width: 38%;
+        max-width: 50%;
       }
 
     }
@@ -21,19 +19,6 @@
         float: left;
       }
 
-    }
-
-    &--right {
-
-      @media (min-width: @media--small) {
-        margin: 0 0 0 1rem;
-        float: right;
-      }
-
-    }
-
-    &--above {
-      margin-bottom: 1rem;
     }
 
   }

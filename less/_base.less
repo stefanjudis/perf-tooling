@@ -5,12 +5,6 @@
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-
-  &:before,
-  &:after {
-    box-sizing: border-box;
-  }
-
 }
 
 ::selection {
@@ -32,28 +26,22 @@ html {
 body {
   background: @base__bgcolor;
   color: @base__color;
-  display: table;
+  display: flex;
   font: @base__font-weight ~"@{base__font-size}/@{base__line-height}" @base__font-family, @base__font-family-fallback;
-  height: 100%;
+  flex-direction: column;
   margin: 0;
+  min-height: 100%;
   scroll-behavior: smooth;
-  width: 100%;
 }
 
 article,
-aside,
-details,
-dialog,
 figure,
 figcaption,
 footer,
 header,
-hgroup,
 main,
-menu,
 nav,
-section,
-summary {
+section {
   display: block;
 }
 
@@ -100,23 +88,21 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-code {
+code,
+pre {
   font-family: @code__font-family, @code__font-family-fallback;
-  font-size: .875rem;
-  white-space: pre;
-  word-wrap: normal;
+  font-size: .75rem;
 }
 
 pre {
-  background-color: @code__bgcolor;
-  display: block;
+  background: @code__bgcolor;
   margin: 0 0 1.5rem;
   overflow: auto;
   padding: 1rem;
-  word-wrap: normal;
 }
 
-figure {
+figure,
+header {
   display: block;
   margin: 0;
 }
@@ -130,16 +116,9 @@ footer {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   line-height: 1.25em;
   margin: 0 0 .5rem;
-}
-
-header {
-  display: block;
-  margin: 0;
 }
 
 h1 {
