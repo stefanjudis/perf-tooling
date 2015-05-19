@@ -355,6 +355,21 @@
 
         <% } %>
 
+        <% if ( tool.googleAppsScript ) { %>
+
+          <li class="tooltip" title="Google Apps Script">
+
+            <a href="<%= tool.googleAppsScript %>" title="Link to Google Apps Script" class="resource-google-apps-script" target="_blank">
+              <svg>
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-google-apps-script" />
+              </svg>
+              Google Apps Script
+            </a>
+
+            <span><%= ( tool.stars && tool.stars.googleAppsScript ) ? tool.stars.googleAppsScript : 'N/A' %></span>
+
+        <% } %>
+
       </ul>
 
       <% if ( tool.tags && tool.tags.length ) { %>
