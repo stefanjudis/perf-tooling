@@ -1,0 +1,24 @@
+{
+  "name" : "HTTP/2: A New Excerpt from High Performance Browser Networking",
+  "date" : "2015-05",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "stats": {
+    "length": 37
+  },
+  "url" : "http://shop.oreilly.com/product/0636920042587.do",
+  "description" : "The new HTTP/2 standard is finally here. Approved earlier this year, HTTP/2 adds a new binary framing layer that will help make applications faster, simpler, and more robust. This chapter from the new release of High Performance Browser Networking provides a brief look at this updated protocol and explains how it will reduce latency, minimize protocol overhead, and add support for request prioritization and server push.",
+  "img" : {
+    "src" : {
+      "filename" : "http2-a-new-excerpt-from-high-performance-browser-networking",
+      "types" : [ "jpg", "webp" ]
+    },
+    "width" : 200,
+    "height" : 300
+  },
+  "tags" : [ "network", "performance" ]
+}
