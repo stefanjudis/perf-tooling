@@ -10,19 +10,26 @@
 
       <ul class="resources">
 
-        <li class="tooltip" title="tool.description">
+        <% _.each( platforms , function( platform ) { %>
 
-          <a href="<%= tool.name %>" title="Link to <%= tool.description %>" class="resource-<%= tool.name %>" target="_blank">
-            <svg>
-              <use xlink:href="/icons-<%= hash.svg %>.svg#icon-<%= tool.name %>" />
-            </svg>
-            <%= tool.description %>
-          </a>
+          <% if ( tool[ platform.name ] ) { %>
 
-          <span><%= ( tool.stars && tool.stars.bookmarklet ) ? tool.stars.bookmarklet : 'N/A' %></span>
+            <li class="tooltip" title="<%= platform.description %>">
 
-        </li>
+              <a href="<%= tool[ platform.name ] %>" title="Link to <%= platform.description %>" class="resource-<%= platform.name %>" target="_blank">
+                <svg>
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-<%= platform.name %>" />
+                </svg>
+                <%= platform.description %>
+              </a>
 
+              <span><%= ( tool.stars && tool.stars[ platform.name ] ) ? tool.stars[ platform.name ] : 'N/A' %></span>
+
+            </li>
+
+          <% } %>
+
+        <% } );%>
       </ul>
 
       <% if ( tool.tags && tool.tags.length ) { %>

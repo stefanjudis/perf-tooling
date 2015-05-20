@@ -321,9 +321,13 @@ function getList( type ) {
           )
         );
 
+        var platformsNames = config.platforms.map( function( platform ) {
+          return platform.name;
+        } );
+
         entry.fuzzy = fuzzify(
           entry,
-          config.platforms.name
+          platformsNames
         ).replace( /http(s)?:\/\//, '' ).toLowerCase();
         entry.hidden = false;
 
