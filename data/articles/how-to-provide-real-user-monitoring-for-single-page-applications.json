@@ -1,0 +1,15 @@
+{
+  "name" : "How to provide real user monitoring for single-page applications",
+  "authors" : [
+    {
+      "name" : "Nic Jansma",
+      "twitter" : "@nicj"
+    }
+  ],
+  "date" : "2015-05-20",
+  "stats" : {
+    "length" : 1233
+  },
+  "url" : "http://www.soasta.com/dev-blog/angularjs-real-user-monitoring-single-page-applications/",
+  "tags" : [ "angular", "metrics", "single page application" ]
+}
