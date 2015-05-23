@@ -1,10 +1,16 @@
 <ul class="posts">
 
-  <% _.each( list , function( tool ) { %>
+  <% _.each( list , function( tool ) {
+
+    function isPaid( toolObject ) {
+        return !! _.findKey( toolObject, 'isPaid', true );
+    }
+
+    %>
 
     <li id="<%= tool.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post-tool <%= ( tool.hidden === true ) ? 'is-hidden' : '' %>">
 
-      <h3><%= tool.name %></h3>
+      <h3><%= tool.name %><% if ( isPaid( tool ) ) { %><small>Paid</small><% } %></h3>
 
       <article class="article"><%= tool.description %></article>
 
