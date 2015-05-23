@@ -1,7 +1,11 @@
 {
   "name" : "speedgun",
-  "module" : "https://github.com/wesleyhales/speedgun/",
-  "service" : "http://speedgun.io/",
+  "module" : {
+    "url" : "https://github.com/wesleyhales/speedgun"
+  },
+  "service" : {
+    "url" : "http://speedgun.io/"
+  },
   "description" : "This site allows you to point Speedgun.js at any public facing website* to gather important web performance data.",
   "tags" : [ "loading", "metrics" ]
 }

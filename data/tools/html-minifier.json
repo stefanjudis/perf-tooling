@@ -1,5 +1,8 @@
 {
   "name" : "HTMLMinifier",
+  "broccoli" : {
+    "url" : "https://github.com/sindresorhus/broccoli-htmlmin"
+  },
   "grunt" : {
     "url" : "https://github.com/gruntjs/grunt-contrib-htmlmin"
   },

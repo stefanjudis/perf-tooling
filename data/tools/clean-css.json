@@ -1,5 +1,8 @@
 {
   "name" : "clean-css",
+  "broccoli" : {
+    "url" : "https://github.com/shinnn/broccoli-clean-css"
+  },
   "cli" : {
     "url" : "https://github.com/jakubpawlowicz/clean-css"
   },

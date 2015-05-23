@@ -6,6 +6,9 @@
   "php" : {
     "url" : "https://github.com/kraken-io/kraken-php"
   },
+  "ruby" : {
+    "url" : "https://github.com/kraken-io/kraken-ruby"
+  },
   "service" : {
     "url" : "https://kraken.io/web-interface",
     "isPaid": true

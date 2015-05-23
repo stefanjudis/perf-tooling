@@ -1,0 +1,8 @@
+{
+  "name" : "Performance Analyser",
+  "service" : {
+    "url" : "https://www.nccgroup.trust/en/our-services/website-performance/website-performance-optimisation/real-browser-performance-analyser/"
+  },
+  "description" : "Highly accurate performance measurements. Site crawls. Identify fastest and slowest pages. A range of reports to help you find and fix performance issues.",
+  "tags" : [ "metrics", "timings", "measure", "analysis" ]
+}

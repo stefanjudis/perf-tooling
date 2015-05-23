@@ -1,26 +1,29 @@
-var express     = require( 'express' );
-var compression = require( 'compression' );
-var md5         = require( 'MD5' );
-var app         = express();
-var fs          = require( 'fs' );
-var fuzzify     = require( './lib/fuzzify' );
-var _           = require( 'lodash' );
-var minify      = require( 'html-minifier' ).minify;
-var request     = require( 'request' );
-var config      = require( './config/config' );
-var async       = require( 'async' );
-
+var express      = require( 'express' );
+var compression  = require( 'compression' );
+var md5          = require( 'MD5' );
+var app          = express();
+var fs           = require( 'fs' );
+var fuzzify      = require( './lib/fuzzify' );
+var _            = require( 'lodash' );
+var minify       = require( 'html-minifier' ).minify;
+var request      = require( 'request' );
+var config       = require( './config/config' );
+var async        = require( 'async' );
+var cookieParser = require( 'cookie-parser' );
+var revisions    = require( './rev.json' );
 
 /**
  * Helpers to deal with API stuff
  * @type {Object}
  */
 var helpers = {
-  github  : ( require( './lib/helper/github' ) ).init(),
-  twitter : ( require( './lib/helper/twitter' ) ).init(),
-  vimeo   : ( require( './lib/helper/vimeo' ) ).init(),
-  youtube : ( require( './lib/helper/youtube' ) ).init()
-}
+  github      : ( require( './lib/helper/github' ) ).init(),
+  slideshare  : ( require( './lib/helper/slideshare' ) ).init(),
+  speakerdeck : ( require( './lib/helper/speakerdeck' ) ).init(),
+  twitter     : ( require( './lib/helper/twitter' ) ).init(),
+  vimeo       : ( require( './lib/helper/vimeo' ) ).init(),
+  youtube     : ( require( './lib/helper/youtube' ) ).init()
+};
 
 var port         = process.env.PORT || 3000;
 var data         = {
@@ -50,12 +53,13 @@ var pages = {
  * Reduce I/O and read files only on start
  */
 var pageContent = {
-  css       : fs.readFileSync( './public/main.css', 'utf8' ),
+  css       : fs.readFileSync( './public/main-' + revisions.styles + '.css', 'utf8' ),
+  enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
   hashes    : {
-    css : md5( fs.readFileSync( './public/main.css', 'utf8' ) ),
-    js  : md5( fs.readFileSync( './public/tooling.js', 'utf8' ) )
+    css     : revisions.styles,
+    js      : revisions.scripts,
+    svg     : revisions.svg
   },
-  svg       : fs.readFileSync( './public/icons.svg', 'utf8' ),
   templates : {
     index : fs.readFileSync( config.templates.index ),
     list  : fs.readFileSync( config.templates.list )
@@ -255,6 +259,48 @@ function fetchVideoMeta() {
 
 
 /**
+ * Fetch slide meta data
+ */
+function fetchSlideMeta() {
+  var queue = [];
+
+  _.each( data.slides, function( slide ) {
+    var match = slide.url.match( /(slideshare|speakerdeck)/g );
+    if ( match ) {
+      queue.push( function( done ) {
+        if ( helpers[ match[ 0 ] ] ) {
+          helpers[ match[ 0 ] ].getMeta( slide.url, function( error, meta ) {
+            if ( error ) {
+              console.warn( 'ERROR -> vimeo.fetchSlideMeta' );
+              console.warn( 'ERROR -> ' + slide.url );
+              console.warn( 'ERROR -> ' + error );
+              return done( null );
+            }
+
+            _.extend( slide, meta );
+
+            pages.slides = renderPage( 'slides' );
+
+            // give it a bit of time
+            // to rest and not reach the API limits
+            setTimeout( function() {
+              done( null );
+            }, config.timings.requestDelay );
+          } )
+        } else {
+          done( null );
+        }
+      } );
+    }
+  } );
+
+  async.waterfall( queue, function() {
+    console.log( 'DONE -> fetchSlideMeta()' );
+  } );
+}
+
+
+/**
  * Read files and get tools
  *
  * @param {String} type type
@@ -297,14 +343,20 @@ function getList( type ) {
 /**
  * Render page
  *
- * @param  {String} type  page type
- * @param  {String} query optional search query
+ * @param  {String} type    page type
+ * @param  {Object} options optional options
  *
  * @return {String}       rendered page
  */
-function renderPage( type, query ) {
+function renderPage( type, options ) {
+  options = options || {};
+
   var template = ( type === 'index' ) ? 'index' : 'list';
   var list     = data[ type ] || null;
+
+  var query     = options.query;
+  var debug     = options.debug;
+  var cssCookie = options.cssCookie;
 
   if ( query ) {
     var queryValues  = query.split( ' ' );
@@ -348,8 +400,11 @@ function renderPage( type, query ) {
       pageContent.templates[ template ],
       {
         css              : pageContent.css,
+        cssCookie        : cssCookie,
+        enhance          : pageContent.enhance,
         cdn              : config.cdn,
         contributors     : data.contributors,
+        debug            : !! debug,
         partial          : partial,
         people           : data.people,
         platforms        : config.platforms,
@@ -361,11 +416,11 @@ function renderPage( type, query ) {
           books    : data.books.length
         },
         site             : config.site,
-        svg              : pageContent.svg,
         list             : list,
         hash             : {
-          css : pageContent.hashes.css,
-          js  : pageContent.hashes.js
+          css  : pageContent.hashes.css,
+          js   : pageContent.hashes.js,
+          svg  : pageContent.hashes.svg
         },
         query            : query,
         type             : type
@@ -402,6 +457,12 @@ fetchVideoMeta();
 
 
 /**
+ * fetch slide meta data
+ */
+fetchSlideMeta();
+
+
+/**
  * fetch twitter user meta data
  */
 fetchTwitterUserMeta();
@@ -416,7 +477,7 @@ setInterval( function() {
 }, config.timings.refresh );
 
 app.use( compression() );
-
+app.use( cookieParser() );
 
 /**
  * Render index page
@@ -425,10 +486,35 @@ config.listPages.forEach( function( page ) {
   pages[ page ] = renderPage( page );
 
   app.get( '/' + page, function( req, res ) {
-    if ( req.query && req.query.q && req.query.q.length ) {
-      res.send( renderPage( page, req.query.q ) );
+    if (
+      req.query &&
+      (
+        ( req.query.q && req.query.q.length ) ||
+        req.query.debug
+      )
+    ) {
+      res.send(
+        renderPage(
+          page,
+          {
+            query : req.query.q,
+            debug : req.query.debug
+          }
+        )
+      );
     } else {
-      res.send( pages[ page ] );
+      if ( req.cookies.maincss ) {
+        res.send(
+          renderPage(
+            page,
+            {
+              cssCookie : req.cookies.maincss
+            }
+          )
+        );
+      } else {
+        res.send( pages[ page ] );
+      }
     }
   } );
 } );
@@ -436,9 +522,21 @@ config.listPages.forEach( function( page ) {
 pages.index = renderPage( 'index' );
 
 app.get( '/', function( req, res ) {
-  res.send( pages.index );
+  if ( req.cookies.maincss ) {
+    res.send(
+      renderPage(
+        'index',
+        {
+          cssCookie : req.cookies.maincss
+        }
+      )
+    );
+  } else {
+    res.send( pages.index );
+  }
 } );
 
 app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
 
+console.log( 'STARTING AT PORT ' + port );
 app.listen( port );

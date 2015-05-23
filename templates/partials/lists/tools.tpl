@@ -16,7 +16,7 @@
 
             <a href="<%= tool.bookmarklet.url %>" title="Link to bookmarklet" class="resource-bookmarklet" target="_blank">
               <svg>
-                <use xlink:href="#icon-bookmarklet" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-bookmarklet" />
               </svg>
               Bookmarklet
             </a>
@@ -31,7 +31,7 @@
 
             <a href="<%= tool.chrome.url %>" title="Link to Chrome extension" class="resource-chrome" target="_blank">
               <svg>
-                <use xlink:href="#icon-chrome" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-chrome" />
               </svg>
               Chrome
             </a>
@@ -46,7 +46,7 @@
 
             <a href="<%= tool.firefox.url %>" title="Link to Firefox extension" class="resource-firefox" target="_blank">
               <svg>
-                <use xlink:href="#icon-firefox" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-firefox" />
               </svg>
               Firefox
             </a>
@@ -61,7 +61,7 @@
 
             <a href="<%= tool.internetExplorer.url %>" title="Link to Internet Explorer Extension" class="resource-internet-explorer" target="_blank">
               <svg>
-                <use xlink:href="#icon-internet-explorer" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-internet-explorer" />
               </svg>
               Internet Explorer
             </a>
@@ -76,7 +76,7 @@
 
             <a href="<%= tool.safari.url %>" title="Link to Safari extension" class="resource-safari" target="_blank">
               <svg>
-                <use xlink:href="#icon-safari" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-safari" />
               </svg>
               Safari
             </a>
@@ -91,7 +91,7 @@
 
             <a href="<%= tool.mac.url %>" title="Link to Mac application" class="resource-mac" target="_blank">
               <svg>
-                <use xlink:href="#icon-apple" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-apple" />
               </svg>
               Mac
             </a>
@@ -106,7 +106,7 @@
 
             <a href="<%= tool.windows.url %>" title="Link to Windows application" class="resource-windows" target="_blank">
               <svg>
-                <use xlink:href="#icon-windows" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-windows" />
               </svg>
               Windows
             </a>
@@ -121,7 +121,7 @@
 
             <a href="<%= tool.linux.url %>" title="Link to Linux application" class="resource-linux" target="_blank">
               <svg>
-                <use xlink:href="#icon-linux" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-linux" />
               </svg>
               Linux
             </a>
@@ -136,7 +136,7 @@
 
             <a href="<%= tool.cli.url %>" title="Link to CLI" class="resource-cli" target="_blank">
               <svg>
-                <use xlink:href="#icon-terminal" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-terminal" />
               </svg>
               CLI
             </a>
@@ -151,7 +151,7 @@
 
             <a href="<%= tool.module.url %>" title="Link to Node module" class="resource-module" target="_blank">
               <svg>
-                <use xlink:href="#icon-module" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-module" />
               </svg>
               Node module
             </a>
@@ -166,12 +166,27 @@
 
             <a href="<%= tool.angular.url %>" title="Link to AngularJS Script" class="resource-angular" target="_blank">
               <svg>
-                <use xlink:href="#icon-angular" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-angular" />
               </svg>
               AngularJS Script
             </a>
 
             <span><%= ( tool.stars && tool.stars.angular ) ? tool.stars.angular : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.broccoli ) { %>
+
+          <li class="tooltip" title="Broccoli plugin">
+
+            <a href="<%= tool.broccoli %>" title="Link to Broccoli plugin" class="resource-broccoli" target="_blank">
+              <svg>
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-broccoli" />
+              </svg>
+              Broccoli plugin
+            </a>
+
+            <span><%= ( tool.stars && tool.stars.broccoli ) ? tool.stars.broccoli : 'N/A' %></span>
 
         <% } %>
 
@@ -181,7 +196,7 @@
 
             <a href="<%= tool.grunt.url %>" title="Link to Grunt plugin" class="resource-grunt" target="_blank">
               <svg>
-                <use xlink:href="#icon-grunt" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-grunt" />
               </svg>
               Grunt plugin
             </a>
@@ -196,7 +211,7 @@
 
             <a href="<%= tool.gulp.url %>" title="Link to Gulp plugin" class="resource-gulp" target="_blank">
               <svg>
-                <use xlink:href="#icon-gulp" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-gulp" />
               </svg>
               gulp plugin
             </a>
@@ -211,7 +226,7 @@
 
             <a href="<%= tool.illustrator.url %>" title="Link to Illustrator Script" class="resource-illustrator" target="_blank">
               <svg>
-                <use xlink:href="#icon-illustrator" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-illustrator" />
               </svg>
               Service
             </a>
@@ -226,7 +241,7 @@
 
             <a href="<%= tool.javascript.url %>" title="Link to Script" class="resource-javascript" target="_blank">
               <svg>
-                <use xlink:href="#icon-javascript" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-javascript" />
               </svg>
               Javascript
             </a>
@@ -241,12 +256,27 @@
 
             <a href="<%= tool.php.url %>" title="Link to PHP" class="resource-php" target="_blank">
               <svg>
-                <use xlink:href="#icon-php" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-php" />
               </svg>
               PHP
             </a>
 
             <span><%= ( tool.stars && tool.stars.php ) ? tool.stars.php : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.ruby ) { %>
+
+          <li class="tooltip" title="Ruby">
+
+            <a href="<%= tool.ruby %>" title="Link to Ruby" class="resource-ruby" target="_blank">
+              <svg>
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-ruby" />
+              </svg>
+              Ruby
+            </a>
+
+            <span><%= ( tool.stars && tool.stars.ruby ) ? tool.stars.ruby : 'N/A' %></span>
 
         <% } %>
 
@@ -256,7 +286,7 @@
 
             <a href="<%= tool.apache %>" title="Link to Apache module" class="resource-apache" target="_blank">
               <svg>
-                <use xlink:href="#icon-apache" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-apache" />
               </svg>
               Apache
             </a>
@@ -271,12 +301,27 @@
 
             <a href="<%= tool.nginx %>" title="Link to Nginx module" class="resource-nginx" target="_blank">
               <svg>
-                <use xlink:href="#icon-nginx" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-nginx" />
               </svg>
               Nginx
             </a>
 
             <span><%= ( tool.stars && tool.stars.nginx ) ? tool.stars.nginx : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.python ) { %>
+
+          <li class="tooltip" title="Python Script">
+
+            <a href="<%= tool.python %>" title="Link to Python Script" class="resource-python" target="_blank">
+              <svg>
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-python" />
+              </svg>
+              Python
+            </a>
+
+            <span><%= ( tool.stars.python ) ? tool.stars.python : 'N/A' %></span>
 
         <% } %>
 
@@ -286,7 +331,7 @@
 
             <a href="<%= tool.wordpress.url %>" title="Link to Wordpress Plugin" class="resource-wordpress" target="_blank">
               <svg>
-                <use xlink:href="#icon-wordpress" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-wordpress" />
               </svg>
               Wordpress
             </a>
@@ -301,12 +346,27 @@
 
             <a href="<%= tool.service.url %>" title="Link to Service" class="resource-service" target="_blank">
               <svg>
-                <use xlink:href="#icon-globe" />
+                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-globe" />
               </svg>
               Service
             </a>
 
             <span><%= ( tool.stars && tool.stars.service ) ? tool.stars.service : 'N/A' %></span>
+
+        <% } %>
+
+        <% if ( tool.googleAppsScript ) { %>
+
+          <li class="tooltip" title="Google Apps Script">
+
+            <a href="<%= tool.googleAppsScript %>" title="Link to Google Apps Script" class="resource-google-apps-script" target="_blank">
+              <svg>
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-google-apps-script" />
+              </svg>
+              Google Apps Script
+            </a>
+
+            <span><%= ( tool.stars && tool.stars.googleAppsScript ) ? tool.stars.googleAppsScript : 'N/A' %></span>
 
         <% } %>
 

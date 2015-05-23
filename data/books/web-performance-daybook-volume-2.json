@@ -13,7 +13,10 @@
   "url" : "http://shop.oreilly.com/product/0636920025955.do",
   "description" : "Performance is critical to the success of any website, and help with using today’s new tools is key. In this remarkable guide, 32 leading web performance experts offer practical tips, techniques, and advice for optimizing your site’s user experience.",
   "img" : {
-    "src" : "web-performance-daybook-volume-2.jpg",
+    "src" : {
+      "filename" : "web-performance-daybook-volume-2",
+      "types" : [ "jpg", "webp" ]
+    },
     "width" : 200,
     "height" : 262
   },

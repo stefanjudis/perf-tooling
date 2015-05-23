@@ -1,5 +1,8 @@
 {
   "name" : "Uglify2",
+  "broccoli" : {
+    "url" : "https://github.com/joliss/broccoli-uglify-js"
+  },
   "cli" : {
     "url" : "https://github.com/mishoo/UglifyJS2"
   },

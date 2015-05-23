@@ -1,5 +1,8 @@
 {
   "name" : "svgstore",
+  "broccoli" : {
+    "url" : "https://github.com/jmarquis/broccoli-svgstore"
+  },
   "grunt" : {
     "url" : "https://github.com/FWeinb/grunt-svgstore"
   },

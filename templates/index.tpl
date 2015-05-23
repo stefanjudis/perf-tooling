@@ -5,16 +5,17 @@
     partial(
       'templates/partials/head.tpl',
       {
-        cdn  : cdn,
-        css  : css,
-        site : site
+        cdn       : cdn,
+        css       : css,
+        site      : site,
+        enhance   : enhance,
+        cssCookie : cssCookie,
+        hash      : hash
       }
     )
   %>
 
   <body>
-
-      <div class="svgIcons"><%= svg %></div>
 
       <%=
         partial(
@@ -22,6 +23,7 @@
           {
             active           : type,
             cdn              : cdn,
+            hash             : hash,
             site             : site
           }
         )
@@ -42,7 +44,7 @@
 
               <a class="btn btn-scroll js-scroll" href="#features" title="Scroll to features">
                 <span class="visuallyhidden">Scroll to features</span><svg>
-                  <use xlink:href="#icon-arrow" />
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-arrow" />
                 </svg>
               </a>
 
@@ -157,7 +159,7 @@
               Either <a href="https://github.com/stefanjudis/perf-tooling/issues" title="Link to repo issues" target="_blank">create an issue</a> and we'll add it to perf-tooling.today.</p>
               <p>Or propose a pull request and add a tool by adding a new JSON file to the <a href="https://github.com/stefanjudis/perf-tooling/tree/master/data" title="Link to data folder" target="_blank">data folder</a>. The JSON files in these folders will be automatically rendered using a template based in the <a href="https://github.com/stefanjudis/perf-tooling/tree/master/templates" title="Link to templates folder" target="_blank">templates folder</a>. For more detailed information check the <a href="https://github.com/stefanjudis/perf-tooling/blob/master/CONTRIBUTING.md" title="Link to contributing readme" target="_blank">CONTRIBUTING.md</a>.</p>
               <p><em>By proposing a pull request you will be added to the footer contributors list automatically.</em></p>
-              <p>We would like this project to become a shared resource maintained be the community, so if you have any ideas on how to improve it or make it better, please let us know and <a href="https://github.com/stefanjudis/perf-tooling/issues" title="Link to repo issues" target="_blank">file an issue on Github.</a></p>
+              <p>We would like this project to become a shared resource maintained by the community, so if you have any ideas on how to improve it or make it better, please let us know and <a href="https://github.com/stefanjudis/perf-tooling/issues" title="Link to repo issues" target="_blank">file an issue on Github.</a></p>
 
             </article>
 
@@ -180,7 +182,7 @@
                 <a href="https://twitter.com/stefanjudis" title="Link to Stefan on Twitter" target="_blank">
                   <span class="visuallyhidden">Stefan on Twitter</span>
                   <svg>
-                    <use xlink:href="#icon-twitter" />
+                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
                   </svg>
                 </a>
               </li>
@@ -189,7 +191,7 @@
                 <a href="https://github.com/stefanjudis" title="Link to Stefan on GitHub" target="_blank">
                   <span class="visuallyhidden">Stefan on Github</span>
                   <svg>
-                    <use xlink:href="#icon-github" />
+                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
                   </svg>
                 </a>
               </li>
@@ -198,7 +200,7 @@
                 <a href="mailto:stefanjudis@gmail.com" title="Send Stafan an email" target="_blank">
                   <span class="visuallyhidden">Stefan's email address</span>
                   <svg>
-                    <use xlink:href="#icon-email" />
+                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
                   </svg>
                 </a>
               </li>
@@ -210,7 +212,7 @@
                 <a href="https://github.com/marcobiedermann" title="Link to Marco on GitHub" target="_blank">
                   <span class="visuallyhidden">Marco on Github</span>
                   <svg>
-                    <use xlink:href="#icon-github" />
+                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
                   </svg>
                 </a>
               </li>
@@ -219,7 +221,7 @@
                 <a href="https://twitter.com/m412c0b" title="Link to Marco on Twitter" target="_blank">
                   <span class="visuallyhidden">Marco on Twitter</span>
                   <svg>
-                    <use xlink:href="#icon-twitter" />
+                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
                   </svg>
                 </a>
               </li>
@@ -316,20 +318,19 @@
       <%=
         partial(
           'templates/partials/footer.tpl',
-          {}
+          {
+            cdn              : cdn,
+            hash             : hash
+          }
         )
       %>
 
-    <script src="<%= cdn %>/tooling.js?<%= hash.js %>" async></script>
+    <script src="<%= cdn %>/tooling-<%= hash.js %>.js" async></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-53831300-1', 'auto');
-      ga('send', 'pageview');
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-53831300-1','auto');ga('send','pageview')
     </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
   </body>
 

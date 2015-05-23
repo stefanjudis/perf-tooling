@@ -1,0 +1,19 @@
+{
+  "name" : "PerfAudit: HindustanTimes.com",
+  "authors" : [
+    {
+      "name" : "Apoorv Saxena",
+      "twitter" : "@Apoorv_Saxena"
+    },
+    {
+      "name" : "Kushagra Gour",
+      "twitter" : "@chinchang457"
+    }
+  ],
+  "date" : "2015-03-13",
+  "stats" : {
+    "length" : 676
+  },
+  "url" : "http://perfaudit.com/case-study/hindustantimes.com/",
+  "tags" : ["audit"]
+}

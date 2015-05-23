@@ -1,5 +1,8 @@
 {
   "name" : "CSSShrink",
+  "broccoli" : {
+    "url" : "https://github.com/filippovdaniil/broccoli-cssshrink"
+  },
   "grunt" : {
     "url" : "https://github.com/JohnCashmore/grunt-cssshrink"
   },

@@ -1,0 +1,20 @@
+{
+  "name" : "cssnano",
+  "broccoli" : {
+    "url" : "https://github.com/sindresorhus/broccoli-cssnano"
+  },
+  "cli" : {
+    "url" : "https://github.com/ben-eb/cssnano"
+  },
+  "grunt" : {
+    "url" : "https://github.com/sindresorhus/grunt-cssnano"
+  },
+  "gulp" : {
+    "url" : "https://github.com/ben-eb/gulp-cssnano"
+  },
+  "module" : {
+    "url" : "https://github.com/ben-eb/cssnano"
+  },
+  "description" : "A modular minifier, built on top of the PostCSS ecosystem.",
+  "tags" : [ "css", "minification" ]
+}

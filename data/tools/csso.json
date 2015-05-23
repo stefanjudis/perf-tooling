@@ -1,5 +1,8 @@
 {
   "name" : "csso",
+  "broccoli" : {
+    "url" : "https://github.com/sindresorhus/broccoli-csso"
+  },
   "grunt" : {
     "url" : "https://github.com/t32k/grunt-csso"
   },

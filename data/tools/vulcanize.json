@@ -1,5 +1,8 @@
 {
   "name" : "Vulcanize",
+  "broccoli" : {
+    "url" : "https://github.com/mbykovskyy/broccoli-vulcanize"
+  },
   "cli" : {
     "url" : "https://github.com/Polymer/vulcanize"
   },

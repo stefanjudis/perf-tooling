@@ -1,0 +1,8 @@
+{
+  "name" : "Ruby JMeter",
+  "ruby" : {
+    "url" : "https://github.com/flood-io/ruby-jmeter"
+  },
+  "description" : "A Ruby based DSL for building JMeter test plans.",
+  "tags" : [ "load", "testing", "jmeter" ]
+}

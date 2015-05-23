@@ -1,5 +1,8 @@
 {
   "name" : "SVGO",
+  "broccoli" : {
+    "url" : "https://github.com/sindresorhus/broccoli-svgo"
+  },
   "cli" : {
     "url" : "https://github.com/svg/svgo"
   },
