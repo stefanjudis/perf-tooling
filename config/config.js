@@ -36,6 +36,10 @@ module.exports = {
       description : 'Firefox Extension'
     },
     {
+      name        : 'googleAppsScript',
+      description : 'Google Apps Script'
+    },
+    {
       name        : 'grunt',
       description : 'Grunt Plugin'
     },
@@ -46,10 +50,6 @@ module.exports = {
     {
       name        : 'illustrator',
       description : 'Illustrator Extension'
-    },
-    {
-      name        : 'internetExplorer',
-      description : 'Internet Explorer Extension'
     },
     {
       name        : 'javascript',

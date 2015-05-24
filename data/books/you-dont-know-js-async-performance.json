@@ -11,7 +11,7 @@
     "length": 296
   },
   "url" : "http://shop.oreilly.com/product/0636920033752.do",
-  "description" : "No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \"You Don’t Know JS\" series, this concise yet in-depth guide focuses on new asynchronous features and performance techniques—including Promises, generators, and Web Workers—that let you create sophisticated single-page web applications and escape callback hell in the process.",
+  "description" : "No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the “You Don’t Know JS” series, this concise yet in-depth guide focuses on new asynchronous features and performance techniques—including Promises, generators, and Web Workers—that let you create sophisticated single-page web applications and escape callback hell in the process.",
   "img" : {
     "src" : {
       "filename" : "you-dont-know-js-async-performance",

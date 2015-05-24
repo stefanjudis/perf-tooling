@@ -1,12 +1,12 @@
-<header class="header" role="banner">
-  <div class="container">
-    <div class="logo">
+<header class="site__header" role="banner">
+  <div class="grid__container">
+    <div class="site__logo">
       <a href="/" title="Link to home"><img src="<%= cdn %>/perf-tooling.svg" width="64" height="43" alt="perf-tooling logo">
     </div>
 
-    <nav class="nav-main" role="navigation">
+    <nav class="nav--main" role="navigation">
 
-      <button class="btn-nav">
+      <button class="btn--nav">
         <span class="visuallyhidden">Menu</span>
         <svg>
           <use xlink:href="/icons-<%= hash.svg %>.svg#icon-menu" />

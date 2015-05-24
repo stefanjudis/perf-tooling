@@ -24,7 +24,7 @@
   text-align: center;
 
   .subline {
-    max-width: @media-small;
+    max-width: @media--small;
     margin: 0 auto;
   }
 
@@ -34,6 +34,32 @@
 
 .is-hidden {
   display: none;
+}
+
+.list--inline {
+  margin: -.25rem;
+
+  li {
+    display: inline-block;
+    margin: .25rem;
+  }
+
+}
+
+.list--unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link--text {
+  color: @base__color;
+
+  &:focus,
+  &:hover {
+    color: @link__color--hover;
+  }
+
 }
 
 .visuallyhidden {
@@ -47,18 +73,7 @@
   width: 1px;
 }
 
-.list-unstyled() {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  > li {
-    margin: 0;
-  }
-
-}
-
 .subline {
-  color: @color-border;
+  color: @border__color;
   font-weight: normal;
 }

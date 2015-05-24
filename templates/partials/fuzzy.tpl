@@ -31,17 +31,17 @@
 
 <% } %>
 
-<div class="fuzzy" role="search">
+<div class="form--search" role="search">
 
   <form method="get">
 
-    <label class="fuzzy--label" for="fuzzzzzzzzzy">
+    <label class="form--search__label" for="fuzzzzzzzzzy">
 
-      <svg class="fuzzy--icon">
+      <svg class="form--search__icon icon icon--grey">
         <use xlink:href="/icons-<%= hash.svg %>.svg#icon-magnifier" />
       </svg>
 
-      <input type="search" name="q" id="fuzzzzzzzzzy" class="fuzzy--input" title="Search inside of the list" placeholder="Search all <%= list.length %> <%= type %>" value="<%= query %>" list="listElements" autocapitalize="off" autocomplete="off">
+      <input type="search" name="q" id="fuzzzzzzzzzy" class="form--search__input" title="Search inside of the list" placeholder="Search all <%= list.length %> <%= type %>" value="<%= query %>" list="listElements" autocapitalize="off" autocomplete="off">
 
     </label>
 
