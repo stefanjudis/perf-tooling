@@ -1,0 +1,11 @@
+{
+  "name" : "DevTools State of the Union",
+  "authors" : [
+    {
+      "name" : "Addy Osmani",
+      "twitter" : "@addyosmani"
+    }
+  ],
+  "vimeoId" : "121985366",
+  "tags" : [ "metrics", "network", "timing" ]
+}

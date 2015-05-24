@@ -16,7 +16,7 @@
 
             <a href="<%= tool.bookmarklet %>" title="Link to bookmarklet" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-bookmarklet" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-bookmarklet" />
               </svg>
               <span class="tooltip">Bookmarklet</span>
               <span class="stars"><%= ( tool.stars && tool.stars.bookmarklet ) ? tool.stars.bookmarklet + '☆' : 'N/A' %></span>
@@ -30,7 +30,7 @@
 
             <a href="<%= tool.chrome %>" title="Link to Chrome extension" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-chrome" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-chrome" />
               </svg>
               <span class="tooltip">Chrome</span>
               <span class="stars"><%= ( tool.stars && tool.stars.chrome ) ? tool.stars.chrome + '☆' : 'N/A' %></span>
@@ -44,7 +44,7 @@
 
             <a href="<%= tool.firefox %>" title="Link to Firefox extension" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-firefox" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-firefox" />
               </svg>
               <span class="tooltip">Firefox</span>
               <span class="stars"><%= ( tool.stars && tool.stars.firefox ) ? tool.stars.firefox + '☆' : 'N/A' %></span>
@@ -58,7 +58,7 @@
 
             <a href="<%= tool.internetExplorer %>" title="Link to Internet Explorer Extension" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-internet-explorer" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-internet-explorer" />
               </svg>
               <span class="tooltip">Internet Explorer</span>
               <span class="stars"><%= ( tool.stars && tool.stars.internetExplorer ) ? tool.stars.internetExplorer + '☆' : 'N/A' %></span>
@@ -72,7 +72,7 @@
 
             <a href="<%= tool.safari %>" title="Link to Safari extension" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-safari" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-safari" />
               </svg>
               <span class="tooltip">Safari</span>
               <span class="stars"><%= ( tool.stars && tool.stars.safari ) ? tool.stars.safari + '☆' : 'N/A' %></span>
@@ -86,7 +86,7 @@
 
             <a href="<%= tool.mac %>" title="Link to Mac application" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-apple" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-apple" />
               </svg>
               <span class="tooltip">Mac</span>
               <span class="stars"><%= ( tool.stars && tool.stars.mac ) ? tool.stars.mac + '☆' : 'N/A' %></span>
@@ -100,7 +100,7 @@
 
             <a href="<%= tool.windows %>" title="Link to Windows application" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-windows" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-windows" />
               </svg>
               <span class="tooltip">Windows</span>
               <span class="stars"><%= ( tool.stars && tool.stars.windows ) ? tool.stars.windows + '☆' : 'N/A' %></span>
@@ -114,7 +114,7 @@
 
             <a href="<%= tool.linux %>" title="Link to Linux application" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-linux" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-linux" />
               </svg>
               <span class="tooltip">Linux</span>
               <span class="stars"><%= ( tool.stars && tool.stars.linux ) ? tool.stars.linux + '☆' : 'N/A' %></span>
@@ -128,7 +128,7 @@
 
             <a href="<%= tool.cli %>" title="Link to CLI" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-terminal" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-terminal" />
               </svg>
               <span class="tooltip">CLI</span>
               <span class="stars"><%= ( tool.stars && tool.stars.cli ) ? tool.stars.cli + '☆' : 'N/A' %></span>
@@ -142,7 +142,7 @@
 
             <a href="<%= tool.module %>" title="Link to Node module" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-module" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-module" />
               </svg>
               <span class="tooltip">Node module</span>
               <span class="stars"><%= ( tool.stars && tool.stars.module ) ? tool.stars.module + '☆' : 'N/A' %></span>
@@ -156,7 +156,7 @@
 
             <a href="<%= tool.angular %>" title="Link to AngularJS Script" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-angular" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-angular" />
               </svg>
               <span class="tooltip">AngularJS Script</span>
               <span class="stars"><%= ( tool.stars && tool.stars.angular ) ? tool.stars.angular + '☆' : 'N/A' %></span>
@@ -170,7 +170,7 @@
 
             <a href="<%= tool.broccoli %>" title="Link to Broccoli plugin" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-broccoli" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-broccoli" />
               </svg>
               <span class="tooltip">Broccoli plugin</span>
               <span class="stars"><%= ( tool.stars && tool.stars.broccoli ) ? tool.stars.broccoli + '☆' : 'N/A' %></span>
@@ -184,7 +184,7 @@
 
             <a href="<%= tool.grunt %>" title="Link to Grunt plugin" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-grunt" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-grunt" />
               </svg>
               <span class="tooltip">Grunt plugin</span>
               <span class="stars"><%= ( tool.stars && tool.stars.grunt ) ? tool.stars.grunt + '☆' : 'N/A' %></span>
@@ -198,7 +198,7 @@
 
             <a href="<%= tool.gulp %>" title="Link to Gulp plugin" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-gulp" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-gulp" />
               </svg>
               <span class="tooltip">gulp plugin</span>
               <span class="stars"><%= ( tool.stars && tool.stars.gulp ) ? tool.stars.gulp + '☆' : 'N/A' %></span>
@@ -212,7 +212,7 @@
 
             <a href="<%= tool.illustrator %>" title="Link to Illustrator Script" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-illustrator" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-illustrator" />
               </svg>
               <span class="tooltip">Service</span>
               <span class="stars"><%= ( tool.stars && tool.stars.illustrator ) ? tool.stars.illustrator + '☆' : 'N/A' %></span>
@@ -226,7 +226,7 @@
 
             <a href="<%= tool.javascript %>" title="Link to Script" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-javascript" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-javascript" />
               </svg>
               <span class="tooltip">Javascript</span>
               <span class="stars"><%= ( tool.stars && tool.stars.javascript ) ? tool.stars.javascript + '☆' : 'N/A' %></span>
@@ -240,7 +240,7 @@
 
             <a href="<%= tool.php %>" title="Link to PHP" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-php" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-php" />
               </svg>
               <span class="tooltip">PHP</span>
               <span class="stars"><%= ( tool.stars && tool.stars.php ) ? tool.stars.php + '☆' : 'N/A' %></span>
@@ -254,7 +254,7 @@
 
             <a href="<%= tool.ruby %>" title="Link to Ruby" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-ruby" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-ruby" />
               </svg>
               <span class="tooltip">Ruby</span>
               <span class="stars"><%= ( tool.stars && tool.stars.ruby ) ? tool.stars.ruby + '☆' : 'N/A' %></span>
@@ -268,7 +268,7 @@
 
             <a href="<%= tool.apache %>" title="Link to Apache module" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-apache" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-apache" />
               </svg>
               <span class="tooltip">Apache</span>
               <span class="stars"><%= ( tool.stars && tool.stars.apache ) ? tool.stars.apache + '☆' : 'N/A' %></span>
@@ -282,7 +282,7 @@
 
             <a href="<%= tool.nginx %>" title="Link to Nginx module" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-nginx" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-nginx" />
               </svg>
               <span class="tooltip">Nginx</span>
               <span class="stars"><%= ( tool.stars && tool.stars.nginx ) ? tool.stars.nginx + '☆' : 'N/A' %></span>
@@ -296,7 +296,7 @@
 
             <a href="<%= tool.python %>" title="Link to Python Script" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-python" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-python" />
               </svg>
               <span class="tooltip">Python</span>
               <span class="stars"><%= ( tool.stars.python ) ? tool.stars.python + '☆' : 'N/A' %></span>
@@ -310,7 +310,7 @@
 
             <a href="<%= tool.wordpress %>" title="Link to WordPress Plugin" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-wordpress" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-wordpress" />
               </svg>
               <span class="tooltip">Wordpress</span>
               <span class="stars"><%= ( tool.stars && tool.stars.wordpress ) ? tool.stars.wordpress + '☆' : 'N/A' %></span>
@@ -324,10 +324,24 @@
 
             <a href="<%= tool.service %>" title="Link to Service" target="_blank">
               <svg class="icon">
-                <use xlink:href="/icons-<%= hash.svg %>.svg#icon-globe" />
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-globe" />
               </svg>
               <span class="tooltip">Service</span>
               <span class="stars"><%= ( tool.stars && tool.stars.service ) ? tool.stars.service + '☆' : 'N/A' %></span>
+            </a>
+
+        <% } %>
+
+        <% if ( tool.googleAppsScript ) { %>
+
+          <li class="resource--google-apps-script">
+
+            <a href="<%= tool.googleAppsScript %>" title="Link to Google Apps Script" target="_blank">
+              <svg class="icon">
+                <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-google-apps-script" />
+              </svg>
+              <span class="tooltip">Google Apps Script</span>
+              <span class="stars"><%= ( tool.stars && tool.stars.googleAppsScript ) ? tool.stars.googleAppsScript + '☆': 'N/A' %></span>
             </a>
 
         <% } %>
