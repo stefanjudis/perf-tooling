@@ -1,50 +1,26 @@
-@media (min-width: @media-small) {
+.tooltip {
+  float: left;
 
-  .tooltip {
-    position: relative;
-    text-decoration: none;
-
-    &:before, &:after {
-      opacity: 0;
-      pointer-events: none;
-      transition: all .4s ease;
-    }
+  @media (min-width: @media--small) {
+    background: @base__color;
+    border-radius: 999px 999px 999px 0;
+    bottom: 130%;
+    left: 50%;
+    opacity: 0;
+    padding: .25rem 1rem;
+    position: absolute;
+    transform: translateY(30%);
+    transition: opacity .3s, transform .3s;
+    white-space: nowrap;
 
     &:before {
-      background: none;
-      border-bottom: 5px solid transparent;
-      border-left: 5px solid @color;
-      border-right: 5px solid transparent;
-      border-top: 5px solid @color;
-      bottom: 120%;
+      border: .25rem solid @base__color;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
       content: '';
-      left: 50%;
-      margin-bottom: -10px;
+      left: 0;
       position: absolute;
-      z-index: 2;
-    }
-
-    &:after {
-      background: @color;
-      border-radius: 0.75rem 0.75rem 0.75rem 0;
-      bottom: 120%;
-      color: @color-bg;
-      content: attr(title);
-      left: 50%;
-      padding: 5px 15px;
-      position: absolute;
-      white-space: nowrap;
-      z-index : 2;
-    }
-
-    &:hover:before,
-    &:hover:after {
-      bottom: 110%;
-    }
-
-    &:hover:after,
-    &:hover:before {
-      opacity: 1;
+      top: 100%;
     }
 
   }
