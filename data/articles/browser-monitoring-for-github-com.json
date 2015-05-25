@@ -11,5 +11,5 @@
     "length" : 1505
   },
   "url" : "http://githubengineering.com/browser-monitoring-for-github-com/",
-  "tags" : [ "loading", "performance", "network", "monitoring", "js", "error handling" ]
+  "tags" : [ "loading", "network", "monitoring", "error handling" ]
 }
