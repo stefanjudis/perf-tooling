@@ -71,6 +71,7 @@
                 hash    : hash,
                 list    : list,
                 partial : partial,
+                platforms : platforms,
                 people  : people
               }
             )

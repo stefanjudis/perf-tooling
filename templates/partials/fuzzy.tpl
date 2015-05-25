@@ -4,8 +4,12 @@
   <% if ( type === 'tools' && platforms.length ) { %>
 
     <%
+      var platformsNames = platforms.map( function( platform ) {
+        return platform.name;
+      } );
+
       autoCompletionList = _.sortBy(
-        autoCompletionList.concat( platforms ),
+        autoCompletionList.concat( platformsNames ),
         function( a, b ) {
           return a.toLowerCase();
         }
