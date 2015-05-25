@@ -1,0 +1,15 @@
+{
+  "name" : "Browser Monitoring for GitHub.com",
+  "authors" : [
+    {
+      "name" : "Emily Nakashima",
+      "twitter" : "@eanakashima"
+    }
+  ],
+  "date" : "2015-03-18",
+  "stats" : {
+    "length" : 1505
+  },
+  "url" : "http://githubengineering.com/browser-monitoring-for-github-com/",
+  "tags" : [ "loading", "performance", "network", "monitoring", "js", "error handling" ]
+}
