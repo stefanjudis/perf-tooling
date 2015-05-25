@@ -26,7 +26,7 @@
                 <svg class="icon">
                   <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-<%= platform.name %>" />
                 </svg>
-                <span class="tooltip"><% if ( platform.isPaid ) { %>Paid <% } %><%= platform.description %></span>
+                <span class="tooltip"><% if ( tool[ platform.name ].isPaid ) { %>Paid <% } %><%= platform.description %></span>
                 <span class="stars"><%= ( tool.stars && tool.stars[ platform.name ] ) ? tool.stars[ platform.name ] + '☆' : 'N/A' %></span>
               </a>
 
