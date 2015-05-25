@@ -1,45 +1,29 @@
-.footer {
-  display: table-row;
-  height: 1px;
-
-  .container {
-    padding: 1rem 0;
-  }
-
-}
-
-.footer--heart {
-  display: inline-block;
-  fill: @color-primary;
-  height: 2rem;
-  margin-bottom: -0.75rem;
-  transition: fill .3s, transform .3s;
-  width: 2rem;
-
-  &:hover {
-    fill: @color-secondary;
-    transform: scale(1.1);
-  }
-
+.site__footer {
+  border-top: 1px solid @border__color;
+  padding: 1rem 0;
 }
 
 .crafted,
 .copyright {
   text-align: center;
-}
 
-@media (min-width: @media-small) {
-
-  .crafted,
-  .copyright {
-    text-align: left;
+  @media (min-width: @media--small) {
+    margin: 0;
   }
 
-  .crafted {
+}
+
+.crafted {
+
+  @media (min-width: @media--small) {
     float: left;
   }
 
-  .copyright {
+}
+
+.copyright {
+
+  @media (min-width: @media--small) {
     float: right;
     padding-top: .2em;
   }

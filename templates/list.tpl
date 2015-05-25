@@ -28,9 +28,9 @@
         )
       %>
 
-      <main class="main" role="main">
+      <main class="site__main" role="main">
 
-        <div class="container">
+        <div class="grid__container">
 
 
           <%=
@@ -71,6 +71,7 @@
                 hash    : hash,
                 list    : list,
                 partial : partial,
+                platforms : platforms,
                 people  : people
               }
             )

@@ -7,30 +7,98 @@ module.exports = {
     token : process.env.GITHUB_TOKEN
   },
   platforms : [
-    'angular',
-    'bookmarklet',
-    'broccoli',
-    'chrome',
-    'firefox',
-    'internetExplorer',
-    'safari',
-    'mac',
-    'windows',
-    'linux',
-    'cli',
-    'module',
-    'grunt',
-    'gulp',
-    'javascript',
-    'php',
-    'python',
-    'ruby',
-    'apache',
-    'nginx',
-    'service',
-    'wordpress',
-    'illustrator',
-    'googleAppsScript'
+    {
+      name        : 'angular',
+      description : 'Angular Script'
+    },
+    {
+      name        : 'apache',
+      description : 'Apache Module'
+    },
+    {
+      name        : 'bookmarklet',
+      description : 'Bookmarklet'
+    },
+    {
+      name        : 'broccoli',
+      description : 'Broccoli Plugin'
+    },
+    {
+      name        : 'chrome',
+      description : 'Chrome Extension'
+    },
+    {
+      name        : 'cli',
+      description : 'CLI'
+    },
+    {
+      name        : 'firefox',
+      description : 'Firefox Extension'
+    },
+    {
+      name        : 'googleAppsScript',
+      description : 'Google Apps Script'
+    },
+    {
+      name        : 'grunt',
+      description : 'Grunt Plugin'
+    },
+    {
+      name        : 'gulp',
+      description : 'Gulp Plugin'
+    },
+    {
+      name        : 'illustrator',
+      description : 'Illustrator Extension'
+    },
+    {
+      name        : 'javascript',
+      description : 'JavaScript'
+    },
+    {
+      name        : 'linux',
+      description : 'Linux App'
+    },
+    {
+      name        : 'mac',
+      description : 'Mac App'
+    },
+    {
+      name        : 'module',
+      description : 'Node Module'
+    },
+    {
+      name        : 'nginx',
+      description : 'Nginx Module'
+    },
+    {
+      name        : 'php',
+      description : 'PHP Script'
+    },
+    {
+      name        : 'python',
+      description : 'Python Script'
+    },
+    {
+      name        : 'ruby',
+      description : 'Ruby Script'
+    },
+    {
+      name        : 'safari',
+      description : 'Safari Extension'
+    },
+    {
+      name        : 'service',
+      description : 'Web Service'
+    },
+    {
+      name        : 'windows',
+      description : 'Windows App'
+    },
+    {
+      name        : 'wordpress',
+      description : 'WordPress Plugin'
+    }
   ],
   timings : {
     requestDelay : 250,
