@@ -1,6 +1,8 @@
 {
   "name" : "iSpySpeed",
-  "service" : "http://ispyspeed.com/",
+  "service" : {
+    "url" : "http://ispyspeed.com/"
+  },
   "description" : "iSpySpeed is a free tool that helps marketers determine the page load speed of their competitors.",
   "tags" : [ "metrics" ]
 }

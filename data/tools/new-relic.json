@@ -1,6 +1,9 @@
 {
   "name" : "New Relic",
-  "service" : "http://newrelic.com/",
+  "service" : {
+    "url" : "http://newrelic.com/",
+    "isPaid": true
+  },
   "description" : "New Relic gets you immediate code-level visibility to build faster software, create better products, and delight your customers.",
   "tags" : [ "metrics" ]
 }

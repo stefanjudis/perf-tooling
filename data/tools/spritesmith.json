@@ -1,9 +1,17 @@
 {
   "name" : "spritesmith",
-  "cli" : "https://github.com/bevacqua/spritesmith-cli",
-  "grunt" : "https://github.com/Ensighten/grunt-spritesmith",
-  "gulp" : "https://github.com/twolfson/gulp.spritesmith",
-  "module" : "https://github.com/Ensighten/spritesmith",
+  "cli" : {
+    "url" : "https://github.com/bevacqua/spritesmith-cli"
+  },
+  "grunt" : {
+    "url" : "https://github.com/Ensighten/grunt-spritesmith"
+  },
+  "gulp" : {
+    "url" : "https://github.com/twolfson/gulp.spritesmith"
+  },
+  "module" : {
+    "url" : "https://github.com/Ensighten/spritesmith"
+  },
   "description" : "Utility that takes sprites and converts them into a stylesheet and its coordinates.",
   "tags" : [ "images", "sprite" ]
 }

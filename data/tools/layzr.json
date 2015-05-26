@@ -1,6 +1,8 @@
 {
   "name" : "Layzr.js",
-  "javascript" : "https://github.com/callmecavs/layzr.js",
+  "javascript" : {
+    "url" : "https://github.com/callmecavs/layzr.js"
+  },
   "description" : "Lazy loading boosts page speed by deferring the loading of images until they're in (or near) the viewport. This library makes it completely painless - maximizing speed by keeping options to a minimum.",
   "tags" : [ "lazy loading", "images" ]
 }

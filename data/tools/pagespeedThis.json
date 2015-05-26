@@ -1,6 +1,8 @@
 {
   "name" : "pagespeedThis",
-  "bookmarklet" : "https://github.com/kimblim/pagespeedThis",
+  "bookmarklet" : {
+    "url" : "https://github.com/kimblim/pagespeedThis"
+  },
   "description" : "A very simple bookmarklet that analyses the pagespeed of the current page in the browser.",
   "tags" : [ "PSI", "Pagespeed Insights", "Bookmarklet" ]
 }

@@ -1,9 +1,17 @@
 {
   "name" : "csso",
-  "broccoli" : "https://github.com/sindresorhus/broccoli-csso",
-  "grunt" : "https://github.com/t32k/grunt-csso",
-  "gulp" : "https://github.com/ben-eb/gulp-csso",
-  "module" : "https://github.com/css/csso",
+  "broccoli" : {
+    "url" : "https://github.com/sindresorhus/broccoli-csso"
+  },
+  "grunt" : {
+    "url" : "https://github.com/t32k/grunt-csso"
+  },
+  "gulp" : {
+    "url" : "https://github.com/ben-eb/gulp-csso"
+  },
+  "module" : {
+    "url" : "https://github.com/css/csso"
+  },
   "description" : "CSSO (CSS Optimizer) is a CSS minimizer unlike others. In addition to usual minification techniques it can perform structural optimization of CSS files, resulting in smaller file size compared to other minifiers.",
   "tags" : [ "css", "minification" ]
 }

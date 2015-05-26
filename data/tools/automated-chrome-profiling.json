@@ -1,6 +1,8 @@
 {
   "name" : "Automated Chrome Profiling",
-  "module" : "https://github.com/paulirish/automated-chrome-profiling",
+  "module" : {
+    "url" : "https://github.com/paulirish/automated-chrome-profiling"
+  },
   "description" : "Let's say you want to evaluate the performance of some clientside JavaScript and want to automate it. Let's kick off our measurement in Node.js and collect the performance metrics from Chrome. Oh yeah.",
   "tags" : [ "chrome", "metrics", "timing" ]
 }

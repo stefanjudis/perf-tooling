@@ -1,6 +1,8 @@
 {
   "name" : "memory-stats.js",
-  "javascript" : "https://github.com/paulirish/memory-stats.js",
+  "javascript" : {
+    "url" : "https://github.com/paulirish/memory-stats.js"
+  },
   "description" : "Minimal monitor for JS Heap Size via performance.memory",
   "tags" : [ "javascript", "memory", "monitoring" ]
 }

@@ -1,6 +1,8 @@
 {
   "name" : "Httpq",
-  "cli" : "https://github.com/DavidHuie/httpq",
+  "cli" : {
+    "url" : "https://github.com/DavidHuie/httpq"
+  },
   "description" : "A Go service for buffering HTTP requests and processing them asynchronously",
   "tags" : [ "http", "webhooks", "buffers" ]
 }

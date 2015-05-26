@@ -1,7 +1,11 @@
 {
   "name" : "CSS-triggers",
-  "cli" : "https://github.com/lafikl/CSS-triggers-cli",
-  "service" : "https://github.com/paullewis/CSS-Triggers",
+  "cli" : {
+    "url" : "https://github.com/lafikl/CSS-triggers-cli"
+  },
+  "service" : {
+    "url" : "https://github.com/paullewis/CSS-Triggers"
+  },
   "description" : "Ever wondered what work different CSS properties trigger? Wonder no more!",
   "tags" : [ "analyze", "60fps" ]
 }

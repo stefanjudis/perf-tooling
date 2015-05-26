@@ -1,10 +1,20 @@
 {
   "name" : "clean-css",
-  "broccoli" : "https://github.com/shinnn/broccoli-clean-css",
-  "cli" : "https://github.com/jakubpawlowicz/clean-css",
-  "grunt" : "https://github.com/gruntjs/grunt-contrib-cssmin",
-  "gulp" : "https://github.com/chilijung/gulp-cssmin",
-  "module" : "https://github.com/jakubpawlowicz/clean-css",
+  "broccoli" : {
+    "url" : "https://github.com/shinnn/broccoli-clean-css"
+  },
+  "cli" : {
+    "url" : "https://github.com/jakubpawlowicz/clean-css"
+  },
+  "grunt" : {
+    "url" : "https://github.com/gruntjs/grunt-contrib-cssmin"
+  },
+  "gulp" : {
+    "url" : "https://github.com/chilijung/gulp-cssmin"
+  },
+  "module" : {
+    "url" : "https://github.com/jakubpawlowicz/clean-css"
+  },
   "description" : "Clean-css is a fast and efficient Node.js library for minifying CSS files. According to tests it is one of the best available.",
   "tags" : [ "css", "minification" ]
 }

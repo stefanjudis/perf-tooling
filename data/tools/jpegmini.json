@@ -1,9 +1,17 @@
 {
   "name" : "JPEGmini",
-  "mac" : "http://www.jpegmini.com/app",
-  "module" : "https://github.com/sydneystockholm/jpegmini",
-  "service" : "http://www.jpegmini.com/main/shrink_photo",
-  "windows" : "http://www.jpegmini.com/app/windows",
+  "mac" : {
+    "url" : "http://www.jpegmini.com/app"
+  },
+  "module" : {
+    "url" : "https://github.com/sydneystockholm/jpegmini"
+  },
+  "service" : {
+    "url" : "http://www.jpegmini.com/main/shrink_photo"
+  },
+  "windows" : {
+    "url" : "http://www.jpegmini.com/app/windows"
+  },
   "description" : "With JPEGmini you can reduce the file size of your photos by up to 5x, while keeping their original quality and JPEG format",
   "tags" : [ "images", "compression", "lossless", "app" ]
 }

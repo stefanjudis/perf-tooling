@@ -1,6 +1,8 @@
 {
   "name" : "moniteur",
-  "cli" : "https://github.com/kaelig/moniteur",
+  "cli" : {
+    "url" : "https://github.com/kaelig/moniteur"
+  },
   "description" : "Monitor your asset size over time, in your browser, or using the provided HTTP API.",
   "tags" : [ "metrics" ]
 }

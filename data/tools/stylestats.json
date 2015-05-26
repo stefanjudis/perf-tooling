@@ -1,10 +1,20 @@
 {
   "name" : "StyleStats",
-  "cli" : "https://github.com/t32k/stylestats",
-  "grunt" : "https://github.com/tvooo/grunt-stylestats",
-  "gulp" : "https://github.com/1000ch/gulp-stylestats",
-  "module" : "https://github.com/t32k/stylestats",
-  "service" : "http://www.stylestats.org/",
+  "cli" : {
+    "url" : "https://github.com/t32k/stylestats"
+  },
+  "grunt" : {
+    "url" : "https://github.com/tvooo/grunt-stylestats"
+  },
+  "gulp" : {
+    "url" : "https://github.com/1000ch/gulp-stylestats"
+  },
+  "module" : {
+    "url" : "https://github.com/t32k/stylestats"
+  },
+  "service" : {
+    "url" : "http://www.stylestats.org/"
+  },
   "description" : "StyleStats is a Node.js library to collect CSS statistics.",
   "tags" : [ "css", "metrics" ]
 }

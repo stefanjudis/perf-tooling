@@ -1,6 +1,8 @@
 {
   "name" : "check-unused-css",
-  "gulp" : "https://github.com/zalando/gulp-check-unused-css",
+  "gulp" : {
+    "url" : "https://github.com/zalando/gulp-check-unused-css"
+  },
   "description" : "Check if all your defined CSS classes are used in your HTML files and vice versa.",
   "tags" : [ "css", "html" ]
 }
