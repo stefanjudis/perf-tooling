@@ -1,0 +1,15 @@
+{
+  "name" : "Setting up PageSpeed Insights to test Performance Locally via Gulp",
+  "authors" : [
+    {
+      "name" : "Una Kravets",
+      "twitter" : "@una"
+    }
+  ],
+  "date" : "2014-12-17",
+  "stats" : {
+    "length" : 1337
+  },
+  "url" : "http://una.im/gulp-local-psi",
+  "tags" : [ "loading", "metrics", "pagespeed" ]
+}
