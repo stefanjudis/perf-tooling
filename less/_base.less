@@ -5,18 +5,11 @@
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-
-  &:before,
-  &:after {
-    box-sizing: border-box;
-  }
-
 }
 
--moz-::selection,
 ::selection {
-  background: @color;
-  color: @color-bg;
+  background: @base__color;
+  color: @base__bgcolor;
   text-shadow: none;
 }
 
@@ -31,63 +24,62 @@ html {
 }
 
 body {
-  background: @color-bg;
-  color: @color;
-  display: table;
-  font: @font-weight ~"@{font-size}/@{line-height}" @font-family, @font-family-fallback;
-  height: 100%;
+  background: @base__bgcolor;
+  color: @base__color;
+  display: flex;
+  font: @base__font-weight ~"@{base__font-size}/@{base__line-height}" @base__font-family, @base__font-family-fallback;
+  flex-direction: column;
   margin: 0;
+  min-height: 100%;
   scroll-behavior: smooth;
-  width: 100%;
 }
 
 article,
-aside,
-details,
-dialog,
 figure,
 figcaption,
 footer,
 header,
-hgroup,
 main,
-menu,
 nav,
-section,
-summary {
+section {
   display: block;
 }
 
 a {
   background-color: transparent;
   border: 0;
-  color: @color-link;
+  color: @link__color;
   outline: 0;
   text-decoration: none;
   transition: background-color .3s, color .3s;
 
-  &:active,
-  &:focus {
-    color: @color-link-active;
+  &:active {
+    color: @link__color--active;
   }
 
+  &:focus,
   &:hover {
-    color: @color-link-hover;
+    color: @link__color--hover;
   }
 
 }
 
 button {
-  background: transparent;
+  background: @btn__bgcolor;
   border: 0;
-  color: inherit;
+  color: @btn__color;
   cursor: pointer;
   font: inherit;
   margin: 0;
-  outline: 0;
+  outline-color: @primary__color;
   overflow: visible;
   padding: 0;
   text-transform: none;
+
+  &:focus,
+  &:hover {
+    background: @btn__bgcolor--hover;
+  }
 
   &::-moz-focus-inner {
     border: 0;
@@ -101,23 +93,21 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-code {
-  font-family: @font-family-code, @font-family-code-fallback;
-  font-size: .875rem;
-  white-space: pre;
-  word-wrap: normal;
+code,
+pre {
+  font-family: @code__font-family, @code__font-family-fallback;
+  font-size: .75rem;
 }
 
 pre {
-  background-color: @color-code-bg;
-  display: block;
+  background: @code__bgcolor;
   margin: 0 0 1.5rem;
   overflow: auto;
   padding: 1rem;
-  word-wrap: normal;
 }
 
-figure {
+figure,
+header {
   display: block;
   margin: 0;
 }
@@ -131,39 +121,31 @@ footer {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   line-height: 1.25em;
   margin: 0 0 .5rem;
 }
 
-header {
-  display: block;
-  margin: 0;
-}
-
-
 h1 {
-  font-size: @h1-font-size-small;
+  font-size: @h1__font-size-small;
   font-weight: bold;
 
-  @media (min-width: @media-small) {
-    font-size: @h1-font-size;
+  @media (min-width: @media--small) {
+    font-size: @h1__font-size;
   }
 
 }
 
 h2 {
-  font-size: @h2-font-size;
+  font-size: @h2__font-size;
 }
 
 h3 {
-  font-size: @h3-font-size;
+  font-size: @h3__font-size;
 }
 
 h4 {
-  font-size: @h4-font-size;
+  font-size: @h4__font-size;
 }
 
 img {
@@ -179,9 +161,9 @@ textarea {
   background-image: none;
   border: 0;
   color: inherit;
-  font: @font-weight ~"@{font-size}/@{line-height}" @font-family, @font-family-fallback;
+  font: @base__font-weight ~"@{base__font-size}/@{base__line-height}" @base__font-family, @base__font-family-fallback;
   margin: 0;
-  outline-color: @color-primary;
+  outline-color: @primary__color;
   padding: 0;
   transition: all .3s;
 }
@@ -190,12 +172,13 @@ input {
 
   &[type="submit"] {
     -webkit-appearance: button;
-    background: @color-btn-bg;
-    color: @color-btn;
+    background: @btn__bgcolor;
+    color: @btn__color;
     cursor: pointer;
 
+    &:focus,
     &:hover {
-      background: @color-btn-bg-hover;
+      background: @btn__bgcolor--hover;
     }
 
   }
@@ -211,24 +194,16 @@ label {
   padding: 0 0 .5rem;
 }
 
-::-webkit-input-placeholder {
-  color: @color-placeholder;
-}
-
-::-moz-placeholder {
-  color: @color-placeholder;
-}
-
-:-moz-placeholder {
-  color: @color-placeholder;
-}
-
-:-ms-input-placeholder {
-  color: @color-placeholder;
+::placeholder {
+  color: @placeholder__color;
 }
 
 p {
-  margin: 0 0 .5rem;
+  margin: 0 0 1.5rem;
+}
+
+small {
+  color: @border__color;
 }
 
 svg {

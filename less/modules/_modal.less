@@ -1,5 +1,5 @@
 .modal {
-  background: @color-modal-bg;
+  background: @modal__bgcolor;
   bottom: 0;
   left: 0;
   opacity: 0;
@@ -40,7 +40,7 @@
 .modal-container {
   backface-visibility: hidden;
   left: 50%;
-  max-width: @grid-container;
+  max-width: @grid__container;
   outline: 0;
   position: fixed;
   top: 50%;
@@ -69,13 +69,13 @@
 
   &:hover {
     svg {
-      fill: @color-secondary;
+      fill: @secondary__color;
     }
   }
 
   &:active {
     svg {
-      fill: darken(@color-secondary, 30%);
+      fill: darken(@secondary__color, 30%);
       transition: none;
     }
   }
@@ -98,13 +98,13 @@
 
   &:before {
     animation: moveRight .5s linear infinite alternate;
-    background: @color-primary;
+    background: @primary__color;
     transform: translateX(-1.5rem);
   }
 
   &:after {
     animation: moveLeft .5s linear infinite alternate;
-    background: @color-secondary;
+    background: @secondary__color;
     transform: translateX(1.5rem);
   }
 
