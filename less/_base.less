@@ -65,7 +65,7 @@ a {
 }
 
 button {
-  background: @btn__bgcolor;
+  background: transparent;
   border: 0;
   color: @btn__color;
   cursor: pointer;
@@ -76,21 +76,11 @@ button {
   padding: 0;
   text-transform: none;
 
-  &:focus,
-  &:hover {
-    background: @btn__bgcolor--hover;
-  }
-
   &::-moz-focus-inner {
     border: 0;
     padding: 0;
   }
 
-}
-
-button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
 }
 
 code,

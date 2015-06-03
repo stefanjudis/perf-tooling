@@ -16,11 +16,11 @@
     opacity: 1;
     visibility: visible;
 
-    .modal-container {
+    .modal__container {
       visibility: visible;
     }
 
-    .modal-inner {
+    .modal__inner {
       opacity: 1;
       transform: scale(1);
     }
@@ -29,7 +29,7 @@
 
   &.is-loaded {
 
-    .modal-loading {
+    .modal--loading {
       display: none;
     }
 
@@ -37,7 +37,7 @@
 
 }
 
-.modal-container {
+.modal__container {
   backface-visibility: hidden;
   left: 50%;
   max-width: @grid__container;
@@ -49,14 +49,14 @@
   width: 90%;
 }
 
-.modal-inner {
+.modal__inner {
   padding-top: 2rem;
   opacity: 0;
   transform: scale(.7);
   transition: opacity .5s, transform .5s;
 }
 
-.modal-close {
+.modal__close {
   position: absolute;
   right: 0;
   top: 0;
@@ -81,7 +81,7 @@
   }
 }
 
-.modal-loading {
+.modal--loading {
 
   &:before,
   &:after {
