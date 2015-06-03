@@ -6,7 +6,7 @@
   %>
   <% _.each( list , function( article ) { %>
 
-    <li id="<%= article.id %>" class="post-article <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= article.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--article media <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 
       <%=
         partial(
@@ -18,9 +18,9 @@
         )
       %>
 
-      <div class="post-content">
+      <div class="media__body">
 
-        <h3 class="post-title"><a href="<%= article.url %>" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
+        <h3><a href="<%= article.url %>" class="link--text" alt="Link to <%= article.name %>" title="Link to article" target="_blank"><%= article.name %></a></h3>
 
         <%=
           partial(
@@ -35,7 +35,7 @@
 
         <% if ( article.stats ) { %>
 
-          <ul class="post-stats">
+          <ul class="post__stats">
 
             <li>Length: <%= article.stats.length %> Words</li>
 

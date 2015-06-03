@@ -4,23 +4,23 @@
   <% _.each( list , function( video ) { %>
     <% var title = _.escape( video.title || video.name ); %>
 
-    <li id="<%= video.id %>" class="post-video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% var twitterHandle = ( video.social && video.social.twitter ) ? video.social.twitter.replace( '@', '' ) : false; %>
 
       <% if ( video.thumbnail ) { %>
 
-        <figure class="media-obj-left">
+        <figure class="media__obj--left">
 
-          <a href="<%= video.url %>" title="Preview of <%= title %>" target="_blank" data-modal data-modal-content-id="<%= video.id %>"><img src="<%= video.thumbnail.url %>" width="<%= video.thumbnail.width %>" height="<%= video.thumbnail.height %>"></a>
+          <a href="<%= video.url %>" title="Link to video" target="_blank" data-modal data-modal-content-id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>"><img src="<%= video.thumbnail.url %>" width="295" height="166"></a>
 
         </figure>
 
       <% } %>
 
-      <div class="media-body">
+      <div class="media__body">
 
-        <h3 class="post-title"><a href="<%= video.url %>" title="Preview of <%= title %>" data-modal data-modal-content-id="<%= video.id %>"><%= title %></a></h3>
+        <h3><a href="<%= video.url %>" class="link--text" title="Link to video" target="_blank" data-modal data-modal-content-id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>"><%= video.title || video.name %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
@@ -45,13 +45,13 @@
 
         <% if ( video.stats ) { %>
 
-          <ul class="post-stats">
+          <ul class="post__stats">
             <% if ( video.stats.viewCount ) { %>
 
               <li>
                 <span class="visuallyhidden">Views:</span>
-                 <svg>
-                  <use xlink:href="<%= cdn %>/icons.svg?<%= hash.svg %>#icon-view" />
+                 <svg class="icon icon--grey">
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-view" />
                 </svg><%= video.stats.viewCount %>
               </li>
 
@@ -61,8 +61,8 @@
 
               <li>
                 <span class="visuallyhidden">Likes:</span>
-                <svg>
-                  <use xlink:href="<%= cdn %>/icons.svg?<%= hash.svg %>#icon-like" />
+                <svg class="icon icon--grey">
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-like" />
                 </svg>
                 <%= video.stats.likeCount %>
               </li>
@@ -72,8 +72,8 @@
             <% if ( video.stats.dislikeCount ) { %>
               <li>
                 <span class="visuallyhidden">Dislikes:</span>
-                <svg>
-                  <use xlink:href="<%= cdn %>/icons.svg?<%= hash.svg %>#icon-dislike" />
+                <svg class="icon icon--grey">
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-dislike" />
                 </svg>
                 <%= video.stats.dislikeCount %>
               </li>

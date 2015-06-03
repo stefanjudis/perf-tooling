@@ -7,23 +7,23 @@
   <% _.each( list , function( slide ) { %>
     <% var title = _.escape( slide.name ); %>
 
-    <li id="<%= slide.id %>" class="post-slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">
 
       <% var twitterHandle = ( slide.social && slide.social.twitter ) ? slide.social.twitter.replace( '@', '' ) : false; %>
 
       <% if ( slide.thumbnail ) { %>
 
-        <figure class="media-obj-left">
+        <figure class="media__obj--left">
 
-          <a href="<%= slide.url %>" title="Preview of <%= title %>" target="_blank" data-modal data-modal-content-id="<%= slide.id %>"><img src="<%= slide.thumbnail.url %>" width="<%= slide.thumbnail.width %>" height="<%= slide.thumbnail.height %>"></a>
+          <a href="<%= slide.url %>" title="Link to slide" target="_blank" data-modal data-modal-content-id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>"><img src="<%= slide.thumbnail.url %>" width="170" height="128"></a>
 
         </figure>
 
       <% } %>
 
-      <div class="media-body">
+      <div class="media__body">
 
-        <h3 class="post-title"><a href="<%= slide.url %>" title="Preview of <%= title %>" data-modal data-modal-content-id="<%= slide.id %>" target="_blank"><%= slide.name %></a></h3>
+        <h3><a href="<%= slide.url %>" class="link--text" title="Link to slide" target="_blank" data-modal data-modal-content-id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>"><%= slide.name %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
@@ -48,7 +48,7 @@
 
         <% if ( slide.stats ) { %>
 
-          <ul class="post-stats">
+          <ul class="post__stats">
 
             <li>Length: <%= slide.stats.length %> Slides</li>
 

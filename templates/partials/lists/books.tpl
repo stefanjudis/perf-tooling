@@ -3,17 +3,22 @@
 
   <% _.each( list , function( book ) { %>
 
-    <li id="<%= book.id %>" class="post-book media <%= ( book.hidden === true ) ? 'is-hidden' : '' %>">
+    <li id="<%= book.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--book media <%= ( book.hidden === true ) ? 'is-hidden' : '' %>">
 
-      <figure class="media-obj-left">
+      <figure class="media__obj--left">
 
-        <a href="<%= book.url %>" title="Link to video" target="_blank"><img src="<%= cdn %>/books/<%= book.img.src %>" width="<%= book.img.width %>" height="<%= book.img.height %>" alt="<%= book.name %> "></a>
+        <a href="<%= book.url %>" title="Link to video" target="_blank">
+          <picture>
+            <source type="image/webp" srcset="<%= cdn %>/books/<%= book.img.src.filename %>.<%= book.img.src.types[1] %>">
+            <img src="<%= cdn %>/books/<%= book.img.src.filename %>.<%= book.img.src.types[0] %>" width="<%= book.img.width %>" height="<%= book.img.height %>" alt="<%= book.name %> ">
+          </picture>
+        </a>
 
       </figure>
 
-      <div class="media-body">
+      <div class="media__body">
 
-        <h3 class="post-title"><a href="<%= book.url %>" title="Link to video" target="_blank"><%= book.name %></a></h3>
+        <h3><a href="<%= book.url %>" class="link--text" title="Link to video" target="_blank"><%= book.name %></a></h3>
 
         <%=
           partial(
