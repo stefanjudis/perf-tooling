@@ -1,14 +1,32 @@
 {
   "name" : "imagemin",
-  "broccoli" : "https://github.com/xulai/broccoli-imagemin",
-  "cli" : "https://github.com/imagemin/imagemin",
-  "grunt" : "https://github.com/gruntjs/grunt-contrib-imagemin",
-  "gulp" : "https://github.com/sindresorhus/gulp-imagemin",
-  "linux": "https://github.com/imagemin/imagemin-app",
-  "mac": "https://github.com/imagemin/imagemin-app",
-  "module" : "https://github.com/imagemin/imagemin",
-  "windows" : "https://github.com/imagemin/imagemin-app",
-  "wordpress" : "https://github.com/wp-plugins/ewww-image-optimizer",
+  "broccoli" : {
+    "url" : "https://github.com/xulai/broccoli-imagemin"
+  },
+  "cli" : {
+    "url" : "https://github.com/imagemin/imagemin"
+  },
+  "grunt" : {
+    "url" : "https://github.com/gruntjs/grunt-contrib-imagemin"
+  },
+  "gulp" : {
+    "url" : "https://github.com/sindresorhus/gulp-imagemin"
+  },
+  "linux": {
+    "url" : "https://github.com/imagemin/imagemin-app"
+  },
+  "mac": {
+    "url" : "https://github.com/imagemin/imagemin-app"
+  },
+  "module" : {
+    "url" : "https://github.com/imagemin/imagemin"
+  },
+  "windows" : {
+    "url" : "https://github.com/imagemin/imagemin-app"
+  },
+  "wordpress" : {
+    "url" : "https://github.com/wp-plugins/ewww-image-optimizer"
+  },
   "description" : "Minify images seamlessly with Node.js.",
   "tags" : [ "images", "compression" ]
 }

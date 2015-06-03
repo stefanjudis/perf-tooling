@@ -3,10 +3,10 @@
    * Add event for mobile navigation
    */
   function initToggleNav() {
-    var mainNav = document.querySelector( '.nav-main' );
+    var mainNav = document.querySelector( '.nav--main' );
 
-    document.querySelector( '.btn-nav' ).addEventListener( 'click', function() {
-      mainNav.classList.toggle( 'nav-open' );
+    document.querySelector( '.btn--nav' ).addEventListener( 'click', function() {
+      mainNav.classList.toggle( 'nav--open' );
     } );
   }
 

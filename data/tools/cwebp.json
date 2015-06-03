@@ -1,9 +1,17 @@
 {
   "name" : "cwebp",
-  "cli" : "https://developers.google.com/speed/webp/docs/cwebp",
-  "grunt" : "https://github.com/somerandomdude/grunt-webp",
-  "gulp" : "https://github.com/sindresorhus/gulp-webp",
-  "module" : "https://github.com/imagemin/cwebp-bin",
+  "cli" : {
+    "url" : "https://developers.google.com/speed/webp/docs/cwebp"
+  },
+  "grunt" : {
+    "url" : "https://github.com/somerandomdude/grunt-webp"
+  },
+  "gulp" : {
+    "url" : "https://github.com/sindresorhus/gulp-webp"
+  },
+  "module" : {
+    "url" : "https://github.com/imagemin/cwebp-bin"
+  },
   "description" : "Convert your images to WebP format.",
   "tags" : [ "images" ]
 }

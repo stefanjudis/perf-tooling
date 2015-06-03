@@ -1,0 +1,15 @@
+{
+  "name" : "text-rendering: optimizeLegibility is Decadent and Depraved",
+  "authors" : [
+    {
+      "name" : "Mat Marquis",
+      "twitter" : "@wilto"
+    }
+  ],
+  "date" : "2015-05-13",
+  "stats" : {
+    "length" : 536
+  },
+  "url" : "http://bocoup.com/weblog/text-rendering",
+  "tags" : [ "css", "text rendering" ]
+}

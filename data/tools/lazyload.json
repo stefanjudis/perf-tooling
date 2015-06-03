@@ -1,7 +1,11 @@
 {
   "name" : "lazyload",
-  "javascript" : "https://github.com/vvo/lazyload",
-  "wordpress" : "https://github.com/bjornjohansen/bj-lazy-load",
+  "javascript" : {
+    "url" : "https://github.com/vvo/lazyload"
+  },
+  "wordpress" : {
+    "url" : "https://github.com/bjornjohansen/bj-lazy-load"
+  },
   "description" : "Lazyload images, iframes, widgets with a standalone JavaScript lazyloader - ~1kb.",
   "tags" : [ "lazy loading", "images", "iframes" ]
 }

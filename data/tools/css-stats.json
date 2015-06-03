@@ -1,9 +1,17 @@
 {
   "name" : "CSSStats",
-  "grunt" : "https://github.com/cssstats/grunt-cssstats",
-  "gulp" : "https://github.com/cssstats/gulp-cssstats",
-  "module" : "https://github.com/cssstats/css-statistics",
-  "service" : "http://cssstats.com/",
+  "grunt" : {
+    "url" : "https://github.com/cssstats/grunt-cssstats"
+  },
+  "gulp" : {
+    "url" : "https://github.com/cssstats/gulp-cssstats"
+  },
+  "module" : {
+    "url" : "https://github.com/cssstats/css-statistics"
+  },
+  "service" : {
+    "url" : "http://cssstats.com/"
+  },
   "description" : "cssstats.com is a css visualizer.",
   "tags" : [ "css", "metrics" ]
 }

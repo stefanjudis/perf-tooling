@@ -1,8 +1,17 @@
 {
   "name" : "Yellow Lab Tools",
-  "service" : "http://yellowlab.tools",
-  "cli" : "https://github.com/gmetais/YellowLabTools",
-  "module": "https://github.com/gmetais/YellowLabTools",
+  "cli" : {
+    "url" : "https://github.com/gmetais/YellowLabTools"
+  },
+  "service" : {
+    "url" : "http://yellowlab.tools"
+  },
+  "module": {
+    "url" : "https://github.com/gmetais/YellowLabTools"
+  },
+  "grunt": {
+    "url" : "https://github.com/gmetais/grunt-yellowlabtools"
+  },
   "description" : "Loads a webpage in PhantomJS and warns about front-end performance or quality problems, as well as in-depth JavaScript profiling. Based on Phantomas and Analyze-CSS",
   "tags" : [ "advise", "metrics", "javascript", "css" ]
 }

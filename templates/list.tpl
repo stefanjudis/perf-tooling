@@ -4,9 +4,12 @@
     partial(
       'templates/partials/head.tpl',
       {
-        cdn  : cdn,
-        css  : css,
-        site : site
+        cdn       : cdn,
+        css       : css,
+        cssCookie : cssCookie,
+        site      : site,
+        enhance   : enhance,
+        hash      : hash
       }
     )
   %>
@@ -36,9 +39,9 @@
         )
       %>
 
-      <main class="main" role="main">
+      <main class="site__main" role="main">
 
-        <div class="container">
+        <div class="grid__container">
 
 
           <%=
@@ -79,6 +82,7 @@
                 hash    : hash,
                 list    : list,
                 partial : partial,
+                platforms : platforms,
                 people  : people
               }
             )
@@ -109,17 +113,12 @@
           }
         } )
       ) %>;
-    </script>
-    <script src="<%= cdn %>/tooling.js?<%= hash.js %>" async></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-53831300-1', 'auto');
-      ga('send', 'pageview');
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-53831300-1','auto');ga('send','pageview')
     </script>
+    <script src="<%= cdn %>/tooling-<%= hash.js %>.js" async></script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
   </body>
 

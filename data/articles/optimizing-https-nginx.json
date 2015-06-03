@@ -1,0 +1,15 @@
+{
+  "name" : "Optimizing HTTPS on Nginx",
+  "authors" : [
+    {
+      "name" : "Bjørn Johansen",
+      "twitter" : "@bjornjohansen"
+    }
+  ],
+  "date" : "2014-01-19",
+  "stats" : {
+    "length" : 1308
+  },
+  "url" : "https://bjornjohansen.no/optimizing-https-nginx",
+  "tags" : [ "http", "nginx" ]
+}

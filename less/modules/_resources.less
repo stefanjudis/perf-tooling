@@ -1,79 +1,73 @@
 .resources {
-  .list-unstyled;
-  margin: -.25rem auto .25rem;
+  list-style: none;
+  margin: -.5%;
+  padding: 0;
+
+  @media (min-width: @media--small) {
+    margin: -.5% auto 3rem;
+    max-width: 75%;
+  }
 
   li {
     display: inline-block;
-    min-width: 12rem;
-    padding: .25rem;
-    position: relative;
-    text-align: left;
-    width: (100% / 2);
+    font-size: .75rem;
+    margin: .5%;
+    width: 100% / 2 - 1;
+
+    @media (min-width: @media--tiny) {
+      width: 100% / 3 - 1;
+    }
+
+    @media (min-width: @media--small) {
+      width: auto;
+    }
+
   }
 
   a {
-    border-radius: 2rem;
-    color: @color-bg;
+    .clearfix();
+    border-radius: 999px;
+    color: @base__bgcolor;
     display: block;
-    margin-bottom: .5rem;
-    padding: .5rem 1rem;
+    padding: .5rem .75rem;
+    position: relative;
+
+    @media (min-width: @media--small) {
+      border-radius: 50%;
+      padding: .75rem;
+
+      &:focus,
+      &:hover {
+
+        .tooltip {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+      }
+
+    }
+
   }
 
-  span {
-    color: @color-bg;
-    display: block;
-    position: absolute;
-    right: 1rem;
-    text-align: center;
-    top: .75rem;
+  .stars {
+    float: right;
 
-    &:after {
-      content: '☆';
-      margin-left: .25rem;
+    @media (min-width: @media--small) {
+      color: @base__color;
+      left: 50%;
+      position: absolute;
+      top: 120%;
+      transform: translateX(-50%);
+      white-space: nowrap;
     }
 
   }
 
   svg {
     display: none;
-    fill: #fff;
-    height: 2rem;
-    width: 2rem;
-  }
 
-  @media (min-width: @media-small) {
-    max-width: 75%;
-
-    li {
-      min-width: inherit;
-      width: auto;
-    }
-
-    a {
-      border-radius: 50%;
-      height: 3rem;
-      padding: .5rem;
-      width: 3rem;
-    }
-
-    span {
-      color: @color;
-      left: 0;
-      padding-top: 1.5rem;
-      position: relative;
-      top: 0;
-
-      &:after {
-        left: 0;
-        margin: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-
-    }
-
-    svg {
+    @media (min-width: @media--small) {
       display: inline-block;
     }
 
@@ -81,23 +75,26 @@
 
 }
 
-.resource {
+.resource(@iterator:1) when(@iterator <= length(@resources)) {
+  @name: extract(extract(@resources, @iterator), 1);
+  @color: extract(extract(@resources, @iterator), 2);
 
-  .-(@i: length(@resources)) when (@i > 0) {
+  .resource--@{name} {
 
-    @resource-name: e(extract(@resources, @i));
-    @resource: ~'color-@{resource-name}';
-    @resource-hover: ~'color-@{resource-name}-hover';
+    a {
+      background: @color;
 
-    &-@{resource-name} {
-      background: @@resource;
-
+      &:focus,
       &:hover {
-        background: @@resource-hover;
+        background: lighten(@color, 10%);
       }
 
-    } .-((@i - 1));
+    }
 
-  } .-;
+  }
+
+  .resource((@iterator + 1));
 
 }
+
+.resource();

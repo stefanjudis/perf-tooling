@@ -1,0 +1,15 @@
+{
+  "name" : "Moar Performance!",
+  "authors" : [
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
+  "date" : "2015-04-24",
+  "stats" : {
+    "length" : 669
+  },
+  "url" : "http://aerotwist.com/blog/moar-performance/",
+  "tags" : [ "animations", "jank free" ]
+}

@@ -1,6 +1,8 @@
 {
   "name" : "Keepfast",
-  "cli" : "https://github.com/davidsonfellipe/keepfast",
+  "cli" : {
+    "url" : "https://github.com/davidsonfellipe/keepfast"
+  },
   "description" : "Tool to integrate multiple performance indicators. Allowing to manage the history of changes in these indicators during the development cycle of the application. The main indicators will be page loading time, page size, and score related to pagespeed and yslow.",
   "tags" : [ "monitoring", "metrics" ]
 }

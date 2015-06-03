@@ -1,6 +1,9 @@
 {
   "name" : "DareBoost",
-  "service" : "https://www.dareboost.com",
+  "service" : {
+    "url" : "https://www.dareboost.com",
+    "isPaid": true
+  },
   "description" : "DareBoost offers performance analysis and monitoring (real browsers). It integrates Google Page Speed, YSlow, W3C validators and its own best practices, with tailor-made tips on specific technologies like jQuery, WordPress, etc",
   "tags" : [ "metrics" ]
 }

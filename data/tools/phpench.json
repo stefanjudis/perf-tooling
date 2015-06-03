@@ -1,6 +1,8 @@
 {
-"name" : "PHPench",
-"description" : "PHPench creates a graphical output for a PHP benchmark. Plot the runtime of any function in realtime with GnuPlot and create an image out of the result.",
-"php" : "https://github.com/mre/PHPench",
-"tags" : [ "benchmark" ]
+  "name" : "PHPench",
+  "php" : {
+    "url" : "https://github.com/mre/PHPench"
+  },
+  "description" : "PHPench creates a graphical output for a PHP benchmark. Plot the runtime of any function in realtime with GnuPlot and create an image out of the result.",
+  "tags" : [ "benchmark" ]
 }

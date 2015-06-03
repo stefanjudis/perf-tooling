@@ -1,10 +1,20 @@
 {
   "name" : "CSSShrink",
-  "broccoli" : "https://github.com/filippovdaniil/broccoli-cssshrink",
-  "grunt" : "https://github.com/JohnCashmore/grunt-cssshrink",
-  "gulp" : "https://github.com/torrottum/gulp-cssshrink",
-  "module" : "https://github.com/stoyan/cssshrink",
-  "service": "http://cssshrink.com/",
+  "broccoli" : {
+    "url" : "https://github.com/filippovdaniil/broccoli-cssshrink"
+  },
+  "grunt" : {
+    "url" : "https://github.com/JohnCashmore/grunt-cssshrink"
+  },
+  "gulp" : {
+    "url" : "https://github.com/torrottum/gulp-cssshrink"
+  },
+  "module" : {
+    "url" : "https://github.com/stoyan/cssshrink"
+  },
+  "service": {
+    "url" : "http://cssshrink.com/"
+  },
   "description" : "CSS minifier - Because CSS is on the critical path to rendering pages. It must be small! Or else!",
   "tags" : [ "css", "minification" ]
 }

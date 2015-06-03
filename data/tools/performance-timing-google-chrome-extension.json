@@ -1,6 +1,8 @@
 {
   "name" : "performance-timing-google-chrome-extension",
-  "chrome" : "https://github.com/GregM/performance-timing-google-chrome-extension",
+  "chrome" : {
+    "url" : "https://github.com/GregM/performance-timing-google-chrome-extension"
+  },
   "description" : "Web Performance Timing API Google Chrome Extension.",
   "tags" : [ "metrics", "timings" ]
 }

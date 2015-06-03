@@ -1,8 +1,14 @@
 {
-"name" : "sharp",
-"description" : "The typical use case for this high speed Node.js module is to convert large images of many formats to smaller, web-friendly JPEG, PNG and WebP images of varying dimensions.",
-"grunt": "https://github.com/unindented/grunt-sharp",
-"gulp": "https://github.com/mahnunchik/gulp-responsive",
-"module" : "https://github.com/lovell/sharp",
-"tags" : [ "compression", "images" ]
+  "name" : "sharp",
+  "grunt": {
+    "url" : "https://github.com/unindented/grunt-sharp"
+  },
+  "gulp": {
+    "url" : "https://github.com/mahnunchik/gulp-responsive"
+  },
+  "module" : {
+    "url" : "https://github.com/lovell/sharp"
+  },
+  "description" : "The typical use case for this high speed Node.js module is to convert large images of many formats to smaller, web-friendly JPEG, PNG and WebP images of varying dimensions.",
+  "tags" : [ "compression", "images" ]
 }
