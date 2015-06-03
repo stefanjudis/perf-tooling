@@ -1,0 +1,15 @@
+{
+  "name" : "HTTP/2 is here, let's optimize!",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "date" : "2015-06-03",
+  "stats" : {
+    "length" : 43
+  },
+  "tags" : [ "http2", "network" ],
+  "url" : "https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/present"
+}
