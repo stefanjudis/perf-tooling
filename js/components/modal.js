@@ -11,6 +11,7 @@
     modal          : document.getElementById( 'modal' ),
     modalContainer : document.getElementById( 'modalContainer' ),
     modalContent   : document.getElementById( 'modalContent' ),
+    tabBtn         : document.getElementById( 'modalOpenTab' ),
     closeBtn       : document.getElementById( 'modalClose' )
   };
 
@@ -93,6 +94,8 @@
       elements.modal.setAttribute( 'aria-hidden', false );
       elements.modal.classList.add( 'is-active' );
       elements.modalContent.innerHTML = filteredList[ 0 ].html;
+      console.log(filteredList[0]);
+      elements.tabBtn.href = filteredList[ 0 ].url;
 
       var iframe = elements.modalContent.querySelector( 'iframe' );
 

@@ -109,7 +109,8 @@
           return {
             fuzzy : entry.fuzzy,
             id    : entry.id,
-            html  : entry.html
+            html  : entry.html,
+            url   : entry.url
           }
         } )
       ) %>;

@@ -10,6 +10,7 @@
       <div class="modal__content">
         <div id="modalContent" class="embed embed--3-2"></div>
       </div>
+      <a id="modalOpenTab" target="_blank">Open in new tab</a>
     </div>
   </div>
 </div>
