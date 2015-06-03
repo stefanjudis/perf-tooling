@@ -1,0 +1,15 @@
+{
+  "name" : "ResourceTiming in Practice",
+  "authors" : [
+    {
+      "name" : "Nic Jansma",
+      "twitter" : "@nicj"
+    }
+  ],
+  "date" : "2015-05-28",
+  "stats" : {
+    "length" : 3958
+  },
+  "url" : "http://nicj.net/resourcetiming-in-practice/",
+  "tags" : [ "network", "metrics", "w3c" ]
+}
