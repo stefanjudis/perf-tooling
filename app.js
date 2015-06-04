@@ -92,7 +92,8 @@ function fetchGithubStars() {
       tool.stars = data.tools.stars || {};
 
       if (
-        value.url
+        value.url &&
+        /github/.test( value.url )
       ) {
         queue.push( function( done ) {
           var project = value.url.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
