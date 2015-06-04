@@ -1,12 +1,10 @@
 var express      = require( 'express' );
 var compression  = require( 'compression' );
-var md5          = require( 'MD5' );
 var app          = express();
 var fs           = require( 'fs' );
 var fuzzify      = require( './lib/fuzzify' );
 var _            = require( 'lodash' );
 var minify       = require( 'html-minifier' ).minify;
-var request      = require( 'request' );
 var config       = require( './config/config' );
 var async        = require( 'async' );
 var cookieParser = require( 'cookie-parser' );
@@ -224,7 +222,7 @@ function fetchVideoMeta() {
           setTimeout( function() {
             done( null );
           }, config.timings.requestDelay );
-        } )
+        } );
       } );
     }
 
@@ -247,7 +245,7 @@ function fetchVideoMeta() {
           setTimeout( function() {
             done( null );
           }, config.timings.requestDelay );
-        } )
+        } );
       } );
     }
   } );
@@ -286,7 +284,7 @@ function fetchSlideMeta() {
             setTimeout( function() {
               done( null );
             }, config.timings.requestDelay );
-          } )
+          } );
         } else {
           done( null );
         }
