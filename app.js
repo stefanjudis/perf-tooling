@@ -1,12 +1,10 @@
 var express      = require( 'express' );
 var compression  = require( 'compression' );
-var md5          = require( 'MD5' );
 var app          = express();
 var fs           = require( 'fs' );
 var fuzzify      = require( './lib/fuzzify' );
 var _            = require( 'lodash' );
 var minify       = require( 'html-minifier' ).minify;
-var request      = require( 'request' );
 var config       = require( './config/config' );
 var async        = require( 'async' );
 var cookieParser = require( 'cookie-parser' );
@@ -53,12 +51,14 @@ var pages = {
  * Reduce I/O and read files only on start
  */
 var pageContent = {
-  css       : fs.readFileSync( './public/main-' + revisions.styles + '.css', 'utf8' ),
-  enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
-  hashes    : {
-    css     : revisions.styles,
-    js      : revisions.scripts,
-    svg     : revisions.svg
+  criticalCss : fs.readFileSync( 'css/index.css', 'utf8' ),
+  css         : fs.readFileSync( './public/main-' + revisions.styles + '.css', 'utf8' ),
+  enhance     : fs.readFileSync( './public/enhance.js', 'utf8' ),
+  loadCss     : fs.readFileSync( 'js/helper/load-css.js', 'utf8' ),
+  hashes      : {
+    css       : revisions.styles,
+    js        : revisions.scripts,
+    svg       : revisions.svg
   },
   templates : {
     index : fs.readFileSync( config.templates.index ),
@@ -403,12 +403,14 @@ function renderPage( type, options ) {
     _.template(
       pageContent.templates[ template ],
       {
+        criticalCss      : pageContent.criticalCss,
         css              : pageContent.css,
         cssCookie        : cssCookie,
         enhance          : pageContent.enhance,
         cdn              : config.cdn,
         contributors     : data.contributors,
         debug            : !! debug,
+        loadCss          : pageContent.loadCss,
         partial          : partial,
         people           : data.people,
         platforms        : config.platforms,

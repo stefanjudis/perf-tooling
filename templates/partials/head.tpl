@@ -29,6 +29,16 @@
     }
   </script>
 
+  <style><%= criticalCss %></style>
+
+  <script>
+    <%= loadCss %>
+    loadCSS( '<%= cdn %>/main.css' )
+  </script>
+
+  <noscript>
+    <link rel="stylesheet" href="<%= cdn %>/main.css">
+  </noscript>
   <meta name="maincss"  content="/main-<%= hash.css %>.css">
   <% if ( !cssCookie || cssCookie !== hash.css ) { %>
   <style><%= css %></style>
