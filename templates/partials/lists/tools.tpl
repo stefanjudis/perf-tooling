@@ -22,7 +22,7 @@
 
             <li class="resource--<%= platform.name %>">
 
-              <a href="<%= tool[ platform.name ] %>" title="Link to <%= platform.description %>" target="_blank">
+              <a href="<%= tool[ platform.name ].url %>" title="Link to <%= platform.description %>" target="_blank">
                 <svg class="icon">
                   <use xlink:href="/icons-<%= hash.svg %>.svg#icon-<%= platform.name %>" />
                 </svg>
