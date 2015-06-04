@@ -12,7 +12,7 @@
 
   // load github avatars right after page load
   window.addEventListener( 'load', function() {
-    var contributors = document.querySelectorAll( '.contributor > a' );
+    var contributors = document.querySelectorAll( '.contributors a' );
     var length       = contributors.length;
 
     for( var i = 0; i < length; ++i ) {
