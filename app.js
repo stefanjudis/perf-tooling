@@ -92,15 +92,10 @@ function fetchGithubStars() {
       tool.stars = data.tools.stars || {};
 
       if (
-        key !== 'description' &&
-        key !== 'name' &&
-        key !== 'type' &&
-        key !== 'tags' &&
-        key !== 'fuzzy' &&
-        /github/.test( value )
+        value.url
       ) {
         queue.push( function( done ) {
-          var project = value.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
+          var project = value.url.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
 
           helpers.github.getStars(
             project,

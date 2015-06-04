@@ -1,6 +1,8 @@
 {
   "name" : "Responsive Images Extender",
-  "grunt" : "https://github.com/smaxtastic/grunt-responsive-images-extender",
+  "grunt" : {
+    "url" : "https://github.com/smaxtastic/grunt-responsive-images-extender"
+  },
   "description" : "Extend HTML image tags with srcset and sizes attributes to leverage native responsive images.",
   "tags" : [ "images", "picture element", "rwd" ]
 }

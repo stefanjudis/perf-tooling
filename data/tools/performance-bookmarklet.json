@@ -1,8 +1,14 @@
 {
   "name" : "performance-bookmarklet",
-  "bookmarklet" : "https://github.com/micmro/performance-bookmarklet",
-  "chrome" : "https://chrome.google.com/webstore/detail/performance-analyser/djgfmlohefpomchfabngccpbaflcahjf",
-  "firefox" : "https://addons.mozilla.org/en-US/developers/addon/performance-analyser",
+  "bookmarklet" : {
+    "url" : "https://github.com/micmro/performance-bookmarklet"
+  },
+  "chrome" : {
+    "url" : "https://chrome.google.com/webstore/detail/performance-analyser/djgfmlohefpomchfabngccpbaflcahjf"
+  },
+  "firefox" : {
+    "url" : "https://addons.mozilla.org/en-US/developers/addon/performance-analyser"
+  },
   "description" : "Bookmarklet, Chrome extension and Firefox add-on to analyze the current page through the Resource, Navigation and User Timing API - requests by type, domain, load times, marks and more. Sort of a light live WebPageTest.",
   "tags" : [ "metrics", "timings", "loading" ]
 }

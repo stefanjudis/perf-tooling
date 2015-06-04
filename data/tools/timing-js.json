@@ -1,6 +1,8 @@
 {
   "name" : "timing.js",
-  "javascript" : "https://github.com/addyosmani/timing.js",
+  "javascript" : {
+    "url" : "https://github.com/addyosmani/timing.js"
+  },
   "description" : "Timing.js is a small set of helpers for working with the Navigation Timing API to identify where your application is spending its time. Useful as a standalone script, DevTools Snippet or bookmarklet.",
   "tags" : [ "benchmark", "network" ]
 }
