@@ -101,7 +101,7 @@ module.exports = {
     }
   ],
   timings : {
-    requestDelay : 250,
+    requestDelay : 500,
     refresh      : 1000 * 60 * 60 * 12
   },
   site      : {
