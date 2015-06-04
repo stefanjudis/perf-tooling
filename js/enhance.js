@@ -126,7 +126,7 @@
     loadCSS( cssRevision.content );
 
     // set cookie to mark this file fetched
-    cookie( fullCSSKey, cssRevision.content.slice( 0, -4 ).split( '-' )[ 1 ], 7 );
+    cookie( fullCSSKey, cssRevision.content.match( /.*-(.*?).css$/ )[ 1 ], 7 );
   }
 
   /**
