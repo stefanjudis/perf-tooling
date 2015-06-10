@@ -1,0 +1,8 @@
+{
+  "name" : "Steady.js",
+  "javascript" : {
+    "url" : "https://github.com/WPOTools/steady.js"
+  },
+  "description" : "A module to do some logic on the `onscroll` event without performance regressions in a @media-query like conditions.",
+  "tags" : [ "jank free", "scrolling" ]
+}
