@@ -1,0 +1,11 @@
+{
+  "name" : "Supercharging page load",
+  "authors" : [
+    {
+      "name" : "Jake Archibald",
+      "twitter" : "@jaffathecake"
+    }
+  ],
+  "youtubeId" : "d5_6yHixpsQ",
+  "tags" : [ "Service Worker", "loading" ]
+}
