@@ -1,5 +1,8 @@
 {
   "name" : "SpeedCurve",
+  "module" : {
+    "url" : "https://github.com/felipemorais/speedcurve-api"
+  },
   "service" : {
     "url" : "http://speedcurve.com/",
     "isPaid": true
