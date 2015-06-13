@@ -1,0 +1,15 @@
+{
+  "name" : "What are third party components doing to your site?",
+  "authors": [
+    {
+      "name" : "Andy Davies",
+      "twitter" : "@AndyDavies"
+    },
+    {
+      "name" : "Siman Hearne",
+      "twitter" : "@simehearne"
+    }
+  ],
+  "youtubeId" : "G1BiyYOnjjk",
+  "tags" : [ "loading", "critical", "network" ]
+}
