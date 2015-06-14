@@ -1,0 +1,15 @@
+{
+  "name" : "Automate Your Site's Front End Performance",
+  "authors" : [
+    {
+      "name" : "Kitt Hodsden",
+      "twitter" : "@kitt"
+    }
+  ],
+  "date" : "2015-05-14",
+  "stats" : {
+    "length" : 199
+  },
+  "tags" : [ "budget", "metrics", "automation" ],
+  "url" : "https://speakerdeck.com/kitt/devobjective-automate-your-sites-front-end-performance"
+}
