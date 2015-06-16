@@ -1,5 +1,8 @@
 {
   "name" : "UnCSS",
+  "broccoli" : {
+    "url" : "https://github.com/sindresorhus/broccoli-uncss"
+  },
   "grunt" : {
     "url" : "https://github.com/addyosmani/grunt-uncss"
   },
