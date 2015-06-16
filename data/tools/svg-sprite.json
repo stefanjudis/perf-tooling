@@ -6,7 +6,7 @@
   "gulp" : {
     "url" : "https://github.com/jkphl/gulp-svg-sprite"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/jkphl/svg-sprite"
   },
   "description" : "SVG sprites & stacks galore — Node.js module that reads in a bunch of SVG files, optimizes them and creates SVG sprites in various flavours along with suitable stylesheet resources (e.g. CSS, Sass, LESS, Stylus, etc.)",

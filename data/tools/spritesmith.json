@@ -9,7 +9,7 @@
   "gulp" : {
     "url" : "https://github.com/twolfson/gulp.spritesmith"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/Ensighten/spritesmith"
   },
   "description" : "Utility that takes sprites and converts them into a stylesheet and its coordinates.",

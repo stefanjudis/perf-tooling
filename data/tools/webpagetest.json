@@ -3,7 +3,7 @@
   "grunt" : {
     "url" : "https://github.com/sideroad/grunt-wpt"
   },
-  "module": {
+  "node": {
     "url" : "https://github.com/marcelduran/webpagetest-api"
   },
   "service" : {

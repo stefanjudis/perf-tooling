@@ -9,7 +9,7 @@
   "gulp" : {
     "url" : "https://github.com/torrottum/gulp-cssshrink"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/stoyan/cssshrink"
   },
   "service": {

@@ -12,7 +12,7 @@
   "gulp" : {
     "url" : "https://github.com/sindresorhus/gulp-vulcanize"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/Polymer/vulcanize"
   },
   "description" : "Concatenate a set of Web Components into one file.",

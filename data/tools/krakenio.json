@@ -1,6 +1,6 @@
 {
   "name" : "Kraken.io",
-  "module" : {
+  "node" : {
     "url" : "https://github.com/kraken-io/kraken-node"
   },
   "php" : {

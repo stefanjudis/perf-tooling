@@ -12,7 +12,7 @@
   "gulp" : {
     "url" : "https://github.com/ben-eb/gulp-cssnano"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/ben-eb/cssnano"
   },
   "description" : "A modular minifier, built on top of the PostCSS ecosystem.",

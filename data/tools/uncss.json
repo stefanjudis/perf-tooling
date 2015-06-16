@@ -6,7 +6,7 @@
   "gulp" : {
     "url" : "https://github.com/ben-eb/gulp-uncss"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/giakki/uncss"
   },
   "description" : "UnCSS is a tool that removes unused CSS from your stylesheets. It works across multiple files and supports Javascript-injected CSS.",

@@ -1,6 +1,6 @@
 {
   "name" : "inline-critical",
-  "module" : {
+  "node" : {
     "url" : "https://github.com/bezoerb/inline-critical"
   },
   "description" : "Inline critical-path css and load the existing stylesheets asynchronously. Existing link tags will also be wrapped in &lt;noscript&gt; so the users with javscript disabled will see the site rendered normally.",

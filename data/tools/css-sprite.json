@@ -9,7 +9,7 @@
   "gulp" : {
     "url" : "https://github.com/aslansky/css-sprite#usage-with-gulp"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/aslansky/css-sprite"
   },
   "description" : "A css sprite generator that generates sprites and proper css files out of a directory of images.",

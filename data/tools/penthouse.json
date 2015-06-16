@@ -6,7 +6,7 @@
   "grunt" : {
     "url" : "https://github.com/fatso83/grunt-penthouse"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/pocketjoso/penthouse"
   },
   "service" : {

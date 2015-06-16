@@ -64,12 +64,12 @@ module.exports = {
       description : 'Mac App'
     },
     {
-      name        : 'module',
-      description : 'Node Module'
-    },
-    {
       name        : 'nginx',
       description : 'Nginx Module'
+    },
+    {
+      name        : 'node',
+      description : 'Node Module'
     },
     {
       name        : 'php',

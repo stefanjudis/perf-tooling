@@ -6,7 +6,7 @@
   "gulp" : {
     "url" : "https://github.com/jonkemp/gulp-inline-css"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/Automattic/juice"
   },
   "description" : "Inline your CSS properties into the style attribute in an html file. Useful for emails.",
