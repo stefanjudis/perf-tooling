@@ -1,0 +1,11 @@
+{
+  "name" : "Boom",
+  "cli" : {
+    "url" : "https://github.com/rakyll/boom"
+  },
+  "module" : {
+    "url" : "https://github.com/rakyll/boom"
+  },
+  "description" : "Boom is a tiny program that sends some load to a web application.",
+  "tags" : [ "metrics", "loading" ]
+}
