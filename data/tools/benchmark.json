@@ -6,7 +6,7 @@
   "gulp" : {
     "url" : "https://github.com/VicNumber21/gulp-benchmark"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/bestiejs/benchmark.js"
   },
   "description" : "A robust benchmarking library that supports high-resolution timers & returns statistically significant results. As seen on jsPerf.",

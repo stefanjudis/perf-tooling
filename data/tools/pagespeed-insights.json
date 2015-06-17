@@ -12,7 +12,7 @@
   "gulp" : {
     "url" : "https://github.com/addyosmani/psi-gulp-sample"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/addyosmani/psi"
   },
   "service" : {

@@ -9,7 +9,7 @@
   "gulp" : {
     "url" : "https://github.com/romeovs/gulp-zopfli"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/pierreinglebert/node-zopfli"
   },
   "description" : "Bindings for Zopfli compressing lib. Compress gzip files 5% better than gzip. It is considerably slower than gzip (~100x) so you may want to use it only for static content and cached resources.",

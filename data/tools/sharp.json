@@ -6,7 +6,7 @@
   "gulp": {
     "url" : "https://github.com/mahnunchik/gulp-responsive"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/lovell/sharp"
   },
   "description" : "The typical use case for this high speed Node.js module is to convert large images of many formats to smaller, web-friendly JPEG, PNG and WebP images of varying dimensions.",

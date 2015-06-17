@@ -9,7 +9,7 @@
   "gulp" : {
     "url" : "https://github.com/1000ch/gulp-stylestats"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/t32k/stylestats"
   },
   "service" : {

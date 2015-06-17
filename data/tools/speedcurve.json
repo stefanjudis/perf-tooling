@@ -1,6 +1,6 @@
 {
   "name" : "SpeedCurve",
-  "module" : {
+  "node" : {
     "url" : "https://github.com/felipemorais/speedcurve-api"
   },
   "service" : {
