@@ -1,0 +1,11 @@
+{
+  "name" : "PurifyCSS",
+  "grunt" : {
+    "url" : "https://github.com/purifycss/grunt-purifycss"
+  },
+  "node" : {
+    "url" : "https://github.com/purifycss/purifycss"
+  },
+  "description" : "Detects which CSS classes your app is using and creates a file without the unused CSS. Able to also detect dynamically-loaded CSS classes in your javascript.",
+  "tags" : [ "css" ]
+}
