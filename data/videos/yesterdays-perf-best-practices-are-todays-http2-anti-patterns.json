@@ -1,0 +1,11 @@
+{
+  "name" : "Yesterday's perf best-practices are today's HTTP/2 anti-patterns",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "youtubeId" : "yURLTwZ3ehk",
+  "tags" : [ "HTTP/2", "network" ]
+}
