@@ -1,0 +1,15 @@
+{
+  "name" : "Introduction to WebP",
+  "authors" : [
+    {
+      "name" : "Shogo Sensui",
+      "twitter" : "@1000ch"
+    }
+  ],
+  "date" : "2015-05-03",
+  "stats" : {
+    "length" : 3583
+  },
+  "url" : "https://medium.com/@1000ch/introduction-to-webp-b593dfe1d1d1",
+  "tags" : [ "image", "compression" ]
+}
