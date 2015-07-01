@@ -58,7 +58,24 @@
             )
           %>
 
-          <% if ( debug ) { %>
+          <% if ( debug ) {
+              if ( type === 'tools' ) {
+                var demoTool = {
+                  "name": "DEMO TOOL",
+                  "description": "A demo tool displaying all available platforms",
+                  "tags": [],
+                  "fuzzy": "",
+                  "hidden": true,
+                  "stars": {}
+                };
+
+                _.each( platforms , function( platform ) {
+                    demoTool[ platform.name ] = {};
+                } );
+
+                list.unshift( demoTool );
+              }
+            %>
             <pre><code><%= JSON.stringify( list, null, 2 ) %></code></pre>
             <pre><code><%= JSON.stringify( people, null, 2 ) %></code></pre>
           <% } %>
@@ -111,4 +128,3 @@
   </body>
 
 </html>
-
