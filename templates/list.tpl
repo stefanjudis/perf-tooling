@@ -61,16 +61,18 @@
           <% if ( debug ) {
               if ( type === 'tools' ) {
                 var demoTool = {
-                  "name": "DEMO TOOL",
+                  "name": "_DEMO TOOL_",
                   "description": "A demo tool displaying all available platforms",
                   "tags": [],
                   "fuzzy": "",
-                  "hidden": true,
+                  "hidden": false,
                   "stars": {}
                 };
 
                 _.each( platforms , function( platform ) {
                     demoTool[ platform.name ] = {};
+                    demoTool.stars[ platform.name ] = 10000;
+                    demoTool.tags.push( 'images', 'css', 'perf', '60fps' );
                 } );
 
                 list.unshift( demoTool );
@@ -78,7 +80,13 @@
             %>
             <pre><code><%= JSON.stringify( list, null, 2 ) %></code></pre>
             <pre><code><%= JSON.stringify( people, null, 2 ) %></code></pre>
-          <% } %>
+          <% } else {
+            if ( type === 'tools' ) {
+              _.remove( list, function( tool ) {
+                return tool.name === '_DEMO TOOL_';
+              } );
+            }
+          } %>
 
           <%=
             partial(
