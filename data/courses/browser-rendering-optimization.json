@@ -23,6 +23,7 @@
     "width" : 277,
     "height" : 170
   },
+  "isFree": true,
   "tags" : [ "60fps", "rendering", "optimisation" ],
   "url" : "https://www.udacity.com/course/browser-rendering-optimization--ud860"
 }
