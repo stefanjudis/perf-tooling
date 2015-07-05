@@ -33,6 +33,18 @@ var data         = {
   books    : getList( 'books' )
 };
 
+/**
+ * Demo tool object containing all available properties
+ * @type {Object}
+ */
+var demoTool = {
+  name        : '_DEMO TOOL_',
+  description : 'A demo tool displaying all available platforms',
+  tags        : [],
+  fuzzy       : '',
+  hidden      : false,
+  stars       : {}
+};
 
 /**
  * pages object representing
@@ -337,6 +349,28 @@ function getList( type ) {
   return list;
 }
 
+/**
+ * Add demo tool object
+ *
+ * @param  {Array}   toolList        List of all tools
+ * @param  {Boolean} isDemoToolAdded Indicator for existing demo tool
+ * @return {Array}                   Updated tool list
+ */
+function addDemoTool( toolList, isDemoToolAdded ) {
+  if ( !isDemoToolAdded ) {
+    demoTool.tags   = [];
+
+    _.each( config.platforms, function( platform ) {
+        demoTool[ platform.name ] = {};
+        demoTool.stars[ platform.name ] = 10000;
+        demoTool.tags.push( 'images', 'css', 'perf', '60fps' );
+    } );
+
+    toolList.unshift( demoTool );
+  }
+
+  return toolList;
+}
 
 /**
  * Render page
@@ -355,6 +389,11 @@ function renderPage( type, options ) {
   var query     = options.query;
   var debug     = options.debug;
   var cssCookie = options.cssCookie;
+  var isTools   = type === 'tools';
+
+  var isDemoToolAdded = isTools ? _.some( list, function( tool ) {
+    return tool.name === '_DEMO TOOL_';
+  } ) : false;
 
   if ( query ) {
     var queryValues  = query.split( ' ' );
@@ -373,6 +412,14 @@ function renderPage( type, options ) {
       entry.hidden = !match;
 
       return entry;
+    } );
+  }
+
+  if ( !! debug && isTools ) {
+    list = addDemoTool( list, isDemoToolAdded );
+  } else if ( isDemoToolAdded ) {
+    _.remove( list, function( tool ) {
+      return tool.name === '_DEMO TOOL_';
     } );
   }
 
