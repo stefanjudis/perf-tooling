@@ -21,7 +21,7 @@
 
       <div class="media__body">
 
-        <h3><a href="<%= course.url %>" class="link--text" title="Link to course" target="_blank"><%= course.name %><% if ( course.isFree ) { %> <small>(Free)</small><% } %></a></h3>
+        <h3><a href="<%= course.url %>" class="link--text" title="Link to course" target="_blank"><%= course.name %><% if ( course.isPaid ) { %> <small>(Paid)</small><% } %></a></h3>
 
         <%=
           partial(
