@@ -1,0 +1,15 @@
+{
+  "name" : "The Truth About Your Web App's Performance",
+  "authors" : [
+    {
+      "name" : "John Riviello",
+      "twitter" : "@JohnRiv"
+    }
+  ],
+  "date" : "2015-06-22",
+  "stats" : {
+    "length" : 102
+  },
+  "tags" : [ "metrics", "timing", "loading", "tooling", "monitoring"],
+  "url" : "http://www.slideshare.net/JohnRiv/the-truth-about-your-web-apps-performance"
+}
