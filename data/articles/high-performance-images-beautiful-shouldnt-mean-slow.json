@@ -1,0 +1,15 @@
+{
+  "name" : "High Performance Images: Beautiful Shouldn’t Mean Slow",
+  "authors" : [
+    {
+      "name" : "Guy Podjarny",
+      "twitter" : "@guypod"
+    }
+  ],
+  "date" : "2015-06-15",
+  "stats" : {
+    "length" : 1019
+  },
+  "url" : "https://medium.com/@guypod/high-performance-images-beautiful-shouldn-t-mean-slow-22ffc4e31663",
+  "tags" : [ "image", "loading", "optimization" ]
+}
