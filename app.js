@@ -363,7 +363,7 @@ function addDemoTool( toolList, isDemoToolAdded ) {
     _.each( config.platforms, function( platform ) {
         demoTool[ platform.name ] = {};
         demoTool.stars[ platform.name ] = 10000;
-        demoTool.tags.push( 'images', 'css', 'perf', '60fps' );
+        demoTool.tags = [ 'images', 'css', 'perf', '60fps' ];
     } );
 
     toolList.unshift( demoTool );
