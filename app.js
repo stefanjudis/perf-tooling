@@ -40,7 +40,7 @@ var data         = {
 var demoTool = {
   name        : '_DEMO TOOL_',
   description : 'A demo tool displaying all available platforms',
-  tags        : [],
+  tags        : [ 'images', 'css', 'perf', '60fps', 'http2', 'network' ],
   fuzzy       : '',
   hidden      : false,
   stars       : {}
@@ -350,26 +350,32 @@ function getList( type ) {
 }
 
 /**
- * Add demo tool object
+ * Add or remove demo tool object if debug mode is activated.
+ * Otherwise return the unchanged list
  *
- * @param  {Array}   toolList        List of all tools
- * @param  {Boolean} isDemoToolAdded Indicator for existing demo tool
- * @return {Array}                   Updated tool list
+ * @param  {Array}   list    List of all tools
+ * @param  {Boolean} debug   Debug mode or not
+ * @return {Array}           Updated tool list
  */
-function addDemoTool( toolList, isDemoToolAdded ) {
-  if ( !isDemoToolAdded ) {
-    demoTool.tags   = [];
+function demoToolHandler( list, debug ) {
+  var isDemoToolAdded = _.some( list, function( tool ) {
+    return tool.name === '_DEMO TOOL_';
+  } );
 
+  if ( !! debug && !isDemoToolAdded ) {
     _.each( config.platforms, function( platform ) {
         demoTool[ platform.name ] = {};
         demoTool.stars[ platform.name ] = 10000;
-        demoTool.tags = [ 'images', 'css', 'perf', '60fps' ];
     } );
 
-    toolList.unshift( demoTool );
+    list.unshift( demoTool );
+  } else if ( isDemoToolAdded ) {
+    _.remove( list, function( tool ) {
+      return tool.name === '_DEMO TOOL_';
+    } );
   }
 
-  return toolList;
+  return list;
 }
 
 /**
@@ -389,11 +395,6 @@ function renderPage( type, options ) {
   var query     = options.query;
   var debug     = options.debug;
   var cssCookie = options.cssCookie;
-  var isTools   = type === 'tools';
-
-  var isDemoToolAdded = isTools ? _.some( list, function( tool ) {
-    return tool.name === '_DEMO TOOL_';
-  } ) : false;
 
   if ( query ) {
     var queryValues  = query.split( ' ' );
@@ -415,12 +416,8 @@ function renderPage( type, options ) {
     } );
   }
 
-  if ( !! debug && isTools ) {
-    list = addDemoTool( list, isDemoToolAdded );
-  } else if ( isDemoToolAdded ) {
-    _.remove( list, function( tool ) {
-      return tool.name === '_DEMO TOOL_';
-    } );
+  if ( type === 'tools' ) {
+    list = demoToolHandler( list, debug );
   }
 
   /**
