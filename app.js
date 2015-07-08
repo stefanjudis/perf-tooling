@@ -30,7 +30,8 @@ var data         = {
   slides   : getList( 'slides' ),
   tools    : getList( 'tools' ),
   videos   : getList( 'videos' ),
-  books    : getList( 'books' )
+  books    : getList( 'books' ),
+  courses  : getList( 'courses' )
 };
 
 /**
@@ -55,7 +56,8 @@ var pages = {
   tools    : null,
   articles : null,
   slides   : null,
-  videos   : null
+  videos   : null,
+  courses  : null
 };
 
 
@@ -178,6 +180,8 @@ function fetchTwitterUserMeta() {
                   pages.books    = renderPage( 'books' );
                   pages.slides   = renderPage( 'slides' );
                   pages.videos   = renderPage( 'videos' );
+                  pages.courses  = renderPage( 'courses' );
+
 
                   // give it a bit of time
                   // to rest and not reach the API limits
@@ -197,6 +201,7 @@ function fetchTwitterUserMeta() {
   evalAuthors( 'articles' );
   evalAuthors( 'slides' );
   evalAuthors( 'books' );
+  evalAuthors( 'courses' );
 
   async.waterfall( queue, function() {
     console.log( 'DONE -> fetchTwitterUserMeta()' );
@@ -455,7 +460,8 @@ function renderPage( type, options ) {
           articles : data.articles.length,
           videos   : data.videos.length,
           slides   : data.slides.length,
-          books    : data.books.length
+          books    : data.books.length,
+          courses  : data.courses.length
         },
         site             : config.site,
         list             : list,

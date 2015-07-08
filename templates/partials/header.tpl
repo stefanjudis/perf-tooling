@@ -21,6 +21,7 @@
         <%= ( active === 'videos' ) ? '<li class="is-active"><span>Videos</span></li>' : '<li><a href="/videos" title="Link to videos">Videos</a></li>' %>
         <%= ( active === 'slides' ) ? '<li class="is-active"><span>Slides</span></li>' : '<li><a href="/slides" title="Link to slides">Slides</a></li>' %>
         <%= ( active === 'books' ) ? '<li class="is-active"><span>Books</span></li>' : '<li><a href="/books" title="Link to books">Books</a></li>' %>
+        <%= ( active === 'courses' ) ? '<li class="is-active"><span>Courses</span></li>' : '<li><a href="/courses" title="Link to courses">Courses</a></li>' %>
       </ul>
 
     </nav>
