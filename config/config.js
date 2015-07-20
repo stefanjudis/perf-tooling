@@ -52,6 +52,10 @@ module.exports = {
       description : 'Illustrator Extension'
     },
     {
+      name        : 'java',
+      description : 'Java Class'
+    },
+    {
       name        : 'javascript',
       description : 'JavaScript'
     },
