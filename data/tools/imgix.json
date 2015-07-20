@@ -1,0 +1,30 @@
+{
+  "name" : "imgix",
+  "java" : {
+    "url" : "https://github.com/imgix/imgix-java"
+  },
+  "javascript" : {
+    "url" : "https://github.com/imgix/imgix.js"
+  },
+  "module" : {
+    "url" : "https://github.com/imgix/imgix-core-js"
+  },
+  "php" : {
+    "url" : "https://github.com/imgix/imgix-php"
+  },
+  "python" : {
+    "url" : "https://github.com/imgix/imgix-python"
+  },
+  "ruby" : {
+    "url" : "https://github.com/imgix/imgix-rb"
+  },
+  "service" : {
+    "url" : "https://www.imgix.com/",
+    "isPaid" : true
+  },
+  "wordpress" : {
+    "url" : "https://github.com/imgix/imgix-wordpress"
+  },
+  "description" : "imgix solves images. We tackle the complexity of responsive imagery to help you deliver the highest value image to the right device, at the right time, every time. On-demand image processing, optimization and delivery.",
+  "tags" : [ "compression", "images", "responsive web design" ]
+}
