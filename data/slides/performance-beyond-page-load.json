@@ -1,0 +1,15 @@
+{
+  "name" : "Performance beyond page load",
+  "authors" : [
+    {
+      "name" : "Apoorv Saxena",
+      "twitter" : "@apoorv_saxena"
+    }
+  ],
+  "date" : "2015-07-24",
+  "stats" : {
+    "length" : 66
+  },
+  "tags" : [ "jank-free", "rendering" ],
+  "url" : "http://www.slideshare.net/ApoorvSaxena/performance-beyond-page-load-jquery-conference"
+}
