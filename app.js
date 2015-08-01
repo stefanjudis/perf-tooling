@@ -34,6 +34,18 @@ var data         = {
   courses  : getList( 'courses' )
 };
 
+/**
+ * Demo tool object containing all available properties
+ * @type {Object}
+ */
+var demoTool = {
+  name        : '_DEMO TOOL_',
+  description : 'A demo tool displaying all available platforms',
+  tags        : [ 'images', 'css', 'perf', '60fps', 'http2', 'network' ],
+  fuzzy       : '',
+  hidden      : false,
+  stars       : {}
+};
 
 /**
  * pages object representing
@@ -342,6 +354,34 @@ function getList( type ) {
   return list;
 }
 
+/**
+ * Add or remove demo tool object if debug mode is activated.
+ * Otherwise return the unchanged list
+ *
+ * @param  {Array}   list    List of all tools
+ * @param  {Boolean} debug   Debug mode or not
+ * @return {Array}           Updated tool list
+ */
+function demoToolHandler( list, debug ) {
+  var isDemoToolAdded = _.some( list, function( tool ) {
+    return tool.name === '_DEMO TOOL_';
+  } );
+
+  if ( !! debug && !isDemoToolAdded ) {
+    _.each( config.platforms, function( platform ) {
+        demoTool[ platform.name ] = {};
+        demoTool.stars[ platform.name ] = 10000;
+    } );
+
+    list.unshift( demoTool );
+  } else if ( isDemoToolAdded ) {
+    _.remove( list, function( tool ) {
+      return tool.name === '_DEMO TOOL_';
+    } );
+  }
+
+  return list;
+}
 
 /**
  * Render page
@@ -379,6 +419,10 @@ function renderPage( type, options ) {
 
       return entry;
     } );
+  }
+
+  if ( type === 'tools' ) {
+    list = demoToolHandler( list, debug );
   }
 
   /**
