@@ -1,0 +1,11 @@
+{
+  "name" : "Pageload Perf Audits with DevTools Filmstrip in Chrome",
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    }
+  ],
+  "youtubeId" : "tCfF6HI0JKs",
+  "tags" : [ "DevTools", "loading", "timeline" ]
+}
