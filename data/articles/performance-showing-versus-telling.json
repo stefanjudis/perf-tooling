@@ -1,0 +1,15 @@
+{
+  "name" : "Performance: Showing Versus Telling",
+  "authors" : [
+    {
+      "name" : "Lara Hogan",
+      "twitter" : "@lara_hogan"
+    }
+  ],
+  "date" : "2015-07-14",
+  "stats" : {
+    "length" : 1052
+  },
+  "url" : "http://alistapart.com/article/performance-showing-versus-telling",
+  "tags" : [ "monitoring", "performance culture", "workflow" ]
+}
