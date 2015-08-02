@@ -1,0 +1,24 @@
+{
+  "name" : "Lean Websites",
+  "date" : "2015-06-30",
+  "authors" : [
+    {
+      "name" : "Barbara Bermes",
+      "twitter" : "@bbinto"
+    }
+  ],
+  "stats": {
+    "length": 250
+  },
+  "url" : "http://www.amazon.de/Lean-Websites-Barbara-Bermes/dp/0992279461",
+  "description" : "A practical book on website performance for web developers, concentrating mainly on front-end performance improvement. It covers plenty of solid theory, but is also packed with useful, real world hints and tips that you can use on your sites today. Topics covered include: User experience, design and performance Measuring and monitoring performance Setting up a page weight budget Network and server improvements Optimizing images and video Optimizing scripts and third party content Lean DOM operations The book also comes with a handy “cheat sheet” summarizing many of the key tips contained within the book.",
+  "img" : {
+    "src" : {
+      "filename": "lean-websites",
+      "types" : ["jpg", "webp"]
+    },
+    "width" : 200,
+    "height" : 262
+  },
+  "tags" : [ "budget", "monitoring", "optimizing"]
+}
