@@ -1,0 +1,15 @@
+{
+  "name" : "Eliminating Roundtrips with Preconnect",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "date" : "2015-08-17",
+  "stats" : {
+    "length": 828
+  },
+  "url" : "https://www.igvita.com/2015/08/17/eliminating-roundtrips-with-preconnect/",
+  "tags" : ["network"]
+}
