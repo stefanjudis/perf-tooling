@@ -1,0 +1,17 @@
+{
+  "name" : "The technology behind preview photos",
+  "authors" : [
+    {
+      "name" : "Brian K Cabral"
+    },
+    {
+      "name" : "Edward Kandrot"
+    }
+  ],
+  "date" : "2015-08-06",
+  "stats" : {
+    "length" : 1500
+  },
+  "url" : "https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/",
+  "tags" : [ "images", "compression" ]
+}
