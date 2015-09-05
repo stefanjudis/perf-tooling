@@ -1,0 +1,15 @@
+{
+  "name" : "Embracing the Network",
+  "authors" : [
+    {
+      "name" : "Patrick Hamann",
+      "twitter" : "@patrickhamann"
+    }
+  ],
+  "date" : "2015-09-03",
+  "stats" : {
+    "length" : 93
+  },
+  "tags" : [ "network", "offline" ],
+  "url" : "https://speakerdeck.com/patrickhamann/embracing-the-network-coldfront-september-2015"
+}
