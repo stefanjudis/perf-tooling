@@ -1,0 +1,23 @@
+{
+  "name" : "Website Optimization",
+  "date" : "2008-07-01",
+  "authors" : [
+    {
+      "name" : "Andrew B. King"
+    }
+  ],
+  "stats": {
+    "length": 398
+  },
+  "url" : "http://shop.oreilly.com/product/9780596515089.do",
+  "description" : "Remember when an optimized website was one that merely didn't take all day to appear? Times have changed. Today, website optimization can spell the difference between enterprise success and failure, and it takes a lot more know-how to achieve success. This book is a comprehensive guide to the tips, techniques, secrets, standards, and methods of website optimization.",
+  "img" : {
+    "src" : {
+      "filename" : "website-optimization",
+      "types" : [ "jpg", "webp" ]
+    },
+    "width" : 200,
+    "height" : 262
+  },
+  "tags" : [ "spa", "modularization", "mobile-first" ]
+}

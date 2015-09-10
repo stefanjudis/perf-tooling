@@ -1,0 +1,24 @@
+{
+  "name" : "Implementing Responsive Design: Building sites for an anywhere, everywhere web",
+  "date" : "2012-08-10",
+  "authors" : [
+    {
+      "name" : "Tim Kadlec",
+      "twitter" : "@tkadlec"
+    }
+  ],
+  "stats": {
+    "length": 288
+  },
+  "url" : "http://www.amazon.com/gp/product/0321821688",
+  "description" : "New devices and platforms emerge daily. Browsers iterate at a remarkable pace. Faced with this volatile landscape we can either struggle for control or we can embrace the inherent flexibility of the web. Responsive design is not just another technique--it is the beginning of the maturation of a medium and a fundamental shift in the way we think about the web. Implementing Responsive Design is a discussion about how this affects the way we design, build, and think about our sites.",
+  "img" : {
+    "src" : {
+      "filename" : "implementing-responsive-design",
+      "types" : [ "jpg", "webp" ]
+    },
+    "width" : 200,
+    "height" : 257
+  },
+  "tags" : [ "rwd", "mobile-first" ]
+}

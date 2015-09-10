@@ -1,0 +1,24 @@
+{
+  "name" : "High Performance Single Page Web Applications",
+  "date" : "2014-01-11",
+  "authors" : [
+    {
+      "name" : "Chris Love",
+      "twitter" : "@ChrisLove"
+    }
+  ],
+  "stats": {
+    "length": 395
+  },
+  "url" : "http://www.amazon.com/High-Performance-Single-Page-Applications-ebook/dp/B00HUW2HLQ",
+  "description" : "High Performance Single Page Web Applications breaks through developers' confusion and preconceptions about building a modern SPA web application. The book uses a demonstration application based on popular mobile movie applications. The public Rotten Tomatoes API is consumed to dynamically build content on demand. localStorage is used to manage data and markup to improve application load times and responsiveness. Responsive design techniques drive optimal experiences for devices of all sizes.",
+  "img" : {
+    "src" : {
+      "filename" : "high-performance-spa",
+      "types" : [ "jpg", "webp" ]
+    },
+    "width" : 200,
+    "height" : 320
+  },
+  "tags" : [ "spa", "modularisation", "mobile-first" ]
+}
