@@ -1,0 +1,25 @@
+{
+  "name" : "Performance Matters: Optimizing Page Load",
+  "authors" : [
+    {
+      "name" : "Adi Purdila",
+      "twitter" : "@adipurdila"
+    }
+  ],
+  "date" : "2015-09-09",
+  "stats" : {
+    "estimatedTime" : "1.6 hours",
+    "level" : "beginner"
+  },
+  "img" : {
+    "src" : {
+      "filename": "browser-rendering",
+      "types" : ["jpg", "webp"]
+    },
+    "width" : 277,
+    "height" : 192
+  },
+  "isPaid": true,
+  "tags" : [ "critical", "measuring", "optimisation" ],
+  "url" : "https://webdesign.tutsplus.com/courses/performance-matters-optimizing-page-load"
+}
