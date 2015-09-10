@@ -1,0 +1,24 @@
+{
+  "name" : "Time Is Money - The Business Value of Web Performance",
+  "date" : "2015-11-01",
+  "authors" : [
+    {
+      "name" : "Tammy Everts",
+      "twitter" : "@tameverts"
+    }
+  ],
+  "stats": {
+    "length": 100
+  },
+  "url" : "http://shop.oreilly.com/product/0636920041450.do",
+  "description" : "There are many excellent books about the technical aspects of web performance, but until now there’s been no clear source that outlines the bottom-line benefit of delivering a faster user experience. Time Is Money not only shows developers how to create a business case that they can present to a non-technical audience, but also helps executives understand the ROI of investing in faster web performance.",
+  "img" : {
+    "src" : {
+      "filename" : "time-is-money",
+      "types" : [ "jpg", "webp" ]
+    },
+    "width" : 200,
+    "height" : 262
+  },
+  "tags" : [ "ux", "business metrics" ]
+}
