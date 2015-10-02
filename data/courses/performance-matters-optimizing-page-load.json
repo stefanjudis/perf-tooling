@@ -13,7 +13,7 @@
   },
   "img" : {
     "src" : {
-      "filename": "browser-rendering",
+      "filename": "performance-matters-optimizing-page-load",
       "types" : ["jpg", "webp"]
     },
     "width" : 277,
