@@ -1,0 +1,19 @@
+{
+  "name" : "Introducing RAIL: A User-Centric Model For Performance",
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    },
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
+  "date" : "2015-10-02",
+  "stats" : {
+    "length" : 2033
+  },
+  "url" : "http://www.smashingmagazine.com/2015/10/rail-user-centric-model-performance/",
+  "tags" : [ "animation", "loading" ]
+}
