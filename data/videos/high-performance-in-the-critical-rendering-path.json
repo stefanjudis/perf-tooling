@@ -1,0 +1,11 @@
+{
+  "name" : "High Performance in the Critical Rendering Path",
+  "authors" : [
+    {
+      "name" : "Nicolas Bevacqua",
+      "twitter" : "@nzgb"
+    }
+  ],
+  "vimeoId" : "131634704",
+  "tags" : [ "critical", "loading", "render-path" ]
+}
