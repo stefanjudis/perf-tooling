@@ -1,0 +1,15 @@
+{
+  "name" : "Getting Started with Performance Budgets",
+  "authors" : [
+    {
+      "name" : "Tim Kadlec",
+      "twitter" : "@tkadlec"
+    }
+  ],
+  "date" : "2015-10-04",
+  "stats" : {
+    "length" : 164
+  },
+  "tags" : [ "budget", "metrics", "tooling" ],
+  "url" : "https://speakerdeck.com/tkadlec/getting-started-with-performance-budgets-at-highedweb-technical-academy-2015"
+}
