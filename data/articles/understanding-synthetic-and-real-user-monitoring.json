@@ -1,0 +1,15 @@
+{
+  "name" : "A beginner’s guide to understanding synthetic and real user monitoring",
+  "authors" : [
+    {
+      "name" : "Tammy Everts",
+      "twitter" : "@tameverts"
+    }
+  ],
+  "date" : "2015-04-29",
+  "stats" : {
+    "length" : 2131
+  },
+  "url" : "http://www.soasta.com/blog/synthetic-real-user-measurement-monitoring-rum/",
+  "tags" : [ "monitoring", "synthetic performance", "devtools" ]
+}
