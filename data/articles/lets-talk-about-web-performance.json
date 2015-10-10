@@ -1,0 +1,15 @@
+{
+  "name" : "Let's talk about Web Performance",
+  "authors" : [
+    {
+      "name" : "Nicolas Bevacqua",
+      "twitter" : "@nzgb"
+    }
+  ],
+  "date" : "2015-05-08",
+  "stats" : {
+    "length" : 3452
+  },
+  "url" : "http://ponyfoo.com/articles/talk-about-web-performance",
+  "tags" : [ "audit", "budget", "devtools" ]
+}
