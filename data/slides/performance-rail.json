@@ -1,0 +1,15 @@
+{
+  "name" : "Performance RAIL's",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "date" : "2015-05-08",
+  "stats" : {
+    "length" : 26
+  },
+  "tags" : [ "rendering", "animations", "metrics" ],
+  "url" : "https://docs.google.com/presentation/d/13AJe2Ip4etqA8qylrva7bEgu1_hAvsq_VQiVOAxwdcI/present?slide=id.p19"
+}
