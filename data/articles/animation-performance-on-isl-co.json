@@ -1,0 +1,15 @@
+{
+  "name" : "Optimizing Animation Performance On ISL.co",
+  "authors" : [
+    {
+      "name" : "Eli Fitch",
+      "twitter" : "@elifitch"
+    }
+  ],
+  "date" : "2015-08-31",
+  "stats" : {
+    "length" : 1206
+  },
+  "url" : "https://isl.co/2015/08/animation-performance-on-isl-co/",
+  "tags" : [ "60fps", "animations" ]
+}
