@@ -1,0 +1,15 @@
+{
+  "name" : "Analyze the right metrics - How to use Custom User Timings in Webpagetest",
+  "authors" : [
+    {
+      "name" : "Stefan Judis",
+      "twitter" : "@stefanjudis"
+    }
+  ],
+  "date" : "2015-05-27",
+  "stats" : {
+    "length" : 1258
+  },
+  "tags" : [ "metrics", "tooling" ],
+  "url" : "http://www.slideshare.net/stefanjudis/staying-in-the-fast-lane-tools-to-keep-your-site-speedy-and-light"
+}
