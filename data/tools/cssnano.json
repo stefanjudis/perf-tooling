@@ -4,7 +4,7 @@
     "url" : "https://github.com/sindresorhus/broccoli-cssnano"
   },
   "cli" : {
-    "url" : "https://github.com/ben-eb/cssnano"
+    "url" : "https://github.com/ben-eb/cssnano-cli"
   },
   "grunt" : {
     "url" : "https://github.com/sindresorhus/grunt-cssnano"
