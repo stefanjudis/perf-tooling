@@ -1,0 +1,15 @@
+{
+  "name" : "The case for HTTP/2 - EpicFEL 2015",
+  "authors" : [
+    {
+      "name" : "Andy Davies",
+      "twitter" : "@andydavies"
+    }
+  ],
+  "date" : "2015-09-27",
+  "stats" : {
+    "length" : 60
+  },
+  "tags" : [ "http2", "network" ],
+  "url" : "http://www.slideshare.net/AndyDavies/the-case-for-http2-epicfel-sept-2015"
+}
