@@ -1,0 +1,15 @@
+{
+  "name" : "Measuring the Performance of Single Page Applications",
+  "authors": [
+    {
+      "name" : "Nicholas Jansma",
+      "twitter" : "@nicj"
+    }
+  ],
+  "date" : "2015-10-13",
+  "stats" : {
+    "length" : 74
+  },
+  "tags" : [ "monitoring", "single page application" ],
+  "url" : "http://www.slideshare.net/nicjansma/measuring-the-performance-of-single-page-applications"
+}
