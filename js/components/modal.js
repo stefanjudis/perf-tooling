@@ -58,7 +58,7 @@
                         event.target :
                         event.target.parentNode;
 
-          if ( target.dataset.modal !== undefined ) {
+          if ( target.dataset && target.dataset.modal !== undefined ) {
             if ( target.dataset.modalContentId ) {
               elements.backLink = event.target;
 
