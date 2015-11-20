@@ -68,85 +68,91 @@
 
           <section id="features" class="site__section">
 
-            <div class="grid__row">
+            <div class="flexgrid__container">
 
-              <div class="grid__col grid__col--6">
+              <article class="article flexgrid__item">
 
-                <article class="article">
+                <h3><%= resourceCount.tools %> Tools</h3>
 
-                  <h3><%= resourceCount.tools %> Tools</h3>
+                <p>A rich collection of tools available to optimize and/or monitor your website's performance including bookmarklets, browser extensions, command line tools, node modules and grunt/gulp tasks.</p>
 
-                  <p>A rich collection of tools available to optimize and/or monitor your website's performance including bookmarklets, browser extensions, command line tools, node modules and grunt/gulp tasks.</p>
+                <div class="article__cta">
 
                   <a href="/tools" title="Link to tools" class="btn btn--large btn--primary">Explore Tools</a>
 
-                </article>
+                </div>
 
-              </div>
+              </article>
 
-              <div class="grid__col grid__col--6">
+              <article class="article flexgrid__item">
 
-                <article class="article">
+                <h3><%= resourceCount.articles %> Articles</h3>
 
-                  <h3><%= resourceCount.articles %> Articles</h3>
+                <p>An exclusive list of articles about best practices to build fast websites which will make your visitors happy.</p>
 
-                  <p>An exclusive list of articles about best practices to build fast websites which will make your visitors happy.</p>
+                <div class="article__cta">
 
                   <a href="/articles" title="Link to articles" class="btn btn--large btn--primary">Explore Articles</a>
 
-                </article>
+                </div>
 
-              </div>
+              </article>
 
-            </div>
+              <article class="article flexgrid__item">
 
-            <div class="grid__row">
+                <h3><%= resourceCount.videos %> Videos</h3>
 
-              <div class="grid__col grid__col--6">
+                <p>A collection of recent videos including performance-specific tips and tricks to build better and faster websites.</p>
 
-                <article class="article">
-
-                  <h3><%= resourceCount.videos %> Videos</h3>
-
-                  <p>A collection of recent videos including performance-specific tips and tricks to build better and faster websites.</p>
+                <div class="article__cta">
 
                   <a href="/videos" title="Link to videos" class="btn btn--large btn--primary">Explore Videos</a>
 
-                </article>
+                </div>
 
-              </div>
+              </article>
 
-              <div class="grid__col grid__col--6">
+              <article class="article flexgrid__item">
 
-                <article class="article">
+                <h3><%= resourceCount.slides %> Slidedecks</h3>
 
-                  <h3><%= resourceCount.slides %> Slidedecks</h3>
+                <p>A library of slides from great talks covering performance-related topics.</p>
 
-                  <p>A library of slides from great talks covering performance-related topics.</p>
+                <div class="article__cta">
 
                   <a href="/slides" title="Link to slides" class="btn btn--large btn--primary">Explore Slidedecks</a>
 
-                </article>
+                </div>
 
-              </div>
+              </article>
 
-            </div>
+              <article class="article flexgrid__item">
 
-            <div class="grid__row">
+                <h3><%= resourceCount.books %> Books</h3>
 
-              <div class="grid__col grid__col--6">
+                <p>Our books section features recommended books from some of the most influential authors in the field.</p>
 
-                <article class="article">
-
-                  <h3><%= resourceCount.books %> Books</h3>
-
-                  <p>Our books section features recommended books from some of the most influential authors in the field.</p>
+                <div class="article__cta">
 
                   <a href="/books" title="Link to tools" class="btn btn--large btn--primary">Explore Books</a>
 
-                </article>
+                </div>
 
-              </div>
+              </article>
+
+              <article class="article flexgrid__item">
+
+                <h3><%= resourceCount.courses %> Courses</h3>
+
+                <p>For self-learners, we include courses to get you going.</p>
+
+                <div class="article__cta">
+
+                  <a href="/courses" title="Link to tools" class="btn btn--large btn--primary">Explore Courses</a>
+
+                </div>
+
+              </article>
 
             </div>
 
