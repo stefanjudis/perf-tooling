@@ -45,4 +45,5 @@
   <link rel="icon" href="<%= cdn %>/apple-touch-icon-precomposed.png">
   <link rel="apple-touch-icon" href="<%= cdn %>/apple-touch-icon-precomposed.png">
 
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </head>
