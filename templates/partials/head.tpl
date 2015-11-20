@@ -4,11 +4,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="x-dns-prefetch-control" content="on">
 
-  <title><%= site.name %></title>
+  <title><%= ( name !== 'Index' ) ? name + ' | ' : '' %><%= site.name %></title>
 
   <meta name="theme-color" content="#01a5b1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Perf Tooling Today lists a lot of tools, articles, videos and slides to make the web faster. We cover resources to automize and monitore your workflow.">
+  <meta name="description" content="<%= site.descriptions[ type ] %>">
   <meta name="apple-mobile-web-app-title" content="perf-tooling">
 
   <script type="application/ld+json">
@@ -44,6 +44,10 @@
 
   <link rel="icon" href="<%= cdn %>/apple-touch-icon-precomposed.png">
   <link rel="apple-touch-icon" href="<%= cdn %>/apple-touch-icon-precomposed.png">
+
+  <% if ( typeof query !== 'undefined' && query.length ) { %>
+    <link rel="canonical" href="http://perf-tooling.today/<%= type %>" />
+  <% } %>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
