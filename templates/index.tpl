@@ -10,7 +10,9 @@
         site      : site,
         enhance   : enhance,
         cssCookie : cssCookie,
-        hash      : hash
+        hash      : hash,
+        name      : name,
+        type      : type
       }
     )
   %>

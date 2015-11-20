@@ -23,7 +23,7 @@ var uglify        = require( 'gulp-uglify' );
 var tasks         = require( 'gulp-task-listing' );
 var svgstore      = require( 'gulp-svgstore' );
 var mergeStream   = require( 'merge-stream' );
-var cmq           = require( 'gulp-combine-media-queries' );
+var mmq           = require( 'gulp-merge-media-queries' );
 var rev           = require( 'gulp-rev' );
 var jsoneditor    = require( 'gulp-json-editor' );
 var gulpif        = require( 'gulp-if' );
@@ -92,7 +92,7 @@ gulp.task( 'styles', function () {
     .pipe( csslint( '.csslintrc' ) )
     .pipe( csslint.reporter() )
     .pipe( prefix( 'last 1 version', '> 1%', 'ie 8', 'ie 7' ) )
-    .pipe( cmq( {
+    .pipe( mmq( {
       log: true
     } ) )
     .pipe( minifyCSS() )

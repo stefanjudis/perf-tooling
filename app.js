@@ -471,7 +471,8 @@ function renderPage( type, options ) {
           svg  : pageContent.hashes.svg
         },
         query            : query,
-        type             : type
+        type             : type,
+        name             : type.charAt( 0 ).toUpperCase() + type.slice( 1 )
       }
     ), {
       keepClosingSlash      : true,

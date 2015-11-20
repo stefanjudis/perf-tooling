@@ -14,7 +14,7 @@
 
         <figure class="media__obj--left">
 
-          <a href="<%= slide.url %>" title="Link to slide" target="_blank"><img src="<%= slide.thumbnail.url %>" width="170" height="128"></a>
+          <a href="<%= slide.url %>" title="Link to slide" target="_blank"><img src="<%= slide.thumbnail.url %>" width="170" height="128" alt="Preview of <%= slide.name %>"></a>
 
         </figure>
 

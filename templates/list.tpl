@@ -9,7 +9,10 @@
         cssCookie : cssCookie,
         site      : site,
         enhance   : enhance,
-        hash      : hash
+        hash      : hash,
+        name      : name,
+        type      : type,
+        query     : query
       }
     )
   %>
@@ -32,6 +35,7 @@
 
         <div class="grid__container">
 
+          <h1 class="posts__headline">List of performance <%= type %></h1>
 
           <%=
             partial(

@@ -109,7 +109,15 @@ module.exports = {
     refresh      : 1000 * 60 * 60 * 12
   },
   site      : {
-    name : 'Performance tooling today'
+    name   : 'Performance Tooling Today',
+    descriptions : {
+      index    : 'Perf Tooling Today lists a lot of tools, articles, videos, slides and courses to make the web faster. We cover resources to automize and monitore your workflow.',
+      tools    : 'Tooling plays a key role when developing fast websites. Perf Tooling Today lists a lot of tools that can help you improve your workflow.',
+      articles : 'Perf Tooling Today includes a lot of recent articles on best practices and new ways to improve the performance of your sites.',
+      slides   : 'Perf Tooling Today includes a lot of recent slidedecks on best practices and new ways to improve the performance of your sites.',
+      videos   : 'Perf Tooling Today includes a lot of recent videos on best practices and new ways to improve the performance of your sites.',
+      courses  : 'Perf Tooling Today includes a lot of recent courses on best practices and new ways to improve the performance of your sites.'
+    }
   },
   templates : {
     index : './templates/index.tpl',
