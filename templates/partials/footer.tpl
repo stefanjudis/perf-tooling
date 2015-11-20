@@ -8,7 +8,7 @@
     </svg>
      in Germany</span></p>
 
-     <p class="copyright">Stefan Judis & Marco Biedermann</p>
+     <p class="copyright">The Perf Tooling Team</p>
 
   </div>
 
