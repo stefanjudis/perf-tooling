@@ -3,35 +3,33 @@
     display: flex;
     flex-wrap: wrap;
 
-    .flexgrid-2 & {
+    &.flexgrid-2 {
       margin: 0 -2em;
-    }
 
-    .flexgrid-4 & {
-      margin: 0 -.5em;
-    }
-  }
+      .flexgrid__item {
+        flex: 0 0 100%;
+        padding: 1em 2em;
 
-  &__item {
-    .flexgrid-2 & {
-      flex: 0 0 100%;
-      padding: 1em 2m;
-
-      @media (min-width: @media--tiny) {
-        flex: 0 0 50%;
+        @media (min-width: @media--tiny) {
+          flex: 0 0 50%;
+        }
       }
     }
 
-    .flexgrid-4 & {
-      flex: 0 0 100%;
-      padding: .5em;
+    &.flexgrid-4 {
+      margin: 0 -0.5em;
 
-      @media (min-width: @media--tiny) {
-        flex: 0 0 50%;
-      }
+      .flexgrid__item {
+        flex: 0 0 100%;
+        padding: -0.5em;
 
-      @media (min-width: @media--medium) {
-        flex: 0 0 25%;
+        @media (min-width: @media--tiny) {
+          flex: 0 0 50%;
+        }
+
+        @media (min-width: @media--medium) {
+          flex: 0 0 25%;
+        }
       }
     }
   }
