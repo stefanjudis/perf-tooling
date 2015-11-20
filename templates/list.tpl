@@ -118,6 +118,8 @@
           }
         } )
       ) %>;
+
+      window.type = '<%= type %>';
     </script>
     <script src="<%= cdn %>/tooling-<%= hash.js %>.js" async></script>
 

@@ -34,6 +34,10 @@
       elements.modal.classList.remove( 'is-loaded' );
       elements.modalContent.innerHTML = '';
 
+      elements.body.removeEventListener( 'keydown', handleKeyDown );
+      elements.modal.removeEventListener( 'click', closeModal );
+      elements.closeBtn.removeEventListener( 'click', closeModal );
+
       elements.backLink.focus();
     }
 
@@ -50,23 +54,28 @@
         elements.list = document.querySelector( options.elements.list );
 
         elements.body.addEventListener( 'click', function( event ) {
-          if ( event.target.dataset.modal !== undefined ) {
-            if ( event.target.dataset.modalContentId ) {
+          var target = event.target.tagName === 'A' ?
+                        event.target :
+                        event.target.parentNode;
+
+          if ( target.dataset.modal !== undefined ) {
+            if ( target.dataset.modalContentId ) {
               elements.backLink = event.target;
 
               showModalForListItem(
                 event,
                 options.data,
-                event.target.title,
-                event.target.dataset.modalContentId
+                target.title,
+                target.dataset.modalContentId
               );
+
+              elements.body.addEventListener( 'keydown', handleKeyDown );
+              elements.modal.addEventListener( 'click', closeModal );
+              elements.closeBtn.addEventListener( 'click', closeModal );
             }
           }
         } );
 
-        elements.modal.addEventListener( 'click', closeModal );
-        elements.modal.addEventListener( 'keydown', handleKeyDown );
-        elements.closeBtn.addEventListener( 'click', closeModal );
       }
     }
   }
@@ -94,17 +103,16 @@
       elements.modal.setAttribute( 'aria-hidden', false );
       elements.modal.classList.add( 'is-active' );
       elements.modalContent.innerHTML = filteredList[ 0 ].html;
-      console.log(filteredList[0]);
       elements.tabBtn.href = filteredList[ 0 ].url;
 
       var iframe = elements.modalContent.querySelector( 'iframe' );
 
-      iframe.addEventListener( 'load', function() {
-        elements.body.classList.add( 'is-locked' );
-        elements.modal.classList.add( 'is-loaded' );
+      elements.body.classList.add( 'is-locked' );
+      elements.modal.classList.add( 'is-loaded' );
 
+      setTimeout( function() {
         elements.modalContainer.focus();
-      } );
+      }, 500  );
     }
   }
 

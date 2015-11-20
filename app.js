@@ -40,6 +40,7 @@ var data         = {
  */
 var demoTool = {
   name        : '_DEMO TOOL_',
+  id          : '_DEMO TOOL_'.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ),
   description : 'A demo tool displaying all available platforms',
   tags        : [ 'images', 'css', 'perf', '60fps', 'http2', 'network' ],
   fuzzy       : '',

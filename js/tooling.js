@@ -1,4 +1,4 @@
-( function( document, list ) {
+( function( document, list, type ) {
   /**
    * Add event for mobile navigation
    */
@@ -43,13 +43,15 @@
       data : list
     } );
 
-    window.perfTooling.components.modal.init( {
-      elements : {
-        list  : '.posts'
-      },
-      data : list
-    } );
+    if ( type === 'videos' || type === 'slides' ) {
+      window.perfTooling.components.modal.init( {
+        elements : {
+          list  : '.posts'
+        },
+        data : list
+      } );
+    }
   }
 
   initToggleNav();
-} )( document, window.list );
+} )( document, window.list, window.type );
