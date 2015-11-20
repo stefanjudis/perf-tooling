@@ -68,7 +68,7 @@
 
           <section id="features" class="site__section">
 
-            <div class="flexgrid__container">
+            <div class="flexgrid__container flexgrid-2">
 
               <article class="article flexgrid__item">
 
@@ -183,90 +183,6 @@
 
           <section class="site__section text-center">
 
-            <h3>Built by Stefan Judis<br>& Marco Biedermann</h3>
-
-            <ul class="list--inline list--unstyled">
-
-              <li>
-                <a href="https://twitter.com/stefanjudis" title="Link to Stefan on Twitter" target="_blank">
-                  <span class="visuallyhidden">Stefan on Twitter</span>
-                  <svg class="icon icon--2x icon--black animate--scale--hover">
-                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
-                  </svg>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://github.com/stefanjudis" title="Link to Stefan on GitHub" target="_blank">
-                  <span class="visuallyhidden">Stefan on Github</span>
-                  <svg class="icon icon--2x icon--black animate--scale--hover">
-                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
-                  </svg>
-                </a>
-              </li>
-
-              <li>
-                <a href="mailto:stefanjudis@gmail.com" title="Send Stafan an email" target="_blank">
-                  <span class="visuallyhidden">Stefan's email address</span>
-                  <svg class="icon icon--2x icon--black animate--scale--hover">
-                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
-                  </svg>
-                </a>
-              </li>
-
-            </ul>
-            <ul class="list--inline list--unstyled">
-
-              <li>
-                <a href="https://github.com/marcobiedermann" title="Link to Marco on GitHub" target="_blank">
-                  <span class="visuallyhidden">Marco on Github</span>
-                  <svg class="icon icon--2x icon--black animate--scale--hover">
-                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
-                  </svg>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://twitter.com/m412c0b" title="Link to Marco on Twitter" target="_blank">
-                  <span class="visuallyhidden">Marco on Twitter</span>
-                  <svg class="icon icon--2x icon--black animate--scale--hover">
-                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
-                  </svg>
-                </a>
-              </li>
-
-            </ul>
-
-          </section>
-
-            <% if( contributors ) { %>
-
-              <section class="section text-center">
-
-                <div id="contributors" class="text-center">
-
-                  <p>...with a little help from our friends</p>
-
-                  <ul class="contributors list--inline list--unstyled">
-
-                    <% _.each( contributors, function( contrib ) { %>
-                      <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
-                        <li><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" title="<%= contrib.login %> on GitHub" target="_blank"></a></li>
-                      <% } %>
-                    <% } ) %>
-
-                  </ul>
-
-                </div>
-
-              </section>
-
-            <% } %>
-
-          </section>
-
-          <section class="site__section text-center">
-
             <article class="article">
 
               <p><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fperf-tooling.today&text=@perf_tooling%20A%20resource%20collection%20to%20improve%20your%20workflow%20and%20to%20deliver%20better%20and%20faster%20websites%20%23perfmatters" target="_blank" class="btn btn--primary btn--large">Spread on Twitter</a></p>
@@ -276,7 +192,7 @@
 
           </section>
 
-          <section class="text-center">
+          <section class="site__section text-center">
 
             <h2>Newsletter</h2>
 
@@ -310,6 +226,166 @@
               </form>
 
             </div>
+
+          </section>
+
+          <section class="site__section text-center">
+            <h3>Built by the Perf Tooling Team</h3>
+
+            <div class="flexgrid__container flexgrid-4">
+              <div class="flexgrid__item">
+                <h4>Stefan Judis</h4>
+                <ul class="list--inline list--unstyled">
+                  <li>
+                    <a href="https://github.com/stefanjudis" title="Link to Stefan on GitHub" target="_blank">
+                      <span class="visuallyhidden">Stefan on Github</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/stefanjudis" title="Link to Stefan on Twitter" target="_blank">
+                      <span class="visuallyhidden">Stefan on Twitter</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="mailto:stefanjudis@gmail.com" title="Send Stafan an email" target="_blank">
+                      <span class="visuallyhidden">Stefan's email address</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+              <div class="flexgrid__item">
+                <h4>Marco Biedermann</h4>
+                <ul class="list--inline list--unstyled">
+
+                  <li>
+                    <a href="https://github.com/marcobiedermann" title="Link to Marco on GitHub" target="_blank">
+                      <span class="visuallyhidden">Marco on Github</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/m412c0b" title="Link to Marco on Twitter" target="_blank">
+                      <span class="visuallyhidden">Marco on Twitter</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="flexgrid__item">
+                <h4>Mar High</h4>
+                <ul class="list--inline list--unstyled">
+
+                  <li>
+                    <a href="https://github.com/marhigh" title="Link to Mar on GitHub" target="_blank">
+                      <span class="visuallyhidden">Radimir on Github</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/spiderhigh" title="Link to Mar on Twitter" target="_blank">
+                      <span class="visuallyhidden">Marco on Twitter</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="mailto:hello@marhigh.com" title="Send Stafan an email" target="_blank">
+                      <span class="visuallyhidden">Mar's email address</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+              <div class="flexgrid__item">
+                <h4>Radimir Bitsov</h4>
+                <ul class="list--inline list--unstyled">
+
+                  <li>
+                    <a href="https://github.com/radibit" title="Link to Marco on GitHub" target="_blank">
+                      <span class="visuallyhidden">Radimir on Github</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/radibit" title="Link to Marco on Twitter" target="_blank">
+                      <span class="visuallyhidden">Radimir on Twitter</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="mailto:radimir.bitsov@gmail.com" title="Send Stafan an email" target="_blank">
+                      <span class="visuallyhidden">Radimir's email address</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+
+          </section>
+
+            <% if( contributors ) { %>
+
+              <section class="section text-center">
+
+                <div id="contributors" class="text-center">
+
+                  <p>...with a little help from our friends</p>
+
+                  <ul class="contributors list--inline list--unstyled">
+
+                    <% _.each( contributors, function( contrib ) { %>
+                      <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
+                        <li><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" title="<%= contrib.login %> on GitHub" target="_blank"></a></li>
+                      <% } %>
+                    <% } ) %>
+
+                  </ul>
+
+                </div>
+
+              </section>
+
+            <% } %>
 
           </section>
 
