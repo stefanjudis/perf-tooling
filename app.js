@@ -354,34 +354,6 @@ function getList( type ) {
   return list;
 }
 
-/**
- * Add or remove demo tool object if debug mode is activated.
- * Otherwise return the unchanged list
- *
- * @param  {Array}   list    List of all tools
- * @param  {Boolean} debug   Debug mode or not
- * @return {Array}           Updated tool list
- */
-function demoToolHandler( list, debug ) {
-  var isDemoToolAdded = _.some( list, function( tool ) {
-    return tool.name === '_DEMO TOOL_';
-  } );
-
-  if ( !! debug && !isDemoToolAdded ) {
-    _.each( config.platforms, function( platform ) {
-        demoTool[ platform.name ] = {};
-        demoTool.stars[ platform.name ] = 10000;
-    } );
-
-    list.unshift( demoTool );
-  } else if ( isDemoToolAdded ) {
-    _.remove( list, function( tool ) {
-      return tool.name === '_DEMO TOOL_';
-    } );
-  }
-
-  return list;
-}
 
 /**
  * Render page
@@ -397,12 +369,11 @@ function renderPage( type, options ) {
   var template = ( type === 'index' ) ? 'index' : 'list';
   var list     = data[ type ] || null;
 
-  var query     = options.query;
-  var debug     = options.debug;
   var cssCookie = options.cssCookie;
+  var debug     = false;
 
-  if ( query ) {
-    var queryValues  = query.split( ' ' );
+  if ( options.query ) {
+    var queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
     var length       = queryValues.length;
 
     list   = _.cloneDeep( list ).map( function( entry ) {
@@ -419,11 +390,19 @@ function renderPage( type, options ) {
 
       return entry;
     } );
+
+    debug = options.query.debug;
+
+    if ( type === 'tools' && options.query.debug ) {
+      _.each( config.platforms, function( platform ) {
+          demoTool[ platform.name ] = {};
+          demoTool.stars[ platform.name ] = 10000;
+      } );
+
+      list.unshift( demoTool );
+    }
   }
 
-  if ( type === 'tools' ) {
-    list = demoToolHandler( list, debug );
-  }
 
   /**
    * Partial function to enable partials
@@ -470,7 +449,7 @@ function renderPage( type, options ) {
           js   : pageContent.hashes.js,
           svg  : pageContent.hashes.svg
         },
-        query            : query,
+        query            : options.query ? options.query.q : '',
         type             : type,
         name             : type.charAt( 0 ).toUpperCase() + type.slice( 1 )
       }
@@ -538,16 +517,14 @@ config.listPages.forEach( function( page ) {
     if (
       req.query &&
       (
-        ( req.query.q && req.query.q.length ) ||
-        req.query.debug
+        req.query.q || req.query.debug
       )
     ) {
       res.send(
         renderPage(
           page,
           {
-            query : req.query.q,
-            debug : req.query.debug
+            query : req.query
           }
         )
       );

@@ -4,7 +4,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="x-dns-prefetch-control" content="on">
 
-  <title><%= ( name !== 'Index' ) ? name + ' | ' : '' %><%= site.name %></title>
+  <% if ( typeof query !== 'undefined' && query.length ) { %>
+    <link rel="canonical" href="http://perf-tooling.today/<%= type %>" />
+    <title><%= 'Search result for "' + query + '" | ' %><%= site.name %></title>
+  <% } else {%>
+    <title><%= ( name !== 'Index' ) ? name + ' | ' : '' %><%= site.name %></title>
+  <% } %>
 
   <meta name="theme-color" content="#01a5b1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,9 +50,6 @@
   <link rel="icon" href="<%= cdn %>/apple-touch-icon-precomposed.png">
   <link rel="apple-touch-icon" href="<%= cdn %>/apple-touch-icon-precomposed.png">
 
-  <% if ( typeof query !== 'undefined' && query.length ) { %>
-    <link rel="canonical" href="http://perf-tooling.today/<%= type %>" />
-  <% } %>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
