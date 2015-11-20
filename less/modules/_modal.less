@@ -1,0 +1,127 @@
+.modal {
+  background: @modal__bgcolor;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  transition: opacity .5s, visibility .5s;
+  visibility: hidden;
+  z-index: 1;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+
+    .modal__container {
+      visibility: visible;
+    }
+
+    .modal__inner {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+  }
+
+  &.is-loaded {
+
+    .modal--loading {
+      display: none;
+    }
+
+  }
+
+}
+
+.modal__container {
+  backface-visibility: hidden;
+  left: 50%;
+  max-width: @grid__container;
+  outline: 0;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  width: 90%;
+}
+
+.modal__inner {
+  padding-top: 2rem;
+  opacity: 0;
+  transform: scale(.7);
+  transition: opacity .5s, transform .5s;
+}
+
+.modal__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  svg {
+    height: 1.5rem;
+    transition: fill .25s;
+    width: 1.5rem;
+  }
+
+  &:hover {
+    svg {
+      fill: @secondary__color;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: darken(@secondary__color, 30%);
+      transition: none;
+    }
+  }
+}
+
+.modal__openLink {
+  background: @base__color;
+  border-radius: 1em;
+  color: #fff;
+  display: block;
+  margin: 1em auto;
+  padding: .25em;
+  text-align: center;
+  width: 10em;
+
+  &:hover, &:focus {
+    background: @primary__color;
+    color: @btn__color;
+  }
+}
+
+.modal--loading {
+
+  &:before,
+  &:after {
+    border-radius: 50%;
+    content: '';
+    height: 1.5rem;
+    left: 50%;
+    margin: -.75rem 0 0 -.75rem;
+    position: fixed;
+    top: 50%;
+    width: 1.5rem;
+    z-index: 0;
+  }
+
+  &:before {
+    animation: moveRight .5s linear infinite alternate;
+    background: @primary__color;
+    transform: translateX(-1.5rem);
+  }
+
+  &:after {
+    animation: moveLeft .5s linear infinite alternate;
+    background: @secondary__color;
+    transform: translateX(1.5rem);
+  }
+
+}

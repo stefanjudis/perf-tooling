@@ -40,6 +40,7 @@ var data         = {
  */
 var demoTool = {
   name        : '_DEMO TOOL_',
+  id          : '_DEMO TOOL_'.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ),
   description : 'A demo tool displaying all available platforms',
   tags        : [ 'images', 'css', 'perf', '60fps', 'http2', 'network' ],
   fuzzy       : '',
@@ -340,7 +341,18 @@ function getList( type ) {
           entry,
           platformsNames
         ).replace( /http(s)?:\/\//, '' ).toLowerCase();
+        entry.id     = entry.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' );
         entry.hidden = false;
+
+        if ( type === 'videos' ) {
+          if ( entry.youtubeId ) {
+            entry.html = '<iframe width="720" height="405" src="https://www.youtube.com/embed/' + entry.youtubeId + '" frameborder="0" allowfullscreen></iframe>';
+          }
+
+          if ( entry.vimeoId ) {
+            entry.html = '<iframe src="//player.vimeo.com/video/' + entry.vimeoId + '" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+          }
+        }
 
         list.push( entry );
       } catch( e ) {

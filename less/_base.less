@@ -76,30 +76,28 @@ a {
     color: @link__color--hover;
   }
 
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 button {
-  background: @btn__bgcolor;
+  background: transparent;
   border: 0;
   color: @btn__color;
   cursor: pointer;
+  font: inherit;
   margin: 0;
   outline-color: @primary__color;
   overflow: visible;
   padding: 0;
   text-transform: none;
-  transition: background-color .3s, color .3s;
 
-  &:focus,
-  &:hover {
-    background: @btn__bgcolor--hover;
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
   }
 
-}
-
-button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
 }
 
 code,

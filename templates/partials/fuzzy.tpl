@@ -38,7 +38,7 @@
     <label class="form--search__label" for="fuzzzzzzzzzy">
 
       <svg class="form--search__icon icon icon--grey">
-        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-magnifier" />
+        <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-magnifier" />
       </svg>
 
       <input type="search" name="q" id="fuzzzzzzzzzy" class="form--search__input" title="Search inside of the list" placeholder="Search all <%= list.length %> <%= type %>" value="<%= query %>" list="listElements" autocapitalize="off" autocomplete="off">

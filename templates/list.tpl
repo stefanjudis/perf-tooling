@@ -20,6 +20,17 @@
   <body>
 
       <%=
+        ( type === 'videos' || type === 'slides') ?
+          partial(
+            'templates/partials/modals/' + type + '.tpl',
+            {
+              cdn  : cdn,
+              hash : hash
+            }
+          ) : ''
+      %>
+
+      <%=
         partial(
           'templates/partials/header.tpl',
           {
@@ -101,10 +112,14 @@
         _.map( list, function( entry ) {
           return {
             fuzzy : entry.fuzzy,
-            name  : entry.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' )
+            id    : entry.id,
+            html  : entry.html,
+            url   : entry.url
           }
         } )
       ) %>;
+
+      window.type = '<%= type %>';
     </script>
     <script src="<%= cdn %>/tooling-<%= hash.js %>.js" async></script>
 
