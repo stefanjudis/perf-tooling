@@ -12,7 +12,9 @@
 
         <figure class="media__obj--left">
 
-          <a href="<%= video.url %>" title="Link to video" target="_blank" data-modal data-modal-content-id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>"><img src="<%= video.thumbnail.url %>" width="295" height="166"></a>
+          <a href="<%= video.url %>" title="Link to video" target="_blank" data-modal data-modal-content-id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>">
+            <img src="<%= video.thumbnail.url %>" width="295" height="166" alt="Preview of <%= video.name %>">
+          </a>
 
         </figure>
 

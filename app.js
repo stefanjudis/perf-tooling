@@ -1,12 +1,10 @@
 var express      = require( 'express' );
 var compression  = require( 'compression' );
-var md5          = require( 'MD5' );
 var app          = express();
 var fs           = require( 'fs' );
 var fuzzify      = require( './lib/fuzzify' );
 var _            = require( 'lodash' );
 var minify       = require( 'html-minifier' ).minify;
-var request      = require( 'request' );
 var config       = require( './config/config' );
 var async        = require( 'async' );
 var cookieParser = require( 'cookie-parser' );
@@ -32,9 +30,22 @@ var data         = {
   slides   : getList( 'slides' ),
   tools    : getList( 'tools' ),
   videos   : getList( 'videos' ),
-  books    : getList( 'books' )
+  books    : getList( 'books' ),
+  courses  : getList( 'courses' )
 };
 
+/**
+ * Demo tool object containing all available properties
+ * @type {Object}
+ */
+var demoTool = {
+  name        : '_DEMO TOOL_',
+  description : 'A demo tool displaying all available platforms',
+  tags        : [ 'images', 'css', 'perf', '60fps', 'http2', 'network' ],
+  fuzzy       : '',
+  hidden      : false,
+  stars       : {}
+};
 
 /**
  * pages object representing
@@ -45,7 +56,8 @@ var pages = {
   tools    : null,
   articles : null,
   slides   : null,
-  videos   : null
+  videos   : null,
+  courses  : null
 };
 
 
@@ -94,15 +106,11 @@ function fetchGithubStars() {
       tool.stars = data.tools.stars || {};
 
       if (
-        key !== 'description' &&
-        key !== 'name' &&
-        key !== 'type' &&
-        key !== 'tags' &&
-        key !== 'fuzzy' &&
-        /github/.test( value )
+        value.url &&
+        /github/.test( value.url )
       ) {
         queue.push( function( done ) {
-          var project = value.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
+          var project = value.url.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
 
           helpers.github.getStars(
             project,
@@ -172,6 +180,8 @@ function fetchTwitterUserMeta() {
                   pages.books    = renderPage( 'books' );
                   pages.slides   = renderPage( 'slides' );
                   pages.videos   = renderPage( 'videos' );
+                  pages.courses  = renderPage( 'courses' );
+
 
                   // give it a bit of time
                   // to rest and not reach the API limits
@@ -191,6 +201,7 @@ function fetchTwitterUserMeta() {
   evalAuthors( 'articles' );
   evalAuthors( 'slides' );
   evalAuthors( 'books' );
+  evalAuthors( 'courses' );
 
   async.waterfall( queue, function() {
     console.log( 'DONE -> fetchTwitterUserMeta()' );
@@ -369,12 +380,11 @@ function renderPage( type, options ) {
   var template = ( type === 'index' ) ? 'index' : 'list';
   var list     = data[ type ] || null;
 
-  var query     = options.query;
-  var debug     = options.debug;
   var cssCookie = options.cssCookie;
+  var debug     = false;
 
-  if ( query ) {
-    var queryValues  = query.split( ' ' );
+  if ( options.query ) {
+    var queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
     var length       = queryValues.length;
 
     list   = _.cloneDeep( list ).map( function( entry ) {
@@ -391,7 +401,19 @@ function renderPage( type, options ) {
 
       return entry;
     } );
+
+    debug = options.query.debug;
+
+    if ( type === 'tools' && options.query.debug ) {
+      _.each( config.platforms, function( platform ) {
+          demoTool[ platform.name ] = {};
+          demoTool.stars[ platform.name ] = 10000;
+      } );
+
+      list.unshift( demoTool );
+    }
   }
+
 
   /**
    * Partial function to enable partials
@@ -428,7 +450,8 @@ function renderPage( type, options ) {
           articles : data.articles.length,
           videos   : data.videos.length,
           slides   : data.slides.length,
-          books    : data.books.length
+          books    : data.books.length,
+          courses  : data.courses.length
         },
         site             : config.site,
         list             : list,
@@ -437,8 +460,9 @@ function renderPage( type, options ) {
           js   : pageContent.hashes.js,
           svg  : pageContent.hashes.svg
         },
-        query            : query,
-        type             : type
+        query            : options.query ? options.query.q : '',
+        type             : type,
+        name             : type.charAt( 0 ).toUpperCase() + type.slice( 1 )
       }
     ), {
       keepClosingSlash      : true,
@@ -504,16 +528,14 @@ config.listPages.forEach( function( page ) {
     if (
       req.query &&
       (
-        ( req.query.q && req.query.q.length ) ||
-        req.query.debug
+        req.query.q || req.query.debug
       )
     ) {
       res.send(
         renderPage(
           page,
           {
-            query : req.query.q,
-            debug : req.query.debug
+            query : req.query
           }
         )
       );

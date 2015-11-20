@@ -22,9 +22,9 @@
 
             <li class="resource--<%= platform.name %>">
 
-              <a href="<%= tool[ platform.name ] %>" title="Link to <%= platform.description %>" target="_blank">
+              <a href="<%= tool[ platform.name ].url %>" title="Link to <%= platform.description %>" target="_blank">
                 <svg class="icon">
-                  <use xlink:href="<%= cdn %>/icons-<%= hash.svg %>.svg#icon-<%= platform.name %>" />
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-<%= platform.name %>" />
                 </svg>
                 <span class="tooltip"><% if ( tool[ platform.name ].isPaid ) { %>Paid <% } %><%= platform.description %></span>
                 <span class="stars"><%= ( tool.stars && tool.stars[ platform.name ] ) ? tool.stars[ platform.name ] + '☆' : 'N/A' %></span>

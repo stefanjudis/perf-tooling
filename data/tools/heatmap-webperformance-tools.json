@@ -1,0 +1,8 @@
+{
+  "name" : "Web Performance Heat Map Generator",
+  "service" : {
+    "url" : "http://heatmap.webperf.tools/"
+  },
+  "description" : "Submit a URL to generate a heat map of all of the page rendering to rapidly identify slow elements on your site.",
+  "tags" : [ "metrics", "budget" ]
+}

@@ -1,0 +1,11 @@
+{
+  "name" : "Performance Guide RAIL",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "youtubeId" : "CceyqktMoRw",
+  "tags" : [ "rendering", "animations", "metrics"  ]
+}

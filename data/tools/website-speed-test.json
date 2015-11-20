@@ -1,0 +1,8 @@
+{
+  "name" : "Website Speed Test",
+  "service" : {
+    "url" : "https://tools.keycdn.com/speed"
+  },
+  "description" : "A site speed test that includes a waterfall breakdown and the website preview. Select any of the 10 test locations. Easly share the website speed test results with others.",
+  "tags" : [ "loading", "metrics" ]
+}

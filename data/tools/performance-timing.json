@@ -1,8 +1,0 @@
-{
-  "name" : "Web Performance Timing API",
-  "chrome" : {
-    "url" : "https://github.com/GregM/performance-timing-google-chrome-extension"
-  },
-  "description" : "Graphs common performance timing data from your current website using the performance timing API.",
-  "tags" : [ "loading", "timeline" ]
-}

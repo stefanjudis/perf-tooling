@@ -15,7 +15,9 @@
 
         <figure class="media__obj--left">
 
-          <a href="<%= slide.url %>" title="Link to slide" target="_blank" data-modal data-modal-content-id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>"><img src="<%= slide.thumbnail.url %>" width="170" height="128"></a>
+          <a href="<%= slide.url %>" title="Link to slide" target="_blank" data-modal data-modal-content-id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>">
+            <img src="<%= slide.thumbnail.url %>" width="170" height="128" alt="Preview of <%= slide.name %>">
+          </a>
 
         </figure>
 

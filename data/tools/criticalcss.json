@@ -3,7 +3,7 @@
   "grunt" : {
     "url" : "https://github.com/filamentgroup/grunt-criticalcss"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/filamentgroup/criticalcss"
   },
   "description" : "Finds the Above the Fold CSS for your page, and outputs it into a file",

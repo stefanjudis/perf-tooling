@@ -1,0 +1,8 @@
+{
+  "name" : "bLazy",
+  "javascript" : {
+    "url" : "https://github.com/dinbror/blazy/"
+  },
+  "description" : "Hey, be lazy! bLazy.JS is a lightweight pure JavaScript script for lazy loading and multi-serving images.",
+  "tags" : [ "images", "lazy loading" ]
+}

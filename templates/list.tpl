@@ -9,7 +9,10 @@
         cssCookie : cssCookie,
         site      : site,
         enhance   : enhance,
-        hash      : hash
+        hash      : hash,
+        name      : name,
+        type      : type,
+        query     : query
       }
     )
   %>
@@ -43,6 +46,7 @@
 
         <div class="grid__container">
 
+          <h1 class="posts__headline">List of performance <%= type %></h1>
 
           <%=
             partial(
@@ -114,14 +118,9 @@
           }
         } )
       ) %>;
-
-      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','UA-53831300-1','auto');ga('send','pageview')
     </script>
     <script src="<%= cdn %>/tooling-<%= hash.js %>.js" async></script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
   </body>
 
 </html>
-

@@ -1,0 +1,15 @@
+{
+  "name" : "Hero Image Custom Metrics",
+  "authors" : [
+    {
+      "name" : "Steve Souders",
+      "twitter" : "@souders"
+    }
+  ],
+  "date" : "2015-05-12",
+  "stats" : {
+    "length" : 1372
+  },
+  "url" : "http://www.stevesouders.com/blog/2015/05/12/hero-image-custom-metrics/",
+  "tags" : [ "loading", "images", "metrics" ]
+}

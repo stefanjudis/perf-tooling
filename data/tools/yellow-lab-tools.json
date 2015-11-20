@@ -6,7 +6,7 @@
   "service" : {
     "url" : "http://yellowlab.tools"
   },
-  "module": {
+  "node": {
     "url" : "https://github.com/gmetais/YellowLabTools"
   },
   "grunt": {

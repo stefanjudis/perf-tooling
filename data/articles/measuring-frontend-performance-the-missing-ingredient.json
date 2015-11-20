@@ -1,0 +1,15 @@
+{
+  "name" : "Measuring frontend performance, the missing ingredient",
+  "authors" : [
+    {
+      "name" : "Rafal Lindemann",
+      "twitter" : "@staminapl"
+    }
+  ],
+  "date" : "2015-08-17",
+  "stats" : {
+    "length" : 1006
+  },
+  "url" : "https://lab.getbase.com/measuring-frontend-performance-the-missing-ingredient/",
+  "tags" : [ "60fps", "render" ]
+}

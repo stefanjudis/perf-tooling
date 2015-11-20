@@ -1,6 +1,6 @@
 {
   "name" : "Using WebPagetest",
-  "date" : "2014-06",
+  "date" : "2015-10-27",
   "authors" : [
     {
       "name" : "Rick Viscomi",
@@ -16,7 +16,7 @@
     }
   ],
   "stats" : {
-    "length" : 200
+    "length" : 214
   },
   "url" : "http://shop.oreilly.com/product/0636920033592.do",
   "description" : "Learn basic and advanced uses of WebPagetest, the performance measurement tool for optimizing websites. This practical guide shows users new to this tool how run tests and interpret results, and helps experienced users gain a better and more thorough understanding of hidden features in WebPagetest that make testing easier.",

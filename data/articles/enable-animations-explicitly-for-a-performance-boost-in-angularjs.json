@@ -1,0 +1,15 @@
+{
+  "name" : "Enable Animations Explicitly For A Performance Boost In AngularJS",
+  "authors" : [
+    {
+      "name" : "Ben Nadel",
+      "twitter" : "@BenNadel"
+    }
+  ],
+  "date" : "2015-10-16",
+  "stats" : {
+    "length" : 1102
+  },
+  "tags" : [ "animation", "loading" ],
+  "url" : "http://www.bennadel.com/blog/2935-enable-animations-explicitly-for-a-performance-boost-in-angularjs.htm"
+}

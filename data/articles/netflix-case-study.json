@@ -1,0 +1,15 @@
+{
+  "name" : "Performant CSS Animations: Netflix Case Study",
+  "authors" : [
+    {
+      "name" : "Eli White",
+      "twitter" : "@Eli_White"
+    }
+  ],
+  "date" : "2015-06-30",
+  "stats" : {
+    "length" : 611
+  },
+  "url" : "http://eng.wealthfront.com/2015/06/implementing-netflix-redesign.html",
+  "tags" : [ "animations", "jank-free" ]
+}

@@ -10,7 +10,9 @@
         site      : site,
         enhance   : enhance,
         cssCookie : cssCookie,
-        hash      : hash
+        hash      : hash,
+        name      : name,
+        type      : type
       }
     )
   %>
@@ -327,11 +329,6 @@
       %>
 
     <script src="<%= cdn %>/tooling-<%= hash.js %>.js" async></script>
-    <script>
-        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','UA-53831300-1','auto');ga('send','pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
   </body>
 

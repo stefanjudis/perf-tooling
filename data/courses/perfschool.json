@@ -1,0 +1,25 @@
+{
+  "name" : "Perfschool",
+  "authors" : [
+    {
+      "name" : "Nicolas Bevacqua",
+      "twitter" : "@nzgb"
+    }
+  ],
+  "date" : "2015-05-04",
+  "stats" : {
+    "estimatedTime" : "4 hours",
+    "level" : "beginner"
+  },
+  "img" : {
+    "src" : {
+      "filename": "perfschool",
+      "types" : ["jpg", "webp"]
+    },
+    "width" : 277,
+    "height" : 215
+  },
+  "isPaid": false,
+  "tags" : [ "budget", "measuring", "images", "fonts" ],
+  "url" : "https://github.com/bevacqua/perfschool"
+}

@@ -1,0 +1,28 @@
+{
+  "name" : "Complete Web Monitoring",
+  "date" : "2009-06-01",
+  "authors" : [
+    {
+      "name" : "Alistair Croll",
+      "twitter" : "@acroll"
+    },
+    {
+      "name" : "Sean Power",
+      "twitter" : "@seanpower"
+    }
+  ],
+  "stats": {
+    "length": 672
+  },
+  "url" : "http://shop.oreilly.com/product/9780596155148.do",
+  "description" : "Complete Web Monitoring demonstrates how to measure every aspect of your web presence -- including analytics, backend performance, usability, communities, customer feedback, and competitive analysis -- whether you're running an e-commerce site, a community, a media property, or a Software-as-a-Service company. This book's concrete examples, clear explanations, and practical recommendations make it essential for anyone who runs a website.",
+  "img" : {
+    "src" : {
+      "filename" : "complete-web-monitoring",
+      "types" : [ "jpg", "webp" ]
+    },
+    "width" : 200,
+    "height" : 262
+  },
+  "tags" : [ "monitoring", "analytics", "budget" ]
+}

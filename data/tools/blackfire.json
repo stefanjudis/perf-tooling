@@ -1,6 +1,8 @@
 {
   "name" : "Blackfire Profiler",
-  "service" : "https://blackfire.io/",
+  "service" : {
+    "url" : "https://blackfire.io/"
+  },
   "description" : "Blackfire Profiler: Fire up your PHP Apps Performance",
   "tags" : [ "metrics", "monitor", "php" ]
 }

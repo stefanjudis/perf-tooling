@@ -3,7 +3,7 @@
   "cli" : {
     "url" : "https://github.com/addyosmani/tmi"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/addyosmani/tmi"
   },
   "description" : "Discover your image weight on the web. Find out the image weight in your pages, compare to the HTTPArchive average and discover what images you can optimize further.",

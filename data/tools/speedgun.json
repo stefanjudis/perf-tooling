@@ -1,6 +1,6 @@
 {
   "name" : "speedgun",
-  "module" : {
+  "node" : {
     "url" : "https://github.com/wesleyhales/speedgun"
   },
   "service" : {

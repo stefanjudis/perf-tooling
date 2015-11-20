@@ -3,7 +3,7 @@
   "grunt" : {
     "url" : "https://github.com/bezoerb/grunt-critical"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/addyosmani/critical"
   },
   "description" : "Critical extracts & inlines critical-path (above-the-fold) CSS from HTML.",

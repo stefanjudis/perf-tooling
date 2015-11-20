@@ -6,7 +6,7 @@
   "gulp" : {
     "url" : "https://github.com/cssstats/gulp-cssstats"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/cssstats/css-statistics"
   },
   "service" : {

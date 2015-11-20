@@ -3,7 +3,7 @@
   "mac" : {
     "url" : "http://www.jpegmini.com/app"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/sydneystockholm/jpegmini"
   },
   "service" : {

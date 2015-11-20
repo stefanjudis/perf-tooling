@@ -1,0 +1,29 @@
+{
+  "name" : "Browser Rendering Optimization",
+  "authors" : [
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    },
+    {
+      "name" : "Cameron Pittman",
+      "twitter" : "@cwpittman"
+    }
+  ],
+  "date" : "2015-04-15",
+  "stats" : {
+    "estimatedTime" : "4 weeks",
+    "level" : "advanced"
+  },
+  "img" : {
+    "src" : {
+      "filename": "browser-rendering",
+      "types" : ["jpg", "webp"]
+    },
+    "width" : 277,
+    "height" : 170
+  },
+  "isPaid": false,
+  "tags" : [ "60fps", "rendering", "optimisation" ],
+  "url" : "https://www.udacity.com/course/browser-rendering-optimization--ud860"
+}

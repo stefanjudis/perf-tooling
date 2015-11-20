@@ -3,7 +3,7 @@
   "cli" : {
     "url" : "https://github.com/nature/webpagetest-mapper"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/nature/webpagetest-mapper"
   },
   "description" : "Maps JSON result data from marcelduran/webpagetest-api into human-readable document formats.",

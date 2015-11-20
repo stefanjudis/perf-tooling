@@ -9,7 +9,7 @@
   "gulp" : {
     "url" : "https://github.com/sindresorhus/gulp-webp"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/imagemin/cwebp-bin"
   },
   "description" : "Convert your images to WebP format.",

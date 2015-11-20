@@ -1,7 +1,11 @@
 {
   "name" : "Justice.js",
-  "bookmarklet" : "https://github.com/okor/justice",
-  "javascript" : "https://github.com/okor/justice",
+  "bookmarklet" : {
+    "url": "https://github.com/okor/justice"
+  },
+  "javascript" : {
+    "url" : "https://github.com/okor/justice"
+  },
   "description" : "Justice will create an on page widget that displays various performance metrics, including a streaming fps meter.",
   "tags" : [ "metrics", "budget" ]
 }

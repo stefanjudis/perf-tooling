@@ -7,6 +7,20 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+::-webkit-scrollbar {
+  height: .5rem;
+  width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: @primary__color;
+
+  &:hover {
+    background-color: @primary__color--hover;
+  }
+
+}
+
 ::selection {
   background: @base__color;
   color: @base__bgcolor;

@@ -7,7 +7,7 @@
   "grunt": {
     "url" : "https://github.com/DeuxHuitHuit/grunt-analyze-css"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/macbre/analyze-css"
   },
   "tags" : [ "css", "metrics" ]

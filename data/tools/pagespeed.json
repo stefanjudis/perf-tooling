@@ -1,7 +1,11 @@
 {
   "name" : "PageSpeed",
-  "apache" : "https://code.google.com/p/modpagespeed/",
-  "nginx" : "https://github.com/pagespeed/ngx_pagespeed",
+  "apache" : {
+    "url" : "https://code.google.com/p/modpagespeed/"
+  },
+  "nginx" : {
+    "url" : "https://github.com/pagespeed/ngx_pagespeed"
+  },
   "description" : "PageSpeed speeds up your site and reduces page load time. This open-source webserver module automatically applies web performance best practices to pages and associated assets (CSS, JavaScript, images) without requiring that you modify your existing content or workflow.",
   "tags" : [ "css", "html", "javascript", "loading" ]
 }

@@ -6,7 +6,7 @@
   "gulp" : {
     "url" : "https://github.com/morishitter/gulp-csscss"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/zmoazeni/csscss"
   },
   "description" : "csscss will parse any CSS files you give it and let you know which rulesets have duplicated declarations.",

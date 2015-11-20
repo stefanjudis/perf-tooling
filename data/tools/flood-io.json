@@ -1,6 +1,8 @@
 {
   "name" : "Flood IO",
-  "service" : "https://flood.io",
+  "service" : {
+    "url" : "https://flood.io"
+  },
   "description" : "Flood IO lets you run distributed load tests across the globe with JMeter or Gatling. Use our On Demand infrastructure or Host Your Own cloud.",
   "tags" : [ "load", "testing" ]
 }

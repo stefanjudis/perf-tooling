@@ -18,7 +18,7 @@
   "mac": {
     "url" : "https://github.com/imagemin/imagemin-app"
   },
-  "module" : {
+  "node" : {
     "url" : "https://github.com/imagemin/imagemin"
   },
   "windows" : {

@@ -1,6 +1,8 @@
 {
   "name" : "Surf-N-Perf",
-  "javascript" : "https://github.com/Comcast/Surf-N-Perf",
+  "javascript" : {
+    "url" : "https://github.com/Comcast/Surf-N-Perf"
+  },
   "description" : "Micro-library for gathering frontend web page performance data.",
   "tags" : [ "loading", "performance" ]
 }

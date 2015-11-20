@@ -1,0 +1,15 @@
+{
+  "name" : "We should optimize images",
+  "authors" : [
+    {
+      "name" : "Shogo Sensui",
+      "twitter" : "@1000ch"
+    }
+  ],
+  "date" : "2014-04-04",
+  "stats" : {
+    "length" : 636
+  },
+  "url" : "https://medium.com/@1000ch/we-should-optimize-images-8435760e0ec9",
+  "tags" : [ "image", "compression" ]
+}
