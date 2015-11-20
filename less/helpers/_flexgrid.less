@@ -3,15 +3,34 @@
     display: flex;
     flex-wrap: wrap;
 
-    margin: 0 -2em;
-  }
+    &.flexgrid-2 {
+      margin: 0 -2em;
 
-  &__item {
-    flex: 0 0 100%;
-    padding: 2em;
+      .flexgrid__item {
+        flex: 0 0 100%;
+        padding: 1em 2em;
 
-    @media (min-width: @media--tiny) {
-      flex: 0 0 50%;
+        @media (min-width: @media--tiny) {
+          flex: 0 0 50%;
+        }
+      }
+    }
+
+    &.flexgrid-4 {
+      margin: 0 -0.5em;
+
+      .flexgrid__item {
+        flex: 0 0 100%;
+        padding: -0.5em;
+
+        @media (min-width: @media--tiny) {
+          flex: 0 0 50%;
+        }
+
+        @media (min-width: @media--medium) {
+          flex: 0 0 25%;
+        }
+      }
     }
   }
 }
