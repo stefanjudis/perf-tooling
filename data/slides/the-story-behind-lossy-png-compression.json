@@ -1,0 +1,15 @@
+{
+  "name" : "The story behind lossy PNG compression",
+  "authors" : [
+    {
+      "name" : "Kornel Lesiński",
+      "twitter" : "@pornelski"
+    }
+  ],
+  "date" : "2015-05-30",
+  "stats" : {
+    "length" : 25
+  },
+  "tags" : [ "compression", "images" ],
+  "url" : "https://speakerdeck.com/pornel/sudweb"
+}
