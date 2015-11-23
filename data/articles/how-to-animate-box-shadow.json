@@ -1,0 +1,15 @@
+{
+  "name" : "How to animate 'box-shadow' with silky smooth performance",
+  "authors" : [
+    {
+      "name" : "Tobias Ahlin",
+      "twitter" : "@tobiasahlin"
+    }
+  ],
+  "date" : "2015-11-18",
+  "stats" : {
+    "length" : 852
+  },
+  "tags" : [ "animation", "60fps" ],
+  "url" : "http://tobiasahlin.com/blog/how-to-animate-box-shadow/"
+}
