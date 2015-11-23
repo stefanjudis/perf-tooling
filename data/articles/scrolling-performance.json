@@ -1,0 +1,15 @@
+{
+  "name" : "Scrolling Performance",
+  "authors" : [
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
+  "date" : "2012-12-20",
+  "stats" : {
+    "length" : 1908
+  },
+  "url" : "http://www.html5rocks.com/en/tutorials/speed/scrolling/",
+  "tags" : [ "scrolling", "rendering" ]
+}
