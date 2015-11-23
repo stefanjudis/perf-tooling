@@ -1,0 +1,15 @@
+{
+  "name" : "Page Weight Doesn't Matter",
+  "authors" : [
+    {
+      "name" : "Nate Berkopec",
+      "twitter" : "@nateberkopec"
+    }
+  ],
+  "date" : "2015-11-05",
+  "stats" : {
+    "length" : 4426
+  },
+  "tags" : [ "network", "loading", "metrics" ],
+  "url" : "http://www.nateberkopec.com/2015/11/05/page-weight-doesnt-matter.html"
+}
