@@ -1,0 +1,11 @@
+{
+  "name" : "Troubleshooting rendering performance issues",
+  "authors" : [
+    {
+      "name" : "Harry Roberts",
+      "twitter" : "@csswizardry"
+    }
+  ],
+  "youtubeId" : "2vFrZXWiwIc",
+  "tags" : [ "rendering", "60fps" ]
+}
