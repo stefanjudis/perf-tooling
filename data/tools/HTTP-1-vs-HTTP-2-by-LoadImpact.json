@@ -1,0 +1,8 @@
+{
+  "name" : "HTTP/1 vs HTTP/2 by LoadImpact",
+  "service" : {
+    "url" : "http://http2.loadimpact.com/entry/"
+  },
+  "description" : "Loadimpact gathers all resources from your URL, fetches those resources from their own server using HTTP/2 and give you some neat stats on how load times would differ between the two protocols.",
+  "tags" : [ "network", "http", "metrics" ]
+}
