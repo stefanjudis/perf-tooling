@@ -1,7 +1,7 @@
 <ul class="posts">
   <%
     list = _.sortBy( list, function( course ) {
-      return course.date || -1;
+      return course.date ? + ( new Date( course.date ) ) : -1;
     } ).reverse();
   %>
   <% _.each( list, function( course ) { %>
