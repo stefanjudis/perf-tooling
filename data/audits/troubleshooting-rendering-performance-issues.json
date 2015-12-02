@@ -1,11 +1,14 @@
 {
-  "name" : "Troubleshooting rendering performance issues",
+  "Troubleshooting rendering performance issues",
+  "targets" : [
+    "http://tobiasahlin.com"
+  ],
   "authors" : [
     {
       "name" : "Harry Roberts",
       "twitter" : "@csswizardry"
     }
   ],
-  "youtubeId" : "2vFrZXWiwIc",
+  "types" : [ "video" ],
   "tags" : [ "rendering", "60fps" ]
 }

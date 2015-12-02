@@ -1,5 +1,8 @@
 {
-  "name" : "PerfAudit: DeviantArt.com",
+  "name" : "Perf Audit deviantart.com",
+  "targets" : [
+    "http://deviantart.com"
+  ],
   "authors" : [
     {
       "name" : "Apoorv Saxena",
@@ -15,5 +18,5 @@
     "length" : 911
   },
   "url" : "http://perfaudit.com/case-study/deviantart.com/",
-  "tags" : ["audit"]
+  "types" : [ "article", "video" ]
 }

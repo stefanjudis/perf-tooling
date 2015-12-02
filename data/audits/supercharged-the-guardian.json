@@ -1,0 +1,13 @@
+{
+  "name" : "Supercharged: theguardian.com",
+  "targets" : [
+    "http://www.theguardian.com"
+  ],
+  "authors" : [
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
+  "types" : [ "video" ],
+}

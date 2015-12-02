@@ -1,5 +1,8 @@
 {
-  "name" : "Supercharged: Player FM (S1 Ep3)",
+  "Supercharged: player.fm",
+  "targets" : [
+    "http://player.fm"
+  ],
   "authors" : [
     {
       "name" : "Paul Lewis",
@@ -7,5 +10,6 @@
     }
   ],
   "youtubeId" : "-mfmzGWwRhI",
-  "tags" : [ "audit", "scrolling" ]
+  "types" : "video",
+  "tags" : [ "scrolling" ]
 }

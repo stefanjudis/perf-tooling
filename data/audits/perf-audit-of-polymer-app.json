@@ -1,0 +1,15 @@
+{
+  "name" : "Perf Audit of a Polymer App",
+  "targets" : [
+    "A Polymer App"
+  ],
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    }
+  ],
+  "youtubeId" : "SkN5Q7nf7Vg",
+  "types" : [ "video" ],
+  "tags" : [ "devtools", "metrics", "Polymer", "timeline" ]
+}

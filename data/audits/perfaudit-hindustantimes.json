@@ -1,5 +1,8 @@
 {
-  "name" : "PerfAudit: HindustanTimes.com",
+  "name" : "Perf Audit hindustantimes.com",
+  "targets" : [
+    "http://www.hindustantimes.com"
+  ],
   "authors" : [
     {
       "name" : "Apoorv Saxena",
@@ -15,5 +18,5 @@
     "length" : 676
   },
   "url" : "http://perfaudit.com/case-study/hindustantimes.com/",
-  "tags" : ["audit"]
+  "types" : [ "article", "video" ]
 }

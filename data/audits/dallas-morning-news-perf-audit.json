@@ -1,0 +1,13 @@
+{
+  "name" : "Dallas Morning News Perf audit",
+  "targets" : [
+    "http://www.dallasnews.com/"
+  ],
+  "authors" : [
+    {
+      "name" : "Chris Love",
+      "twitter" : "@chrislove"
+    }
+  ],
+  "types" : [ "video" ]
+}

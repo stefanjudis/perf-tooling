@@ -1,5 +1,8 @@
 {
-  "name" : "PerfAudit: Materialup.com",
+  "name" : "Perf Audit marterialup.com",
+  "targets" : [
+    "http://www.materialup.com"
+  ],
   "authors" : [
     {
       "name" : "Apoorv Saxena",
@@ -19,5 +22,6 @@
     "length" : 716
   },
   "url" : "http://perfaudit.com/case-study/materialup.com/",
-  "tags" : ["performance", "audit", "jank free"]
+  "types" : [ "article", "video" ],
+  "tags" : ["performance", "jank free"]
 }

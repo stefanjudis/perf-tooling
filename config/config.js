@@ -1,7 +1,7 @@
 module.exports = {
   cdn       : process.env.CDN_URL || '',
   dataDir   : 'data',
-  listPages : [ 'articles', 'slides', 'tools', 'videos', 'books', 'courses' ],
+  listPages : [ 'articles', 'slides', 'tools', 'videos', 'books', 'courses', 'audits' ],
   github    : {
     id    : process.env.GITHUB_ID,
     token : process.env.GITHUB_TOKEN
