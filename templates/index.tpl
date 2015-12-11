@@ -154,6 +154,20 @@
 
               </article>
 
+              <article class="article flexgrid__item">
+
+                <h3><%= resourceCount.audits %> Audits</h3>
+
+                <p>Performance audits of popular sites made by experts. Good to learn about common mistakes.</p>
+
+                <div class="article__cta">
+
+                  <a href="/courses" title="Link to tools" class="btn btn--large btn--primary">Explore Courses</a>
+
+                </div>
+
+              </article>
+
             </div>
 
           </section>

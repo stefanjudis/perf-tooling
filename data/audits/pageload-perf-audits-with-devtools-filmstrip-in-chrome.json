@@ -2,7 +2,6 @@
   "name" : "Pageload Perf Audits with DevTools Filmstrip in Chrome",
   "targets" : [
     "http://www.engadget.com/",
-    "http://m.tmz.com/",
     "http://indianexpress.com/",
     "http://m.timesofindia.com/",
     "http://www.theatlantic.com/",
@@ -14,6 +13,8 @@
       "twitter" : "@paul_irish"
     }
   ],
+  "date" : "2015-07-28",
+  "url" : "https://www.youtube.com/watch?v=tCfF6HI0JKs",
   "types" : [ "video" ],
   "tags" : [ "devtools", "loading", "timeline" ]
 }

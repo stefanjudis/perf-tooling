@@ -3,6 +3,20 @@
   margin: -2rem 0;
   padding: 0;
 
+  &--flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem;
+
+    > li {
+      border: 1px solid @border__color;
+      flex: 1 0 calc( 50% - 2rem );
+      margin: 0 .5rem 1rem;
+      max-width: calc( 50% - 2rem );
+      padding: 1rem;
+    }
+  }
+
   &__headline {
     font-size: @h3__font-size;
     margin-bottom: 1em;
@@ -36,6 +50,10 @@
       margin: 0 .5rem;
     }
 
+    svg {
+      margin-right : .25rem;
+    }
+
   }
 
   &__author {
@@ -47,6 +65,26 @@
 
   }
 
+  &__targets {
+    dt, dd {
+      display : inline-block;
+    }
+
+    dd {
+      margin-left : .5rem;
+
+      &:not(:last-child) {
+        &::after {
+          white-space : pre;
+          content : ', ';
+        }
+      }
+
+      + dd {
+        margin-left : 0;
+      }
+    }
+  }
 }
 
 #noResultMsg {

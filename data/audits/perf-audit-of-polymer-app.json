@@ -1,7 +1,9 @@
 {
   "name" : "Perf Audit of a Polymer App",
   "targets" : [
-    "A Polymer App"
+    "https://m.reddit.com",
+    "https://patents.google.com",
+    "http://www.polymer-project.org"
   ],
   "authors" : [
     {
@@ -9,7 +11,8 @@
       "twitter" : "@paul_irish"
     }
   ],
-  "youtubeId" : "SkN5Q7nf7Vg",
+  "date" : "2015-09-15",
+  "url" : "https://www.youtube.com/watch?v=SkN5Q7nf7Vg",
   "types" : [ "video" ],
   "tags" : [ "devtools", "metrics", "Polymer", "timeline" ]
 }

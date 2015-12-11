@@ -1,0 +1,16 @@
+{
+  "name" : "squarespace perf audit - load time",
+  "targets" : [
+    "shailamusharoff.com"
+  ],
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    }
+  ],
+  "date" : "2015-04-10",
+  "url" : "https://docs.google.com/document/d/15VSNoBP3OK64l5Jc_w63sgW88RUn3ve2qV7Jrrfc5A8/edit?pli=1#heading=h.v23t53p6nkzl",
+  "types" : [ "document" ],
+  "tags" : [ "paint", "fonts" ]
+}

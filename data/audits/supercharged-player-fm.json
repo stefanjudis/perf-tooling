@@ -1,5 +1,5 @@
 {
-  "Supercharged: player.fm",
+  "name" : "Supercharged: player.fm",
   "targets" : [
     "http://player.fm"
   ],
@@ -9,7 +9,8 @@
       "twitter" : "@aerotwist"
     }
   ],
-  "youtubeId" : "-mfmzGWwRhI",
-  "types" : "video",
+  "date" : "2015-10-22",
+  "url" : "https://www.youtube.com/watch?v=-mfmzGWwRhI",
+  "types" : [ "video" ],
   "tags" : [ "scrolling" ]
 }

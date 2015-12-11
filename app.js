@@ -435,6 +435,7 @@ function renderPage( type, options ) {
         people           : data.people,
         platforms        : config.platforms,
         resourceCount    : {
+          audits   : data.audits.length,
           tools    : data.tools.length,
           articles : data.articles.length,
           videos   : data.videos.length,
