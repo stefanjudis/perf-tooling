@@ -6,14 +6,24 @@
   &--flex {
     display: flex;
     flex-wrap: wrap;
+    flex-direction : column;
     margin: 0 -.5rem;
+
+    @media (min-width: @media--medium) {
+      flex-direction : row;
+      margin: 0 -.5rem;
+    }
 
     > li {
       border: 1px solid @border__color;
-      flex: 1 0 calc( 50% - 2rem );
+
       margin: 0 .5rem 1rem;
-      max-width: calc( 50% - 2rem );
-      padding: 1rem;
+      padding : 1rem;
+
+      @media (min-width: @media--medium) {
+        flex: 1 0 calc( 50% - 2rem );
+        max-width: calc( 50% - 2rem );
+      }
     }
   }
 
