@@ -1,5 +1,8 @@
 {
-  "name" : "PerfAudit: CanIUse.com",
+  "name" : "Perf Audit Caniuse.com",
+  "targets" : [
+    "http://caniuse.com"
+  ],
   "authors" : [
     {
       "name" : "Apoorv Saxena",
@@ -15,5 +18,5 @@
     "length" : 478
   },
   "url" : "http://perfaudit.com/case-study/caniuse.com/",
-  "tags" : ["audit"]
+  "types" : [ "article", "video" ]
 }

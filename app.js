@@ -24,15 +24,11 @@ var helpers = {
 };
 
 var port         = process.env.PORT || 3000;
-var data         = {
-  people   : {},
-  articles : getList( 'articles' ),
-  slides   : getList( 'slides' ),
-  tools    : getList( 'tools' ),
-  videos   : getList( 'videos' ),
-  books    : getList( 'books' ),
-  courses  : getList( 'courses' )
-};
+var data         = config.listPages.reduce( function( data, listPage ) {
+  data[ listPage ] = getList( listPage );
+
+  return data;
+}, { people   : {} } );
 
 /**
  * Demo tool object containing all available properties
@@ -52,14 +48,11 @@ var demoTool = {
  * pages object representing
  * all routes
  */
-var pages = {
-  index    : null,
-  tools    : null,
-  articles : null,
-  slides   : null,
-  videos   : null,
-  courses  : null
-};
+var pages = config.listPages.reduce( function( pages, listPage ) {
+  pages[ listPage ] = null;
+
+  return pages;
+}, { index : null } );
 
 
 /**
@@ -177,12 +170,9 @@ function fetchTwitterUserMeta() {
 
                   // render it again
                   // because we had a data update
-                  pages.articles = renderPage( 'articles' );
-                  pages.books    = renderPage( 'books' );
-                  pages.slides   = renderPage( 'slides' );
-                  pages.videos   = renderPage( 'videos' );
-                  pages.courses  = renderPage( 'courses' );
-
+                  config.listPages.forEach( function( listPage ) {
+                    pages[ listPage ] = renderPage( listPage );
+                  } );
 
                   // give it a bit of time
                   // to rest and not reach the API limits
@@ -198,11 +188,9 @@ function fetchTwitterUserMeta() {
     } );
   }
 
-  evalAuthors( 'videos' );
-  evalAuthors( 'articles' );
-  evalAuthors( 'slides' );
-  evalAuthors( 'books' );
-  evalAuthors( 'courses' );
+  config.listPages.forEach( function( listPage ) {
+    evalAuthors( listPage );
+  } );
 
   async.waterfall( queue, function() {
     console.log( 'DONE -> fetchTwitterUserMeta()' );
@@ -447,6 +435,7 @@ function renderPage( type, options ) {
         people           : data.people,
         platforms        : config.platforms,
         resourceCount    : {
+          audits   : data.audits.length,
           tools    : data.tools.length,
           articles : data.articles.length,
           videos   : data.videos.length,

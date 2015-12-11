@@ -1,0 +1,16 @@
+{
+  "name": "Troubleshooting rendering performance issues",
+  "targets" : [
+    "http://tobiasahlin.com"
+  ],
+  "authors" : [
+    {
+      "name" : "Harry Roberts",
+      "twitter" : "@csswizardry"
+    }
+  ],
+  "date" : "2015-11-25",
+  "url" : "https://www.youtube.com/watch?v=2vFrZXWiwIc",
+  "types" : [ "video" ],
+  "tags" : [ "rendering", "60fps" ]
+}

@@ -1,0 +1,16 @@
+{
+  "name" : "Perf audit: Loading performance",
+  "targets" : [
+    "http://m.reddit.com"
+  ],
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    }
+  ],
+  "date" : "2015-07-03",
+  "url" : "https://github.com/reddit/reddit-mobile/issues/247",
+  "types" : [ "github-issue" ],
+  "tags" : [ "loading", "javascript execution", "network" ]
+}
