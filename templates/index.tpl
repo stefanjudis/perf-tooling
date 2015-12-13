@@ -162,7 +162,7 @@
 
                 <div class="article__cta">
 
-                  <a href="/courses" title="Link to tools" class="btn btn--large btn--primary">Explore Courses</a>
+                  <a href="/audits" title="Link to audits" class="btn btn--large btn--primary">Explore Audits</a>
 
                 </div>
 
