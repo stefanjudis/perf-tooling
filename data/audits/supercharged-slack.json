@@ -1,0 +1,16 @@
+{
+  "name" : "Supercharged: Slack",
+  "targets" : [
+    "https://slack.com/"
+  ],
+  "authors" : [
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
+  "date" : "2015-12-18",
+  "url" : "https://www.youtube.com/watch?v=F6pBKoTdE24",
+  "types" : [ "video" ],
+  "tags" : [ "scrolling" ]
+}
