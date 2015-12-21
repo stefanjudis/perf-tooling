@@ -1,0 +1,11 @@
+{
+  "name" : "Quantify and improve real-world RAIL",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "youtubeId" : "NrEjkflqPxQ",
+  "tags" : [ "metrics", "rail" ]
+}
