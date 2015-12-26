@@ -1,0 +1,17 @@
+{
+  "name" : "inspectIT",
+  "node" : {
+    "url" : "https://github.com/inspectIT/inspectIT"
+  },
+  "linux": {
+    "url" : "https://github.com/inspectIT/inspectIT"
+  },
+  "mac": {
+    "url" : "https://github.com/inspectIT/inspectIT"
+  },
+  "windows" : {
+    "url" : "https://github.com/inspectIT/inspectIT"
+  },
+  "description" : "inspectIT is a powerful software product for monitoring and analyzing your software applications.",
+  "tags" : [ "metrics", "performance", "java", "database", "analysis" ]
+}
