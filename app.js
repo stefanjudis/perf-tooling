@@ -142,7 +142,8 @@ function fetchGithubStars() {
  * Fetch twitter data
  */
 function fetchTwitterUserMeta() {
-  var queue = [];
+  var queue          = [];
+  var fetchedAuthors = [];
 
   /**
    * Evaluate set authors for each entry
@@ -155,33 +156,37 @@ function fetchTwitterUserMeta() {
           if ( author.twitter ) {
             var userName = author.twitter.replace( '@', '' );
 
-            queue.push( function( done ) {
-              helpers.twitter.fetchTwitterUserData(
-                userName,
-                function( error, user ) {
-                  if ( error ) {
-                    console.warn( 'ERROR -> fetchTwitterUserData' );
-                    console.warn( 'ERROR -> ' + userName );
-                    console.warn( 'ERROR -> ' +  error );
-                    return done( null );
+            if ( fetchedAuthors.indexOf( userName ) === -1 ) {
+              fetchedAuthors.push( userName );
+
+              queue.push( function( done ) {
+                helpers.twitter.fetchTwitterUserData(
+                  userName,
+                  function( error, user ) {
+                    if ( error ) {
+                      console.warn( 'ERROR -> fetchTwitterUserData' );
+                      console.warn( 'ERROR -> ' + userName );
+                      console.warn( 'ERROR -> ' +  error );
+                      return done( null );
+                    }
+
+                    data.people[ userName ] = user;
+
+                    // render it again
+                    // because we had a data update
+                    config.listPages.forEach( function( listPage ) {
+                      pages[ listPage ] = renderPage( listPage );
+                    } );
+
+                    // give it a bit of time
+                    // to rest and not reach the API limits
+                    setTimeout( function() {
+                      done( null );
+                    }, config.timings.requestDelay );
                   }
-
-                  data.people[ userName ] = user;
-
-                  // render it again
-                  // because we had a data update
-                  config.listPages.forEach( function( listPage ) {
-                    pages[ listPage ] = renderPage( listPage );
-                  } );
-
-                  // give it a bit of time
-                  // to rest and not reach the API limits
-                  setTimeout( function() {
-                    done( null );
-                  }, config.timings.requestDelay );
-                }
-              );
-            } );
+                );
+              } );
+            }
           }
         } );
       }
