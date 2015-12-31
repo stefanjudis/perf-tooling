@@ -1,0 +1,15 @@
+{
+  "name" : "Instant Web Application",
+  "authors" : [
+    {
+      "name" : "Gleb Bahmutov",
+      "twitter" : "@bahmutov"
+    }
+  ],
+  "date" : "2015-12-24",
+  "stats" : {
+    "length" : 1020
+  },
+  "url" : "https://glebbahmutov.com/blog/instant-web-application/",
+  "tags" : [ "ServiceWorker", "loading" ]
+}
