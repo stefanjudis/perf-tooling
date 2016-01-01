@@ -1,0 +1,15 @@
+{
+  "name" : "Strategies for Cache-Busting CSS",
+  "authors" : [
+    {
+      "name" : "Chris Coyier",
+      "twitter" : "@chriscoyier"
+    }
+  ],
+  "date" : "2015-08-14",
+  "stats" : {
+    "length" : 1098
+  },
+  "tags" : [ "css", "cache", "tooling" ],
+  "url" : "https://css-tricks.com/strategies-for-cache-busting-css/"
+}
