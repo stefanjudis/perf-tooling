@@ -1,0 +1,11 @@
+{
+  "name" : "HTTP/2 is here, now let's make it easy",
+  "authors" : [
+    {
+      "name" : "Rebecca Murphey",
+      "twitter" : "@rmurphey"
+    }
+  ],
+  "youtubeId" : "7KmR-JD3dGo",
+  "tags" : [ "HTTP/2", "network" ]
+}
