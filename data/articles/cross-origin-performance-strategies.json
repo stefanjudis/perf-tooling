@@ -1,0 +1,15 @@
+{
+  "name" : "Two Strategies for Crossing Origins with Performance in Mind",
+  "authors" : [
+    {
+      "name" : "Nik Molnar",
+      "twitter" : "@nikmd23"
+    }
+  ],
+  "date" : "2016-01-14",
+  "stats" : {
+    "length" : 695
+  },
+  "url" : "https://gooroo.io/GoorooTHINK/Article/16408/Two-Strategies-for-Crossing-Origins-with-Performance-in-Mind/",
+  "tags" : [ "cors", "resource-timing" ]
+}
