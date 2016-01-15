@@ -13,7 +13,7 @@
   },
   "img" : {
     "src" : {
-      "filename": "pluralsight",
+      "filename": "wpt-deep-dive",
       "types" : ["png"]
     },
     "width" : 277,
