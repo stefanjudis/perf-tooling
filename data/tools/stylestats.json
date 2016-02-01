@@ -3,6 +3,9 @@
   "cli" : {
     "url" : "https://github.com/t32k/stylestats"
   },
+  "chrome" : {
+    "url" : "https://chrome.google.com/webstore/detail/stylestats/lgbcioahebkgkdiljpgcdaghejijioki"
+  },
   "grunt" : {
     "url" : "https://github.com/tvooo/grunt-stylestats"
   },
@@ -15,6 +18,6 @@
   "service" : {
     "url" : "http://www.stylestats.org/"
   },
-  "description" : "StyleStats is a Node.js library to collect CSS statistics.",
+  "description" : "StyleStats is an evaluating tool for writing better CSS.",
   "tags" : [ "css", "metrics" ]
 }
