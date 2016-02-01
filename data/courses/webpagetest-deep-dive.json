@@ -1,0 +1,25 @@
+{
+  "name" : "WebPageTest Deep Dive",
+  "authors" : [
+    {
+      "name" : "Nik Molnar",
+      "twitter" : "@nikmd23"
+    }
+  ],
+  "date" : "2015-11-15",
+  "stats" : {
+    "estimatedTime" : "2.75 hours",
+    "level" : "beginner"
+  },
+  "img" : {
+    "src" : {
+      "filename": "wpt-deep-dive",
+      "types" : ["png"]
+    },
+    "width" : 277,
+    "height" : 192
+  },
+  "isPaid": true,
+  "tags" : [ "webpagetest", "measuring", "optimisation" ],
+  "url" : "https://www.pluralsight.com/courses/webpagetest-deep-dive"
+}
