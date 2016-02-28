@@ -1,0 +1,12 @@
+{
+  "name" : "CoScale",
+  "service" : {
+    "url" : "http://www.coscale.com/",
+    "isPaid": true
+  },
+  "cli" : {
+    "url" : "https://github.com/CoScale/coscale-cli"
+  },
+  "description" : "SaaS-based monitoring of server metrics, page load times, and custom metrics and events. Use of anomaly detection to detect performance issues.",
+  "tags": [ "metrics", "analysis", "timings", "database" ]
+}
