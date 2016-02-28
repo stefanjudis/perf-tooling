@@ -1,0 +1,15 @@
+{
+  "name" : "Third party content in an HTTP/2 and ad blockers world",
+  "authors" : [
+    {
+      "name" : "Yoav Weiss",
+      "twitter" : "@yoavweiss"
+    }
+  ],
+  "date" : "2015-12-15",
+  "stats" : {
+    "length" : 2118
+  },
+  "url" : "http://calendar.perfplanet.com/2015/third-party-content-in-an-http2-and-ad-blockers-world/",
+  "tags" : [ "3rd parties", "http", "network" ]
+}
