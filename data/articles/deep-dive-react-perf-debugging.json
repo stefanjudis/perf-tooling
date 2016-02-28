@@ -1,0 +1,15 @@
+{
+  "name" : "Deep dive into React perf debugging",
+  "authors" : [
+    {
+      "name" : "Saif Hakim",
+      "twitter" : "@saifelse"
+    }
+  ],
+  "date" : "2016-02-24",
+  "stats" : {
+    "length" : 1753
+  },
+  "url" : "http://benchling.engineering/deep-dive-react-perf-debugging/",
+  "tags" : [ "react", "metrics", "monitoring" ]
+}
