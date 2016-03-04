@@ -1,0 +1,25 @@
+{
+  "name" : "Tracking Real World Web Performance",
+  "authors" : [
+    {
+      "name" : "Nik Molnar",
+      "twitter" : "@nikmd23"
+    }
+  ],
+  "date" : "2015-05-14",
+  "stats" : {
+    "estimatedTime" : "1.5 hours",
+    "level" : "beginner"
+  },
+  "img" : {
+    "src" : {
+      "filename": "tracking-web-perf",
+      "types" : ["png"]
+    },
+    "width" : 277,
+    "height" : 192
+  },
+  "isPaid": true,
+  "tags" : [ "rum", "measuring", "synthetic" ],
+  "url" : "https://www.pluralsight.com/courses/web-performance-tracking"
+}
