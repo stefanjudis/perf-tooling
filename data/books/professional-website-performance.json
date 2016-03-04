@@ -1,0 +1,23 @@
+{
+  "name" : "Professional Website Performance: Optimizing the Front-End and Back-End",
+  "date" : "2012-11-28",
+  "authors" : [
+    {
+      "name" : "Peter Smith"
+    }
+  ],
+  "stats": {
+    "length": 480
+  },
+  "url" : "http://www.amazon.com/Professional-Website-Performance-Optimizing-Front-End/dp/1118487524",
+  "description" : "Achieve optimal website speed and performance with this Wrox guide Effective website development requires optimum performance with regard to both web browser and server. This book covers all aspects of building and maintaining websites that deliver peak performance on all levels. Exploring both front-end and back-end configuration, it examines factors like compression and JavaScript, database performance, MySQL tuning, NoSQL alternatives, load-balancing across multiple servers, effective caching of web contents, CSS, and much more.",
+  "img" : {
+    "src" : {
+      "filename": "professional-website-performance",
+      "types" : ["jpg", "webp"]
+    },
+    "width" : 200,
+    "height" : 253
+  },
+  "tags" : [ "performance", "optimizing" ]
+}
