@@ -14,7 +14,7 @@
   "img" : {
     "src" : {
       "filename": "wpt-deep-dive",
-      "types" : ["png"]
+      "types" : ["png", "webp"]
     },
     "width" : 277,
     "height" : 192
