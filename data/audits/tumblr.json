@@ -1,0 +1,20 @@
+{
+  "name": "Tumblr dashboard loading perf",
+  "targets" : [
+    "https://www.tumblr.com/"
+  ],
+  "authors" : [
+    {
+      "name" : "Sam Saccone",
+      "twitter" : "@samccone"
+    },
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    }
+  ],
+  "date" : "2016-02-03",
+  "url" : "https://docs.google.com/document/d/1E2w0UQ4RhId5cMYsDcdcNwsgL0gP_S6SDv27yi1mCEY/",
+  "types" : [ "document" ],
+  "tags" : [ "rendering", "loading" ]
+}

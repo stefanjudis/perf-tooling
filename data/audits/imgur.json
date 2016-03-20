@@ -1,0 +1,16 @@
+{
+  "name": "Page Load Performance",
+  "targets" : [
+    "http://m.imgur.com/"
+  ],
+  "authors" : [
+    {
+      "name" : "Sam Saccone",
+      "twitter" : "@samccone"
+    }
+  ],
+  "date" : "2016-03-08",
+  "url" : "https://github.com/perfs/audits/issues/1",
+  "types" : [ "github-issue" ],
+  "tags" : [ "rendering", "loading" ]
+}
