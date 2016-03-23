@@ -1,0 +1,15 @@
+{
+  "name" : "WEB FONT ANTI-PATTERN: DATA URIS",
+  "authors" : [
+    {
+      "name" : "Zach Leatherman",
+      "twitter" : "@zachleat"
+    }
+  ],
+  "date" : "2016-03-11",
+  "stats" : {
+    "length" : 783
+  },
+  "url" : "http://www.zachleat.com/web/web-font-data-uris/",
+  "tags" : [ "fonts", "rendering" ]
+}
