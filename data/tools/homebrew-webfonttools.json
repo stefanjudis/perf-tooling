@@ -1,0 +1,8 @@
+{
+  "name" : "Homebrew web font tools",
+  "ruby" : {
+    "url" : "https://github.com/bramstein/homebrew-webfonttools"
+  },
+  "description" : "Homebrew formulae for font tools to create and transform web fonts to get the smallest result possible.",
+  "tags" : [ "fonts" ]
+}
