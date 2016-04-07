@@ -1,0 +1,15 @@
+{
+  "name" : "Mixins Better for Performance",
+  "authors" : [
+    {
+      "name" : "Harry Roberts",
+      "twitter" : "@csswizardry"
+    }
+  ],
+  "date" : "2016-02-25",
+  "stats" : {
+    "length" : 920
+  },
+  "url" : "http://csswizardry.com/2016/02/mixins-better-for-performance/",
+  "tags" : [ "css", "best practices" ]
+}
