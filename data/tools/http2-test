@@ -1,0 +1,8 @@
+{
+  "name" : "HTTP/2 Test by KeyCDN",
+  "service" : {
+    "url" : "https://tools.keycdn.com/http2-test"
+  },
+  "description" : "Online tool to verify if your server or CDN supports HTTP/2.",
+  "tags" : [ "network", "http", "metrics" ]
+}
