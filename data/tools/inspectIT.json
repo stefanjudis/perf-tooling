@@ -1,16 +1,13 @@
 {
   "name" : "inspectIT",
-  "node" : {
-    "url" : "https://github.com/inspectIT/inspectIT"
-  },
   "linux": {
-    "url" : "https://github.com/inspectIT/inspectIT"
+    "url" : "http://www.inspectit.rocks/#downloads"
   },
   "mac": {
-    "url" : "https://github.com/inspectIT/inspectIT"
+    "url" : "http://www.inspectit.rocks/#downloads"
   },
   "windows" : {
-    "url" : "https://github.com/inspectIT/inspectIT"
+    "url" : "http://www.inspectit.rocks/#downloads"
   },
   "description" : "inspectIT is your Open Source Application Performance Management solution for monitoring and analyzing Java-based applications. The Java agent turns on the light in your application's black box and you can see why the application is slow or not available. A central data repository has all the performance metrics you really need available anytime so that you can stop running around to obtain your information. Import and export functionality of monitoring data allows you to smash the silos in your organization and to improve the information flow between operators and developers.",
   "tags" : [ "metrics", "performance", "java", "database", "analysis" ]
