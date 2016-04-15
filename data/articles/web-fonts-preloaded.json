@@ -1,0 +1,15 @@
+{
+  "name" : "THE WEB FONTS: PRELOADED",
+  "authors" : [
+    {
+      "name" : "Zach Leatherman",
+      "twitter" : "@zachleat"
+    }
+  ],
+  "date" : "2016-04-05",
+  "stats" : {
+    "length" : 1020
+  },
+  "url" : "http://www.zachleat.com/web/preload/",
+  "tags" : [ "fonts", "rendering" ]
+}
