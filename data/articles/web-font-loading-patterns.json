@@ -1,0 +1,15 @@
+{
+  "name" : "Web Font Loading Patterns",
+  "authors" : [
+    {
+      "name" : "Bram Stein",
+      "twitter" : "@bram_stein"
+    }
+  ],
+  "date" : "2016-04-13",
+  "stats" : {
+    "length" : 1712
+  },
+  "url" : "https://www.bramstein.com/writing/web-font-loading-patterns.html",
+  "tags" : [ "fonts", "rendering" ]
+}
