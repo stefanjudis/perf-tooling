@@ -1,0 +1,15 @@
+{
+  "name" : "What We Talk About When We Talk About Web Performance",
+  "authors": [
+    {
+      "name" : "Patty Toland",
+      "twitter" : "@pattytoland"
+    }
+  ],
+  "date" : "2016-04-05",
+  "stats" : {
+    "length" : 184
+  },
+  "tags" : [ "images", "loading", "performance culture" ],
+  "url" : "https://docs.google.com/presentation/d/11fLFu-Mq5zM3wAfZkMbEzJSu6dy9cp2HH0njU11OPPI"
+}
