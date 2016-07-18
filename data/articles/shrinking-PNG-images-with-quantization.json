@@ -1,0 +1,15 @@
+{
+  "name" : "Shrinking PNG Images with Quantization",
+  "authors" : [
+    {
+      "name" : "Ariya Hidayat",
+      "twitter" : "@AriyaHidayat "
+    }
+  ],
+  "date" : "2016-07-12",
+  "stats" : {
+    "length" : 593
+  },
+  "url" : "https://ariya.io/2016/07/shrinking-png-images-with-quantization",
+  "tags" : [ "images" ]
+}
