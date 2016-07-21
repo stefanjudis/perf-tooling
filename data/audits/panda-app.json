@@ -1,0 +1,16 @@
+{
+  "name" : "PerfAudit: Panda App",
+  "targets" : [
+    "http://www.usepanda.com/"
+  ],
+  "authors" : [
+    {
+      "name" : "PerfAudit",
+      "twitter" : "@perfaudit"
+    }
+  ],
+  "date" : "2015-12-02",
+  "url" : "http://perfaudit.com/case-study/panda-app/",
+  "types" : [ "article" ],
+  "tags" : [ "loading", "images", "rendering" ]
+}
