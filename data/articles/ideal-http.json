@@ -1,0 +1,15 @@
+{
+  "name" : "Ideal HTTP Performance",
+  "authors" : [
+    {
+      "name" : "Mark Nottingham",
+      "twitter" : "@mnot"
+    }
+  ],
+  "date" : "2016-04-22",
+  "stats" : {
+    "length" : 1890
+  },
+  "url" : "https://www.mnot.net/blog/2016/04/22/ideal-http",
+  "tags" : [ "loading", "http", "network" ]
+}
