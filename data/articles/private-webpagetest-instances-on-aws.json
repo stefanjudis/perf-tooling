@@ -1,0 +1,15 @@
+{
+  "name" : "Private WebPageTest instances on AWS",
+  "authors" : [
+    {
+      "name" : "Peter Hedenskog",
+      "twitter" : "@soulislove"
+    }
+  ],
+  "date" : "2015-07-16",
+  "stats" : {
+    "length" : 477
+  },
+  "url" : "https://www.peterhedenskog.com/blog/2015/07/private-wpt-instance/",
+  "tags" : [ "webpagetest" ]
+}
