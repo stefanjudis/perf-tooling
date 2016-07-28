@@ -1,13 +1,15 @@
 {
   "name" : "Waterfalls 101: How to use a waterfall chart to diagnose your website’s performance pains",
-  "author": "Tammy Everts",
-  "date": "2014-03-18",
-  "social": {
-    "twitter": "@tameverts"
+  "authors" : [
+    {
+      "name" : "Tammy Everts",
+      "twitter" : "@tameverts"
+    }
+  ],
+  "date" : "2014-03-18",
+  "stats" : {
+    "length" : 1809
   },
-  "stats": {
-    "length": 1809
-  },
-  "url": "http://www.webperformancetoday.com/2014/03/18/waterfalls-101-how-to-use-a-waterfall-chart-to-diagnose-performance-pains/",
-  "tags": ["network", "monitoring", "webpagetest" ]
+  "url" : "http://www.webperformancetoday.com/2014/03/18/waterfalls-101-how-to-use-a-waterfall-chart-to-diagnose-performance-pains/",
+  "tags" : ["network", "monitoring", "webpagetest" ]
 }

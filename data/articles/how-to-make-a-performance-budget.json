@@ -1,13 +1,15 @@
 {
   "name" : "How to Make a Performance Budget",
-  "author": "Daniel Mall",
+  "authors" : [
+    {
+      "name" : "Daniel Mall",
+      "twitter" :"@danielmall"
+    }
+  ],
   "date" : "2014-12-04",
-  "social": {
-    "twitter":"@danielmall"
+  "stats" : {
+    "length" : 1236
   },
-  "stats": {
-    "length": 1236
-  },
-  "url": "http://danielmall.com/articles/how-to-make-a-performance-budget/",
-  "tags": ["budget", "speedindex"]
+  "url" : "http://danielmall.com/articles/how-to-make-a-performance-budget/",
+  "tags" : ["budget", "speedindex"]
 }

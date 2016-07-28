@@ -10,10 +10,10 @@
       "twitter" : "@aerotwist"
     }
   ],
-  "date": "2013-11-07",
-  "stats": {
-    "length": 1386
+  "date" : "2013-11-07",
+  "stats" : {
+    "length" : 1386
   },
-  "url": "http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/",
-  "tags": [ "animation", "60fps" ]
+  "url" : "http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/",
+  "tags" : [ "animation", "60fps" ]
 }

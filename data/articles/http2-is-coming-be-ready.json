@@ -1,13 +1,15 @@
 {
   "name" : "HTTP 2.0 is coming, be ready",
-  "author": "Iliyan Peychev",
-  "date": "2014-12-04",
-  "social" : {
-    "twitter": "@ipeychev"
+  "authors" : [
+    {
+      "name" : "Iliyan Peychev",
+      "twitter" : "@ipeychev"
+    }
+  ],
+  "date" : "2014-12-04",
+  "stats" : {
+    "length" : 1680
   },
-  "stats": {
-    "length": 1680
-  },
-  "url": "http://calendar.perfplanet.com/2014/http-2-0-is-coming-be-ready/",
-  "tags": ["http 2.0"]
+  "url" : "http://calendar.perfplanet.com/2014/http-2-0-is-coming-be-ready/",
+  "tags" : ["http 2.0"]
 }

@@ -1,13 +1,15 @@
 {
   "name" : "(More Than) Doubling SVG FPS Rates at Khan Academy",
-  "author": "Charlie Marsh",
-  "date": "2014-11-24",
-  "social": {
-    "twitter": "@crm416"
+  "authors" : [
+    {
+      "name" : "Charlie Marsh",
+      "twitter" : "@crm416"
+    }
+  ],
+  "date" : "2014-11-24",
+  "stats" : {
+    "length" : 1711
   },
-  "stats": {
-    "length": 1711
-  },
-  "url": "http://www.princeton.edu/~crmarsh/svg-performance/",
-  "tags": ["60fps", "svg"]
+  "url" : "http://www.princeton.edu/~crmarsh/svg-performance/",
+  "tags" : ["60fps", "svg"]
 }

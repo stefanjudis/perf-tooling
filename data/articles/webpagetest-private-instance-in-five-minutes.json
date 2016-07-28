@@ -1,13 +1,15 @@
 {
   "name" : "WebPagetest Private Instances in Five Minutes",
-  "author": "Patrick Meenan",
-  "date": "2014-12-12",
-  "social": {
-    "twitter": "@patmeenan"
+  "authors" : [
+    {
+      "name" : "Patrick Meenan",
+      "twitter" : "@patmeenan"
+    }
+  ],
+  "date" : "2014-12-12",
+  "stats" : {
+    "length" : 1213
   },
-  "stats": {
-    "length": 1213
-  },
-  "url": "http://calendar.perfplanet.com/2014/webpagetest-private-instances-in-five-minutes/",
-  "tags": [ "webpagetest" ]
+  "url" : "http://calendar.perfplanet.com/2014/webpagetest-private-instances-in-five-minutes/",
+  "tags" : [ "webpagetest" ]
 }

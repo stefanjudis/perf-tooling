@@ -1,13 +1,15 @@
 {
   "name" : "Web performance optimization",
-  "author": "Gokulakrishnan",
-  "date": "2014-12-15",
-  "social": {
-    "twitter": "@gokul_i"
+  "authors" : [
+    {
+      "name" : "Gokulakrishnan",
+      "twitter" : "@gokul_i"
+    }
+  ],
+  "date" : "2014-12-15",
+  "stats" : {
+    "length" : 980
   },
-  "stats": {
-    "length": 980
-  },
-  "url": "http://gokulkrishh.github.io/2014/12/15/Web-performance-optimization/",
-  "tags": [ "devtools", "monitoring" ]
+  "url" : "http://gokulkrishh.github.io/2014/12/15/Web-performance-optimization/",
+  "tags" : [ "devtools", "monitoring" ]
 }

@@ -1,13 +1,15 @@
 {
   "name" : "Animating the Mobile Web",
-  "author": "Zain Manji",
-  "date": "2015-01-27",
-  "social": {
-    "twitter": "@zainmanji"
+  "authors" : [
+    {
+      "name" : "Zain Manji",
+      "twitter" : "@zainmanji"
+    }
+  ],
+  "date" : "2015-01-27",
+  "stats" : {
+    "length" : 1348
   },
-  "stats": {
-    "length": 1348
-  },
-  "url": "http://engineeringblog.yelp.com/2015/01/animating-the-mobile-web.html",
-  "tags": [ "animations", "60fps" ]
+  "url" : "http://engineeringblog.yelp.com/2015/01/animating-the-mobile-web.html",
+  "tags" : [ "animations", "60fps" ]
 }
