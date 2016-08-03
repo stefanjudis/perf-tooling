@@ -1,0 +1,15 @@
+{
+  "name" : "FaCSSt—CSS & Performance",
+  "authors": [
+    {
+      "name" : "Harry Roberts",
+      "twitter" : "@csswizardry"
+    }
+  ],
+  "date" : "2016-01-21",
+  "stats" : {
+    "length" : 80
+  },
+  "tags" : [ "css", "rendering", "above the fold" ],
+  "url" : "https://speakerdeck.com/csswizardry/facsst-css-and-performance"
+}
