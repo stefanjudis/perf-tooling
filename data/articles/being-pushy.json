@@ -1,0 +1,15 @@
+{
+  "name" : "Being Pushy",
+  "authors" : [
+    {
+      "name" : "Yoav Weiss",
+      "twitter" : "@yoavweiss"
+    }
+  ],
+  "date" : "2016-08-02",
+  "stats" : {
+    "length" : 1473
+  },
+  "url" : "https://blog.yoav.ws/being_pushy/",
+  "tags" : [ "loading", "http" ]
+}
