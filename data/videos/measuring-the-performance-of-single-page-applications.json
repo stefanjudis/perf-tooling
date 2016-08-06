@@ -1,0 +1,15 @@
+{
+  "name" : "Measuring the Performance of Single Page Applications",
+  "authors" : [
+    {
+      "name" : "Nic Jansma",
+      "twitter" : "@nicj"
+    },
+    {
+      "name" : "Philip Tellis",
+      "twitter" : "@bluesmoon"
+    }
+  ],
+  "youtubeId" : "CYEYtQPofhQ",
+  "tags" : [ "loading", "metrics" ]
+}
