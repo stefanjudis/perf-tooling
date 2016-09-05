@@ -1,0 +1,15 @@
+{
+  "name" : "Impact of Metadata on Image Performance",
+  "authors" : [
+    {
+      "name" : "Inian Parameshwaran",
+      "twitter" : "@everConfusedGuy"
+    }
+  ],
+  "date" : "2016-09-05",
+  "stats" : {
+    "length" : 1226
+  },
+  "url" : "https://blog.dexecure.com/impact-of-metadata-on-image-performance/",
+  "tags" : [ "metadata", "images", "optimization" ]
+}
