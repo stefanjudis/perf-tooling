@@ -1,0 +1,8 @@
+{
+  "name" : "appmetrics.js",
+  "node" : {
+    "url" : "https://github.com/ebidel/appmetrics.js"
+  },
+  "description" : "A small (1.5KB gzip) library for measuring things in your web app, annotating the DevTools timeline, and reporting the results to Google Analytics.",
+  "tags" : [ "metrics", "benchmark", "javascript" ]
+}
