@@ -1,0 +1,8 @@
+{
+  "name" : "httpstat",
+  "cli" : {
+    "url" : "https://github.com/reorx/httpstat"
+  },
+  "description" : "curl statistics made simple.",
+  "tags" : [ "network", "http", "metrics" ]
+}
