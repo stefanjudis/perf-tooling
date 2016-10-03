@@ -1,0 +1,24 @@
+{
+  "name" : "Web Performance in Action",
+  "date" : "2016-04-01",
+  "authors" : [
+    {
+      "name" : "Jeremy L. Wagner",
+      "twitter" : "@malchata"
+    }
+  ],
+  "stats": {
+    "length": 400
+  },
+  "url" : "https://manning.com/books/web-performance-in-action",
+  "description" : "Web Performance in Action is your companion guide to making websites faster. Throughout the course of this book, you'll learn techniques that speed the delivery of your site's assets to the user, increase rendering speed, decrease the overall footprint of your site, as well as learn how to build a workflow that automates common optimization techniques. You'll also get a look at new technologies such as HTTP/2 that will take your website's speed from merely adequate to seriously fast.",
+  "img" : {
+    "src" : {
+      "filename" : "web-perf-in-action",
+      "types" : [ "jpg", "webp" ]
+    },
+    "width" : 200,
+    "height" : 263
+  },
+  "tags" : [ "loading", "tools", "optimizing" ]
+}
