@@ -4,5 +4,5 @@
     "url" : "https://varvy.com/tools/js/"
   },
   "description" : "Examine a site's use of Javascript both external and internal.",
-  "tags" : [ "JavaScript", "loading" ]
+  "tags" : [ "javascript", "loading" ]
 }
