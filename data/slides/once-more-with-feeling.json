@@ -1,0 +1,15 @@
+{
+  "name" : "Once More, With Feeling",
+  "authors": [
+    {
+      "name" : "Tim Kadlec",
+      "twitter" : "@tkadlec"
+    }
+  ],
+  "date" : "2016-05-18",
+  "stats" : {
+    "length" : 98
+  },
+  "tags" : [ "loading", "metrics", "performance culture" ],
+  "url" : "https://speakerdeck.com/tkadlec/once-more-with-feeling"
+}
