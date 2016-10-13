@@ -1,0 +1,24 @@
+{
+  "name" : "Website Performance Bootcamp",
+  "authors" : [
+    {
+      "name" : "Imperva Incapsula"
+    }
+  ],
+  "date" : "2016-10-12",
+  "stats" : {
+    "estimatedTime" : "2.5 hours",
+    "level" : "beginner"
+  },
+  "img" : {
+    "src" : {
+      "filename": "website-perf-bootcamp",
+      "types" : ["png", "webp"]
+    },
+    "width" : 277,
+    "height" : 146
+  },
+  "isPaid": false,
+  "tags" : [ "http", "network", "loading" ],
+  "url" : "https://www.sitespeedbootcamp.com/"
+}
