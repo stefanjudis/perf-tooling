@@ -1,0 +1,11 @@
+{
+  "name" : "lighthouse",
+  "bookmarklet" : {
+    "url" : "https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
+  },
+  "node" : {
+    "url" : "https://github.com/GoogleChrome/lighthouse"
+  },
+  "description" : "Lighthouse analyzes web apps and web pages, collecting modern performance metrics and insights on developer best practices.",
+  "tags" : [ "budget", "analysis", "metrics" ]
+}
