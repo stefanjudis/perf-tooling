@@ -1,0 +1,15 @@
+{
+  "name" : "Improving Perceived Performance with Multiple Background Images",
+  "authors" : [
+    {
+      "name" : "Harry Roberts",
+      "twitter" : "@csswizardry"
+    }
+  ],
+  "date" : "2016-10-23",
+  "stats" : {
+    "length" : 824
+  },
+  "url" : "http://csswizardry.com/2016/10/improving-perceived-performance-with-multiple-background-images/",
+  "tags" : [ "css", "images", "loading", "network" ]
+}
