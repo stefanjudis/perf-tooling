@@ -1,0 +1,8 @@
+{
+  "name" : "source-map-explorer",
+  "node" : {
+    "url" : "https://github.com/danvk/source-map-explorer"
+  },
+  "description" : "The source map explorer determines which file each byte in your minified JS came from. It shows you a treemap visualization to help you debug where all the code is coming from.",
+  "tags" : [ "analysis", "metrics", "javascript" ]
+}
