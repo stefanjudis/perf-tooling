@@ -1,0 +1,15 @@
+{
+  "name" : "Testing with Realistic Networking Conditions",
+  "authors" : [
+    {
+      "name" : "Patrick Meenan",
+      "twitter" : "@patmeenan"
+    }
+  ],
+  "date" : "2016-12-01",
+  "stats" : {
+    "length" : 1118
+  },
+  "url" : "http://calendar.perfplanet.com/2016/testing-with-realistic-networking-conditions/",
+  "tags" : [ "network", "loading", "webpagetest" ]
+}
