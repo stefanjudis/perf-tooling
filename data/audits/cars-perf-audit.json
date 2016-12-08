@@ -1,0 +1,16 @@
+{
+  "name" : "PerfAudit: Cars.com",
+  "targets" : [
+    "https://www.cars.com/"
+  ],
+  "authors" : [
+    {
+      "name" : "Greg Heidorn",
+      "twitter" : "@GregHeidorn"
+    }
+  ],
+  "date" : "2016-12-05",
+  "url" : "https://tech.cars.com/building-a-web-performance-culture-902f34394b50#.8gkw194me",
+  "types" : [ "article" ],
+  "tags" : [ "devtools", "loading", "rendering" ]
+}
