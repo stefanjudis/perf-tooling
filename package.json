@@ -18,6 +18,7 @@
     "url": "https://github.com/stefanjudis/perf-tooling/issues"
   },
   "scripts": {
+    "thanks": "credits . --reporter markdown > THANKS.md",
     "test": "gulp test",
     "gulp": "gulp",
     "dev": "gulp dev",
@@ -58,5 +59,8 @@
     "twit": "^1.1.18",
     "vimeo-api": "^1.1.1",
     "youtube-api": "^0.3.1"
+  },
+  "devDependencies": {
+    "credits-cli": "^3.1.0"
   }
 }
