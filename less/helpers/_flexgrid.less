@@ -16,6 +16,20 @@
       }
     }
 
+    &.flexgrid-3 {
+      margin: 0 -2em;
+      justify-content: center;
+
+      .flexgrid__item {
+        flex: 0 0 100%;
+        padding: 1em 2em;
+
+        @media (min-width: @media--tiny) {
+          flex: 0 0 33.33%;
+        }
+      }
+    }
+
     &.flexgrid-4 {
       margin: 0 -0.5em;
 
