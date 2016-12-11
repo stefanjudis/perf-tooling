@@ -53,7 +53,7 @@
               <li>
                 <span class="visuallyhidden">Views:</span>
                  <svg class="icon icon--grey">
-                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-view" />
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#view" />
                 </svg><%= video.stats.viewCount %>
               </li>
 
@@ -64,7 +64,7 @@
               <li>
                 <span class="visuallyhidden">Likes:</span>
                 <svg class="icon icon--grey">
-                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-like" />
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#like" />
                 </svg>
                 <%= video.stats.likeCount %>
               </li>
@@ -75,7 +75,7 @@
               <li>
                 <span class="visuallyhidden">Dislikes:</span>
                 <svg class="icon icon--grey">
-                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-dislike" />
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#dislike" />
                 </svg>
                 <%= video.stats.dislikeCount %>
               </li>
