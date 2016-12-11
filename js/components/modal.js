@@ -105,8 +105,6 @@
       elements.modalContent.innerHTML = filteredList[ 0 ].html;
       elements.tabBtn.href = filteredList[ 0 ].url;
 
-      var iframe = elements.modalContent.querySelector( 'iframe' );
-
       elements.body.classList.add( 'is-locked' );
       elements.modal.classList.add( 'is-loaded' );
 

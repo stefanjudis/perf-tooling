@@ -246,7 +246,7 @@
           <section class="site__section text-center">
             <h3>Built by the Perf Tooling Team</h3>
 
-            <div class="flexgrid__container flexgrid-4">
+            <div class="flexgrid__container flexgrid-3">
               <div class="flexgrid__item">
                 <h4>Stefan Judis</h4>
                 <ul class="list--inline list--unstyled">
@@ -269,7 +269,7 @@
                   </li>
 
                   <li>
-                    <a href="mailto:stefanjudis@gmail.com" title="Send Stafan an email" target="_blank">
+                    <a href="mailto:stefanjudis@gmail.com" title="Send Stefan an email" target="_blank">
                       <span class="visuallyhidden">Stefan's email address</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
                         <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
@@ -329,7 +329,7 @@
                   </li>
 
                   <li>
-                    <a href="mailto:hello@marhigh.com" title="Send Stafan an email" target="_blank">
+                    <a href="mailto:hello@marhigh.com" title="Send Mar an email">
                       <span class="visuallyhidden">Mar's email address</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
                         <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
@@ -346,7 +346,7 @@
                 <ul class="list--inline list--unstyled">
 
                   <li>
-                    <a href="https://github.com/radibit" title="Link to Marco on GitHub" target="_blank">
+                    <a href="https://github.com/radibit" title="Link to Radimir on GitHub" target="_blank">
                       <span class="visuallyhidden">Radimir on Github</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
                         <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
@@ -355,7 +355,7 @@
                   </li>
 
                   <li>
-                    <a href="https://twitter.com/radibit" title="Link to Marco on Twitter" target="_blank">
+                    <a href="https://twitter.com/radibit" title="Link to Radimir on Twitter" target="_blank">
                       <span class="visuallyhidden">Radimir on Twitter</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
                         <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
@@ -364,7 +364,41 @@
                   </li>
 
                   <li>
-                    <a href="mailto:radimir.bitsov@gmail.com" title="Send Stafan an email" target="_blank">
+                    <a href="mailto:radimir.bitsov@gmail.com" title="Send Radimir an email">
+                      <span class="visuallyhidden">Radimir's email address</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="flexgrid__item">
+                <h4>Ben Briggs</h4>
+                <ul class="list--inline list--unstyled">
+
+                  <li>
+                    <a href="https://github.com/ben-eb" title="Link to Ben on GitHub" target="_blank">
+                      <span class="visuallyhidden">Radimir on Github</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/ben_eb" title="Link to Ben on Twitter" target="_blank">
+                      <span class="visuallyhidden">Radimir on Twitter</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="mailto:beneb.info@gmail.com" title="Send Ben an email">
                       <span class="visuallyhidden">Radimir's email address</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
                         <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
