@@ -35,7 +35,7 @@
     "gulp-merge-media-queries": "^0.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-csslint": "^0.1.5",
-    "gulp-if": "^1.2.5",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^2.1.0",
     "gulp-jshint": "^2.0.4",
     "gulp-json-editor": "^2.2.1",
