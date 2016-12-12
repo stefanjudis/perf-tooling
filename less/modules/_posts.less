@@ -5,8 +5,8 @@
 
   &--flex {
     display: flex;
-    flex-wrap: wrap;
     flex-direction : column;
+    flex-wrap: wrap;
     margin: 0 -.5rem;
 
     @media (min-width: @media--medium) {
@@ -69,8 +69,8 @@
   &__author {
 
     &__img {
-      margin-bottom: .5rem;
       border-radius: 50%;
+      margin-bottom: .5rem;
     }
 
   }
@@ -85,8 +85,8 @@
 
       &:not(:last-child) {
         &::after {
-          white-space : pre;
           content : ', ';
+          white-space : pre;
         }
       }
 
