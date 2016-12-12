@@ -81,7 +81,7 @@ gulp.task( 'styles', () => {
   return gulp.src( files.styles )
     .pipe( gulpLess() )
     .pipe( gulpCsslint( '.csslintrc' ) )
-    .pipe( gulpCsslint.reporter() )
+    .pipe( gulpCsslint.formatter() )
     .pipe( gulpAutoprefixer( 'last 1 version', '> 1%', 'ie 8', 'ie 7' ) )
     .pipe( gulpMergeMediaQueries( {
       log: true
@@ -113,8 +113,8 @@ gulp.task( 'csslint', () => {
   return gulp.src( files.styles )
     .pipe( gulpLess() )
     .pipe( gulpCsslint( '.csslintrc' ) )
-    .pipe( gulpCsslint.reporter() )
-    .pipe( gulpCsslint.failReporter() );
+    .pipe( gulpCsslint.formatter() )
+    .pipe( gulpCsslint.formatter('fail') );
 });
 
 /*******************************************************************************
