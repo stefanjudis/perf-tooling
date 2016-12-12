@@ -18,7 +18,7 @@ var imagemin      = require( 'gulp-imagemin' );
 var pngquant      = require( 'imagemin-pngquant' );
 var less          = require( 'gulp-less' );
 var prefix        = require( 'gulp-autoprefixer' );
-var minifyCSS     = require( 'gulp-minify-css' );
+var cleanCSS      = require( 'gulp-clean-css' );
 var uglify        = require( 'gulp-uglify' );
 var tasks         = require( 'gulp-task-listing' );
 var svgstore      = require( 'gulp-svgstore' );
@@ -95,7 +95,7 @@ gulp.task( 'styles', function () {
     .pipe( mmq( {
       log: true
     } ) )
-    .pipe( minifyCSS() )
+    .pipe( cleanCSS() )
     .pipe( rev() )
     .pipe( gulp.dest( 'public/' ) )
     .pipe( gutil.buffer( function ( err, dataFiles ) {
@@ -166,11 +166,7 @@ gulp.task( 'scripts', function() {
  */
 gulp.task( 'svg', function () {
   return gulp.src( files.svg )
-    .pipe( svgstore( {
-      fileName  : 'icons.svg',
-      prefix    : 'icon-',
-      inlineSvg : true
-    } ) )
+    .pipe( svgstore() )
     .pipe( rev() )
     .pipe( gulp.dest( 'public/' ) )
     .pipe( gutil.buffer( function ( err, dataFiles ) {
