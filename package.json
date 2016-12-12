@@ -32,7 +32,7 @@
     "express": "^4.9.0",
     "gulp": "~3.8.0",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-merge-media-queries": "^0.2.0",
+    "gulp-merge-media-queries": "^0.2.1",
     "gulp-concat": "^2.6.1",
     "gulp-csslint": "^0.1.5",
     "gulp-if": "^2.0.2",
