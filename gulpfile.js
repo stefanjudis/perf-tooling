@@ -90,7 +90,7 @@ gulp.task( 'styles', function () {
   return gulp.src( files.styles )
     .pipe( less() )
     .pipe( csslint( '.csslintrc' ) )
-    .pipe( csslint.reporter() )
+    .pipe( csslint.formatter() )
     .pipe( prefix( 'last 1 version', '> 1%', 'ie 8', 'ie 7' ) )
     .pipe( mmq( {
       log: true
@@ -120,8 +120,8 @@ gulp.task( 'csslint', function () {
   return gulp.src( files.styles )
     .pipe( less() )
     .pipe( csslint( '.csslintrc' ) )
-    .pipe( csslint.reporter() )
-    .pipe( csslint.failReporter() );
+    .pipe( csslint.formatter() )
+    .pipe( csslint.formatter('fail') );
 });
 
 /*******************************************************************************
