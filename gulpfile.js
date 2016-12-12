@@ -166,11 +166,7 @@ gulp.task( 'scripts', function() {
  */
 gulp.task( 'svg', function () {
   return gulp.src( files.svg )
-    .pipe( svgstore( {
-      fileName  : 'icons.svg',
-      prefix    : 'icon-',
-      inlineSvg : true
-    } ) )
+    .pipe( svgstore() )
     .pipe( rev() )
     .pipe( gulp.dest( 'public/' ) )
     .pipe( gutil.buffer( function ( err, dataFiles ) {

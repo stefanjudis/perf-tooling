@@ -40,7 +40,7 @@
             <% _.each( audit.types, function( type ) { %>
               <li>
                 <svg class="icon icon--grey">
-                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-<%= type %>" />
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#<%= type %>" />
                 </svg>
                 <%= type %>
             <% } ) %>

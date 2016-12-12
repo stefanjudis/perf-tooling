@@ -47,7 +47,7 @@
               <a class="btn btn--scroll js-scroll" href="#features" title="Scroll to features">
                 <span class="visuallyhidden">Scroll to features</span>
                 <svg class="icon icon--3x icon--black">
-                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-arrow" />
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#arrow" />
                 </svg>
               </a>
 
@@ -254,7 +254,7 @@
                     <a href="https://github.com/stefanjudis" title="Link to Stefan on GitHub" target="_blank">
                       <span class="visuallyhidden">Stefan on Github</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#github" />
                       </svg>
                     </a>
                   </li>
@@ -263,7 +263,7 @@
                     <a href="https://twitter.com/stefanjudis" title="Link to Stefan on Twitter" target="_blank">
                       <span class="visuallyhidden">Stefan on Twitter</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#twitter" />
                       </svg>
                     </a>
                   </li>
@@ -272,7 +272,7 @@
                     <a href="mailto:stefanjudis@gmail.com" title="Send Stefan an email" target="_blank">
                       <span class="visuallyhidden">Stefan's email address</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#email" />
                       </svg>
                     </a>
                   </li>
@@ -289,7 +289,7 @@
                     <a href="https://github.com/marcobiedermann" title="Link to Marco on GitHub" target="_blank">
                       <span class="visuallyhidden">Marco on Github</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#github" />
                       </svg>
                     </a>
                   </li>
@@ -298,7 +298,7 @@
                     <a href="https://twitter.com/m412c0b" title="Link to Marco on Twitter" target="_blank">
                       <span class="visuallyhidden">Marco on Twitter</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#twitter" />
                       </svg>
                     </a>
                   </li>
@@ -314,7 +314,7 @@
                     <a href="https://github.com/marhigh" title="Link to Mar on GitHub" target="_blank">
                       <span class="visuallyhidden">Radimir on Github</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#github" />
                       </svg>
                     </a>
                   </li>
@@ -323,7 +323,7 @@
                     <a href="https://twitter.com/spiderhigh" title="Link to Mar on Twitter" target="_blank">
                       <span class="visuallyhidden">Marco on Twitter</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#twitter" />
                       </svg>
                     </a>
                   </li>
@@ -332,7 +332,7 @@
                     <a href="mailto:hello@marhigh.com" title="Send Mar an email">
                       <span class="visuallyhidden">Mar's email address</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#email" />
                       </svg>
                     </a>
                   </li>
@@ -349,7 +349,7 @@
                     <a href="https://github.com/radibit" title="Link to Radimir on GitHub" target="_blank">
                       <span class="visuallyhidden">Radimir on Github</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#github" />
                       </svg>
                     </a>
                   </li>
@@ -358,7 +358,7 @@
                     <a href="https://twitter.com/radibit" title="Link to Radimir on Twitter" target="_blank">
                       <span class="visuallyhidden">Radimir on Twitter</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#twitter" />
                       </svg>
                     </a>
                   </li>
@@ -367,7 +367,7 @@
                     <a href="mailto:radimir.bitsov@gmail.com" title="Send Radimir an email">
                       <span class="visuallyhidden">Radimir's email address</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#email" />
                       </svg>
                     </a>
                   </li>
@@ -383,7 +383,7 @@
                     <a href="https://github.com/ben-eb" title="Link to Ben on GitHub" target="_blank">
                       <span class="visuallyhidden">Radimir on Github</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#github" />
                       </svg>
                     </a>
                   </li>
@@ -392,7 +392,7 @@
                     <a href="https://twitter.com/ben_eb" title="Link to Ben on Twitter" target="_blank">
                       <span class="visuallyhidden">Radimir on Twitter</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#twitter" />
                       </svg>
                     </a>
                   </li>
@@ -401,7 +401,7 @@
                     <a href="mailto:beneb.info@gmail.com" title="Send Ben an email">
                       <span class="visuallyhidden">Radimir's email address</span>
                       <svg class="icon icon--2x icon--black animate--scale--hover">
-                        <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#email" />
                       </svg>
                     </a>
                   </li>
