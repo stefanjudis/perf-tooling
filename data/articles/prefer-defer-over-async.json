@@ -1,0 +1,15 @@
+{
+  "name" : "Prefer DEFER Over ASYNC",
+  "authors" : [
+    {
+      "name" : "Steve Souders",
+      "twitter" : "@Souders"
+    }
+  ],
+  "date" : "2016-12-12",
+  "stats" : {
+    "length" : 1546
+  },
+  "url" : "http://calendar.perfplanet.com/2016/prefer-defer-over-async/",
+  "tags" : [ "loading", "async" ]
+}
