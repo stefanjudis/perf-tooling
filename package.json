@@ -40,8 +40,6 @@
     "youtube-api": "^0.3.1"
   },
   "devDependencies": {
-    "babel-preset-latest": "^6.16.0",
-    "babel-register": "^6.18.0",
     "credits-cli": "^3.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
