@@ -61,6 +61,6 @@
     "gulp-webp": "^2.3.0",
     "imagemin-pngquant": "^5.0.0",
     "jshint": "^2.9.4",
-    "jshint-stylish": "^1.0.0"
+    "jshint-stylish": "^2.2.1"
   }
 }
