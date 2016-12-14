@@ -43,7 +43,7 @@
     "credits-cli": "^3.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.2.1",
+    "gulp-clean-css": "^2.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-csslint": "^1.0.0",
     "gulp-if": "^2.0.2",
