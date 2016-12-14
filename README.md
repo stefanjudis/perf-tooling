@@ -5,7 +5,7 @@
 [![Join the chat at https://gitter.im/stefanjudis/perf-tooling](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/stefanjudis/perf-tooling?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20⚡️%20😍-40C4FF.svg)](https://gitmoji.carloscuesta.me)
 
-[![Dependency Status](https://david-dm.org/stefanjudis/perf-tooling.svg)](https://david-dm.org/stefanjudis/perf-tooling)
+[![dependencies Status](https://david-dm.org/stefanjudis/perf-tooling/status.svg)](https://david-dm.org/stefanjudis/perf-tooling) [![devDependencies Status](https://david-dm.org/stefanjudis/perf-tooling/dev-status.svg)](https://david-dm.org/stefanjudis/perf-tooling?type=dev)
 
 Welcome to Perf Tooling.
 
