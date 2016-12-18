@@ -96,15 +96,15 @@ function fetchGithubStars() {
   const queue = [];
 
   data.tools.forEach( tool => {
-    _.forIn( tool, ( value, key ) => {
+    for( let prop in tool ) {
       tool.stars = data.tools.stars || {};
 
       if (
-        value.url &&
-        /github/.test( value.url )
+        tool[prop].url &&
+        /github/.test( tool[prop].url )
       ) {
         queue.push( done => {
-          const project = value.url.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
+          const project = tool[prop].url.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
 
           helpers.github.getStars(
             project,
@@ -116,7 +116,7 @@ function fetchGithubStars() {
                 return done( null );
               }
 
-              tool.stars[ key ] = stars;
+              tool.stars[ prop ] = stars;
 
               pages.tools = renderPage( 'tools' );
 
@@ -127,7 +127,7 @@ function fetchGithubStars() {
           );
         } );
       }
-    } );
+    }
   } );
 
   async.waterfall( queue, () => console.log( 'DONE -> fetchGithubStars()' ) );
