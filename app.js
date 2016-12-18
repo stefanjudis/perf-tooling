@@ -348,9 +348,7 @@ function getList( type ) {
  *
  * @return {String}       rendered page
  */
-function renderPage( type, options ) {
-  options = options || {};
-
+function renderPage( type, options = {} ) {
   const template = ( type === 'index' ) ? 'index' : 'list';
   let list     = data[ type ] || null;
 
@@ -397,9 +395,7 @@ function renderPage( type, options ) {
    * @param  {Object} options options for lodash templates
    * @return {String}         rendered partial
    */
-  function partial( path, options ) {
-    options = options || {};
-
+  function partial( path, options = {} ) {
     return _.template(
       fs.readFileSync( path ),
       options
