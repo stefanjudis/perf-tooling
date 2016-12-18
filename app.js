@@ -95,7 +95,7 @@ function fetchContributors() {
 function fetchGithubStars() {
   const queue = [];
 
-  _.each( data.tools, tool => {
+  data.tools.forEach( tool => {
     _.forIn( tool, ( value, key ) => {
       tool.stars = data.tools.stars || {};
 
@@ -146,9 +146,9 @@ function fetchTwitterUserMeta() {
    * @param  {String} type entry type
    */
   function evalAuthors( type ) {
-    _.each( data[ type ], entry => {
+    data[ type ].forEach( entry => {
       if ( entry.authors && entry.authors.length ) {
-        _.each( entry.authors, author => {
+        entry.authors.forEach( author => {
           if ( author.twitter ) {
             const userName = author.twitter.replace( '@', '' );
 
@@ -199,7 +199,7 @@ function fetchTwitterUserMeta() {
 function fetchVideoMeta() {
   const queue = [];
 
-  _.each( data.videos, video => {
+  data.videos.forEach( video => {
     if ( video.youtubeId ) {
       queue.push( done => {
         helpers.youtube.fetchVideoMeta( video.youtubeId, ( error, meta ) => {
@@ -253,7 +253,7 @@ function fetchVideoMeta() {
 function fetchSlideMeta() {
   const queue = [];
 
-  _.each( data.slides, slide => {
+  data.slides.forEach( slide => {
     const match = slide.url.match( /(slideshare|speakerdeck)/g );
     if ( match ) {
       queue.push( done => {
@@ -379,7 +379,7 @@ function renderPage( type, options ) {
     debug = options.query.debug;
 
     if ( type === 'tools' && options.query.debug ) {
-      _.each( config.platforms, platform => {
+      config.platforms.forEach( platform => {
           demoTool[ platform.name ] = {};
           demoTool.stars[ platform.name ] = 10000;
       } );
