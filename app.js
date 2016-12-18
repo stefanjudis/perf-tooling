@@ -1,20 +1,20 @@
-var express      = require( 'express' );
-var compression  = require( 'compression' );
-var app          = express();
-var fs           = require( 'fs' );
-var fuzzify      = require( './lib/fuzzify' );
-var _            = require( 'lodash' );
-var minify       = require( 'html-minifier' ).minify;
-var config       = require( './config/config' );
-var async        = require( 'async' );
-var cookieParser = require( 'cookie-parser' );
-var revisions    = require( './rev.json' );
+const _            = require( 'lodash' );
+const async        = require( 'async' );
+const compression  = require( 'compression' );
+const cookieParser = require( 'cookie-parser' );
+const express      = require( 'express' );
+const fs           = require( 'fs' );
+const minify       = require( 'html-minifier' ).minify;
+const config       = require( './config/config' );
+const fuzzify      = require( './lib/fuzzify' );
+const revisions    = require( './rev.json' );
+const app          = express();
 
 /**
  * Helpers to deal with API stuff
  * @type {Object}
  */
-var helpers = {
+const helpers = {
   github      : ( require( './lib/helper/github' ) ).init(),
   slideshare  : ( require( './lib/helper/slideshare' ) ).init(),
   speakerdeck : ( require( './lib/helper/speakerdeck' ) ).init(),
@@ -23,8 +23,8 @@ var helpers = {
   youtube     : ( require( './lib/helper/youtube' ) ).init()
 };
 
-var port         = process.env.PORT || 3000;
-var data         = config.listPages.reduce( function( data, listPage ) {
+const port         = process.env.PORT || 3000;
+const data         = config.listPages.reduce( function( data, listPage ) {
   data[ listPage ] = getList( listPage );
 
   return data;
@@ -34,7 +34,7 @@ var data         = config.listPages.reduce( function( data, listPage ) {
  * Demo tool object containing all available properties
  * @type {Object}
  */
-var demoTool = {
+const demoTool = {
   name        : '_DEMO TOOL_',
   id          : '_DEMO TOOL_'.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ),
   description : 'A demo tool displaying all available platforms',
@@ -48,7 +48,7 @@ var demoTool = {
  * pages object representing
  * all routes
  */
-var pages = config.listPages.reduce( function( pages, listPage ) {
+const pages = config.listPages.reduce( function( pages, listPage ) {
   pages[ listPage ] = null;
 
   return pages;
@@ -58,7 +58,7 @@ var pages = config.listPages.reduce( function( pages, listPage ) {
 /**
  * Reduce I/O and read files only on start
  */
-var pageContent = {
+const pageContent = {
   css       : fs.readFileSync( './public/main-' + revisions.styles + '.css', 'utf8' ),
   enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
   hashes    : {
@@ -93,7 +93,7 @@ function fetchContributors() {
  * Fetch github stars
  */
 function fetchGithubStars() {
-  var queue = [];
+  const queue = [];
 
   _.each( data.tools, function( tool ) {
     _.forIn( tool, function( value, key ) {
@@ -104,7 +104,7 @@ function fetchGithubStars() {
         /github/.test( value.url )
       ) {
         queue.push( function( done ) {
-          var project = value.url.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
+          const project = value.url.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
 
           helpers.github.getStars(
             project,
@@ -142,8 +142,8 @@ function fetchGithubStars() {
  * Fetch twitter data
  */
 function fetchTwitterUserMeta() {
-  var queue          = [];
-  var fetchedAuthors = [];
+  const queue          = [];
+  const fetchedAuthors = [];
 
   /**
    * Evaluate set authors for each entry
@@ -154,7 +154,7 @@ function fetchTwitterUserMeta() {
       if ( entry.authors && entry.authors.length ) {
         _.each( entry.authors, function( author ) {
           if ( author.twitter ) {
-            var userName = author.twitter.replace( '@', '' );
+            const userName = author.twitter.replace( '@', '' );
 
             if ( fetchedAuthors.indexOf( userName ) === -1 ) {
               fetchedAuthors.push( userName );
@@ -207,7 +207,7 @@ function fetchTwitterUserMeta() {
  * Fetch video meta data
  */
 function fetchVideoMeta() {
-  var queue = [];
+  const queue = [];
 
   _.each( data.videos, function( video ) {
     if ( video.youtubeId ) {
@@ -267,10 +267,10 @@ function fetchVideoMeta() {
  * Fetch slide meta data
  */
 function fetchSlideMeta() {
-  var queue = [];
+  const queue = [];
 
   _.each( data.slides, function( slide ) {
-    var match = slide.url.match( /(slideshare|speakerdeck)/g );
+    const match = slide.url.match( /(slideshare|speakerdeck)/g );
     if ( match ) {
       queue.push( function( done ) {
         if ( helpers[ match[ 0 ] ] ) {
@@ -313,8 +313,8 @@ function fetchSlideMeta() {
  * @return {Object} tools
  */
 function getList( type ) {
-  var list                 = [];
-  var entries              = fs.readdirSync( config.dataDir + '/' + type );
+  const list                 = [];
+  const entries              = fs.readdirSync( config.dataDir + '/' + type );
 
   entries.forEach( function( entry ) {
     if ( entry[ 0 ] !== '.' ) {
@@ -326,7 +326,7 @@ function getList( type ) {
           )
         );
 
-        var platformsNames = config.platforms.map( function( platform ) {
+        const platformsNames = config.platforms.map( function( platform ) {
           return platform.name;
         } );
 
@@ -371,19 +371,19 @@ function getList( type ) {
 function renderPage( type, options ) {
   options = options || {};
 
-  var template = ( type === 'index' ) ? 'index' : 'list';
-  var list     = data[ type ] || null;
+  const template = ( type === 'index' ) ? 'index' : 'list';
+  let list     = data[ type ] || null;
 
-  var cssCookie = options.cssCookie;
-  var debug     = false;
+  const cssCookie = options.cssCookie;
+  let debug     = false;
 
   if ( options.query ) {
-    var queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
-    var length       = queryValues.length;
+    const queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
+    const length       = queryValues.length;
 
     list   = _.cloneDeep( list ).map( function( entry ) {
-      var i      = 0;
-      var match  = true;
+      let i      = 0;
+      let match  = true;
 
       for( ; i < length; ++i ) {
         if ( entry.fuzzy.indexOf( queryValues[ i ].toLowerCase() ) === -1 ) {
