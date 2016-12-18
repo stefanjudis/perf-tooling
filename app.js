@@ -210,7 +210,7 @@ function fetchVideoMeta() {
             return done( null );
           }
 
-          _.extend( video, meta );
+          Object.assign( video, meta );
 
           pages.videos = renderPage( 'videos' );
 
@@ -231,7 +231,7 @@ function fetchVideoMeta() {
             return done( null );
           }
 
-          _.extend( video, meta );
+          Object.assign( video, meta );
 
           pages.videos = renderPage( 'videos' );
 
@@ -266,7 +266,7 @@ function fetchSlideMeta() {
               return done( null );
             }
 
-            _.extend( slide, meta );
+            Object.assign( slide, meta );
 
             pages.slides = renderPage( 'slides' );
 
