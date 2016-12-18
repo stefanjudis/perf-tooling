@@ -24,7 +24,7 @@ const helpers = {
 };
 
 const port         = process.env.PORT || 3000;
-const data         = config.listPages.reduce( function( data, listPage ) {
+const data         = config.listPages.reduce( ( data, listPage ) => {
   data[ listPage ] = getList( listPage );
 
   return data;
@@ -48,7 +48,7 @@ const demoTool = {
  * pages object representing
  * all routes
  */
-const pages = config.listPages.reduce( function( pages, listPage ) {
+const pages = config.listPages.reduce( ( pages, listPage ) => {
   pages[ listPage ] = null;
 
   return pages;
@@ -77,7 +77,7 @@ const pageContent = {
  * Fetch list of contributors
  */
 function fetchContributors() {
-  helpers.github.getContributors( function( error, contributors ) {
+  helpers.github.getContributors( ( error, contributors ) => {
     if ( error ) {
       return console.warn( error );
     }
@@ -95,20 +95,20 @@ function fetchContributors() {
 function fetchGithubStars() {
   const queue = [];
 
-  _.each( data.tools, function( tool ) {
-    _.forIn( tool, function( value, key ) {
+  _.each( data.tools, tool => {
+    _.forIn( tool, ( value, key ) => {
       tool.stars = data.tools.stars || {};
 
       if (
         value.url &&
         /github/.test( value.url )
       ) {
-        queue.push( function( done ) {
+        queue.push( done => {
           const project = value.url.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
 
           helpers.github.getStars(
             project,
-            function( error, stars ) {
+            ( error, stars ) => {
               if ( error ) {
                 console.warn( 'ERROR -> fetchGithubStars' );
                 console.warn( 'ERROR -> ' + project );
@@ -122,9 +122,7 @@ function fetchGithubStars() {
 
               // give it a bit of time
               // to rest and not reach the API limits
-              setTimeout( function() {
-                done( null );
-              }, config.timings.requestDelay );
+              setTimeout( () => done( null ), config.timings.requestDelay );
             }
           );
         } );
@@ -132,9 +130,7 @@ function fetchGithubStars() {
     } );
   } );
 
-  async.waterfall( queue, function() {
-    console.log( 'DONE -> fetchGithubStars()' );
-  } );
+  async.waterfall( queue, () => console.log( 'DONE -> fetchGithubStars()' ) );
 }
 
 
@@ -150,19 +146,19 @@ function fetchTwitterUserMeta() {
    * @param  {String} type entry type
    */
   function evalAuthors( type ) {
-    _.each( data[ type ], function( entry ) {
+    _.each( data[ type ], entry => {
       if ( entry.authors && entry.authors.length ) {
-        _.each( entry.authors, function( author ) {
+        _.each( entry.authors, author => {
           if ( author.twitter ) {
             const userName = author.twitter.replace( '@', '' );
 
             if ( fetchedAuthors.indexOf( userName ) === -1 ) {
               fetchedAuthors.push( userName );
 
-              queue.push( function( done ) {
+              queue.push( done => {
                 helpers.twitter.fetchTwitterUserData(
                   userName,
-                  function( error, user ) {
+                  ( error, user ) => {
                     if ( error ) {
                       console.warn( 'ERROR -> fetchTwitterUserData' );
                       console.warn( 'ERROR -> ' + userName );
@@ -174,15 +170,13 @@ function fetchTwitterUserMeta() {
 
                     // render it again
                     // because we had a data update
-                    config.listPages.forEach( function( listPage ) {
+                    config.listPages.forEach( listPage => {
                       pages[ listPage ] = renderPage( listPage );
                     } );
 
                     // give it a bit of time
                     // to rest and not reach the API limits
-                    setTimeout( function() {
-                      done( null );
-                    }, config.timings.requestDelay );
+                    setTimeout( () => done( null ), config.timings.requestDelay );
                   }
                 );
               } );
@@ -193,13 +187,9 @@ function fetchTwitterUserMeta() {
     } );
   }
 
-  config.listPages.forEach( function( listPage ) {
-    evalAuthors( listPage );
-  } );
+  config.listPages.forEach( listPage => evalAuthors( listPage ) );
 
-  async.waterfall( queue, function() {
-    console.log( 'DONE -> fetchTwitterUserMeta()' );
-  } );
+  async.waterfall( queue, () => console.log( 'DONE -> fetchTwitterUserMeta()' ) );
 }
 
 
@@ -209,10 +199,10 @@ function fetchTwitterUserMeta() {
 function fetchVideoMeta() {
   const queue = [];
 
-  _.each( data.videos, function( video ) {
+  _.each( data.videos, video => {
     if ( video.youtubeId ) {
-      queue.push( function( done ) {
-        helpers.youtube.fetchVideoMeta( video.youtubeId, function( error, meta ) {
+      queue.push( done => {
+        helpers.youtube.fetchVideoMeta( video.youtubeId, ( error, meta ) => {
           if ( error ) {
             console.warn( 'ERROR -> youtube.fetchVideoMeta' );
             console.warn( 'ERROR -> ' + video.youtubeId );
@@ -226,16 +216,14 @@ function fetchVideoMeta() {
 
           // give it a bit of time
           // to rest and not reach the API limits
-          setTimeout( function() {
-            done( null );
-          }, config.timings.requestDelay );
+          setTimeout( () => done( null ), config.timings.requestDelay );
         } );
       } );
     }
 
     if ( video.vimeoId ) {
-      queue.push( function( done ) {
-        helpers.vimeo.fetchVideoMeta( video.vimeoId, function( error, meta ) {
+      queue.push( done => {
+        helpers.vimeo.fetchVideoMeta( video.vimeoId, ( error, meta) => {
           if ( error ) {
             console.warn( 'ERROR -> vimeo.fetchVideoMeta' );
             console.warn( 'ERROR -> ' + video.vimeoId );
@@ -249,17 +237,13 @@ function fetchVideoMeta() {
 
           // give it a bit of time
           // to rest and not reach the API limits
-          setTimeout( function() {
-            done( null );
-          }, config.timings.requestDelay );
+          setTimeout( () => done( null ), config.timings.requestDelay );
         } );
       } );
     }
   } );
 
-  async.waterfall( queue, function() {
-    console.log( 'DONE -> fetchVideoMeta()' );
-  } );
+  async.waterfall( queue, () => console.log( 'DONE -> fetchVideoMeta()' ) );
 }
 
 
@@ -269,12 +253,12 @@ function fetchVideoMeta() {
 function fetchSlideMeta() {
   const queue = [];
 
-  _.each( data.slides, function( slide ) {
+  _.each( data.slides, slide => {
     const match = slide.url.match( /(slideshare|speakerdeck)/g );
     if ( match ) {
-      queue.push( function( done ) {
+      queue.push( done => {
         if ( helpers[ match[ 0 ] ] ) {
-          helpers[ match[ 0 ] ].getMeta( slide.url, function( error, meta ) {
+          helpers[ match[ 0 ] ].getMeta( slide.url, ( error, meta ) => {
             if ( error ) {
               console.warn( 'ERROR -> vimeo.fetchSlideMeta' );
               console.warn( 'ERROR -> ' + slide.url );
@@ -288,9 +272,7 @@ function fetchSlideMeta() {
 
             // give it a bit of time
             // to rest and not reach the API limits
-            setTimeout( function() {
-              done( null );
-            }, config.timings.requestDelay );
+            setTimeout( () => done( null ), config.timings.requestDelay );
           } );
         } else {
           done( null );
@@ -299,9 +281,7 @@ function fetchSlideMeta() {
     }
   } );
 
-  async.waterfall( queue, function() {
-    console.log( 'DONE -> fetchSlideMeta()' );
-  } );
+  async.waterfall( queue, () => console.log( 'DONE -> fetchSlideMeta()' ) );
 }
 
 
@@ -316,7 +296,7 @@ function getList( type ) {
   const list                 = [];
   const entries              = fs.readdirSync( config.dataDir + '/' + type );
 
-  entries.forEach( function( entry ) {
+  entries.forEach( entry => {
     if ( entry[ 0 ] !== '.' ) {
       try {
         entry = JSON.parse(
@@ -326,7 +306,7 @@ function getList( type ) {
           )
         );
 
-        const platformsNames = config.platforms.map( function( platform ) {
+        const platformsNames = config.platforms.map( platform => {
           return platform.name;
         } );
 
@@ -381,7 +361,7 @@ function renderPage( type, options ) {
     const queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
     const length       = queryValues.length;
 
-    list   = _.cloneDeep( list ).map( function( entry ) {
+    list   = _.cloneDeep( list ).map( entry => {
       let i      = 0;
       let match  = true;
 
@@ -399,7 +379,7 @@ function renderPage( type, options ) {
     debug = options.query.debug;
 
     if ( type === 'tools' && options.query.debug ) {
-      _.each( config.platforms, function( platform ) {
+      _.each( config.platforms, platform => {
           demoTool[ platform.name ] = {};
           demoTool.stars[ platform.name ] = 10000;
       } );
@@ -504,7 +484,7 @@ fetchTwitterUserMeta();
 /**
  * Repeat the fetching all 12 hours
  */
-setInterval( function() {
+setInterval( () => {
   fetchGithubStars();
   fetchVideoMeta();
   fetchTwitterUserMeta();
@@ -516,10 +496,10 @@ app.use( cookieParser() );
 /**
  * Render index page
  */
-config.listPages.forEach( function( page ) {
+config.listPages.forEach( page => {
   pages[ page ] = renderPage( page );
 
-  app.get( '/' + page, function( req, res ) {
+  app.get( '/' + page, ( req, res ) => {
     if (
       req.query &&
       (
@@ -553,7 +533,7 @@ config.listPages.forEach( function( page ) {
 
 pages.index = renderPage( 'index' );
 
-app.get( '/', function( req, res ) {
+app.get( '/', ( req, res ) => {
   if ( req.cookies.maincss ) {
     res.send(
       renderPage(
