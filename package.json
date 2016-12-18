@@ -37,7 +37,7 @@
     "request": "^2.79.0",
     "twit": "^1.1.18",
     "vimeo-api": "^1.1.5",
-    "youtube-api": "^0.3.1"
+    "youtube-api": "^2.0.4"
   },
   "devDependencies": {
     "credits-cli": "^3.1.0",
