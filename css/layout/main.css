@@ -5,13 +5,8 @@
 
 .site__section {
   padding: 4rem 0;
+}
 
-  &--intro {
-
-    img {
-      margin-bottom: 2rem;
-    }
-
-  }
-
+.site__section--intro img {
+  margin-bottom: 2rem;
 }

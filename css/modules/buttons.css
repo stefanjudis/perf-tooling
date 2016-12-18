@@ -1,0 +1,66 @@
+.btn {
+  display: inline-block;
+  font-weight: bold;
+  margin: .25rem;
+  padding: .5rem 1rem;
+}
+
+.btn--large {
+  padding: .75rem 1.5rem;
+}
+
+.btn--primary {
+  background: var(--btn--primary__bgcolor);
+  color: var(--btn--primary__color);
+}
+
+.btn--primary:focus,
+.btn--primary:hover {
+  background: var(--btn--primary__bgcolor--hover);
+  color: var(--btn--primary__color--hover);
+}
+
+.btn--nav {
+  background: transparent;
+  border: 1px solid var(--border__color);
+  border-radius: .25rem;
+  float: right;
+  height: 2rem;
+  margin: 1.25rem 0 1rem;
+  width: 3rem;
+}
+
+.btn--nav:focus,
+.btn--nav:hover {
+  background: var(--border__color);
+}
+
+.btn--nav svg {
+  fill: var(--base__color);
+  height: 1rem;
+  width: 1rem;
+}
+
+@media (--media-medium) {
+
+  .btn--nav {
+    display: none;
+  }
+
+}
+
+.btn--scroll {
+  background: var(--scroll-link__bgcolor);
+  border-radius: 50%;
+  margin: 4rem;
+  padding: 2rem;
+}
+
+.btn--scroll:focus,
+.btn--scroll:hover {
+  background: var(--scroll-link__bgcolor--hover);
+}
+
+.btn--scroll:active {
+  background: var(--scroll-link__bgcolor--active);
+}

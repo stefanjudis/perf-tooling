@@ -1,5 +1,4 @@
 const gulp                  = require('gulp');
-const gulpAutoprefixer      = require('gulp-autoprefixer');
 const gulpCleanCSS          = require('gulp-clean-css');
 const gulpConcat            = require('gulp-concat');
 const gulpCsslint           = require('gulp-csslint');
@@ -8,8 +7,8 @@ const gulpImagemin          = require('gulp-imagemin');
 const gulpJshint            = require('gulp-jshint');
 const gulpJsonEditor        = require('gulp-json-editor');
 const gulpJsonlint          = require('gulp-jsonlint');
-const gulpLess              = require('gulp-less');
 const gulpMergeMediaQueries = require('gulp-merge-media-queries');
+const gulpPostcss           = require('gulp-postcss');
 const gulpRev               = require('gulp-rev');
 const gulpSvgstore          = require('gulp-svgstore');
 const gulpTaskListing       = require('gulp-task-listing');
@@ -19,6 +18,8 @@ const gulpWebp              = require('gulp-webp');
 const imageminPngquant      = require('imagemin-pngquant');
 const jshintStylish         = require('jshint-stylish');
 const mergeStream           = require('merge-stream');
+const postcssCssnext        = require('postcss-cssnext');
+const postcssImport         = require('postcss-import');
 
 const files = {
   data    : [ 'data/**/*.json' ],
@@ -37,11 +38,11 @@ const files = {
     ]
   },
   sitemap : [ './sitemap.xml' ],
-  styles  : [ 'less/main.less' ],
+  styles  : [ 'css/main.css' ],
   svg     : [ 'svg/icons/*.svg' ],
   rev     : [ './rev.json' ],
   watch   : {
-    styles : [ 'less/**/*.less' ]
+    styles : [ 'css/**/*.css' ]
   },
   xml : [ './*.xml' ]
 };
@@ -70,19 +71,26 @@ gulp.task( 'lint', () => {
  * STYLE TASK
  *
  * this task is responsible for the style files
- * - we will compile the less files to css
- * - we will minify the css files
+ * - we will concat all css files
  * - we will run them through autoprefixer
+ * - we will minify the css files
  * - and save it to public
  * - hash the files
  * - and save the hash in the rev json file
  */
 gulp.task( 'styles', () => {
   return gulp.src( files.styles )
-    .pipe( gulpLess() )
+    .pipe( gulpPostcss([
+      postcssImport(),
+      postcssCssnext({
+        browsers: [ 'last 1 version' ],
+        features: {
+          rem: false
+        }
+      })
+    ]) )
     .pipe( gulpCsslint( '.csslintrc' ) )
     .pipe( gulpCsslint.formatter() )
-    .pipe( gulpAutoprefixer( 'last 1 version', '> 1%', 'ie 8', 'ie 7' ) )
     .pipe( gulpMergeMediaQueries( {
       log: true
     } ) )
@@ -106,12 +114,10 @@ gulp.task( 'styles', () => {
  * CSSLINT TASK
  *
  * this task is responsible for the style files
- * - we will compile the less files to css
  * - we will lint the generated css
  */
 gulp.task( 'csslint', () => {
   return gulp.src( files.styles )
-    .pipe( gulpLess() )
     .pipe( gulpCsslint( '.csslintrc' ) )
     .pipe( gulpCsslint.formatter() )
     .pipe( gulpCsslint.formatter('fail') );

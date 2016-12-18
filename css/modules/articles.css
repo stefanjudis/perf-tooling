@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+}
 
-  &__cta {
-    margin-top: auto;
-  }
+.article__cta {
+  margin-top: auto;
 }

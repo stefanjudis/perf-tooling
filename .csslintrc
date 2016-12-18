@@ -21,7 +21,7 @@
   "floats": false,
   "star-property-hack": false,
   "outline-none": false,
-  "import": true,
+  "import": false,
   "ids": false,
   "underscore-property-hack": false,
   "rules-count": false,

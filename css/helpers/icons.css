@@ -1,0 +1,32 @@
+.icon {
+  display: inline-block;
+  fill: #fff;
+  height: 1.5em;
+  transition: fill .3s, transform .3s;
+  vertical-align: middle;
+  width: 1.5em;
+}
+
+.icon--black {
+  fill: var(--base__color);
+}
+
+.icon--grey {
+  fill: var(--border__color);
+}
+
+.icon--red {
+  fill: var(--secondary__color);
+}
+
+.icon--2x {
+  font-size: 2rem;
+}
+
+.icon--3x {
+  font-size: 3rem;
+}
+
+.icon--4x {
+  font-size: 4rem;
+}
