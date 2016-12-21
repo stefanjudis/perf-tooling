@@ -35,7 +35,7 @@
     "merge-stream": "^1.0.1",
     "nodemon": "^1.11.0",
     "request": "^2.79.0",
-    "twit": "^1.1.18",
+    "twit": "^2.2.5",
     "vimeo-api": "^1.1.5",
     "youtube-api": "^0.3.1"
   },
