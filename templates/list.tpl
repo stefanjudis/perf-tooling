@@ -109,7 +109,7 @@
 
     <script>
       window.list = <%= JSON.stringify(
-        _.map( list, function( entry ) {
+        list.map( entry => {
           return {
             fuzzy : entry.fuzzy,
             id    : entry.id,
