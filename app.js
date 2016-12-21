@@ -417,49 +417,48 @@ function renderPage( type, options ) {
    * @param  {Object} options options for lodash templates
    * @return {String}         rendered partial
    */
-  function partial( path, options ) {
+  function partial( path, data, options ) {
     options = options || {};
 
     return _.template(
       fs.readFileSync( path ),
       options
-    );
+    )(data);
   }
 
   return minify(
     _.template(
-      pageContent.templates[ template ],
-      {
-        css              : pageContent.css,
-        cssCookie        : cssCookie,
-        enhance          : pageContent.enhance,
-        cdn              : config.cdn,
-        contributors     : data.contributors,
-        debug            : !! debug,
-        partial          : partial,
-        people           : data.people,
-        platforms        : config.platforms,
-        resourceCount    : {
-          audits   : data.audits.length,
-          tools    : data.tools.length,
-          articles : data.articles.length,
-          videos   : data.videos.length,
-          slides   : data.slides.length,
-          books    : data.books.length,
-          courses  : data.courses.length
-        },
-        site             : config.site,
-        list             : list,
-        hash             : {
-          css  : pageContent.hashes.css,
-          js   : pageContent.hashes.js,
-          svg  : pageContent.hashes.svg
-        },
-        query            : options.query ? options.query.q : '',
-        type             : type,
-        name             : type.charAt( 0 ).toUpperCase() + type.slice( 1 )
-      }
-    ), {
+      pageContent.templates[ template ]
+    )({
+      css              : pageContent.css,
+      cssCookie        : cssCookie,
+      enhance          : pageContent.enhance,
+      cdn              : config.cdn,
+      contributors     : data.contributors,
+      debug            : !! debug,
+      partial          : partial,
+      people           : data.people,
+      platforms        : config.platforms,
+      resourceCount    : {
+        audits   : data.audits.length,
+        tools    : data.tools.length,
+        articles : data.articles.length,
+        videos   : data.videos.length,
+        slides   : data.slides.length,
+        books    : data.books.length,
+        courses  : data.courses.length
+      },
+      site             : config.site,
+      list             : list,
+      hash             : {
+        css  : pageContent.hashes.css,
+        js   : pageContent.hashes.js,
+        svg  : pageContent.hashes.svg
+      },
+      query            : options.query ? options.query.q : '',
+      type             : type,
+      name             : type.charAt( 0 ).toUpperCase() + type.slice( 1 )
+    }), {
       keepClosingSlash      : true,
       collapseWhitespace    : true,
       minifyJS              : true,
