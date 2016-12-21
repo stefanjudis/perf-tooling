@@ -61,7 +61,7 @@
                 tags      : list.reduce( ( tags, entry ) => {
                   if ( entry.tags && entry.tags.length ) {
                     for ( var i = 0; i < entry.tags.length; ++i ) {
-                      if ( _.indexOf( tags, entry.tags[ i ] ) === -1 ) {
+                      if ( tags.indexOf( entry.tags[ i ] ) === -1 ) {
                         tags.push( entry.tags[ i ] );
                       }
                     }
