@@ -91,7 +91,7 @@
               }
             )
           %>
-          <div id="noResultMsg" class="<%= ( _.filter( list, function( entry ) { return !entry.hidden; } ).length ) ? 'is-hidden' : '' %>">No results found</div>
+          <div id="noResultMsg" class="<%= ( list.filter( entry => !entry.hidden ).length ) ? 'is-hidden' : '' %>">No results found</div>
 
         </div>
 
