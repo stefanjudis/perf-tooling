@@ -10,7 +10,7 @@
     "performance"
   ],
   "engines": {
-    "node": "7.2.x"
+    "node": "7.3.x"
   },
   "author": "stefan judis <stefanjudis@gmail.com>",
   "license": "MIT",
