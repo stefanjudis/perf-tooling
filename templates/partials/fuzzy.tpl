@@ -21,7 +21,7 @@
 
   <datalist id="listElements">
 
-    <% _.each( autoCompletionList, function( autoCompletion ) { %>
+    <% autoCompletionList.forEach( autoCompletion => { %>
 
       <option value="<%= autoCompletion %>"><%= autoCompletion %></option>
 

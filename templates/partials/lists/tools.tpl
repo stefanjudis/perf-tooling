@@ -1,6 +1,6 @@
 <ul class="posts">
 
-  <% _.each( list , function( tool ) {
+  <% list.forEach( tool => {
 
     function isPaid( toolObject ) {
         return !! _.findKey( toolObject, 'isPaid', true );
@@ -16,7 +16,7 @@
 
       <ul class="resources">
 
-        <% _.each( platforms , function( platform ) { %>
+        <% platforms.forEach( platform => { %>
 
           <% if ( tool[ platform.name ] ) { %>
 

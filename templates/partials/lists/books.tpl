@@ -1,11 +1,11 @@
 <ul class="posts">
   <%
-    list = _.sortBy( list, function( book ) { 
+    list = _.sortBy( list, function( book ) {
       return book.date ? + ( new Date( book.date ) ) : '-1';
     } ).reverse();
   %>
 
-  <% _.each( list , function( book ) { %>
+  <% list.forEach( book => { %>
 
     <li id="<%= book.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--book media <%= ( book.hidden === true ) ? 'is-hidden' : '' %>">
 

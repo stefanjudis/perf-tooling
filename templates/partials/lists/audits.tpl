@@ -5,7 +5,7 @@
     } ).reverse();
   %>
 
-  <% _.each( list , function( audit ) { %>
+  <% list.forEach( audit => { %>
     <% var title = _.escape( audit.title || audit.name ); %>
 
     <li id="<%= audit.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--audit media <%= ( audit.hidden === true ) ? 'is-hidden' : '' %>">
@@ -37,7 +37,7 @@
 
         <% if ( audit.types ) { %>
           <ul class="post__stats">
-            <% _.each( audit.types, function( type ) { %>
+            <% audit.types.forEach( type => { %>
               <li>
                 <svg class="icon icon--grey">
                   <use xlink:href="/icons-<%= hash.svg %>.svg#<%= type %>" />
@@ -51,7 +51,7 @@
           <dl class="post__targets">
             <dt>Audit for:</dt>
             <% var regex = /(http(s)?\:\/\/)?((\w*?\.)?\w*\.\w+)/; %>
-            <% _.each( audit.targets, function( target ) { %>
+            <% audit.targets.forEach( target => { %>
               <dd><a href="<%= target %>" target="_blank"><%= regex.exec( target )[ 3 ] %></a></dd>
             <% } ) %>
           </dl>

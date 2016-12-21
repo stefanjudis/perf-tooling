@@ -4,7 +4,7 @@
       return article.date ? + ( new Date( article.date ) ) : -1;
     } ).reverse();
   %>
-  <% _.each( list , function( slide ) { %>
+  <% list.forEach( slide => { %>
     <% var title = _.escape( slide.name ); %>
 
     <li id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">

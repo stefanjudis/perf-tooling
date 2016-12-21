@@ -4,7 +4,7 @@
       return course.date ? + ( new Date( course.date ) ) : -1;
     } ).reverse();
   %>
-  <% _.each( list, function( course ) { %>
+  <% list.forEach( course => { %>
 
     <li id="<%= course.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--course media <%= ( course.hidden === true ) ? 'is-hidden' : '' %>">
 
