@@ -4,5 +4,5 @@
     "url" : "https://gofaster.io/"
   },
   "description" : "Website performance intelligence sent daily to your team. GoFaster.io combines real user monitoring (RUM) performance data from your users browsers with our server performance monitoring data to give you actionable reporting about your site's performance.",
-  "tags" : [ "metrics", "analyze", "timings"]
+  "tags" : [ "metrics", "analyze", "timings", "monitoring"]
 }
