@@ -1,0 +1,22 @@
+{
+  "name" : "Perf Audit Caniuse.com",
+  "targets" : [
+    "http://caniuse.com"
+  ],
+  "authors" : [
+    {
+      "name" : "Apoorv Saxena",
+      "twitter" : "@Apoorv_Saxena"
+    },
+    {
+      "name" : "Kushagra Gour",
+      "twitter" : "@chinchang457"
+    }
+  ],
+  "date" : "2015-03-18",
+  "stats" : {
+    "length" : 478
+  },
+  "url" : "http://perfaudit.com/case-study/caniuse.com/",
+  "types" : [ "article", "video" ]
+}

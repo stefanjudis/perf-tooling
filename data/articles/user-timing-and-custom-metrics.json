@@ -1,0 +1,15 @@
+{
+  "name" : "User Timing and Custom Metrics",
+  "authors" : [
+    {
+      "name" : "Steve Souders",
+      "twitter" : "@Souders"
+    }
+  ],
+  "date" : "2015-11-12",
+  "stats" : {
+    "length" : 2235
+  },
+  "tags" : [ "metrics", "monitoring" ],
+  "url" : "https://speedcurve.com/blog/user-timing-and-custom-metrics/"
+}

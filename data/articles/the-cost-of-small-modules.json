@@ -1,0 +1,15 @@
+{
+  "name" : "The Cost of Small Modules",
+  "authors" : [
+    {
+      "name" : "Nolan Lawson",
+      "twitter" : "@nolanlawson"
+    }
+  ],
+  "date" : "2016-08-15",
+  "stats" : {
+    "length" : 2525
+  },
+  "url" : "https://nolanlawson.com/2016/08/15/the-cost-of-small-modules/",
+  "tags" : [ "js", "optimization", "tooling" ]
+}

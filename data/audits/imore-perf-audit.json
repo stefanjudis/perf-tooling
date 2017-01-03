@@ -1,0 +1,16 @@
+{
+  "name" : "Perf audit of imore.com",
+  "targets" : [
+    "http://www.imore.com/"
+  ],
+  "authors" : [
+    {
+      "name" : "Kenji Baheux",
+      "twitter" : "@KenjiBaheux"
+    }
+  ],
+  "date" : "2015-07-13",
+  "url" : "https://docs.google.com/document/d/1-Kdmub-7WfA45gSyG2GYQOyEkkjmG1gKq0zJwhrWbPA/edit?pli=1#",
+  "types" : [ "document" ],
+  "tags" : [ "first paint", "third party" ]
+}

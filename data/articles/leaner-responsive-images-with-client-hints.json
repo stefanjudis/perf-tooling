@@ -1,0 +1,15 @@
+{
+  "name" : "Leaner Responsive Images With Client Hints",
+  "authors" : [
+    {
+      "name" : " Jon Arne",
+      "twitter" : "@jonarnes"
+    }
+  ],
+  "date" : "2016-01-18",
+  "stats" : {
+    "length" : 2932
+  },
+  "url" : "https://www.smashingmagazine.com/2016/01/leaner-responsive-images-client-hints/",
+  "tags" : [ "images", "optimization", "rwd" ]
+}

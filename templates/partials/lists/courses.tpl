@@ -1,7 +1,7 @@
 <ul class="posts">
   <%
     list = _.sortBy( list, function( course ) {
-      return course.date || -1;
+      return course.date ? + ( new Date( course.date ) ) : -1;
     } ).reverse();
   %>
   <% _.each( list, function( course ) { %>
@@ -13,7 +13,7 @@
         <a href="<%= course.url %>" title="Link to course" target="_blank">
           <picture>
             <source type="image/webp" srcset="<%= cdn %>/courses/<%= course.img.src.filename %>.<%= course.img.src.types[1] %>">
-            <img src="<%= cdn %>/courses/<%= course.img.src.filename %>.<%= course.img.src.types[0] %>" width="<%= course.img.width %>" height="<%= course.img.height %>" alt="<%= course.name %> ">
+            <img src="<%= cdn %>/courses/<%= course.img.src.filename %>.<%= course.img.src.types[0] %>" width="<%= course.img.width %>" height="<%= course.img.height %>" alt="Preview <%= course.name %> ">
           </picture>
         </a>
 

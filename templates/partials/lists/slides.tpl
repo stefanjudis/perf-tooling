@@ -1,10 +1,11 @@
 <ul class="posts">
   <%
     list = _.sortBy( list, function( article ) {
-      return article.date || -1;
+      return article.date ? + ( new Date( article.date ) ) : -1;
     } ).reverse();
   %>
   <% _.each( list , function( slide ) { %>
+    <% var title = _.escape( slide.name ); %>
 
     <li id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--slide <%= ( slide.hidden === true ) ? 'is-hidden' : '' %>">
 
@@ -14,7 +15,9 @@
 
         <figure class="media__obj--left">
 
-          <a href="<%= slide.url %>" title="Link to slide" target="_blank"><img src="<%= slide.thumbnail.url %>" width="170" height="128"></a>
+          <a href="<%= slide.url %>" title="Link to slide" target="_blank" data-modal data-modal-content-id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>">
+            <img src="<%= slide.thumbnail.url %>" width="170" height="128" alt="Preview of <%= slide.name %>">
+          </a>
 
         </figure>
 
@@ -22,7 +25,7 @@
 
       <div class="media__body">
 
-        <h3><a href="<%= slide.url %>" class="link--text" alt="Link to <%= slide.name %>" title="Link to slide" target="_blank"><%= slide.name %></a></h3>
+        <h3><a href="<%= slide.url %>" class="link--text" title="Link to slide" target="_blank" data-modal data-modal-content-id="<%= slide.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>"><%= slide.name %></a></h3>
 
         <% if ( twitterHandle && people[ twitterHandle ] ) { %>
 
@@ -42,6 +45,8 @@
           %>
 
         <% } %>
+
+        <p><a href="<%= slide.url %>" target="_blank">Open in new tab</a></p>
 
         <% if ( slide.stats ) { %>
 

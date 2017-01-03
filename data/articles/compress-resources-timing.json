@@ -1,0 +1,15 @@
+{
+  "name" : "Compressing ResourceTiming",
+  "authors" : [
+    {
+      "name" : "Nic Jansma",
+      "twitter" : "@nicj"
+    }
+  ],
+  "date" : "2014-11-07",
+  "stats" : {
+    "length" : 1269
+  },
+  "tags" : [ "metrics", "compression" ],
+  "url" : "http://nicj.net/compressing-resourcetiming/"
+}

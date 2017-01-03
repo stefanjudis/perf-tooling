@@ -1,0 +1,16 @@
+{
+  "name" : "Cafepress performance audit",
+  "targets" : [
+    "http://www.cafepress.com/"
+  ],
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    }
+  ],
+  "date" : "2015-04-28",
+  "url" : "https://docs.google.com/document/d/1tsOXooeJhSwGmCRGisr98o1KBhqTvO9i49X_OSn7LXc/edit?pli=1#heading=h.cnn35gdq382l",
+  "types" : [ "document" ],
+  "tags" : [ "animation", "css", "rendering" ]
+}

@@ -1,0 +1,8 @@
+{
+  "name" : "perf-tool",
+  "node" : {
+    "url" : "https://github.com/devbridge/Performance"
+  },
+  "description" : "This is an npm package to display statistics about your web pages, information such as CSS resources count, Google PageSpeed Insights score, information on how to fix performance issues, HTML errors and more in one custom web page.",
+  "tags" : [ "metrics" ]
+}

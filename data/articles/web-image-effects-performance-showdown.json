@@ -1,0 +1,15 @@
+{
+  "name" : "Web Image Effects Performance Showdown",
+  "authors" : [
+    {
+      "name" : "Una Kravets",
+      "twitter" : "@Una"
+    }
+  ],
+  "date" : "2016-05-19",
+  "stats" : {
+    "length" : 1493
+  },
+  "url" : "https://www.smashingmagazine.com/2016/05/web-image-effects-performance-showdown/",
+  "tags" : [ "css", "filter", "images", "svg" ]
+}

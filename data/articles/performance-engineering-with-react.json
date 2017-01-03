@@ -1,0 +1,15 @@
+{
+  "name" : "Performance engineering in React",
+  "authors" : [
+    {
+      "name" : "Saif Hakim",
+      "twitter" : "@saifelse"
+    }
+  ],
+  "date" : "2016-02-16",
+  "stats" : {
+    "length" : 2587
+  },
+  "url" : "http://benchling.engineering/performance-engineering-with-react/",
+  "tags" : [ "react", "tooling", "monitoring" ]
+}

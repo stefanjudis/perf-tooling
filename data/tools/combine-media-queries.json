@@ -1,5 +1,8 @@
 {
   "name" : "combine-media-queries",
+  "broccoli" : {
+    "url" : "https://github.com/raiseandfall/broccoli-combine-mq"
+  },
   "grunt" : {
     "url" : "https://github.com/johncashmore/grunt-combine-media-queries"
   },

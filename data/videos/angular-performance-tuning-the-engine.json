@@ -1,0 +1,11 @@
+{
+  "name" : "Angular Performance: Tuning the Engine",
+  "authors" : [
+    {
+      "name" : "Todd Motto",
+      "twitter" : "@toddmotto"
+    }
+  ],
+  "youtubeId" : "LoIuokh6NUI",
+  "tags" : [ "angular", "best practices", "rendering" ]
+}

@@ -1,8 +1,3 @@
-/**
- * Copied from modernizr
- *
- * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
- */
 ( function( window ) {
   /**
    * Cached essential elements
@@ -97,7 +92,7 @@
 
     var count       = 0;
     var searchTerms = searchTerm.split( ' ' );
-    var length = searchTerms.length;
+    var length      = searchTerms.length;
 
     list.forEach( function( entry ) {
       var i      = 0;
@@ -106,7 +101,7 @@
       // cache element to avoid multiple
       // dom queries
       if ( entry.elem === undefined ) {
-        entry.elem  = document.getElementById( entry.name );
+        entry.elem  = document.getElementById( entry.id );
       }
 
       for( ; i < length; ++i ) {

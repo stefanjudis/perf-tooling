@@ -1,0 +1,16 @@
+{
+  "name" : "Investigating npm 3 perf",
+  "targets" : [
+    "https://www.npmjs.com/"
+  ],
+  "authors" : [
+    {
+      "name" : "Sam Saccone",
+      "twitter" : "@samccone"
+    }
+  ],
+  "date" : "2015-21-13",
+  "url" : "https://github.com/npm/npm/issues/10380",
+  "types" : [ "github-issue" ],
+  "tags" : [ "network" ]
+}

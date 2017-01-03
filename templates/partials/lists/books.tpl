@@ -1,5 +1,9 @@
 <ul class="posts">
-  <% list = _.sortBy( list, function( book ) { return book.date; } ).reverse(); %>
+  <%
+    list = _.sortBy( list, function( book ) { 
+      return book.date ? + ( new Date( book.date ) ) : '-1';
+    } ).reverse();
+  %>
 
   <% _.each( list , function( book ) { %>
 

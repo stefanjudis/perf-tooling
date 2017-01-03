@@ -1,0 +1,15 @@
+{
+  "name" : "A Comprehensive Guide to Font Loading Strategies",
+  "authors" : [
+    {
+      "name" : "Zach Leatherman",
+      "twitter" : "@zachleat"
+    }
+  ],
+  "date" : "2016-07-12",
+  "stats" : {
+    "length" : 3417
+  },
+  "url" : "https://www.zachleat.com/web/comprehensive-webfonts/",
+  "tags" : [ "font", "loading" ]
+}

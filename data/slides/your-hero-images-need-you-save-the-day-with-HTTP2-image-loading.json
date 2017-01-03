@@ -1,0 +1,15 @@
+{
+  "name" : "Your Hero Images Need You! Save the Day with HTTP2 Image Loading",
+  "authors" : [
+    {
+      "name" : "Tobias Baldauf",
+      "twitter" : "@tbaldauf"
+    }
+  ],
+  "date" : "2016-04-01",
+  "stats" : {
+    "length" : 44
+  },
+  "tags" : [ "http2", "images" ],
+  "url" : "https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading"
+}

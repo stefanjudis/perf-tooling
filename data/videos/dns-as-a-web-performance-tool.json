@@ -1,0 +1,11 @@
+{
+  "name" : "DNS as a Web Performance Tool",
+  "authors" : [
+    {
+      "name" : "Kris Beevers",
+      "twitter" : "@beevek"
+    }
+  ],
+  "youtubeId" : "MdqilZhEJ0g",
+  "tags" : [ "network", "loading" ]
+}

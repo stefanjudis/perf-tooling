@@ -1,0 +1,15 @@
+{
+  "name" : "HTTP2 What, where, why, and when?!",
+  "authors" : [
+    {
+      "name" : "Patrick Hamann",
+      "twitter" : "@patrickhamann"
+    }
+  ],
+  "date" : "2016-03-15",
+  "stats" : {
+    "length" : 94
+  },
+  "tags" : [ "http2", "network" ],
+  "url" : "https://speakerdeck.com/patrickhamann/http2-what-where-why-and-when-smashing-conference-march-2016"
+}

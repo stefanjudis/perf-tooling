@@ -1,0 +1,11 @@
+{
+  "name" : "How AMP achieves its speed",
+  "authors" : [
+    {
+      "name" : "Malte Ubl",
+      "twitter" : "@cramforce"
+    }
+  ],
+  "youtubeId" : "cfekj564rs0",
+  "tags" : [ "amp", "rendering", "loading" ]
+}

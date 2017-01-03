@@ -24,15 +24,11 @@ var helpers = {
 };
 
 var port         = process.env.PORT || 3000;
-var data         = {
-  people   : {},
-  articles : getList( 'articles' ),
-  slides   : getList( 'slides' ),
-  tools    : getList( 'tools' ),
-  videos   : getList( 'videos' ),
-  books    : getList( 'books' ),
-  courses  : getList( 'courses' )
-};
+var data         = config.listPages.reduce( function( data, listPage ) {
+  data[ listPage ] = getList( listPage );
+
+  return data;
+}, { people   : {} } );
 
 /**
  * Demo tool object containing all available properties
@@ -40,6 +36,7 @@ var data         = {
  */
 var demoTool = {
   name        : '_DEMO TOOL_',
+  id          : '_DEMO TOOL_'.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ),
   description : 'A demo tool displaying all available platforms',
   tags        : [ 'images', 'css', 'perf', '60fps', 'http2', 'network' ],
   fuzzy       : '',
@@ -51,14 +48,11 @@ var demoTool = {
  * pages object representing
  * all routes
  */
-var pages = {
-  index    : null,
-  tools    : null,
-  articles : null,
-  slides   : null,
-  videos   : null,
-  courses  : null
-};
+var pages = config.listPages.reduce( function( pages, listPage ) {
+  pages[ listPage ] = null;
+
+  return pages;
+}, { index : null } );
 
 
 /**
@@ -148,7 +142,8 @@ function fetchGithubStars() {
  * Fetch twitter data
  */
 function fetchTwitterUserMeta() {
-  var queue = [];
+  var queue          = [];
+  var fetchedAuthors = [];
 
   /**
    * Evaluate set authors for each entry
@@ -161,47 +156,46 @@ function fetchTwitterUserMeta() {
           if ( author.twitter ) {
             var userName = author.twitter.replace( '@', '' );
 
-            queue.push( function( done ) {
-              helpers.twitter.fetchTwitterUserData(
-                userName,
-                function( error, user ) {
-                  if ( error ) {
-                    console.warn( 'ERROR -> fetchTwitterUserData' );
-                    console.warn( 'ERROR -> ' + userName );
-                    console.warn( 'ERROR -> ' +  error );
-                    return done( null );
+            if ( fetchedAuthors.indexOf( userName ) === -1 ) {
+              fetchedAuthors.push( userName );
+
+              queue.push( function( done ) {
+                helpers.twitter.fetchTwitterUserData(
+                  userName,
+                  function( error, user ) {
+                    if ( error ) {
+                      console.warn( 'ERROR -> fetchTwitterUserData' );
+                      console.warn( 'ERROR -> ' + userName );
+                      console.warn( 'ERROR -> ' +  error );
+                      return done( null );
+                    }
+
+                    data.people[ userName ] = user;
+
+                    // render it again
+                    // because we had a data update
+                    config.listPages.forEach( function( listPage ) {
+                      pages[ listPage ] = renderPage( listPage );
+                    } );
+
+                    // give it a bit of time
+                    // to rest and not reach the API limits
+                    setTimeout( function() {
+                      done( null );
+                    }, config.timings.requestDelay );
                   }
-
-                  data.people[ userName ] = user;
-
-                  // render it again
-                  // because we had a data update
-                  pages.articles = renderPage( 'articles' );
-                  pages.books    = renderPage( 'books' );
-                  pages.slides   = renderPage( 'slides' );
-                  pages.videos   = renderPage( 'videos' );
-                  pages.courses  = renderPage( 'courses' );
-
-
-                  // give it a bit of time
-                  // to rest and not reach the API limits
-                  setTimeout( function() {
-                    done( null );
-                  }, config.timings.requestDelay );
-                }
-              );
-            } );
+                );
+              } );
+            }
           }
         } );
       }
     } );
   }
 
-  evalAuthors( 'videos' );
-  evalAuthors( 'articles' );
-  evalAuthors( 'slides' );
-  evalAuthors( 'books' );
-  evalAuthors( 'courses' );
+  config.listPages.forEach( function( listPage ) {
+    evalAuthors( listPage );
+  } );
 
   async.waterfall( queue, function() {
     console.log( 'DONE -> fetchTwitterUserMeta()' );
@@ -340,7 +334,18 @@ function getList( type ) {
           entry,
           platformsNames
         ).replace( /http(s)?:\/\//, '' ).toLowerCase();
+        entry.id     = entry.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' );
         entry.hidden = false;
+
+        if ( type === 'videos' ) {
+          if ( entry.youtubeId ) {
+            entry.html = '<iframe width="720" height="405" src="https://www.youtube.com/embed/' + entry.youtubeId + '" frameborder="0" allowfullscreen></iframe>';
+          }
+
+          if ( entry.vimeoId ) {
+            entry.html = '<iframe src="//player.vimeo.com/video/' + entry.vimeoId + '" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+          }
+        }
 
         list.push( entry );
       } catch( e ) {
@@ -354,34 +359,6 @@ function getList( type ) {
   return list;
 }
 
-/**
- * Add or remove demo tool object if debug mode is activated.
- * Otherwise return the unchanged list
- *
- * @param  {Array}   list    List of all tools
- * @param  {Boolean} debug   Debug mode or not
- * @return {Array}           Updated tool list
- */
-function demoToolHandler( list, debug ) {
-  var isDemoToolAdded = _.some( list, function( tool ) {
-    return tool.name === '_DEMO TOOL_';
-  } );
-
-  if ( !! debug && !isDemoToolAdded ) {
-    _.each( config.platforms, function( platform ) {
-        demoTool[ platform.name ] = {};
-        demoTool.stars[ platform.name ] = 10000;
-    } );
-
-    list.unshift( demoTool );
-  } else if ( isDemoToolAdded ) {
-    _.remove( list, function( tool ) {
-      return tool.name === '_DEMO TOOL_';
-    } );
-  }
-
-  return list;
-}
 
 /**
  * Render page
@@ -397,12 +374,11 @@ function renderPage( type, options ) {
   var template = ( type === 'index' ) ? 'index' : 'list';
   var list     = data[ type ] || null;
 
-  var query     = options.query;
-  var debug     = options.debug;
   var cssCookie = options.cssCookie;
+  var debug     = false;
 
-  if ( query ) {
-    var queryValues  = query.split( ' ' );
+  if ( options.query ) {
+    var queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
     var length       = queryValues.length;
 
     list   = _.cloneDeep( list ).map( function( entry ) {
@@ -419,11 +395,19 @@ function renderPage( type, options ) {
 
       return entry;
     } );
+
+    debug = options.query.debug;
+
+    if ( type === 'tools' && options.query.debug ) {
+      _.each( config.platforms, function( platform ) {
+          demoTool[ platform.name ] = {};
+          demoTool.stars[ platform.name ] = 10000;
+      } );
+
+      list.unshift( demoTool );
+    }
   }
 
-  if ( type === 'tools' ) {
-    list = demoToolHandler( list, debug );
-  }
 
   /**
    * Partial function to enable partials
@@ -433,47 +417,48 @@ function renderPage( type, options ) {
    * @param  {Object} options options for lodash templates
    * @return {String}         rendered partial
    */
-  function partial( path, options ) {
+  function partial( path, data, options ) {
     options = options || {};
 
     return _.template(
       fs.readFileSync( path ),
       options
-    );
+    )(data);
   }
 
   return minify(
     _.template(
-      pageContent.templates[ template ],
-      {
-        css              : pageContent.css,
-        cssCookie        : cssCookie,
-        enhance          : pageContent.enhance,
-        cdn              : config.cdn,
-        contributors     : data.contributors,
-        debug            : !! debug,
-        partial          : partial,
-        people           : data.people,
-        platforms        : config.platforms,
-        resourceCount    : {
-          tools    : data.tools.length,
-          articles : data.articles.length,
-          videos   : data.videos.length,
-          slides   : data.slides.length,
-          books    : data.books.length,
-          courses  : data.courses.length
-        },
-        site             : config.site,
-        list             : list,
-        hash             : {
-          css  : pageContent.hashes.css,
-          js   : pageContent.hashes.js,
-          svg  : pageContent.hashes.svg
-        },
-        query            : query,
-        type             : type
-      }
-    ), {
+      pageContent.templates[ template ]
+    )({
+      css              : pageContent.css,
+      cssCookie        : cssCookie,
+      enhance          : pageContent.enhance,
+      cdn              : config.cdn,
+      contributors     : data.contributors,
+      debug            : !! debug,
+      partial          : partial,
+      people           : data.people,
+      platforms        : config.platforms,
+      resourceCount    : {
+        audits   : data.audits.length,
+        tools    : data.tools.length,
+        articles : data.articles.length,
+        videos   : data.videos.length,
+        slides   : data.slides.length,
+        books    : data.books.length,
+        courses  : data.courses.length
+      },
+      site             : config.site,
+      list             : list,
+      hash             : {
+        css  : pageContent.hashes.css,
+        js   : pageContent.hashes.js,
+        svg  : pageContent.hashes.svg
+      },
+      query            : options.query ? options.query.q : '',
+      type             : type,
+      name             : type.charAt( 0 ).toUpperCase() + type.slice( 1 )
+    }), {
       keepClosingSlash      : true,
       collapseWhitespace    : true,
       minifyJS              : true,
@@ -537,16 +522,14 @@ config.listPages.forEach( function( page ) {
     if (
       req.query &&
       (
-        ( req.query.q && req.query.q.length ) ||
-        req.query.debug
+        req.query.q || req.query.debug
       )
     ) {
       res.send(
         renderPage(
           page,
           {
-            query : req.query.q,
-            debug : req.query.debug
+            query : req.query
           }
         )
       );

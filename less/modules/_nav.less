@@ -5,7 +5,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @media (min-width: @media--small) {
+    @media (min-width: @media--medium) {
       overflow: hidden;
     }
 
@@ -17,7 +17,7 @@
       padding: 0;
       width: 100%;
 
-      @media (min-width: @media--small) {
+      @media (min-width: @media--medium) {
         display: table;
         margin: 0;
       }
@@ -27,7 +27,7 @@
     li {
       position: relative;
 
-      @media (min-width: @media--small) {
+      @media (min-width: @media--medium) {
         display: table-cell;
       }
 
@@ -37,7 +37,7 @@
     span {
       padding: .25rem 0;
 
-      @media (min-width: @media--small) {
+      @media (min-width: @media--medium) {
         padding: 1.5rem 0;
       }
 
@@ -50,13 +50,14 @@
       &:focus,
       &:hover {
         color: @secondary__color;
+        text-decoration: none;
       }
 
     }
 
     .is-active {
 
-      @media (min-width: @media--small) {
+      @media (min-width: @media--medium) {
         border-bottom: 3px solid @primary__color;
       }
 

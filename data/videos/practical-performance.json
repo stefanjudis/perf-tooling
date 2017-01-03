@@ -1,0 +1,15 @@
+{
+  "name" : "Practical Performance",
+  "authors": [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    },
+    {
+      "name" : "Sam Saccone",
+      "twitter": "@samccone"
+    }
+  ],
+  "youtubeId" : "6m_E-mC0y3Y",
+  "tags" : [ "devtools", "metrics" ]
+}

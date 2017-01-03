@@ -1,0 +1,15 @@
+{
+  "name" : "WebPerf & Disaster Cases in Native Apps",
+  "authors" : [
+    {
+      "name" : "Kenny Dits",
+      "twitter" : "@kenny_dee"
+    }
+  ],
+  "date" : "2015-12-18",
+  "stats" : {
+    "length" : 840
+  },
+  "url" : "http://calendar.perfplanet.com/2015/webperf-disaster-cases-in-native-apps/",
+  "tags" : [ "spof", "native" ]
+}

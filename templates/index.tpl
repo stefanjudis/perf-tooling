@@ -10,7 +10,9 @@
         site      : site,
         enhance   : enhance,
         cssCookie : cssCookie,
-        hash      : hash
+        hash      : hash,
+        name      : name,
+        type      : type
       }
     )
   %>
@@ -45,7 +47,7 @@
               <a class="btn btn--scroll js-scroll" href="#features" title="Scroll to features">
                 <span class="visuallyhidden">Scroll to features</span>
                 <svg class="icon icon--3x icon--black">
-                  <use xlink:href="/icons-<%= hash.svg %>.svg#icon-arrow" />
+                  <use xlink:href="/icons-<%= hash.svg %>.svg#arrow" />
                 </svg>
               </a>
 
@@ -66,85 +68,105 @@
 
           <section id="features" class="site__section">
 
-            <div class="grid__row">
+            <div class="flexgrid__container flexgrid-2">
 
-              <div class="grid__col grid__col--6">
+              <article class="article flexgrid__item">
 
-                <article class="article">
+                <h3><%= resourceCount.tools %> Tools</h3>
 
-                  <h3><%= resourceCount.tools %> Tools</h3>
+                <p>A rich collection of tools available to optimize and/or monitor your website's performance including bookmarklets, browser extensions, command line tools, node modules and grunt/gulp tasks.</p>
 
-                  <p>A rich collection of tools available to optimize and/or monitor your website's performance including bookmarklets, browser extensions, command line tools, node modules and grunt/gulp tasks.</p>
+                <div class="article__cta">
 
                   <a href="/tools" title="Link to tools" class="btn btn--large btn--primary">Explore Tools</a>
 
-                </article>
+                </div>
 
-              </div>
+              </article>
 
-              <div class="grid__col grid__col--6">
+              <article class="article flexgrid__item">
 
-                <article class="article">
+                <h3><%= resourceCount.articles %> Articles</h3>
 
-                  <h3><%= resourceCount.articles %> Articles</h3>
+                <p>An exclusive list of articles about best practices to build fast websites which will make your visitors happy.</p>
 
-                  <p>An exclusive list of articles about best practices to build fast websites which will make your visitors happy.</p>
+                <div class="article__cta">
 
                   <a href="/articles" title="Link to articles" class="btn btn--large btn--primary">Explore Articles</a>
 
-                </article>
+                </div>
 
-              </div>
+              </article>
 
-            </div>
+              <article class="article flexgrid__item">
 
-            <div class="grid__row">
+                <h3><%= resourceCount.videos %> Videos</h3>
 
-              <div class="grid__col grid__col--6">
+                <p>A collection of recent videos including performance-specific tips and tricks to build better and faster websites.</p>
 
-                <article class="article">
-
-                  <h3><%= resourceCount.videos %> Videos</h3>
-
-                  <p>A collection of recent videos including performance-specific tips and tricks to build better and faster websites.</p>
+                <div class="article__cta">
 
                   <a href="/videos" title="Link to videos" class="btn btn--large btn--primary">Explore Videos</a>
 
-                </article>
+                </div>
 
-              </div>
+              </article>
 
-              <div class="grid__col grid__col--6">
+              <article class="article flexgrid__item">
 
-                <article class="article">
+                <h3><%= resourceCount.slides %> Slidedecks</h3>
 
-                  <h3><%= resourceCount.slides %> Slidedecks</h3>
+                <p>A library of slides from great talks covering performance-related topics.</p>
 
-                  <p>A library of slides from great talks covering performance-related topics.</p>
+                <div class="article__cta">
 
                   <a href="/slides" title="Link to slides" class="btn btn--large btn--primary">Explore Slidedecks</a>
 
-                </article>
+                </div>
 
-              </div>
+              </article>
 
-            </div>
+              <article class="article flexgrid__item">
 
-            <div class="grid__row">
+                <h3><%= resourceCount.books %> Books</h3>
 
-              <div class="grid__col grid__col--6">
+                <p>Our books section features recommended books from some of the most influential authors in the field.</p>
 
-                <article class="article">
-
-                  <h3><%= resourceCount.books %> Books</h3>
-
-                  <p>Our books section features recommended books from some of the most influential authors in the field.</p>
+                <div class="article__cta">
 
                   <a href="/books" title="Link to tools" class="btn btn--large btn--primary">Explore Books</a>
 
-                </article>
+                </div>
 
-              </div>
+              </article>
+
+              <article class="article flexgrid__item">
+
+                <h3><%= resourceCount.courses %> Courses</h3>
+
+                <p>For self-learners, we include courses to get you going.</p>
+
+                <div class="article__cta">
+
+                  <a href="/courses" title="Link to tools" class="btn btn--large btn--primary">Explore Courses</a>
+
+                </div>
+
+              </article>
+
+              <article class="article flexgrid__item">
+
+                <h3><%= resourceCount.audits %> Audits</h3>
+
+                <p>Performance audits of popular sites made by experts. Good to learn about common mistakes.</p>
+
+                <div class="article__cta">
+
+                  <a href="/audits" title="Link to audits" class="btn btn--large btn--primary">Explore Audits</a>
+
+                </div>
+
+              </article>
 
             </div>
 
@@ -175,90 +197,6 @@
 
           <section class="site__section text-center">
 
-            <h3>Built by Stefan Judis<br>& Marco Biedermann</h3>
-
-            <ul class="list--inline list--unstyled">
-
-              <li>
-                <a href="https://twitter.com/stefanjudis" title="Link to Stefan on Twitter" target="_blank">
-                  <span class="visuallyhidden">Stefan on Twitter</span>
-                  <svg class="icon icon--2x icon--black animate--scale--hover">
-                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
-                  </svg>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://github.com/stefanjudis" title="Link to Stefan on GitHub" target="_blank">
-                  <span class="visuallyhidden">Stefan on Github</span>
-                  <svg class="icon icon--2x icon--black animate--scale--hover">
-                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
-                  </svg>
-                </a>
-              </li>
-
-              <li>
-                <a href="mailto:stefanjudis@gmail.com" title="Send Stafan an email" target="_blank">
-                  <span class="visuallyhidden">Stefan's email address</span>
-                  <svg class="icon icon--2x icon--black animate--scale--hover">
-                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-email" />
-                  </svg>
-                </a>
-              </li>
-
-            </ul>
-            <ul class="list--inline list--unstyled">
-
-              <li>
-                <a href="https://github.com/marcobiedermann" title="Link to Marco on GitHub" target="_blank">
-                  <span class="visuallyhidden">Marco on Github</span>
-                  <svg class="icon icon--2x icon--black animate--scale--hover">
-                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-github" />
-                  </svg>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://twitter.com/m412c0b" title="Link to Marco on Twitter" target="_blank">
-                  <span class="visuallyhidden">Marco on Twitter</span>
-                  <svg class="icon icon--2x icon--black animate--scale--hover">
-                    <use xlink:href="/icons-<%= hash.svg %>.svg#icon-twitter" />
-                  </svg>
-                </a>
-              </li>
-
-            </ul>
-
-          </section>
-
-            <% if( contributors ) { %>
-
-              <section class="section text-center">
-
-                <div id="contributors" class="text-center">
-
-                  <p>...with a little help from our friends</p>
-
-                  <ul class="contributors list--inline list--unstyled">
-
-                    <% _.each( contributors, function( contrib ) { %>
-                      <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
-                        <li><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" title="<%= contrib.login %> on GitHub" target="_blank"></a></li>
-                      <% } %>
-                    <% } ) %>
-
-                  </ul>
-
-                </div>
-
-              </section>
-
-            <% } %>
-
-          </section>
-
-          <section class="site__section text-center">
-
             <article class="article">
 
               <p><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fperf-tooling.today&text=@perf_tooling%20A%20resource%20collection%20to%20improve%20your%20workflow%20and%20to%20deliver%20better%20and%20faster%20websites%20%23perfmatters" target="_blank" class="btn btn--primary btn--large">Spread on Twitter</a></p>
@@ -268,7 +206,7 @@
 
           </section>
 
-          <section class="text-center">
+          <section class="site__section text-center">
 
             <h2>Newsletter</h2>
 
@@ -306,6 +244,200 @@
           </section>
 
           <section class="site__section text-center">
+            <h3>Built by the Perf Tooling Team</h3>
+
+            <div class="flexgrid__container flexgrid-3">
+              <div class="flexgrid__item">
+                <h4>Stefan Judis</h4>
+                <ul class="list--inline list--unstyled">
+                  <li>
+                    <a href="https://github.com/stefanjudis" title="Link to Stefan on GitHub" target="_blank">
+                      <span class="visuallyhidden">Stefan on Github</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#github" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/stefanjudis" title="Link to Stefan on Twitter" target="_blank">
+                      <span class="visuallyhidden">Stefan on Twitter</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#twitter" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="mailto:stefanjudis@gmail.com" title="Send Stefan an email" target="_blank">
+                      <span class="visuallyhidden">Stefan's email address</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#email" />
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+              <div class="flexgrid__item">
+                <h4>Marco Biedermann</h4>
+                <ul class="list--inline list--unstyled">
+
+                  <li>
+                    <a href="https://github.com/marcobiedermann" title="Link to Marco on GitHub" target="_blank">
+                      <span class="visuallyhidden">Marco on Github</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#github" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/m412c0b" title="Link to Marco on Twitter" target="_blank">
+                      <span class="visuallyhidden">Marco on Twitter</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#twitter" />
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="flexgrid__item">
+                <h4>Mar High</h4>
+                <ul class="list--inline list--unstyled">
+
+                  <li>
+                    <a href="https://github.com/marhigh" title="Link to Mar on GitHub" target="_blank">
+                      <span class="visuallyhidden">Radimir on Github</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#github" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/spiderhigh" title="Link to Mar on Twitter" target="_blank">
+                      <span class="visuallyhidden">Marco on Twitter</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#twitter" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="mailto:hello@marhigh.com" title="Send Mar an email">
+                      <span class="visuallyhidden">Mar's email address</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#email" />
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+              <div class="flexgrid__item">
+                <h4>Radimir Bitsov</h4>
+                <ul class="list--inline list--unstyled">
+
+                  <li>
+                    <a href="https://github.com/radibit" title="Link to Radimir on GitHub" target="_blank">
+                      <span class="visuallyhidden">Radimir on Github</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#github" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/radibit" title="Link to Radimir on Twitter" target="_blank">
+                      <span class="visuallyhidden">Radimir on Twitter</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#twitter" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="mailto:radimir.bitsov@gmail.com" title="Send Radimir an email">
+                      <span class="visuallyhidden">Radimir's email address</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#email" />
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="flexgrid__item">
+                <h4>Ben Briggs</h4>
+                <ul class="list--inline list--unstyled">
+
+                  <li>
+                    <a href="https://github.com/ben-eb" title="Link to Ben on GitHub" target="_blank">
+                      <span class="visuallyhidden">Radimir on Github</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#github" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/ben_eb" title="Link to Ben on Twitter" target="_blank">
+                      <span class="visuallyhidden">Radimir on Twitter</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#twitter" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="mailto:beneb.info@gmail.com" title="Send Ben an email">
+                      <span class="visuallyhidden">Radimir's email address</span>
+                      <svg class="icon icon--2x icon--black animate--scale--hover">
+                        <use xlink:href="/icons-<%= hash.svg %>.svg#email" />
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+
+          </section>
+
+            <% if( contributors ) { %>
+
+              <section class="section text-center">
+
+                <div id="contributors" class="text-center">
+
+                  <p>...with a little help from our friends</p>
+
+                  <ul class="contributors list--inline list--unstyled">
+
+                    <% _.each( contributors, function( contrib ) { %>
+                      <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
+                        <li><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" title="<%= contrib.login %> on GitHub" target="_blank"></a></li>
+                      <% } %>
+                    <% } ) %>
+
+                  </ul>
+
+                </div>
+
+              </section>
+
+            <% } %>
+
+          </section>
+
+          <section class="site__section text-center">
 
             <h4 class="subline">Sponsored by</h4>
             <p><a href="https://www.fastly.com/" title="Link to Fastly CDN" target="_blank"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly" width="160" height="72" class="center-block"></a></p>
@@ -327,11 +459,6 @@
       %>
 
     <script src="<%= cdn %>/tooling-<%= hash.js %>.js" async></script>
-    <script>
-        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','UA-53831300-1','auto');ga('send','pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
   </body>
 

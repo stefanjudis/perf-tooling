@@ -1,0 +1,16 @@
+{
+  "name" : "ESPN.com redesign perf audit",
+  "targets" : [
+    "http://espn.com"
+  ],
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    }
+  ],
+  "date" : "2015-04-01",
+  "url" : "https://docs.google.com/document/d/1yJoMEdFME04maB_hlGhARTeys-DdeHRqU7zn-z4CFcA/edit?pli=1#heading=h.v23t53p6nkzl",
+  "types" : [ "document" ],
+  "tags" : [ "scroll", "rendering" ]
+}

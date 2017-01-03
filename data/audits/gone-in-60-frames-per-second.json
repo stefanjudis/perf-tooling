@@ -1,0 +1,20 @@
+{
+  "name" : "Gone in 60 frames per second",
+  "targets" : [
+    "https://www.pinterest.com/"
+  ],
+  "authors" : [
+    {
+      "name" : "Addy Osmani",
+      "twitter" : "@addyosmani"
+    },
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    }
+  ],
+  "date": "2013-06-10",
+  "url": "http://www.smashingmagazine.com/2013/06/10/pinterest-paint-performance-case-study/",
+  "types" : [ "article" ],
+  "tags": [ "60fps", "rwd" ]
+}

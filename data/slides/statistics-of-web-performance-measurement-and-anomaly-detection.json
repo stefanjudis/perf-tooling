@@ -1,0 +1,15 @@
+{
+  "name" : "Statistics of Web Performance Measurement and Anomaly Detection",
+  "authors": [
+    {
+      "name" : "Philip Tellis",
+      "twitter" : "@bluesmoon"
+    }
+  ],
+  "date" : "2016-06-01",
+  "stats" : {
+    "length" : 51
+  },
+  "tags" : [ "metrics", "monitoring" ],
+  "url" : "https://speakerdeck.com/bluesmoon/statistics-of-web-performance-measurement-and-anomaly-detection"
+}

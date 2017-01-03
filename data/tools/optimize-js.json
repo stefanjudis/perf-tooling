@@ -1,0 +1,11 @@
+{
+  "name" : "optimize-js",
+  "javascript" : {
+    "url" : "https://github.com/nolanlawson/optimize-js"
+  },
+  "cli" : {
+    "url" : "https://github.com/nolanlawson/optimize-js"
+  },
+  "description" : "Optimize a JavaScript file for faster initial execution and parsing, by wrapping all immediately-invoked functions or likely-to-be-invoked functions in parentheses.",
+  "tags" : [ "javascript", "performance" ]
+}

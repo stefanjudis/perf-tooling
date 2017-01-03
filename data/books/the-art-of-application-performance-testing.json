@@ -1,0 +1,23 @@
+{
+  "name" : "The Art of Application Performance Testing",
+  "date" : "2014-12",
+  "authors" : [
+    {
+      "name" : "Ian Molyneaux"
+    }
+  ],
+  "stats": {
+    "length": 278
+  },
+  "url" : "http://shop.oreilly.com/product/0636920033233.do",
+  "description" : "Because performance is paramount today, this thoroughly updated guide shows you how to test mission-critical applications for scalability and performance before you deploy them—whether it’s to the cloud or a mobile device. You’ll learn the complete testing process lifecycle step-by-step, along with best practices to plan, coordinate, and conduct performance tests on your applications.",
+  "img" : {
+    "src" : {
+      "filename" : "the-art-of-performance-test",
+      "types" : [ "jpg", "webp" ]
+    },
+    "width" : 200,
+    "height" : 300
+  },
+  "tags" : [ "testing" ]
+}

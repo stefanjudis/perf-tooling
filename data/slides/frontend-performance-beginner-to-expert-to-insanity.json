@@ -1,0 +1,15 @@
+{
+  "name" : "FrontEnd Performance – Beginner to Expert to Insanity",
+  "authors": [
+    {
+      "name" : "Philip Tellis",
+      "twitter" : "@bluesmoon"
+    }
+  ],
+  "date" : "2016-05-31",
+  "stats" : {
+    "length" : 60
+  },
+  "tags" : [ "compression", "loading", "metrics" ],
+  "url" : "https://speakerdeck.com/bluesmoon/frontend-performance-beginner-to-expert-to-insanity-1"
+}

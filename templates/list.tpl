@@ -9,12 +9,26 @@
         cssCookie : cssCookie,
         site      : site,
         enhance   : enhance,
-        hash      : hash
+        hash      : hash,
+        name      : name,
+        type      : type,
+        query     : query
       }
     )
   %>
 
   <body>
+
+      <%=
+        ( type === 'videos' || type === 'slides') ?
+          partial(
+            'templates/partials/modals/' + type + '.tpl',
+            {
+              cdn  : cdn,
+              hash : hash
+            }
+          ) : ''
+      %>
 
       <%=
         partial(
@@ -32,6 +46,7 @@
 
         <div class="grid__container">
 
+          <h1 class="posts__headline">List of performance <%= type %></h1>
 
           <%=
             partial(
@@ -97,16 +112,16 @@
         _.map( list, function( entry ) {
           return {
             fuzzy : entry.fuzzy,
-            name  : entry.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' )
+            id    : entry.id,
+            html  : entry.html,
+            url   : entry.url
           }
         } )
       ) %>;
 
-      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','UA-53831300-1','auto');ga('send','pageview')
+      window.type = '<%= type %>';
     </script>
     <script src="<%= cdn %>/tooling-<%= hash.js %>.js" async></script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
   </body>
 

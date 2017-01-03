@@ -1,0 +1,11 @@
+{
+  "name" : "The case for HTTP/2 - EpicFEL 2015",
+  "authors" : [
+    {
+      "name" : "Andy Davies",
+      "twitter" : "@andydavies"
+    }
+  ],
+  "youtubeId" : "ob-CnA9YmiI",
+  "tags" : [ "http2", "network" ]
+}

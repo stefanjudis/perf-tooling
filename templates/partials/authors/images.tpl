@@ -5,7 +5,7 @@
 
     if ( twitterHandle && people[ twitterHandle ] && people[ twitterHandle ].image ) {
 
-      return '<a href="https://twitter.com/' + twitterHandle + '" title="Twitter profile of ' + author.name + '" target="_blank"><img src="' + people[ twitterHandle ].image + '" class="post__author__img" title="Image of ' + author.name + '"></a>';
+      return '<a href="https://twitter.com/' + twitterHandle + '" title="Twitter profile of ' + author.name + '" target="_blank"><img src="' + people[ twitterHandle ].image + '" class="post__author__img" title="' + author.name + '" alt="' + author.name + '"></a>';
     }
 
     return '';

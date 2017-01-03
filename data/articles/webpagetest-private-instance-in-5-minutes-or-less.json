@@ -1,0 +1,15 @@
+{
+  "name" : "WebPageTest Private Instance in 5 Minutes or Less",
+  "authors" : [
+    {
+      "name" : "Rick Viscomi",
+      "twitter" : "@rick_viscomi"
+    }
+  ],
+  "date" : "2015-12-22",
+  "stats" : {
+    "length" : 861
+  },
+  "url" : "http://jrvis.com/blog/wpt-private-instance-5-or-less/",
+  "tags" : [ "webpagetest" ]
+}

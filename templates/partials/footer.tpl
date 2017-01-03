@@ -4,11 +4,11 @@
 
     <p class="crafted">Handcrafted with <span class="visuallyhidden">love</span>
     <svg class="icon icon--red animate--scale--hover">
-      <use xlink:href="/icons-<%= hash.svg %>.svg#icon-heart" />
+      <use xlink:href="/icons-<%= hash.svg %>.svg#heart" />
     </svg>
      in Germany</span></p>
 
-     <p class="copyright">Stefan Judis & Marco Biedermann</p>
+     <p class="copyright">The Perf Tooling Team</p>
 
   </div>
 

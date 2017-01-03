@@ -1,0 +1,27 @@
+{
+  "name" : "Perf Audit marterialup.com",
+  "targets" : [
+    "http://www.materialup.com"
+  ],
+  "authors" : [
+    {
+      "name" : "Apoorv Saxena",
+      "twitter" : "@Apoorv_Saxena"
+    },
+    {
+      "name" : "Kushagra Gour",
+      "twitter" : "@chinchang457"
+    },
+    {
+      "name" : "PerfAudit",
+      "twitter" : "@perfaudit"
+    }
+  ],
+  "date" : "2015-07-31",
+  "stats" : {
+    "length" : 716
+  },
+  "url" : "http://perfaudit.com/case-study/materialup.com/",
+  "types" : [ "article", "video" ],
+  "tags" : ["performance", "jank free"]
+}

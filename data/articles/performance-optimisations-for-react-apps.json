@@ -1,0 +1,15 @@
+{
+  "name" : "Performance optimisations for React applications",
+  "authors" : [
+    {
+      "name" : "Alex Reardon",
+      "twitter" : "@alexandereardon"
+    }
+  ],
+  "date" : "2016-04-12",
+  "stats" : {
+    "length" : 1245
+  },
+  "url" : "https://medium.com/@alexandereardon/performance-optimisations-for-react-applications-b453c597b191#.j0cin0fcz",
+  "tags" : [ "reactjs", "tooling" ]
+}

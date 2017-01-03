@@ -1,0 +1,20 @@
+{
+  "name" : "Rules of Thumb for HTTP/2 Push",
+  "authors" : [
+    {
+      "name" : "Tom Bergan"
+    },
+    {
+      "name" : "Simon Pelchat"
+    },
+    {
+      "name" : "Michael Buettner"
+    }
+  ],
+  "date" : "2016-08-03",
+  "stats" : {
+    "length" : 9430
+  },
+  "url" : "https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/preview",
+  "tags" : [ "http", "loading", "network" ]
+}

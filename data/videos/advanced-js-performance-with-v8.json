@@ -1,0 +1,11 @@
+{
+  "name" : "Advanced JS performance with V8 and Web Assembly",
+  "authors" : [
+    {
+      "name" : "Seth Thompson",
+      "twitter" : "@s3ththompson"
+    }
+  ],
+  "youtubeId" : "PvZdTZ1Nl5o",
+  "tags" : [ "javascript", "devtools" ]
+}

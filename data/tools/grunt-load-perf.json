@@ -1,0 +1,8 @@
+{
+  "name" : "grunt-load-perf",
+  "grunt" : {
+    "url" : "https://github.com/roman01la/grunt-load-perf"
+  },
+  "description" : "This plugin is intendent to be used as loading and rendering performance measuring tool for web applications development. ",
+  "tags" : [ "loading", "metrics", "network", "rendering" ]
+}

@@ -1,0 +1,15 @@
+{
+  "name" : "Reorganizing Website Architecture for HTTP/2 and Beyond",
+  "authors" : [
+    {
+      "name" : "Kazuho Oku",
+      "twitter" : "@kazuho"
+    }
+  ],
+  "date" : "2016-11-08",
+  "stats" : {
+    "length" : 47
+  },
+  "tags" : [ "http2", "loading", "network" ],
+  "url" : "http://www.slideshare.net/kazuho/reorganizing-website-architecture-for-http2-and-beyond"
+}
