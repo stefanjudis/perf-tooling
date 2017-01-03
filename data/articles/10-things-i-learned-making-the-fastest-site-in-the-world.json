@@ -1,0 +1,16 @@
+{
+  "name" : "10 things I learned making the fastest site in the world",
+  "authors" : [
+    {
+      "name" : "David Gilbertson",
+      "twitter" : "@D__Gilbertson"
+    }
+  ],
+  "date" : "2016-12-21",
+  "stats" : {
+    "length" : 4327 
+  },
+  "url" : "https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7",
+  "tags" : [ "loading", "async", "best practices" ]
+}
+
