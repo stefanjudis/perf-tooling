@@ -1,0 +1,8 @@
+{
+  "name" : "simplehttp2server",
+  "cli" : {
+    "url" : "https://github.com/GoogleChrome/simplehttp2server"
+  },
+  "description" : "simplehttp2server serves the current directory on an HTTP/2.0 capable server",
+  "tags" : [ "network", "http" ]
+}
