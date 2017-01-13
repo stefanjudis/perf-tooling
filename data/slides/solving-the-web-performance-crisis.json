@@ -1,0 +1,15 @@
+{
+  "name" : "Solving the Web Performance Crisis",
+  "authors" : [
+    {
+      "name" : "Nolan Lawson",
+      "twitter" : "@nolanlawson"
+    }
+  ],
+  "date" : "2017-01-12",
+  "stats" : {
+    "length" : 91
+  },
+  "tags" : [ "metrics", "tooling", "performance culture" ],
+  "url" : "https://nolanlawson.github.io/frontendday-2016"
+}
