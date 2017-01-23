@@ -1,0 +1,15 @@
+{
+  "name" : "Modernizing our Progressive Enhancement Delivery",
+  "authors" : [
+    {
+      "name" : "Scott Jehl",
+      "twitter" : "@scottjehl"
+    }
+  ],
+  "date" : "2017-01-13",
+  "stats" : {
+    "length" : 3013
+  },
+  "url" : "https://www.filamentgroup.com/lab/modernizing-delivery.html",
+  "tags" : [ "optimization", "network" ]
+}
