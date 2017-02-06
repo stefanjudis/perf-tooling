@@ -1,0 +1,8 @@
+{
+  "name" : "mobile-friendly",
+  "node": {
+    "url" : "https://github.com/denar90/mobile-friendly"
+  },
+  "description" : "Mobile-Friendly Test API for Node.js - CLI tool and lib to gather results about mobile friendly site.",
+  "tags" : [ "metrics", "benchmark", "timings", "monitoring" ]
+}
