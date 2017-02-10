@@ -16,3 +16,12 @@
 * max three level deep selectors
 * do not use `!important`
 * remove leading zeros from numbers
+
+## Commit Messages
+We're following the [gitmoji](https://gitmoji.carloscuesta.me/) guide :smiley:
+Below you can find an example commit message for adding new resource:
+
+:memo: add "Front-end performance Checklist 2017" - fix #1225
+
+It starts with the emoji, `add` with the resource name and then `fix` with
+issue number.
