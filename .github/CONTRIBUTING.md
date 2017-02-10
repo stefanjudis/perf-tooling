@@ -19,7 +19,7 @@
 
 ## Commit Messages
 We're following the [gitmoji](https://gitmoji.carloscuesta.me/) guide :smiley:
-Example commit message for adding new resource:
+Below you can find an example commit message for adding new resource:
 
 :memo: add "Front-end performance Checklist 2017" - fix #1225
 
