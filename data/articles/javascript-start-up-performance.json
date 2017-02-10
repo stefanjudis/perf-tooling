@@ -1,0 +1,15 @@
+{
+  "name" : "JavaScript Start-up Performance",
+  "authors" : [
+    {
+      "name" : "Addy Osmani",
+      "twitter" : "@addyosmani"
+    }
+  ],
+  "date" : "2017-02-09",
+  "stats" : {
+    "length" : 2743
+  },
+  "tags" : [ "javascript", "loading", "network" ],
+  "url" : "https://medium.com/@addyosmani/javascript-start-up-performance-69200f43b201"
+}
