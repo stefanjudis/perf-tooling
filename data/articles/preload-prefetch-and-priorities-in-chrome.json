@@ -1,0 +1,15 @@
+{
+  "name" : "Preload, Prefetch And Priorities in Chrome",
+  "authors" : [
+    {
+      "name" : "Addy Osmani",
+      "twitter" : "@addyosmani"
+    }
+  ],
+  "date" : "2017-04-27",
+  "stats" : {
+    "length" : 2807
+  },
+  "url" : "https://medium.com/@addyosmani/preload-prefetch-and-priorities-in-chrome-776165961bbf",
+  "tags" : [ "loading", "render", "network" ]
+}
