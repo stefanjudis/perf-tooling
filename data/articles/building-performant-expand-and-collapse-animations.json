@@ -1,0 +1,18 @@
+{
+  "name" : "Building performant expand & collapse animations",
+  "authors" : [
+    {
+      "name" : "Paul Lewis",
+      "twitter" : "@aerotwist"
+    },
+    {
+      "name" : "Stephen McGruer"
+    }
+  ],
+  "date" : "2017-03-27",
+  "stats" : {
+    "length" : 1849
+  },
+  "url" : "https://developers.google.com/web/updates/2017/03/performant-expand-and-collapse",
+  "tags" : [ "css", "js", "performance", "60fps" ]
+}
