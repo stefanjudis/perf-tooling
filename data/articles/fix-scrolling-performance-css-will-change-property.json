@@ -1,0 +1,15 @@
+{
+  "name" : "Fix scrolling performance with CSS will-change property",
+  "authors" : [
+    {
+      "name" : "Chris Ruppel",
+      "twitter" : "@rupl"
+    }
+  ],
+  "date" : "2015-07-01",
+  "stats" : {
+    "length" : 912
+  },
+  "url" : "https://fourword.fourkitchens.com/article/fix-scrolling-performance-css-will-change-property",
+  "tags" : [ "css", "scrolling" ]
+}
