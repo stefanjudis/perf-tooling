@@ -1,0 +1,11 @@
+{
+  "name" : "pwmetrics",
+  "cli" : {
+    "url" : "https://github.com/paulirish/pwmetrics"
+  },
+  "node" : {
+    "url" : "https://github.com/paulirish/pwmetrics"
+  },
+  "description" : "CLI tool and lib to gather performance metrics via Lighthouse",
+  "tags" : [ "analysis", "timings", "metrics" ]
+}
