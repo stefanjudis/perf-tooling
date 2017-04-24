@@ -1,0 +1,15 @@
+{
+  "name" : "Improve your web application using Progressive Web Metrics",
+  "authors" : [
+    {
+      "name" : "Artem Denysov",
+      "twitter" : "@denar90_"
+    }
+  ],
+  "date" : "2017-04-22",
+  "stats" : {
+    "length" : 124
+  },
+  "tags" : [ "performance", "lighthouse", "audit", "monitoring", "metrics" ],
+  "url" : "https://docs.google.com/presentation/d/1D4foHkE0VQdhcA5_hiesl8JhEGeTDRrQR4gipfJ8z7Y/present"
+}
