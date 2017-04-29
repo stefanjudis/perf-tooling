@@ -1,0 +1,15 @@
+{
+  "name" : "Deploying Brotli for static content",
+  "authors" : [
+    {
+      "name" : "Alexey Ivanov",
+      "twitter" : "@SaveTheRbtz"
+    }
+  ],
+  "date" : "2017-04-04",
+  "stats" : {
+    "length" : 3336
+  },
+  "url" : "https://blogs.dropbox.com/tech/2017/04/deploying-brotli-for-static-content/",
+  "tags" : [ "compression" ]
+}
