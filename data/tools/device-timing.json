@@ -1,0 +1,8 @@
+{
+  "name" : "DeviceTiming",
+  "cli" : {
+    "url" : "https://github.com/danielmendel/DeviceTiming"
+  },
+  "description" : "DeviceTiming is a tool for measuring parse & execution times for JavaScript files.",
+  "tags" : [ "metrics", "javascript" ]
+}
