@@ -433,7 +433,11 @@
           <section class="site__section text-center">
 
             <h4 class="subline">Sponsored by</h4>
+
             <p><a href="https://www.fastly.com/" title="Link to Fastly CDN" target="_blank"><img src="<%= cdn %>/fastly_grey.svg" alt="Logo of CDN Fastly" width="160" height="72" class="center-block"></a></p>
+
+            <p><a href="https://calibreapp.com/" title="Link to Calibre performance monitoring" target="_blank"><img src="<%= cdn %>/calibre_grey.svg" alt="Logo of Calibre" width="180" class="center-block"></a></p>
+
 
           </section>
 
