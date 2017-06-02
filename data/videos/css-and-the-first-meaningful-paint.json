@@ -1,0 +1,11 @@
+{
+  "name" : "CSS and the first meaningful paint",
+  "authors" : [
+    {
+      "name" : "Patrick Hamann",
+      "twitter" : "@patrickhamann"
+    }
+  ],
+  "youtubeId" : "4pQ2byAoIX0",
+  "tags" : [ "css", "critical", "render-path" ]
+}
