@@ -1,0 +1,15 @@
+{
+  "name" : "HTTP/2 push is tougher than I thought",
+  "authors" : [
+    {
+      "name" : "Jake Archibald",
+      "twitter" : "@jaffathecake"
+    }
+  ],
+  "date" : "2017-05-30",
+  "stats" : {
+    "length" : 4046
+  },
+  "url" : "https://jakearchibald.com/2017/h2-push-tougher-than-i-thought/",
+  "tags" : [ "network", "loading", "http" ]
+}
