@@ -1,0 +1,14 @@
+{
+  "name" : "Making Photos Smaller Without Quality Loss",
+  "authors" : [
+    {
+      "name" : "Stephen Arthur"
+    }
+  ],
+  "date" : "2017-07-01",
+  "stats" : {
+    "length" : 2857
+  },
+  "url" : "https://engineeringblog.yelp.com/2017/06/making-photos-smaller.html",
+  "tags" : [ "images", "optimization", "tooling" ]
+}
