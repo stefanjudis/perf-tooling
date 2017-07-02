@@ -1,0 +1,19 @@
+{
+  "name" : "Reliably measuring responsiveness in the will",
+  "authors" : [
+    {
+      "name" : "Nic Jansma",
+      "twitter" : "@nicj"
+    },
+    {
+      "name" : "Shubhie Panicker",
+      "twitter" : "@shubhie"
+    }
+  ],
+  "date" : "2017-07-22",
+  "stats" : {
+    "length" : 61
+  },
+  "tags" : [ "metrics" ],
+  "url" : "https://www.slideshare.net/nicjansma/reliably-measuring-responsiveness"
+}
