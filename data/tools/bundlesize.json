@@ -1,0 +1,8 @@
+{
+  "name" : "bundlesize",
+  "node" : {
+    "url" : "https://github.com/siddharthkp/bundlesize"
+  },
+  "description" : "Keep your bundle size in check. An open-source CI job that will fail when the size of a specified bundle goes above the configured threshold.",
+  "tags" : [ "analysis", "javascript" ]
+}
