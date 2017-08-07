@@ -1,0 +1,15 @@
+{
+  "name" : "Performance and Resilience: Stress-Testing Third Parties",
+  "authors" : [
+    {
+      "name" : "Harry Roberts",
+      "twitter" : "@csswizardry"
+    }
+  ],
+  "date" : "2017-07-31",
+  "stats" : {
+    "length" : 1439
+  },
+  "tags" : [ "3rd parties", "devtools" ],
+  "url" : "https://csswizardry.com/2017/07/performance-and-resilience-stress-testing-third-parties/"
+}
