@@ -1,0 +1,15 @@
+{
+  "name" : "The critical request",
+  "authors" : [
+    {
+      "name" : "Ben Schwarz",
+      "twitter" : "@benschwarz"
+    }
+  ],
+  "date" : "2017-08-01",
+  "stats" : {
+    "length" : 1927
+  },
+  "url" : "https://css-tricks.com/the-critical-request/",
+  "tags" : [ "network", "loading", "rendering" ]
+}
