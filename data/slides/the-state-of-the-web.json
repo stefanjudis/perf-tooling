@@ -1,0 +1,15 @@
+{
+  "name" : "The state of the web",
+  "authors" : [
+    {
+      "name" : "Karolina Szczur",
+      "twitter" : "@fox"
+    }
+  ],
+  "date" : "2017-08-31",
+  "stats" : {
+    "length" : 76
+  },
+  "tags" : [ "images", "fonts", "javascript" ],
+  "url" : "https://speakerdeck.com/fox/the-state-of-the-web"
+}
