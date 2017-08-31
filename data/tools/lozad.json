@@ -1,0 +1,8 @@
+{
+  "name" : "lozad.js",
+  "javascript" : {
+    "url" : "https://github.com/ApoorvSaxena/lozad.js"
+  },
+  "description" : "Performant lazy loader using IntersectionObserver API",
+  "tags" : [ "loading", "lazy loading", "images", "iframes" ]
+}
