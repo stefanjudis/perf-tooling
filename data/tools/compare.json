@@ -1,0 +1,8 @@
+{
+  "name" : "Compare",
+  "service" : {
+    "url" : "https://compare.sitespeed.io/"
+  },
+  "description" : "Make it easier to find regressions by comparing your HAR files.",
+  "tags" : [ "network" ]
+}
