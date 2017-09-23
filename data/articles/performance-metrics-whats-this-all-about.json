@@ -1,0 +1,15 @@
+{
+  "name" : "Performance metrics. What’s this all about?",
+  "authors" : [
+    {
+      "name" : "Artem Denysov",
+      "twitter" :"@denar90_"
+    }
+  ],
+  "date" : "2017-10-19",
+  "stats" : {
+    "length" : 1711
+  },
+  "url" : "https://medium.com/@denar90/performance-metrics-whats-this-all-about-1128461ad6b",
+  "tags" : ["performance", "metrics", "optimization"]
+}
