@@ -1,0 +1,9 @@
+{
+  "name" : "Dotcom-Monitor",
+  },
+  "grunt" : {
+    "url" : "https://www.dotcom-monitor.com/"
+  },
+  "description" : "Monitor & Load Test websites, web applications, web api's and web services from one single solution.",
+  "tags" : [ "web performance", "load test", "monitor" ]
+}
