@@ -1,0 +1,24 @@
+{
+  "name" : "Essential Image Optimization",
+  "date" : "2017-09",
+  "authors" : [
+    {
+      "name" : "Addy Osmani",
+      "twitter" : "@addyosmani"
+    }
+  ],
+  "stats": {
+    "length": 112
+  },
+  "url" : "https://images.guide/",
+  "description" : "A free book on modern image optimization techniques. Formats, decoders, techniques for efficient compression and more are covered.",
+  "img" : {
+    "src" : {
+      "filename": "essential-image-optimization",
+      "types" : ["jpg", "webp"]
+    },
+    "width" : 200,
+    "height" : 262
+  },
+  "tags" : ["images", "loading", "optimizing"]
+}
