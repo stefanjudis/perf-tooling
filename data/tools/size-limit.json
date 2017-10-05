@@ -1,0 +1,11 @@
+{
+  "name" : "Size Limit",
+  "cli" : {
+    "url" : "https://github.com/ai/size-limit"
+  },
+  "node" : {
+    "url" : "https://github.com/ai/size-limit"
+  },
+  "description" : "Size Limit is a tool to prevent JavaScript libraries bloat. With it, you know exactly for how many kilobytes your JS library increases the user bundle.",
+  "tags" : [ "analysis", "javascript" ]
+}
