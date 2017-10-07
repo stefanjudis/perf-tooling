@@ -1,0 +1,15 @@
+{
+  "name" : "Why fast matters",
+  "authors" : [
+    {
+      "name" : "Harry Roberts",
+      "twitter" : "@csswizardry"
+    }
+  ],
+  "date" : "2017-05-17",
+  "stats" : {
+    "length" : 95
+  },
+  "tags" : [ "performance culture", "budget", "metrics" ],
+  "url" : "https://speakerdeck.com/csswizardry/why-fast-matters"
+}
