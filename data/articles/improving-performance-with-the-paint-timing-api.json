@@ -1,0 +1,16 @@
+{
+  "name" : "Improving Performance with the Paint Timing API",
+  "authors" : [
+    {
+      "name" : "Umar Hansa",
+      "twitter" : "@umaar"
+    }
+  ],
+  "date" : "2017-10-19",
+  "stats" : {
+    "length" : 2082
+  },
+  "url" : "https://www.sitepen.com/blog/2017/10/06/improving-performance-with-the-paint-timing-api",
+  "tags" : [ "metrics", "rendering", "tooling" ]
+}
+
