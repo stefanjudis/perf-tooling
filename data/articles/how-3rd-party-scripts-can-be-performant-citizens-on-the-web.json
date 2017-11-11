@@ -1,0 +1,15 @@
+{
+  "name" : "How 3rd Party Scripts can be performant citizens on the web",
+  "authors" : [
+    {
+      "name" : "Ryan Townsend",
+      "twitter" : "@RyanTownsend"
+    }
+  ],
+  "date" : "2017-08-14",
+  "stats" : {
+    "length" : 1815
+  },
+  "url" : "https://www.twnsnd.com/posts/performant_third_party_scripts.html",
+  "tags" : [ "async", "loading", "3rd parties" ]
+}
