@@ -1,0 +1,10 @@
+{
+  "name" : "HTTP/2: what no one is telling you",
+  "authors" : [
+    {
+      "name" : "Hooman Beheshti"
+    }
+  ],
+  "youtubeId" : "CkFEoZwWbGQ",
+  "tags" : [ "HTTP/2", "network" ]
+}
