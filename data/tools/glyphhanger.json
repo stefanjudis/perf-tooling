@@ -1,0 +1,8 @@
+{
+  "name": "glyphhanger",
+  "cli": {
+    "url" : "https://github.com/filamentgroup/glyphhanger"
+  },
+  "description": "Utility to automatically subset fonts for serving on the web.",
+  "tags": ["fonts"]
+}
