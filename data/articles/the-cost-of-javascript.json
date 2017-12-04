@@ -1,0 +1,15 @@
+{
+  "name" : "The Cost Of JavaScript",
+  "authors" : [
+    {
+      "name" : "Addy Osmani",
+      "twitter" : "@addyosmani"
+    }
+  ],
+  "date" : "2017-11-15",
+  "stats" : {
+    "length" : 1641
+  },
+  "tags" : [ "javascript", "network", "budget" ],
+  "url" : "https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e"
+}
