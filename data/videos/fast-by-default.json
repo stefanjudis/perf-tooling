@@ -1,0 +1,19 @@
+{
+  "name" : "Fast By Default: Modern Loading Best Practices (Chrome Dev Summit 2017)",
+  "authors" : [
+    {
+      "name" : "Addy Osmany",
+      "twitter" : "@addyosmani"
+    },
+    {
+      "name": "Ilya Grigorik",
+      "twitter": "@igrigorik"
+    },
+    {
+      "name": "Bryan McQuade",
+      "twitter": "@bryanmcquade"
+    }
+  ],
+  "youtubeId" : "_srJ7eHS3IM",
+  "tags" : [ "network", "loading", "best practices" ]
+}
