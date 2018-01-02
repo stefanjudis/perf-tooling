@@ -1,7 +1,7 @@
 <ul class="posts">
   <% list = _.sortBy( list, function( video ) { return video.publishedAt; } ).reverse();%>
 
-  <% _.each( list , function( video ) { %>
+  <% list.forEach( video => { %>
     <% var title = _.escape( video.title || video.name ); %>
 
     <li id="<%= video.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--video media <%= ( video.hidden === true ) ? 'is-hidden' : '' %>">

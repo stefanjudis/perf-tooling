@@ -414,7 +414,7 @@
 
                   <ul class="contributors list--inline list--unstyled">
 
-                    <% _.each( contributors, function( contrib ) { %>
+                    <% contributors.forEach( contrib => { %>
                       <% if ( contrib.login !== 'stefanjudis' && contrib.login !== 'marcobiedermann' ) { %>
                         <li><a href="<%= contrib.url.replace( 'api.','' ).replace( 'users/','' ) %>" data-url="<%= contrib.avatar_url + '&s=40' %>" data-login="<%= contrib.login %>" title="<%= contrib.login %> on GitHub" target="_blank"></a></li>
                       <% } %>

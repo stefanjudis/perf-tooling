@@ -1,20 +1,20 @@
-var express      = require( 'express' );
-var compression  = require( 'compression' );
-var app          = express();
-var fs           = require( 'fs' );
-var fuzzify      = require( './lib/fuzzify' );
-var _            = require( 'lodash' );
-var minify       = require( 'html-minifier' ).minify;
-var config       = require( './config/config' );
-var async        = require( 'async' );
-var cookieParser = require( 'cookie-parser' );
-var revisions    = require( './rev.json' );
+const _            = require( 'lodash' );
+const async        = require( 'async' );
+const compression  = require( 'compression' );
+const cookieParser = require( 'cookie-parser' );
+const express      = require( 'express' );
+const fs           = require( 'fs' );
+const minify       = require( 'html-minifier' ).minify;
+const config       = require( './config/config' );
+const fuzzify      = require( './lib/fuzzify' );
+const revisions    = require( './rev.json' );
+const app          = express();
 
 /**
  * Helpers to deal with API stuff
  * @type {Object}
  */
-var helpers = {
+const helpers = {
   github      : ( require( './lib/helper/github' ) ).init(),
   slideshare  : ( require( './lib/helper/slideshare' ) ).init(),
   speakerdeck : ( require( './lib/helper/speakerdeck' ) ).init(),
@@ -23,8 +23,8 @@ var helpers = {
   youtube     : ( require( './lib/helper/youtube' ) ).init()
 };
 
-var port         = process.env.PORT || 3000;
-var data         = config.listPages.reduce( function( data, listPage ) {
+const port         = process.env.PORT || 3000;
+const data         = config.listPages.reduce( ( data, listPage ) => {
   data[ listPage ] = getList( listPage );
 
   return data;
@@ -34,7 +34,7 @@ var data         = config.listPages.reduce( function( data, listPage ) {
  * Demo tool object containing all available properties
  * @type {Object}
  */
-var demoTool = {
+const demoTool = {
   name        : '_DEMO TOOL_',
   id          : '_DEMO TOOL_'.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ),
   description : 'A demo tool displaying all available platforms',
@@ -48,7 +48,7 @@ var demoTool = {
  * pages object representing
  * all routes
  */
-var pages = config.listPages.reduce( function( pages, listPage ) {
+const pages = config.listPages.reduce( ( pages, listPage ) => {
   pages[ listPage ] = null;
 
   return pages;
@@ -58,7 +58,7 @@ var pages = config.listPages.reduce( function( pages, listPage ) {
 /**
  * Reduce I/O and read files only on start
  */
-var pageContent = {
+const pageContent = {
   css       : fs.readFileSync( './public/main-' + revisions.styles + '.css', 'utf8' ),
   enhance   : fs.readFileSync( './public/enhance.js', 'utf8' ),
   hashes    : {
@@ -77,7 +77,7 @@ var pageContent = {
  * Fetch list of contributors
  */
 function fetchContributors() {
-  helpers.github.getContributors( function( error, contributors ) {
+  helpers.github.getContributors( ( error, contributors ) => {
     if ( error ) {
       return console.warn( error );
     }
@@ -93,22 +93,22 @@ function fetchContributors() {
  * Fetch github stars
  */
 function fetchGithubStars() {
-  var queue = [];
+  const queue = [];
 
-  _.each( data.tools, function( tool ) {
-    _.forIn( tool, function( value, key ) {
+  data.tools.forEach( tool => {
+    for( let prop in tool ) {
       tool.stars = data.tools.stars || {};
 
       if (
-        value.url &&
-        /github/.test( value.url )
+        tool[prop].url &&
+        /github/.test( tool[prop].url )
       ) {
-        queue.push( function( done ) {
-          var project = value.url.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
+        queue.push( done => {
+          const project = tool[prop].url.replace( 'https://github.com/', '' ).split( '#' )[ 0 ];
 
           helpers.github.getStars(
             project,
-            function( error, stars ) {
+            ( error, stars ) => {
               if ( error ) {
                 console.warn( 'ERROR -> fetchGithubStars' );
                 console.warn( 'ERROR -> ' + project );
@@ -116,25 +116,21 @@ function fetchGithubStars() {
                 return done( null );
               }
 
-              tool.stars[ key ] = stars;
+              tool.stars[ prop ] = stars;
 
               pages.tools = renderPage( 'tools' );
 
               // give it a bit of time
               // to rest and not reach the API limits
-              setTimeout( function() {
-                done( null );
-              }, config.timings.requestDelay );
+              setTimeout( () => done( null ), config.timings.requestDelay );
             }
           );
         } );
       }
-    } );
+    }
   } );
 
-  async.waterfall( queue, function() {
-    console.log( 'DONE -> fetchGithubStars()' );
-  } );
+  async.waterfall( queue, () => console.log( 'DONE -> fetchGithubStars()' ) );
 }
 
 
@@ -142,27 +138,27 @@ function fetchGithubStars() {
  * Fetch twitter data
  */
 function fetchTwitterUserMeta() {
-  var queue          = [];
-  var fetchedAuthors = [];
+  const queue          = [];
+  const fetchedAuthors = [];
 
   /**
    * Evaluate set authors for each entry
    * @param  {String} type entry type
    */
   function evalAuthors( type ) {
-    _.each( data[ type ], function( entry ) {
+    data[ type ].forEach( entry => {
       if ( entry.authors && entry.authors.length ) {
-        _.each( entry.authors, function( author ) {
+        entry.authors.forEach( author => {
           if ( author.twitter ) {
-            var userName = author.twitter.replace( '@', '' );
+            const userName = author.twitter.replace( '@', '' );
 
             if ( fetchedAuthors.indexOf( userName ) === -1 ) {
               fetchedAuthors.push( userName );
 
-              queue.push( function( done ) {
+              queue.push( done => {
                 helpers.twitter.fetchTwitterUserData(
                   userName,
-                  function( error, user ) {
+                  ( error, user ) => {
                     if ( error ) {
                       console.warn( 'ERROR -> fetchTwitterUserData' );
                       console.warn( 'ERROR -> ' + userName );
@@ -174,15 +170,13 @@ function fetchTwitterUserMeta() {
 
                     // render it again
                     // because we had a data update
-                    config.listPages.forEach( function( listPage ) {
+                    config.listPages.forEach( listPage => {
                       pages[ listPage ] = renderPage( listPage );
                     } );
 
                     // give it a bit of time
                     // to rest and not reach the API limits
-                    setTimeout( function() {
-                      done( null );
-                    }, config.timings.requestDelay );
+                    setTimeout( () => done( null ), config.timings.requestDelay );
                   }
                 );
               } );
@@ -193,13 +187,9 @@ function fetchTwitterUserMeta() {
     } );
   }
 
-  config.listPages.forEach( function( listPage ) {
-    evalAuthors( listPage );
-  } );
+  config.listPages.forEach( listPage => evalAuthors( listPage ) );
 
-  async.waterfall( queue, function() {
-    console.log( 'DONE -> fetchTwitterUserMeta()' );
-  } );
+  async.waterfall( queue, () => console.log( 'DONE -> fetchTwitterUserMeta()' ) );
 }
 
 
@@ -207,12 +197,12 @@ function fetchTwitterUserMeta() {
  * Fetch video meta data
  */
 function fetchVideoMeta() {
-  var queue = [];
+  const queue = [];
 
-  _.each( data.videos, function( video ) {
+  data.videos.forEach( video => {
     if ( video.youtubeId ) {
-      queue.push( function( done ) {
-        helpers.youtube.fetchVideoMeta( video.youtubeId, function( error, meta ) {
+      queue.push( done => {
+        helpers.youtube.fetchVideoMeta( video.youtubeId, ( error, meta ) => {
           if ( error ) {
             console.warn( 'ERROR -> youtube.fetchVideoMeta' );
             console.warn( 'ERROR -> ' + video.youtubeId );
@@ -220,22 +210,20 @@ function fetchVideoMeta() {
             return done( null );
           }
 
-          _.extend( video, meta );
+          Object.assign( video, meta );
 
           pages.videos = renderPage( 'videos' );
 
           // give it a bit of time
           // to rest and not reach the API limits
-          setTimeout( function() {
-            done( null );
-          }, config.timings.requestDelay );
+          setTimeout( () => done( null ), config.timings.requestDelay );
         } );
       } );
     }
 
     if ( video.vimeoId ) {
-      queue.push( function( done ) {
-        helpers.vimeo.fetchVideoMeta( video.vimeoId, function( error, meta ) {
+      queue.push( done => {
+        helpers.vimeo.fetchVideoMeta( video.vimeoId, ( error, meta) => {
           if ( error ) {
             console.warn( 'ERROR -> vimeo.fetchVideoMeta' );
             console.warn( 'ERROR -> ' + video.vimeoId );
@@ -243,23 +231,19 @@ function fetchVideoMeta() {
             return done( null );
           }
 
-          _.extend( video, meta );
+          Object.assign( video, meta );
 
           pages.videos = renderPage( 'videos' );
 
           // give it a bit of time
           // to rest and not reach the API limits
-          setTimeout( function() {
-            done( null );
-          }, config.timings.requestDelay );
+          setTimeout( () => done( null ), config.timings.requestDelay );
         } );
       } );
     }
   } );
 
-  async.waterfall( queue, function() {
-    console.log( 'DONE -> fetchVideoMeta()' );
-  } );
+  async.waterfall( queue, () => console.log( 'DONE -> fetchVideoMeta()' ) );
 }
 
 
@@ -267,14 +251,14 @@ function fetchVideoMeta() {
  * Fetch slide meta data
  */
 function fetchSlideMeta() {
-  var queue = [];
+  const queue = [];
 
-  _.each( data.slides, function( slide ) {
-    var match = slide.url.match( /(slideshare|speakerdeck)/g );
+  data.slides.forEach( slide => {
+    const match = slide.url.match( /(slideshare|speakerdeck)/g );
     if ( match ) {
-      queue.push( function( done ) {
+      queue.push( done => {
         if ( helpers[ match[ 0 ] ] ) {
-          helpers[ match[ 0 ] ].getMeta( slide.url, function( error, meta ) {
+          helpers[ match[ 0 ] ].getMeta( slide.url, ( error, meta ) => {
             if ( error ) {
               console.warn( 'ERROR -> vimeo.fetchSlideMeta' );
               console.warn( 'ERROR -> ' + slide.url );
@@ -282,15 +266,13 @@ function fetchSlideMeta() {
               return done( null );
             }
 
-            _.extend( slide, meta );
+            Object.assign( slide, meta );
 
             pages.slides = renderPage( 'slides' );
 
             // give it a bit of time
             // to rest and not reach the API limits
-            setTimeout( function() {
-              done( null );
-            }, config.timings.requestDelay );
+            setTimeout( () => done( null ), config.timings.requestDelay );
           } );
         } else {
           done( null );
@@ -299,9 +281,7 @@ function fetchSlideMeta() {
     }
   } );
 
-  async.waterfall( queue, function() {
-    console.log( 'DONE -> fetchSlideMeta()' );
-  } );
+  async.waterfall( queue, () => console.log( 'DONE -> fetchSlideMeta()' ) );
 }
 
 
@@ -313,10 +293,10 @@ function fetchSlideMeta() {
  * @return {Object} tools
  */
 function getList( type ) {
-  var list                 = [];
-  var entries              = fs.readdirSync( config.dataDir + '/' + type );
+  const list                 = [];
+  const entries              = fs.readdirSync( config.dataDir + '/' + type );
 
-  entries.forEach( function( entry ) {
+  entries.forEach( entry => {
     if ( entry[ 0 ] !== '.' ) {
       try {
         entry = JSON.parse(
@@ -326,7 +306,7 @@ function getList( type ) {
           )
         );
 
-        var platformsNames = config.platforms.map( function( platform ) {
+        const platformsNames = config.platforms.map( platform => {
           return platform.name;
         } );
 
@@ -368,22 +348,20 @@ function getList( type ) {
  *
  * @return {String}       rendered page
  */
-function renderPage( type, options ) {
-  options = options || {};
+function renderPage( type, options = {} ) {
+  const template = ( type === 'index' ) ? 'index' : 'list';
+  let list     = data[ type ] || null;
 
-  var template = ( type === 'index' ) ? 'index' : 'list';
-  var list     = data[ type ] || null;
-
-  var cssCookie = options.cssCookie;
-  var debug     = false;
+  const cssCookie = options.cssCookie;
+  let debug     = false;
 
   if ( options.query ) {
-    var queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
-    var length       = queryValues.length;
+    const queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
+    const length       = queryValues.length;
 
-    list   = _.cloneDeep( list ).map( function( entry ) {
-      var i      = 0;
-      var match  = true;
+    list   = _.cloneDeep( list ).map( entry => {
+      let i      = 0;
+      let match  = true;
 
       for( ; i < length; ++i ) {
         if ( entry.fuzzy.indexOf( queryValues[ i ].toLowerCase() ) === -1 ) {
@@ -399,7 +377,7 @@ function renderPage( type, options ) {
     debug = options.query.debug;
 
     if ( type === 'tools' && options.query.debug ) {
-      _.each( config.platforms, function( platform ) {
+      config.platforms.forEach( platform => {
           demoTool[ platform.name ] = {};
           demoTool.stars[ platform.name ] = 10000;
       } );
@@ -417,8 +395,7 @@ function renderPage( type, options ) {
    * @param  {Object} options options for lodash templates
    * @return {String}         rendered partial
    */
-  function partial( path, data, options ) {
-    options = options || {};
+  function partial( path, data, options = {} ) {
 
     return _.template(
       fs.readFileSync( path ),
@@ -503,7 +480,7 @@ fetchTwitterUserMeta();
 /**
  * Repeat the fetching all 12 hours
  */
-setInterval( function() {
+setInterval( () => {
   fetchGithubStars();
   fetchVideoMeta();
   fetchTwitterUserMeta();
@@ -515,10 +492,10 @@ app.use( cookieParser() );
 /**
  * Render index page
  */
-config.listPages.forEach( function( page ) {
+config.listPages.forEach( page => {
   pages[ page ] = renderPage( page );
 
-  app.get( '/' + page, function( req, res ) {
+  app.get( '/' + page, ( req, res ) => {
     if (
       req.query &&
       (
@@ -552,7 +529,7 @@ config.listPages.forEach( function( page ) {
 
 pages.index = renderPage( 'index' );
 
-app.get( '/', function( req, res ) {
+app.get( '/', ( req, res ) => {
   if ( req.cookies.maincss ) {
     res.send(
       renderPage(

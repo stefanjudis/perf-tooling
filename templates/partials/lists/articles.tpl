@@ -4,7 +4,7 @@
       return article.date ? + ( new Date( article.date ) ) : -1;
     } ).reverse();
   %>
-  <% _.each( list , function( article ) { %>
+  <% list.forEach( article => { %>
 
     <li id="<%= article.name.toLowerCase().replace( /[\s\.,:'"#\(\)|]/g, '-' ) %>" class="post post--article media <%= ( article.hidden === true ) ? 'is-hidden' : '' %>">
 

@@ -1,5 +1,5 @@
 <%=
-  '<div class="media__obj--left">' + _.map( authors, function( author ) {
+  '<div class="media__obj--left">' + authors.map( author => {
 
     var twitterHandle = ( author.twitter ) ? author.twitter.replace( '@', '' ) : false;
 

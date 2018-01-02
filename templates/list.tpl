@@ -58,10 +58,10 @@
                 platforms : platforms,
                 query     : query,
                 type      : type,
-                tags      : _.reduce( list, function( tags, entry ) {
+                tags      : list.reduce( ( tags, entry ) => {
                   if ( entry.tags && entry.tags.length ) {
                     for ( var i = 0; i < entry.tags.length; ++i ) {
-                      if ( _.indexOf( tags, entry.tags[ i ] ) === -1 ) {
+                      if ( tags.indexOf( entry.tags[ i ] ) === -1 ) {
                         tags.push( entry.tags[ i ] );
                       }
                     }
@@ -91,7 +91,7 @@
               }
             )
           %>
-          <div id="noResultMsg" class="<%= ( _.filter( list, function( entry ) { return !entry.hidden; } ).length ) ? 'is-hidden' : '' %>">No results found</div>
+          <div id="noResultMsg" class="<%= ( list.filter( entry => !entry.hidden ).length ) ? 'is-hidden' : '' %>">No results found</div>
 
         </div>
 
@@ -109,7 +109,7 @@
 
     <script>
       window.list = <%= JSON.stringify(
-        _.map( list, function( entry ) {
+        list.map( entry => {
           return {
             fuzzy : entry.fuzzy,
             id    : entry.id,

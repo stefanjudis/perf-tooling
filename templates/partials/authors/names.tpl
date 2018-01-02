@@ -1,5 +1,5 @@
 <%=
-  '<h4>' + ( ( entry.date ) ? entry.date : '' ) + ' by ' + _.map( authors, function( author ) {
+  '<h4>' + ( ( entry.date ) ? entry.date : '' ) + ' by ' + authors.map( author => {
 
     var twitterHandle = ( author.twitter ) ? author.twitter.replace( '@', '' ) : false;
 
