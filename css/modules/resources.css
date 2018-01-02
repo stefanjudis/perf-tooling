@@ -1,0 +1,315 @@
+.resources {
+  list-style: none;
+  margin: -.5%;
+  padding: 0;
+}
+
+@media (--media-small) {
+
+  .resources {
+    margin: -.5% auto 3rem;
+    max-width: 75%;
+  }
+
+}
+
+.resources li {
+  display: inline-block;
+  font-size: .75rem;
+  margin: .5%;
+  width: calc(100% / 2 - 1%);
+}
+
+@media (--media-tiny) {
+
+  .resources li {
+    width: calc(100% / 3 - 1%);
+  }
+
+}
+
+@media (--media-small) {
+
+  .resources li {
+    width: auto;
+  }
+
+}
+
+.resources a {
+  border-radius: 999px;
+  color: var(--base__bgcolor);
+  display: block;
+  padding: .5rem .75rem;
+  position: relative;
+}
+
+.resources a:before,
+.resources a:after {
+  content: ' ';
+  display: table;
+}
+
+.resources a:after {
+  clear: both;
+}
+
+@media (--media-small) {
+
+  .resources a {
+    border-radius: 50%;
+    padding: .75rem;
+  }
+
+  .resources a:focus .tooltip,
+  .resources a:hover .tooltip {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+.resources .stars {
+  float: right;
+}
+
+@media (--media-small) {
+
+  .resources .stars {
+    color: var(--base__color);
+    left: 50%;
+    position: absolute;
+    top: 120%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+}
+
+.resources svg {
+  display: none;
+}
+
+@media (--media-small) {
+
+  .resources svg {
+    display: inline-block;
+  }
+
+}
+
+.resource--angular a {
+  background: #a6120d;
+}
+
+.resource--angular a:focus,
+.resource--angular a:hover {
+  background: #d51711;
+}
+
+.resource--apache a {
+  background: #b21142;
+}
+
+.resource--apache a:focus,
+.resource--apache a:hover {
+  background: #e11553;
+}
+
+.resource--bookmarklet a {
+  background: #e63830;
+}
+
+.resource--bookmarklet a:focus,
+.resource--bookmarklet a:hover {
+  background: #eb645e;
+}
+
+.resource--broccoli a {
+  background: #598527;
+}
+
+.resource--broccoli a:focus,
+.resource--broccoli a:hover {
+  background: #73ac33;
+}
+
+.resource--chrome a {
+  background: #0181f5;
+}
+
+.resource--chrome a:focus,
+.resource--chrome a:hover {
+  background: #2b9afe;
+}
+
+.resource--cli a {
+  background: #121212;
+}
+
+.resource--cli a:focus,
+.resource--cli a:hover {
+  background: #2c2c2c;
+}
+
+.resource--firefox a {
+  background: #e66000;
+}
+
+.resource--firefox a:focus,
+.resource--firefox a:hover {
+  background: #ff7a1a;
+}
+
+.resource--googleAppsScript a {
+  background: #377ef5;
+}
+
+.resource--googleAppsScript a:focus,
+.resource--googleAppsScript a:hover {
+  background: #689df7;
+}
+
+.resource--grunt a {
+  background: #e48632;
+}
+
+.resource--grunt a:focus,
+.resource--grunt a:hover {
+  background: #eaa15f;
+}
+
+.resource--gulp a {
+  background: #eb4a4b;
+}
+
+.resource--gulp a:focus,
+.resource--gulp a:hover {
+  background: #f07879;
+}
+
+.resource--illustrator a {
+  background: #f89404;
+}
+
+.resource--illustrator a:focus,
+.resource--illustrator a:hover {
+  background: #fcaa33;
+}
+
+.resource--java a {
+  background: #5382a1;
+}
+
+.resource--java a:focus,
+.resource--java a:hover {
+  background: #719bb6;
+}
+
+.resource--javascript a {
+  background: #f7df1e;
+}
+
+.resource--javascript a:focus,
+.resource--javascript a:hover {
+  background: #f9e64f;
+}
+
+.resource--linux a {
+  background: #e8b627;
+}
+
+.resource--linux a:focus,
+.resource--linux a:hover {
+  background: #edc655;
+}
+
+.resource--mac a {
+  background: #656565;
+}
+
+.resource--mac a:focus,
+.resource--mac a:hover {
+  background: #7f7f7f;
+}
+
+.resource--nginx a {
+  background: #00992d;
+}
+
+.resource--nginx a:focus,
+.resource--nginx a:hover {
+  background: #00cc3c;
+}
+
+.resource--node a {
+  background: #80bd01;
+}
+
+.resource--node a:focus,
+.resource--node a:hover {
+  background: #a2f001;
+}
+
+.resource--php a {
+  background: #8892bf;
+}
+
+.resource--php a:focus,
+.resource--php a:hover {
+  background: #a9b0d1;
+}
+
+.resource--python a {
+  background: #3776ab;
+}
+
+.resource--python a:focus,
+.resource--python a:hover {
+  background: #4f90c6;
+}
+
+.resource--ruby a {
+  background: #cc342d;
+}
+
+.resource--ruby a:focus,
+.resource--ruby a:hover {
+  background: #d95953;
+}
+
+.resource--safari a {
+  background: #4189d6;
+}
+
+.resource--safari a:focus,
+.resource--safari a:hover {
+  background: #6ba3df;
+}
+
+.resource--service a {
+  background: #1993dc;
+}
+
+.resource--service a:focus,
+.resource--service a:hover {
+  background: #3fa9e9;
+}
+
+.resource--windows a {
+  background: #00bcf2;
+}
+
+.resource--windows a:focus,
+.resource--windows a:hover {
+  background: #26cfff;
+}
+
+.resource--wordpress a {
+  background: #21759b;
+}
+
+.resource--wordpress a:focus,
+.resource--wordpress a:hover {
+  background: #2a95c5;
+}

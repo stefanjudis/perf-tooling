@@ -14,18 +14,6 @@
 
 }
 
-.animate {
-
-  &--scale {
-
-    &--hover {
-
-      &:hover {
-        transform: scale(1.1)
-      }
-
-    }
-
-  }
-
+.animate--scale--hover:hover {
+  transform: scale(1.1)
 }

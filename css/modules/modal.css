@@ -1,0 +1,114 @@
+.modal {
+  background: var(--modal__bgcolor);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  transition: opacity .5s, visibility .5s;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.is-active .modal__container {
+  visibility: visible;
+}
+
+.modal.is-active .modal__inner {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal.is-loaded .modal--loading {
+  display: none;
+}
+
+.modal__container {
+  backface-visibility: hidden;
+  left: 50%;
+  max-width: var(--grid__container);
+  outline: 0;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  width: 90%;
+}
+
+.modal__inner {
+  opacity: 0;
+  padding-top: 2rem;
+  transform: scale(.7);
+  transition: opacity .5s, transform .5s;
+}
+
+.modal__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal__close svg {
+  height: 1.5rem;
+  transition: fill .25s;
+  width: 1.5rem;
+}
+
+.modal__close:hover svg {
+  fill: var(--secondary__color);
+}
+
+.modal__close:active svg {
+  fill: #9c0900;
+  transition: none;
+}
+
+.modal__openLink {
+  background: var(--base__color);
+  border-radius: 1em;
+  color: #fff;
+  display: block;
+  margin: 1em auto;
+  padding: .25em;
+  text-align: center;
+  width: 10em;
+}
+
+.modal__openLink:hover,
+.modal__openLink:focus {
+  background: var(--primary__color);
+  color: var(--btn__color);
+}
+
+.modal--loading:before,
+.modal--loading:after {
+  border-radius: 50%;
+  content: '';
+  height: 1.5rem;
+  left: 50%;
+  margin: -.75rem 0 0 -.75rem;
+  position: fixed;
+  top: 50%;
+  width: 1.5rem;
+  z-index: 0;
+}
+
+.modal--loading:before {
+  animation: moveRight .5s linear infinite alternate;
+  background: var(--primary__color);
+  transform: translateX(-1.5rem);
+}
+
+.modal--loading:after {
+  animation: moveLeft .5s linear infinite alternate;
+  background: var(--secondary__color);
+  transform: translateX(1.5rem);
+}

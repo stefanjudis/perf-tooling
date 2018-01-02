@@ -1,0 +1,30 @@
+.media:before,
+.media:after {
+  content: ' ';
+  display: table;
+}
+
+.media:after {
+  clear: both;
+}
+
+@media (--media-small) {
+
+  .media__obj {
+    max-width: 50%;
+  }
+
+}
+
+@media (--media-small) {
+
+  .media__obj--left {
+    float: left;
+    margin: 0 1rem 0 0;
+  }
+
+}
+
+.media__body {
+  overflow: hidden;
+}

@@ -1,0 +1,30 @@
+.tooltip {
+  float: left;
+}
+
+@media (--media-small) {
+
+  .tooltip {
+    background: var(--base__color);
+    border-radius: 999px 999px 999px 0;
+    bottom: 130%;
+    left: 50%;
+    opacity: 0;
+    padding: .25rem 1rem;
+    position: absolute;
+    transform: translateY(30%);
+    transition: opacity .3s, transform .3s;
+    white-space: nowrap;
+  }
+
+  .tooltip:before {
+    border: .25rem solid var(--base__color);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 100%;
+  }
+
+}

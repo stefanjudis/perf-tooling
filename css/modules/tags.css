@@ -1,0 +1,30 @@
+.tags {
+  font-size: .75rem;
+  list-style: none;
+  margin: -.25rem;
+  padding: 0;
+}
+
+.tags li {
+  display: inline-block;
+  margin: .25rem;
+}
+
+.tags a {
+  background: var(--tag__bgcolor);
+  border: 1px solid var(--border__color);
+  color: var(--tag__color);
+  display: inline-block;
+  padding: .25rem .5rem;
+}
+
+.tags a:focus,
+.tags a:hover {
+  background: var(--tag__bgcolor--hover);
+  color: var(--tag__color--hover);
+}
+
+.tags a:active {
+  background: var(--tag__bgcolor--active);
+  color: var(--tag__color--active);
+}

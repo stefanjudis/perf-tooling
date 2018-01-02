@@ -42,7 +42,6 @@
   "devDependencies": {
     "credits-cli": "^3.1.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^2.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-csslint": "^1.0.0",
@@ -51,8 +50,8 @@
     "gulp-jshint": "^2.0.4",
     "gulp-json-editor": "^2.2.1",
     "gulp-jsonlint": "^1.1.2",
-    "gulp-less": "^3.3.0",
     "gulp-merge-media-queries": "^0.2.1",
+    "gulp-postcss": "^6.2.0",
     "gulp-rev": "^7.1.2",
     "gulp-svgstore": "^6.1.0",
     "gulp-task-listing": "^1.0.1",
@@ -61,6 +60,8 @@
     "gulp-webp": "^2.3.0",
     "imagemin-pngquant": "^5.0.0",
     "jshint": "^2.9.4",
-    "jshint-stylish": "^2.2.1"
+    "jshint-stylish": "^2.2.1",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.0.0"
   }
 }

@@ -1,29 +1,34 @@
 .site__footer {
-  border-top: 1px solid @border__color;
+  border-top: 1px solid var(--border__color);
   padding: 1rem 0;
 }
 
 .crafted,
 .copyright {
   text-align: center;
+}
 
-  @media (min-width: @media--small) {
+@media (--media-small) {
+
+  .crafted,
+  .copyright {
     margin: 0;
   }
 
 }
 
-.crafted {
 
-  @media (min-width: @media--small) {
+@media (--media-small) {
+
+  .crafted {
     float: left;
   }
 
 }
 
-.copyright {
+@media (--media-small) {
 
-  @media (min-width: @media--small) {
+  .copyright {
     float: right;
     padding-top: .2em;
   }
