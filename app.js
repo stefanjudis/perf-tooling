@@ -1,6 +1,5 @@
 const _            = require( 'lodash' );
 const async        = require( 'async' );
-const compression  = require( 'compression' );
 const express      = require( 'express' );
 const fs           = require( 'fs' );
 const minify       = require( 'html-minifier' ).minify;
@@ -482,9 +481,6 @@ setInterval( () => {
   fetchVideoMeta();
   fetchTwitterUserMeta();
 }, config.timings.refresh );
-
-app.use( compression() );
-
 
 /**
  * Render index page
