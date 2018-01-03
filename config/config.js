@@ -106,7 +106,6 @@ module.exports = {
   ],
   timings : {
     requestDelay : 2000,
-    refresh      : 1000 * 60 * 60 * 12
   },
   site      : {
     name   : 'Performance Tooling Today',

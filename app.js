@@ -472,15 +472,6 @@ fetchSlideMeta();
 fetchTwitterUserMeta();
 
 /**
- * Repeat the fetching all 12 hours
- */
-setInterval( () => {
-  fetchGithubStars();
-  fetchVideoMeta();
-  fetchTwitterUserMeta();
-}, config.timings.refresh );
-
-/**
  * Render pages
  */
 pages.index = renderPage( 'index' );
