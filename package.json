@@ -21,6 +21,7 @@
     "thanks": "credits . --reporter markdown > THANKS.md",
     "test": "gulp test",
     "gulp": "gulp",
+    "build": "gulp build && node app.js",
     "dev": "gulp dev",
     "server": "nodemon --watch templates/ --watch public --watch app.js --ext tpl,css,js app.js"
   },
