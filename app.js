@@ -348,8 +348,6 @@ function renderPage( type, options = {} ) {
   const template = ( type === 'index' ) ? 'index' : 'list';
   let list     = data[ type ] || null;
 
-  let debug     = false;
-
   if ( options.query ) {
     const queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
     const length       = queryValues.length;
@@ -368,17 +366,6 @@ function renderPage( type, options = {} ) {
 
       return entry;
     } );
-
-    debug = options.query.debug;
-
-    if ( type === 'tools' && options.query.debug ) {
-      config.platforms.forEach( platform => {
-          demoTool[ platform.name ] = {};
-          demoTool.stars[ platform.name ] = 10000;
-      } );
-
-      list.unshift( demoTool );
-    }
   }
 
 
@@ -406,7 +393,6 @@ function renderPage( type, options = {} ) {
       enhance          : pageContent.enhance,
       cdn              : config.cdn,
       contributors     : data.contributors,
-      debug            : !! debug,
       partial          : partial,
       people           : data.people,
       platforms        : config.platforms,
