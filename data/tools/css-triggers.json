@@ -4,7 +4,7 @@
     "url" : "https://github.com/lafikl/CSS-triggers-cli"
   },
   "service" : {
-    "url" : "https://github.com/paullewis/CSS-Triggers"
+    "url" : "https://github.com/GoogleChromeLabs/css-triggers"
   },
   "description" : "Ever wondered what work different CSS properties trigger? Wonder no more!",
   "tags" : [ "analyze", "60fps" ]
