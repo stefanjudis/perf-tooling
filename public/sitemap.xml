@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <url><loc>http://perf-tooling.today/</loc></url>
-  <url><loc>http://perf-tooling.today/tools</loc></url>
-  <url><loc>http://perf-tooling.today/articles</loc></url>
-  <url><loc>http://perf-tooling.today/videos</loc></url>
-  <url><loc>http://perf-tooling.today/slides</loc></url>
-  <url><loc>http://perf-tooling.today/books</loc></url>
-  <url><loc>http://perf-tooling.today/courses</loc></url>
+  <url><loc>http://www.perf-tooling.today/</loc></url>
+  <url><loc>http://www.perf-tooling.today/tools/</loc></url>
+  <url><loc>http://www.perf-tooling.today/articles/</loc></url>
+  <url><loc>http://www.perf-tooling.today/videos/</loc></url>
+  <url><loc>http://www.perf-tooling.today/slides/</loc></url>
+  <url><loc>http://www.perf-tooling.today/books/</loc></url>
+  <url><loc>http://www.perf-tooling.today/courses/</loc></url>
 </urlset>
