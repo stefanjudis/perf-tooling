@@ -11,7 +11,6 @@
         hash      : hash,
         name      : name,
         type      : type,
-        query     : query
       }
     )
   %>
@@ -55,7 +54,6 @@
                 hash      : hash,
                 list      : list,
                 platforms : platforms,
-                query     : query,
                 type      : type,
                 tags      : list.reduce( ( tags, entry ) => {
                   if ( entry.tags && entry.tags.length ) {

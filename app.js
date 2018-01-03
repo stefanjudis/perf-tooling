@@ -348,27 +348,6 @@ function renderPage( type, options = {} ) {
   const template = ( type === 'index' ) ? 'index' : 'list';
   let list     = data[ type ] || null;
 
-  if ( options.query ) {
-    const queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
-    const length       = queryValues.length;
-
-    list   = _.cloneDeep( list ).map( entry => {
-      let i      = 0;
-      let match  = true;
-
-      for( ; i < length; ++i ) {
-        if ( entry.fuzzy.indexOf( queryValues[ i ].toLowerCase() ) === -1 ) {
-          match = false;
-        }
-      }
-
-      entry.hidden = !match;
-
-      return entry;
-    } );
-  }
-
-
   /**
    * Partial function to enable partials
    * in lodash templates
@@ -412,7 +391,6 @@ function renderPage( type, options = {} ) {
         js   : pageContent.hashes.js,
         svg  : pageContent.hashes.svg
       },
-      query            : options.query ? options.query.q : '',
       type             : type,
       name             : type.charAt( 0 ).toUpperCase() + type.slice( 1 )
     }), {
