@@ -81,6 +81,7 @@ function fetchContributors() {
     data.contributors = contributors;
 
     pages.index = renderPage( 'index' );
+    fs.writeFile( './public/index.html', pages.index );
   } );
 }
 
@@ -126,7 +127,10 @@ function fetchGithubStars() {
     }
   } );
 
-  async.waterfall( queue, () => console.log( 'DONE -> fetchGithubStars()' ) );
+  async.waterfall( queue, () => {
+    fs.writeFile( './public/tools/index.html', pages.tools );
+    console.log( 'DONE -> fetchGithubStars()' )
+  } );
 }
 
 
@@ -185,7 +189,13 @@ function fetchTwitterUserMeta() {
 
   config.listPages.forEach( listPage => evalAuthors( listPage ) );
 
-  async.waterfall( queue, () => console.log( 'DONE -> fetchTwitterUserMeta()' ) );
+  async.waterfall( queue, () => {
+    config.listPages.forEach( listPage => {
+      fs.writeFile( `./public/${listPage}/index.html`, pages[ listPage ] );
+    } );
+
+    console.log( 'DONE -> fetchTwitterUserMeta()' )
+  } );
 }
 
 
@@ -239,7 +249,10 @@ function fetchVideoMeta() {
     }
   } );
 
-  async.waterfall( queue, () => console.log( 'DONE -> fetchVideoMeta()' ) );
+  async.waterfall( queue, () => {
+    fs.writeFile( './public/videos/index.html', pages.videos );
+    console.log( 'DONE -> fetchVideoMeta()' )
+  } );
 }
 
 
@@ -277,7 +290,10 @@ function fetchSlideMeta() {
     }
   } );
 
-  async.waterfall( queue, () => console.log( 'DONE -> fetchSlideMeta()' ) );
+  async.waterfall( queue, () => {
+    fs.writeFile( './public/slides/index.html', pages.slides );
+    console.log( 'DONE -> fetchSlideMeta()' )
+  } );
 }
 
 
