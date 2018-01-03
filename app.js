@@ -1,7 +1,6 @@
 const _            = require( 'lodash' );
 const async        = require( 'async' );
 const compression  = require( 'compression' );
-const cookieParser = require( 'cookie-parser' );
 const express      = require( 'express' );
 const fs           = require( 'fs' );
 const minify       = require( 'html-minifier' ).minify;
@@ -352,7 +351,6 @@ function renderPage( type, options = {} ) {
   const template = ( type === 'index' ) ? 'index' : 'list';
   let list     = data[ type ] || null;
 
-  const cssCookie = options.cssCookie;
   let debug     = false;
 
   if ( options.query ) {
@@ -408,7 +406,6 @@ function renderPage( type, options = {} ) {
       pageContent.templates[ template ]
     )({
       css              : pageContent.css,
-      cssCookie        : cssCookie,
       enhance          : pageContent.enhance,
       cdn              : config.cdn,
       contributors     : data.contributors,
@@ -487,7 +484,7 @@ setInterval( () => {
 }, config.timings.refresh );
 
 app.use( compression() );
-app.use( cookieParser() );
+
 
 /**
  * Render index page
@@ -511,18 +508,7 @@ config.listPages.forEach( page => {
         )
       );
     } else {
-      if ( req.cookies.maincss ) {
-        res.send(
-          renderPage(
-            page,
-            {
-              cssCookie : req.cookies.maincss
-            }
-          )
-        );
-      } else {
-        res.send( pages[ page ] );
-      }
+      res.send( pages[ page ] );
     }
   } );
 } );
@@ -530,18 +516,7 @@ config.listPages.forEach( page => {
 pages.index = renderPage( 'index' );
 
 app.get( '/', ( req, res ) => {
-  if ( req.cookies.maincss ) {
-    res.send(
-      renderPage(
-        'index',
-        {
-          cssCookie : req.cookies.maincss
-        }
-      )
-    );
-  } else {
-    res.send( pages.index );
-  }
+  res.send( pages.index );
 } );
 
 app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );

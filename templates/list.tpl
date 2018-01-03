@@ -6,7 +6,6 @@
       {
         cdn       : cdn,
         css       : css,
-        cssCookie : cssCookie,
         site      : site,
         enhance   : enhance,
         hash      : hash,

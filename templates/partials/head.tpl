@@ -35,11 +35,7 @@
   </script>
 
   <meta name="maincss"  content="<%= cdn %>/main-<%= hash.css %>.css">
-  <% if ( !cssCookie || cssCookie !== hash.css ) { %>
-  <style><%= css %></style>
-  <% } else { %>
   <link rel="stylesheet" href="<%= cdn %>/main-<%= hash.css %>.css">
-  <% } %>
   <script><%= enhance %></script>
 
   <noscript><link rel="stylesheet" href="<%= cdn %>/main-<%= hash.css %>.css"></noscript>
