@@ -27,7 +27,6 @@
   "homepage": "http://perf-tooling.today",
   "dependencies": {
     "async": "^2.1.4",
-    "express": "^4.14.0",
     "html-minifier": "^3.2.3",
     "lodash": "^4.17.2",
     "merge-stream": "^1.0.1",

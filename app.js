@@ -1,12 +1,10 @@
 const _            = require( 'lodash' );
 const async        = require( 'async' );
-const express      = require( 'express' );
 const fs           = require( 'fs' );
 const minify       = require( 'html-minifier' ).minify;
 const config       = require( './config/config' );
 const fuzzify      = require( './lib/fuzzify' );
 const revisions    = require( './rev.json' );
-const app          = express();
 
 /**
  * Helpers to deal with API stuff
@@ -483,39 +481,22 @@ setInterval( () => {
 }, config.timings.refresh );
 
 /**
- * Render index page
+ * Render pages
  */
+pages.index = renderPage( 'index' );
+
+if ( !fs.existsSync( './public' ) ) {
+  fs.mkdirSync( './public' );
+}
+
+fs.writeFile( './public/index.html', pages.index );
+
 config.listPages.forEach( page => {
   pages[ page ] = renderPage( page );
 
-  app.get( '/' + page, ( req, res ) => {
-    if (
-      req.query &&
-      (
-        req.query.q || req.query.debug
-      )
-    ) {
-      res.send(
-        renderPage(
-          page,
-          {
-            query : req.query
-          }
-        )
-      );
-    } else {
-      res.send( pages[ page ] );
-    }
-  } );
+  if ( !fs.existsSync( `./public/${page}` ) ) {
+    fs.mkdirSync( `./public/${page}` );
+  }
+
+  fs.writeFile( `./public/${page}/index.html`, pages[ page ] );
 } );
-
-pages.index = renderPage( 'index' );
-
-app.get( '/', ( req, res ) => {
-  res.send( pages.index );
-} );
-
-app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
-
-console.log( 'STARTING AT PORT ' + port );
-app.listen( port );
