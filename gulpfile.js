@@ -39,7 +39,10 @@ const files = {
   },
   sitemap : [ './sitemap.xml' ],
   styles  : [ 'css/main.css' ],
-  svg     : [ 'svg/icons/*.svg' ],
+  svg     : {
+    assets: [ 'svg/calibre_grey.svg', 'svg/fastly_grey.svg', 'svg/perf-tooling.svg' ],
+    sprite: [ 'svg/icons/*.svg' ]
+  },
   rev     : [ './rev.json' ],
   watch   : {
     styles : [ 'css/**/*.css' ]
@@ -163,8 +166,18 @@ gulp.task( 'scripts', () => {
  * - crunch svg files
  * - minify the files
  */
-gulp.task( 'svg', () => {
-  return gulp.src( files.svg )
+gulp.task( 'svg', [
+  'svg:assets',
+  'svg:sprite'
+] );
+
+gulp.task( 'svg:assets', () => {
+  return gulp.src( files.svg.assets )
+    .pipe( gulp.dest( 'public/' ) );
+});
+
+gulp.task( 'svg:sprite', () => {
+  return gulp.src( files.svg.sprite )
     .pipe( gulpSvgstore() )
     .pipe( gulpRev() )
     .pipe( gulp.dest( 'public/' ) )
