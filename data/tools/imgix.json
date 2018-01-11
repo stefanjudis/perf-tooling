@@ -23,7 +23,7 @@
     "isPaid" : true
   },
   "wordpress" : {
-    "url" : "https://github.com/imgix/imgix-wordpress"
+    "url" : "https://github.com/imgix-wordpress/images-via-imgix"
   },
   "description" : "imgix solves images. We tackle the complexity of responsive imagery to help you deliver the highest value image to the right device, at the right time, every time. On-demand image processing, optimization and delivery.",
   "tags" : [ "compression", "images", "responsive web design" ]
