@@ -1,0 +1,8 @@
+{
+  "name" : "HTTP/2 Website Speed Test by DareBoost",
+  "service" : {
+    "url" : "https://www.dareboost.com/en/website-speed-test-http2-vs-http1"
+  },
+  "description" : "How faster is your website thanks to HTTP/2? Dareboost works for sites which already have enabled HTTP/2. It runs 2 speed tests, using a real Chrome browser. HTTP/2 protocol is disabled for the second speed test. (Only one test for free, or 5 per month after free registration.)",
+  "tags" : [ "network", "http", "metrics" ]
+}
