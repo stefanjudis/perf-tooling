@@ -1,0 +1,9 @@
+{
+  "name" : "Load Impact",
+  "service" : {
+    "url" : "https://loadimpact.com/",
+    "isPaid": true
+  },
+  "description" : "Performance and load testing for Apps and APIs. 1 test for free without account. 5 free tests a month after registration. With the paid version, With Load Impact, you can create a load test which simulates different browsers, network conditions and visitor behaviors.",
+  "tags": ["metrics", "load", "timings"]
+}
