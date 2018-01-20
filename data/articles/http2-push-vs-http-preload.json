@@ -1,0 +1,15 @@
+{
+  "name": "HTTP/2 PUSH vs HTTP Preload",
+  "authors": [
+    {
+      "name": "Inian Parameshwaran",
+      "twitter": "@everConfusedGuy"
+    }
+  ],
+  "date": "2017-11-18",
+  "stats": {
+    "length": 1722
+  },
+  "url": "https://dexecure.com/blog/http2-push-vs-http-preload/",
+  "tags": ["http 2.0", "preload"]
+}
