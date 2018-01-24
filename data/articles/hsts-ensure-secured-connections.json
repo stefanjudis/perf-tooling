@@ -1,0 +1,15 @@
+{
+  "name" : "Ensure secured connections with HSTS (HTTP Strict Transport Security)",
+  "authors" : [
+    {
+      "name" : "Boris Schapira",
+      "twitter" : "@borisschapira"
+    }
+  ],
+  "date" : "2017-09-08",
+  "stats" : {
+    "length" : 1127
+  },
+  "tags" : [ "security" ],
+  "url" : "https://blog.dareboost.com/en/2017/09/hsts-ensure-secured-connections/"
+}
