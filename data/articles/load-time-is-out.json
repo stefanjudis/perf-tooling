@@ -1,0 +1,15 @@
+{
+  "name" : "Load time is out!",
+  "authors" : [
+    {
+      "name" : "Damien Jubeau",
+      "twitter" : "@damienjubeau"
+    }
+  ],
+  "date" : "2017-11-02",
+  "stats" : {
+    "length" : 1416
+  },
+  "tags" : [ "metrics" ],
+  "url" : "https://blog.dareboost.com/en/2017/11/load-time-is-out/"
+}
