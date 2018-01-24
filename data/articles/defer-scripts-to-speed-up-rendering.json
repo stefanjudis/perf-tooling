@@ -1,0 +1,15 @@
+{
+  "name" : "Defer scripts to speed up rendering",
+  "authors" : [
+    {
+      "name" : "Boris Schapira",
+      "twitter" : "@borisschapira"
+    }
+  ],
+  "date" : "2017-12-18",
+  "stats" : {
+    "length" : 1567
+  },
+  "tags" : [ "loading", "defer", "javascript" ],
+  "url" : "https://blog.dareboost.com/en/2018/01/optimize-your-mp4-video-for-better-performance/"
+}
