@@ -1,0 +1,8 @@
+{
+  "name" : "subfont",
+  "cli" : {
+    "url" : "https://github.com/Munter/subfont"
+  },
+  "description" : "A command line tool to statically analyse your page in order to generate the most optimal web font subsets, then inject them into your page.",
+  "tags" : [ "fonts" ]
+}
