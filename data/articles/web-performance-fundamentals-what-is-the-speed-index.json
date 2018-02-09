@@ -1,0 +1,15 @@
+{
+  "name" : "Web Performance Fundamentals: what is the Speed Index?",
+  "authors" : [
+    {
+      "name" : "Philippe Guibert",
+      "twitter" : "@GuilbertPhil"
+    }
+  ],
+  "date" : "2018-02-08",
+  "stats" : {
+    "length" : 1609
+  },
+  "url" : "https://blog.dareboost.com/en/2018/02/speed-index-web-performance/",
+  "tags" : [ "metrics" ]
+}
