@@ -212,15 +212,17 @@
 
             <div id="mc_embed_signup">
 
-              <form action="https://calibreapp.createsend.com/t/d/s/kkihkj/" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form validate" target="_blank" novalidate>
+              <form action="https://theint.us2.list-manage.com/subscribe/post?u=9067434ef642e9c92aa7453d2&id=454acc21a3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form validate" target="_blank" novalidate>
 
                 <div id="mc_embed_signup_scroll" class="form-field">
 
                   <label for="mce-EMAIL">Subscribe to <a href="https://perf.email">perf.email</a> to get informed about performance and user experience.</label>
                   <div class="grid__col--6 center-block">
 
-                    <input type="email" value="" name="cm-kkihkj-kkihkj" class="email input-text" id="mce-EMAIL" placeholder="Enter your email" required>
-
+                    <input type="email" value="" name="EMAIL" class="email input-text" id="mce-EMAIL" placeholder="Enter your email" required>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                      <input type="text" name="b_9067434ef642e9c92aa7453d2_454acc21a3" tabindex="-1" value="">
+                    </div>
                   </div>
                 </div>
 
