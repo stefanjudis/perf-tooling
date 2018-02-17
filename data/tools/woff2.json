@@ -1,0 +1,8 @@
+{
+  "name" : "woff2",
+  "service" : {
+    "url" : "https://github.com/google/woff2"
+  },
+  "description" : "Font compression modules (mainly TTF to WOFF2",
+  "tags" : [ "fonts"]
+}
