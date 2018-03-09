@@ -1,0 +1,8 @@
+{
+  "name" : "Sloth",
+  "chrome" : {
+    "url" : "https://github.com/denar90/sloth"
+  },
+  "description" : "Sloth - an extension to make you suffer, browsing the web. Build web faster being slow",
+  "tags" : [ "timings" ]
+}
