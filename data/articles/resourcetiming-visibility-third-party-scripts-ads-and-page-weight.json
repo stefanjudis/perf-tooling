@@ -1,0 +1,15 @@
+{
+  "name" : "ResourceTiming Visibility: Third-Party Scripts, Ads and Page Weight",
+  "authors" : [
+    {
+      "name" : "Nic Jansma",
+      "twitter" : "@nicj"
+    }
+  ],
+  "date" : "2018-03-27",
+  "stats" : {
+    "length" : 4172
+  },
+  "url" : "https://nicj.net/resourcetiming-visibility-third-party-scripts-ads-and-page-weight",
+  "tags" : [ "network", "metrics", "3rd parties" ]
+}
