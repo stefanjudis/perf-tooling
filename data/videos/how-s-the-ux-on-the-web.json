@@ -1,0 +1,11 @@
+{
+  "name" : "How’s the user experience on the web, really?",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "vimeoId" : "254834890",
+  "tags" : [ "metrics" ]
+}
