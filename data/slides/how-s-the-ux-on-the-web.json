@@ -1,0 +1,15 @@
+{
+  "name" : "How’s the user experience on the web, really?",
+  "authors" : [
+    {
+      "name" : "Ilya Grigorik",
+      "twitter" : "@igrigorik"
+    }
+  ],
+  "date" : "2018-04-08",
+  "stats" : {
+    "length" : 46
+  },
+  "tags" : [ "metrics" ],
+  "url" : "https://docs.google.com/presentation/d/1xhFyYiaPaRD81cw83i88XnbTwvOC7_MllxkzGDd6Ed4/present"
+}
