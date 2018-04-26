@@ -19,7 +19,8 @@
       "Business Value",
       "Business Intelligence",
       "BigQuery",
-      "Critical Rendering Path",
-      "Navigation Timing API."
+      "critical path",
+      "Navigation Timing API",
+      "monitoring"
     ]
   }
