@@ -1,0 +1,8 @@
+{
+  "name" : "Netinfo monitor",
+  "chrome" : {
+    "url" : "https://github.com/igrigorik/netinfo-monitor"
+  },
+  "description" : "Displays network quality as reported by Network Information API.",
+  "tags" : [ "network" ]
+}
