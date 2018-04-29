@@ -1,0 +1,8 @@
+{
+  "name" : "image-heap",
+  "cli" : {
+    "url" : "https://github.com/filamentgroup/imaging-heap"
+  },
+  "description" : "A command line tool to measure the efficiency of your responsive image markup across viewport sizes and device pixel ratios. ",
+  "tags" : [ "images", "responsive web design" ]
+}
