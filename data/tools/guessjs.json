@@ -1,0 +1,8 @@
+{
+  "name" : "Guess.js",
+  "javascript" : {
+    "url" : "https://github.com/guess-js/guess"
+  },
+  "description" : "Guess.js provides libraries and tools to simplify predictive data-analytics driven approaches to improving user-experiences on the web. This data can be driven from any number of sources, including analytics or machine learning models.",
+  "tags" : [ "javascript", "prefetch", "machine learning" ]
+}
