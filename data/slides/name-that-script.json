@@ -1,0 +1,15 @@
+{
+  "name" : "Name That Script!",
+  "authors": [
+    {
+      "name" : "Trent Walton",
+      "twitter" : "@TrentWalton"
+    }
+  ],
+  "date" : "2018-04-17",
+  "stats" : {
+    "length" : 130
+  },
+  "tags" : [ "loading", "network", "3rd parties" ],
+  "url" : "https://speakerdeck.com/trentwalton/name-that-script"
+}
