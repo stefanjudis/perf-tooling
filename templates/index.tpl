@@ -209,32 +209,9 @@
           <section class="site__section text-center">
 
             <h2>Newsletter</h2>
+            <p>Subscribe to <a href="https://perf.email" rel="noopener" target="_blank">perf.email</a>, a newsletter about performance and user experience.</p>
 
-            <div id="mc_embed_signup">
-
-              <form action="https://theint.us2.list-manage.com/subscribe/post?u=9067434ef642e9c92aa7453d2&id=454acc21a3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form validate" target="_blank" novalidate>
-
-                <div id="mc_embed_signup_scroll" class="form-field">
-
-                  <label for="mce-EMAIL">Subscribe to <a href="https://perf.email">perf.email</a> to get informed about performance and user experience.</label>
-                  <div class="grid__col--6 center-block">
-
-                    <input type="email" value="" name="EMAIL" class="email input-text" id="mce-EMAIL" placeholder="Enter your email" required>
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                      <input type="text" name="b_9067434ef642e9c92aa7453d2_454acc21a3" tabindex="-1" value="">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form__field">
-
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn--large btn--primary">
-
-                </div>
-
-              </form>
-
-            </div>
+            <a href="https://calibreapp.us2.list-manage.com/subscribe?u=9067434ef642e9c92aa7453d2&id=7cba5dc7bd" rel="noopener" target="_blank" class="btn btn--primary btn--large">Subscribe to perf.email</a>
 
           </section>
 
