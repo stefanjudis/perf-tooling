@@ -1,0 +1,15 @@
+{
+  "name" : "Improve your visitors perceived loading speed with primitive art",
+  "authors" : [
+    {
+      "name" : "Benedikt Rötsch",
+      "twitter" : "@axe312ger"
+    }
+  ],
+  "date" : "2018-06-21",
+  "stats" : {
+    "length" : 1298
+  },
+  "url" : "https://www.contentful.com/blog/2018/06/21/svg-image-previews/",
+  "tags" : [ "loading", "images", "svg" ]
+}
