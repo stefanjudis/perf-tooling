@@ -1,0 +1,11 @@
+{
+  "name" : "The cost of JavaScript",
+  "authors" : [
+    {
+      "name" : "Addy Osmani",
+      "twitter" : "@addyosmani"
+    }
+  ],
+  "youtubeId" : "63I-mEuSvGA",
+  "tags" : [ "loading", "network", "performance culture" ]
+}
