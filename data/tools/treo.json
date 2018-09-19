@@ -1,0 +1,9 @@
+{
+  "name" : "Treo",
+  "service" : {
+    "url" : "https://treo.sh/",
+    "isPaid": true
+  },
+  "description" : "Treo is Lighthouse as a Service. It provides regression testing, geographical regions, custom networks, and integrations with GitHub & Slack. Treo is a paid product with plans for solo-developers and teams.",
+  "tags": ["metrics", "analysis", "budget", "timings", "css"]
+}
