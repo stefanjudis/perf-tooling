@@ -1,0 +1,14 @@
+{
+  "name" : "Accurately measuring layout on the web",
+  "authors" : [
+    {
+      "name" : "Nolan Lawson"
+    }
+  ],
+  "date" : "2018-09-26",
+  "stats" : {
+    "length" : 20033
+  },
+  "tags" : [ "metrics", "javascript" ],
+  "url" : "https://nolanlawson.com/2018/09/25/accurately-measuring-layout-on-the-web/"
+}
