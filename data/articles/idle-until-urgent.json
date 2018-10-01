@@ -1,0 +1,15 @@
+{
+  "name" : "Idle Until Urgent",
+  "authors" : [
+    {
+      "name" : "Philip Walton",
+      "twitter" : "@philwalton"
+    }
+  ],
+  "date" : "2018-09-20",
+  "stats" : {
+    "length" : 4491
+  },
+  "url" : "https://philipwalton.com/articles/idle-until-urgent/",
+  "tags" : [ "javascript", "optimization" ]
+}
