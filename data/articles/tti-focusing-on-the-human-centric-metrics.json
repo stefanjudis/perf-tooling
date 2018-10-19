@@ -1,0 +1,15 @@
+{
+  "name" : "Time to Interactive – focusing on the human-centric metrics",
+  "authors" : [
+    {
+      "name" : "Radimir Bitsov",
+      "twitter" : "@radibit"
+    }
+  ],
+  "date" : "2018-10-12",
+  "stats" : {
+    "length" : 1070
+  },
+  "url" : "https://calibreapp.com/blog/2018-10-12-time-to-interactive/",
+  "tags" : ["metrics", "optimization", "loading"]
+}
