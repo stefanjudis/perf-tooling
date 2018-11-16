@@ -1,0 +1,11 @@
+{
+  "name" : "Squoosh",
+  "service" : {
+    "url" : "https://squoosh.app/"
+  },
+  "javascript" : {
+    "url" : "https://github.com/GoogleChromeLabs/squoosh/"
+  },
+  "description" : "Squoosh is an image compression web app that allows you to dive into the advanced options provided by various image compressors.",
+  "tags" : [ "images", "compression" ]
+}
