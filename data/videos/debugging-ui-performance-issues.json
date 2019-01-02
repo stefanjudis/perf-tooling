@@ -1,0 +1,11 @@
+{
+  "name" : "Debugging UI Performance Issues",
+  "authors" : [
+    {
+      "name" : "Anna Migas",
+      "twitter": "szynszyliszys"
+    }
+  ],
+  "vimeoId" : "302791098",
+  "tags" : [ "css", "animation", "devtools" ]
+}
