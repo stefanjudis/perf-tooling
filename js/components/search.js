@@ -74,6 +74,14 @@
             }
           }
         } );
+
+        const urlParams = new URLSearchParams(window.location.search);
+        elements.input.value = urlParams.get('q');
+        elements.input.dispatchEvent(
+          new KeyboardEvent(
+            'keyup'
+          )
+        );
       }
     }
   }

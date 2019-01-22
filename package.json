@@ -21,15 +21,13 @@
     "thanks": "credits . --reporter markdown > THANKS.md",
     "test": "gulp test",
     "gulp": "gulp",
+    "build": "gulp build && node app.js",
     "dev": "gulp dev",
     "server": "nodemon --watch templates/ --watch public --watch app.js --ext tpl,css,js app.js"
   },
   "homepage": "http://perf-tooling.today",
   "dependencies": {
     "async": "^2.1.4",
-    "compression": "^1.6.2",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.14.0",
     "html-minifier": "^3.2.3",
     "lodash": "^4.17.2",
     "merge-stream": "^1.0.1",

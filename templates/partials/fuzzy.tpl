@@ -41,7 +41,7 @@
         <use xlink:href="/icons-<%= hash.svg %>.svg#magnifier" />
       </svg>
 
-      <input type="search" name="q" id="fuzzzzzzzzzy" class="form--search__input" title="Search inside of the list" placeholder="Search all <%= list.length %> <%= type %>" value="<%= query %>" list="listElements" autocapitalize="off" autocomplete="off">
+      <input type="search" name="q" id="fuzzzzzzzzzy" class="form--search__input" title="Search inside of the list" placeholder="Search all <%= list.length %> <%= type %>" list="listElements" autocapitalize="off" autocomplete="off">
 
     </label>
 

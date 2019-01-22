@@ -1,14 +1,10 @@
 const _            = require( 'lodash' );
 const async        = require( 'async' );
-const compression  = require( 'compression' );
-const cookieParser = require( 'cookie-parser' );
-const express      = require( 'express' );
 const fs           = require( 'fs' );
 const minify       = require( 'html-minifier' ).minify;
 const config       = require( './config/config' );
 const fuzzify      = require( './lib/fuzzify' );
 const revisions    = require( './rev.json' );
-const app          = express();
 
 /**
  * Helpers to deal with API stuff
@@ -85,6 +81,7 @@ function fetchContributors() {
     data.contributors = contributors;
 
     pages.index = renderPage( 'index' );
+    fs.writeFile( './public/index.html', pages.index );
   } );
 }
 
@@ -130,7 +127,10 @@ function fetchGithubStars() {
     }
   } );
 
-  async.waterfall( queue, () => console.log( 'DONE -> fetchGithubStars()' ) );
+  async.waterfall( queue, () => {
+    fs.writeFile( './public/tools/index.html', pages.tools );
+    console.log( 'DONE -> fetchGithubStars()' )
+  } );
 }
 
 
@@ -189,7 +189,13 @@ function fetchTwitterUserMeta() {
 
   config.listPages.forEach( listPage => evalAuthors( listPage ) );
 
-  async.waterfall( queue, () => console.log( 'DONE -> fetchTwitterUserMeta()' ) );
+  async.waterfall( queue, () => {
+    config.listPages.forEach( listPage => {
+      fs.writeFile( `./public/${listPage}/index.html`, pages[ listPage ] );
+    } );
+
+    console.log( 'DONE -> fetchTwitterUserMeta()' )
+  } );
 }
 
 
@@ -243,7 +249,10 @@ function fetchVideoMeta() {
     }
   } );
 
-  async.waterfall( queue, () => console.log( 'DONE -> fetchVideoMeta()' ) );
+  async.waterfall( queue, () => {
+    fs.writeFile( './public/videos/index.html', pages.videos );
+    console.log( 'DONE -> fetchVideoMeta()' )
+  } );
 }
 
 
@@ -281,7 +290,10 @@ function fetchSlideMeta() {
     }
   } );
 
-  async.waterfall( queue, () => console.log( 'DONE -> fetchSlideMeta()' ) );
+  async.waterfall( queue, () => {
+    fs.writeFile( './public/slides/index.html', pages.slides );
+    console.log( 'DONE -> fetchSlideMeta()' )
+  } );
 }
 
 
@@ -352,41 +364,6 @@ function renderPage( type, options = {} ) {
   const template = ( type === 'index' ) ? 'index' : 'list';
   let list     = data[ type ] || null;
 
-  const cssCookie = options.cssCookie;
-  let debug     = false;
-
-  if ( options.query ) {
-    const queryValues  = options.query.q ? options.query.q.split( ' ' ) : '';
-    const length       = queryValues.length;
-
-    list   = _.cloneDeep( list ).map( entry => {
-      let i      = 0;
-      let match  = true;
-
-      for( ; i < length; ++i ) {
-        if ( entry.fuzzy.indexOf( queryValues[ i ].toLowerCase() ) === -1 ) {
-          match = false;
-        }
-      }
-
-      entry.hidden = !match;
-
-      return entry;
-    } );
-
-    debug = options.query.debug;
-
-    if ( type === 'tools' && options.query.debug ) {
-      config.platforms.forEach( platform => {
-          demoTool[ platform.name ] = {};
-          demoTool.stars[ platform.name ] = 10000;
-      } );
-
-      list.unshift( demoTool );
-    }
-  }
-
-
   /**
    * Partial function to enable partials
    * in lodash templates
@@ -408,11 +385,9 @@ function renderPage( type, options = {} ) {
       pageContent.templates[ template ]
     )({
       css              : pageContent.css,
-      cssCookie        : cssCookie,
       enhance          : pageContent.enhance,
       cdn              : config.cdn,
       contributors     : data.contributors,
-      debug            : !! debug,
       partial          : partial,
       people           : data.people,
       platforms        : config.platforms,
@@ -432,7 +407,6 @@ function renderPage( type, options = {} ) {
         js   : pageContent.hashes.js,
         svg  : pageContent.hashes.svg
       },
-      query            : options.query ? options.query.q : '',
       type             : type,
       name             : type.charAt( 0 ).toUpperCase() + type.slice( 1 )
     }), {
@@ -478,73 +452,22 @@ fetchSlideMeta();
 fetchTwitterUserMeta();
 
 /**
- * Repeat the fetching all 12 hours
+ * Render pages
  */
-setInterval( () => {
-  fetchGithubStars();
-  fetchVideoMeta();
-  fetchTwitterUserMeta();
-}, config.timings.refresh );
+pages.index = renderPage( 'index' );
 
-app.use( compression() );
-app.use( cookieParser() );
+if ( !fs.existsSync( './public' ) ) {
+  fs.mkdirSync( './public' );
+}
 
-/**
- * Render index page
- */
+fs.writeFile( './public/index.html', pages.index );
+
 config.listPages.forEach( page => {
   pages[ page ] = renderPage( page );
 
-  app.get( '/' + page, ( req, res ) => {
-    if (
-      req.query &&
-      (
-        req.query.q || req.query.debug
-      )
-    ) {
-      res.send(
-        renderPage(
-          page,
-          {
-            query : req.query
-          }
-        )
-      );
-    } else {
-      if ( req.cookies.maincss ) {
-        res.send(
-          renderPage(
-            page,
-            {
-              cssCookie : req.cookies.maincss
-            }
-          )
-        );
-      } else {
-        res.send( pages[ page ] );
-      }
-    }
-  } );
-} );
-
-pages.index = renderPage( 'index' );
-
-app.get( '/', ( req, res ) => {
-  if ( req.cookies.maincss ) {
-    res.send(
-      renderPage(
-        'index',
-        {
-          cssCookie : req.cookies.maincss
-        }
-      )
-    );
-  } else {
-    res.send( pages.index );
+  if ( !fs.existsSync( `./public/${page}` ) ) {
+    fs.mkdirSync( `./public/${page}` );
   }
+
+  fs.writeFile( `./public/${page}/index.html`, pages[ page ] );
 } );
-
-app.use( express.static( __dirname + '/public', { maxAge : 31536000000 } ) );
-
-console.log( 'STARTING AT PORT ' + port );
-app.listen( port );

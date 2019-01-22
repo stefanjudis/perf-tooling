@@ -6,13 +6,11 @@
       {
         cdn       : cdn,
         css       : css,
-        cssCookie : cssCookie,
         site      : site,
         enhance   : enhance,
         hash      : hash,
         name      : name,
         type      : type,
-        query     : query
       }
     )
   %>
@@ -56,7 +54,6 @@
                 hash      : hash,
                 list      : list,
                 platforms : platforms,
-                query     : query,
                 type      : type,
                 tags      : list.reduce( ( tags, entry ) => {
                   if ( entry.tags && entry.tags.length ) {
@@ -72,11 +69,6 @@
               }
             )
           %>
-
-          <% if ( debug ) { %>
-            <pre><code><%= JSON.stringify( list, null, 2 ) %></code></pre>
-            <pre><code><%= JSON.stringify( people, null, 2 ) %></code></pre>
-          <% } %>
 
           <%=
             partial(

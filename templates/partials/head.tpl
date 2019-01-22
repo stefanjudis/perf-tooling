@@ -4,12 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="x-dns-prefetch-control" content="on">
 
-  <% if ( typeof query !== 'undefined' && query.length ) { %>
-    <link rel="canonical" href="http://perf-tooling.today/<%= type %>" />
-    <title><%= 'Search result for "' + query + '" | ' %><%= site.name %></title>
-  <% } else {%>
-    <title><%= ( name !== 'Index' ) ? name + ' | ' : '' %><%= site.name %></title>
-  <% } %>
+  <title><%= ( name !== 'Index' ) ? name + ' | ' : '' %><%= site.name %></title>
 
   <meta name="theme-color" content="#01a5b1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,11 +30,7 @@
   </script>
 
   <meta name="maincss"  content="<%= cdn %>/main-<%= hash.css %>.css">
-  <% if ( !cssCookie || cssCookie !== hash.css ) { %>
-  <style><%= css %></style>
-  <% } else { %>
   <link rel="stylesheet" href="<%= cdn %>/main-<%= hash.css %>.css">
-  <% } %>
   <script><%= enhance %></script>
 
   <noscript><link rel="stylesheet" href="<%= cdn %>/main-<%= hash.css %>.css"></noscript>

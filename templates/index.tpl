@@ -9,7 +9,6 @@
         css       : css,
         site      : site,
         enhance   : enhance,
-        cssCookie : cssCookie,
         hash      : hash,
         name      : name,
         type      : type
