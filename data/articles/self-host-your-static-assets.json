@@ -1,0 +1,15 @@
+{
+  "name" : "Self-host your static assets",
+  "authors" : [
+    {
+      "name" : "Harry Roberts",
+      "twitter" : "@csswizardry"
+    }
+  ],
+  "date" : "2019-05-31",
+  "stats" : {
+    "length" : 1798
+  },
+  "url" : "https://csswizardry.com/2019/05/self-host-your-static-assets/",
+  "tags" : [ "loading", "network" ]
+}
