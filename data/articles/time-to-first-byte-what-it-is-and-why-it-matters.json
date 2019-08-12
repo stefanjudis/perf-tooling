@@ -1,0 +1,15 @@
+{
+  "name" : "Time to First Byte: What It Is and Why It Matters",
+  "authors" : [
+    {
+      "name" : "Harry Roberts",
+      "twitter" : "@csswizardry"
+    }
+  ],
+  "date" : "2019-08-08",
+  "stats" : {
+    "length" : 1332
+  },
+  "url" : "https://csswizardry.com/2019/08/time-to-first-byte-what-it-is-and-why-it-matters/",
+  "tags" : ["loading", "network"]
+}
