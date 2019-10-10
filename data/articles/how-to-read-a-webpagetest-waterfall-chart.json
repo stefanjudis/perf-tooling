@@ -1,0 +1,15 @@
+{
+  "name" : "How to read a Web Page Test waterfall chart",
+  "authors" : [
+    {
+      "name" : "Matt Hobbs",
+      "twitter" : "@TheRealNooshu"
+    }
+  ],
+  "date" : "2019-10-02",
+  "stats" : {
+    "length" : 2818
+  },
+  "url" : "https://nooshu.github.io/blog/2019/10/02/how-to-read-a-wpt-waterfall-chart/",
+  "tags" : [ "metrics", "webpagetest" ]
+}
