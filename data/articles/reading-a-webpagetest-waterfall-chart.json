@@ -1,0 +1,15 @@
+{
+  "name": "Reading a WebPageTest Waterfall Chart",
+  "authors": [
+    {
+      "name": "Matt Hobbs",
+      "twitter": "@TheRealNooshu"
+    }
+  ],
+  "date": "2019-12-07",
+  "stats": {
+    "length": 4548
+  },
+  "url": "https://calendar.perfplanet.com/2019/reading-a-webpagetest-waterfall-chart/",
+  "tags": ["metrics", "webpagetest"]
+}
