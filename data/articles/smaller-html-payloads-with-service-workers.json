@@ -1,0 +1,15 @@
+{
+  "name": "Smaller HTML Payloads with Service Workers",
+  "authors": [
+    {
+      "name": "Phil Walton",
+      "twitter": "@philwalton"
+    }
+  ],
+  "date": "2020-01-07",
+  "stats": {
+    "length": 2497
+  },
+  "url": "https://philipwalton.com/articles/smaller-html-payloads-with-service-workers/",
+  "tags": ["service worker"]
+}
