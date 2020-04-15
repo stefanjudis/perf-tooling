@@ -1,0 +1,15 @@
+{
+  "name" : "Why You Might Want to Reconsider Tracking First Meaningful Paint",
+  "authors" : [
+    {
+      "name" : "Karolina Szczur",
+      "twitter" : "@fox"
+    }
+  ],
+  "date" : "2020-04-14",
+  "stats" : {
+    "length" : 772
+  },
+  "tags" : [ "metrics", "fcp", "fmp", "lcp" ],
+  "url" : "https://calibreapp.com/blog/reconsider-tracking-fmp"
+}
