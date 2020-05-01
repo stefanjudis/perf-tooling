@@ -235,10 +235,10 @@ gulp.task( 'jsonlint', () => {
  * for easy and instant development
  */
 gulp.task( 'watch', () => {
-  gulp.watch( files.lint, [ 'lint' ] );
-  gulp.watch( files.watch.styles, [ 'styles' ] );
-  gulp.watch( files.scripts.tooling, [ 'scripts' ] );
-  gulp.watch( files.svg, [ 'svg' ] );
+  gulp.watch( files.lint, gulp.series( 'lint' ) );
+  gulp.watch( files.watch.styles, gulp.series( 'styles' ) );
+  gulp.watch( files.scripts.tooling, gulp.series( 'scripts' ) );
+  gulp.watch( files.svg, gulp.series( 'svg' ) );
 });
 
 
@@ -249,7 +249,7 @@ gulp.task( 'watch', () => {
  *
  * $ gulp test
  */
-gulp.task( 'test', [ 'csslint', 'jsonlint' ] );
+gulp.task( 'test', gulp.parallel('csslint', 'jsonlint') );
 
 
 /*******************************************************************************
@@ -260,7 +260,7 @@ gulp.task( 'test', [ 'csslint', 'jsonlint' ] );
  *  $ gulp build
  *
  */
-gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images', 'xml' ] );
+gulp.task( 'build', gulp.parallel('styles', 'scripts', 'svg', 'images', 'xml') );
 
 
 /*******************************************************************************
@@ -272,7 +272,7 @@ gulp.task( 'build', [ 'styles', 'scripts', 'svg', 'images', 'xml' ] );
  * $ gulp dev
  *
  */
-gulp.task( 'dev', [ 'build', 'watch' ] );
+gulp.task( 'dev', gulp.series('build', 'watch') );
 
 
 /**
@@ -282,4 +282,4 @@ gulp.task( 'dev', [ 'build', 'watch' ] );
  *  $ gulp
  *
  */
-gulp.task( 'default', [ 'help' ] );
+gulp.task( 'default', gulp.series('help' ) );

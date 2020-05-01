@@ -1,0 +1,15 @@
+{
+  "name" : "How Google Pagespeed works: Improve Your Score and Search Engine Ranking",
+  "authors" : [
+    {
+      "name" : "Ben Schwarz",
+      "twitter" : "@benschwarz"
+    }
+  ],
+  "date" : "2019-07-02",
+  "stats" : {
+    "length" : 1474
+  },
+  "tags" : [ "pagespeed", "time-to-interactive", "monitoring" ],
+  "url" : "https://calibreapp.com/blog/how-pagespeed-works/"
+}

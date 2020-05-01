@@ -1,0 +1,15 @@
+{
+  "name": "When CSS blocks",
+  "authors": [
+    {
+      "name": "Tim Kadlec",
+      "twitter": "@tkadlec"
+    }
+  ],
+  "date": "2020-02-13",
+  "stats": {
+    "length": 1670
+  },
+  "url": "https://timkadlec.com/remembers/2020-02-13-when-css-blocks/",
+  "tags": ["loading", "rendering"]
+}

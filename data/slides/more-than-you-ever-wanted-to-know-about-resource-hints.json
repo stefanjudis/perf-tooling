@@ -1,0 +1,15 @@
+{
+  "name" : " More Than You Ever Wanted to Know About Resource Hints",
+  "authors" : [
+    {
+      "name" : "Harry Roberts",
+      "twitter" : "@csswizardry"
+    }
+  ],
+  "date" : "2019-04-20",
+  "stats" : {
+    "length" : 158
+  },
+  "tags" : [ "loading", "rendering" ],
+  "url" : "https://speakerdeck.com/csswizardry/more-than-you-ever-wanted-to-know-about-resource-hints"
+}

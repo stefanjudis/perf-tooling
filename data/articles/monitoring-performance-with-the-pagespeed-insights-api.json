@@ -1,0 +1,15 @@
+{
+  "name": "Monitoring Performance with the PageSpeed Insights API",
+  "authors": [
+    {
+      "name": "Addy Osmani",
+      "twitter": "@addyosmani"
+    }
+  ],
+  "date": "2020-01-06",
+  "stats": {
+    "length": 880
+  },
+  "url": "https://dev.to/addyosmani/monitoring-performance-with-the-pagespeed-insights-api-33k7",
+  "tags": ["tooling", "monitoring"]
+}

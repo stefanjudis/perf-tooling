@@ -1,15 +1,15 @@
 {
-  "name" : "Service Workers: Save your User's Data using the Save-Data Header",
-  "authors" : [
+  "name": "Service Workers: Save your User's Data using the Save-Data Header",
+  "authors": [
     {
-      "name" : "Dean Hume",
-      "twitter" : "@DeanoHume"
+      "name": "Dean Hume",
+      "twitter": "@DeanoHume"
     }
   ],
-  "date" : "2016-03-08",
-  "stats" : {
-    "length" : 1245
+  "date": "2016-03-08",
+  "stats": {
+    "length": 1245
   },
-  "url" : "http://www.deanhume.com/Home/BlogPost/service-workers--save-your-users-data-using-the-save-data-header/10139",
-  "tags" : [ "network", "ServiceWorker" ]
+  "url": "http://www.deanhume.com/Home/BlogPost/service-workers--save-your-users-data-using-the-save-data-header/10139",
+  "tags": ["network", "service worker"]
 }

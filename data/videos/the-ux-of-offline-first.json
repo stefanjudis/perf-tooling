@@ -1,11 +1,11 @@
 {
-  "name" : "The UX Of Offline-First",
-  "authors" : [
+  "name": "The UX Of Offline-First",
+  "authors": [
     {
-      "name" : "Jake Archibald",
-      "twitter" : "@jaffathecake"
+      "name": "Jake Archibald",
+      "twitter": "@jaffathecake"
     }
   ],
-  "vimeoId" : "125479288",
-  "tags" : [ "offline", "ServiceWorker" ]
+  "vimeoId": "125479288",
+  "tags": ["offline", "service worker"]
 }

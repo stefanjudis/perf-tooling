@@ -1,0 +1,15 @@
+{
+  "name" : "Speed at Scale: Web Performance Tips and Tricks from the Trenches",
+  "authors" : [
+    {
+      "name" : "Addy Osmani",
+      "twitter" : "@addyosmani"
+    },
+    {
+      "name": "Katie Hempenius",
+      "twitter": "@katiehempenius"
+    }
+  ],
+  "youtubeId" : "YJGCZCaIZkQ",
+  "tags" : [ "metrics", "tools", "best practices" ]
+}

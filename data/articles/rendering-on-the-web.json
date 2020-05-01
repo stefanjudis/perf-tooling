@@ -1,0 +1,19 @@
+{
+  "name" : "Rendering on the Web",
+  "authors" : [
+    {
+      "name" : "Addy Osmani",
+      "twitter" : "@addyosmani"
+    },
+    {
+      "name" : "Jason Miller",
+      "twitter" : "@_developit"
+    }
+  ],
+  "date" : "2019-02-09",
+  "stats" : {
+    "length" : 2617
+  },
+  "url" : "https://developers.google.com/web/updates/2019/02/rendering-on-the-web",
+  "tags" : [ "render", "metrics", "network" ]
+}

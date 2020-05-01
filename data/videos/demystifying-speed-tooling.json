@@ -1,0 +1,15 @@
+{
+  "name" : "Demystifying speed tooling",
+  "authors" : [
+    {
+      "name" : "Paul Irish",
+      "twitter" : "@paul_irish"
+    },
+    {
+      "name": "Elizabeth Sweeny",
+      "twitter": "@egsweeny"
+    }
+  ],
+  "youtubeId" : "mLjxXPHuIJo",
+  "tags" : [ "metrics", "tools", "budget" ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Shopping for speed on eBay.com",
+  "authors": [
+    {
+      "name": "Addy Osmani",
+      "twitter": "@addyosmani"
+    }
+  ],
+  "date": "2020-01-22",
+  "stats": {
+    "length": 1868
+  },
+  "url": "https://web.dev/shopping-for-speed-on-ebay/",
+  "tags": ["loading", "network", "optimization"]
+}
