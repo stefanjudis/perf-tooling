@@ -1,0 +1,15 @@
+{
+  "name": "Real-World Effectiveness of Brotli",
+  "authors": [
+    {
+      "name": "Harry Roberts",
+      "twitter": "@csswizardry"
+    }
+  ],
+  "date": "2020-04-22",
+  "stats": {
+    "length": 2785
+  },
+  "url": "https://csswizardry.com/2020/04/real-world-effectiveness-of-brotli/",
+  "tags": ["loading", "network", "compression"]
+}
