@@ -1,0 +1,9 @@
+{
+  "name" : "Screpy",
+  "service" : {
+    "url" : "https://screpy.com/",
+    "isPaid": true
+  },
+  "description" : "Screpy is a web analysis tool that can analyze all pages of your websites in one dashboard and monitor them with your team. It's powered by Lighthouse and it also includes some different analysis tools (SEO, SERP, W3C, Uptime, etc).",
+  "tags": ["metrics", "analysis", "monitor", "timings"]
+}
