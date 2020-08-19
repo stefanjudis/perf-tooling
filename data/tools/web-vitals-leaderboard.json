@@ -1,0 +1,8 @@
+{
+  "name" : "Web Vitals Leaderboard",
+  "service" : {
+    "url" : "https://vitals-leaderboard.pazguille.me/"
+  },
+  "description" : "Web Vitals Leaderboard is the simplest way to understand how your website’s performance compares to other sites in your industry. The data comes from ChromeUXReport, the dataset collected from real-world users.",
+  "tags": ["metrics", "web vitals", "crux", "benchmark", "analysis", "timings"]
+}
