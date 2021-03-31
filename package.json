@@ -31,7 +31,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "html-minifier": "^3.2.3",
-    "lodash": "^4.17.2",
+    "lodash": "^4.17.19",
     "merge-stream": "^1.0.1",
     "nodemon": "^1.11.0",
     "request": "^2.79.0",
