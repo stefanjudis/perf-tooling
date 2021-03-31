@@ -1,0 +1,15 @@
+{
+  "name" : "Lighthouse Changes How Performance Score is Calculated",
+  "authors" : [
+    {
+      "name" : "Karolina Szczur",
+      "twitter" : "@fox"
+    }
+  ],
+  "date" : "2020-03-27",
+  "stats" : {
+    "length" : 727
+  },
+  "tags" : [ "monitoring", "performance", "metrics", "lighthouse", "performance score" ],
+  "url" : "https://calibreapp.com/blog/lighthouse-changes-scoring-algorithm"
+}

@@ -1,0 +1,15 @@
+{
+  "name" : "Getting Started with Web Performance",
+  "authors" : [
+    {
+      "name" : "Karolina Szczur",
+      "twitter" : "@fox"
+    }
+  ],
+  "date" : "2019-12-10",
+  "stats" : {
+    "length" : 1338
+  },
+  "tags" : [ "monitoring", "performance", "metrics" ],
+  "url" : "https://calibreapp.com/blog/get-started-with-performance"
+}
