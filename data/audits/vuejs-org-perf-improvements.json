@@ -1,0 +1,16 @@
+{
+  "name" : "vuejs.org performance improvements",
+  "targets" : [
+    "https://vuejs.org/"
+  ],
+  "authors" : [
+    {
+      "name" : "Artem Denysov",
+      "twitter" : "@denar90_"
+    }
+  ],
+  "date" : "2017-08-02",
+  "url" : "https://docs.google.com/document/d/18AL3CGZD9Bp6Yv0TsBoxLbvmYsoKohBsAVDexePMKMs/edit",
+  "types" : [ "document" ],
+  "tags" : [ "network", "rendering", "loading" ]
+}
